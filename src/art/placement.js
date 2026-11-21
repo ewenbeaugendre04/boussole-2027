@@ -154,7 +154,7 @@ function objEl(name, k, label, flip){
   var w = def.w || 24, h = def.h || 24, sc = LOCAL * k * (def.s || 1);
   var pw = w * sc, ph = h * sc;
   var spr0 = OBJ_SPR[name];
-  if(spr0 && SPR_AR[spr0] && typeof VBK === 'number'){ pw = (SPR_W[spr0] || 2.4) * VBK * 2; ph = pw * SPR_AR[spr0]; sc = pw / w; } /* même échelle que le décor (x2 pour la lisibilité) */
+  if(spr0 && SPR_AR[spr0] && typeof VBK === 'number'){ pw = (SPR_W[spr0] || 2.4) * VBK * ((SPR_W[spr0] || 2.4) >= 2.6 ? 1.25 : 2); ph = pw * SPR_AR[spr0]; sc = pw / w; } /* même échelle que le décor (x2 pour la lisibilité) */
   var el = document.createElement('div'); el.className = 'fx o-' + name;
   var b = document.createElement('div'); b.className = 'fxb';
   b.style.cssText = 'width:' + F(pw) + 'px;height:' + F(ph) + 'px;left:' + F(-pw / 2) + 'px;top:' + F(-ph + 2 * sc) + 'px';
@@ -243,6 +243,8 @@ function spawnFx(fx, layer, opts){
     if(rc && !planche) SCENE.occ.push(rc);
     el._rc = rc; el._pos = [x, y]; el._valid = valid; el._rule = rule;
     el.style.left = F(x) + 'px'; el.style.top = F(y) + 'px'; el.style.zIndex = 1000 + Math.round(y);
+    /* garde-fou : un sprite terrestre jamais en mer ni chez un voisin ; un sprite marin jamais sur terre */
+    if(!planche && OBJ_SPR[fx.obj] && SPR_AR[OBJ_SPR[fx.obj]]){ var tt = terrainPx(x, y), mar = !!SPR_MARINE[OBJ_SPR[fx.obj]]; if(mar ? tt !== 0 : tt !== 1) el.style.display = 'none'; }
     if(fx.stay){ el.setAttribute('data-stay', '1'); if(!opts.still) el.classList.add('fresh'); }
     layer.appendChild(el);
     var b = el.firstChild, dl = delay + (moving ? i * .3 : (a === 'rise' || a === 'grow' || a === 'appear') ? i * .14 : 0);

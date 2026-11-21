@@ -83,6 +83,24 @@ function afterDecision(ev, ch, from){
   coins(from, money ? Math.ceil(Math.min(8, 2 + money)) : 0);
   setTimeout(function(){ showResult(ev, ch); }, Math.min(1500, Math.max(700, t * 1000 * .55)));
 }
+/* phrases d'explication concrètes, tirées des écarts d'indicateurs et des recettes induites (neutre : on décrit, on ne juge pas) */
+function whyHtml(imp){
+  var ind = (imp && imp.ind) || {}, c = inducedCfg(), out = [], g = function(k){ return num(ind[k], 0); };
+  var pa = g('pouvoir_achat'), em = g('emploi'), co = g('co2'), b = num(imp && imp.budget, 0), on = num(imp && imp.once, 0);
+  if(em >= 1) out.push(['up', 'Plus d\'emplois : environ ' + fmt1(em * 25000 / 1000) + ' 000 postes, soit ' + fmt1(em * c.em) + ' Md€ de recettes en plus par an (cotisations, impôts, chômage évité).']);
+  if(em <= -1) out.push(['down', 'Des emplois en moins : environ ' + fmt1(-em * c.em) + ' Md€ de recettes perdues par an.']);
+  if(pa >= 1) out.push(['up', 'Le pouvoir d\'achat monte : plus de consommation, donc environ ' + fmt1(pa * c.pa) + ' Md€ de TVA et d\'impôts en plus par an.']);
+  if(pa <= -1) out.push(['down', 'Le pouvoir d\'achat baisse : la consommation recule, environ ' + fmt1(-pa * c.pa) + ' Md€ de recettes en moins par an.']);
+  if(b >= .1) out.push(['up', 'Le déficit baisse de ' + fmt1(b) + ' Md€ par an grâce à cette décision.']);
+  if(b <= -.1) out.push(['down', 'Cette décision coûte ' + fmt1(-b) + ' Md€ par an : le déficit se creuse d\'autant.']);
+  if(on <= -.1) out.push(['down', 'Dépense ponctuelle de ' + fmt1(-on) + ' Md€, ajoutée à la dette.']);
+  if(on >= .1) out.push(['up', 'Rentrée ponctuelle de ' + fmt1(on) + ' Md€.']);
+  if(co <= -1) out.push(['up', 'Moins d\'émissions de CO₂ : la France se rapproche de ses objectifs climat.']);
+  if(co >= 1) out.push(['down', 'Plus d\'émissions de CO₂ : la France s\'éloigne de ses objectifs climat.']);
+  if(!out.length) return '';
+  return '<div class="rp-why"><div class="rp-ek">Pourquoi</div>' + out.slice(0, 4).map(function(o){ return '<p class="' + o[0] + '">' + esc(o[1]) + '</p>'; }).join('') + '</div>';
+}
+function fmt1(v){ return (Math.round(Math.abs(v) * 10) / 10).toLocaleString('fr-FR'); }
 function showResult(ev, ch){
   var evs = todayEvents(), done = evs.filter(function(e){ return S.decided[e.id]; }).length;
   var total = Object.keys(S.decided).length;
@@ -90,6 +108,7 @@ function showResult(ev, ch){
   var imp = RUN.lastImpact && RUN.lastImpact.id === ev.id ? RUN.lastImpact : { ind:ch.ind, budget:ch.budget, once:ch.once };
   var html = '<div class="rp-head"><span class="seal" aria-hidden="true">' + total + '</span><div><b>Décision prise</b><small>' + (ch.parts ? ch.parts.map(function(c){ return '« ' + esc(choiceLabel(c)) + ' »'; }).join(' + ') : esc(choiceLabel(ch))) + '</small></div></div>' +
     '<div class="rp-eff"><div class="rp-ek">Ce que ça change</div>' + effHtml(imp, 3, false) + '</div>' +
+    whyHtml(imp) +
     '<div class="qbar" aria-label="' + done + ' sur ' + evs.length + '"><i style="width:' + F(done / Math.max(1, evs.length) * 100) + '%"></i></div><div class="qtxt">' + (last ? 'Tous les événements de la semaine sont traités.' : done + ' sur ' + evs.length + ' cette semaine') + '</div>' +
     (ch.real_note ? '<div class="envrai"><span class="ev-k">En vrai, à l\'époque</span><p>' + esc(ch.real_note) + '</p></div>' : '') +
     (last ? '<button class="btn wide brass pressable" id="rpGo">Voir le plateau</button>'

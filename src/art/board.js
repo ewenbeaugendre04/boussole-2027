@@ -99,7 +99,7 @@ function buildBoard(){
   [[-4.78,48.42],[-1.9,49.72],[1.6,50.75],[-1.55,43.5],[5.25,43.2],[-2.2,47.25]].forEach(function(l){
     var p = P(l[0], l[1]);
     /* phare : sprite (art/sprites.js) */
-    LH.push([p[0], p[1] - 3.35]); beams.push('<g class="beam" style="transform-origin:' + F(p[0]) + 'px ' + F(p[1]-3.35) + 'px;animation-delay:-' + F(R()*6) + 's"><path d="M' + F(p[0]) + ',' + F(p[1]-3.35) + 'l16,-2.2v4.4z" fill="url(#beamg)"/></g>');
+    R(); /* faisceaux supprimés (ils ne tombaient pas sur les phares) */
   });
   up.sort(function(a, b){ return a.y - b.y; });
   h.push('<g class="glows" filter="url(#blur3)" fill="#FFC86B" opacity=".55">' + glows.join('') + '</g>');

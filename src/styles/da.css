@@ -75,3 +75,17 @@ body{font-weight:600}
 .cd-note{font-size:12px;color:var(--ink-2);background:var(--paper-2);border-radius:10px;padding:6px 9px;margin:10px 0}
 .cd-recap{margin-top:6px}
 .cd-link{display:inline-flex;align-items:center;gap:6px;margin:6px 0 2px;padding:4px 2px;border:0;background:none;font:inherit;font-size:13px;font-weight:800;color:#0F8F84;text-decoration:underline;text-underline-offset:3px}
+/* les sprites ne tournent pas sur eux-mêmes (orage) */
+.fxb.fxspr.a-spin,.fxb.fxspr .rot{animation:none!important}
+/* encart outre-mer : objets plus petits */
+/* mode nuit : panneaux sombres, texte clair (évite texte blanc sur fond blanc) */
+[data-theme="dark"],.is-night{--paper:#1E3A42;--paper-2:#24444D;--paper-3:#2C505A;--ink:#EEF6F4;--ink-2:#CFE2DF;--ink-3:#9FBAB6;--line:#335760;--tranche:#0F262C;--plate:#1E3A42;--plate-ink:#EEF6F4;--plate-k:#9FBAB6}
+[data-theme="dark"] .card,[data-theme="dark"] #result,.is-night .card,.is-night #result{background:var(--paper)!important;color:var(--ink)}
+[data-theme="dark"] .real,.is-night .real{background:var(--paper-2)!important}
+[data-theme="dark"] .gauge .tr,.is-night .gauge .tr{background:#2C505A!important}
+[data-theme="dark"] #caption .cap-k,.is-night #caption .cap-k{background:#24444D!important;color:#7FE0D4!important}
+[data-theme="dark"] .l-panneau,.is-night .l-panneau{color:var(--ink)!important}
+.rp-why{margin:10px 0 4px}.rp-why p{margin:4px 0;padding:6px 10px;border-radius:10px;font-size:13px;font-weight:700;line-height:1.35}
+.rp-why p.up{background:#E3F6EF;color:#0B6B5F}.rp-why p.down{background:#FCEBE6;color:#9A3B22}
+[data-theme="dark"] .rp-why p.up,.is-night .rp-why p.up{background:#1D4A44;color:#BFF0E5}[data-theme="dark"] .rp-why p.down,.is-night .rp-why p.down{background:#4A2A24;color:#FFD3C6}
+.card[data-multi] .choice .confirm,.choice[data-g] .confirm{display:none!important}

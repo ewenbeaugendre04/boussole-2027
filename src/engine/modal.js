@@ -210,7 +210,7 @@ function openEvent(ev){
         '<div class="pm"><span class="sg" aria-hidden="true">+</span><div><div class="pl">Ce que ça peut apporter</div>' + esc(ch.plus || '') + '</div></div>' +
         '<div class="pm"><span class="sg" aria-hidden="true">−</span><div><div class="pl">Ce que ça peut coûter</div>' + esc(ch.minus || '') + '</div></div>' +
         '<div class="chips">' + budgetChips(ch.budget, ch.once, ch.budget_note) + indChips(ch.ind) + '</div>' +
-        '<div class="confirm-row"><span class="btn brass pressable confirm" role="button" tabindex="0" data-ok="' + i + '">' + (G ? (G.grp(ch) === 'long' ? 'Retenir pour le long terme' : 'Retenir pour le court terme') : 'Choisir ceci') + '</span></div>' +
+        '<div class="confirm-row"><span class="btn brass pressable confirm" role="button" tabindex="0" data-ok="' + i + '">' + 'Choisir ceci' + '</span></div>' +
         '</div></button>';
     }).join('') + '</div>' + (G ? '<div class="mbar" aria-live="polite"><span class="mmsg"></span><button class="btn brass pressable" id="mGo" disabled>Valider mes 2 décisions</button></div>' : '');
   if(!vis.length) html += '<button class="btn wide brass pressable" id="evAck">Compris</button>';
@@ -219,7 +219,8 @@ function openEvent(ev){
   card.querySelectorAll('.choice').forEach(function(btn){
     btn.addEventListener('click', function(e){
       var ok = e.target.closest('[data-ok]');
-      if(ok){ e.stopPropagation(); if(G) pickIn(btn); else decide(ev, vis[+ok.getAttribute('data-ok')], card); return; }
+      if(G){ e.stopPropagation(); pickIn(btn); return; } /* un toucher = sélection dans son groupe ; une seule validation en bas */
+      if(ok){ e.stopPropagation(); decide(ev, vis[+ok.getAttribute('data-ok')], card); return; }
       var open = btn.getAttribute('aria-expanded') === 'true';
       card.querySelectorAll('.choice').forEach(function(b){ b.setAttribute('aria-expanded', 'false'); });
       btn.setAttribute('aria-expanded', open ? 'false' : 'true');
@@ -241,7 +242,7 @@ function openEvent(ev){
     var g = btn.getAttribute('data-g') || 'court', id = btn.getAttribute('data-cid');
     card.querySelectorAll('.choice[data-g="' + g + '"]').forEach(function(b){ b.classList.remove('picked'); });
     sel[g] = sel[g] === id ? null : id; if(sel[g]) btn.classList.add('picked');
-    btn.setAttribute('aria-expanded', 'false'); snd('tap'); vibe(8); syncBar();
+    btn.setAttribute('aria-expanded', sel[g] ? 'true' : 'false'); snd('tap'); vibe(8); syncBar();
   }
   if(G){ syncBar(); card.querySelector('#mGo').addEventListener('click', function(){
     if(!sel.court && !sel.long) return;
