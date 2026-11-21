@@ -180,12 +180,12 @@ function showPlanche(){
 }
 
 /* ---------- Démarrage ---------- */
-function refitBoard(){ fitView(); buildMovers(); buildClouds(wxKind); sizeWx(); setWeather(wxKind); bakeDecor(); if(S && !S._preview){ restoreStays(); renderPins(); if(!RUN.busy) camHome(0); } placeOverlays(); }
+function refitBoard(){ fitView(); buildMovers(); buildSprites(); buildClouds(wxKind); sizeWx(); setWeather(wxKind); bakeDecor(); if(S && !S._preview){ restoreStays(); renderPins(); if(!RUN.busy) camHome(0); } placeOverlays(); }
 var refitT = null;
 function boot(){
   fitView();
   buildBoard();
-  buildMovers(); sizeWx(); bakeDecor();
+  buildMovers(); buildSprites(); sizeWx(); bakeDecor();
   var rt = null;
   window.addEventListener('resize', function(){ clearTimeout(rt); rt = setTimeout(refitBoard, 200); });
   if(/planche/.test(location.hash)){ showPlanche(); requestAnimationFrame(tick); return; }

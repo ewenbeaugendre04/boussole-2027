@@ -32,6 +32,10 @@
 - `docs/maquettes/carte_v2.html` : île épaisse (terre/sable/herbe), massifs enneigés, fleuves, voies ferrées, voisins estompés ; monuments + nombreuses maisons ; TGV sans rails qui suit les voies ; jauges légendées (pouvoir d'achat, emploi, climat, cohésion) + pastille déficit/PIB ; carte d'événement et boutons « 3D ». Police Nunito auto-hébergée (`assets/fonts`).
 - Retours d'Ewen : afficher les constantes (jauges légendées), trains sans rails qui suivent la voie, des maisons partout (pas que des monuments). Objets retouchés : versions dans `assets/library/svg_final/`.
 
+## Intégration DA dans le jeu (21/11, en ligne)
+- Palette vive (base.css), police Nunito auto-hébergée (Google Fonts supprimé), couche `#sprl` (`src/art/sprites.js`) : ~170 sprites (monuments, maisons par région, énergie aux lieux réels, fermes, ports), TGV sprite qui suit les voies (`layers.js`). `src/assets` = lien vers `assets/` ; le build copie sprites et polices dans `dist/assets`.
+- Reste : remplacer les objets d'événements (OBJ, `objects.js`) par les sprites (tracteur, avion, cargo…) ; textes encore au « tu » ; panneaux du haut un peu translucides.
+
 ## Prochaines étapes
 1. FAIT (21/11) : 51 SVG dans `assets/library/svg/` (9,5 Mo, ~190 Ko chacun, avec métadonnées C2PA de provenance IA à conserver). Trop lourds pour le jeu : produire des sprites WebP (~256 px) via Playwright pour le build.
 2. Retoucher les couleurs dans les SVG : TGV, vache, toit haussmannien (trop bleus), fumée de l'incendie en gris, crue en marron. Régénérer : cyclone, nuage_neige, fourviere, arc_triomphe.

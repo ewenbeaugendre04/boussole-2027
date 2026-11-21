@@ -1,26 +1,27 @@
+@font-face{font-family:"Nunito";src:url("../assets/fonts/nunito-latin-wght-normal.woff2") format("woff2");font-weight:200 1000;font-display:swap}
 /* ---------- Tokens ---------- */
 :root{
-  --f-display:"Bricolage Grotesque","Trebuchet MS","Segoe UI",system-ui,sans-serif;
-  --f-body:"Atkinson Hyperlegible","Segoe UI",system-ui,-apple-system,sans-serif;
-  /* plateau, jour */
-  --sea:#86AEB0; --sea-deep:#729DA1; --sea-hi:#B4D0CC; --foam:#F6F8F2; --wave:#EAF2EC;
-  --mist:#D7DCD6; --mist-land:#BDC2B8;
-  --land:#E9D8AE; --land-2:#DDC896; --field-a:#E3CC8C; --field-b:#CFCB9E; --field-c:#D9BE86;
-  --hill:#CDB283; --hill-d:#B49A6E; --cliff:#8E6F53; --cliff-2:#A98761;
-  --forest:#93A07A; --forest-d:#74805E; --mount-l:#C1AD90; --mount-r:#9F8B72; --snow:#FBFAF4;
-  --house:#F7F0E4; --house-side:#DACDBA; --roof:#7E6F7C; --roof-d:#665966; --win:#B8AD9E;
-  --river:#A3C4C1; --rail:#6E6271; --train:#F2ECE1; --boat:#F7F1E6; --sail:#FFFDF7;
-  --cloud:#FFFFFF; --cloud-o:.92; --shadow:#2A2340; --glow:0; --beam:0;
-  --label:#5E556B;
+  --f-display:"Nunito","Trebuchet MS","Segoe UI",system-ui,sans-serif;
+  --f-body:"Nunito","Segoe UI",system-ui,-apple-system,sans-serif;
+  /* plateau, jour — DA isométrique vive (nov. 2026) */
+  --sea:#3EC3E0; --sea-deep:#22A9D4; --sea-hi:#7FE0F0; --foam:#FFFFFF; --wave:#E9FBFF;
+  --mist:#CFEFF5; --mist-land:#E3F4EE;
+  --land:#74C851; --land-2:#66BB48; --field-a:#F2C45A; --field-b:#9ADB62; --field-c:#E2B04A;
+  --hill:#5FB24A; --hill-d:#4C9A3D; --cliff:#9B6B3C; --cliff-2:#C99556;
+  --forest:#3F9A3D; --forest-d:#2F7F33; --mount-l:#CBD5D8; --mount-r:#8FA1A8; --snow:#FFFFFF;
+  --house:#FFF4DC; --house-side:#E8CF9F; --roof:#E07A45; --roof-d:#B95A30; --win:#7FD3F0;
+  --river:#5ED0EE; --rail:#7B6A55; --train:#FFFFFF; --boat:#FFFFFF; --sail:#FFFFFF;
+  --cloud:#FFFFFF; --cloud-o:.95; --shadow:#0E4A5A; --glow:0; --beam:0;
+  --label:#2C5560;
   /* interface */
-  --ink:#2F2940; --ink-2:#5D5669; --ink-3:#8A8396;
-  --paper:#FFFCF7; --paper-2:#F2ECE3; --paper-3:#E6DED2;
-  --line:#2F2940; --tranche:#2F2940;
-  --brass:#E3A93C; --brass-2:#F2C66E; --brass-d:#A87521; --on-brass:#2F2940;
-  --plate:#2F2940; --plate-ink:#FFF6E6; --plate-k:#C9BFD6;
-  --token:#FFFAF1; --pin-major:#E3A93C; --pin-note:#DCD3E6;
-  --scrim:rgba(38,32,56,.42);
-  --r-card:22px; --r-btn:14px; --r-chip:999px; --r-small:8px;
+  --ink:#17323A; --ink-2:#3B5A61; --ink-3:#6E8A90;
+  --paper:#FFFDF7; --paper-2:#F1F7F5; --paper-3:#E2ECEA;
+  --line:#CFDEDD; --tranche:#B7CBCC;
+  --brass:#1FBFAE; --brass-2:#62D8CA; --brass-d:#0B7F75; --on-brass:#FFFFFF;
+  --plate:#FFFDF7; --plate-ink:#17323A; --plate-k:#5B7A80;
+  --token:#FFFDF7; --pin-major:#F6C453; --pin-note:#DDEFEA;
+  --scrim:rgba(10,50,60,.38);
+  --r-card:22px; --r-btn:15px; --r-chip:999px; --r-small:9px;
 }
 [data-theme="dark"], .is-night{
   --sea:#2D2B46; --sea-deep:#24223A; --sea-hi:#433F63; --foam:#8F8AB0; --wave:#5D5884;

@@ -27,7 +27,7 @@ function buildMovers(){
   for(var j = 0; j < 4; j++){
     var rp = $('rail' + j); if(!rp) break;
     var cars = [];
-    for(var c = 0; c < 3; c++){ var car = document.createElement('i'); car.className = 'mv car' + (c === 0 ? ' loco' : ''); car.style.width = F(1.7 * VBK) + 'px'; car.style.height = F(.84 * VBK) + 'px'; car.style.marginLeft = F(-.85 * VBK) + 'px'; car.style.marginTop = F(-.92 * VBK) + 'px'; ml.appendChild(car); cars.push(car); }
+    var tw = 5.6 * VBK, car = document.createElement('img'); car.className = 'mv tgv'; car.src = SPR_DIR + 'tgv_seul.webp'; car.alt = ''; car.decoding = 'async'; car.style.width = F(tw) + 'px'; car.style.marginLeft = F(-tw / 2) + 'px'; car.style.marginTop = F(-tw * (SPR_AR.tgv_seul || .45) * .62) + 'px'; ml.appendChild(car); cars.push(car);
     var s = samplePath(rp, 220);
     MV.trains.push({ cars:cars, s:s, t:j * .23, sp:.018 + j * .003, dir:1 });
   }
@@ -67,10 +67,11 @@ function tick(t){
     });
     MV.trains.forEach(function(m){
       m.t += m.sp * dt * m.dir * 40 / m.s.len; if(m.t > 1){ m.t = 1; m.dir = -1; } if(m.t < 0){ m.t = 0; m.dir = 1; }
-      for(var i = 0; i < m.cars.length; i++){
-        var p = ptAt(m.s, m.t - i * 1.9 * m.dir / m.s.len), q = U2P(p[0], p[1]);
-        m.cars[i].style.transform = 'translate3d(' + F(q[0]) + 'px,' + F(q[1]) + 'px,0) rotate(' + F(p[2] * 180 / Math.PI) + 'deg)';
-      }
+      // TGV (sprite isométrique, nez vers le bas-gauche) : on choisit la face et on corrige l'angle pour suivre la voie
+      var p = ptAt(m.s, m.t), q = U2P(p[0], p[1]), ang = p[2] * 180 / Math.PI + (m.dir < 0 ? 180 : 0), rot = ang - 153, sx = 1;
+      rot = ((rot + 540) % 360) - 180; if(rot > 90 || rot < -90){ sx = -1; rot = ((ang - 27 + 540) % 360) - 180; }
+      rot = Math.max(-35, Math.min(35, rot));
+      m.cars[0].style.transform = 'translate3d(' + F(q[0]) + 'px,' + F(q[1]) + 'px,0) rotate(' + F(rot) + 'deg) scaleX(' + sx + ')';
     });
     MV.clouds.forEach(function(c){
       c.x += c.sp * dt; if(c.x > VBX + (WW - WM) / VBK + 20) c.x = VBX + WM / VBK - 50;

@@ -79,7 +79,7 @@ function buildBoard(){
     for(var i = 0; i < n; i++){
       var a = i * 2.4, r = i === 0 ? 0 : .9 + Math.sqrt(i) * .9;
       var x = c[0] + Math.cos(a) * r * 1.3, y = c[1] + Math.sin(a) * r * .7;
-      up.push({ y:y, s:houseSvg(x, y, tall && i < 2 ? 1.6 : 1, R) });
+      R(); /* maisons : sprites (art/sprites.js) */
       glows.push('<circle cx="' + F(x) + '" cy="' + F(y - .8) + '" r="1.9"/>');
     }
   }
@@ -91,8 +91,7 @@ function buildBoard(){
   forest(2.7,48.4,4,3); forest(-0.6,48.8,4,4); forest(5.7,44.2,4,4); forest(1.4,45.1,5,6); forest(9.15,41.85,3,2);
   city(2.35,48.85,8,true); city(4.84,45.76,5); city(5.37,43.3,5); city(3.07,50.63,4); city(1.44,43.6,4); city(-0.58,44.84,4); city(-1.55,47.22,3); city(7.75,48.58,3);
   city(-1.68,48.11,3); city(7.26,43.7,3); city(3.88,43.6,3); city(-4.48,48.39,2); city(3.08,45.78,2); city(5.04,47.32,2); city(1.1,49.44,2); city(8.74,41.92,2); city(9.45,42.7,1); city(1.9,47.9,2); city(1.26,45.83,2); city(6.18,48.69,2); city(0.1,49.5,2); city(-0.37,49.18,2);
-  // tour de Paris
-  var tp = P(2.29, 48.86); up.push({ y:tp[1] + .3, s:'<path d="M' + F(tp[0]-1) + ',' + F(tp[1]+.3) + 'L' + F(tp[0]) + ',' + F(tp[1]-5.2) + 'L' + F(tp[0]+1) + ',' + F(tp[1]+.3) + 'M' + F(tp[0]-.6) + ',' + F(tp[1]-1.4) + 'H' + F(tp[0]+.6) + '" fill="none" stroke="var(--roof-d)" stroke-width=".38" stroke-linejoin="round"/>' });
+  // tour de Paris : sprite tour_eiffel
   // phares
   var beams = [];
   [[-4.78,48.42],[-1.9,49.72],[1.6,50.75],[-1.55,43.5],[5.25,43.2],[-2.2,47.25]].forEach(function(l){
