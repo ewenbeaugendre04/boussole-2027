@@ -298,10 +298,10 @@
  {
   "id": "arc_triomphe",
   "categorie": "monuments",
-  "url": "https://img.recraft.ai/5imtE-7XwBVedAMbC8fEYiz3NIzYg6dTctr8nSWAyCA/raw:1/plain/abs://prod/images/e564088a-dd37-44fd-8fce-4ada406873f2",
+  "url": "https://img.recraft.ai/_fAHvp3Aysz91FPLu11GD-_yH0DfgMXYWGAY62m7s3Q/raw:1/plain/abs://prod/images/fa95d972-3398-49ef-a219-1c7b7425a59e",
   "prompt": "Single isolated mobile-game asset, one independent object only, consistent 30-degree isometric view, light from top-left, vivid playful chunky shapes, NO base tile, NO plinth, NO ground patch, NO grass square, NO sea around, NO outlines, NO text, NO logos, NO flags, plain white background: Arc de Triomphe, massive cream limestone triumphal arch with one large central arch on each face, thick square pillars, flat attic top, standing directly on white background without any steps or ground",
   "credits": 8,
-  "essais": 2
+  "essais": 3
  },
  {
   "id": "basilique_marseille",
@@ -314,10 +314,10 @@
  {
   "id": "fourviere",
   "categorie": "monuments",
-  "url": "https://img.recraft.ai/aqvv1MYVH6tCzRQ-kaDDFCNttwFPBsz3zEx36HfzQWY/raw:1/plain/abs://prod/images/e02d0c4b-e538-4e54-b53f-9c5d0d776d39",
+  "url": "https://img.recraft.ai/kSJCNa9FSrrjvduFHGkxiIiJ4pGNsnCjc1rZQ8y_KqY/raw:1/plain/abs://prod/images/39e76190-324d-4cc4-9035-fd0a2bdb17e6",
   "prompt": "Single isolated mobile-game asset, one independent object only, consistent 30-degree isometric view, light from top-left, vivid playful chunky shapes, NO base tile, NO plinth, NO ground patch, NO grass square, NO sea around, NO outlines, NO text, NO logos, NO flags, plain white background: Fourvière basilica of Lyon, white stone rectangular church with four octagonal crenellated corner towers, columned portico front, golden statue on the apse",
   "credits": 8,
-  "essais": 2
+  "essais": 3
  },
  {
   "id": "cathedrale_strasbourg",
@@ -357,15 +357,16 @@
   "url": "https://img.recraft.ai/ESgfYqe9Y5NcL5ENgthn37BvQ29IYaA6hBK9M8u4epE/raw:1/plain/abs://prod/images/8109befc-de12-4af2-95df-f2dc13b29d57",
   "prompt": "Single isolated mobile-game asset, one independent object only, consistent 30-degree isometric view, light from top-left, vivid playful chunky shapes, NO base tile, NO plinth, NO ground patch, NO grass square, NO sea around, NO outlines, NO text, NO logos, NO flags, plain white background: hurricane seen from above, thick white and grey cloud bands swirling in a spiral around a dark round eye in the center, floating cyclone disc",
   "credits": 8,
-  "essais": 2
+  "essais": 2,
+  "note": "Non retenu : cyclone dessiné et animé en code (objects.js)"
  },
  {
   "id": "nuage_neige",
   "categorie": "climat",
-  "url": "https://img.recraft.ai/cvj-qdMDEyG5avmGCmXS5MMytSYreqz-VhGwB1V0824/raw:1/plain/abs://prod/images/85b31d75-5ac3-492c-b558-e98b17fa04a1",
+  "url": "https://img.recraft.ai/BU71p5aYHVffpL5YgZY_EUcXESfXVYvAEQTh7FUKMbo/raw:1/plain/abs://prod/images/1add5e38-64b5-4e1e-8df0-d2d5bde73b1f",
   "prompt": "Single isolated mobile-game asset, one independent object only, consistent 30-degree isometric view, light from top-left, vivid playful chunky shapes, NO base tile, NO plinth, NO ground patch, NO grass square, NO sea around, NO outlines, NO text, NO logos, NO flags, plain white background: cloud with falling snowflakes",
   "credits": 4,
-  "essais": 1
+  "essais": 2
  },
  {
   "id": "vague_crue",
