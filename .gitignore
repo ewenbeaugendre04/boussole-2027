@@ -3,3 +3,4 @@ __pycache__/
 node_modules/
 *.png
 .DS_Store
+!assets/icons/*.png
