@@ -6,6 +6,11 @@
    ========================================================= */
 var SPR_DIR = 'assets/sprites/';
 var SPR_AR = {"arbre":1.5,"arc_triomphe":1.246,"avion":0.646,"barrage":0.801,"basilique_marseille":1.51,"bateau_peche":0.88,"beffroi_lille":2.989,"ble":0.696,"bourse_bordeaux":0.774,"camion":0.882,"canadair":0.819,"cathedrale_strasbourg":2.068,"centrale_gaz":1.341,"centrale_nucleaire":1.109,"chantier_epr":1.462,"cyclone":0.771,"ecole":1.196,"eolien_mer":2.294,"eolienne":2.349,"feu":0.946,"fourviere":1.018,"grue_chantier":1.04,"grue_portuaire":1.196,"haussmann":1.848,"hemicycle":1.036,"hopital":1.253,"immeuble":1.587,"mairie":0.962,"maison_bretonne":1.278,"maison_pierre":1.143,"mont_saint_michel":1.465,"nuage_neige":1.477,"nuage_orage":1.181,"pavillon":1.014,"petit_immeuble":1.515,"pieces":0.76,"porte_conteneurs":0.783,"pylone_ht":2.166,"segment_rails":1.136,"serre":0.891,"smog":0.874,"solaire":0.668,"soleil_canicule":0.69,"tgv":1.169,"tgv_seul":1.384,"tour_bureaux":1.728,"tour_eiffel":1.883,"tracteur":0.869,"train_fret":1.447,"urne":1.237,"usine":0.965,"vache":0.866,"vague_crue":0.845,"vignes":0.689,"voiture":0.858};
+/* objets d'événement (OBJ) dessinés par un sprite de la bibliothèque */
+var OBJ_SPR = { tracteur:'tracteur', camion:'camion', voiture:'voiture', train:'train_fret', tgv:'tgv_seul', avion:'avion', cargo:'porte_conteneurs', bateau_peche:'bateau_peche',
+  eolienne:'eolienne', eolienne_mer:'eolien_mer', centrale_nucleaire:'centrale_nucleaire', centrale_gaz:'centrale_gaz', panneaux_solaires:'solaire', barrage:'barrage', pylone:'pylone_ht',
+  maison:'pavillon', immeuble:'immeuble', usine:'usine', chantier_grue:'grue_chantier', ecole:'ecole', hopital:'hopital', mairie:'mairie', parlement:'hemicycle', port:'grue_portuaire',
+  champ:'ble', troupeau:'vache', foret:'arbre', incendie:'feu', inondation:'vague_crue', canicule:'soleil_canicule', neige:'nuage_neige', orage:'nuage_orage', tempete:'nuage_orage', pieces:'pieces' };
 var SPR_MARINE = { eolien_mer:1, porte_conteneurs:1, bateau_peche:1 };
 function sprList(){
   var R = rng(1789), out = [];
@@ -31,6 +36,12 @@ function sprList(){
   put('porte_conteneurs', -0.25, 49.75, 4.6); put('bateau_peche', -4.9, 47.7, 2.6);
   put('ble', 1.6, 48.05, 4.2); put('ble', 3.5, 49.3, 3.8); put('ble', 0.6, 46.3, 3.4); put('vignes', -0.25, 44.98, 3.4); put('vignes', 4.75, 47.05, 3.2); put('vignes', 4.0, 49.05, 3.2);
   put('vache', -0.7, 49.0, 1.8); put('vache', 2.75, 45.35, 1.8); put('tracteur', 1.3, 48.3, 1.7); put('serre', -1.4, 47.0, 2.2); put('usine', 6.05, 48.05, 2.8); put('usine', 3.2, 50.4, 2.6);
+  // forêts (Landes, Sologne, Vosges, Ardennes, Morvan, Bretagne, Massif central, Jura)
+  [[-0.85,44.3,10,.6],[-0.6,43.95,5,.4],[2.0,47.55,5,.4],[7.0,48.4,5,.35],[4.75,49.85,4,.3],[4.05,47.15,4,.3],[-3.3,48.15,4,.35],[2.6,45.0,4,.4],[6.0,46.6,3,.3],[1.4,45.1,4,.4],[5.75,44.2,3,.3],[9.15,42.0,3,.25],[0.6,48.6,3,.3],[3.0,48.4,3,.3]].forEach(function(f){ cluster(f[0], f[1], f[2], f[3], ['arbre'], 1.5); });
+  // plus de champs et de vignes
+  put('ble', 2.5, 48.35, 3.4); put('ble', 1.0, 49.2, 3.2); put('ble', 4.3, 48.5, 3.2); put('ble', -0.3, 46.6, 3); put('ble', 1.6, 43.85, 3); put('ble', 2.9, 49.75, 3);
+  put('vignes', -0.6, 45.25, 3); put('vignes', 4.85, 44.5, 3); put('vignes', 3.2, 43.35, 3.2); put('vignes', 7.3, 48.15, 2.6); put('vignes', 0.4, 47.3, 2.6);
+  put('vache', -1.3, 48.4, 1.6); put('vache', 3.4, 46.7, 1.6); put('serre', 4.9, 43.75, 2); put('tracteur', 3.0, 49.5, 1.6);
   return out;
 }
 function buildSprites(){

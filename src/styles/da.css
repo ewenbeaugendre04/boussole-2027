@@ -1,0 +1,57 @@
+/* =========================================================
+   DA « isométrique vive » (maquette docs/maquettes/carte_v2.html)
+   Surcouche chargée en dernier : panneaux crème pleins, sans contour noir,
+   tranche colorée, jauges colorées, boutons sarcelle, pastilles dorées.
+   ========================================================= */
+:root{ --da-shadow:0 3px 0 var(--tranche),0 8px 18px rgba(10,60,70,.14); --g1:#F0A93A; --g2:#4CB3E6; --g3:#6CC44C; --g4:#B48BE0; --g5:#EF7D6B; --g6:#1FBFAE; --gold:#F6C453; --gold-d:#D39A25; }
+body{font-weight:600}
+/* cadres : crème plein, pas de flou ni de contour sombre */
+.day-token,.round-btn,.dock-side,.main-btn,.plate,.gauge,#ribbon,#quests .qt,.btn,.lvl,.choice,.tk,.xbtn,#caption .cap-v,#caption .cap-k,.l-bulle{
+  background:var(--paper)!important;background-image:none!important;-webkit-backdrop-filter:none!important;backdrop-filter:none!important;border:0!important;box-shadow:var(--da-shadow)!important}
+.plate{color:var(--ink)!important}
+.plate .k,.plate .u{color:var(--ink-3)!important;font-weight:700}
+.plate .v{font-weight:900;color:var(--ink)}
+.plate .cnt + .cnt{border-left:1.5px dashed var(--line)!important}
+.day-token{background:var(--gold)!important;box-shadow:0 4px 0 var(--gold-d),0 8px 18px rgba(10,60,70,.14)!important}
+.day-token .dn{font-weight:900}.day-token .dm{color:#5A4413;font-weight:800}
+/* jauges : une couleur par constante */
+.gauge{border-radius:13px!important}
+.gauge .gl{color:var(--ink-2);font-weight:800}
+.gauge .gv{font-weight:900}
+.gauge .tr{background:#E1EBE9!important;height:8px!important}
+.gauge:nth-child(6n+1) .fi{background:var(--g1)}.gauge:nth-child(6n+2) .fi{background:var(--g2)}.gauge:nth-child(6n+3) .fi{background:var(--g3)}
+.gauge:nth-child(6n+4) .fi{background:var(--g4)}.gauge:nth-child(6n+5) .fi{background:var(--g5)}.gauge:nth-child(6n+6) .fi{background:var(--g6)}
+/* boutons principaux : sarcelle en relief */
+.main-btn.go,.btn.brass,#answerBtn,.btn.primary{background:linear-gradient(#26CBBB,#14B3A4)!important;color:#fff!important;box-shadow:0 5px 0 var(--brass-d),0 10px 20px rgba(10,90,90,.22)!important;border:0!important}
+.main-btn.go small{color:rgba(255,255,255,.88)!important}
+.main-btn{font-weight:900}.main-btn small{font-weight:700}
+.dock-side{font-weight:800}
+.btn{font-weight:900}
+.pressable:active{box-shadow:0 0 0 transparent!important}
+/* fil des missions de la semaine */
+#ribbon{border-radius:16px!important;padding:5px 12px 5px 6px}
+#ribbon .rt{font-weight:900}
+#quests .qt{border-radius:12px!important;font-weight:700}
+#quests .q{background:var(--paper);border:0;box-shadow:0 3px 0 var(--tranche),0 6px 12px rgba(10,60,70,.12)}
+#quests .q.cur{box-shadow:0 0 0 2.5px var(--brass),0 3px 0 var(--tranche)}
+#quests .q.ok{background:linear-gradient(#26CBBB,#14B3A4)}
+#quests .q.ok .ico{stroke:#fff}#quests .q.ok .icof{fill:#fff}
+/* légende « inspiré d'un fait réel » et étiquettes sur la carte */
+#caption .cap-k{color:var(--brass-d)!important;background:#DFF5F1!important;font-weight:800;border-radius:9px 9px 0 0!important;box-shadow:none!important}
+#caption .cap-v{font-weight:900;border-radius:0 14px 14px 14px!important}
+.l-panneau{background:var(--paper)!important;color:var(--ink)!important;border:0!important;border-radius:.6em!important;box-shadow:0 .16em 0 var(--tranche),0 .4em .8em rgba(10,60,70,.18)!important;font-weight:900}
+.l-etiquette{background:linear-gradient(#26CBBB,#14B3A4)!important;color:#fff!important;border:0!important;box-shadow:0 .16em 0 var(--brass-d)!important;font-weight:900}
+.l-bulle{border-radius:1em!important}
+/* jetons d'événements sur la carte */
+.pin .tok{stroke:#fff;stroke-width:.45}
+.pin.major .tok{fill:var(--gold)}
+/* fiches (cartes d'événement, résultats) */
+.card,#result{border:0!important;box-shadow:0 5px 0 #C8D8D6,0 16px 34px rgba(8,50,60,.25)!important;background-image:none!important;border-radius:24px!important}
+.real{background:#F1F8F6!important;border:0!important}
+.real-st{border-color:var(--brass-d)!important;color:var(--brass-d)}
+/* trains : bien opaques */
+.mv.tgv{opacity:1!important;filter:drop-shadow(0 1.5px 1px rgba(10,50,60,.45)) saturate(1.1)}
+.fxb.fxspr img{width:100%;height:100%;object-fit:contain;object-position:50% 100%;display:block;transform:scale(1.25);transform-origin:50% 100%;filter:drop-shadow(0 2px 2px rgba(10,60,70,.18))}
+.fxb.fxspr img.flip{transform:scale(-1.25,1.25)}
+/* doublon de « Lancer la semaine » : le bouton du dock suffit */
+#launch,#launch.on{display:none!important}

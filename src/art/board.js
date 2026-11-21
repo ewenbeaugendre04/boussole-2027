@@ -20,7 +20,7 @@ function buildBoard(){
     '</defs>');
   h.push('<rect class="sea-rect" x="-500" y="-500" width="1100" height="1100"/>');
   // voisins dans la brume
-  h.push('<g filter="url(#blur1)" opacity=".75">' + NEIGH.map(function(n){ return '<path d="' + smooth(n, true) + '" fill="var(--mist-land)"/>'; }).join('') + '</g>');
+  h.push('<g opacity=".8" transform="translate(0,1.2)">' + NEIGH.map(function(n){ return '<path d="' + smooth(n, true) + '" fill="#C9E6DE"/>'; }).join('') + '</g><g opacity=".9">' + NEIGH.map(function(n){ return '<path d="' + smooth(n, true) + '" fill="var(--mist-land)"/>'; }).join('') + '</g>');
   // chenal autour de l'île
   h.push('<path d="' + fr + '" fill="none" stroke="var(--sea)" stroke-width="5.5" stroke-linejoin="round"/>');
   h.push('<rect x="-500" y="-500" width="1100" height="1100" fill="url(#fog)" pointer-events="none"/>');
@@ -42,9 +42,11 @@ function buildBoard(){
     for(var i = 0; i < f[2]; i++){
       var x = c[0] + (R() - .5) * 9, y = c[1] + (R() - .5) * 6, w = 2 + R() * 2.6, hh = 1.4 + R() * 1.6;
       var fill = ['var(--field-a)','var(--field-b)','var(--field-c)'][Math.floor(R() * 3)];
-      h.push('<rect x="' + F(x) + '" y="' + F(y) + '" width="' + F(w) + '" height="' + F(hh) + '" rx=".3" fill="' + fill + '" opacity=".85" transform="rotate(' + F((R() - .5) * 24) + ' ' + F(x) + ' ' + F(y) + ')"/>');
+      h.push('<rect x="' + F(x) + '" y="' + F(y) + '" width="' + F(w * 1.3) + '" height="' + F(hh * 1.2) + '" rx=".6" fill="' + fill + '" opacity=".6" transform="rotate(' + F((R() - .5) * 24) + ' ' + F(x) + ' ' + F(y) + ')"/>');
     }
   });
+  // grandes zones de couleur (bocage, forêts, plaines)
+  [[-0.9,44.3,7,'#3F9A3D'],[2.6,47.0,6,'#86D05A'],[5.5,48.3,5,'#4FA944'],[1.0,45.6,6,'#4FA944'],[3.8,49.3,6,'#A6DC63'],[-2.5,48.1,6,'#5CB84B'],[0.2,47.6,5,'#8BD45C'],[4.6,46.4,5,'#5CB84B']].forEach(function(z){ var c = P(z[0], z[1]); h.push('<ellipse cx="' + F(c[0]) + '" cy="' + F(c[1]) + '" rx="' + z[2] + '" ry="' + F(z[2] * .55) + '" fill="' + z[3] + '" opacity=".5"/>'); });
   // rivières
   var rivers = [
     [[4.4,48.3],[3.4,48.5],[2.7,48.6],[2.35,48.85],[1.9,49.0],[1.2,49.3],[0.3,49.45]],
@@ -52,7 +54,7 @@ function buildBoard(){
     [[6.0,46.2],[4.85,45.75],[4.8,44.9],[4.7,44.0],[4.6,43.55]],
     [[0.7,42.9],[1.4,43.6],[0.6,44.2],[-0.55,44.85],[-0.9,45.4]]
   ];
-  rivers.forEach(function(r){ h.push('<path d="' + smooth(L(r), false) + '" fill="none" stroke="var(--river)" stroke-width=".6" stroke-linecap="round"/>'); });
+  rivers.forEach(function(r){ h.push('<path d="' + smooth(L(r), false) + '" fill="none" stroke="var(--river)" stroke-width=".7" stroke-linecap="round"/>'); });
   h.push('</g>');
   // rails
   var C = { paris:[2.35,48.85], lille:[3.07,50.63], lyon:[4.84,45.76], marseille:[5.37,43.3], bordeaux:[-0.58,44.84], rennes:[-1.68,48.11], brest:[-4.45,48.39],
@@ -63,8 +65,8 @@ function buildBoard(){
   lines.forEach(function(l, i){
     var d = smooth(L(l.map(function(k){ return C[k]; })), false);
     railPaths.push(d);
-    h.push('<path d="' + d + '" fill="none" stroke="var(--rail)" stroke-width="1.05" stroke-dasharray=".14 .5" opacity=".55"/>');
-    h.push('<path id="rail' + i + '" d="' + d + '" fill="none" stroke="var(--rail)" stroke-width=".32" opacity=".85"/>');
+    h.push('<path id="rail' + i + '" d="' + d + '" fill="none" stroke="var(--rail)" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/>');
+    h.push('<path d="' + d + '" fill="none" stroke="#D8CBB4" stroke-width=".55" stroke-dasharray=".25 .55" stroke-linejoin="round"/>');
   });
   h.push('</g>');
   // objets debout, triés par profondeur

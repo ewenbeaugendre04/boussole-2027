@@ -156,7 +156,9 @@ function objEl(name, k, label, flip){
   var el = document.createElement('div'); el.className = 'fx o-' + name;
   var b = document.createElement('div'); b.className = 'fxb';
   b.style.cssText = 'width:' + F(pw) + 'px;height:' + F(ph) + 'px;left:' + F(-pw / 2) + 'px;top:' + F(-ph + 2 * sc) + 'px';
-  b.innerHTML = def.d ? '<svg viewBox="' + (-w / 2) + ' ' + (-h + 2) + ' ' + w + ' ' + h + '"' + (flip ? ' class="flip"' : '') + '>' + def.d + '</svg>' : '';
+  var sp = OBJ_SPR[name];
+  if(sp && SPR_AR[sp]){ b.classList.add('fxspr'); b.innerHTML = '<img src="' + SPR_DIR + sp + '.webp" alt="" decoding="async"' + (flip ? ' class="flip"' : '') + '>'; }
+  else b.innerHTML = def.d ? '<svg viewBox="' + (-w / 2) + ' ' + (-h + 2) + ' ' + w + ' ' + h + '"' + (flip ? ' class="flip"' : '') + '>' + def.d + '</svg>' : '';
   el.appendChild(b);
   el._def = def; el._sc = sc; el._w = w; el._h = h; el._pw = pw; el._ph = ph;
   var lt = def.lab || (label ? 'etiquette' : null);
