@@ -34,7 +34,8 @@
 
 ## Intégration DA dans le jeu (21/11, en ligne)
 - Palette vive (base.css), police Nunito auto-hébergée (Google Fonts supprimé), couche `#sprl` (`src/art/sprites.js`) : ~170 sprites (monuments, maisons par région, énergie aux lieux réels, fermes, ports), TGV sprite qui suit les voies (`layers.js`). `src/assets` = lien vers `assets/` ; le build copie sprites et polices dans `dist/assets`.
-- Reste : remplacer les objets d'événements (OBJ, `objects.js`) par les sprites (tracteur, avion, cargo…) ; textes encore au « tu » ; panneaux du haut un peu translucides.
+- 2e passe (retours d'Ewen) : surcouche `src/styles/da.css` (panneaux crème pleins, jauges colorées, boutons sarcelle, pastille semaine dorée, étiquettes) ; rails épais à traverses ; plages (liseré sable) ; zones de couleur, forêts et champs en sprites ; voisins nets ; objets d'événement remplacés par les sprites via `OBJ_SPR` (`sprites.js`) ; 2 TGV seulement, sur les lignes Brest–Strasbourg et Paris–Bordeaux–Marseille (le sprite isométrique ne monte pas à la verticale) ; carte « Lancer la semaine » en double masquée.
+- Reste : textes au « tu » à passer au « vous » ; taille du texte des fiches (Ewen veut petit) ; objets OBJ sans sprite (drapeau UE, bâtiment UE, phares…).
 
 ## Prochaines étapes
 1. FAIT (21/11) : 51 SVG dans `assets/library/svg/` (9,5 Mo, ~190 Ko chacun, avec métadonnées C2PA de provenance IA à conserver). Trop lourds pour le jeu : produire des sprites WebP (~256 px) via Playwright pour le build.
