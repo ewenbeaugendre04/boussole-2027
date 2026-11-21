@@ -1,0 +1,410 @@
+[
+ {
+  "id": "eolienne",
+  "categorie": "energie",
+  "url": "https://img.recraft.ai/3lAVZ4NNqTUa6lOvHUiRx4Sr-UTvHr4RIS-Hu3G8hJY/raw:1/plain/abs://prod/images/8219c3a5-08e0-43fb-841d-d2f74b121d6d",
+  "prompt": "Single isolated mobile-game asset, one independent object only, consistent 30-degree isometric view, light from top-left, vivid playful chunky shapes, NO base tile, NO plinth, NO ground patch, NO grass square, NO sea around, NO outlines, NO text, NO logos, NO flags, plain white background: land wind turbine, just mast and rotor",
+  "credits": 4,
+  "essais": 1
+ },
+ {
+  "id": "eolien_mer",
+  "categorie": "energie",
+  "url": "https://img.recraft.ai/JMIuOyrxh2kdTnmBVX_7ik3zx8G1OtslY_kTYsl4wjo/raw:1/plain/abs://prod/images/a31b0634-95ff-4e15-853a-2fbf52516205",
+  "prompt": "Single isolated mobile-game asset, one independent object only, consistent 30-degree isometric view, light from top-left, vivid playful chunky shapes, NO base tile, NO plinth, NO ground patch, NO grass square, NO sea around, NO outlines, NO text, NO logos, NO flags, plain white background: offshore wind turbine on its yellow monopile foundation only",
+  "credits": 4,
+  "essais": 1
+ },
+ {
+  "id": "centrale_nucleaire",
+  "categorie": "energie",
+  "url": "https://img.recraft.ai/9xIR1gAPGNxwHilJySvKLcpOEAAByfjj6OfYW1oz3qo/raw:1/plain/abs://prod/images/09fee26f-d192-4579-a1be-297ce40e040a",
+  "prompt": "Single isolated mobile-game asset, one independent object only, consistent 30-degree isometric view, light from top-left, vivid playful chunky shapes, NO base tile, NO plinth, NO ground patch, NO grass square, NO sea around, NO outlines, NO text, NO logos, NO flags, plain white background: nuclear plant with two cooling towers and white steam",
+  "credits": 4,
+  "essais": 1
+ },
+ {
+  "id": "chantier_epr",
+  "categorie": "energie",
+  "url": "https://img.recraft.ai/sYMYQEzQKHn9MKNaxVJvd3CRLDW1u2m1C1Ahrmd_kCY/raw:1/plain/abs://prod/images/a32894cf-d5f7-40d1-9209-9f37260bf554",
+  "prompt": "Single isolated mobile-game asset, one independent object only, consistent 30-degree isometric view, light from top-left, vivid playful chunky shapes, NO base tile, NO plinth, NO ground patch, NO grass square, NO sea around, NO outlines, NO text, NO logos, NO flags, plain white background: reactor dome under construction with a small crane",
+  "credits": 4,
+  "essais": 1
+ },
+ {
+  "id": "solaire",
+  "categorie": "energie",
+  "url": "https://img.recraft.ai/QAU_p_r5b4gutBBeiEEEH7mOfjoh9VNiUXaOs_C5dFc/raw:1/plain/abs://prod/images/76b388cb-e421-40f5-81eb-665003776319",
+  "prompt": "Single isolated mobile-game asset, one independent object only, consistent 30-degree isometric view, light from top-left, vivid playful chunky shapes, NO base tile, NO plinth, NO ground patch, NO grass square, NO sea around, NO outlines, NO text, NO logos, NO flags, plain white background: rectangular solar panel array",
+  "credits": 4,
+  "essais": 1
+ },
+ {
+  "id": "barrage",
+  "categorie": "energie",
+  "url": "https://img.recraft.ai/cr8tuqwhBYmbBFbizWQWbkgD1jabyjDeDZnux91naxI/raw:1/plain/abs://prod/images/2aa819de-254a-47e0-be92-54648af9941b",
+  "prompt": "Single isolated mobile-game asset, one independent object only, consistent 30-degree isometric view, light from top-left, vivid playful chunky shapes, NO base tile, NO plinth, NO ground patch, NO grass square, NO sea around, NO outlines, NO text, NO logos, NO flags, plain white background: hydroelectric concrete dam wall with spillway water",
+  "credits": 4,
+  "essais": 1
+ },
+ {
+  "id": "pylone_ht",
+  "categorie": "energie",
+  "url": "https://img.recraft.ai/p3JzwRShKWjRE9f0zb6BZd49aUqUqrJBlL67IqR08jE/raw:1/plain/abs://prod/images/decf9591-bf44-4102-b37a-18e269a8bd6b",
+  "prompt": "Single isolated mobile-game asset, one independent object only, consistent 30-degree isometric view, light from top-left, vivid playful chunky shapes, NO base tile, NO plinth, NO ground patch, NO grass square, NO sea around, NO outlines, NO text, NO logos, NO flags, plain white background: high-voltage electricity pylon",
+  "credits": 4,
+  "essais": 1
+ },
+ {
+  "id": "centrale_gaz",
+  "categorie": "energie",
+  "url": "https://img.recraft.ai/7alT8JfNqZ9XyS8mcBRUmgrpeQbVVJwRIkiEvB1vEZE/raw:1/plain/abs://prod/images/7e58a3d8-fa60-4ca7-8e92-b1f311de7f18",
+  "prompt": "Single isolated mobile-game asset, one independent object only, consistent 30-degree isometric view, light from top-left, vivid playful chunky shapes, NO base tile, NO plinth, NO ground patch, NO grass square, NO sea around, NO outlines, NO text, NO logos, NO flags, plain white background: gas power plant block with chimney",
+  "credits": 4,
+  "essais": 1
+ },
+ {
+  "id": "tgv",
+  "categorie": "transports",
+  "url": "https://img.recraft.ai/rOzNmYermLIYFDh0qNQhte0WyTM9LvvToVX_x2SfKZ8/raw:1/plain/abs://prod/images/ff1fe63a-9df6-4213-8bac-17744a188d6f",
+  "prompt": "Single isolated mobile-game asset, one independent object only, consistent 30-degree isometric view, light from top-left, vivid playful chunky shapes, NO base tile, NO plinth, NO ground patch, NO grass square, NO sea around, NO outlines, NO text, NO logos, NO flags, plain white background: white high-speed train, 3 cars, on its rails, wheels resting exactly on the rails, track running along the isometric diagonal from bottom-left to top-right, no base under the track",
+  "credits": 4,
+  "essais": 1
+ },
+ {
+  "id": "train_fret",
+  "categorie": "transports",
+  "url": "https://img.recraft.ai/T1tdNaRWRhdL2DKANup7MlfH01gv_Ac53fivnkZRZ7k/raw:1/plain/abs://prod/images/8f7e045b-be71-471e-97a2-fab8125c5ff2",
+  "prompt": "Single isolated mobile-game asset, one independent object only, consistent 30-degree isometric view, light from top-left, vivid playful chunky shapes, NO base tile, NO plinth, NO ground patch, NO grass square, NO sea around, NO outlines, NO text, NO logos, NO flags, plain white background: freight locomotive with 2 container wagons on rails, wheels resting exactly on the rails, track running along the isometric diagonal from bottom-left to top-right, no base under the track",
+  "credits": 4,
+  "essais": 1
+ },
+ {
+  "id": "segment_rails",
+  "categorie": "transports",
+  "url": "https://img.recraft.ai/YvkTd8Yd4cBgYWEH8YwHWmfvyQF-7-LZ8c1v6czW20w/raw:1/plain/abs://prod/images/d97190e6-459d-4c44-bc5e-9761ae92dcff",
+  "prompt": "Single isolated mobile-game asset, one independent object only, consistent 30-degree isometric view, light from top-left, vivid playful chunky shapes, NO base tile, NO plinth, NO ground patch, NO grass square, NO sea around, NO outlines, NO text, NO logos, NO flags, plain white background: straight railway track segment only, sleepers and rails, running along the isometric diagonal from bottom-left to top-right, no ballast base",
+  "credits": 4,
+  "essais": 1
+ },
+ {
+  "id": "voiture",
+  "categorie": "transports",
+  "url": "https://img.recraft.ai/5r3hDiSK1DfxTQ_LYrJbobKfFjO4e18Uhv4ADA0pPTo/raw:1/plain/abs://prod/images/9993171a-7cc4-4f5d-a6cd-d00e7ffcabda",
+  "prompt": "Single isolated mobile-game asset, one independent object only, consistent 30-degree isometric view, light from top-left, vivid playful chunky shapes, NO base tile, NO plinth, NO ground patch, NO grass square, NO sea around, NO outlines, NO text, NO logos, NO flags, plain white background: small compact car",
+  "credits": 4,
+  "essais": 1
+ },
+ {
+  "id": "camion",
+  "categorie": "transports",
+  "url": "https://img.recraft.ai/R0uxA_zMfv3tET5XOHcMwz-luOR5XdykqBK7cqsc7MM/raw:1/plain/abs://prod/images/15144c79-314e-476a-a0c4-dda9211edb74",
+  "prompt": "Single isolated mobile-game asset, one independent object only, consistent 30-degree isometric view, light from top-left, vivid playful chunky shapes, NO base tile, NO plinth, NO ground patch, NO grass square, NO sea around, NO outlines, NO text, NO logos, NO flags, plain white background: semi-trailer truck",
+  "credits": 4,
+  "essais": 1
+ },
+ {
+  "id": "avion",
+  "categorie": "transports",
+  "url": "https://img.recraft.ai/aenQHcZLEZmrVpAzo2q_OcyVOK8Cy0Hsc0v19EDFmF0/raw:1/plain/abs://prod/images/4caac059-066e-4892-8210-090463b6dad6",
+  "prompt": "Single isolated mobile-game asset, one independent object only, consistent 30-degree isometric view, light from top-left, vivid playful chunky shapes, NO base tile, NO plinth, NO ground patch, NO grass square, NO sea around, NO outlines, NO text, NO logos, NO flags, plain white background: airliner in flight",
+  "credits": 4,
+  "essais": 1
+ },
+ {
+  "id": "porte_conteneurs",
+  "categorie": "transports",
+  "url": "https://img.recraft.ai/b6xytfr3Snrlb7-K4ubEoecCzUkHVS1ikxSRihyrBR4/raw:1/plain/abs://prod/images/198bdf76-8659-4d2a-ab40-00004a9344ab",
+  "prompt": "Single isolated mobile-game asset, one independent object only, consistent 30-degree isometric view, light from top-left, vivid playful chunky shapes, NO base tile, NO plinth, NO ground patch, NO grass square, NO sea around, NO outlines, NO text, NO logos, NO flags, plain white background: container ship hull with stacked containers, no water",
+  "credits": 4,
+  "essais": 1
+ },
+ {
+  "id": "bateau_peche",
+  "categorie": "transports",
+  "url": "https://img.recraft.ai/7S0Rjsxd5EbRUgV7bg9DMMt3IfpjRzqaJ_n-6NfdkBA/raw:1/plain/abs://prod/images/be6f936b-0751-439b-bc61-2f907d3d08d8",
+  "prompt": "Single isolated mobile-game asset, one independent object only, consistent 30-degree isometric view, light from top-left, vivid playful chunky shapes, NO base tile, NO plinth, NO ground patch, NO grass square, NO sea around, NO outlines, NO text, NO logos, NO flags, plain white background: small fishing trawler, no water",
+  "credits": 4,
+  "essais": 1
+ },
+ {
+  "id": "grue_portuaire",
+  "categorie": "transports",
+  "url": "https://img.recraft.ai/u3H5Tgwlyu_NzGVbvuui9kJXhIaGXjgsEmtRzEP2M08/raw:1/plain/abs://prod/images/65f411b2-0fbc-4c19-8282-5043223335cc",
+  "prompt": "Single isolated mobile-game asset, one independent object only, consistent 30-degree isometric view, light from top-left, vivid playful chunky shapes, NO base tile, NO plinth, NO ground patch, NO grass square, NO sea around, NO outlines, NO text, NO logos, NO flags, plain white background: container gantry crane",
+  "credits": 4,
+  "essais": 1
+ },
+ {
+  "id": "ble",
+  "categorie": "agriculture",
+  "url": "https://img.recraft.ai/TgtrVi4O79dV6IFsmvX7xuDRGjDDuqc-6UAvDid2IRM/raw:1/plain/abs://prod/images/7c3e3eaf-3c4a-4995-b261-9ac4376cb97f",
+  "prompt": "Single isolated mobile-game asset, one independent object only, consistent 30-degree isometric view, light from top-left, vivid playful chunky shapes, NO base tile, NO plinth, NO ground patch, NO grass square, NO sea around, NO outlines, NO text, NO logos, NO flags, plain white background: rectangular golden wheat field patch",
+  "credits": 4,
+  "essais": 1
+ },
+ {
+  "id": "vignes",
+  "categorie": "agriculture",
+  "url": "https://img.recraft.ai/TP1cDNeolFmjAIH1n1Uus6kQZVOMdKMZaZC2HcVHNHQ/raw:1/plain/abs://prod/images/5843cfad-96be-49ab-9ea0-190191ee7647",
+  "prompt": "Single isolated mobile-game asset, one independent object only, consistent 30-degree isometric view, light from top-left, vivid playful chunky shapes, NO base tile, NO plinth, NO ground patch, NO grass square, NO sea around, NO outlines, NO text, NO logos, NO flags, plain white background: rectangular vineyard rows patch",
+  "credits": 4,
+  "essais": 1
+ },
+ {
+  "id": "vache",
+  "categorie": "agriculture",
+  "url": "https://img.recraft.ai/9OhkqR7_ZSbm3oJTu6WLGOVEvaY5VwzsCwEF4u-E8PM/raw:1/plain/abs://prod/images/33f9ca21-884e-495e-a842-2b425bdee1c4",
+  "prompt": "Single isolated mobile-game asset, one independent object only, consistent 30-degree isometric view, light from top-left, vivid playful chunky shapes, NO base tile, NO plinth, NO ground patch, NO grass square, NO sea around, NO outlines, NO text, NO logos, NO flags, plain white background: dairy cow, black and white spotted coat, pink muzzle, standing on four legs, compact cute body, horns and ears attached to the head",
+  "credits": 8,
+  "essais": 2
+ },
+ {
+  "id": "tracteur",
+  "categorie": "agriculture",
+  "url": "https://img.recraft.ai/4_KQOEfS2VzfgwtcjjuruMfT_oR_UP4qyI01JA8GO6g/raw:1/plain/abs://prod/images/8c39cc11-b34e-4a73-8174-d0b805d09371",
+  "prompt": "Single isolated mobile-game asset, one independent object only, consistent 30-degree isometric view, light from top-left, vivid playful chunky shapes, NO base tile, NO plinth, NO ground patch, NO grass square, NO sea around, NO outlines, NO text, NO logos, NO flags, plain white background: green farm tractor",
+  "credits": 4,
+  "essais": 1
+ },
+ {
+  "id": "serre",
+  "categorie": "agriculture",
+  "url": "https://img.recraft.ai/eXt2XbTzoDqd1tGlaRLuEeaB6CAMlNw_CfBx99IFAfQ/raw:1/plain/abs://prod/images/b6f2ca9a-4d30-48e9-b29d-1631677e79e1",
+  "prompt": "Single isolated mobile-game asset, one independent object only, consistent 30-degree isometric view, light from top-left, vivid playful chunky shapes, NO base tile, NO plinth, NO ground patch, NO grass square, NO sea around, NO outlines, NO text, NO logos, NO flags, plain white background: glass greenhouse",
+  "credits": 4,
+  "essais": 1
+ },
+ {
+  "id": "arbre",
+  "categorie": "agriculture",
+  "url": "https://img.recraft.ai/mrfY6iZC3r_VauOnzr7TCNEQz-8qDptb-PoUI-_P59Y/raw:1/plain/abs://prod/images/6a11fe26-e09a-47ff-a471-5e888c9fa245",
+  "prompt": "Single isolated mobile-game asset, one independent object only, consistent 30-degree isometric view, light from top-left, vivid playful chunky shapes, NO base tile, NO plinth, NO ground patch, NO grass square, NO sea around, NO outlines, NO text, NO logos, NO flags, plain white background: single round deciduous tree",
+  "credits": 4,
+  "essais": 1
+ },
+ {
+  "id": "feu",
+  "categorie": "agriculture",
+  "url": "https://img.recraft.ai/jCksN6yjS-n_xutk6TT2wvKQIOrk0WPCXMScwrAV9co/raw:1/plain/abs://prod/images/347e2b81-ccb9-43a5-b529-41a9b718707a",
+  "prompt": "Single isolated mobile-game asset, one independent object only, consistent 30-degree isometric view, light from top-left, vivid playful chunky shapes, NO base tile, NO plinth, NO ground patch, NO grass square, NO sea around, NO outlines, NO text, NO logos, NO flags, plain white background: forest-fire flames with dark smoke",
+  "credits": 4,
+  "essais": 1
+ },
+ {
+  "id": "canadair",
+  "categorie": "agriculture",
+  "url": "https://img.recraft.ai/CWsb5V2XyQb79tmlYp-f3vblyb55H-W9_6MLI6OLQkU/raw:1/plain/abs://prod/images/b80479fe-d2e0-41e8-a060-8fefd5667ca0",
+  "prompt": "Single isolated mobile-game asset, one independent object only, consistent 30-degree isometric view, light from top-left, vivid playful chunky shapes, NO base tile, NO plinth, NO ground patch, NO grass square, NO sea around, NO outlines, NO text, NO logos, NO flags, plain white background: yellow-and-white water-bomber plane dropping water",
+  "credits": 4,
+  "essais": 1
+ },
+ {
+  "id": "immeuble",
+  "categorie": "ville",
+  "url": "https://img.recraft.ai/XulqQOJb4cWQACM6Rvu1kcK60OLhE5_k4P9OK82eI2A/raw:1/plain/abs://prod/images/b20bea0a-5cd2-44b0-ae4b-c0c7eb935ff3",
+  "prompt": "Single isolated mobile-game asset, one independent object only, consistent 30-degree isometric view, light from top-left, vivid playful chunky shapes, NO base tile, NO plinth, NO ground patch, NO grass square, NO sea around, NO outlines, NO text, NO logos, NO flags, plain white background: modern apartment building",
+  "credits": 4,
+  "essais": 1
+ },
+ {
+  "id": "haussmann",
+  "categorie": "ville",
+  "url": "https://img.recraft.ai/1vY3kQGm5egMmjJUeBB65QcLJ4wDt-YN9cS2GWAgUtQ/raw:1/plain/abs://prod/images/7a91f2f0-be4c-44fb-99ac-3f8ae2f19b6e",
+  "prompt": "Single isolated mobile-game asset, one independent object only, consistent 30-degree isometric view, light from top-left, vivid playful chunky shapes, NO base tile, NO plinth, NO ground patch, NO grass square, NO sea around, NO outlines, NO text, NO logos, NO flags, plain white background: cream Haussmann-style Parisian building with grey zinc roof",
+  "credits": 4,
+  "essais": 1
+ },
+ {
+  "id": "tour_bureaux",
+  "categorie": "ville",
+  "url": "https://img.recraft.ai/_oLdcxzYEqmfWrw9vNGYrBCAIW-6xUtkwGBs-Nly3ys/raw:1/plain/abs://prod/images/cc80a230-8113-40e0-8b13-f7cd26130cc1",
+  "prompt": "Single isolated mobile-game asset, one independent object only, consistent 30-degree isometric view, light from top-left, vivid playful chunky shapes, NO base tile, NO plinth, NO ground patch, NO grass square, NO sea around, NO outlines, NO text, NO logos, NO flags, plain white background: glass office skyscraper",
+  "credits": 4,
+  "essais": 1
+ },
+ {
+  "id": "pavillon",
+  "categorie": "ville",
+  "url": "https://img.recraft.ai/RXgvu_OHz3o3jq-pJmvQV8LfW_iE0O95NwyjT3cC7Pw/raw:1/plain/abs://prod/images/ac778105-ec5e-4997-9d58-bb1554b424e2",
+  "prompt": "Single isolated mobile-game asset, one independent object only, consistent 30-degree isometric view, light from top-left, vivid playful chunky shapes, NO base tile, NO plinth, NO ground patch, NO grass square, NO sea around, NO outlines, NO text, NO logos, NO flags, plain white background: suburban house with terracotta roof",
+  "credits": 4,
+  "essais": 1
+ },
+ {
+  "id": "hopital",
+  "categorie": "ville",
+  "url": "https://img.recraft.ai/PFO2YFeVXEZmzW1I-J_Da1OX3U7iXgl5Y2tWKachBPA/raw:1/plain/abs://prod/images/2ce10100-572f-403c-97ee-ab5cbe1e4260",
+  "prompt": "Single isolated mobile-game asset, one independent object only, consistent 30-degree isometric view, light from top-left, vivid playful chunky shapes, NO base tile, NO plinth, NO ground patch, NO grass square, NO sea around, NO outlines, NO text, NO logos, NO flags, plain white background: hospital building with a teal cross sign (not red)",
+  "credits": 4,
+  "essais": 1
+ },
+ {
+  "id": "ecole",
+  "categorie": "ville",
+  "url": "https://img.recraft.ai/vBBCSz1nQECkGYplvu3y0yBLkIlTWT2C4I_OjSl1afA/raw:1/plain/abs://prod/images/cd09d48a-cc36-426a-99c3-165d79909797",
+  "prompt": "Single isolated mobile-game asset, one independent object only, consistent 30-degree isometric view, light from top-left, vivid playful chunky shapes, NO base tile, NO plinth, NO ground patch, NO grass square, NO sea around, NO outlines, NO text, NO logos, NO flags, plain white background: school building with clock",
+  "credits": 4,
+  "essais": 1
+ },
+ {
+  "id": "usine",
+  "categorie": "ville",
+  "url": "https://img.recraft.ai/dv5iysaH_AepP1z7Y3kAeBcropNzBdDOF1vTRZbr8xw/raw:1/plain/abs://prod/images/45771bd6-4659-474f-8098-d739e01dbf35",
+  "prompt": "Single isolated mobile-game asset, one independent object only, consistent 30-degree isometric view, light from top-left, vivid playful chunky shapes, NO base tile, NO plinth, NO ground patch, NO grass square, NO sea around, NO outlines, NO text, NO logos, NO flags, plain white background: factory with sawtooth roof and chimney",
+  "credits": 4,
+  "essais": 1
+ },
+ {
+  "id": "grue_chantier",
+  "categorie": "ville",
+  "url": "https://img.recraft.ai/spf6JyYJmV5gWdeJIW1fYIPzS72QWs9ReTVbITulOTs/raw:1/plain/abs://prod/images/5d60eede-500d-4069-ac5f-db0aaa77caad",
+  "prompt": "Single isolated mobile-game asset, one independent object only, consistent 30-degree isometric view, light from top-left, vivid playful chunky shapes, NO base tile, NO plinth, NO ground patch, NO grass square, NO sea around, NO outlines, NO text, NO logos, NO flags, plain white background: tower crane",
+  "credits": 4,
+  "essais": 1
+ },
+ {
+  "id": "mairie",
+  "categorie": "ville",
+  "url": "https://img.recraft.ai/RCynyUmWx_N_PgWvoMybTAUasm2MRgPLZn3VU6wJaak/raw:1/plain/abs://prod/images/b62ebe11-a43f-4115-af9c-37cac885aa86",
+  "prompt": "Single isolated mobile-game asset, one independent object only, consistent 30-degree isometric view, light from top-left, vivid playful chunky shapes, NO base tile, NO plinth, NO ground patch, NO grass square, NO sea around, NO outlines, NO text, NO logos, NO flags, plain white background: generic French town hall with clock and tricolour-free facade",
+  "credits": 4,
+  "essais": 1
+ },
+ {
+  "id": "hemicycle",
+  "categorie": "ville",
+  "url": "https://img.recraft.ai/nBdAcbyPRmYcF1PwwDLnOmTlq301jIKwTy7jnGyu52g/raw:1/plain/abs://prod/images/8d52fe74-fcbe-446d-b236-af8bf2e0cac1",
+  "prompt": "Single isolated mobile-game asset, one independent object only, consistent 30-degree isometric view, light from top-left, vivid playful chunky shapes, NO base tile, NO plinth, NO ground patch, NO grass square, NO sea around, NO outlines, NO text, NO logos, NO flags, plain white background: generic neoclassical parliament building with columns and dome, not a real building",
+  "credits": 4,
+  "essais": 1
+ },
+ {
+  "id": "tour_eiffel",
+  "categorie": "monuments",
+  "url": "https://img.recraft.ai/BP9z6mYSIyKLlobP1F1BR0pV0oj5l-U7ZX5ELhDAUiw/raw:1/plain/abs://prod/images/f9c4467a-e95e-4220-be7b-d20ce8b7c6f9",
+  "prompt": "Single isolated mobile-game asset, one independent object only, consistent 30-degree isometric view, light from top-left, vivid playful chunky shapes, NO base tile, NO plinth, NO ground patch, NO grass square, NO sea around, NO outlines, NO text, NO logos, NO flags, plain white background: Eiffel Tower in its real brown-bronze colour",
+  "credits": 4,
+  "essais": 1
+ },
+ {
+  "id": "mont_saint_michel",
+  "categorie": "monuments",
+  "url": "https://img.recraft.ai/jM2KzJe6kS9lmUDAqrpT2XniCZ6OLN47e55TC6fHrXo/raw:1/plain/abs://prod/images/a4e04db5-d8a3-4367-a890-e333cab60cd9",
+  "prompt": "Single isolated mobile-game asset, one independent object only, consistent 30-degree isometric view, light from top-left, vivid playful chunky shapes, NO base tile, NO plinth, NO ground patch, NO grass square, NO sea around, NO outlines, NO text, NO logos, NO flags, plain white background: Mont-Saint-Michel abbey on its rock (no water)",
+  "credits": 4,
+  "essais": 1
+ },
+ {
+  "id": "arc_triomphe",
+  "categorie": "monuments",
+  "url": "https://img.recraft.ai/5imtE-7XwBVedAMbC8fEYiz3NIzYg6dTctr8nSWAyCA/raw:1/plain/abs://prod/images/e564088a-dd37-44fd-8fce-4ada406873f2",
+  "prompt": "Single isolated mobile-game asset, one independent object only, consistent 30-degree isometric view, light from top-left, vivid playful chunky shapes, NO base tile, NO plinth, NO ground patch, NO grass square, NO sea around, NO outlines, NO text, NO logos, NO flags, plain white background: Arc de Triomphe, massive cream limestone triumphal arch with one large central arch on each face, thick square pillars, flat attic top, standing directly on white background without any steps or ground",
+  "credits": 8,
+  "essais": 2
+ },
+ {
+  "id": "basilique_marseille",
+  "categorie": "monuments",
+  "url": "https://img.recraft.ai/pSF6gFFP7pyi9U0DcSG8SXgTIKVm6k8FuM7kK4kwiXU/raw:1/plain/abs://prod/images/a86b4990-4c44-445c-b6eb-ab71b32bdab6",
+  "prompt": "Single isolated mobile-game asset, one independent object only, consistent 30-degree isometric view, light from top-left, vivid playful chunky shapes, NO base tile, NO plinth, NO ground patch, NO grass square, NO sea around, NO outlines, NO text, NO logos, NO flags, plain white background: Notre-Dame de la Garde basilica of Marseille, Romano-Byzantine church with striped cream and green stone, tall square bell tower topped by a large golden Virgin and Child statue, small domes on the nave",
+  "credits": 8,
+  "essais": 2
+ },
+ {
+  "id": "fourviere",
+  "categorie": "monuments",
+  "url": "https://img.recraft.ai/aqvv1MYVH6tCzRQ-kaDDFCNttwFPBsz3zEx36HfzQWY/raw:1/plain/abs://prod/images/e02d0c4b-e538-4e54-b53f-9c5d0d776d39",
+  "prompt": "Single isolated mobile-game asset, one independent object only, consistent 30-degree isometric view, light from top-left, vivid playful chunky shapes, NO base tile, NO plinth, NO ground patch, NO grass square, NO sea around, NO outlines, NO text, NO logos, NO flags, plain white background: Fourvière basilica of Lyon, white stone rectangular church with four octagonal crenellated corner towers, columned portico front, golden statue on the apse",
+  "credits": 8,
+  "essais": 2
+ },
+ {
+  "id": "cathedrale_strasbourg",
+  "categorie": "monuments",
+  "url": "https://img.recraft.ai/JxSgZTXLWu6JUhVvPXlhP5Cc9GqLZGJDVYeEUzEh2KA/raw:1/plain/abs://prod/images/83bb7dbb-ccaa-4804-9be5-c20d844fea37",
+  "prompt": "Single isolated mobile-game asset, one independent object only, consistent 30-degree isometric view, light from top-left, vivid playful chunky shapes, NO base tile, NO plinth, NO ground patch, NO grass square, NO sea around, NO outlines, NO text, NO logos, NO flags, plain white background: Strasbourg Gothic cathedral in pink-red sandstone, ornate lacy west facade with large rose window, one single tall openwork spire on the left tower only, asymmetric silhouette",
+  "credits": 8,
+  "essais": 2
+ },
+ {
+  "id": "beffroi_lille",
+  "categorie": "monuments",
+  "url": "https://img.recraft.ai/s0N6Et1qI6XGbo0GSdzf9tzh1xdSo5gDz6X5up2hWW0/raw:1/plain/abs://prod/images/f56c3891-d86f-4a77-8531-27d031ed73c0",
+  "prompt": "Single isolated mobile-game asset, one independent object only, consistent 30-degree isometric view, light from top-left, vivid playful chunky shapes, NO base tile, NO plinth, NO ground patch, NO grass square, NO sea around, NO outlines, NO text, NO logos, NO flags, plain white background: Flemish belfry tower like Lille's, tall slender square red-brick tower with white stone corner details, clock faces, four small corner turrets near the top, tall ornate pointed bell-shaped spire with lantern",
+  "credits": 8,
+  "essais": 2
+ },
+ {
+  "id": "bourse_bordeaux",
+  "categorie": "monuments",
+  "url": "https://img.recraft.ai/yv4WNBarmCjNCYi13tw7pXb27sSL4_9HCQA-Gd5VZ68/raw:1/plain/abs://prod/images/78c9d4b6-e49b-40c2-974e-b160c2074974",
+  "prompt": "Single isolated mobile-game asset, one independent object only, consistent 30-degree isometric view, light from top-left, vivid playful chunky shapes, NO base tile, NO plinth, NO ground patch, NO grass square, NO sea around, NO outlines, NO text, NO logos, NO flags, plain white background: Place de la Bourse of Bordeaux, long 18th-century classical palace in pale golden limestone, U-shaped curved wings, tall arched windows, slate-grey mansard roofs with dormers, central pavilion with triangular pediment, no dome",
+  "credits": 8,
+  "essais": 2
+ },
+ {
+  "id": "nuage_orage",
+  "categorie": "climat",
+  "url": "https://img.recraft.ai/q0MSqgA5hEWHhIiNItzDB9gzJR_qx8muzs_rt4CGiiU/raw:1/plain/abs://prod/images/6be9334e-4500-4ac2-bf21-f1d672f8c310",
+  "prompt": "Single isolated mobile-game asset, one independent object only, consistent 30-degree isometric view, light from top-left, vivid playful chunky shapes, NO base tile, NO plinth, NO ground patch, NO grass square, NO sea around, NO outlines, NO text, NO logos, NO flags, plain white background: dark storm cloud with rain and lightning",
+  "credits": 4,
+  "essais": 1
+ },
+ {
+  "id": "cyclone",
+  "categorie": "climat",
+  "url": "https://img.recraft.ai/ESgfYqe9Y5NcL5ENgthn37BvQ29IYaA6hBK9M8u4epE/raw:1/plain/abs://prod/images/8109befc-de12-4af2-95df-f2dc13b29d57",
+  "prompt": "Single isolated mobile-game asset, one independent object only, consistent 30-degree isometric view, light from top-left, vivid playful chunky shapes, NO base tile, NO plinth, NO ground patch, NO grass square, NO sea around, NO outlines, NO text, NO logos, NO flags, plain white background: hurricane seen from above, thick white and grey cloud bands swirling in a spiral around a dark round eye in the center, floating cyclone disc",
+  "credits": 8,
+  "essais": 2
+ },
+ {
+  "id": "nuage_neige",
+  "categorie": "climat",
+  "url": "https://img.recraft.ai/cvj-qdMDEyG5avmGCmXS5MMytSYreqz-VhGwB1V0824/raw:1/plain/abs://prod/images/85b31d75-5ac3-492c-b558-e98b17fa04a1",
+  "prompt": "Single isolated mobile-game asset, one independent object only, consistent 30-degree isometric view, light from top-left, vivid playful chunky shapes, NO base tile, NO plinth, NO ground patch, NO grass square, NO sea around, NO outlines, NO text, NO logos, NO flags, plain white background: cloud with falling snowflakes",
+  "credits": 4,
+  "essais": 1
+ },
+ {
+  "id": "vague_crue",
+  "categorie": "climat",
+  "url": "https://img.recraft.ai/dV7F-PEjv1BMJgkjx7_Okmmx1y4LH8wLqpekQP0kYQ4/raw:1/plain/abs://prod/images/30e1e231-b737-482d-bdee-53295259d2a2",
+  "prompt": "Single isolated mobile-game asset, one independent object only, consistent 30-degree isometric view, light from top-left, vivid playful chunky shapes, NO base tile, NO plinth, NO ground patch, NO grass square, NO sea around, NO outlines, NO text, NO logos, NO flags, plain white background: brown flood water wave",
+  "credits": 4,
+  "essais": 1
+ },
+ {
+  "id": "soleil_canicule",
+  "categorie": "climat",
+  "url": "https://img.recraft.ai/O6I1QGd7_CuuZFxiLku-6Xgw0bJuySHJzNWx4AflTHs/raw:1/plain/abs://prod/images/29caac01-08c1-4809-8f32-f5e64324a25e",
+  "prompt": "Single isolated mobile-game asset, one independent object only, consistent 30-degree isometric view, light from top-left, vivid playful chunky shapes, NO base tile, NO plinth, NO ground patch, NO grass square, NO sea around, NO outlines, NO text, NO logos, NO flags, plain white background: blazing hot round sun floating in the air, bright orange-yellow disc with chunky triangular rays, wavy heat shimmer lines rising around it, nothing below it",
+  "credits": 8,
+  "essais": 2
+ },
+ {
+  "id": "urne",
+  "categorie": "interface",
+  "url": "https://img.recraft.ai/ficpzqC_pD71Mt27H7-oRWTap10O0C5WlJWHJ0aNS84/raw:1/plain/abs://prod/images/91083d8d-4325-4256-a21b-f0f497b6b058",
+  "prompt": "Single isolated mobile-game asset, one independent object only, consistent 30-degree isometric view, light from top-left, vivid playful chunky shapes, NO base tile, NO plinth, NO ground patch, NO grass square, NO sea around, NO outlines, NO text, NO logos, NO flags, plain white background: transparent ballot box with an envelope",
+  "credits": 4,
+  "essais": 1
+ },
+ {
+  "id": "smog",
+  "categorie": "climat",
+  "url": "https://img.recraft.ai/NlqIgEt5cPtjpYBlFFZgWa3o8rW5ItlLI-u93NX-pZA/raw:1/plain/abs://prod/images/c8c1e7b0-c300-4b87-8677-6a4b48f42150",
+  "prompt": "Single isolated mobile-game asset, one independent object only, consistent 30-degree isometric view, light from top-left, vivid playful chunky shapes, NO base tile, NO plinth, NO ground patch, NO grass square, NO sea around, NO outlines, NO text, NO logos, NO flags, plain white background: thick murky grey-brown pollution smog cloud, puffy dirty haze blob, dull grey and brownish tones",
+  "credits": 8,
+  "essais": 2
+ },
+ {
+  "id": "pieces",
+  "categorie": "interface",
+  "url": "https://img.recraft.ai/iJnufkkbig5bGcCvdRpcM5CHotAQdp_dHlZ0EDPU6jE/raw:1/plain/abs://prod/images/cf6c6362-ab15-41ce-865b-c56a3198dc30",
+  "prompt": "Single isolated mobile-game asset, one independent object only, consistent 30-degree isometric view, light from top-left, vivid playful chunky shapes, NO base tile, NO plinth, NO ground patch, NO grass square, NO sea around, NO outlines, NO text, NO logos, NO flags, plain white background: small pile of shiny gold coins, two short stacks of plain golden coins plus a few loose coins, all coins entirely gold yellow including edges, plain faces without any currency symbol",
+  "credits": 8,
+  "essais": 2
+ }
+]

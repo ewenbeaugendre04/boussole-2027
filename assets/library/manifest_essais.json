@@ -1,0 +1,42 @@
+[
+ {
+  "id": "eolienne",
+  "categorie": "energie",
+  "url": "https://img.recraft.ai/0XhEnHGnU_0o6xNpYaTiglNv_l1nwwiCEd5EBRHOwrY/raw:1/plain/abs://prod/images/74f61a6d-00fd-4dff-83ba-92d474b23629",
+  "prompt": "Single isolated mobile-game asset, consistent 30-degree isometric view, light from top-left, chunky rounded playful shapes, soft gradient volume, no outlines, no text, no logos, no flags, no ground plane, transparent background: land wind turbine on small grass base",
+  "credits": 4,
+  "essais": 1
+ },
+ {
+  "id": "eolien_mer",
+  "categorie": "energie",
+  "url": "https://img.recraft.ai/39R9oWUO8mX0QnPRVgySoOwfVgvIMOmP3EqSkHMI9xM/raw:1/plain/abs://prod/images/e0bf7cd4-1901-4cc0-955b-2202ef1a3367",
+  "prompt": "Single isolated mobile-game asset, consistent 30-degree isometric view, light from top-left, chunky rounded playful shapes, soft gradient volume, no outlines, no text, no logos, no flags, no ground plane, transparent background: offshore wind turbine on sea foundation with small waves",
+  "credits": 4,
+  "essais": 1
+ },
+ {
+  "id": "centrale_nucleaire",
+  "categorie": "energie",
+  "url": "https://img.recraft.ai/5W60c6TjqdtWEYRCNNWxElDiA1MDIGB-Lf_XT8VlmBE/raw:1/plain/abs://prod/images/5808cc71-b4aa-495c-a755-08503be04187",
+  "prompt": "Single isolated mobile-game asset, consistent 30-degree isometric view, light from top-left, chunky rounded playful shapes, soft gradient volume, no outlines, no text, no logos, no flags, no ground plane, transparent background: nuclear plant with two cooling towers and white steam",
+  "credits": 4,
+  "essais": 1
+ },
+ {
+  "id": "chantier_epr",
+  "categorie": "energie",
+  "url": "https://img.recraft.ai/ksAqDqCkU8eWY1Hr5gT-zp28-l_t434gOiQ_QNvrjlQ/raw:1/plain/abs://prod/images/d4d58499-01c6-4891-adf4-8876d6e94277",
+  "prompt": "Single isolated mobile-game asset, consistent 30-degree isometric view, light from top-left, chunky rounded playful shapes, soft gradient volume, no outlines, no text, no logos, no flags, no ground plane, transparent background: nuclear reactor dome under construction with crane",
+  "credits": 4,
+  "essais": 1
+ },
+ {
+  "id": "barrage",
+  "categorie": "energie",
+  "url": "https://img.recraft.ai/Tb_m_aT5RqxtFwdWTJhtlTppV4qPAcLpTQbIW-6gih8/raw:1/plain/abs://prod/images/a10b0416-f9dd-4761-86e7-86726d9c3d9f",
+  "prompt": "Single isolated mobile-game asset, consistent 30-degree isometric view, light from top-left, chunky rounded playful shapes, soft gradient volume, no outlines, no text, no logos, no flags, no ground plane, transparent background: hydroelectric dam with water",
+  "credits": 4,
+  "essais": 1
+ }
+]
