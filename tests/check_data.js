@@ -123,6 +123,7 @@ function checkInd(o, where) {
 }
 
 const eventIds = new Set();
+const lastOffer = {};
 const offered = new Set();
 const evIndex = {}; let evOrder = 0;
 const levChoices = { positif: 0, negatif: 0, neutre: 0 };
@@ -144,8 +145,9 @@ GAME.days.forEach((d, di) => {
     if (V22 && di === 1 && !(d.unlock && d.unlock.title && d.unlock.text)) err('v2.2 : la semaine 2 doit avoir unlock { title, text }');
     if (Array.isArray(d.offer)) d.offer.forEach(id => {
       if (!GAME.programs.some(p => p.id === id)) err('semaine ' + d.day + ' : offer inconnue ' + id);
-      if (offered.has(id)) err('semaine ' + d.day + ' : proposition déjà offerte une autre semaine ' + id);
-      offered.add(id);
+      // v2.9 (16 semaines) : une proposition peut revenir, mais au moins 6 semaines après sa dernière offre.
+      if (offered.has(id) && d.day - lastOffer[id] < 6) err('semaine ' + d.day + ' : proposition déjà offerte il y a moins de 6 semaines ' + id);
+      offered.add(id); lastOffer[id] = d.day;
     });
     scanDates({ title: d.title, intro: d.intro }, 'semaine ' + d.day);
   }
@@ -381,10 +383,10 @@ GAME.days.forEach(d => d.events.forEach(e => e.choices.forEach(c => AXES.forEach
 
 if (V2 && !V26 && ![4, 6].includes(GAME.days.length)) err('v2 : 4 ou 6 semaines attendues');
 if (V26) {
-  if (GAME.days.length !== 8) err('v2.6 : 8 semaines attendues');
+  if (GAME.days.length !== 16) err('v2.9 : 16 semaines attendues');
   GAME.days.forEach(d => { if (d.events.filter(e => e.kind === 'majeur').length < 2 && d.day >= 7) err('semaine ' + d.day + ' : 2 grandes décisions attendues'); });
-  const last = GAME.days[7];
-  if (last && !(last.offer || []).some(id => (GAME.programs.find(p => p.id === id) || {}).intensity === 'forte')) warn('semaine 8 : aucune proposition « forte » offerte');
+  const last = GAME.days[GAME.days.length - 1];
+  if (last && !(last.offer || []).some(id => (GAME.programs.find(p => p.id === id) || {}).intensity === 'forte')) warn('dernière semaine : aucune proposition « forte » offerte');
 }
 if (V21) {
   const famOf = id => Object.keys(FAMILLES).find(f => FAMILLES[f].includes(id));

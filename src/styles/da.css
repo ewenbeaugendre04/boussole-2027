@@ -59,3 +59,19 @@ body{font-weight:600}
 .mgrp{margin:12px 2px 6px;font-weight:900;font-size:12.5px;color:var(--brass-d)}
 .choice.picked{box-shadow:0 0 0 2.5px var(--brass),0 3px 0 var(--tranche)!important}
 .choice.picked .confirm{background:var(--brass-d)!important}
+
+/* ---- Candidats (discret, mêmes couleurs neutres pour tous) ---- */
+.cd-ico{display:inline-grid;place-items:center;width:26px;height:26px;margin-left:8px;vertical-align:middle;border-radius:50%;border:1.5px solid color-mix(in srgb,var(--line) 35%,transparent);background:var(--paper);color:var(--ink-2);opacity:.7;padding:0}
+.cd-ico:hover,.cd-ico:focus-visible{opacity:1;color:#14B3A4}
+.cd-list{list-style:none;margin:4px 0 8px;padding:0;display:grid;gap:6px}
+.cd-row{display:flex;flex-direction:column;align-items:flex-start;width:100%;text-align:left;font:inherit;color:var(--ink);background:var(--paper);border:2px solid var(--line);border-radius:14px;box-shadow:0 2px 0 var(--tranche);padding:7px 11px}
+.cd-row small{font-size:12px;color:var(--ink-2);font-weight:700}
+.cd-fam{font-size:12px;font-weight:900;color:var(--ink-2);margin:10px 0 2px;text-transform:uppercase;letter-spacing:.04em}
+.cd-idees{margin:4px 0 6px;padding-left:18px;font-size:14px}
+.cd-idees li{margin:3px 0}.cd-idees small{color:var(--ink-2)}
+.cd-track .knob{background:#14B3A4}
+.cd-orig{font-size:13px;color:var(--ink-2);margin:6px 0}
+.cd-src{font-size:12px;color:var(--ink-2);margin:6px 0}
+.cd-note{font-size:12px;color:var(--ink-2);background:var(--paper-2);border-radius:10px;padding:6px 9px;margin:10px 0}
+.cd-recap{margin-top:6px}
+.cd-link{display:inline-flex;align-items:center;gap:6px;margin:6px 0 2px;padding:4px 2px;border:0;background:none;font:inherit;font-size:13px;font-weight:800;color:#0F8F84;text-decoration:underline;text-underline-offset:3px}

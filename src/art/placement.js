@@ -218,12 +218,14 @@ function spawnFx(fx, layer, opts){
     var el = objEl(fx.obj, k, i === 0 ? fx.label : null, moving && dx < 0 && def.veh);
     var x, y, rc = null;
     if(moving){
-      var back = (def.w || 20) * LOCAL * k * 1.08 * i;
-      x = to[0] - dx / dist * back; y = to[1] - dy / dist * back;
+      /* convoi compact : rangées de 3 au plus (une longue file finissait poussée le long des côtes) */
+      var per = n > 3 ? 3 : n, row = Math.floor(i / per), col = i % per - (Math.min(per, n - row * per) - 1) / 2;
+      var gap = (def.w || 20) * LOCAL * k * 1.08, back = gap * row, side = gap * .8 * col;
+      x = to[0] - dx / dist * back - dy / dist * side; y = to[1] - dy / dist * back + dx / dist * side * .62;
       if(!planche){
         if(i === 0){
-          var ux = -dx / dist, uy = -dy / dist, L = (def.w || 20) * LOCAL * k * 1.08 * (n - 1);
-          var rel = { l:Math.min(0, ux * L) - el._pw / 2, r:Math.max(0, ux * L) + el._pw / 2, t:Math.min(0, uy * L) - el._ph + 2 * el._sc, b:Math.max(0, uy * L) + 2 * el._sc };
+          var ux = -dx / dist, uy = -dy / dist, L = (def.w || 20) * LOCAL * k * 1.08 * (Math.ceil(n / (n > 3 ? 3 : n)) - 1) + 1;
+          var ex = n > 1 ? gap * .8 * (Math.min(per, n) - 1) / 2 : 0, rel = { l:Math.min(0, ux * L) - el._pw / 2 - ex, r:Math.max(0, ux * L) + el._pw / 2 + ex, t:Math.min(0, uy * L) - el._ph + 2 * el._sc, b:Math.max(0, uy * L) + 2 * el._sc };
           var cv = valid ? (function(L2, ux2, uy2){ var f = function(cx, cy){ return valid(cx, cy) && valid(cx + ux2 * L2, cy + uy2 * L2) && valid(cx + ux2 * L2 / 2, cy + uy2 * L2 / 2); }; f.rule = valid.rule; return f; })(L, ux, uy) : null;
           var sp = findSpot(x, y, 0, 0, 0, SCENE.occ, sf, null, rel, cv); groupOff = [sp.dx, sp.dy];
         }

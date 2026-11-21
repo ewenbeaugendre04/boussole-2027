@@ -9,7 +9,7 @@
 
 ## Le jeu (état actuel)
 - Plateau : la France en île, pays voisins estompés, mer et décor jusqu'en haut/bas d'écran derrière les boutons.
-- 8 semaines ; événements inspirés de faits réels (époques variées), décisions à la semaine ; budget réel affiché en déficit (convention : budget > 0 = déficit baisse) ; recettes induites (pouvoir d'achat 0,6 Md€/pt, emploi 0,75 Md€/pt).
+- 16 semaines ; événements inspirés de faits réels (époques variées), décisions à la semaine ; budget réel affiché en déficit (convention : budget > 0 = déficit baisse) ; recettes induites (pouvoir d'achat 0,6 Md€/pt, emploi 0,75 Md€/pt).
 - Réformes tirées des programmes, dès la semaine 2, 2 max par semaine parmi 5–6 ; étapes sur plusieurs semaines, blocage à l'Assemblée (abandon, 49.3, compromis), résultats différés (référendum la semaine suivante).
 - Réponses multiples (urgence + fond), rappels des décisions passées, annonces de résultats, « Mon orientation » par secteur, actu à chaque lancement, sauvegarde locale, bilan mensuel.
 - Mode cinéma : animation d'abord, bouton « Répondre à la situation » ensuite ; en fin de carte « Retour au plateau » ou « Situation suivante ».
@@ -52,6 +52,16 @@
 - 31 choix ajoutés depuis les programmes (sans noms), `multi` gardé sur 6 événements ; 66 objets Recraft ajoutés (120 au total) ; ~384 crédits restants (Ewen veut garder ~50 générations).
 - Échelle des objets d'événement alignée sur le décor (`SPR_W`, x2) ; montagnes, collines, phares, voiliers, plages en sprites ; hôpital à croix rouge ; silhouettes d'outre-mer.
 - À faire : rappels encore au « tu » ; vérifier les petits montants notés « estimation du jeu » ; objets faibles (montagne seule, métro, marée noire, conteneurs).
+
+## Lot du 21/11 : candidats
+- `src/data/candidats.js` (généré par un script, 29 candidats du dossier du 20/11/2026) : tri par baromètre Ifop-Fiducial du 18/11/2026 puis familles d'idées ; positions -2..+2 par axe et par secteur (axe principal du secteur dans `secteur_axe`), `null` si inconnu ; `matrice` choix/propositions → candidats (clé absente = non documenté) ; `programme_origine` parti/candidat.
+- `src/engine/candidats.js` + styles `da.css` : icône discrète par secteur dans « Mon orientation », « Dossier candidats » dans le menu, bloc « Où vous vous situez » + lien dans le bilan du mois. Branché par enveloppe des fonctions existantes (aucun changement des événements).
+- À vérifier : positions estimées à la main depuis le dossier (relecture humaine conseillée) ; Riner sans position ; matrice partielle (non branchée à l'interface pour l'instant).
+
+## Lot du 21/11 soir (16 semaines)
+- 16 semaines : 25 événements ajoutés (semaines 9-16, hiver → été, faits de 1999 à 2023 sourcés, dont 4 outre-mer), `multi` sur Ciarán et Mayotte seulement ; offres des semaines 9-16 = celles des semaines 2-8 (règle : retour possible après 6 semaines, `check_data`) ; choix nouveaux 44 positifs / 46 négatifs.
+- Bug corrigé : les convois `move` avec `count` > 3 (tracteurs Mercosur) formaient une longue file poussée vers la côte ; désormais rangées de 3 (`spawnFx`, `placement.js`).
+- À vérifier : petits montants « estimation du jeu » des nouveaux choix ; textes `real` à relire par Ewen.
 
 ## Prochaines étapes
 1. FAIT (21/11) : 51 SVG dans `assets/library/svg/` (9,5 Mo, ~190 Ko chacun, avec métadonnées C2PA de provenance IA à conserver). Trop lourds pour le jeu : produire des sprites WebP (~256 px) via Playwright pour le build.

@@ -48,9 +48,9 @@ function openOrientation(){
   sectors.sort(function(a, b){ return (o.per[b.id] ? o.per[b.id].n : 0) - (o.per[a.id] ? o.per[a.id].n : 0); });
   var secHtml = sectors.map(function(s){
     var d = o.per[s.id];
-    if(!d) return '<div class="sect"><h4>' + esc(s.label) + '<small>pas encore de décision</small></h4><div style="height:8px"></div></div>';
+    if(!d) return '<div class="sect" data-sec="' + esc(s.id) + '"><h4>' + esc(s.label) + '<small>pas encore de décision</small></h4><div style="height:8px"></div></div>';
     var axes = AXK.filter(function(k){ return d.ax[k].n; });
-    return '<div class="sect"><h4>' + esc(s.label) + '<small>' + d.n + (d.n > 1 ? ' décisions' : ' décision') + '</small></h4>' +
+    return '<div class="sect" data-sec="' + esc(s.id) + '"><h4>' + esc(s.label) + '<small>' + d.n + (d.n > 1 ? ' décisions' : ' décision') + '</small></h4>' +
       (axes.length ? axes.map(function(k){ return '<div class="muted" style="margin-top:8px;font-weight:700;color:var(--ink)">' + esc(axName(k)) + '</div>' + axisRow(k, d.ax[k], true); }).join('') : '<p class="muted" style="margin:6px 0 10px">Ces choix ne penchent sur aucun axe.</p>') + '</div>';
   }).join('');
   var html = '<div class="chead"><div class="medal" style="background:var(--paper)">' + COMPASS.replace('<svg ', '<svg style="width:46px;height:46px" ') + '</div><div><h2 class="ctitle" style="margin:0">Mon orientation</h2><div class="meta">Où te placent tes choix, secteur par secteur.</div></div></div>' +

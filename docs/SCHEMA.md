@@ -155,7 +155,7 @@ Le moteur tire l'issue selon `weight` (tirage sauvegardé dans la partie, jamais
 
 ---------------------------------------------------------------------
 # VERSION 2.6 — ajouts
-- 8 semaines au total (`days` de 0 à 7). Bilan mensuel après les semaines 4 et 8.
+- 16 semaines au total (`days` de 0 à 15, v2.9). Bilan mensuel toutes les 4 semaines (4, 8, 12, 16). Une proposition peut être reproposée au moins 6 semaines après sa dernière offre (semaines 9 à 16 : offres des semaines 2 à 8).
 - `choice.label_expert` : libellé du choix pour le niveau 3 (« Je m'y connais » : public de type Sciences Po), avec les termes techniques exacts et l'instrument précis (ex. « Activer la clause de sauvegarde bilatérale de l'accord » au lieu de « Protéger nos éleveurs »). Le moteur l'affiche au niveau 3, sinon `label`.
 - `choice.budget_note` (et `program.budget_note`) : une phrase courte qui explique l'effet sur le budget et son sens (ex. « Recettes de la taxe : le déficit baisse » ou « Dépense nouvelle : le déficit augmente »).
 - Convention de signe, partout : `budget` > 0 = le solde s'améliore = le déficit BAISSE ; `budget` < 0 = le déficit AUGMENTE. Le moteur doit l'afficher sans ambiguïté.

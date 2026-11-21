@@ -9019,6 +9019,5552 @@ const GAME = {
      ]
     }
    ]
+  },
+  {
+   "day": 9,
+   "season": "hiver",
+   "title": "Vents violents et trains à l'arrêt",
+   "mood": "tendu",
+   "weather": "vent",
+   "intro": "Une tempête frappe l'ouest pendant qu'une grève paralyse les transports.",
+   "offer": [
+    "sortie_nucleaire",
+    "relance_nucleaire",
+    "sortie_marche_electricite",
+    "assurance_chomage",
+    "taxe_hauts_patrimoines",
+    "peines_planchers"
+   ],
+   "events": [
+    {
+     "id": "v27_ciaran",
+     "kind": "majeur",
+     "region": "bretagne",
+     "sector": "energie",
+     "title": "Une tempête géante prive la Bretagne d'électricité",
+     "simple": "Des rafales à plus de 200 km/h ont balayé la pointe bretonne. Des arbres sont tombés sur les lignes : des centaines de milliers de foyers n'ont plus de courant, parfois pendant des jours.",
+     "expert": "Tempête extratropicale aux rafales record dans le Finistère : réseau de distribution aérien endommagé, renforts nationaux du gestionnaire de réseau, indemnisation automatique des coupures longues prévue par le tarif d'utilisation des réseaux.",
+     "context": "Une grande partie des lignes électriques de campagne passe encore dans les airs. Les enterrer protège des tempêtes mais coûte cher. Une coupure de plus de cinq heures donne droit à une indemnité automatique.",
+     "real": {
+      "date": "2 novembre 2023",
+      "place": "Finistère, Côtes-d'Armor et Manche",
+      "fact": "La tempête Ciarán a frappé le nord-ouest avec des rafales de plus de 200 km/h à la pointe du Finistère. Environ 1,2 million de foyers ont été privés d'électricité au plus fort de l'épisode.",
+      "figures": "Rafale de 207 km/h à la pointe du Raz ; environ 1,2 million de foyers coupés, dont une grande partie en Bretagne ; des milliers d'agents envoyés en renfort.",
+      "sources": [
+       {
+        "label": "L'info durable : forêts et réseau électrique, Ciarán a ravagé le nord-ouest",
+        "url": "https://www.linfodurable.fr/forets-reseau-electrique-ciaran-ravage-le-nord-ouest-de-la-france-47649"
+       },
+       {
+        "label": "Enedis : les renforts concentrés sur quatre départements",
+        "url": "https://www.enedis.fr/sites/default/files/documents/pdf/CP%20-%20CIARAN_Les%20renforts%20concentr%C3%A9s%20sur%204%20d%C3%A9partements_071123.pdf"
+       }
+      ]
+     },
+     "camera": {
+      "region": "bretagne",
+      "x": 12,
+      "y": 30,
+      "zoom": 2.2
+     },
+     "fx": [
+      {
+       "obj": "tempete",
+       "x": 9,
+       "y": 28,
+       "anim": "spin"
+      },
+      {
+       "obj": "foret",
+       "x": 12,
+       "y": 31,
+       "anim": "shake",
+       "delay": 0.3
+      },
+      {
+       "obj": "pylone",
+       "x": 14,
+       "y": 29,
+       "anim": "close",
+       "delay": 0.6
+      },
+      {
+       "obj": "maison",
+       "x": 11,
+       "y": 32,
+       "anim": "close",
+       "count": 3,
+       "delay": 0.8
+      },
+      {
+       "obj": "etiquette",
+       "x": 12,
+       "y": 26,
+       "anim": "appear",
+       "label": "1,2 million de foyers sans courant",
+       "delay": 1.1
+      }
+     ],
+     "multi": {
+      "max": 2,
+      "pairs": [
+       [
+        "a",
+        "c"
+       ],
+       [
+        "a",
+        "d"
+       ],
+       [
+        "a",
+        "e"
+       ],
+       [
+        "b",
+        "c"
+       ],
+       [
+        "b",
+        "d"
+       ],
+       [
+        "b",
+        "e"
+       ]
+      ],
+      "hint": "Une réponse pour le court terme, une pour le long terme."
+     },
+     "choices": [
+      {
+       "id": "a",
+       "label": "Envoyer des électriciens de toute la France",
+       "label_expert": "Mobiliser la force d'intervention rapide et les renforts nationaux",
+       "plus": "Le courant revient en quelques jours.",
+       "minus": "Coût élevé, autres régions dégarnies.",
+       "budget": 0,
+       "once": -0.1,
+       "terme": "court",
+       "axes": {
+        "eco": -1
+       },
+       "ind": {
+        "cohesion": 1,
+        "services": 1
+       },
+       "budget_note": "Heures et déplacements des équipes, en partie publics : le déficit augmente une fois (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "pylone",
+         "x": 14,
+         "y": 29,
+         "anim": "grow"
+        },
+        {
+         "obj": "camion",
+         "x": 30,
+         "y": 32,
+         "anim": "move",
+         "to": {
+          "x": 15,
+          "y": 30
+         },
+         "count": 3
+        }
+       ]
+      },
+      {
+       "id": "b",
+       "label": "Laisser le gestionnaire du réseau payer seul",
+       "label_expert": "Réparations financées par le seul tarif de réseau, sans dotation",
+       "plus": "Aucune dépense publique nouvelle.",
+       "minus": "Les réparations prennent plus de temps.",
+       "budget": 0,
+       "terme": "court",
+       "axes": {
+        "eco": 1
+       },
+       "ind": {
+        "cohesion": -1
+       },
+       "fx": [
+        {
+         "obj": "pylone",
+         "x": 14,
+         "y": 29,
+         "anim": "grow"
+        },
+        {
+         "obj": "camion",
+         "x": 30,
+         "y": 32,
+         "anim": "move",
+         "to": {
+          "x": 15,
+          "y": 30
+         }
+        }
+       ]
+      },
+      {
+       "id": "c",
+       "label": "Enterrer les lignes électriques des campagnes",
+       "label_expert": "Programme d'enfouissement accéléré du réseau moyenne tension",
+       "plus": "Bien moins de coupures aux prochaines tempêtes.",
+       "minus": "Des milliards, payés en partie par la facture.",
+       "budget": -0.3,
+       "terme": "long",
+       "axes": {
+        "eco": -1,
+        "env": -1
+       },
+       "ind": {
+        "services": 1,
+        "pouvoir_achat": -1
+       },
+       "budget_note": "Aide publique à l'enfouissement : le déficit augmente (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "chantier_grue",
+         "x": 12,
+         "y": 31,
+         "anim": "grow",
+         "stay": true
+        },
+        {
+         "obj": "pylone",
+         "x": 14,
+         "y": 29,
+         "anim": "fade"
+        }
+       ]
+      },
+      {
+       "id": "d",
+       "label": "Obliger les propriétaires à élaguer près des lignes",
+       "label_expert": "Obligation d'élagage renforcée et sanctionnée pour les riverains",
+       "plus": "Moins d'arbres tombent sur les fils.",
+       "minus": "Des haies et des arbres disparaissent.",
+       "budget": 0.02,
+       "terme": "long",
+       "axes": {
+        "soc": 1,
+        "env": 1
+       },
+       "ind": {
+        "services": 1,
+        "cohesion": -1
+       },
+       "budget_note": "Amendes des propriétaires qui n'élaguent pas : petite recette, le déficit baisse un peu (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "foret",
+         "x": 12,
+         "y": 31,
+         "anim": "fade"
+        },
+        {
+         "obj": "tracteur",
+         "x": 11,
+         "y": 30,
+         "anim": "appear"
+        }
+       ]
+      },
+      {
+       "id": "e",
+       "label": "Créer un fonds tempêtes payé par les assurances",
+       "label_expert": "Contribution additionnelle sur les contrats d'assurance habitation",
+       "plus": "Un fonds prêt pour les prochaines tempêtes.",
+       "minus": "Les primes d'assurance augmentent.",
+       "budget": 0.2,
+       "terme": "long",
+       "axes": {
+        "eco": -1
+       },
+       "ind": {
+        "pouvoir_achat": -1,
+        "cohesion": 1
+       },
+       "budget_note": "Recette nouvelle sur les contrats : le déficit baisse (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "pieces",
+         "x": 12,
+         "y": 30,
+         "anim": "rise"
+        },
+        {
+         "obj": "maison",
+         "x": 10,
+         "y": 31,
+         "anim": "appear"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "v27_greve_retraites",
+     "kind": "majeur",
+     "region": "national",
+     "sector": "retraites",
+     "title": "Grève record dans les trains et le métro",
+     "simple": "Un projet de retraite unique, avec des points, fait descendre des centaines de milliers de personnes dans la rue. Les trains et le métro s'arrêtent pendant des semaines. Que faites-vous ?",
+     "expert": "Mouvement interprofessionnel contre un système universel de retraite par points et la fin des régimes spéciaux : grève reconductible la plus longue de l'histoire de la SNCF, pertes d'exploitation, négociation sur l'âge pivot.",
+     "context": "La France compte plus de quarante régimes de retraite. Les agents de la SNCF et de la RATP avaient des règles particulières. Un système unique simplifie, mais change les droits de millions de personnes.",
+     "real": {
+      "date": "5 décembre 2019 à janvier 2020",
+      "place": "Paris et grandes villes, réseaux SNCF et RATP",
+      "fact": "Une grève reconductible a paralysé les transports pendant plus d'un mois contre la réforme des retraites par points. Le projet a ensuite été suspendu au début de l'épidémie de covid.",
+      "figures": "Perte d'exploitation d'environ 614 M€ pour la SNCF sur le premier mois de grève ; plus de 800 000 manifestants le premier jour selon le ministère de l'Intérieur.",
+      "sources": [
+       {
+        "label": "TourMaG : pertes colossales pour la SNCF",
+        "url": "https://www.tourmag.com/Pertes-colossales-pour-la-SNCF-en-2019_a102559.html"
+       },
+       {
+        "label": "Public Sénat : une mobilisation aussi longue que celle de 1995",
+        "url": "https://www.publicsenat.fr/actualites/non-classe/retraites-poursuite-d-une-mobilisation-desormais-aussi-longue-que-celle-de-1995"
+       }
+      ]
+     },
+     "camera": {
+      "region": "national",
+      "x": 52,
+      "y": 40,
+      "zoom": 1.2
+     },
+     "fx": [
+      {
+       "obj": "manifestants",
+       "x": 52,
+       "y": 24,
+       "anim": "appear",
+       "count": 2
+      },
+      {
+       "obj": "tgv",
+       "x": 46,
+       "y": 36,
+       "anim": "close",
+       "delay": 0.3
+      },
+      {
+       "obj": "velo",
+       "x": 48,
+       "y": 28,
+       "anim": "move",
+       "to": {
+        "x": 52,
+        "y": 25
+       },
+       "count": 3,
+       "delay": 0.6
+      },
+      {
+       "obj": "etiquette",
+       "x": 52,
+       "y": 20,
+       "anim": "appear",
+       "label": "Trains à l'arrêt",
+       "delay": 1
+      }
+     ],
+     "choices": [
+      {
+       "id": "a",
+       "label": "Retirer la réforme pour apaiser",
+       "label_expert": "Retrait du projet de loi instituant un système universel",
+       "plus": "Les trains repartent, le calme revient.",
+       "minus": "Les déficits des retraites restent là.",
+       "budget": -0.4,
+       "axes": {
+        "eco": -1
+       },
+       "ind": {
+        "cohesion": 2
+       },
+       "budget_note": "Économies attendues abandonnées : le déficit augmente (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "tgv",
+         "x": 46,
+         "y": 36,
+         "anim": "move",
+         "to": {
+          "x": 51,
+          "y": 26
+         }
+        },
+        {
+         "obj": "manifestants",
+         "x": 52,
+         "y": 24,
+         "anim": "fade"
+        }
+       ]
+      },
+      {
+       "id": "b",
+       "label": "Tenir bon et aller au vote",
+       "label_expert": "Maintien du calendrier et vote du texte au Parlement",
+       "plus": "Un système plus simple pour tous.",
+       "minus": "Des semaines de blocage, commerces vides.",
+       "budget": 0.5,
+       "once": -0.3,
+       "axes": {
+        "eco": 1,
+        "soc": 1
+       },
+       "ind": {
+        "cohesion": -2,
+        "emploi": -1
+       },
+       "budget_note": "Économies sur les régimes spéciaux malgré les pertes de la grève : le déficit baisse à terme (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "parlement",
+         "x": 52,
+         "y": 22,
+         "anim": "appear"
+        },
+        {
+         "obj": "manifestants",
+         "x": 53,
+         "y": 25,
+         "anim": "shake",
+         "count": 2
+        }
+       ]
+      },
+      {
+       "id": "c",
+       "label": "Garder la réforme pour les seuls nouveaux salariés",
+       "label_expert": "Clause du grand-père : réforme réservée aux nouveaux entrants",
+       "plus": "Les salariés en poste gardent leurs droits.",
+       "minus": "Les économies n'arrivent que dans trente ans.",
+       "budget": 0.1,
+       "axes": {
+        "eco": 1
+       },
+       "ind": {
+        "cohesion": -1
+       },
+       "budget_note": "Petites économies à long terme : le déficit baisse un peu (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "parlement",
+         "x": 52,
+         "y": 22,
+         "anim": "appear"
+        },
+        {
+         "obj": "tgv",
+         "x": 46,
+         "y": 36,
+         "anim": "move",
+         "to": {
+          "x": 51,
+          "y": 26
+         }
+        }
+       ]
+      },
+      {
+       "id": "d",
+       "label": "Instaurer un service minimum garanti",
+       "label_expert": "Loi sur le service minimum avec réquisition aux heures de pointe",
+       "plus": "Les usagers peuvent aller travailler.",
+       "minus": "Le droit de grève est limité.",
+       "budget": 0,
+       "axes": {
+        "soc": 2
+       },
+       "ind": {
+        "cohesion": -1,
+        "emploi": 1
+       },
+       "fx": [
+        {
+         "obj": "bus",
+         "x": 46,
+         "y": 30,
+         "anim": "move",
+         "to": {
+          "x": 51,
+          "y": 25
+         },
+         "count": 2
+        },
+        {
+         "obj": "voiture_police",
+         "x": 50,
+         "y": 24,
+         "anim": "appear"
+        }
+       ]
+      },
+      {
+       "id": "e",
+       "label": "Financer les retraites par plus de cotisations",
+       "label_expert": "Hausse des cotisations vieillesse plutôt que recul des droits",
+       "plus": "Les droits de chacun sont préservés.",
+       "minus": "Le coût du travail augmente.",
+       "budget": 0.6,
+       "axes": {
+        "eco": -2
+       },
+       "ind": {
+        "emploi": -1,
+        "pouvoir_achat": -1,
+        "cohesion": 1
+       },
+       "budget_note": "Recettes de cotisations en plus : le déficit baisse (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "pieces",
+         "x": 52,
+         "y": 24,
+         "anim": "rise"
+        },
+        {
+         "obj": "usine",
+         "x": 56,
+         "y": 26,
+         "anim": "appear"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "v27_maternite",
+     "kind": "banal",
+     "region": "centre_val_de_loire",
+     "sector": "sante",
+     "title": "La maternité de la petite ville ferme",
+     "simple": "L'agence de santé ferme la maternité d'une petite ville de l'Indre : trop peu d'accouchements, pas assez de médecins. Les futures mères devront faire près d'une heure de route.",
+     "expert": "Fermeture d'une maternité de niveau 1 réalisant moins de 300 accouchements par an, au nom de la sécurité des soins (seuils d'activité, gardes d'obstétriciens et d'anesthésistes) ; mobilisation des élus et recours.",
+     "context": "Les autorités jugent risqué un service qui fait peu d'accouchements, faute d'équipes complètes jour et nuit. Les habitants craignent des accouchements sur la route. Le nombre de maternités a beaucoup baissé en quarante ans.",
+     "real": {
+      "date": "Juin à octobre 2018",
+      "place": "Le Blanc, Indre",
+      "fact": "La maternité du Blanc a été suspendue puis fermée ; les accouchements ont été transférés à Châteauroux. Les habitants ont occupé les locaux et organisé une opération ville morte.",
+      "figures": "Moins de 300 accouchements par an avant la fermeture ; la maternité de référence est à près d'une heure de route.",
+      "sources": [
+       {
+        "label": "Le Quotidien du médecin : la maternité du Blanc évacuée après la décision de fermeture",
+        "url": "https://www.lequotidiendumedecin.fr/actualites/article/2018/10/30/la-maternite-du-blanc-evacuee-ce-mardi-matin-apres-decision-de-fermeture_862340"
+       },
+       {
+        "label": "Le Quotidien du médecin : opération ville morte au Blanc",
+        "url": "https://www.lequotidiendumedecin.fr/actualites/article/2018/11/05/au-blanc-operation-ville-morte-pour-denoncer-la-fermeture-de-la-maternite_862480"
+       }
+      ]
+     },
+     "camera": {
+      "region": "centre_val_de_loire",
+      "x": 42,
+      "y": 46,
+      "zoom": 2.4
+     },
+     "fx": [
+      {
+       "obj": "hopital",
+       "x": 42,
+       "y": 46,
+       "anim": "close"
+      },
+      {
+       "obj": "manifestants",
+       "x": 44,
+       "y": 47,
+       "anim": "appear",
+       "delay": 0.4
+      },
+      {
+       "obj": "ambulance",
+       "x": 42,
+       "y": 47,
+       "anim": "move",
+       "to": {
+        "x": 47,
+        "y": 44
+       },
+       "delay": 0.7
+      },
+      {
+       "obj": "etiquette",
+       "x": 42,
+       "y": 42,
+       "anim": "appear",
+       "label": "Maternité fermée",
+       "delay": 1
+      }
+     ],
+     "recall": [
+      {
+       "event": "v25_medecins",
+       "choice": "a",
+       "text": "Il y a quelques semaines, vous avez obligé les médecins à venir dans les déserts médicaux : quelques gynécologues viennent en renfort, mais pas la nuit."
+      },
+      {
+       "event": "v25_medecins",
+       "choice": "b",
+       "text": "Il y a quelques semaines, vous avez mieux payé les médecins volontaires : la maternité a reçu deux candidatures, trop peu pour des gardes complètes."
+      },
+      {
+       "event": "v25_medecins",
+       "choice": "c",
+       "text": "Il y a quelques semaines, vous avez confié plus de soins aux pharmaciens et infirmiers : les sages-femmes suivent davantage de grossesses.",
+       "ind": {
+        "services": 1
+       }
+      },
+      {
+       "event": "v25_medecins",
+       "choice": "d",
+       "text": "Il y a quelques semaines, vous avez décidé de former plus de médecins : les premiers diplômés n'arriveront que dans plusieurs années."
+      },
+      {
+       "event": "v25_medecins",
+       "choice": "e",
+       "text": "Il y a quelques semaines, vous avez ouvert des centres de santé salariés : l'un d'eux accueille des consultations de grossesse.",
+       "ind": {
+        "services": 1
+       }
+      }
+     ],
+     "choices": [
+      {
+       "id": "a",
+       "label": "Rouvrir la maternité avec des médecins intérimaires",
+       "label_expert": "Réouverture financée par des contrats d'intérim médical",
+       "plus": "Les mères accouchent près de chez elles.",
+       "minus": "Cher, et équipes instables la nuit.",
+       "budget": -0.02,
+       "axes": {
+        "eco": -1
+       },
+       "ind": {
+        "services": 1
+       },
+       "budget_note": "Intérim payé par l'hôpital public : le déficit augmente un peu (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "hopital",
+         "x": 42,
+         "y": 46,
+         "anim": "pulse"
+        },
+        {
+         "obj": "ambulance",
+         "x": 43,
+         "y": 47,
+         "anim": "appear"
+        }
+       ]
+      },
+      {
+       "id": "b",
+       "label": "Garder la fermeture, avec un hébergement près du grand hôpital",
+       "label_expert": "Hôtel hospitalier pour femmes enceintes près de la maternité de référence",
+       "plus": "Des équipes complètes et plus sûres.",
+       "minus": "Les familles s'éloignent de chez elles.",
+       "budget": 0.01,
+       "axes": {
+        "eco": 1
+       },
+       "ind": {
+        "services": -1,
+        "cohesion": -1
+       },
+       "budget_note": "Moins de charges qu'un service complet : le déficit baisse un peu (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "hopital",
+         "x": 47,
+         "y": 44,
+         "anim": "pulse"
+        },
+        {
+         "obj": "maison",
+         "x": 46,
+         "y": 45,
+         "anim": "appear"
+        }
+       ]
+      },
+      {
+       "id": "c",
+       "label": "Créer un centre de suivi tenu par des sages-femmes",
+       "label_expert": "Centre périnatal de proximité sans accouchement, animé par des sages-femmes",
+       "plus": "Le suivi de grossesse reste sur place.",
+       "minus": "On doit toujours accoucher plus loin.",
+       "budget": 0,
+       "axes": {
+        "eco": -1,
+        "soc": -1
+       },
+       "ind": {
+        "services": 1
+       },
+       "fx": [
+        {
+         "obj": "cabinet_medical",
+         "x": 42,
+         "y": 46,
+         "anim": "appear"
+        },
+        {
+         "obj": "soignants",
+         "x": 43,
+         "y": 47,
+         "anim": "appear"
+        }
+       ]
+      },
+      {
+       "id": "d",
+       "label": "Payer une équipe d'urgence de garde la nuit",
+       "label_expert": "Équipe mobile d'urgence obstétricale et transport héliporté de garde",
+       "plus": "Les urgences sont couvertes vite.",
+       "minus": "Coûteux pour quelques interventions.",
+       "budget": -0.01,
+       "axes": {
+        "eco": -1
+       },
+       "ind": {
+        "services": 1
+       },
+       "budget_note": "Équipe et transport de garde : le déficit augmente un peu (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "ambulance",
+         "x": 42,
+         "y": 47,
+         "anim": "appear",
+         "count": 2
+        },
+        {
+         "obj": "hopital",
+         "x": 47,
+         "y": 44,
+         "anim": "pulse"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "day": 10,
+   "season": "hiver",
+   "title": "Neige rare, scandales en rayon",
+   "mood": "tendu",
+   "weather": "neige",
+   "intro": "La saison de ski tourne court, et deux affaires sanitaires inquiètent les familles.",
+   "offer": [
+    "report_age_65",
+    "referendum_immigration",
+    "lutte_fraude",
+    "regularisation_metiers_tension",
+    "taxe_billets_premium"
+   ],
+   "events": [
+    {
+     "id": "v27_chlordecone",
+     "kind": "majeur",
+     "region": "outre_mer",
+     "sector": "sante",
+     "title": "Un pesticide interdit a contaminé les Antilles",
+     "simple": "Pendant des années, un pesticide toxique a été utilisé dans les bananeraies des Antilles, alors qu'il était interdit ailleurs. La justice ne poursuit finalement personne, et la colère monte.",
+     "expert": "Pollution durable des sols et des eaux par le chlordécone, insecticide organochloré autorisé par dérogation dans les bananeraies ; non-lieu pour prescription ; reconnaissance du cancer de la prostate comme maladie professionnelle.",
+     "context": "Ce produit reste dans les sols pendant des siècles. La quasi-totalité des habitants en a dans le sang. Il est lié à des cancers de la prostate. Certaines zones ne peuvent plus être pêchées ni cultivées.",
+     "real": {
+      "date": "2 janvier 2023 (non-lieu)",
+      "place": "Martinique et Guadeloupe",
+      "fact": "Les juges d'instruction ont prononcé un non-lieu dans l'enquête sur l'empoisonnement au chlordécone, en reconnaissant un scandale sanitaire mais en invoquant la prescription.",
+      "figures": "Plus de 90 % des adultes des deux îles ont du chlordécone dans le sang selon Santé publique France ; un fonds d'indemnisation existe pour les agriculteurs exposés.",
+      "sources": [
+       {
+        "label": "Maire-info : chlordécone, un scandale sanitaire mais pas de coupable",
+        "url": "https://www.maire-info.com/sante-publique/chlordecone-pour-la-justice-un-scandale-sanitaire-...-mais-pas-de-coupable-article-27065"
+       },
+       {
+        "label": "Public Sénat : après le non-lieu, un sentiment de déni de justice",
+        "url": "https://www.publicsenat.fr/actualites/societe/chlordecone-apres-le-non-lieu-un-sentiment-de-deni-de-justice-en-guadeloupe-et-en"
+       }
+      ]
+     },
+     "camera": {
+      "region": "outre_mer",
+      "x": 7,
+      "y": 90,
+      "zoom": 2.6
+     },
+     "fx": [
+      {
+       "obj": "champ",
+       "x": 6,
+       "y": 90,
+       "anim": "appear"
+      },
+      {
+       "obj": "ferme",
+       "x": 8,
+       "y": 91,
+       "anim": "appear",
+       "delay": 0.3
+      },
+      {
+       "obj": "manifestants",
+       "x": 7,
+       "y": 88,
+       "anim": "appear",
+       "delay": 0.6
+      },
+      {
+       "obj": "etiquette",
+       "x": 7,
+       "y": 86,
+       "anim": "appear",
+       "label": "Sols pollués",
+       "delay": 1
+      }
+     ],
+     "choices": [
+      {
+       "id": "a",
+       "label": "Indemniser toutes les personnes malades",
+       "label_expert": "Fonds d'indemnisation élargi à tous les malades exposés",
+       "plus": "Les victimes sont enfin reconnues.",
+       "minus": "Coût élevé et preuves difficiles.",
+       "budget": -0.15,
+       "axes": {
+        "eco": -1
+       },
+       "ind": {
+        "cohesion": 2
+       },
+       "budget_note": "Indemnités versées par un fonds public : le déficit augmente (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "pieces",
+         "x": 7,
+         "y": 90,
+         "anim": "rise"
+        },
+        {
+         "obj": "hopital",
+         "x": 8,
+         "y": 89,
+         "anim": "appear"
+        }
+       ]
+      },
+      {
+       "id": "b",
+       "label": "Tester gratuitement les habitants et chercher à dépolluer",
+       "label_expert": "Dépistage gratuit et programme de recherche sur la dépollution",
+       "plus": "On mesure et on traite le problème.",
+       "minus": "La dépollution reste lente et incertaine.",
+       "budget": -0.05,
+       "axes": {
+        "env": -1
+       },
+       "ind": {
+        "services": 1
+       },
+       "budget_note": "Analyses et recherche payées par l'État : le déficit augmente (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "tracteur",
+         "x": 6,
+         "y": 90,
+         "anim": "appear"
+        },
+        {
+         "obj": "cabinet_medical",
+         "x": 8,
+         "y": 89,
+         "anim": "appear"
+        }
+       ]
+      },
+      {
+       "id": "c",
+       "label": "Faire payer les fabricants et vendeurs du pesticide",
+       "label_expert": "Action récursoire contre les industriels et distributeurs responsables",
+       "plus": "Les responsables paient, pas le contribuable.",
+       "minus": "Procès longs, sociétés parfois disparues.",
+       "budget": 0.03,
+       "axes": {
+        "eco": -1,
+        "soc": 1
+       },
+       "ind": {
+        "cohesion": 1
+       },
+       "budget_note": "Sommes récupérées auprès des industriels : le déficit baisse un peu (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "parlement",
+         "x": 8,
+         "y": 88,
+         "anim": "appear"
+        },
+        {
+         "obj": "pieces",
+         "x": 7,
+         "y": 90,
+         "anim": "rise"
+        }
+       ]
+      },
+      {
+       "id": "d",
+       "label": "Interdire pêche et cultures dans les zones polluées",
+       "label_expert": "Extension des arrêtés d'interdiction de pêche et de culture",
+       "plus": "Moins de produit dans les assiettes.",
+       "minus": "Pêcheurs et agriculteurs perdent leur revenu.",
+       "budget": 0,
+       "axes": {
+        "soc": 1,
+        "env": -1
+       },
+       "ind": {
+        "emploi": -1,
+        "services": 1
+       },
+       "fx": [
+        {
+         "obj": "champ",
+         "x": 6,
+         "y": 90,
+         "anim": "close"
+        },
+        {
+         "obj": "ferme",
+         "x": 8,
+         "y": 91,
+         "anim": "close"
+        }
+       ]
+      },
+      {
+       "id": "e",
+       "label": "Taxer les bananes importées hors d'Europe pour financer le plan",
+       "label_expert": "Contribution sur les importations de bananes hors Union européenne",
+       "plus": "Un financement sans impôt local en plus.",
+       "minus": "Les bananes coûtent plus cher partout.",
+       "budget": 0.08,
+       "axes": {
+        "eu": 1
+       },
+       "ind": {
+        "pouvoir_achat": -1,
+        "souverainete": 1
+       },
+       "budget_note": "Recette sur les importations : le déficit baisse (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "douane",
+         "x": 5,
+         "y": 91,
+         "anim": "appear"
+        },
+        {
+         "obj": "pieces",
+         "x": 7,
+         "y": 90,
+         "anim": "rise"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "v27_sambuy",
+     "kind": "banal",
+     "region": "auvergne_rhone_alpes",
+     "sector": "salaires",
+     "title": "Faute de neige, la station de ski ferme pour de bon",
+     "simple": "Une petite station de Haute-Savoie arrête ses remontées : plus assez de neige, des pertes chaque hiver. Le village se demande comment vivre sans le ski.",
+     "expert": "Fermeture définitive d'une station de moyenne altitude exploitée en régie par une intercommunalité : déficit d'exploitation chronique, enneigement insuffisant, démontage des remontées et reconversion vers un tourisme quatre saisons.",
+     "context": "Les stations de basse et moyenne altitude ont de moins en moins de jours de neige. La neige artificielle coûte cher et consomme de l'eau. Beaucoup de stations vivent de l'argent des communes.",
+     "real": {
+      "date": "Septembre 2023",
+      "place": "La Sambuy, Seythenex (Haute-Savoie)",
+      "fact": "La communauté de communes a voté la fermeture définitive de la petite station de La Sambuy, jugée trop déficitaire faute d'enneigement suffisant.",
+      "figures": "Station de moyenne altitude ; la collectivité ne pouvait plus couvrir des pertes répétées.",
+      "sources": [
+       {
+        "label": "TourMaG : faute de neige, la station de la Sambuy ferme définitivement",
+        "url": "https://www.tourmag.com/Sambuy-faute-de-neige-la-station-ferme-definitivement_a119925.html"
+       },
+       {
+        "label": "L'info durable : déficitaire, la station de La Sambuy va fermer",
+        "url": "https://www.linfodurable.fr/haute-savoie-deficitaire-la-station-de-la-sambuy-va-fermer-40870"
+       }
+      ]
+     },
+     "camera": {
+      "region": "auvergne_rhone_alpes",
+      "x": 77,
+      "y": 56,
+      "zoom": 2.4
+     },
+     "fx": [
+      {
+       "obj": "neige",
+       "x": 77,
+       "y": 54,
+       "anim": "fade"
+      },
+      {
+       "obj": "pylone",
+       "x": 78,
+       "y": 56,
+       "anim": "close",
+       "delay": 0.3
+      },
+      {
+       "obj": "maison",
+       "x": 76,
+       "y": 57,
+       "anim": "appear",
+       "count": 2,
+       "delay": 0.6
+      },
+      {
+       "obj": "etiquette",
+       "x": 77,
+       "y": 52,
+       "anim": "appear",
+       "label": "Remontées à l'arrêt",
+       "delay": 1
+      }
+     ],
+     "choices": [
+      {
+       "id": "a",
+       "label": "Payer des canons à neige pour sauver la saison",
+       "label_expert": "Subvention à l'enneigement artificiel et aux retenues d'eau",
+       "plus": "Les emplois d'hiver sont gardés.",
+       "minus": "Cher, et l'eau manque en montagne.",
+       "budget": -0.01,
+       "axes": {
+        "env": 1,
+        "eco": -1
+       },
+       "ind": {
+        "emploi": 1
+       },
+       "budget_note": "Subvention publique aux équipements : le déficit augmente un peu (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "neige",
+         "x": 77,
+         "y": 54,
+         "anim": "appear"
+        },
+        {
+         "obj": "pylone",
+         "x": 78,
+         "y": 56,
+         "anim": "grow"
+        }
+       ]
+      },
+      {
+       "id": "b",
+       "label": "Aider le village à vivre du tourisme toute l'année",
+       "label_expert": "Contrat de reconversion vers un tourisme quatre saisons",
+       "plus": "Randonnée, vélo : une activité plus durable.",
+       "minus": "Moins de recettes que le ski en hiver.",
+       "budget": 0,
+       "axes": {
+        "env": -1
+       },
+       "ind": {
+        "emploi": -1,
+        "cohesion": 1
+       },
+       "fx": [
+        {
+         "obj": "velo",
+         "x": 76,
+         "y": 57,
+         "anim": "appear",
+         "count": 2
+        },
+        {
+         "obj": "maison",
+         "x": 78,
+         "y": 57,
+         "anim": "appear"
+        }
+       ]
+      },
+      {
+       "id": "c",
+       "label": "Laisser fermer, sans argent public",
+       "label_expert": "Fin du soutien public, démontage à la charge de l'exploitant",
+       "plus": "L'argent public va à d'autres priorités.",
+       "minus": "Saisonniers sans travail, village vidé.",
+       "budget": 0.01,
+       "axes": {
+        "eco": 1
+       },
+       "ind": {
+        "emploi": -1,
+        "cohesion": -1
+       },
+       "budget_note": "Fin des pertes couvertes par la collectivité : le déficit baisse un peu (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "pylone",
+         "x": 78,
+         "y": 56,
+         "anim": "fade"
+        },
+        {
+         "obj": "maison",
+         "x": 76,
+         "y": 57,
+         "anim": "close"
+        }
+       ]
+      },
+      {
+       "id": "d",
+       "label": "Confier la station à un groupe privé du tourisme",
+       "label_expert": "Délégation de service public à un opérateur privé de stations",
+       "plus": "Un exploitant qui sait gérer et investir.",
+       "minus": "Forfaits plus chers, priorité aux profits.",
+       "budget": 0.01,
+       "axes": {
+        "eco": 2
+       },
+       "ind": {
+        "pouvoir_achat": -1,
+        "emploi": 1
+       },
+       "budget_note": "Redevance du délégataire : petite recette, le déficit baisse un peu (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "chantier_grue",
+         "x": 77,
+         "y": 56,
+         "anim": "appear"
+        },
+        {
+         "obj": "pieces",
+         "x": 78,
+         "y": 55,
+         "anim": "rise"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "v27_lactalis",
+     "kind": "majeur",
+     "region": "pays_de_la_loire",
+     "sector": "sante",
+     "title": "Du lait pour bébé contaminé à la salmonelle",
+     "simple": "Des bébés tombent malades après avoir bu du lait infantile fabriqué dans une grande usine de Mayenne. Des centaines de lots sont retirés, mais certaines boîtes restent vendues.",
+     "expert": "Contamination à Salmonella Agona dans une tour de séchage d'un site de nutrition infantile : retrait-rappel ordonné par arrêté ministériel, défaillances de l'autocontrôle et des contrôles officiels, failles du retrait en distribution.",
+     "context": "Les usines contrôlent elles-mêmes leur production ; l'État vérifie par sondage. Les inspecteurs de l'alimentation sont peu nombreux. Après l'affaire, les retraits de produits ont été mieux encadrés.",
+     "real": {
+      "date": "Décembre 2017 à janvier 2018",
+      "place": "Craon, Mayenne ; magasins de toute la France",
+      "fact": "Des laits infantiles fabriqués à Craon ont été contaminés par des salmonelles. L'État a ordonné le retrait de centaines de lots, puis de toute la production récente, et des boîtes ont encore été vendues malgré le rappel.",
+      "figures": "Une quarantaine de nourrissons malades en France ; plus de 12 millions de boîtes concernées dans plus de 80 pays.",
+      "sources": [
+       {
+        "label": "Ministère de l'Économie : rappel de lots de lait infantile",
+        "url": "https://www.economie.gouv.fr/salmonelle-retrait-lait-infantile"
+       },
+       {
+        "label": "Que Choisir : un filet de contrôles aux mailles bien trop larges",
+        "url": "https://www.quechoisir.org/actualite-lait-bebe-contamine-un-filet-de-controles-aux-mailles-bien-trop-larges-n50168"
+       }
+      ]
+     },
+     "camera": {
+      "region": "pays_de_la_loire",
+      "x": 28,
+      "y": 34,
+      "zoom": 2.4
+     },
+     "fx": [
+      {
+       "obj": "usine",
+       "x": 28,
+       "y": 34,
+       "anim": "close"
+      },
+      {
+       "obj": "camion",
+       "x": 28,
+       "y": 35,
+       "anim": "move",
+       "to": {
+        "x": 35,
+        "y": 32
+       },
+       "count": 2,
+       "delay": 0.3
+      },
+      {
+       "obj": "supermarche",
+       "x": 35,
+       "y": 31,
+       "anim": "appear",
+       "delay": 0.6
+      },
+      {
+       "obj": "etiquette",
+       "x": 28,
+       "y": 30,
+       "anim": "appear",
+       "label": "Lots retirés",
+       "delay": 1
+      }
+     ],
+     "recall": [
+      {
+       "event": "v25_vache_folle",
+       "choice": "a",
+       "text": "Il y a quelques semaines, vous avez interdit toutes les farines animales : la chaîne de contrôle alimentaire est plus réactive.",
+       "ind": {
+        "services": 1
+       }
+      },
+      {
+       "event": "v25_vache_folle",
+       "choice": "b",
+       "text": "Il y a quelques semaines, vous avez fait tester toutes les vaches : les laboratoires vétérinaires sont débordés."
+      },
+      {
+       "event": "v25_vache_folle",
+       "choice": "c",
+       "text": "Il y a quelques semaines, vous avez misé sur une campagne pour rassurer : les familles se méfient cette fois de ces discours.",
+       "ind": {
+        "cohesion": -1
+       }
+      },
+      {
+       "event": "v25_vache_folle",
+       "choice": "d",
+       "text": "Il y a quelques semaines, vous avez financé les contrôles par une taxe sur la viande : cette recette paie aussi des inspecteurs.",
+       "ind": {
+        "services": 1
+       }
+      },
+      {
+       "event": "v25_vache_folle",
+       "choice": "e",
+       "text": "Il y a quelques semaines, vous avez fermé la porte à la viande importée : cette fois, le produit en cause est fabriqué en France."
+      }
+     ],
+     "choices": [
+      {
+       "id": "a",
+       "label": "Recruter des inspecteurs de l'alimentation",
+       "label_expert": "Hausse des effectifs de contrôle des services vétérinaires",
+       "plus": "Plus d'usines contrôlées chaque année.",
+       "minus": "Une dépense durable pour l'État.",
+       "budget": -0.06,
+       "axes": {
+        "eco": -1
+       },
+       "ind": {
+        "services": 1
+       },
+       "budget_note": "Salaires de nouveaux inspecteurs : le déficit augmente (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "voiture",
+         "x": 34,
+         "y": 33,
+         "anim": "move",
+         "to": {
+          "x": 29,
+          "y": 34
+         }
+        },
+        {
+         "obj": "usine",
+         "x": 28,
+         "y": 34,
+         "anim": "pulse"
+        }
+       ]
+      },
+      {
+       "id": "b",
+       "label": "Faire payer les contrôles aux industriels",
+       "label_expert": "Redevance sanitaire payée par les établissements agroalimentaires",
+       "plus": "Le contribuable ne paie pas les contrôles.",
+       "minus": "Coût répercuté sur le prix des produits.",
+       "budget": 0.05,
+       "axes": {
+        "eco": -1
+       },
+       "ind": {
+        "pouvoir_achat": -1,
+        "services": 1
+       },
+       "budget_note": "Redevance payée par les entreprises : recette, le déficit baisse (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "pieces",
+         "x": 28,
+         "y": 34,
+         "anim": "rise"
+        },
+        {
+         "obj": "usine",
+         "x": 28,
+         "y": 34,
+         "anim": "pulse"
+        }
+       ]
+      },
+      {
+       "id": "c",
+       "label": "Sanctionner lourdement l'entreprise",
+       "label_expert": "Amendes proportionnelles au chiffre d'affaires et poursuites pénales",
+       "plus": "Un signal fort pour toute l'industrie.",
+       "minus": "Procès longs, emplois locaux menacés.",
+       "budget": 0.02,
+       "axes": {
+        "soc": 1
+       },
+       "ind": {
+        "cohesion": 1,
+        "emploi": -1
+       },
+       "budget_note": "Amendes encaissées : petite recette, le déficit baisse un peu (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "parlement",
+         "x": 30,
+         "y": 32,
+         "anim": "appear"
+        },
+        {
+         "obj": "usine",
+         "x": 28,
+         "y": 34,
+         "anim": "close"
+        }
+       ]
+      },
+      {
+       "id": "d",
+       "label": "Obliger les magasins à bloquer en caisse les produits rappelés",
+       "label_expert": "Blocage automatique en caisse des lots rappelés, sous peine d'amende",
+       "plus": "Plus aucune boîte rappelée ne se vend.",
+       "minus": "Les magasins doivent s'équiper.",
+       "budget": 0,
+       "axes": {
+        "soc": 1
+       },
+       "ind": {
+        "services": 1
+       },
+       "fx": [
+        {
+         "obj": "supermarche",
+         "x": 35,
+         "y": 31,
+         "anim": "pulse"
+        },
+        {
+         "obj": "etiquette",
+         "x": 35,
+         "y": 28,
+         "anim": "appear",
+         "label": "Blocage en caisse"
+        }
+       ]
+      },
+      {
+       "id": "e",
+       "label": "Indemniser les familles, sans changer les règles",
+       "label_expert": "Fonds d'indemnisation des familles, contrôles inchangés",
+       "plus": "Les familles touchées sont aidées vite.",
+       "minus": "Le même problème peut revenir.",
+       "budget": -0.01,
+       "axes": {
+        "eco": -1
+       },
+       "ind": {
+        "cohesion": 1
+       },
+       "budget_note": "Indemnités avancées par l'État : le déficit augmente un peu (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "pieces",
+         "x": 30,
+         "y": 35,
+         "anim": "rise"
+        },
+        {
+         "obj": "maison",
+         "x": 31,
+         "y": 36,
+         "anim": "appear"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "day": 11,
+   "season": "printemps",
+   "title": "Fumées, pirates et pots vides",
+   "mood": "tendu",
+   "weather": "pluie",
+   "intro": "Un incendie d'usine, un hôpital piraté : la semaine commence mal.",
+   "offer": [
+    "contribution_ue",
+    "renovation_massive",
+    "smic_hausse",
+    "baisse_cotisations_net",
+    "fusion_agences",
+    "surtaxe_grandes_entreprises"
+   ],
+   "events": [
+    {
+     "id": "v27_lubrizol",
+     "kind": "majeur",
+     "region": "normandie",
+     "sector": "securite",
+     "title": "Une usine chimique brûle en pleine ville",
+     "simple": "Une usine classée dangereuse prend feu près de Rouen. Un nuage noir de plusieurs kilomètres passe au-dessus des maisons. Les écoles ferment, les agriculteurs ne peuvent plus vendre leur lait.",
+     "expert": "Incendie d'un site Seveso seuil haut et d'un entrepôt voisin : milliers de tonnes de produits brûlés, panache de suie, consignation des productions agricoles, critiques sur l'information du public et le contrôle des installations classées.",
+     "context": "La France compte plus de 1 300 sites Seveso, souvent proches des villes. Les inspecteurs ne peuvent pas tout contrôler chaque année. Les riverains réclament d'être mieux informés.",
+     "real": {
+      "date": "26 septembre 2019",
+      "place": "Rouen et Petit-Quevilly, Seine-Maritime",
+      "fact": "Un incendie a détruit des milliers de tonnes de produits chimiques sur les sites de Lubrizol et de Normandie Logistique. Un long panache de fumée a traversé la région et des restrictions ont touché des centaines de communes agricoles.",
+      "figures": "Environ 9 500 tonnes de produits brûlés ; panache d'environ 22 km ; plus de 200 communes concernées par des restrictions agricoles.",
+      "sources": [
+       {
+        "label": "Santé publique France : l'incendie industriel de Rouen, que s'est-il passé ?",
+        "url": "https://www.santepubliquefrance.fr/regions-et-territoires/normandie/incendie-industriel-du-26-septembre-2019-a-rouen/lincendie-industriel-de-rouen-que-sest-il-passe"
+       },
+       {
+        "label": "Vie publique : rapport sur l'incendie de Lubrizol et Normandie Logistique",
+        "url": "https://www.vie-publique.fr/rapport/273826-incendie-lubrizolnl-logistique-du-26-septembre-2019-rouen"
+       }
+      ]
+     },
+     "camera": {
+      "region": "normandie",
+      "x": 42,
+      "y": 18,
+      "zoom": 2.4
+     },
+     "fx": [
+      {
+       "obj": "usine",
+       "x": 42,
+       "y": 18,
+       "anim": "smoke"
+      },
+      {
+       "obj": "incendie",
+       "x": 43,
+       "y": 19,
+       "anim": "appear",
+       "delay": 0.3
+      },
+      {
+       "obj": "ecole",
+       "x": 40,
+       "y": 20,
+       "anim": "close",
+       "delay": 0.6
+      },
+      {
+       "obj": "troupeau",
+       "x": 38,
+       "y": 19,
+       "anim": "appear",
+       "delay": 0.8
+      },
+      {
+       "obj": "etiquette",
+       "x": 42,
+       "y": 14,
+       "anim": "appear",
+       "label": "Panache de 22 km",
+       "delay": 1.1
+      }
+     ],
+     "recall": [
+      {
+       "event": "v25_pfas",
+       "choice": "a",
+       "text": "Il y a quelques semaines, vous avez interdit les rejets d'une usine chimique : les inspecteurs sont plus présents sur les sites."
+      },
+      {
+       "event": "v25_pfas",
+       "choice": "b",
+       "text": "Il y a quelques semaines, vous avez fait payer chaque gramme rejeté : cette recette finance quelques inspecteurs de plus.",
+       "ind": {
+        "services": 1
+       }
+      },
+      {
+       "event": "v25_pfas",
+       "choice": "c",
+       "text": "Il y a quelques semaines, vous avez financé des filtres pour l'eau potable : l'eau du robinet de la région reste surveillée."
+      },
+      {
+       "event": "v25_pfas",
+       "choice": "d",
+       "text": "Il y a quelques semaines, vous avez choisi l'information sans contrainte : les riverains réclament cette fois des mesures fermes.",
+       "ind": {
+        "cohesion": -1
+       }
+      },
+      {
+       "event": "v25_pfas",
+       "choice": "e",
+       "text": "Il y a quelques semaines, vous avez interdit ces produits dans les objets du quotidien : l'industrie chimique redoute de nouvelles règles."
+      }
+     ],
+     "choices": [
+      {
+       "id": "a",
+       "label": "Doubler le nombre d'inspecteurs des usines dangereuses",
+       "label_expert": "Renforcement des effectifs de l'inspection des installations classées",
+       "plus": "Chaque site est contrôlé plus souvent.",
+       "minus": "Une dépense durable pour l'État.",
+       "budget": -0.05,
+       "axes": {
+        "env": -1
+       },
+       "ind": {
+        "services": 1
+       },
+       "budget_note": "Salaires de nouveaux inspecteurs : le déficit augmente (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "usine",
+         "x": 42,
+         "y": 18,
+         "anim": "pulse"
+        },
+        {
+         "obj": "voiture",
+         "x": 47,
+         "y": 20,
+         "anim": "move",
+         "to": {
+          "x": 43,
+          "y": 19
+         }
+        }
+       ]
+      },
+      {
+       "id": "b",
+       "label": "Indemniser vite les agriculteurs et les commerçants",
+       "label_expert": "Fonds d'indemnisation abondé par l'industriel et l'État",
+       "plus": "Les fermes et commerces tiennent le coup.",
+       "minus": "L'État avance des sommes importantes.",
+       "budget": 0,
+       "once": -0.05,
+       "axes": {
+        "eco": -1
+       },
+       "ind": {
+        "cohesion": 1
+       },
+       "budget_note": "Avances publiques aux sinistrés : le déficit augmente une fois (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "pieces",
+         "x": 39,
+         "y": 19,
+         "anim": "rise"
+        },
+        {
+         "obj": "ferme",
+         "x": 38,
+         "y": 20,
+         "anim": "appear"
+        }
+       ]
+      },
+      {
+       "id": "c",
+       "label": "Éloigner les usines dangereuses des villes",
+       "label_expert": "Plans de prévention des risques avec délocalisation des sites",
+       "plus": "Les habitants ne vivent plus à côté du danger.",
+       "minus": "Très cher, et emplois déplacés ailleurs.",
+       "budget": -0.2,
+       "axes": {
+        "env": -1,
+        "soc": 1
+       },
+       "ind": {
+        "emploi": -1,
+        "cohesion": 1
+       },
+       "budget_note": "Rachats et déménagements aidés : le déficit augmente (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "usine",
+         "x": 42,
+         "y": 18,
+         "anim": "fade"
+        },
+        {
+         "obj": "chantier_grue",
+         "x": 46,
+         "y": 20,
+         "anim": "appear"
+        }
+       ]
+      },
+      {
+       "id": "d",
+       "label": "Augmenter les amendes et la taxe des sites à risque",
+       "label_expert": "Hausse de la fiscalité et des sanctions sur les sites Seveso",
+       "plus": "Les industriels investissent dans la sécurité.",
+       "minus": "Des usines menacent de partir à l'étranger.",
+       "budget": 0.04,
+       "axes": {
+        "eco": -1
+       },
+       "ind": {
+        "emploi": -1,
+        "services": 1
+       },
+       "budget_note": "Taxe et amendes en hausse : recette, le déficit baisse (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "pieces",
+         "x": 42,
+         "y": 18,
+         "anim": "rise"
+        },
+        {
+         "obj": "usine",
+         "x": 42,
+         "y": 18,
+         "anim": "pulse"
+        }
+       ]
+      },
+      {
+       "id": "e",
+       "label": "Laisser l'industriel payer seul les dégâts",
+       "label_expert": "Responsabilité de l'exploitant et remboursement des frais de secours",
+       "plus": "Pas de charge nouvelle pour l'industrie.",
+       "minus": "Les riverains ont peu de garanties.",
+       "budget": 0.02,
+       "axes": {
+        "eco": 1
+       },
+       "ind": {
+        "cohesion": -1,
+        "emploi": 1
+       },
+       "budget_note": "L'État se fait rembourser ses frais de secours : petite recette, le déficit baisse un peu (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "usine",
+         "x": 42,
+         "y": 18,
+         "anim": "appear"
+        },
+        {
+         "obj": "camion",
+         "x": 42,
+         "y": 19,
+         "anim": "move",
+         "to": {
+          "x": 47,
+          "y": 21
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "v27_cyber_hopital",
+     "kind": "majeur",
+     "region": "ile_de_france",
+     "sector": "numerique",
+     "title": "Des pirates paralysent un hôpital et demandent une rançon",
+     "simple": "Des pirates informatiques bloquent tous les ordinateurs d'un grand hôpital de l'Essonne. Ils réclament des millions pour rendre les données. Les urgences envoient des malades ailleurs.",
+     "expert": "Attaque par rançongiciel contre un centre hospitalier : chiffrement du système d'information, plan blanc et fonctionnement dégradé, refus de payer la rançon, divulgation de données de santé.",
+     "context": "Les hôpitaux sont des cibles fréquentes : leurs logiciels sont souvent anciens. La France refuse en principe de payer les rançons. Protéger un hôpital coûte cher, mais une attaque coûte aussi des millions.",
+     "real": {
+      "date": "21 août 2022",
+      "place": "Centre hospitalier Sud Francilien, Corbeil-Essonnes",
+      "fact": "Un rançongiciel a paralysé l'informatique de l'hôpital de Corbeil-Essonnes. L'hôpital a refusé de payer et les pirates ont publié des données de patients.",
+      "figures": "Rançon demandée : 10 millions de dollars, puis revue à la baisse ; plusieurs semaines de fonctionnement dégradé.",
+      "sources": [
+       {
+        "label": "Banque des Territoires : cyberattaque du centre hospitalier de Corbeil-Essonnes",
+        "url": "https://www.banquedesterritoires.fr/cyberattaque-du-centre-hospitalier-de-corbeil-essonnes-il-faut-repenser-des-systemes-informatiques"
+       },
+       {
+        "label": "Le Quotidien du médecin : les pirates divulguent des données de santé",
+        "url": "https://www.lequotidiendumedecin.fr/hopital/cyberattaque-de-corbeil-essonnes-les-pirates-divulguent-des-donnees-de-sante-volees-pour-exercer-un"
+       }
+      ]
+     },
+     "camera": {
+      "region": "ile_de_france",
+      "x": 51,
+      "y": 26,
+      "zoom": 2.4
+     },
+     "fx": [
+      {
+       "obj": "hopital",
+       "x": 51,
+       "y": 26,
+       "anim": "close"
+      },
+      {
+       "obj": "cyberattaque",
+       "x": 53,
+       "y": 24,
+       "anim": "pulse",
+       "delay": 0.3
+      },
+      {
+       "obj": "ambulance",
+       "x": 51,
+       "y": 27,
+       "anim": "move",
+       "to": {
+        "x": 48,
+        "y": 25
+       },
+       "delay": 0.6
+      },
+      {
+       "obj": "etiquette",
+       "x": 51,
+       "y": 22,
+       "anim": "appear",
+       "label": "Rançon demandée",
+       "delay": 1
+      }
+     ],
+     "choices": [
+      {
+       "id": "a",
+       "label": "Payer un plan national de cybersécurité des hôpitaux",
+       "label_expert": "Programme de mise à niveau des systèmes d'information hospitaliers",
+       "plus": "Les hôpitaux résistent mieux aux attaques.",
+       "minus": "Un coût élevé, sur plusieurs années.",
+       "budget": -0.25,
+       "axes": {
+        "eco": -1
+       },
+       "ind": {
+        "services": 1,
+        "souverainete": 1
+       },
+       "budget_note": "Investissements informatiques publics : le déficit augmente (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "antenne",
+         "x": 53,
+         "y": 25,
+         "anim": "appear"
+        },
+        {
+         "obj": "hopital",
+         "x": 51,
+         "y": 26,
+         "anim": "pulse"
+        }
+       ]
+      },
+      {
+       "id": "b",
+       "label": "Refuser de payer et faire tourner l'hôpital sur papier",
+       "label_expert": "Refus de la rançon, plan blanc et procédures papier",
+       "plus": "Les pirates ne gagnent rien.",
+       "minus": "Des semaines de soins ralentis.",
+       "budget": 0,
+       "axes": {
+        "soc": 1
+       },
+       "ind": {
+        "services": -1,
+        "souverainete": 1
+       },
+       "fx": [
+        {
+         "obj": "hopital",
+         "x": 51,
+         "y": 26,
+         "anim": "pulse"
+        },
+        {
+         "obj": "ambulance",
+         "x": 51,
+         "y": 27,
+         "anim": "move",
+         "to": {
+          "x": 48,
+          "y": 25
+         }
+        }
+       ]
+      },
+      {
+       "id": "c",
+       "label": "Interdire par la loi le paiement des rançons",
+       "label_expert": "Interdiction légale du paiement des rançons et de leur assurance",
+       "plus": "Les pirates ont moins intérêt à attaquer.",
+       "minus": "Des structures risquent de tout perdre.",
+       "budget": 0,
+       "axes": {
+        "soc": 2
+       },
+       "ind": {
+        "souverainete": 1,
+        "services": -1
+       },
+       "fx": [
+        {
+         "obj": "parlement",
+         "x": 52,
+         "y": 22,
+         "anim": "appear"
+        },
+        {
+         "obj": "cyberattaque",
+         "x": 53,
+         "y": 24,
+         "anim": "fade"
+        }
+       ]
+      },
+      {
+       "id": "d",
+       "label": "Regrouper l'informatique des hôpitaux d'une région",
+       "label_expert": "Groupement régional d'hébergement et de sécurité des données de santé",
+       "plus": "Moins de systèmes, mieux protégés, moins chers.",
+       "minus": "Une seule panne peut toucher toute la région.",
+       "budget": 0.03,
+       "axes": {
+        "eco": 1
+       },
+       "ind": {
+        "services": 1
+       },
+       "budget_note": "Moins de logiciels en double : le déficit baisse un peu (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "antenne",
+         "x": 53,
+         "y": 25,
+         "anim": "appear"
+        },
+        {
+         "obj": "satellite",
+         "x": 55,
+         "y": 22,
+         "anim": "appear"
+        }
+       ]
+      },
+      {
+       "id": "e",
+       "label": "Riposter avec les services de l'État contre les pirates",
+       "label_expert": "Mobilisation du cybercommandement et coopération policière internationale",
+       "plus": "Les réseaux de pirates sont démantelés.",
+       "minus": "Résultats lents, pirates souvent à l'étranger.",
+       "budget": -0.05,
+       "axes": {
+        "soc": 1
+       },
+       "ind": {
+        "souverainete": 1
+       },
+       "budget_note": "Moyens des services spécialisés : le déficit augmente (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "satellite",
+         "x": 55,
+         "y": 22,
+         "anim": "appear"
+        },
+        {
+         "obj": "voiture_police",
+         "x": 50,
+         "y": 25,
+         "anim": "appear"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "v27_moutarde",
+     "kind": "banal",
+     "region": "bourgogne_franche_comte",
+     "sector": "agriculture",
+     "title": "Plus de moutarde dans les rayons",
+     "simple": "Les pots de moutarde ont disparu des supermarchés. Les graines venaient surtout du Canada, où la sécheresse a ruiné la récolte. Les usines de Dijon tournent au ralenti.",
+     "expert": "Rupture d'approvisionnement en graines de moutarde brune, importées surtout du Canada, après une sécheresse exceptionnelle ; hausse des prix et relance d'une filière bourguignonne sous indication géographique.",
+     "context": "La moutarde de Dijon est une recette, pas une origine : les graines viennent en majorité du Canada. Une filière locale existe, mais petite. Produire en France coûte plus cher.",
+     "real": {
+      "date": "Printemps et été 2022",
+      "place": "Dijon et supermarchés de toute la France",
+      "fact": "Une sécheresse au Canada a fait chuter la récolte de graines de moutarde, provoquant des rayons vides et une hausse des prix en France. Les producteurs bourguignons ont appelé à relancer la culture locale.",
+      "figures": "Environ 80 % des graines utilisées en France venaient du Canada ; récolte canadienne divisée par deux environ.",
+      "sources": [
+       {
+        "label": "L'info durable : la moutarde de Dijon en péril",
+        "url": "https://www.linfodurable.fr/changement-climatique-inflation-et-penuries-la-moutarde-de-dijon-en-peril-30030"
+       },
+       {
+        "label": "Terre-net : la relocalisation comme remède à la pénurie",
+        "url": "https://www.terre-net.fr/economie-agricole/article/220964/la-relocalisation-comme-remede-a-la-penurie"
+       }
+      ]
+     },
+     "camera": {
+      "region": "bourgogne_franche_comte",
+      "x": 69,
+      "y": 40,
+      "zoom": 2.4
+     },
+     "fx": [
+      {
+       "obj": "supermarche",
+       "x": 69,
+       "y": 40,
+       "anim": "close"
+      },
+      {
+       "obj": "usine",
+       "x": 71,
+       "y": 38,
+       "anim": "appear",
+       "delay": 0.3
+      },
+      {
+       "obj": "cargo",
+       "x": 6,
+       "y": 55,
+       "anim": "move",
+       "to": {
+        "x": 12,
+        "y": 47
+       },
+       "label": "Graines du Canada",
+       "delay": 0.6
+      },
+      {
+       "obj": "etiquette",
+       "x": 69,
+       "y": 36,
+       "anim": "appear",
+       "label": "Rayons vides",
+       "delay": 1
+      }
+     ],
+     "choices": [
+      {
+       "id": "a",
+       "label": "Aider les agriculteurs à cultiver la moutarde en France",
+       "label_expert": "Aide à la relance de la filière de graines bourguignonnes",
+       "plus": "Moins de dépendance aux graines du Canada.",
+       "minus": "Une aide à payer, effets dans des années.",
+       "budget": -0.01,
+       "axes": {
+        "eu": 1,
+        "env": -1
+       },
+       "ind": {
+        "souverainete": 1
+       },
+       "budget_note": "Aide aux semis : le déficit augmente un peu (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "champ",
+         "x": 67,
+         "y": 41,
+         "anim": "grow"
+        },
+        {
+         "obj": "tracteur",
+         "x": 66,
+         "y": 42,
+         "anim": "appear"
+        }
+       ]
+      },
+      {
+       "id": "b",
+       "label": "Laisser le marché s'ajuster",
+       "label_expert": "Aucune intervention, ajustement par les prix et les stocks",
+       "plus": "Aucune dépense, les prix finiront par baisser.",
+       "minus": "Rayons vides et prix hauts pendant des mois.",
+       "budget": 0,
+       "axes": {
+        "eco": 2
+       },
+       "ind": {
+        "pouvoir_achat": -1
+       },
+       "fx": [
+        {
+         "obj": "supermarche",
+         "x": 69,
+         "y": 40,
+         "anim": "pulse"
+        },
+        {
+         "obj": "cargo",
+         "x": 6,
+         "y": 55,
+         "anim": "move",
+         "to": {
+          "x": 12,
+          "y": 47
+         }
+        }
+       ]
+      },
+      {
+       "id": "c",
+       "label": "Réserver la mention « Dijon » aux graines françaises",
+       "label_expert": "Révision du cahier des charges avec origine française des graines",
+       "plus": "Un produit plus local et mieux valorisé.",
+       "minus": "Moins de volume, prix plus élevés.",
+       "budget": 0,
+       "axes": {
+        "eu": 1
+       },
+       "ind": {
+        "souverainete": 1,
+        "pouvoir_achat": -1
+       },
+       "fx": [
+        {
+         "obj": "champ",
+         "x": 67,
+         "y": 41,
+         "anim": "appear"
+        },
+        {
+         "obj": "etiquette",
+         "x": 69,
+         "y": 36,
+         "anim": "appear",
+         "label": "Graines françaises"
+        }
+       ]
+      },
+      {
+       "id": "d",
+       "label": "Faire financer un stock de sécurité par les industriels",
+       "label_expert": "Stock stratégique de matières premières financé par les industriels",
+       "plus": "Un stock pour passer les mauvaises années.",
+       "minus": "Les prix augmentent un peu en magasin.",
+       "budget": 0.01,
+       "axes": {
+        "eco": -1
+       },
+       "ind": {
+        "souverainete": 1,
+        "pouvoir_achat": -1
+       },
+       "budget_note": "Contribution des industriels : petite recette, le déficit baisse un peu (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "entrepot",
+         "x": 71,
+         "y": 41,
+         "anim": "appear"
+        },
+        {
+         "obj": "camion",
+         "x": 71,
+         "y": 41,
+         "anim": "move",
+         "to": {
+          "x": 69,
+          "y": 40
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "day": 12,
+   "season": "printemps",
+   "title": "L'eau, trésor disputé",
+   "mood": "tendu",
+   "weather": "soleil",
+   "intro": "Réserves dans les champs, robinets à sec outre-mer, pompes vides : la semaine manque de tout.",
+   "offer": [
+    "prix_planchers_agricoles",
+    "sortie_pesticides",
+    "tva_sociale",
+    "cessions_actifs",
+    "taxe_kerosene_train",
+    "plafonner_allegements"
+   ],
+   "events": [
+    {
+     "id": "v27_sainte_soline",
+     "kind": "majeur",
+     "region": "nouvelle_aquitaine",
+     "sector": "agriculture",
+     "title": "Affrontements autour d'une réserve d'eau agricole",
+     "simple": "Des milliers de manifestants marchent vers une immense réserve d'eau creusée pour irriguer les champs. Les heurts avec les gendarmes font des centaines de blessés. Faut-il stocker l'eau pour l'agriculture ?",
+     "expert": "Retenues de substitution remplies par pompage hivernal dans les nappes pour l'irrigation estivale, portées par une coopérative avec environ 70 % de financements publics ; manifestation interdite, maintien de l'ordre contesté.",
+     "context": "Les agriculteurs disent que sans irrigation, certaines cultures deviennent impossibles l'été. Les opposants jugent que ces réserves profitent à quelques fermes et s'évaporent. Les nappes de la région sont souvent basses.",
+     "real": {
+      "date": "25 mars 2023",
+      "place": "Sainte-Soline, Deux-Sèvres",
+      "fact": "Une manifestation interdite contre une réserve d'eau agricole a donné lieu à de violents affrontements avec les gendarmes. Des centaines de personnes ont été blessées des deux côtés, dont deux manifestants dans le coma.",
+      "figures": "Environ 3 200 gendarmes mobilisés ; plusieurs milliers de manifestants ; programme de 16 réserves financé à environ 70 % par de l'argent public.",
+      "sources": [
+       {
+        "label": "Gendarmerie nationale : les gendarmes mobilisés à Sainte-Soline",
+        "url": "https://www.gendarmerie.interieur.gouv.fr/gendinfo/actualites/2023/sainte-soline-les-gendarmes-mobilises-face-a-un-deferlement-de-violence"
+       },
+       {
+        "label": "Reporterre : l'ampleur de la répression policière mise en cause",
+        "url": "https://reporterre.net/Sainte-Soline-l-ampleur-de-la-repression-policiere-mise-en-cause"
+       }
+      ]
+     },
+     "camera": {
+      "region": "nouvelle_aquitaine",
+      "x": 34,
+      "y": 51,
+      "zoom": 2.4
+     },
+     "fx": [
+      {
+       "obj": "barrage",
+       "x": 34,
+       "y": 51,
+       "anim": "appear"
+      },
+      {
+       "obj": "manifestants",
+       "x": 30,
+       "y": 50,
+       "anim": "move",
+       "to": {
+        "x": 33,
+        "y": 51
+       },
+       "delay": 0.3
+      },
+      {
+       "obj": "voiture_police",
+       "x": 36,
+       "y": 51,
+       "anim": "appear",
+       "count": 2,
+       "delay": 0.6
+      },
+      {
+       "obj": "champ",
+       "x": 36,
+       "y": 53,
+       "anim": "appear",
+       "delay": 0.8
+      },
+      {
+       "obj": "etiquette",
+       "x": 34,
+       "y": 47,
+       "anim": "appear",
+       "label": "Réserve d'eau agricole",
+       "delay": 1.1
+      }
+     ],
+     "choices": [
+      {
+       "id": "a",
+       "label": "Continuer les réserves, avec des règles de partage",
+       "label_expert": "Poursuite du programme avec protocole d'usage et pratiques agroécologiques",
+       "plus": "Les cultures sont irriguées l'été.",
+       "minus": "L'opposition reste forte sur le terrain.",
+       "budget": -0.03,
+       "axes": {
+        "env": 1,
+        "eco": 1
+       },
+       "ind": {
+        "emploi": 1,
+        "cohesion": -1
+       },
+       "budget_note": "Part publique des chantiers : le déficit augmente (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "barrage",
+         "x": 34,
+         "y": 51,
+         "anim": "grow"
+        },
+        {
+         "obj": "tracteur",
+         "x": 36,
+         "y": 52,
+         "anim": "appear"
+        }
+       ]
+      },
+      {
+       "id": "b",
+       "label": "Suspendre les chantiers et lancer un débat public",
+       "label_expert": "Moratoire et saisine de la Commission nationale du débat public",
+       "plus": "Le calme revient, chacun est écouté.",
+       "minus": "Les agriculteurs restent sans solution cet été.",
+       "budget": 0.02,
+       "axes": {
+        "env": -1
+       },
+       "ind": {
+        "cohesion": 1,
+        "emploi": -1
+       },
+       "budget_note": "Subventions des chantiers suspendues : le déficit baisse un peu (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "chantier_grue",
+         "x": 34,
+         "y": 51,
+         "anim": "close"
+        },
+        {
+         "obj": "foule",
+         "x": 32,
+         "y": 50,
+         "anim": "appear"
+        }
+       ]
+      },
+      {
+       "id": "c",
+       "label": "Aider les fermes à passer à des cultures moins gourmandes en eau",
+       "label_expert": "Aides à la conversion vers des cultures sobres en eau",
+       "plus": "Moins de besoin d'eau à long terme.",
+       "minus": "Transition coûteuse et revenus incertains.",
+       "budget": -0.05,
+       "axes": {
+        "env": -2
+       },
+       "ind": {
+        "emploi": -1,
+        "cohesion": 1
+       },
+       "budget_note": "Aides à la conversion : le déficit augmente (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "champ",
+         "x": 36,
+         "y": 53,
+         "anim": "grow"
+        },
+        {
+         "obj": "ferme",
+         "x": 35,
+         "y": 54,
+         "anim": "appear"
+        }
+       ]
+      },
+      {
+       "id": "d",
+       "label": "Faire payer l'eau d'irrigation à son vrai prix",
+       "label_expert": "Hausse de la redevance pour prélèvement d'eau agricole",
+       "plus": "Chacun économise l'eau qu'il paie.",
+       "minus": "Les petites fermes souffrent les premières.",
+       "budget": 0.04,
+       "axes": {
+        "eco": 1,
+        "env": -1
+       },
+       "ind": {
+        "pouvoir_achat": -1,
+        "emploi": -1
+       },
+       "budget_note": "Redevance plus élevée : recette, le déficit baisse (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "pieces",
+         "x": 34,
+         "y": 51,
+         "anim": "rise"
+        },
+        {
+         "obj": "ferme",
+         "x": 35,
+         "y": 54,
+         "anim": "pulse"
+        }
+       ]
+      },
+      {
+       "id": "e",
+       "label": "Interdire la manifestation et dissoudre les groupes violents",
+       "label_expert": "Interdictions préfectorales et dissolution administrative des collectifs",
+       "plus": "Les chantiers sont protégés.",
+       "minus": "La contestation se durcit ailleurs.",
+       "budget": -0.01,
+       "axes": {
+        "soc": 2
+       },
+       "ind": {
+        "cohesion": -1
+       },
+       "budget_note": "Forces de l'ordre mobilisées : le déficit augmente un peu (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "voiture_police",
+         "x": 36,
+         "y": 51,
+         "anim": "appear",
+         "count": 2
+        },
+        {
+         "obj": "barrage",
+         "x": 34,
+         "y": 51,
+         "anim": "appear"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "v27_mayotte_eau",
+     "kind": "majeur",
+     "region": "outre_mer",
+     "sector": "sante",
+     "title": "À Mayotte, l'eau ne coule plus qu'un jour sur trois",
+     "simple": "Après une sécheresse historique, les réserves d'eau de Mayotte sont presque vides. Le robinet n'est ouvert qu'un jour sur trois. Les familles font la queue pour des bouteilles.",
+     "expert": "Crise hydrique due à un déficit de pluie et à un sous-investissement chronique (retenues collinaires, forages, dessalement, fuites du réseau) : tours d'eau, distribution de bouteilles par l'État, risques sanitaires.",
+     "context": "Mayotte est le département le plus pauvre de France. Sa population a augmenté plus vite que les réseaux. Une partie de l'eau se perd dans des tuyaux qui fuient.",
+     "real": {
+      "date": "Été et automne 2023",
+      "place": "Mayotte",
+      "fact": "Face à une sécheresse exceptionnelle, Mayotte a connu des coupures d'eau organisées jusqu'à deux jours sur trois. L'État a distribué des bouteilles d'eau aux habitants et annoncé de nouveaux équipements, dont une usine de dessalement.",
+      "figures": "Coupures pouvant durer deux jours sur trois ; distribution gratuite de bouteilles d'eau à chaque habitant.",
+      "sources": [
+       {
+        "label": "Info.gouv : des bouteilles d'eau pour chaque habitant",
+        "url": "https://www.info.gouv.fr/actualite/crise-de-leau-a-mayotte-des-bouteilles-deau-pour-chaque-habitant"
+       },
+       {
+        "label": "Info.gouv : les mesures pour affronter la crise de l'eau à Mayotte",
+        "url": "https://www.info.gouv.fr/index.php/actualite/crise-de-leau-a-mayotte-presentation-par-elisabeth-borne-des-nouvelles-mesures-mises-en-place"
+       }
+      ]
+     },
+     "camera": {
+      "region": "outre_mer",
+      "x": 7,
+      "y": 90,
+      "zoom": 2.6
+     },
+     "fx": [
+      {
+       "obj": "secheresse",
+       "x": 6,
+       "y": 89,
+       "anim": "appear"
+      },
+      {
+       "obj": "foule",
+       "x": 8,
+       "y": 91,
+       "anim": "appear",
+       "delay": 0.3
+      },
+      {
+       "obj": "camion",
+       "x": 4,
+       "y": 92,
+       "anim": "move",
+       "to": {
+        "x": 7,
+        "y": 90
+       },
+       "delay": 0.6
+      },
+      {
+       "obj": "etiquette",
+       "x": 7,
+       "y": 86,
+       "anim": "appear",
+       "label": "Eau un jour sur trois",
+       "delay": 1
+      }
+     ],
+     "multi": {
+      "max": 2,
+      "pairs": [
+       [
+        "a",
+        "c"
+       ],
+       [
+        "a",
+        "d"
+       ],
+       [
+        "a",
+        "e"
+       ],
+       [
+        "b",
+        "c"
+       ],
+       [
+        "b",
+        "d"
+       ],
+       [
+        "b",
+        "e"
+       ]
+      ],
+      "hint": "Une réponse pour le court terme, une pour le long terme."
+     },
+     "recall": [
+      {
+       "event": "v22_chido",
+       "choice": "a",
+       "text": "Après le cyclone, vous avez fait voter une loi d'urgence : les chantiers vont vite, mais les réseaux d'eau n'ont pas suivi."
+      },
+      {
+       "event": "v22_chido",
+       "choice": "b",
+       "text": "Après le cyclone, vous avez lancé la reconstruction en dur : les nouveaux logements sont raccordés à l'eau.",
+       "ind": {
+        "services": 1
+       }
+      },
+      {
+       "event": "v22_chido",
+       "choice": "c",
+       "text": "Après le cyclone, vous avez durci les règles d'entrée sur l'île : les besoins en eau restent pourtant immenses."
+      },
+      {
+       "event": "v22_chido",
+       "choice": "d",
+       "text": "Après le cyclone, vous avez obtenu le fonds de solidarité européen : une partie peut financer les réseaux d'eau."
+      },
+      {
+       "event": "v22_chido",
+       "choice": "e",
+       "text": "Après le cyclone, vous avez réduit les impôts des investisseurs : quelques entreprises proposent des forages privés."
+      }
+     ],
+     "choices": [
+      {
+       "id": "a",
+       "label": "Distribuer gratuitement de l'eau en bouteille à tous",
+       "label_expert": "Distribution universelle de bouteilles par l'État",
+       "plus": "Chaque famille a de l'eau potable.",
+       "minus": "Coûteux, et des montagnes de plastique.",
+       "budget": 0,
+       "once": -0.1,
+       "terme": "court",
+       "axes": {
+        "eco": -1
+       },
+       "ind": {
+        "cohesion": 1,
+        "services": 1
+       },
+       "budget_note": "Achat et transport des bouteilles : le déficit augmente une fois (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "camion",
+         "x": 4,
+         "y": 92,
+         "anim": "move",
+         "to": {
+          "x": 7,
+          "y": 90
+         }
+        },
+        {
+         "obj": "foule",
+         "x": 8,
+         "y": 91,
+         "anim": "appear"
+        }
+       ]
+      },
+      {
+       "id": "b",
+       "label": "Couper l'eau à tour de rôle, sans aide de plus",
+       "label_expert": "Tours d'eau stricts sans distribution supplémentaire",
+       "plus": "Les réserves tiennent plus longtemps.",
+       "minus": "Les plus pauvres manquent d'eau potable.",
+       "budget": 0,
+       "terme": "court",
+       "axes": {
+        "eco": 1
+       },
+       "ind": {
+        "cohesion": -1,
+        "services": -1
+       },
+       "fx": [
+        {
+         "obj": "secheresse",
+         "x": 6,
+         "y": 89,
+         "anim": "pulse"
+        },
+        {
+         "obj": "foule",
+         "x": 8,
+         "y": 91,
+         "anim": "appear"
+        }
+       ]
+      },
+      {
+       "id": "c",
+       "label": "Construire une grande usine de dessalement",
+       "label_expert": "Seconde usine de dessalement d'eau de mer",
+       "plus": "De l'eau potable même sans pluie.",
+       "minus": "Très chère, gourmande en électricité.",
+       "budget": -0.05,
+       "terme": "long",
+       "axes": {
+        "env": 1
+       },
+       "ind": {
+        "services": 1
+       },
+       "budget_note": "Construction payée par l'État : le déficit augmente (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "usine",
+         "x": 8,
+         "y": 92,
+         "anim": "grow",
+         "stay": true
+        },
+        {
+         "obj": "chantier_grue",
+         "x": 6,
+         "y": 91,
+         "anim": "appear"
+        }
+       ]
+      },
+      {
+       "id": "d",
+       "label": "Réparer les fuites, payé par le prix de l'eau",
+       "label_expert": "Renouvellement des canalisations financé par la facture d'eau",
+       "plus": "Moins d'eau perdue, sans argent de l'État.",
+       "minus": "La facture d'eau augmente pour tous.",
+       "budget": 0.02,
+       "terme": "long",
+       "axes": {
+        "eco": 1
+       },
+       "ind": {
+        "pouvoir_achat": -1,
+        "services": 1
+       },
+       "budget_note": "Travaux payés par les usagers, aide de l'État réduite : le déficit baisse un peu (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "chantier_grue",
+         "x": 6,
+         "y": 91,
+         "anim": "appear"
+        },
+        {
+         "obj": "pieces",
+         "x": 7,
+         "y": 90,
+         "anim": "rise"
+        }
+       ]
+      },
+      {
+       "id": "e",
+       "label": "Faire payer plus cher les gros consommateurs d'eau",
+       "label_expert": "Tarification progressive de l'eau par tranche de consommation",
+       "plus": "L'eau est partagée plus justement.",
+       "minus": "Les grandes familles paient davantage.",
+       "budget": 0.01,
+       "terme": "long",
+       "axes": {
+        "eco": -1,
+        "env": -1
+       },
+       "ind": {
+        "cohesion": 1,
+        "pouvoir_achat": -1
+       },
+       "budget_note": "Recettes des tranches élevées : le déficit baisse un peu (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "pieces",
+         "x": 7,
+         "y": 90,
+         "anim": "rise"
+        },
+        {
+         "obj": "maison",
+         "x": 8,
+         "y": 91,
+         "anim": "appear"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "v27_carburant",
+     "kind": "banal",
+     "region": "national",
+     "sector": "energie",
+     "title": "Les stations-service à sec",
+     "simple": "Une grève dans les raffineries bloque l'essence. Près d'une station sur trois n'a plus rien à vendre. Les files d'attente s'allongent ; certains ne peuvent plus aller travailler.",
+     "expert": "Grève dans les raffineries et dépôts pour des hausses de salaires après des profits exceptionnels : ruptures d'approvisionnement, déblocage des stocks stratégiques et réquisition de personnels.",
+     "context": "La France a peu de raffineries en activité. L'État garde des stocks stratégiques de carburant pour les crises. Le droit de réquisition existe, mais il est encadré.",
+     "real": {
+      "date": "Fin septembre à fin octobre 2022",
+      "place": "Raffineries de Normandie, du Nord et de Provence ; stations de toute la France",
+      "fact": "Une grève pour les salaires dans les raffineries de TotalEnergies et d'ExxonMobil a provoqué une pénurie de carburant. Le gouvernement a réquisitionné des grévistes et puisé dans les stocks stratégiques.",
+      "figures": "Près d'une station-service sur trois en difficulté au pire de la crise ; hausse de salaires de 7 % obtenue chez TotalEnergies.",
+      "sources": [
+       {
+        "label": "Connaissance des énergies (AFP) : près d'une station sur trois sans rien à vendre",
+        "url": "https://www.connaissancedesenergies.org/afp/carburants-pres-dune-station-service-sur-trois-en-france-navait-rien-vendre-au-pire-de-la-penurie-selon-une-analyse-afp-221021"
+       },
+       {
+        "label": "Maire-info : carburant, les raisons d'une pénurie",
+        "url": "https://www.maire-info.com/energie/carburant-les-raisons-dune-penurie-qui-devient-preoccupante-art26-26775"
+       }
+      ]
+     },
+     "camera": {
+      "region": "national",
+      "x": 50,
+      "y": 35,
+      "zoom": 1.2
+     },
+     "fx": [
+      {
+       "obj": "voiture",
+       "x": 52,
+       "y": 24,
+       "anim": "appear",
+       "count": 4
+      },
+      {
+       "obj": "usine",
+       "x": 37,
+       "y": 18,
+       "anim": "close",
+       "delay": 0.3
+      },
+      {
+       "obj": "camion",
+       "x": 38,
+       "y": 19,
+       "anim": "move",
+       "to": {
+        "x": 50,
+        "y": 24
+       },
+       "delay": 0.6
+      },
+      {
+       "obj": "etiquette",
+       "x": 52,
+       "y": 20,
+       "anim": "appear",
+       "label": "Une station sur trois à sec",
+       "delay": 1
+      }
+     ],
+     "choices": [
+      {
+       "id": "a",
+       "label": "Réquisitionner les grévistes",
+       "label_expert": "Réquisition préfectorale des personnels des dépôts",
+       "plus": "L'essence revient vite à la pompe.",
+       "minus": "Les syndicats dénoncent un recul.",
+       "budget": 0,
+       "axes": {
+        "soc": 2
+       },
+       "ind": {
+        "cohesion": -1
+       },
+       "fx": [
+        {
+         "obj": "usine",
+         "x": 37,
+         "y": 18,
+         "anim": "pulse"
+        },
+        {
+         "obj": "camion",
+         "x": 38,
+         "y": 19,
+         "anim": "move",
+         "to": {
+          "x": 50,
+          "y": 24
+         },
+         "count": 2
+        }
+       ]
+      },
+      {
+       "id": "b",
+       "label": "Taxer les superprofits pour financer les hausses de salaires",
+       "label_expert": "Contribution exceptionnelle sur les bénéfices des pétroliers",
+       "plus": "Une recette, et les salaires montent.",
+       "minus": "Les entreprises investissent moins en France.",
+       "budget": 0.5,
+       "axes": {
+        "eco": -2
+       },
+       "ind": {
+        "pouvoir_achat": 1,
+        "emploi": -1
+       },
+       "budget_note": "Recette de la contribution : le déficit baisse (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "pieces",
+         "x": 37,
+         "y": 18,
+         "anim": "rise"
+        },
+        {
+         "obj": "usine",
+         "x": 37,
+         "y": 18,
+         "anim": "appear"
+        }
+       ]
+      },
+      {
+       "id": "c",
+       "label": "Puiser dans les stocks stratégiques",
+       "label_expert": "Déblocage des stocks stratégiques pétroliers, reconstitués par les pétroliers",
+       "plus": "Les stations sont livrées sans contrainte.",
+       "minus": "Moins de réserve si une crise plus grave arrive.",
+       "budget": 0,
+       "axes": {
+        "soc": -1
+       },
+       "ind": {
+        "souverainete": -1
+       },
+       "fx": [
+        {
+         "obj": "entrepot",
+         "x": 45,
+         "y": 22,
+         "anim": "appear"
+        },
+        {
+         "obj": "camion",
+         "x": 45,
+         "y": 22,
+         "anim": "move",
+         "to": {
+          "x": 51,
+          "y": 24
+         }
+        }
+       ]
+      },
+      {
+       "id": "d",
+       "label": "Baisser les taxes sur le carburant pendant la crise",
+       "label_expert": "Remise temporaire sur l'accise des carburants",
+       "plus": "Le plein coûte moins cher pour tous.",
+       "minus": "Des centaines de millions de recettes en moins.",
+       "budget": -0.8,
+       "axes": {
+        "env": 2
+       },
+       "ind": {
+        "pouvoir_achat": 2
+       },
+       "budget_note": "Taxes non perçues : le déficit augmente (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "voiture",
+         "x": 46,
+         "y": 28,
+         "anim": "move",
+         "to": {
+          "x": 51,
+          "y": 24
+         },
+         "count": 3
+        },
+        {
+         "obj": "pieces",
+         "x": 52,
+         "y": 24,
+         "anim": "rise"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "day": 13,
+   "season": "printemps",
+   "title": "Marée noire et bancs d'école",
+   "mood": "tendu",
+   "weather": "pluie",
+   "intro": "Le pétrole arrive sur les plages, et le collège change ses règles.",
+   "offer": [
+    "regulation_installation_medecins",
+    "jour_ferie_travaille",
+    "tva_energie_5_5",
+    "leasing_electrique",
+    "encadrement_loyers"
+   ],
+   "events": [
+    {
+     "id": "v27_erika",
+     "kind": "majeur",
+     "region": "pays_de_la_loire",
+     "sector": "transports",
+     "title": "Un pétrolier se brise, la marée noire touche les plages",
+     "simple": "Un vieux pétrolier se casse en deux au large de la Bretagne. Des milliers de tonnes de fioul lourd arrivent sur les plages. Des bénévoles ramassent le pétrole à la main, des oiseaux meurent par milliers.",
+     "expert": "Naufrage d'un pétrolier sous pavillon de complaisance affrété par une major : pollution de quelque 400 km de côtes, plan Polmar-Terre, débat sur la responsabilité de l'affréteur, préjudice écologique reconnu ensuite par la Cour de cassation.",
+     "context": "Beaucoup de navires sont immatriculés dans des pays aux contrôles faibles. Après ce naufrage, l'Europe a interdit les pétroliers à simple coque. La justice a ensuite reconnu le préjudice fait à la nature.",
+     "real": {
+      "date": "12 décembre 1999",
+      "place": "Au large du Finistère ; côtes du Finistère à la Charente-Maritime",
+      "fact": "Le pétrolier Erika s'est brisé en deux au large de la Bretagne, polluant environ 400 km de côtes. Des dizaines de milliers de bénévoles ont nettoyé les plages ; la justice a plus tard reconnu le préjudice écologique.",
+      "figures": "Environ 20 000 tonnes de fioul déversées ; 150 000 à 300 000 oiseaux morts selon les estimations ; environ 400 km de côtes souillées.",
+      "sources": [
+       {
+        "label": "Cedre : fiche sur le naufrage de l'Erika",
+        "url": "https://cedre.fr/en/resources/incident-information-sheets/erika"
+       },
+       {
+        "label": "Universalis : marée noire de l'Erika",
+        "url": "https://www.universalis.fr/encyclopedie/maree-noire-de-l-erika/"
+       }
+      ]
+     },
+     "camera": {
+      "region": "pays_de_la_loire",
+      "x": 19,
+      "y": 43,
+      "zoom": 2.2
+     },
+     "fx": [
+      {
+       "obj": "cargo",
+       "x": 9,
+       "y": 45,
+       "anim": "shake"
+      },
+      {
+       "obj": "foule",
+       "x": 21,
+       "y": 42,
+       "anim": "appear",
+       "delay": 0.4
+      },
+      {
+       "obj": "camion",
+       "x": 27,
+       "y": 41,
+       "anim": "move",
+       "to": {
+        "x": 22,
+        "y": 43
+       },
+       "delay": 0.7
+      },
+      {
+       "obj": "etiquette",
+       "x": 20,
+       "y": 38,
+       "anim": "appear",
+       "label": "400 km de côtes souillées",
+       "delay": 1
+      }
+     ],
+     "recall": [
+      {
+       "event": "v22_xynthia",
+       "choice": "a",
+       "text": "Après la tempête sur la côte, vous avez racheté les maisons les plus exposées : le littoral a moins d'habitations en première ligne."
+      },
+      {
+       "event": "v22_xynthia",
+       "choice": "b",
+       "text": "Après la tempête sur la côte, vous avez rehaussé les digues : elles ne retiennent pas le pétrole."
+      },
+      {
+       "event": "v22_xynthia",
+       "choice": "c",
+       "text": "Après la tempête sur la côte, vous avez interdit de construire en zone inondable : les communes du littoral ont moins de recettes."
+      },
+      {
+       "event": "v22_xynthia",
+       "choice": "d",
+       "text": "Après la tempête sur la côte, vous avez indemnisé vite : les habitants connaissent la marche à suivre.",
+       "ind": {
+        "cohesion": 1
+       }
+      },
+      {
+       "event": "v22_xynthia",
+       "choice": "e",
+       "text": "Après la tempête sur la côte, vous avez augmenté la surprime catastrophes naturelles : la marée noire, elle, n'est pas couverte."
+      }
+     ],
+     "choices": [
+      {
+       "id": "a",
+       "label": "Mobiliser l'armée et les bénévoles pour nettoyer",
+       "label_expert": "Déclenchement du plan Polmar-Terre avec renfort militaire",
+       "plus": "Les plages sont nettoyées plus vite.",
+       "minus": "Coûteux, et risqué pour les bénévoles.",
+       "budget": 0,
+       "once": -0.15,
+       "axes": {
+        "soc": 1
+       },
+       "ind": {
+        "cohesion": 1
+       },
+       "budget_note": "Dépenses de nettoyage avancées par l'État : le déficit augmente une fois (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "foule",
+         "x": 21,
+         "y": 42,
+         "anim": "appear",
+         "count": 2
+        },
+        {
+         "obj": "camion",
+         "x": 27,
+         "y": 41,
+         "anim": "move",
+         "to": {
+          "x": 22,
+          "y": 43
+         }
+        }
+       ]
+      },
+      {
+       "id": "b",
+       "label": "Faire payer l'armateur et l'affréteur pétrolier",
+       "label_expert": "Action en responsabilité contre armateur, affréteur et société de classification",
+       "plus": "Les pollueurs paient les dégâts.",
+       "minus": "Procès de dix ans, sommes incertaines.",
+       "budget": 0.1,
+       "axes": {
+        "env": -1,
+        "eco": -1
+       },
+       "ind": {
+        "cohesion": 1
+       },
+       "budget_note": "Indemnités récupérées auprès des responsables : recette, le déficit baisse (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "parlement",
+         "x": 23,
+         "y": 40,
+         "anim": "appear"
+        },
+        {
+         "obj": "pieces",
+         "x": 21,
+         "y": 42,
+         "anim": "rise"
+        }
+       ]
+      },
+      {
+       "id": "c",
+       "label": "Interdire les vieux pétroliers dans nos eaux",
+       "label_expert": "Interdiction des pétroliers à simple coque dans la zone économique exclusive",
+       "plus": "Moins de risque de nouveau naufrage.",
+       "minus": "Le transport du pétrole coûte plus cher.",
+       "budget": 0,
+       "axes": {
+        "env": -1,
+        "eu": 1
+       },
+       "ind": {
+        "pouvoir_achat": -1,
+        "souverainete": 1
+       },
+       "fx": [
+        {
+         "obj": "cargo",
+         "x": 9,
+         "y": 45,
+         "anim": "move",
+         "to": {
+          "x": 4,
+          "y": 58
+         }
+        },
+        {
+         "obj": "douane",
+         "x": 21,
+         "y": 44,
+         "anim": "appear"
+        }
+       ]
+      },
+      {
+       "id": "d",
+       "label": "Taxer chaque tonne de pétrole débarquée pour un fonds marées noires",
+       "label_expert": "Contribution par tonne de pétrole débarquée affectée à un fonds national",
+       "plus": "Un fonds prêt pour la prochaine fois.",
+       "minus": "Le carburant coûte un peu plus cher.",
+       "budget": 0.08,
+       "axes": {
+        "env": -1,
+        "eco": -1
+       },
+       "ind": {
+        "pouvoir_achat": -1
+       },
+       "budget_note": "Recette de la contribution : le déficit baisse (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "pieces",
+         "x": 22,
+         "y": 44,
+         "anim": "rise"
+        },
+        {
+         "obj": "port",
+         "x": 23,
+         "y": 45,
+         "anim": "appear"
+        }
+       ]
+      },
+      {
+       "id": "e",
+       "label": "Indemniser le tourisme et la pêche touchés",
+       "label_expert": "Fonds d'aide aux professionnels du tourisme, de la pêche et des huîtres",
+       "plus": "Hôtels et pêcheurs passent la saison.",
+       "minus": "Une dépense de plus pour l'État.",
+       "budget": 0,
+       "once": -0.1,
+       "axes": {
+        "eco": -1
+       },
+       "ind": {
+        "emploi": 1
+       },
+       "budget_note": "Aides publiques aux professionnels : le déficit augmente une fois (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "pieces",
+         "x": 22,
+         "y": 42,
+         "anim": "rise"
+        },
+        {
+         "obj": "maison",
+         "x": 23,
+         "y": 43,
+         "anim": "appear"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "v27_groupes_niveau",
+     "kind": "majeur",
+     "region": "national",
+     "sector": "ecole",
+     "title": "Des groupes de niveau au collège",
+     "simple": "Le gouvernement veut regrouper les collégiens par niveau en français et en maths. Les uns y voient un moyen d'aider les élèves en difficulté, les autres un tri trop précoce. Que décidez-vous ?",
+     "expert": "Réforme dite du « choc des savoirs » : groupes de niveau en sixième et cinquième pour le français et les mathématiques, besoin de milliers de postes, contestation syndicale et recours devant le Conseil d'État sur la base juridique.",
+     "context": "Les enquêtes internationales montrent une baisse du niveau en maths en France. Les études sur les groupes de niveau donnent des résultats contrastés. Il faut plus de professeurs pour faire des petits groupes.",
+     "real": {
+      "date": "5 décembre 2023 (annonce) ; rentrée 2024 (mise en place)",
+      "place": "Collèges de toute la France",
+      "fact": "Après de mauvais résultats aux évaluations internationales, le ministre de l'Éducation a annoncé des groupes de niveau en sixième et cinquième. La mesure a été assouplie en « groupes de besoins », puis fragilisée par la justice administrative.",
+      "figures": "La France était sous la moyenne de l'OCDE en mathématiques dans la dernière enquête PISA ; les syndicats estimaient à plusieurs milliers les postes nécessaires.",
+      "sources": [
+       {
+        "label": "Banque des Territoires : le choc des savoirs, textes publiés, questions en suspens",
+        "url": "https://www.banquedesterritoires.fr/choc-des-savoirs-textes-publies-questions-en-suspens"
+       },
+       {
+        "label": "Weka : la poursuite des groupes de besoins nécessitera un nouveau texte",
+        "url": "https://www.weka.fr/actualite/education/article/college-la-poursuite-des-groupes-de-besoins-necessitera-un-nouveau-texte-decide-la-justice-188758/"
+       }
+      ]
+     },
+     "camera": {
+      "region": "national",
+      "x": 52,
+      "y": 45,
+      "zoom": 1.1
+     },
+     "fx": [
+      {
+       "obj": "ecole",
+       "x": 52,
+       "y": 30,
+       "anim": "appear"
+      },
+      {
+       "obj": "ecole",
+       "x": 40,
+       "y": 46,
+       "anim": "appear",
+       "delay": 0.3
+      },
+      {
+       "obj": "ecole",
+       "x": 64,
+       "y": 56,
+       "anim": "appear",
+       "delay": 0.6
+      },
+      {
+       "obj": "etiquette",
+       "x": 52,
+       "y": 26,
+       "anim": "appear",
+       "label": "Groupes de niveau",
+       "delay": 1
+      }
+     ],
+     "choices": [
+      {
+       "id": "a",
+       "label": "Généraliser les groupes de niveau",
+       "label_expert": "Groupes de niveau obligatoires en français et mathématiques",
+       "plus": "Les élèves faibles avancent à leur rythme.",
+       "minus": "Risque d'enfermer un élève dans un groupe.",
+       "budget": -0.3,
+       "axes": {
+        "soc": 1
+       },
+       "ind": {
+        "services": 1,
+        "cohesion": -1
+       },
+       "budget_note": "Postes d'enseignants supplémentaires : le déficit augmente (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "ecole",
+         "x": 52,
+         "y": 30,
+         "anim": "grow"
+        },
+        {
+         "obj": "ecole",
+         "x": 40,
+         "y": 46,
+         "anim": "grow"
+        }
+       ]
+      },
+      {
+       "id": "b",
+       "label": "Laisser chaque collège décider",
+       "label_expert": "Autonomie des établissements sur l'organisation des groupes",
+       "plus": "Chaque équipe s'adapte à ses élèves.",
+       "minus": "Des inégalités entre collèges.",
+       "budget": 0,
+       "axes": {
+        "eco": 1
+       },
+       "ind": {
+        "cohesion": -1
+       },
+       "fx": [
+        {
+         "obj": "ecole",
+         "x": 52,
+         "y": 30,
+         "anim": "pulse"
+        },
+        {
+         "obj": "ecole",
+         "x": 64,
+         "y": 56,
+         "anim": "pulse"
+        }
+       ]
+      },
+      {
+       "id": "c",
+       "label": "Réduire la taille de toutes les classes",
+       "label_expert": "Plafonnement des effectifs à 24 élèves en collège",
+       "plus": "Tous les élèves reçoivent plus d'attention.",
+       "minus": "Il faut des milliers de professeurs en plus.",
+       "budget": -0.6,
+       "axes": {
+        "eco": -1,
+        "soc": -1
+       },
+       "ind": {
+        "services": 2
+       },
+       "budget_note": "Recrutements massifs : le déficit augmente (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "ecole",
+         "x": 52,
+         "y": 30,
+         "anim": "grow",
+         "count": 2
+        },
+        {
+         "obj": "ecole",
+         "x": 64,
+         "y": 56,
+         "anim": "grow"
+        }
+       ]
+      },
+      {
+       "id": "d",
+       "label": "Remplacer les groupes par du soutien en ligne",
+       "label_expert": "Plateforme publique de soutien scolaire en ligne à la place de postes",
+       "plus": "Accessible à tous et peu coûteux.",
+       "minus": "Les élèves fragiles décrochent.",
+       "budget": 0.1,
+       "axes": {
+        "eco": 1
+       },
+       "ind": {
+        "services": -1
+       },
+       "budget_note": "Moins de recrutements prévus : le déficit baisse (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "antenne",
+         "x": 54,
+         "y": 31,
+         "anim": "appear"
+        },
+        {
+         "obj": "ecole",
+         "x": 52,
+         "y": 30,
+         "anim": "appear"
+        }
+       ]
+      },
+      {
+       "id": "e",
+       "label": "Orienter plus tôt vers des filières professionnelles",
+       "label_expert": "Orientation précoce vers des filières professionnelles dès la quatrième",
+       "plus": "Des élèves motivés par un métier.",
+       "minus": "Un choix d'avenir fait trop tôt.",
+       "budget": 0.05,
+       "axes": {
+        "soc": 1,
+        "eco": 1
+       },
+       "ind": {
+        "emploi": 1,
+        "cohesion": -1
+       },
+       "budget_note": "Formations en alternance cofinancées par les entreprises : le déficit baisse un peu (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "usine",
+         "x": 56,
+         "y": 32,
+         "anim": "appear"
+        },
+        {
+         "obj": "ecole",
+         "x": 52,
+         "y": 30,
+         "anim": "appear"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "v27_velib",
+     "kind": "banal",
+     "region": "ile_de_france",
+     "sector": "transports",
+     "title": "Les vélos en libre-service ne marchent plus",
+     "simple": "La ville a changé d'opérateur pour ses vélos en libre-service. Résultat : stations éteintes, vélos introuvables, abonnés furieux. Faut-il reprendre la main ?",
+     "expert": "Changement de titulaire d'un marché public de vélos partagés : retards de déploiement des stations, défaillances techniques, chute des abonnements, pénalités contractuelles et débat sur la régie publique.",
+     "context": "Ces vélos sont financés par les impôts locaux et les abonnements. Le service est confié à une entreprise après un appel d'offres. Changer d'opérateur peut faire baisser les prix, mais aussi casser le service.",
+     "real": {
+      "date": "Janvier à l'automne 2018",
+      "place": "Paris et communes voisines",
+      "fact": "Le nouvel opérateur du Vélib' n'a pas réussi à installer ses stations à temps : beaucoup sont restées hors service pendant des mois et de nombreux abonnés sont partis.",
+      "figures": "Plusieurs mois de service très dégradé ; des abonnés indemnisés ; un plan d'urgence exigé par les élus.",
+      "sources": [
+       {
+        "label": "Que Choisir : Vélib', la transition déraille",
+        "url": "https://www.quechoisir.org/actualite-velib-la-transition-deraille-n50088/"
+       },
+       {
+        "label": "Banque des Territoires : la mairie de Paris demande un plan d'urgence pour le Vélib'",
+        "url": "https://www.banquedesterritoires.fr/la-mairie-de-paris-demande-un-plan-durgence-pour-le-velib"
+       }
+      ]
+     },
+     "camera": {
+      "region": "ile_de_france",
+      "x": 52,
+      "y": 24,
+      "zoom": 2.6
+     },
+     "fx": [
+      {
+       "obj": "velo",
+       "x": 52,
+       "y": 24,
+       "anim": "close",
+       "count": 3
+      },
+      {
+       "obj": "foule",
+       "x": 54,
+       "y": 25,
+       "anim": "appear",
+       "delay": 0.4
+      },
+      {
+       "obj": "mairie",
+       "x": 50,
+       "y": 23,
+       "anim": "appear",
+       "delay": 0.7
+      },
+      {
+       "obj": "etiquette",
+       "x": 52,
+       "y": 20,
+       "anim": "appear",
+       "label": "Stations éteintes",
+       "delay": 1
+      }
+     ],
+     "choices": [
+      {
+       "id": "a",
+       "label": "Reprendre le service en régie publique",
+       "label_expert": "Passage en régie d'un syndicat mixte public",
+       "plus": "La ville maîtrise enfin son service.",
+       "minus": "Un coût et des risques pour la collectivité.",
+       "budget": -0.01,
+       "axes": {
+        "eco": -2
+       },
+       "ind": {
+        "services": 1
+       },
+       "budget_note": "Rachat et gestion publique : le déficit augmente un peu (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "velo",
+         "x": 52,
+         "y": 24,
+         "anim": "grow"
+        },
+        {
+         "obj": "mairie",
+         "x": 50,
+         "y": 23,
+         "anim": "pulse"
+        }
+       ]
+      },
+      {
+       "id": "b",
+       "label": "Infliger des pénalités et laisser l'opérateur réparer",
+       "label_expert": "Application des pénalités contractuelles et plan d'urgence imposé",
+       "plus": "L'entreprise paie pour ses retards.",
+       "minus": "Le service reste mauvais des mois.",
+       "budget": 0.01,
+       "axes": {
+        "eco": 1
+       },
+       "ind": {
+        "services": -1
+       },
+       "budget_note": "Pénalités encaissées : petite recette, le déficit baisse un peu (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "pieces",
+         "x": 52,
+         "y": 24,
+         "anim": "rise"
+        },
+        {
+         "obj": "velo",
+         "x": 53,
+         "y": 25,
+         "anim": "appear"
+        }
+       ]
+      },
+      {
+       "id": "c",
+       "label": "Ouvrir la ville aux vélos privés sans station",
+       "label_expert": "Autorisation des vélos et trottinettes en libre-service sans borne",
+       "plus": "Plus d'offre, sans argent public.",
+       "minus": "Des vélos garés partout sur les trottoirs.",
+       "budget": 0.01,
+       "axes": {
+        "eco": 2
+       },
+       "ind": {
+        "services": 1,
+        "cohesion": -1
+       },
+       "budget_note": "Redevance d'occupation payée par les opérateurs : petite recette, le déficit baisse un peu (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "velo",
+         "x": 52,
+         "y": 24,
+         "anim": "appear",
+         "count": 3
+        },
+        {
+         "obj": "pieces",
+         "x": 54,
+         "y": 25,
+         "anim": "rise"
+        }
+       ]
+      },
+      {
+       "id": "d",
+       "label": "Rembourser les abonnés aux frais de l'opérateur",
+       "label_expert": "Indemnisation des abonnés imputée sur la rémunération du prestataire",
+       "plus": "Les usagers sont enfin respectés.",
+       "minus": "L'opérateur investit encore moins.",
+       "budget": 0,
+       "axes": {
+        "eco": -1
+       },
+       "ind": {
+        "cohesion": 1
+       },
+       "fx": [
+        {
+         "obj": "pieces",
+         "x": 52,
+         "y": 24,
+         "anim": "rise"
+        },
+        {
+         "obj": "foule",
+         "x": 54,
+         "y": 25,
+         "anim": "appear"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "day": 14,
+   "season": "printemps",
+   "title": "Colère en Guyane, stress des lycéens",
+   "mood": "tendu",
+   "weather": "soleil",
+   "intro": "Un territoire bloqué, des lycéens inquiets et des villages sans eau.",
+   "offer": [
+    "niches_brunes",
+    "non_remplacement_fonctionnaires",
+    "rsa_jeunes",
+    "revalorisation_enseignants",
+    "controle_prestations",
+    "reseaux_sociaux_15"
+   ],
+   "events": [
+    {
+     "id": "v27_guyane",
+     "kind": "majeur",
+     "region": "outre_mer",
+     "sector": "securite",
+     "title": "La Guyane bloquée par un grand mouvement social",
+     "simple": "Barrages sur les routes, écoles et commerces fermés : la Guyane se soulève contre l'insécurité et le manque d'hôpitaux et d'écoles. Les collectifs demandent des milliards à l'État.",
+     "expert": "Mouvement social porté par des collectifs citoyens : blocage du territoire pendant plus d'un mois, revendications sur la sécurité, la santé, l'éducation et le foncier ; accord avec un plan d'urgence d'environ un milliard d'euros.",
+     "context": "La Guyane a une population jeune qui augmente vite. Le chômage, l'insécurité et l'orpaillage illégal y sont élevés. Les équipements publics y sont moins nombreux qu'en métropole.",
+     "real": {
+      "date": "Mars à avril 2017",
+      "place": "Guyane (Cayenne, Kourou, Saint-Laurent-du-Maroni)",
+      "fact": "Un mouvement social a bloqué la Guyane pendant plus d'un mois. Il s'est terminé par l'accord de Guyane, avec un plan d'urgence d'un peu plus d'un milliard d'euros et la prise en compte de demandes supplémentaires.",
+      "figures": "Plan d'urgence d'environ 1,08 Md€ ; 2,1 Md€ de mesures supplémentaires demandées par les collectifs.",
+      "sources": [
+       {
+        "label": "Maire-info : Guyane, fin du conflit après plus d'un mois de blocage",
+        "url": "https://maire-info.com/guyane-fin-du-conflit-apres-plus-dun-mois-de-blocage-article2-20683"
+       },
+       {
+        "label": "Banque des Territoires : ce que le gouvernement propose à la Guyane",
+        "url": "https://www.banquedesterritoires.fr/plan-durgence-accords-thematiques-plan-de-convergence-ce-que-le-gouvernement-propose-la-guyane"
+       }
+      ]
+     },
+     "camera": {
+      "region": "outre_mer",
+      "x": 7,
+      "y": 90,
+      "zoom": 2.6
+     },
+     "fx": [
+      {
+       "obj": "manifestants",
+       "x": 7,
+       "y": 90,
+       "anim": "appear"
+      },
+      {
+       "obj": "voiture",
+       "x": 5,
+       "y": 91,
+       "anim": "close",
+       "count": 2,
+       "delay": 0.3
+      },
+      {
+       "obj": "ecole",
+       "x": 9,
+       "y": 89,
+       "anim": "close",
+       "delay": 0.6
+      },
+      {
+       "obj": "etiquette",
+       "x": 7,
+       "y": 86,
+       "anim": "appear",
+       "label": "Territoire bloqué",
+       "delay": 1
+      }
+     ],
+     "choices": [
+      {
+       "id": "a",
+       "label": "Signer un grand plan d'urgence",
+       "label_expert": "Accord prévoyant un plan d'urgence d'environ un milliard d'euros",
+       "plus": "Hôpitaux, écoles et police renforcés.",
+       "minus": "Une facture lourde pour l'État.",
+       "budget": -0.3,
+       "axes": {
+        "eco": -1
+       },
+       "ind": {
+        "cohesion": 2,
+        "services": 1
+       },
+       "budget_note": "Investissements et postes en Guyane : le déficit augmente (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "hopital",
+         "x": 8,
+         "y": 89,
+         "anim": "grow"
+        },
+        {
+         "obj": "ecole",
+         "x": 9,
+         "y": 90,
+         "anim": "grow"
+        }
+       ]
+      },
+      {
+       "id": "b",
+       "label": "Envoyer des renforts de police et de gendarmerie",
+       "label_expert": "Renforts d'escadrons et lutte contre l'orpaillage illégal",
+       "plus": "L'insécurité recule rapidement.",
+       "minus": "Les autres demandes restent sans réponse.",
+       "budget": -0.05,
+       "axes": {
+        "soc": 2
+       },
+       "ind": {
+        "cohesion": -1
+       },
+       "budget_note": "Renforts des forces de l'ordre : le déficit augmente (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "voiture_police",
+         "x": 6,
+         "y": 90,
+         "anim": "appear",
+         "count": 2
+        },
+        {
+         "obj": "commissariat",
+         "x": 8,
+         "y": 91,
+         "anim": "appear"
+        }
+       ]
+      },
+      {
+       "id": "c",
+       "label": "Refuser de céder sous la pression des barrages",
+       "label_expert": "Exiger la levée des blocages avant toute négociation",
+       "plus": "Aucune promesse qu'on ne pourra pas tenir.",
+       "minus": "Le blocage dure, l'économie s'effondre.",
+       "budget": 0,
+       "axes": {
+        "soc": 1,
+        "eco": 1
+       },
+       "ind": {
+        "cohesion": -2,
+        "emploi": -1
+       },
+       "fx": [
+        {
+         "obj": "manifestants",
+         "x": 7,
+         "y": 90,
+         "anim": "shake"
+        },
+        {
+         "obj": "voiture",
+         "x": 5,
+         "y": 91,
+         "anim": "close"
+        }
+       ]
+      },
+      {
+       "id": "d",
+       "label": "Donner plus d'autonomie à la collectivité de Guyane",
+       "label_expert": "Évolution statutaire avec compétences et fiscalité propres",
+       "plus": "Des décisions prises sur place.",
+       "minus": "Moins de solidarité nationale à terme.",
+       "budget": 0.05,
+       "axes": {
+        "soc": -1,
+        "eco": 1
+       },
+       "ind": {
+        "cohesion": 1
+       },
+       "budget_note": "Transfert de compétences avec recettes locales : le déficit de l'État baisse un peu (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "mairie",
+         "x": 7,
+         "y": 90,
+         "anim": "appear"
+        },
+        {
+         "obj": "parlement",
+         "x": 9,
+         "y": 88,
+         "anim": "appear"
+        }
+       ]
+      },
+      {
+       "id": "e",
+       "label": "Conditionner l'aide à une meilleure gestion locale",
+       "label_expert": "Contrat de redressement des finances locales en échange des aides",
+       "plus": "L'argent public est mieux suivi.",
+       "minus": "Les élus locaux dénoncent une tutelle.",
+       "budget": 0.05,
+       "axes": {
+        "eco": 1,
+        "soc": 1
+       },
+       "ind": {
+        "cohesion": -1
+       },
+       "budget_note": "Aides réduites et mieux ciblées : le déficit baisse un peu (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "mairie",
+         "x": 7,
+         "y": 90,
+         "anim": "pulse"
+        },
+        {
+         "obj": "pieces",
+         "x": 8,
+         "y": 91,
+         "anim": "rise"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "v27_parcoursup",
+     "kind": "majeur",
+     "region": "national",
+     "sector": "ecole",
+     "title": "Une nouvelle plateforme trie les futurs étudiants",
+     "simple": "Pour entrer à l'université, les lycéens passent désormais par une plateforme où chaque formation classe les dossiers. Des milliers attendent tout l'été sans proposition. Faut-il sélectionner à l'entrée de la fac ?",
+     "expert": "Loi orientation et réussite des étudiants : fin du tirage au sort, examen des dossiers selon des attendus, procédure en continu, réponses « oui si » avec remise à niveau, tension sur les places en licence.",
+     "context": "Le nombre de bacheliers augmente plus vite que les places à l'université. Avant, certaines filières tiraient au sort. Beaucoup d'étudiants échouent en première année.",
+     "real": {
+      "date": "Printemps et été 2018",
+      "place": "Lycées et universités de toute la France",
+      "fact": "La plateforme Parcoursup a remplacé l'ancien système et son tirage au sort. Lors de la première session, des dizaines de milliers de candidats étaient encore sans proposition au début de l'été.",
+      "figures": "Environ 810 000 candidats inscrits lors de la première session.",
+      "sources": [
+       {
+        "label": "Ministère de l'Enseignement supérieur : la loi ORE en bref",
+        "url": "https://www.enseignementsup-recherche.gouv.fr/fr/la-loi-ore-en-bref-49643"
+       },
+       {
+        "label": "Assemblée nationale : question écrite sur Parcoursup",
+        "url": "https://questions.assemblee-nationale.fr/dyn/15/questions/QANR5L15QE11417.pdf"
+       }
+      ]
+     },
+     "camera": {
+      "region": "national",
+      "x": 52,
+      "y": 45,
+      "zoom": 1.1
+     },
+     "fx": [
+      {
+       "obj": "ecole",
+       "x": 52,
+       "y": 30,
+       "anim": "appear"
+      },
+      {
+       "obj": "antenne",
+       "x": 55,
+       "y": 32,
+       "anim": "pulse",
+       "delay": 0.3
+      },
+      {
+       "obj": "foule",
+       "x": 49,
+       "y": 31,
+       "anim": "appear",
+       "delay": 0.6
+      },
+      {
+       "obj": "etiquette",
+       "x": 52,
+       "y": 26,
+       "anim": "appear",
+       "label": "Dossiers en attente",
+       "delay": 1
+      }
+     ],
+     "choices": [
+      {
+       "id": "a",
+       "label": "Ouvrir beaucoup plus de places à l'université",
+       "label_expert": "Création massive de places en licence et recrutement d'enseignants-chercheurs",
+       "plus": "Chaque bachelier trouve une place.",
+       "minus": "Très coûteux, et réussite incertaine.",
+       "budget": -0.4,
+       "axes": {
+        "eco": -1,
+        "soc": -1
+       },
+       "ind": {
+        "services": 1,
+        "cohesion": 1
+       },
+       "budget_note": "Places et postes nouveaux : le déficit augmente (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "ecole",
+         "x": 52,
+         "y": 30,
+         "anim": "grow",
+         "count": 2
+        },
+        {
+         "obj": "foule",
+         "x": 49,
+         "y": 31,
+         "anim": "appear"
+        }
+       ]
+      },
+      {
+       "id": "b",
+       "label": "Assumer la sélection à l'entrée de la fac",
+       "label_expert": "Sélection sur dossier généralisée en licence",
+       "plus": "Moins d'échecs en première année.",
+       "minus": "Des jeunes restent sans études.",
+       "budget": 0.1,
+       "axes": {
+        "eco": 1,
+        "soc": 1
+       },
+       "ind": {
+        "cohesion": -1
+       },
+       "budget_note": "Moins d'étudiants en échec à financer : le déficit baisse (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "ecole",
+         "x": 52,
+         "y": 30,
+         "anim": "pulse"
+        },
+        {
+         "obj": "foule",
+         "x": 49,
+         "y": 31,
+         "anim": "fade"
+        }
+       ]
+      },
+      {
+       "id": "c",
+       "label": "Développer l'apprentissage après le bac",
+       "label_expert": "Aides à l'embauche d'apprentis dans l'enseignement supérieur",
+       "plus": "Des jeunes formés et payés en entreprise.",
+       "minus": "Une aide coûteuse pour chaque apprenti.",
+       "budget": -0.3,
+       "axes": {
+        "eco": 1
+       },
+       "ind": {
+        "emploi": 1
+       },
+       "budget_note": "Aides aux employeurs d'apprentis : le déficit augmente (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "usine",
+         "x": 56,
+         "y": 32,
+         "anim": "appear"
+        },
+        {
+         "obj": "ecole",
+         "x": 52,
+         "y": 30,
+         "anim": "appear"
+        }
+       ]
+      },
+      {
+       "id": "d",
+       "label": "Augmenter les frais d'inscription, avec plus de bourses",
+       "label_expert": "Hausse modulée des droits d'inscription et bourses sur critères sociaux",
+       "plus": "Plus de moyens pour les universités.",
+       "minus": "Les familles modestes hésitent à s'inscrire.",
+       "budget": 0.3,
+       "axes": {
+        "eco": 2
+       },
+       "ind": {
+        "pouvoir_achat": -1,
+        "services": 1
+       },
+       "budget_note": "Recettes des droits d'inscription : le déficit baisse (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "pieces",
+         "x": 52,
+         "y": 30,
+         "anim": "rise"
+        },
+        {
+         "obj": "ecole",
+         "x": 54,
+         "y": 31,
+         "anim": "appear"
+        }
+       ]
+      },
+      {
+       "id": "e",
+       "label": "Revenir au tirage au sort pour les filières pleines",
+       "label_expert": "Rétablissement du tirage au sort en filière sous tension",
+       "plus": "Le hasard plutôt qu'un tri des dossiers.",
+       "minus": "Les plus motivés peuvent être recalés.",
+       "budget": 0,
+       "axes": {
+        "soc": -1
+       },
+       "ind": {
+        "cohesion": -1
+       },
+       "fx": [
+        {
+         "obj": "ecole",
+         "x": 52,
+         "y": 30,
+         "anim": "pulse"
+        },
+        {
+         "obj": "foule",
+         "x": 49,
+         "y": 31,
+         "anim": "appear"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "v27_doubs_eau",
+     "kind": "banal",
+     "region": "bourgogne_franche_comte",
+     "sector": "agriculture",
+     "title": "Des villages ravitaillés en eau par camion",
+     "simple": "La sécheresse a vidé les sources du Haut-Doubs. Une rivière a même disparu par endroits. Des villages sont ravitaillés par camions-citernes et les arrosages sont interdits.",
+     "expert": "Sécheresse avec arrêtés de crise sur tout le département : restrictions des usages, ravitaillement de communes par citernes, sources karstiques taries, débat sur l'interconnexion des réseaux et la priorité entre usages.",
+     "context": "Dans le Jura et le Doubs, l'eau traverse vite les roches calcaires : les sources tarissent dès que l'été est sec. Beaucoup de petites communes ont un réseau isolé. Les relier coûte cher.",
+     "real": {
+      "date": "Juillet et août 2022",
+      "place": "Haut-Doubs et Jura",
+      "fact": "Tout le Doubs a été placé en situation de crise sécheresse ; dans le Haut-Doubs, une portion de rivière s'est asséchée et des communes ont dû être ravitaillées en eau.",
+      "figures": "Niveau de crise étendu à tout le département du Doubs ; dans le Jura, 136 communes reconnues en état de catastrophe naturelle pour la sécheresse.",
+      "sources": [
+       {
+        "label": "macommune.info : le niveau crise étendu à tout le Doubs",
+        "url": "https://www.macommune.info/secheresse-le-niveau-crise-etendu-a-tout-le-departement-du-doubs-a-partir-du-10-aout-22"
+       },
+       {
+        "label": "macommune.info : 136 communes du Jura en catastrophe naturelle",
+        "url": "https://www.macommune.info/secheresse-dans-le-jura-en-2022-136-communes-reconnues-comme-etat-de-catastrophe-naturelle"
+       }
+      ]
+     },
+     "camera": {
+      "region": "bourgogne_franche_comte",
+      "x": 78,
+      "y": 44,
+      "zoom": 2.4
+     },
+     "fx": [
+      {
+       "obj": "secheresse",
+       "x": 78,
+       "y": 44,
+       "anim": "appear"
+      },
+      {
+       "obj": "camion",
+       "x": 72,
+       "y": 42,
+       "anim": "move",
+       "to": {
+        "x": 78,
+        "y": 45
+       },
+       "delay": 0.3
+      },
+      {
+       "obj": "maison",
+       "x": 80,
+       "y": 45,
+       "anim": "appear",
+       "count": 2,
+       "delay": 0.6
+      },
+      {
+       "obj": "etiquette",
+       "x": 78,
+       "y": 40,
+       "anim": "appear",
+       "label": "Arrosage interdit",
+       "delay": 1
+      }
+     ],
+     "recall": [
+      {
+       "event": "v27_sainte_soline",
+       "choice": "a",
+       "text": "Il y a deux semaines, vous avez poursuivi les réserves d'eau agricoles : ici, sur la roche calcaire, elles ne retiendraient rien."
+      },
+      {
+       "event": "v27_sainte_soline",
+       "choice": "b",
+       "text": "Il y a deux semaines, vous avez suspendu les chantiers et lancé un débat public : ses conclusions sur le partage de l'eau sont attendues."
+      },
+      {
+       "event": "v27_sainte_soline",
+       "choice": "c",
+       "text": "Il y a deux semaines, vous avez aidé les fermes à changer de cultures : certaines consomment déjà moins d'eau.",
+       "ind": {
+        "cohesion": 1
+       }
+      },
+      {
+       "event": "v27_sainte_soline",
+       "choice": "d",
+       "text": "Il y a deux semaines, vous avez fait payer l'eau agricole plus cher : les éleveurs du Doubs s'inquiètent pour leurs bêtes."
+      },
+      {
+       "event": "v27_sainte_soline",
+       "choice": "e",
+       "text": "Il y a deux semaines, vous avez interdit la manifestation contre les réserves : la colère autour de l'eau reste vive."
+      }
+     ],
+     "choices": [
+      {
+       "id": "a",
+       "label": "Relier les villages aux réseaux des villes",
+       "label_expert": "Interconnexion subventionnée des réseaux d'eau potable",
+       "plus": "Plus aucun village sans eau.",
+       "minus": "Des travaux longs et coûteux.",
+       "budget": -0.05,
+       "axes": {
+        "env": -1
+       },
+       "ind": {
+        "services": 1
+       },
+       "budget_note": "Subvention aux travaux : le déficit augmente (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "chantier_grue",
+         "x": 77,
+         "y": 44,
+         "anim": "appear"
+        },
+        {
+         "obj": "camion",
+         "x": 72,
+         "y": 42,
+         "anim": "move",
+         "to": {
+          "x": 78,
+          "y": 45
+         }
+        }
+       ]
+      },
+      {
+       "id": "b",
+       "label": "Interdire tous les usages non essentiels",
+       "label_expert": "Arrêtés de restriction renforcés et contrôlés",
+       "plus": "L'eau potable est bien préservée.",
+       "minus": "Fermes et entreprises perdent gros.",
+       "budget": 0.01,
+       "axes": {
+        "soc": 1,
+        "env": -1
+       },
+       "ind": {
+        "emploi": -1
+       },
+       "budget_note": "Amendes pour non-respect : petite recette, le déficit baisse un peu (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "secheresse",
+         "x": 78,
+         "y": 44,
+         "anim": "pulse"
+        },
+        {
+         "obj": "voiture_police",
+         "x": 79,
+         "y": 45,
+         "anim": "appear"
+        }
+       ]
+      },
+      {
+       "id": "c",
+       "label": "Aider les éleveurs à acheter du fourrage",
+       "label_expert": "Aide d'urgence pour calamités agricoles et achat de fourrage",
+       "plus": "Les troupeaux sont nourris cet été.",
+       "minus": "Une aide sans solution durable.",
+       "budget": 0,
+       "once": -0.03,
+       "axes": {
+        "eco": -1
+       },
+       "ind": {
+        "emploi": 1
+       },
+       "budget_note": "Aide d'urgence : le déficit augmente une fois (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "troupeau",
+         "x": 79,
+         "y": 46,
+         "anim": "appear"
+        },
+        {
+         "obj": "camion",
+         "x": 72,
+         "y": 42,
+         "anim": "move",
+         "to": {
+          "x": 78,
+          "y": 45
+         }
+        }
+       ]
+      },
+      {
+       "id": "d",
+       "label": "Faire payer l'eau plus cher au-delà d'un seuil",
+       "label_expert": "Tarification saisonnière de l'eau en période de sécheresse",
+       "plus": "Chacun réduit sa consommation.",
+       "minus": "Les familles nombreuses paient plus.",
+       "budget": 0.02,
+       "axes": {
+        "eco": 1,
+        "env": -1
+       },
+       "ind": {
+        "pouvoir_achat": -1
+       },
+       "budget_note": "Recettes supplémentaires des services d'eau : le déficit baisse un peu (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "pieces",
+         "x": 78,
+         "y": 44,
+         "anim": "rise"
+        },
+        {
+         "obj": "maison",
+         "x": 80,
+         "y": 45,
+         "anim": "appear"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "day": 15,
+   "season": "ete",
+   "title": "Trains, immeubles et algues",
+   "mood": "tendu",
+   "weather": "soleil",
+   "intro": "Bruxelles tranche sur une grande fusion, une ville pleure ses morts, une plage devient dangereuse.",
+   "offer": [
+    "retraite_60",
+    "baisse_impots_production",
+    "defense_europeenne_emprunt",
+    "vols_courts_train",
+    "service_militaire"
+   ],
+   "events": [
+    {
+     "id": "v27_alstom",
+     "kind": "majeur",
+     "region": "bruxelles",
+     "sector": "europe",
+     "title": "Bruxelles interdit la fusion de deux géants du train",
+     "simple": "Un grand constructeur français de trains voulait s'unir à son concurrent allemand pour résister aux géants chinois. La Commission européenne dit non : la fusion ferait monter les prix en Europe.",
+     "expert": "Veto de la Commission à une concentration dans le matériel roulant et la signalisation ferroviaire, au titre du règlement sur les concentrations ; débat sur la doctrine de concurrence face aux champions industriels non européens.",
+     "context": "La Commission contrôle les grandes fusions pour protéger les clients européens. Certains pays veulent que ces règles tiennent plus compte de la concurrence chinoise. D'autres craignent des monopoles.",
+     "real": {
+      "date": "6 février 2019",
+      "place": "Bruxelles ; sites ferroviaires de France et d'Allemagne",
+      "fact": "La Commission européenne a interdit la fusion d'Alstom et de Siemens Mobility, estimant qu'elle réduirait trop la concurrence sur la signalisation et les trains à grande vitesse. Les gouvernements français et allemand ont critiqué la décision.",
+      "figures": "Le nouvel ensemble aurait réalisé environ 15 Md€ de chiffre d'affaires.",
+      "sources": [
+       {
+        "label": "Alstom : réaction à la décision d'interdiction de la Commission",
+        "url": "https://www.alstom.com/fr/press-releases-news/2019/2/alstom-regrette-la-decision-de-la-commission-europeenne-dinterdiction-de"
+       },
+       {
+        "label": "Le Temps : Bruxelles interdit la fusion Siemens-Alstom",
+        "url": "https://www.letemps.ch/economie/bruxelles-interdit-fusion-siemensalstom-voulue-paris-berlin"
+       }
+      ]
+     },
+     "camera": {
+      "region": "bruxelles",
+      "x": 63,
+      "y": 8,
+      "zoom": 1.2
+     },
+     "fx": [
+      {
+       "obj": "batiment_ue",
+       "x": 63,
+       "y": 3,
+       "anim": "appear"
+      },
+      {
+       "obj": "drapeau_ue",
+       "x": 66,
+       "y": 3,
+       "anim": "pulse",
+       "delay": 0.3
+      },
+      {
+       "obj": "tgv",
+       "x": 70,
+       "y": 28,
+       "anim": "move",
+       "to": {
+        "x": 80,
+        "y": 35
+       },
+       "delay": 0.6
+      },
+      {
+       "obj": "usine",
+       "x": 82,
+       "y": 37,
+       "anim": "appear",
+       "delay": 0.8
+      },
+      {
+       "obj": "etiquette",
+       "x": 63,
+       "y": 9,
+       "anim": "appear",
+       "label": "Fusion refusée",
+       "delay": 1.1
+      }
+     ],
+     "recall": [
+      {
+       "event": "v22_florange",
+       "choice": "a",
+       "text": "Il y a plusieurs semaines, vous avez nationalisé une usine le temps de la reprendre : l'État hésite à intervenir de nouveau dans l'industrie."
+      },
+      {
+       "event": "v22_florange",
+       "choice": "b",
+       "text": "Il y a plusieurs semaines, vous avez obtenu un accord sans licenciement : les syndicats du rail demandent la même garantie."
+      },
+      {
+       "event": "v22_florange",
+       "choice": "c",
+       "text": "Il y a plusieurs semaines, vous avez taxé l'acier importé selon son carbone : l'Europe débat déjà de protections industrielles."
+      },
+      {
+       "event": "v22_florange",
+       "choice": "d",
+       "text": "Il y a plusieurs semaines, vous avez laissé fermer l'usine en aidant la reconversion : la région craint un nouveau recul industriel.",
+       "ind": {
+        "cohesion": -1
+       }
+      },
+      {
+       "event": "v22_florange",
+       "choice": "e",
+       "text": "Il y a plusieurs semaines, vous avez exigé le remboursement des aides publiques : les industriels du train surveillent vos choix."
+      }
+     ],
+     "choices": [
+      {
+       "id": "a",
+       "label": "Accepter la décision et laisser chaque entreprise seule",
+       "label_expert": "Respect de la décision et maintien des deux groupes indépendants",
+       "plus": "La concurrence protège les acheteurs de trains.",
+       "minus": "Face aux géants chinois, nous restons petits.",
+       "budget": 0,
+       "axes": {
+        "eu": -1,
+        "eco": 1
+       },
+       "ind": {
+        "souverainete": -1
+       },
+       "fx": [
+        {
+         "obj": "batiment_ue",
+         "x": 63,
+         "y": 3,
+         "anim": "pulse"
+        },
+        {
+         "obj": "tgv",
+         "x": 70,
+         "y": 28,
+         "anim": "move",
+         "to": {
+          "x": 80,
+          "y": 35
+         }
+        }
+       ]
+      },
+      {
+       "id": "b",
+       "label": "Demander de changer les règles européennes de concurrence",
+       "label_expert": "Réforme du contrôle des concentrations tenant compte de la concurrence mondiale",
+       "plus": "Des champions européens deviennent possibles.",
+       "minus": "Risque de prix plus élevés pour les clients.",
+       "budget": 0,
+       "axes": {
+        "eu": -1
+       },
+       "ind": {
+        "souverainete": 1
+       },
+       "fx": [
+        {
+         "obj": "drapeau_ue",
+         "x": 66,
+         "y": 3,
+         "anim": "pulse"
+        },
+        {
+         "obj": "parlement",
+         "x": 60,
+         "y": 6,
+         "anim": "appear"
+        }
+       ]
+      },
+      {
+       "id": "c",
+       "label": "Faire entrer l'État au capital du groupe français",
+       "label_expert": "Prise de participation de l'État via l'Agence des participations",
+       "plus": "L'État protège un fleuron stratégique.",
+       "minus": "Des milliards immobilisés dans une entreprise.",
+       "budget": 0,
+       "once": -0.5,
+       "axes": {
+        "eco": -2,
+        "eu": 1
+       },
+       "ind": {
+        "souverainete": 2
+       },
+       "budget_note": "Achat d'actions par l'État : le déficit augmente une fois (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "pieces",
+         "x": 80,
+         "y": 35,
+         "anim": "rise"
+        },
+        {
+         "obj": "usine",
+         "x": 82,
+         "y": 37,
+         "anim": "pulse"
+        }
+       ]
+      },
+      {
+       "id": "d",
+       "label": "Réserver les commandes publiques aux trains faits en Europe",
+       "label_expert": "Clause de préférence européenne dans les marchés publics ferroviaires",
+       "plus": "Les usines européennes ont des commandes.",
+       "minus": "Des trains plus chers pour les régions.",
+       "budget": -0.05,
+       "axes": {
+        "eu": -1
+       },
+       "ind": {
+        "emploi": 1,
+        "souverainete": 1
+       },
+       "budget_note": "Achats publics un peu plus chers : le déficit augmente (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "tgv",
+         "x": 76,
+         "y": 32,
+         "anim": "appear"
+        },
+        {
+         "obj": "usine",
+         "x": 82,
+         "y": 37,
+         "anim": "appear"
+        }
+       ]
+      },
+      {
+       "id": "e",
+       "label": "Vendre des parts de l'État pour financer l'innovation",
+       "label_expert": "Cession de participations publiques pour financer l'innovation ferroviaire",
+       "plus": "Une recette pour financer la recherche.",
+       "minus": "L'État perd du poids dans ces entreprises.",
+       "budget": 0,
+       "once": 0.3,
+       "axes": {
+        "eco": 2
+       },
+       "ind": {
+        "souverainete": -1
+       },
+       "budget_note": "Produit des ventes d'actions : recette, le déficit baisse une fois (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "pieces",
+         "x": 63,
+         "y": 6,
+         "anim": "rise"
+        },
+        {
+         "obj": "usine",
+         "x": 82,
+         "y": 37,
+         "anim": "appear"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "v27_rue_aubagne",
+     "kind": "majeur",
+     "region": "paca",
+     "sector": "logement",
+     "title": "Deux immeubles s'effondrent au cœur de la ville",
+     "simple": "Deux vieux immeubles insalubres s'écroulent dans un quartier populaire de Marseille. Huit habitants meurent. Des milliers de personnes sont ensuite évacuées d'immeubles jugés dangereux.",
+     "expert": "Effondrement d'immeubles relevant de l'habitat indigne : défaillance des procédures de péril, copropriétés dégradées, marchands de sommeil, évacuations massives et procès pour homicides involontaires.",
+     "context": "En France, des centaines de milliers de logements sont jugés indignes. Les mairies peuvent ordonner des travaux ou interdire l'accès. Certains propriétaires louent cher des logements dangereux.",
+     "real": {
+      "date": "5 novembre 2018",
+      "place": "Rue d'Aubagne, quartier de Noailles, Marseille",
+      "fact": "Deux immeubles se sont effondrés rue d'Aubagne, faisant huit morts. Dans les mois suivants, des milliers d'habitants ont été évacués d'immeubles menacés.",
+      "figures": "8 morts ; plus de 3 000 personnes évacuées dans les mois suivants.",
+      "sources": [
+       {
+        "label": "Wikipédia (en) : effondrement d'immeubles à Marseille",
+        "url": "https://en.wikipedia.org/wiki/2018_Marseille_building_collapse"
+       },
+       {
+        "label": "Maire-info : le procès du logement indigne s'ouvre à Marseille",
+        "url": "https://www.maire-info.com/logement/effondrements-de-la-rue-daubagne-le-proces-du-logement-indigne-souvre-%EF%BF%BD-marseille-article-29093"
+       }
+      ]
+     },
+     "camera": {
+      "region": "paca",
+      "x": 72,
+      "y": 81,
+      "zoom": 2.4
+     },
+     "fx": [
+      {
+       "obj": "immeuble",
+       "x": 72,
+       "y": 81,
+       "anim": "shake",
+       "count": 2
+      },
+      {
+       "obj": "ambulance",
+       "x": 74,
+       "y": 82,
+       "anim": "appear",
+       "delay": 0.4
+      },
+      {
+       "obj": "foule",
+       "x": 70,
+       "y": 80,
+       "anim": "appear",
+       "delay": 0.7
+      },
+      {
+       "obj": "etiquette",
+       "x": 72,
+       "y": 77,
+       "anim": "appear",
+       "label": "Immeubles évacués",
+       "delay": 1
+      }
+     ],
+     "choices": [
+      {
+       "id": "a",
+       "label": "Lancer un grand plan de rénovation des quartiers anciens",
+       "label_expert": "Opération de requalification financée par l'État et la ville",
+       "plus": "Des logements sûrs pour des milliers de familles.",
+       "minus": "Des centaines de millions sur des années.",
+       "budget": -0.2,
+       "axes": {
+        "eco": -1
+       },
+       "ind": {
+        "cohesion": 1,
+        "services": 1
+       },
+       "budget_note": "Subventions de rénovation : le déficit augmente (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "chantier_grue",
+         "x": 72,
+         "y": 81,
+         "anim": "grow"
+        },
+        {
+         "obj": "immeuble",
+         "x": 73,
+         "y": 82,
+         "anim": "grow"
+        }
+       ]
+      },
+      {
+       "id": "b",
+       "label": "Sanctionner durement les marchands de sommeil",
+       "label_expert": "Confiscation des biens et interdiction d'acheter pour les marchands de sommeil",
+       "plus": "Les propriétaires voyous sont arrêtés.",
+       "minus": "Des contrôles lourds, peu de résultats rapides.",
+       "budget": 0.02,
+       "axes": {
+        "soc": 2
+       },
+       "ind": {
+        "cohesion": 1
+       },
+       "budget_note": "Biens confisqués et amendes : recette, le déficit baisse un peu (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "commissariat",
+         "x": 71,
+         "y": 80,
+         "anim": "appear"
+        },
+        {
+         "obj": "voiture_police",
+         "x": 73,
+         "y": 81,
+         "anim": "appear"
+        }
+       ]
+      },
+      {
+       "id": "c",
+       "label": "Obliger un diagnostic de solidité avant chaque location",
+       "label_expert": "Permis de louer et diagnostic structurel obligatoire",
+       "plus": "Les logements dangereux sont repérés.",
+       "minus": "Les loyers montent, les bailleurs protestent.",
+       "budget": 0,
+       "axes": {
+        "soc": 1,
+        "eco": -1
+       },
+       "ind": {
+        "pouvoir_achat": -1,
+        "services": 1
+       },
+       "fx": [
+        {
+         "obj": "immeuble",
+         "x": 72,
+         "y": 81,
+         "anim": "pulse"
+        },
+        {
+         "obj": "maison",
+         "x": 70,
+         "y": 80,
+         "anim": "appear"
+        }
+       ]
+      },
+      {
+       "id": "d",
+       "label": "Reloger les familles évacuées à l'hôtel aux frais de l'État",
+       "label_expert": "Hébergement d'urgence financé par l'État pour les évacués",
+       "plus": "Personne ne reste à la rue.",
+       "minus": "Coûteux et sans solution durable.",
+       "budget": 0,
+       "once": -0.05,
+       "axes": {
+        "eco": -1
+       },
+       "ind": {
+        "cohesion": 1
+       },
+       "budget_note": "Nuits d'hôtel payées par l'État : le déficit augmente une fois (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "immeuble",
+         "x": 70,
+         "y": 79,
+         "anim": "appear"
+        },
+        {
+         "obj": "bus",
+         "x": 72,
+         "y": 81,
+         "anim": "move",
+         "to": {
+          "x": 69,
+          "y": 79
+         }
+        }
+       ]
+      },
+      {
+       "id": "e",
+       "label": "Taxer davantage les logements vides et dégradés",
+       "label_expert": "Majoration de la taxe sur les logements vacants et insalubres",
+       "plus": "Les propriétaires sont poussés à rénover.",
+       "minus": "De petits propriétaires sont pénalisés.",
+       "budget": 0.03,
+       "axes": {
+        "eco": -1
+       },
+       "ind": {
+        "services": 1
+       },
+       "budget_note": "Recette de la taxe majorée : le déficit baisse un peu (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "pieces",
+         "x": 72,
+         "y": 81,
+         "anim": "rise"
+        },
+        {
+         "obj": "immeuble",
+         "x": 72,
+         "y": 81,
+         "anim": "pulse"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "v27_algues_vertes",
+     "kind": "banal",
+     "region": "bretagne",
+     "sector": "agriculture",
+     "title": "Des algues vertes toxiques envahissent une plage",
+     "simple": "Sur une plage bretonne, des algues vertes en décomposition dégagent un gaz toxique. Un cheval meurt, son cavalier est sauvé de justesse. Ces algues se nourrissent des nitrates venus des élevages.",
+     "expert": "Marées vertes liées aux excédents de nitrates d'origine agricole dans les bassins versants : dégagement d'hydrogène sulfuré, condamnations de l'État par la justice administrative, plans de lutte successifs.",
+     "context": "La Bretagne concentre beaucoup d'élevages de porcs et de volailles. L'azote des lisiers ruisselle vers la mer et nourrit les algues. Réduire les élevages menace des milliers d'emplois.",
+     "real": {
+      "date": "Juillet 2009",
+      "place": "Saint-Michel-en-Grève, Côtes-d'Armor",
+      "fact": "Un cheval est mort après s'être enlisé dans des algues vertes en décomposition ; son cavalier a perdu connaissance. L'État a ensuite lancé un premier plan de lutte contre les algues vertes.",
+      "figures": "Plusieurs plans de lutte successifs ; l'État a été condamné à plusieurs reprises par la justice administrative.",
+      "sources": [
+       {
+        "label": "Futura : les algues vertes, un problème écologique inquiétant",
+        "url": "https://www.futura-sciences.com/planete/actualites/developpement-durable-algues-vertes-point-probleme-ecologique-inquietant-31236/"
+       },
+       {
+        "label": "Maire-info : algues vertes, l'État condamné une nouvelle fois",
+        "url": "https://maire-info.com/environnement/algues-vertes-letat-condamne-une-nouvelle-fois-art26-17476"
+       }
+      ]
+     },
+     "camera": {
+      "region": "bretagne",
+      "x": 13,
+      "y": 28,
+      "zoom": 2.4
+     },
+     "fx": [
+      {
+       "obj": "troupeau",
+       "x": 15,
+       "y": 29,
+       "anim": "appear"
+      },
+      {
+       "obj": "ferme",
+       "x": 16,
+       "y": 30,
+       "anim": "appear",
+       "delay": 0.3
+      },
+      {
+       "obj": "tracteur",
+       "x": 15,
+       "y": 28,
+       "anim": "move",
+       "to": {
+        "x": 12,
+        "y": 27
+       },
+       "delay": 0.6
+      },
+      {
+       "obj": "etiquette",
+       "x": 12,
+       "y": 25,
+       "anim": "appear",
+       "label": "Gaz toxique",
+       "delay": 1
+      }
+     ],
+     "choices": [
+      {
+       "id": "a",
+       "label": "Ramasser les algues chaque jour",
+       "label_expert": "Ramassage et traitement quotidien des algues échouées",
+       "plus": "Les plages restent ouvertes l'été.",
+       "minus": "Coûteux, et le problème revient chaque année.",
+       "budget": -0.01,
+       "axes": {
+        "env": 1
+       },
+       "ind": {
+        "cohesion": 1
+       },
+       "budget_note": "Ramassage payé par les collectivités et l'État : le déficit augmente un peu (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "tracteur",
+         "x": 15,
+         "y": 28,
+         "anim": "move",
+         "to": {
+          "x": 12,
+          "y": 27
+         },
+         "count": 2
+        },
+        {
+         "obj": "camion",
+         "x": 16,
+         "y": 29,
+         "anim": "move",
+         "to": {
+          "x": 18,
+          "y": 30
+         }
+        }
+       ]
+      },
+      {
+       "id": "b",
+       "label": "Réduire les élevages dans les zones touchées",
+       "label_expert": "Plafonnement des cheptels et rachat de droits dans les bassins versants",
+       "plus": "Moins de nitrates, moins d'algues.",
+       "minus": "Des éleveurs perdent leur activité.",
+       "budget": -0.03,
+       "axes": {
+        "env": -2
+       },
+       "ind": {
+        "emploi": -1
+       },
+       "budget_note": "Rachat des exploitations : le déficit augmente (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "troupeau",
+         "x": 15,
+         "y": 29,
+         "anim": "fade"
+        },
+        {
+         "obj": "ferme",
+         "x": 16,
+         "y": 30,
+         "anim": "close"
+        }
+       ]
+      },
+      {
+       "id": "c",
+       "label": "Taxer les engrais azotés",
+       "label_expert": "Redevance sur les excédents d'azote d'origine agricole",
+       "plus": "Les agriculteurs en utilisent moins.",
+       "minus": "Coûts de production en hausse.",
+       "budget": 0.05,
+       "axes": {
+        "env": -1,
+        "eco": -1
+       },
+       "ind": {
+        "emploi": -1
+       },
+       "budget_note": "Recette de la redevance : le déficit baisse (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "pieces",
+         "x": 15,
+         "y": 29,
+         "anim": "rise"
+        },
+        {
+         "obj": "champ",
+         "x": 17,
+         "y": 30,
+         "anim": "appear"
+        }
+       ]
+      },
+      {
+       "id": "d",
+       "label": "Payer les agriculteurs qui changent de pratiques",
+       "label_expert": "Paiements pour services environnementaux et conversion à l'herbe",
+       "plus": "Une transition acceptée.",
+       "minus": "Une aide durable à financer.",
+       "budget": -0.02,
+       "axes": {
+        "env": -1
+       },
+       "ind": {
+        "cohesion": 1
+       },
+       "budget_note": "Paiements aux agriculteurs : le déficit augmente (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "champ",
+         "x": 17,
+         "y": 30,
+         "anim": "grow"
+        },
+        {
+         "obj": "troupeau",
+         "x": 15,
+         "y": 29,
+         "anim": "appear"
+        }
+       ]
+      },
+      {
+       "id": "e",
+       "label": "Faire financer le ramassage par les élevages intensifs",
+       "label_expert": "Contribution des élevages intensifs au financement du ramassage",
+       "plus": "Les pollueurs financent le nettoyage.",
+       "minus": "Les éleveurs, déjà fragiles, paient plus.",
+       "budget": 0.01,
+       "axes": {
+        "env": -1,
+        "eco": -1
+       },
+       "ind": {
+        "emploi": -1
+       },
+       "budget_note": "Contribution des élevages : petite recette, le déficit baisse un peu (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "pieces",
+         "x": 15,
+         "y": 29,
+         "anim": "rise"
+        },
+        {
+         "obj": "troupeau",
+         "x": 15,
+         "y": 29,
+         "anim": "appear"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "day": 16,
+   "season": "ete",
+   "title": "Fournaise et moustiques",
+   "mood": "tendu",
+   "weather": "canicule",
+   "intro": "Un record de chaleur, une épidémie outre-mer, des piscines fermées : l'été commence fort.",
+   "offer": [
+    "sortie_nucleaire",
+    "relance_nucleaire",
+    "sortie_marche_electricite",
+    "assurance_chomage",
+    "taxe_hauts_patrimoines",
+    "peines_planchers"
+   ],
+   "events": [
+    {
+     "id": "v27_canicule_2019",
+     "kind": "majeur",
+     "region": "occitanie",
+     "sector": "ecole",
+     "title": "Record absolu de chaleur, le brevet est reporté",
+     "simple": "Le thermomètre atteint 46 °C dans un village de l'Hérault, du jamais vu en France. Les écoles étouffent, le brevet des collèges est repoussé. Comment adapter le pays ?",
+     "expert": "Épisode caniculaire précoce avec record national de température : première vigilance rouge canicule, report des épreuves du diplôme national du brevet, fermetures d'écoles et adaptation du bâti scolaire.",
+     "context": "Les vagues de chaleur sont plus fréquentes et plus précoces. Beaucoup d'écoles ont été construites sans protection contre la chaleur. Adapter les bâtiments coûte des milliards aux communes.",
+     "real": {
+      "date": "28 juin 2019",
+      "place": "Vérargues, Hérault ; toute la France",
+      "fact": "Météo-France a mesuré 46 °C à Vérargues, record absolu en France. La vigilance rouge canicule a été déclenchée pour la première fois et les épreuves du brevet ont été reportées.",
+      "figures": "46,0 °C à Vérargues ; quatre départements en vigilance rouge.",
+      "sources": [
+       {
+        "label": "Futura : le record absolu de température en France porté à 46 °C",
+        "url": "https://www.futura-sciences.com/planete/breves/meteorologie-record-absolu-temperature-france-eleve-finalement-46-c-919/"
+       },
+       {
+        "label": "Euronews : Météo-France révise le record de juin à 46 °C",
+        "url": "https://www.euronews.com/2019/07/19/meteo-france-revises-june-record-temperature-to-46-degrees-celsius"
+       }
+      ]
+     },
+     "camera": {
+      "region": "occitanie",
+      "x": 62,
+      "y": 78,
+      "zoom": 2.2
+     },
+     "fx": [
+      {
+       "obj": "canicule",
+       "x": 62,
+       "y": 76,
+       "anim": "pulse"
+      },
+      {
+       "obj": "ecole",
+       "x": 63,
+       "y": 79,
+       "anim": "close",
+       "delay": 0.3
+      },
+      {
+       "obj": "secheresse",
+       "x": 60,
+       "y": 79,
+       "anim": "appear",
+       "delay": 0.6
+      },
+      {
+       "obj": "etiquette",
+       "x": 62,
+       "y": 73,
+       "anim": "appear",
+       "label": "46 °C",
+       "delay": 1
+      }
+     ],
+     "recall": [
+      {
+       "event": "v22_canicule_2003",
+       "choice": "a",
+       "text": "Lors de la première canicule, vous avez créé un registre des personnes fragiles : les mairies appellent les aînés isolés.",
+       "ind": {
+        "cohesion": 1
+       }
+      },
+      {
+       "event": "v22_canicule_2003",
+       "choice": "b",
+       "text": "Lors de la première canicule, vous avez fait travailler un jour férié pour les aînés : cette recette finance une partie de l'aide."
+      },
+      {
+       "event": "v22_canicule_2003",
+       "choice": "c",
+       "text": "Lors de la première canicule, vous avez climatisé hôpitaux et maisons de retraite : les aînés sont protégés, les écoles non."
+      },
+      {
+       "event": "v22_canicule_2003",
+       "choice": "d",
+       "text": "Lors de la première canicule, vous avez recruté des soignants en maison de retraite : les établissements tiennent mieux le choc.",
+       "ind": {
+        "services": 1
+       }
+      },
+      {
+       "event": "v22_canicule_2003",
+       "choice": "e",
+       "text": "Lors de la première canicule, vous avez planté des arbres dans les villes et les cours d'école : certaines cours sont déjà plus fraîches."
+      }
+     ],
+     "choices": [
+      {
+       "id": "a",
+       "label": "Rénover et végétaliser toutes les écoles",
+       "label_expert": "Plan national d'adaptation thermique du bâti scolaire",
+       "plus": "Des classes fraîches dans tout le pays.",
+       "minus": "Des milliards sur une décennie.",
+       "budget": -0.5,
+       "axes": {
+        "env": -1
+       },
+       "ind": {
+        "services": 1
+       },
+       "budget_note": "Subventions aux communes : le déficit augmente (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "ecole",
+         "x": 63,
+         "y": 79,
+         "anim": "grow"
+        },
+        {
+         "obj": "foret",
+         "x": 61,
+         "y": 78,
+         "anim": "grow"
+        }
+       ]
+      },
+      {
+       "id": "b",
+       "label": "Adapter le calendrier scolaire aux fortes chaleurs",
+       "label_expert": "Calendrier scolaire modulable et examens avancés avant les chaleurs",
+       "plus": "Aucun coût, des élèves protégés.",
+       "minus": "Les familles doivent réorganiser l'été.",
+       "budget": 0,
+       "axes": {
+        "soc": 1
+       },
+       "ind": {
+        "cohesion": -1
+       },
+       "fx": [
+        {
+         "obj": "ecole",
+         "x": 63,
+         "y": 79,
+         "anim": "close"
+        },
+        {
+         "obj": "etiquette",
+         "x": 62,
+         "y": 73,
+         "anim": "appear",
+         "label": "Examens avancés"
+        }
+       ]
+      },
+      {
+       "id": "c",
+       "label": "Installer la climatisation dans les écoles",
+       "label_expert": "Équipement des salles de classe en climatisation",
+       "plus": "Effet immédiat dans les classes.",
+       "minus": "Consomme de l'électricité, réchauffe la rue.",
+       "budget": -0.2,
+       "axes": {
+        "env": 1
+       },
+       "ind": {
+        "services": 1
+       },
+       "budget_note": "Achat et électricité : le déficit augmente (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "ecole",
+         "x": 63,
+         "y": 79,
+         "anim": "appear"
+        },
+        {
+         "obj": "pylone",
+         "x": 65,
+         "y": 78,
+         "anim": "appear"
+        }
+       ]
+      },
+      {
+       "id": "d",
+       "label": "Financer l'adaptation par une taxe sur les climatiseurs",
+       "label_expert": "Écocontribution sur la vente de climatiseurs",
+       "plus": "Une recette pour adapter les bâtiments.",
+       "minus": "Les climatiseurs coûtent plus cher.",
+       "budget": 0.05,
+       "axes": {
+        "env": -1,
+        "eco": -1
+       },
+       "ind": {
+        "pouvoir_achat": -1
+       },
+       "budget_note": "Recette de l'écocontribution : le déficit baisse (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "pieces",
+         "x": 62,
+         "y": 78,
+         "anim": "rise"
+        },
+        {
+         "obj": "ecole",
+         "x": 63,
+         "y": 79,
+         "anim": "appear"
+        }
+       ]
+      },
+      {
+       "id": "e",
+       "label": "Reporter les travaux dans les écoles pour tenir le budget",
+       "label_expert": "Gel temporaire des dotations d'investissement scolaire",
+       "plus": "Des économies immédiates pour l'État.",
+       "minus": "Les écoles restent des fournaises.",
+       "budget": 0.2,
+       "axes": {
+        "eco": 1
+       },
+       "ind": {
+        "services": -1
+       },
+       "budget_note": "Dotations gelées : le déficit baisse (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "ecole",
+         "x": 63,
+         "y": 79,
+         "anim": "pulse"
+        },
+        {
+         "obj": "pieces",
+         "x": 62,
+         "y": 78,
+         "anim": "rise"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "v27_chikungunya",
+     "kind": "majeur",
+     "region": "outre_mer",
+     "sector": "sante",
+     "title": "Une épidémie transmise par les moustiques touche un habitant sur trois",
+     "simple": "Sur l'île de La Réunion, un virus transmis par le moustique tigre rend malade un tiers de la population. Fièvres, douleurs aux articulations : les hôpitaux débordent.",
+     "expert": "Épidémie de chikungunya transmise par Aedes albopictus : démoustication massive par insecticides, appui de l'armée, débat sur l'usage des pesticides, recherche vaccinale et effets sur le tourisme.",
+     "context": "Le moustique tigre s'installe aussi en métropole. Supprimer les eaux stagnantes est la méthode la plus efficace. Les insecticides tuent aussi d'autres insectes.",
+     "real": {
+      "date": "2005 à 2006",
+      "place": "La Réunion et Mayotte",
+      "fact": "Une épidémie de chikungunya a touché environ un tiers des habitants de La Réunion. L'État a mobilisé l'armée pour la démoustication et lancé des recherches sur la maladie.",
+      "figures": "Environ 266 000 personnes infectées sur quelque 770 000 habitants ; plus de 200 décès où le virus était mentionné.",
+      "sources": [
+       {
+        "label": "Santé publique France : l'épidémie de chikungunya à La Réunion et à Mayotte",
+        "url": "https://www.santepubliquefrance.fr/regions-et-territoires/ocean-indien/article/lepidemie-de-chikungunya-a-la-reunion-et-a-mayotte-france-2005-2006-le-contexte-et-les-questions-de"
+       },
+       {
+        "label": "Académie de médecine : le cas de l'épidémie de chikungunya dans l'océan Indien",
+        "url": "https://www.academie-medecine.fr/maladies-infectieuses-emergentes-le-cas-de-lepidemie-de-chikungunya-dans-locean-indien-2005-2006/"
+       }
+      ]
+     },
+     "camera": {
+      "region": "outre_mer",
+      "x": 7,
+      "y": 90,
+      "zoom": 2.6
+     },
+     "fx": [
+      {
+       "obj": "moustique",
+       "x": 7,
+       "y": 90,
+       "anim": "pulse"
+      },
+      {
+       "obj": "hopital",
+       "x": 8,
+       "y": 89,
+       "anim": "pulse",
+       "delay": 0.3
+      },
+      {
+       "obj": "foule",
+       "x": 6,
+       "y": 91,
+       "anim": "appear",
+       "delay": 0.6
+      },
+      {
+       "obj": "etiquette",
+       "x": 7,
+       "y": 86,
+       "anim": "appear",
+       "label": "Un habitant sur trois",
+       "delay": 1
+      }
+     ],
+     "choices": [
+      {
+       "id": "a",
+       "label": "Démoustiquer massivement avec l'armée",
+       "label_expert": "Lutte antivectorielle par épandage d'insecticides avec appui militaire",
+       "plus": "Les moustiques reculent vite.",
+       "minus": "Les insecticides nuisent à la nature.",
+       "budget": 0,
+       "once": -0.05,
+       "axes": {
+        "soc": 1,
+        "env": 1
+       },
+       "ind": {
+        "services": 1
+       },
+       "budget_note": "Opérations militaires et produits : le déficit augmente une fois (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "camion",
+         "x": 5,
+         "y": 92,
+         "anim": "move",
+         "to": {
+          "x": 7,
+          "y": 90
+         }
+        },
+        {
+         "obj": "moustique",
+         "x": 7,
+         "y": 90,
+         "anim": "fade"
+        }
+       ]
+      },
+      {
+       "id": "b",
+       "label": "Mobiliser les habitants pour vider les eaux stagnantes",
+       "label_expert": "Campagne de suppression des gîtes larvaires avec les habitants",
+       "plus": "Une méthode durable et peu chère.",
+       "minus": "Lente, elle dépend de chacun.",
+       "budget": 0,
+       "axes": {
+        "env": -1
+       },
+       "ind": {
+        "cohesion": 1
+       },
+       "fx": [
+        {
+         "obj": "foule",
+         "x": 6,
+         "y": 91,
+         "anim": "appear"
+        },
+        {
+         "obj": "maison",
+         "x": 8,
+         "y": 91,
+         "anim": "appear"
+        }
+       ]
+      },
+      {
+       "id": "c",
+       "label": "Financer la recherche d'un vaccin",
+       "label_expert": "Programme de recherche vaccinale avec les instituts publics",
+       "plus": "Une protection durable à l'avenir.",
+       "minus": "Rien avant plusieurs années.",
+       "budget": -0.05,
+       "axes": {
+        "eco": -1
+       },
+       "ind": {
+        "services": 1
+       },
+       "budget_note": "Crédits de recherche : le déficit augmente (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "hopital",
+         "x": 8,
+         "y": 89,
+         "anim": "appear"
+        },
+        {
+         "obj": "cabinet_medical",
+         "x": 6,
+         "y": 90,
+         "anim": "appear"
+        }
+       ]
+      },
+      {
+       "id": "d",
+       "label": "Taxer les séjours touristiques pour financer la lutte",
+       "label_expert": "Taxe de séjour additionnelle affectée à la lutte antivectorielle",
+       "plus": "Les visiteurs participent à l'effort.",
+       "minus": "Le tourisme, déjà touché, recule encore.",
+       "budget": 0.01,
+       "axes": {
+        "eco": -1
+       },
+       "ind": {
+        "emploi": -1
+       },
+       "budget_note": "Recette de la taxe de séjour : le déficit baisse un peu (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "pieces",
+         "x": 7,
+         "y": 90,
+         "anim": "rise"
+        },
+        {
+         "obj": "avion",
+         "x": 4,
+         "y": 88,
+         "anim": "appear"
+        }
+       ]
+      },
+      {
+       "id": "e",
+       "label": "Reporter les soins non urgents pour soulager l'hôpital",
+       "label_expert": "Déprogrammation des soins non urgents et redéploiement hospitalier",
+       "plus": "Pas de coût en plus, les urgences tiennent.",
+       "minus": "Les autres malades attendent leurs soins.",
+       "budget": 0.02,
+       "axes": {
+        "eco": 1
+       },
+       "ind": {
+        "services": -1
+       },
+       "budget_note": "Moins d'activité programmée remboursée : le déficit baisse un peu (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "hopital",
+         "x": 8,
+         "y": 89,
+         "anim": "pulse"
+        },
+        {
+         "obj": "ambulance",
+         "x": 6,
+         "y": 90,
+         "anim": "appear"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "v27_piscines",
+     "kind": "banal",
+     "region": "auvergne_rhone_alpes",
+     "sector": "salaires",
+     "title": "Les piscines ferment, faute de maîtres-nageurs",
+     "simple": "En pleine chaleur, une grande ville ferme des piscines : il manque des maîtres-nageurs. Des enfants n'apprennent plus à nager et des familles se rabattent sur les rivières.",
+     "expert": "Pénurie de maîtres-nageurs sauveteurs : coût et durée de la formation au diplôme d'État, rémunérations peu attractives dans la fonction publique territoriale, fermetures de bassins et risque accru de noyades.",
+     "context": "Les noyades augmentent lors des étés chauds. La formation de maître-nageur coûte plusieurs milliers d'euros. Les communes paient les piscines et leurs salariés.",
+     "real": {
+      "date": "Été 2022",
+      "place": "Lyon et de nombreuses communes",
+      "fact": "En pleine canicule, la ville de Lyon a dû fermer des piscines faute de maîtres-nageurs, une pénurie signalée dans toute la France.",
+      "figures": "Une pénurie estimée à plusieurs milliers de maîtres-nageurs au niveau national.",
+      "sources": [
+       {
+        "label": "LyonMag : la Ville de Lyon doit fermer deux piscines",
+        "url": "https://www.lyonmag.com/article/145937/en-pleine-canicule-la-ville-de-lyon-doit-fermer-deux-piscines-a-cause-d-une-penurie-de-maitres-nageurs"
+       },
+       {
+        "label": "Maire-info : pénurie de maîtres-nageurs, une problématique chronique",
+        "url": "https://www.maire-info.com/sports/penurie-maitres-nageurs-sauveteurs-une-problematique-chronique-pour-les-collectivites-article-26451"
+       }
+      ]
+     },
+     "camera": {
+      "region": "auvergne_rhone_alpes",
+      "x": 66,
+      "y": 55,
+      "zoom": 2.4
+     },
+     "fx": [
+      {
+       "obj": "canicule",
+       "x": 66,
+       "y": 53,
+       "anim": "appear"
+      },
+      {
+       "obj": "foule",
+       "x": 67,
+       "y": 56,
+       "anim": "appear",
+       "delay": 0.3
+      },
+      {
+       "obj": "immeuble",
+       "x": 65,
+       "y": 55,
+       "anim": "close",
+       "delay": 0.6
+      },
+      {
+       "obj": "etiquette",
+       "x": 66,
+       "y": 51,
+       "anim": "appear",
+       "label": "Piscines fermées",
+       "delay": 1
+      }
+     ],
+     "choices": [
+      {
+       "id": "a",
+       "label": "Payer la formation des maîtres-nageurs",
+       "label_expert": "Prise en charge publique du diplôme d'État de maître-nageur",
+       "plus": "Plus de candidats en quelques mois.",
+       "minus": "Une dépense pour l'État et les régions.",
+       "budget": -0.02,
+       "axes": {
+        "eco": -1
+       },
+       "ind": {
+        "emploi": 1
+       },
+       "budget_note": "Formations financées : le déficit augmente un peu (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "ecole",
+         "x": 66,
+         "y": 55,
+         "anim": "appear"
+        },
+        {
+         "obj": "foule",
+         "x": 67,
+         "y": 56,
+         "anim": "appear"
+        }
+       ]
+      },
+      {
+       "id": "b",
+       "label": "Mieux payer les maîtres-nageurs municipaux",
+       "label_expert": "Revalorisation de la grille des éducateurs sportifs territoriaux",
+       "plus": "Le métier redevient attractif.",
+       "minus": "Les communes doivent trouver l'argent.",
+       "budget": -0.02,
+       "axes": {
+        "eco": -1
+       },
+       "ind": {
+        "pouvoir_achat": 1
+       },
+       "budget_note": "Hausse des salaires publics : le déficit augmente un peu (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "pieces",
+         "x": 66,
+         "y": 55,
+         "anim": "rise"
+        },
+        {
+         "obj": "mairie",
+         "x": 65,
+         "y": 54,
+         "anim": "appear"
+        }
+       ]
+      },
+      {
+       "id": "c",
+       "label": "Confier les piscines à des entreprises privées",
+       "label_expert": "Délégation de service public des équipements aquatiques",
+       "plus": "Des horaires élargis, gérés par des pros.",
+       "minus": "Des entrées plus chères pour les familles.",
+       "budget": 0.02,
+       "axes": {
+        "eco": 2
+       },
+       "ind": {
+        "pouvoir_achat": -1
+       },
+       "budget_note": "Économies de gestion pour les communes : le déficit baisse un peu (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "commerce",
+         "x": 66,
+         "y": 55,
+         "anim": "appear"
+        },
+        {
+         "obj": "pieces",
+         "x": 67,
+         "y": 56,
+         "anim": "rise"
+        }
+       ]
+      },
+      {
+       "id": "d",
+       "label": "Autoriser des surveillants moins diplômés l'été",
+       "label_expert": "Dérogation pour les titulaires du brevet de surveillant de baignade",
+       "plus": "Les bassins rouvrent tout de suite.",
+       "minus": "La sécurité des baigneurs est moins garantie.",
+       "budget": 0.01,
+       "axes": {
+        "eco": 1,
+        "soc": -1
+       },
+       "ind": {
+        "services": 1
+       },
+       "budget_note": "Salaires moins élevés : le déficit baisse un peu (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "foule",
+         "x": 67,
+         "y": 56,
+         "anim": "appear"
+        },
+        {
+         "obj": "immeuble",
+         "x": 65,
+         "y": 55,
+         "anim": "appear"
+        }
+       ]
+      }
+     ]
+    }
+   ]
   }
  ],
  "programs": [
