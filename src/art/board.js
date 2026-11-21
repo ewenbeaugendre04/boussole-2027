@@ -19,13 +19,13 @@ function buildBoard(){
     '<clipPath id="clipFr"><path d="' + fr + '"/><path d="' + co + '"/></clipPath>' +
     '</defs>');
   h.push('<rect class="sea-rect" x="-500" y="-500" width="1100" height="1100"/>');
-  // voisins dans la brume
-  h.push('<g opacity=".8" transform="translate(0,1.2)">' + NEIGH.map(function(n){ return '<path d="' + smooth(n, true) + '" fill="#C9E6DE"/>'; }).join('') + '</g><g opacity=".9">' + NEIGH.map(function(n){ return '<path d="' + smooth(n, true) + '" fill="var(--mist-land)"/>'; }).join('') + '</g>');
-  // chenal autour de l'île
+  // chenal autour de l'île (sous les voisins : pas de bande d'eau le long des frontières terrestres)
   h.push('<path d="' + fr + '" fill="none" stroke="var(--sea)" stroke-width="5.5" stroke-linejoin="round"/>');
+  // voisins
+  h.push('<g opacity=".8" transform="translate(0,1.2)">' + NEIGH.map(function(n){ return '<path d="' + smooth(n, true) + '" fill="#C9E6DE"/>'; }).join('') + '</g><g opacity=".9">' + NEIGH.map(function(n){ return '<path d="' + smooth(n, true) + '" fill="var(--mist-land)"/>'; }).join('') + '</g>');
   h.push('<rect x="-500" y="-500" width="1100" height="1100" fill="url(#fog)" pointer-events="none"/>');
   // ressac
-  $('foamsvg').innerHTML = [fr, co].map(function(d){ return '<path class="foam" d="' + d + '" transform="translate(0,1.6)"/>'; }).join('');
+  $('foamsvg').innerHTML = '<defs><mask id="noLandFoam" maskUnits="userSpaceOnUse" x="-500" y="-500" width="1100" height="1100"><rect x="-500" y="-500" width="1100" height="1100" fill="#fff"/>' + NEIGH.map(function(n){ return '<path d="' + smooth(n, true) + '" fill="#000" stroke="#000" stroke-width="3"/>'; }).join('') + '</mask></defs><g mask="url(#noLandFoam)">' + [fr, co].map(function(d){ return '<path class="foam" d="' + d + '" transform="translate(0,1.6)"/>'; }).join('') + '</g>';
   // falaise (épaisseur du plateau)
   [fr, co].forEach(function(d){
     h.push('<path d="' + d + '" transform="translate(0,2.6)" fill="var(--cliff)"/>');
@@ -65,8 +65,8 @@ function buildBoard(){
   lines.forEach(function(l, i){
     var d = smooth(L(l.map(function(k){ return C[k]; })), false);
     railPaths.push(d);
-    h.push('<path id="rail' + i + '" d="' + d + '" fill="none" stroke="var(--rail)" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/>');
-    h.push('<path d="' + d + '" fill="none" stroke="#D8CBB4" stroke-width=".55" stroke-dasharray=".25 .55" stroke-linejoin="round"/>');
+    if(i > 1) return; /* 2 lignes seulement, discrètes */
+    h.push('<path id="rail' + i + '" d="' + d + '" fill="none" stroke="var(--rail)" stroke-width=".42" stroke-dasharray=".16 .42" stroke-linejoin="round" opacity=".38"/>');
   });
   h.push('</g>');
   // objets debout, triés par profondeur

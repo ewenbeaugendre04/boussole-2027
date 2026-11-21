@@ -25,7 +25,7 @@ function buildMovers(){
   svg.removeChild(tmp);
   MV.trains = [];
   for(var j = 0; j < 4; j++){
-    if(j === 0 || j === 2) continue; /* 2 TGV, sur les lignes plutôt horizontales (le sprite isométrique ne peut pas monter à la verticale) */
+    continue; /* trains retirés (demande d'Ewen, 21/11) */
     var rp = $('rail' + j); if(!rp) break;
     var cars = [];
     var tw = 7.2 * VBK, car = document.createElement('img'); car.className = 'mv tgv'; car.src = SPR_DIR + 'tgv_seul.webp'; car.alt = ''; car.decoding = 'async'; car.style.width = F(tw) + 'px'; car.style.marginLeft = F(-tw / 2) + 'px'; car.style.marginTop = F(-tw * (SPR_AR.tgv_seul || .45) * .62) + 'px'; ml.appendChild(car); cars.push(car);

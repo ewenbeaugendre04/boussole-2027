@@ -34,7 +34,7 @@
 
 ## Intégration DA dans le jeu (21/11, en ligne)
 - Palette vive (base.css), police Nunito auto-hébergée (Google Fonts supprimé), couche `#sprl` (`src/art/sprites.js`) : ~170 sprites (monuments, maisons par région, énergie aux lieux réels, fermes, ports), TGV sprite qui suit les voies (`layers.js`). `src/assets` = lien vers `assets/` ; le build copie sprites et polices dans `dist/assets`.
-- 2e passe (retours d'Ewen) : surcouche `src/styles/da.css` (panneaux crème pleins, jauges colorées, boutons sarcelle, pastille semaine dorée, étiquettes) ; rails épais à traverses ; plages (liseré sable) ; zones de couleur, forêts et champs en sprites ; voisins nets ; objets d'événement remplacés par les sprites via `OBJ_SPR` (`sprites.js`) ; 2 TGV seulement, sur les lignes Brest–Strasbourg et Paris–Bordeaux–Marseille (le sprite isométrique ne monte pas à la verticale) ; carte « Lancer la semaine » en double masquée.
+- 2e passe (retours d'Ewen) : surcouche `src/styles/da.css` (panneaux crème pleins, jauges colorées, boutons sarcelle, pastille semaine dorée, étiquettes) ; rails épais à traverses ; plages (liseré sable) ; zones de couleur, forêts et champs en sprites ; voisins nets ; objets d'événement remplacés par les sprites via `OBJ_SPR` (`sprites.js`) ; trains retirés ; 2 lignes de rails fines et discrètes ; plus de bande d'eau ni d'écume le long des frontières terrestres ; carte « Lancer la semaine » en double masquée.
 - Reste : textes au « tu » à passer au « vous » ; taille du texte des fiches (Ewen veut petit) ; objets OBJ sans sprite (drapeau UE, bâtiment UE, phares…).
 
 ## Prochaines étapes
