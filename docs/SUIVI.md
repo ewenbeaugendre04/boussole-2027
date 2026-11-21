@@ -28,6 +28,10 @@
 - `assets/library/manifest.json` : 51 objets (id, catégorie, URL du SVG, prompt). Aperçus WebP dans `assets/library/preview/`. Planche : `planche_51.png` (non versionnée).
 - Le domaine `img.recraft.ai` a été autorisé par Ewen dans claude.ai mais restait bloqué dans l'ancienne session.
 
+## Maquette validée (21/11)
+- `docs/maquettes/carte_v2.html` : île épaisse (terre/sable/herbe), massifs enneigés, fleuves, voies ferrées, voisins estompés ; monuments + nombreuses maisons ; TGV sans rails qui suit les voies ; jauges légendées (pouvoir d'achat, emploi, climat, cohésion) + pastille déficit/PIB ; carte d'événement et boutons « 3D ». Police Nunito auto-hébergée (`assets/fonts`).
+- Retours d'Ewen : afficher les constantes (jauges légendées), trains sans rails qui suivent la voie, des maisons partout (pas que des monuments). Objets retouchés : versions dans `assets/library/svg_final/`.
+
 ## Prochaines étapes
 1. FAIT (21/11) : 51 SVG dans `assets/library/svg/` (9,5 Mo, ~190 Ko chacun, avec métadonnées C2PA de provenance IA à conserver). Trop lourds pour le jeu : produire des sprites WebP (~256 px) via Playwright pour le build.
 2. Retoucher les couleurs dans les SVG : TGV, vache, toit haussmannien (trop bleus), fumée de l'incendie en gris, crue en marron. Régénérer : cyclone, nuage_neige, fourviere, arc_triomphe.

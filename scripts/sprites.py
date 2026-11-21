@@ -1,4 +1,4 @@
-"""Fabrique les sprites WebP du jeu à partir des SVG sources (assets/library/svg).
+"""Écrit les SVG retouchés (couleurs) dans assets/library/svg_final, puis fabrique les sprites WebP du jeu à partir des SVG sources (assets/library/svg).
 Les SVG sources restent intacts (provenance C2PA conservée). Usage : python3 scripts/sprites.py [ids...]"""
 import json, re, sys, colorsys, io, os
 from pathlib import Path
@@ -31,6 +31,7 @@ def main(ids):
         for i in ids:
             svg = (LIB/'svg'/f'{i}.svg').read_text()
             if i in RULES: svg = recolor(svg, RULES[i])
+            (LIB/'svg_final').mkdir(exist_ok=True); (LIB/'svg_final'/f'{i}.svg').write_text(svg)
             svg = re.sub(r'<svg ', f'<svg style="width:{SIZE}px;height:{SIZE}px" ', svg, count=1)
             svg = re.sub(r'\swidth="\d+" height="\d+"', '', svg, count=1)
             pg.set_content(f'<html><body style="margin:0;background:transparent">{svg}</body></html>')

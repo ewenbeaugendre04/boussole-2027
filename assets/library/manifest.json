@@ -407,5 +407,37 @@
   "prompt": "Single isolated mobile-game asset, one independent object only, consistent 30-degree isometric view, light from top-left, vivid playful chunky shapes, NO base tile, NO plinth, NO ground patch, NO grass square, NO sea around, NO outlines, NO text, NO logos, NO flags, plain white background: small pile of shiny gold coins, two short stacks of plain golden coins plus a few loose coins, all coins entirely gold yellow including edges, plain faces without any currency symbol",
   "credits": 8,
   "essais": 2
+ },
+ {
+  "id": "tgv_seul",
+  "categorie": "transports",
+  "url": "https://img.recraft.ai/7_peW3QcjNOf309iadmZj-7eJ8J1D1oRgPyiPQ5CeA4/raw:1/plain/abs://prod/images/202012c9-8c34-4441-9472-fa4e54c584d3",
+  "prompt": "TGV seul (sans rails), suit les voies de la carte ; miroir pour l autre diagonale",
+  "credits": 4,
+  "essais": 1
+ },
+ {
+  "id": "maison_pierre",
+  "categorie": "ville",
+  "url": "https://img.recraft.ai/iXoiuk8uIbU39D9moj3Qj77Rt8pQGATpm3VMbHHWyCQ/raw:1/plain/abs://prod/images/9bf96bba-e451-45ef-abf6-5ba6129778bf",
+  "prompt": "maison de village en pierre",
+  "credits": 4,
+  "essais": 1
+ },
+ {
+  "id": "maison_bretonne",
+  "categorie": "ville",
+  "url": "https://img.recraft.ai/Nw3znRz62QVCKTL_X3JArGPXbqxFC61X-ERib4ij6Ec/raw:1/plain/abs://prod/images/d6e38d50-3d26-4cdf-b78d-5afd55838913",
+  "prompt": "maison bretonne granite et ardoise",
+  "credits": 4,
+  "essais": 1
+ },
+ {
+  "id": "petit_immeuble",
+  "categorie": "ville",
+  "url": "https://img.recraft.ai/4mzd4l0pwFmrbYeihl_4DSckXlaCvJMnaXHcmaUwKsg/raw:1/plain/abs://prod/images/5e733c91-8045-4cb2-bc0b-5d4447d6fe38",
+  "prompt": "petit immeuble de centre-ville",
+  "credits": 4,
+  "essais": 1
  }
 ]
