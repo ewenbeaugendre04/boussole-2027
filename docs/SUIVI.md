@@ -29,9 +29,9 @@
 - Le domaine `img.recraft.ai` a été autorisé par Ewen dans claude.ai mais restait bloqué dans l'ancienne session.
 
 ## Prochaines étapes
-1. Télécharger les 51 SVG : `node -e` sur le manifeste, puis `curl -o assets/library/svg/<id>.svg <url>`.
+1. FAIT (21/11) : 51 SVG dans `assets/library/svg/` (9,5 Mo, ~190 Ko chacun, avec métadonnées C2PA de provenance IA à conserver). Trop lourds pour le jeu : produire des sprites WebP (~256 px) via Playwright pour le build.
 2. Retoucher les couleurs dans les SVG : TGV, vache, toit haussmannien (trop bleus), fumée de l'incendie en gris, crue en marron. Régénérer : cyclone, nuage_neige, fourviere, arc_triomphe.
-3. Nettoyer et optimiser les SVG (svgo), puis les intégrer à `src/art/objects.js` à la place des dessins actuels.
+3. Générer les sprites WebP depuis les SVG (sans retirer la provenance des sources ; mentionner « illustrations générées avec Recraft » dans les crédits), puis les intégrer à `src/art/objects.js` à la place des dessins actuels.
 4. Refaire la carte (relief, côtes, mer) dans la même DA, puis les boutons et les cartes de texte. Montrer une maquette avant d'intégrer.
 5. Bugs connus : étiquette « Viande importée » coupée à gauche ; « Lancer la semaine » en double ; vérifier l'affichage des choix `requires` ; trop de choix creusent le déficit (28+ / 66−) ; vérifier les estimations restantes.
 
