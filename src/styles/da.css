@@ -89,3 +89,5 @@ body{font-weight:600}
 .rp-why p.up{background:#E3F6EF;color:#0B6B5F}.rp-why p.down{background:#FCEBE6;color:#9A3B22}
 [data-theme="dark"] .rp-why p.up,.is-night .rp-why p.up{background:#1D4A44;color:#BFF0E5}[data-theme="dark"] .rp-why p.down,.is-night .rp-why p.down{background:#4A2A24;color:#FFD3C6}
 .card[data-multi] .choice .confirm,.choice[data-g] .confirm{display:none!important}
+.rp-why p.fc{background:#EEF5F4;color:var(--ink)}.rp-why small{color:var(--ink-3);font-weight:700}
+.toast span{max-width:340px;line-height:1.35}

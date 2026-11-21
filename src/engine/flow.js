@@ -97,8 +97,29 @@ function whyHtml(imp){
   if(on >= .1) out.push(['up', 'Rentrée ponctuelle de ' + fmt1(on) + ' Md€.']);
   if(co <= -1) out.push(['up', 'Moins d\'émissions de CO₂ : la France se rapproche de ses objectifs climat.']);
   if(co >= 1) out.push(['down', 'Plus d\'émissions de CO₂ : la France s\'éloigne de ses objectifs climat.']);
-  if(!out.length) return '';
-  return '<div class="rp-why"><div class="rp-ek">Pourquoi</div>' + out.slice(0, 4).map(function(o){ return '<p class="' + o[0] + '">' + esc(o[1]) + '</p>'; }).join('') + '</div>';
+  return out;
+}
+/* Prévision tout de suite ; le résultat réel (un peu meilleur ou pire que prévu) arrive en alerte 1 à 2 semaines plus tard */
+function forecastHtml(imp, ev, ch){
+  var out = whyHtml(imp); if(!out.length) return '';
+  if(Math.random() < .6){
+    var f = Math.round((.6 + Math.random() * .8) * 10) / 10;
+    (S.echos = S.echos || []).push({ due:S.dayIdx + 1 + (Math.random() < .5 ? 0 : 1), t:choiceLabel(ch), f:f, ind:imp.ind || {}, budget:num(imp.budget, 0) });
+  }
+  return '<div class="rp-why"><div class="rp-ek">Prévision</div><p class="fc">' + esc(out[0][1]) + '</p><small>Le résultat réel sera connu dans les prochaines semaines.</small></div>';
+}
+function revealEchos(){
+  var due = (S.echos || []).filter(function(e){ return e.due <= S.dayIdx; }); if(!due.length) return;
+  S.echos = S.echos.filter(function(e){ return e.due > S.dayIdx; });
+  due.slice(0, 2).forEach(function(e, i){
+    var d = e.f - 1, ind = {}; Object.keys(e.ind).forEach(function(k){ var v = Math.round(num(e.ind[k]) * d); if(v) ind[k] = v; });
+    applyInd(ind); if(e.budget) S.annual += e.budget * d;
+    var better = d >= .15, worse = d <= -.15;
+    var msg = better ? 'Mieux que prévu : « ' + esc(e.t) + ' » a eu plus d\'effet qu\'annoncé.' : worse ? 'Moins bien que prévu : « ' + esc(e.t) + ' » a eu moins d\'effet qu\'annoncé.' : 'Comme prévu : « ' + esc(e.t) + ' » a produit l\'effet annoncé.';
+    var det = whyHtml({ ind:e.ind, budget:e.budget * e.f })[0];
+    setTimeout(function(){ toast('<b>' + msg + '</b>' + (det ? '<br>' + esc(det[1]) : ''), 5200); }, 1400 + i * 5600);
+  });
+  save();
 }
 function fmt1(v){ return (Math.round(Math.abs(v) * 10) / 10).toLocaleString('fr-FR'); }
 function showResult(ev, ch){
@@ -108,7 +129,7 @@ function showResult(ev, ch){
   var imp = RUN.lastImpact && RUN.lastImpact.id === ev.id ? RUN.lastImpact : { ind:ch.ind, budget:ch.budget, once:ch.once };
   var html = '<div class="rp-head"><span class="seal" aria-hidden="true">' + total + '</span><div><b>Décision prise</b><small>' + (ch.parts ? ch.parts.map(function(c){ return '« ' + esc(choiceLabel(c)) + ' »'; }).join(' + ') : esc(choiceLabel(ch))) + '</small></div></div>' +
     '<div class="rp-eff"><div class="rp-ek">Ce que ça change</div>' + effHtml(imp, 3, false) + '</div>' +
-    whyHtml(imp) +
+    forecastHtml(imp, ev, ch) +
     '<div class="qbar" aria-label="' + done + ' sur ' + evs.length + '"><i style="width:' + F(done / Math.max(1, evs.length) * 100) + '%"></i></div><div class="qtxt">' + (last ? 'Tous les événements de la semaine sont traités.' : done + ' sur ' + evs.length + ' cette semaine') + '</div>' +
     (ch.real_note ? '<div class="envrai"><span class="ev-k">En vrai, à l\'époque</span><p>' + esc(ch.real_note) + '</p></div>' : '') +
     (last ? '<button class="btn wide brass pressable" id="rpGo">Voir le plateau</button>'

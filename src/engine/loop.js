@@ -11,7 +11,7 @@ function enterGame(isNew){
 function startDayView(intro){
   var d = today();
   if(d && (!S.wk || S.wk.day !== S.dayIdx)){ S.wk = weekSnapshot(); save(); }
-  var fresh = revealNotes();
+  var fresh = revealNotes(); revealEchos();
   buildClouds(d ? d.weather : 'soleil'); setWeather(d ? d.weather : 'soleil');
   renderAll(fresh.changed);
   var pop = todayEvents().map(function(e){ return e.id; }).concat(fresh.ids);
