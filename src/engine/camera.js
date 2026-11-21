@@ -16,7 +16,7 @@ function camSet(z, tx, ty, dur){
 }
 function camTo(x, y, z, dur){
   var r = board.getBoundingClientRect(), u = RP(x, y), p = U2P(u[0], u[1]);
-  z = clamp(num(z, 2.2), 1, 3);
+  z = clamp(num(z, 2.2), 1, 2.6);
   /* scène guidée : le bandeau et le dock s'effacent, on centre entre la légende (haut) et le bouton « Répondre » (bas) */
   var cy = (90 + r.height - Math.max(FRAME.b, 90) - 110) / 2;
   return camSet(z, r.width / 2 - p[0] * z, cy - p[1] * z, reduceMotion ? 0 : (dur || 1500));
@@ -31,7 +31,7 @@ function wait(ms){ return new Promise(function(res){ setTimeout(res, reduceMotio
 /* ---------- Caméra libre : seulement hors du déroulé guidé ---------- */
 function freeOK(){ return S && !S._preview && !RUN.busy && !layer.classList.contains('on') && !$('dayTitle').classList.contains('on') && !$('result').classList.contains('on') && !document.querySelector('.screen'); }
 function freeApply(){
-  var z = clamp(CAM.z, 1, 3), cb = camBounds(z, true);
+  var z = clamp(CAM.z, 1, 2.6), cb = camBounds(z, true);
   CAM.z = z; CAM.tx = clamp(CAM.tx, cb.x0, cb.x1); CAM.ty = clamp(CAM.ty, cb.y0, cb.y1);
   world.style.transform = 'translate3d(' + F(CAM.tx) + 'px,' + F(CAM.ty) + 'px,0) scale(' + F(z) + ')';
 }
@@ -61,7 +61,7 @@ var FREE = { ptr:{}, moved:false, sup:false, vx:0, vy:0, lt:0, inert:0 };
       FREE.moved = true;
       var d0 = Math.hypot(st.p[0].x - st.p[1].x, st.p[0].y - st.p[1].y) || 1, d1 = Math.hypot(p[0].x - p[1].x, p[0].y - p[1].y);
       var m0x = (st.p[0].x + st.p[1].x) / 2 - r.left, m0y = (st.p[0].y + st.p[1].y) / 2 - r.top, m1x = (p[0].x + p[1].x) / 2 - r.left, m1y = (p[0].y + p[1].y) / 2 - r.top;
-      var z = clamp(st.z * d1 / d0, 1, 3), wx = (m0x - st.tx) / st.z, wy = (m0y - st.ty) / st.z;
+      var z = clamp(st.z * d1 / d0, 1, 2.6), wx = (m0x - st.tx) / st.z, wy = (m0y - st.ty) / st.z;
       CAM.z = z; CAM.tx = m1x - wx * z; CAM.ty = m1y - wy * z; FREE.vx = FREE.vy = 0;
     }
     freeApply();
@@ -80,7 +80,7 @@ var FREE = { ptr:{}, moved:false, sup:false, vx:0, vy:0, lt:0, inert:0 };
   board.addEventListener('pointerup', up); board.addEventListener('pointercancel', up);
   board.addEventListener('wheel', function(e){
     if(!freeOK()) return; e.preventDefault();
-    var r = board.getBoundingClientRect(), mx = e.clientX - r.left, my = e.clientY - r.top, z0 = CAM.z, z = clamp(z0 * (e.deltaY > 0 ? .9 : 1.1), 1, 3);
+    var r = board.getBoundingClientRect(), mx = e.clientX - r.left, my = e.clientY - r.top, z0 = CAM.z, z = clamp(z0 * (e.deltaY > 0 ? .9 : 1.1), 1, 2.6);
     var wx = (mx - CAM.tx) / z0, wy = (my - CAM.ty) / z0; world.style.transition = 'transform .12s ease-out';
     CAM.z = z; CAM.tx = mx - wx * z; CAM.ty = my - wy * z; freeApply();
   }, { passive:false });

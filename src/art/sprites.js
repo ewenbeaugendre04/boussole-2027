@@ -44,14 +44,45 @@ function sprList(){
   put('vache', -1.3, 48.4, 1.6); put('vache', 3.4, 46.7, 1.6); put('serre', 4.9, 43.75, 2); put('tracteur', 3.0, 49.5, 1.6);
   return out;
 }
-function buildSprites(){
-  var l = $('sprl'); if(!l) return; var items = [];
+/* positions calculées une fois le masque terre/mer prêt (unités du plateau) */
+function sprItems(){
+  var items = [];
   sprList().forEach(function(s){
     var p = P(s[1], s[2]), t = terrainU(p[0], p[1]), marine = !!SPR_MARINE[s[0]];
     if(MASK && (marine ? t !== 0 : t !== 1)) return;
-    var w = s[3] * VBK, h = w * (SPR_AR[s[0]] || 1), q = U2P(p[0], p[1]);
-    items.push({ y:q[1], h:'<img src="' + SPR_DIR + s[0] + '.webp" alt="" decoding="async" loading="lazy" style="left:' + F(q[0] - w / 2) + 'px;top:' + F(q[1] - h * .86) + 'px;width:' + F(w) + 'px">' });
+    items.push({ id:s[0], x:p[0], y:p[1], w:s[3], h:s[3] * (SPR_AR[s[0]] || 1) });
   });
   items.sort(function(a, b){ return a.y - b.y; });
-  l.innerHTML = items.map(function(i){ return i.h; }).join('');
+  return items;
+}
+/* Performance : les sprites sont « cuits » dans l'image du décor (une seule image au lieu de ~250 balises).
+   Il faut leurs données (data URI) car une image SVG ne charge pas de fichiers externes.
+   Si le chargement échoue (ex. page ouverte en file://), on garde la couche HTML #sprl. */
+var SPR_DATA = {}, SPR_READY = false, SPR_LOADING = false;
+function loadSprData(){
+  if(SPR_LOADING || SPR_READY || !window.fetch || !window.FileReader) return; SPR_LOADING = true;
+  var ids = []; sprList().forEach(function(s){ if(ids.indexOf(s[0]) < 0) ids.push(s[0]); });
+  Promise.all(ids.map(function(id){
+    return fetch(SPR_DIR + id + '.webp').then(function(r){ if(!r.ok) throw new Error(id); return r.blob(); }).then(function(b){
+      return new Promise(function(ok, ko){ var fr = new FileReader(); fr.onload = function(){ SPR_DATA[id] = fr.result; ok(); }; fr.onerror = ko; fr.readAsDataURL(b); });
+    });
+  })).then(function(){ SPR_READY = true; var l = $('sprl'); if(l) l.innerHTML = ''; BAKE.key = ''; BAKE.cache = {}; bakeDecor(); }).catch(function(){ SPR_LOADING = false; });
+}
+function sprSvg(){
+  if(!SPR_READY) return '';
+  var used = {}, items = sprItems(), defs = '', uses = '';
+  items.forEach(function(it){
+    if(!used[it.id]){ used[it.id] = 1; defs += '<image id="sp_' + it.id + '" href="' + SPR_DATA[it.id] + '" width="1" height="' + (SPR_AR[it.id] || 1) + '" preserveAspectRatio="none"/>'; }
+    uses += '<use href="#sp_' + it.id + '" transform="translate(' + F(it.x - it.w / 2) + ',' + F(it.y - it.h * .86) + ') scale(' + F(it.w) + ')"/>';
+  });
+  return '<defs>' + defs + '</defs><g>' + uses + '</g>';
+}
+function buildSprites(){
+  var l = $('sprl'); if(!l) return;
+  if(SPR_READY){ l.innerHTML = ''; return; }
+  loadSprData();
+  l.innerHTML = sprItems().map(function(it){
+    var w = it.w * VBK, h = it.h * VBK, q = U2P(it.x, it.y);
+    return '<img src="' + SPR_DIR + it.id + '.webp" alt="" decoding="async" loading="lazy" style="left:' + F(q[0] - w / 2) + 'px;top:' + F(q[1] - h * .86) + 'px;width:' + F(w) + 'px">';
+  }).join('');
 }

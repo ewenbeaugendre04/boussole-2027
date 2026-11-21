@@ -12,7 +12,8 @@ html = re.sub(r'<script src="([^"]+)"></script>', js, html)
 out = root / 'dist'; out.mkdir(exist_ok=True)
 (out / 'index.html').write_text(html, encoding='utf-8')
 import shutil
-for d in ('sprites', 'fonts'):
+for d in ('sprites', 'fonts', 'icons'):
     shutil.rmtree(out / 'assets' / d, ignore_errors=True)
     shutil.copytree(root / 'assets' / d, out / 'assets' / d)
 print('dist/index.html', len(html) // 1024, 'Ko')
+shutil.copy(src / 'manifest.webmanifest', out / 'manifest.webmanifest')

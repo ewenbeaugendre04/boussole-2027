@@ -22,7 +22,7 @@ function openBudget(){
     (num(B.charge_interets) ? '<span>Intérêts de la dette, par an</span><b>' + f1(num(B.charge_interets)) + ' ' + esc(UNIT) + '</b>' : '') +
     (B.etat && B.etat.solde !== undefined ? '<span>Solde de l\'État (départ)</span><b>' + f1(num(B.etat.solde)) + ' ' + esc(UNIT) + '</b>' : '') +
     (B.secu && B.secu.solde !== undefined ? '<span>Solde de la Sécurité sociale (départ)</span><b>' + f1(num(B.secu.solde)) + ' ' + esc(UNIT) + '</b>' : '') +
-    '</div>' + (B.perimetre || B.annee_ref ? '<p class="muted" style="margin:8px 0 0">' + esc([B.perimetre, B.annee_ref].filter(Boolean).join('. ')) + '.</p>' : '') +
+    '</div>' + (B.perimetre || B.annee_ref ? '<p class="muted" style="margin:8px 0 0">' + esc([B.perimetre, B.annee_ref, B.dette_source ? 'Dette : ' + B.dette_source : ''].filter(Boolean).join('. ')) + '.</p>' : '') +
     (postes.length ? '<div class="sec-h">Les grands postes de dépense</div><div class="bars">' + postes.map(function(p){ return '<div class="row"><span>' + esc(p.label) + '</span><b>' + f0(num(p.montant)) + ' ' + esc(UNIT) + '</b><div class="bar"><i style="width:' + F(num(p.montant) / max * 100) + '%"></i></div></div>'; }).join('') + '</div>' : '') +
     '<p class="muted" style="margin-top:12px">Recettes induites : quand le pouvoir d\'achat monte, les ménages consomment plus et l\'État perçoit plus de TVA et d\'impôts (environ 0,6 Md€ par an par point). Quand l\'emploi monte, il y a plus de cotisations et moins d\'allocations chômage (environ 0,75 Md€ par an par point, soit 25 000 emplois). L\'inverse vaut quand ils baissent. Ordres de grandeur simplifiés.</p>' +
     (B.note ? '<p class="muted" style="margin-top:14px">' + esc(B.note) + '</p>' : '') +

@@ -37,6 +37,14 @@
 - 2e passe (retours d'Ewen) : surcouche `src/styles/da.css` (panneaux crème pleins, jauges colorées, boutons sarcelle, pastille semaine dorée, étiquettes) ; rails épais à traverses ; plages (liseré sable) ; zones de couleur, forêts et champs en sprites ; voisins nets ; objets d'événement remplacés par les sprites via `OBJ_SPR` (`sprites.js`) ; trains retirés ; 2 lignes de rails fines et discrètes ; plus de bande d'eau ni d'écume le long des frontières terrestres ; carte « Lancer la semaine » en double masquée.
 - Reste : textes au « tu » à passer au « vous » ; taille du texte des fiches (Ewen veut petit) ; objets OBJ sans sprite (drapeau UE, bâtiment UE, phares…).
 
+## Lot du 21/11 midi
+- Dette à jour : 3 595,5 Md€ (Insee, fin T2 2026, publié le 29/09/2026 ; prochain chiffre T3 fin décembre) avec `dette_source`.
+- Web app : `src/manifest.webmanifest` + icônes `assets/icons/` (logo Recraft : île + rose des vents).
+- Grande-Bretagne redessinée ; plus de noms de régions françaises (pays voisins seulement).
+- Réponses : une seule, sauf événements `multi` = une au court terme + une au long terme (`choice.terme`), validation possible avec une seule des deux.
+- FPS : sprites cuits dans l'image du décor (data URI + `<use>`), zoom max 2,6 ; repli sur la couche HTML si le chargement échoue (file://).
+- Déploiement Pages en 2 jobs (assemblage puis déploiement) pour éviter l'erreur d'artefact.
+
 ## Prochaines étapes
 1. FAIT (21/11) : 51 SVG dans `assets/library/svg/` (9,5 Mo, ~190 Ko chacun, avec métadonnées C2PA de provenance IA à conserver). Trop lourds pour le jeu : produire des sprites WebP (~256 px) via Playwright pour le build.
 2. Retoucher les couleurs dans les SVG : TGV, vache, toit haussmannien (trop bleus), fumée de l'incendie en gris, crue en marron. Régénérer : cyclone, nuage_neige, fourviere, arc_triomphe.

@@ -248,7 +248,8 @@ const GAME = {
   "recettes": 1562,
   "depenses": 1714,
   "deficit": 152,
-  "dette": 3460,
+  "dette": 3595.5,
+  "dette_source": "Insee, dette de Maastricht à la fin du 2e trimestre 2026 : 3 595,5 Md€, soit 119,0 % du PIB (Informations rapides n° 239, 29 septembre 2026)",
   "charge_interets": 65,
   "postes": [
    {
@@ -536,7 +537,8 @@ const GAME = {
          },
          "count": 3
         }
-       ]
+       ],
+       "terme": "long"
       },
       {
        "id": "b",
@@ -575,7 +577,8 @@ const GAME = {
          "y": 48,
          "anim": "pulse"
         }
-       ]
+       ],
+       "terme": "long"
       },
       {
        "id": "c",
@@ -616,7 +619,8 @@ const GAME = {
          "anim": "pulse"
         }
        ],
-       "budget_note": "Aide ponctuelle versée par l'État : le déficit augmente une fois."
+       "budget_note": "Aide ponctuelle versée par l'État : le déficit augmente une fois.",
+       "terme": "court"
       },
       {
        "id": "d",
@@ -658,7 +662,8 @@ const GAME = {
          "anim": "rise"
         }
        ],
-       "budget_note": "Plus d'exportations, donc plus d'impôts sur les bénéfices : le déficit baisse un peu."
+       "budget_note": "Plus d'exportations, donc plus d'impôts sur les bénéfices : le déficit baisse un peu.",
+       "terme": "long"
       }
      ],
      "multi": {
@@ -673,7 +678,7 @@ const GAME = {
         "c"
        ]
       ],
-      "hint": "Tu peux combiner une mesure d'urgence et une mesure de fond."
+      "hint": "Une réponse pour le court terme, une pour le long terme."
      }
     },
     {
@@ -788,7 +793,8 @@ const GAME = {
          "label": "Alerte canicule"
         }
        ],
-       "budget_note": "Coût du dispositif d'alerte et des visites : le déficit augmente un peu."
+       "budget_note": "Coût du dispositif d'alerte et des visites : le déficit augmente un peu.",
+       "terme": "court"
       },
       {
        "id": "b",
@@ -829,7 +835,8 @@ const GAME = {
          "label": "Jour férié travaillé"
         }
        ],
-       "budget_note": "Nouvelle contribution des employeurs sur une journée travaillée : le déficit baisse."
+       "budget_note": "Nouvelle contribution des employeurs sur une journée travaillée : le déficit baisse.",
+       "terme": "long"
       },
       {
        "id": "c",
@@ -868,7 +875,8 @@ const GAME = {
          "label": "Salle fraîche"
         }
        ],
-       "budget_note": "Travaux payés une fois par l'État : le déficit augmente une fois."
+       "budget_note": "Travaux payés une fois par l'État : le déficit augmente une fois.",
+       "terme": "court"
       },
       {
        "id": "d",
@@ -909,7 +917,8 @@ const GAME = {
          }
         }
        ],
-       "budget_note": "Salaires de nouveaux soignants chaque année : le déficit augmente."
+       "budget_note": "Salaires de nouveaux soignants chaque année : le déficit augmente.",
+       "terme": "long"
       }
      ],
      "multi": {
@@ -928,7 +937,7 @@ const GAME = {
         "d"
        ]
       ],
-      "hint": "Tu peux combiner une mesure d'urgence et une mesure de fond."
+      "hint": "Une réponse pour le court terme, une pour le long terme."
      }
     },
     {
@@ -1745,7 +1754,8 @@ const GAME = {
          "anim": "fade"
         }
        ],
-       "budget_note": "Subventions ponctuelles aux usines : le déficit augmente une fois."
+       "budget_note": "Subventions ponctuelles aux usines : le déficit augmente une fois.",
+       "terme": "long"
       },
       {
        "id": "b",
@@ -1781,7 +1791,8 @@ const GAME = {
          "y": 42,
          "anim": "fade"
         }
-       ]
+       ],
+       "terme": "court"
       },
       {
        "id": "c",
@@ -1817,7 +1828,8 @@ const GAME = {
          "count": 2
         }
        ],
-       "budget_note": "Moins de boîtes remboursées pour rien : le déficit baisse un peu."
+       "budget_note": "Moins de boîtes remboursées pour rien : le déficit baisse un peu.",
+       "terme": "court"
       }
      ],
      "multi": {
@@ -1836,7 +1848,7 @@ const GAME = {
         "c"
        ]
       ],
-      "hint": "Tu peux combiner une mesure d'urgence et une mesure de fond."
+      "hint": "Une réponse pour le court terme, une pour le long terme."
      }
     },
     {
@@ -1949,7 +1961,8 @@ const GAME = {
          "anim": "fade"
         }
        ],
-       "budget_note": "Heures et déplacements des forces de l'ordre : le déficit augmente un peu."
+       "budget_note": "Heures et déplacements des forces de l'ordre : le déficit augmente un peu.",
+       "terme": "court"
       },
       {
        "id": "b",
@@ -1990,7 +2003,8 @@ const GAME = {
          "anim": "appear"
         }
        ],
-       "budget_note": "Écoles, emplois aidés et transports à financer : le déficit augmente."
+       "budget_note": "Écoles, emplois aidés et transports à financer : le déficit augmente.",
+       "terme": "long"
       },
       {
        "id": "c",
@@ -2026,7 +2040,8 @@ const GAME = {
          "anim": "appear"
         }
        ],
-       "budget_note": "Coût de fonctionnement de la commission : le déficit augmente très peu."
+       "budget_note": "Coût de fonctionnement de la commission : le déficit augmente très peu.",
+       "terme": "long"
       },
       {
        "id": "d",
@@ -2063,7 +2078,8 @@ const GAME = {
          "anim": "appear"
         }
        ],
-       "budget_note": "Une partie des dégâts remboursée par les auteurs : le déficit baisse un peu."
+       "budget_note": "Une partie des dégâts remboursée par les auteurs : le déficit baisse un peu.",
+       "terme": "court"
       }
      ],
      "multi": {
@@ -2086,7 +2102,7 @@ const GAME = {
         "d"
        ]
       ],
-      "hint": "Tu peux combiner une mesure d'urgence et une mesure de fond."
+      "hint": "Une réponse pour le court terme, une pour le long terme."
      }
     }
    ]
@@ -2445,7 +2461,8 @@ const GAME = {
          }
         }
        ],
-       "budget_note": "Envoi et séjour des renforts : le déficit augmente une fois."
+       "budget_note": "Envoi et séjour des renforts : le déficit augmente une fois.",
+       "terme": "court"
       },
       {
        "id": "b",
@@ -2484,7 +2501,8 @@ const GAME = {
          "y": 89,
          "anim": "fade"
         }
-       ]
+       ],
+       "terme": "court"
       },
       {
        "id": "c",
@@ -2526,7 +2544,8 @@ const GAME = {
          "anim": "appear"
         }
        ],
-       "budget_note": "Plus d'un milliard d'aides versées une fois : le déficit augmente."
+       "budget_note": "Plus d'un milliard d'aides versées une fois : le déficit augmente.",
+       "terme": "long"
       },
       {
        "id": "d",
@@ -2567,7 +2586,8 @@ const GAME = {
          "anim": "appear"
         }
        ],
-       "budget_note": "Le prêt sort une fois puis est remboursé avec intérêts : le déficit baisse ensuite."
+       "budget_note": "Le prêt sort une fois puis est remboursé avec intérêts : le déficit baisse ensuite.",
+       "terme": "long"
       }
      ],
      "multi": {
@@ -2582,7 +2602,7 @@ const GAME = {
         "d"
        ]
       ],
-      "hint": "Tu peux combiner une mesure d'urgence et une mesure de fond."
+      "hint": "Une réponse pour le court terme, une pour le long terme."
      }
     },
     {
@@ -3158,7 +3178,8 @@ const GAME = {
          }
         }
        ],
-       "budget_note": "Rachat des maisons par l'État : le déficit augmente une fois."
+       "budget_note": "Rachat des maisons par l'État : le déficit augmente une fois.",
+       "terme": "long"
       },
       {
        "id": "b",
@@ -3196,7 +3217,8 @@ const GAME = {
          "anim": "fade"
         }
        ],
-       "budget_note": "Travaux de digues puis entretien : le déficit augmente."
+       "budget_note": "Travaux de digues puis entretien : le déficit augmente.",
+       "terme": "long"
       },
       {
        "id": "c",
@@ -3234,7 +3256,8 @@ const GAME = {
          "anim": "grow"
         }
        ],
-       "budget_note": "Moins de maisons à indemniser plus tard : le déficit baisse un peu."
+       "budget_note": "Moins de maisons à indemniser plus tard : le déficit baisse un peu.",
+       "terme": "long"
       },
       {
        "id": "d",
@@ -3276,7 +3299,8 @@ const GAME = {
          "anim": "appear"
         }
        ],
-       "budget_note": "Part publique des indemnisations : le déficit augmente une fois."
+       "budget_note": "Part publique des indemnisations : le déficit augmente une fois.",
+       "terme": "court"
       }
      ],
      "multi": {
@@ -3299,7 +3323,7 @@ const GAME = {
         "c"
        ]
       ],
-      "hint": "Tu peux combiner une mesure d'urgence et une mesure de fond."
+      "hint": "Une réponse pour le court terme, une pour le long terme."
      }
     },
     {
@@ -3702,7 +3726,8 @@ const GAME = {
          "count": 4
         }
        ],
-       "budget_note": "L'État paie la hausse à la place de tous : le déficit augmente très fortement."
+       "budget_note": "L'État paie la hausse à la place de tous : le déficit augmente très fortement.",
+       "terme": "court"
       },
       {
        "id": "b",
@@ -3746,7 +3771,8 @@ const GAME = {
          "label": "Chèque énergie"
         }
        ],
-       "budget_note": "Chèques versés aux ménages modestes : le déficit augmente."
+       "budget_note": "Chèques versés aux ménages modestes : le déficit augmente.",
+       "terme": "court"
       },
       {
        "id": "c",
@@ -3784,7 +3810,8 @@ const GAME = {
          "anim": "fade"
         }
        ],
-       "budget_note": "Factures d'énergie des bâtiments publics en baisse : le déficit baisse un peu."
+       "budget_note": "Factures d'énergie des bâtiments publics en baisse : le déficit baisse un peu.",
+       "terme": "long"
       },
       {
        "id": "d",
@@ -3826,7 +3853,8 @@ const GAME = {
          "label": "Taxe sur les rentes"
         }
        ],
-       "budget_note": "Taxe sur les profits exceptionnels : le déficit baisse."
+       "budget_note": "Taxe sur les profits exceptionnels : le déficit baisse.",
+       "terme": "court"
       },
       {
        "id": "e",
@@ -3862,7 +3890,8 @@ const GAME = {
          "y": 54,
          "anim": "pulse"
         }
-       ]
+       ],
+       "terme": "long"
       }
      ],
      "recall": [
@@ -3913,7 +3942,7 @@ const GAME = {
         "d"
        ]
       ],
-      "hint": "Tu peux combiner une mesure d'urgence et une mesure de fond."
+      "hint": "Une réponse pour le court terme, une pour le long terme."
      }
     },
     {
@@ -4517,7 +4546,8 @@ const GAME = {
          "label": "Farines interdites"
         }
        ],
-       "budget_note": "Destruction des stocks payée par l'État : le déficit augmente."
+       "budget_note": "Destruction des stocks payée par l'État : le déficit augmente.",
+       "terme": "court"
       },
       {
        "id": "b",
@@ -4551,7 +4581,8 @@ const GAME = {
          }
         }
        ],
-       "budget_note": "Tests payés par l'État : le déficit augmente."
+       "budget_note": "Tests payés par l'État : le déficit augmente.",
+       "terme": "court"
       },
       {
        "id": "c",
@@ -4586,7 +4617,8 @@ const GAME = {
          "anim": "pulse"
         }
        ],
-       "budget_note": "Indemnités et campagne payées par l'État : le déficit augmente."
+       "budget_note": "Indemnités et campagne payées par l'État : le déficit augmente.",
+       "terme": "court"
       },
       {
        "id": "d",
@@ -4617,7 +4649,8 @@ const GAME = {
          "anim": "pulse"
         }
        ],
-       "budget_note": "Une taxe paie les contrôles : le déficit baisse."
+       "budget_note": "Une taxe paie les contrôles : le déficit baisse.",
+       "terme": "long"
       },
       {
        "id": "e",
@@ -4651,7 +4684,8 @@ const GAME = {
          "y": 27,
          "anim": "grow"
         }
-       ]
+       ],
+       "terme": "court"
       }
      ],
      "recall": [
@@ -4702,7 +4736,7 @@ const GAME = {
         "d"
        ]
       ],
-      "hint": "Tu peux combiner une mesure d'urgence et une mesure de fond."
+      "hint": "Une réponse pour le court terme, une pour le long terme."
      }
     },
     {
@@ -5427,7 +5461,8 @@ const GAME = {
          "count": 3
         }
        ],
-       "budget_note": "Part publique des travaux, le reste sur les factures : le déficit augmente."
+       "budget_note": "Part publique des travaux, le reste sur les factures : le déficit augmente.",
+       "terme": "long"
       },
       {
        "id": "b",
@@ -5470,7 +5505,8 @@ const GAME = {
          "count": 3
         }
        ],
-       "budget_note": "Renforts payés une fois : le déficit augmente une fois."
+       "budget_note": "Renforts payés une fois : le déficit augmente une fois.",
+       "terme": "court"
       },
       {
        "id": "c",
@@ -5505,7 +5541,8 @@ const GAME = {
          "anim": "grow"
         }
        ],
-       "budget_note": "Aides aux forestiers, puis replantation : le déficit augmente."
+       "budget_note": "Aides aux forestiers, puis replantation : le déficit augmente.",
+       "terme": "court"
       },
       {
        "id": "d",
@@ -5536,7 +5573,8 @@ const GAME = {
          "count": 3
         }
        ],
-       "budget_note": "Surprime versée au régime public de réassurance : le déficit baisse."
+       "budget_note": "Surprime versée au régime public de réassurance : le déficit baisse.",
+       "terme": "long"
       }
      ],
      "recall": [
@@ -5587,7 +5625,7 @@ const GAME = {
         "d"
        ]
       ],
-      "hint": "Tu peux combiner une mesure d'urgence et une mesure de fond."
+      "hint": "Une réponse pour le court terme, une pour le long terme."
      }
     },
     {
@@ -5691,7 +5729,8 @@ const GAME = {
          "anim": "appear"
         }
        ],
-       "budget_note": "Frais de déplacement des médecins : le déficit augmente un peu."
+       "budget_note": "Frais de déplacement des médecins : le déficit augmente un peu.",
+       "terme": "court"
       },
       {
        "id": "b",
@@ -5725,7 +5764,8 @@ const GAME = {
          "anim": "appear"
         }
        ],
-       "budget_note": "Primes payées par l'Assurance maladie : le déficit augmente."
+       "budget_note": "Primes payées par l'Assurance maladie : le déficit augmente.",
+       "terme": "court"
       },
       {
        "id": "c",
@@ -5755,7 +5795,8 @@ const GAME = {
          "label": "Pharmacie"
         }
        ],
-       "budget_note": "Actes moins chers que la consultation : le déficit baisse un peu."
+       "budget_note": "Actes moins chers que la consultation : le déficit baisse un peu.",
+       "terme": "court"
       },
       {
        "id": "d",
@@ -5785,7 +5826,8 @@ const GAME = {
          "anim": "grow"
         }
        ],
-       "budget_note": "Places d'études et stages à financer : le déficit augmente."
+       "budget_note": "Places d'études et stages à financer : le déficit augmente.",
+       "terme": "long"
       }
      ],
      "multi": {
@@ -5804,7 +5846,7 @@ const GAME = {
         "d"
        ]
       ],
-      "hint": "Tu peux combiner une mesure d'urgence et une mesure de fond."
+      "hint": "Une réponse pour le court terme, une pour le long terme."
      }
     },
     {
@@ -6296,7 +6338,8 @@ const GAME = {
          "anim": "appear",
          "label": "Baissez d'un degré"
         }
-       ]
+       ],
+       "terme": "court"
       },
       {
        "id": "b",
@@ -6326,7 +6369,8 @@ const GAME = {
          "y": 24,
          "anim": "rise"
         }
-       ]
+       ],
+       "terme": "court"
       },
       {
        "id": "c",
@@ -6358,7 +6402,8 @@ const GAME = {
          "anim": "smoke",
          "delay": 0.5
         }
-       ]
+       ],
+       "terme": "long"
       },
       {
        "id": "d",
@@ -6389,7 +6434,8 @@ const GAME = {
          "y": 48,
          "anim": "close"
         }
-       ]
+       ],
+       "terme": "court"
       },
       {
        "id": "e",
@@ -6427,7 +6473,8 @@ const GAME = {
           "y": 80
          }
         }
-       ]
+       ],
+       "terme": "court"
       }
      ],
      "recall": [
@@ -6482,7 +6529,7 @@ const GAME = {
         "e"
        ]
       ],
-      "hint": "Tu peux combiner une mesure d'urgence et une mesure de fond."
+      "hint": "Une réponse pour le court terme, une pour le long terme."
      }
     },
     {
@@ -7559,7 +7606,8 @@ const GAME = {
          "y": 26,
          "anim": "appear"
         }
-       ]
+       ],
+       "terme": "court"
       },
       {
        "id": "b",
@@ -7589,7 +7637,8 @@ const GAME = {
          "y": 27,
          "anim": "pulse"
         }
-       ]
+       ],
+       "terme": "long"
       },
       {
        "id": "c",
@@ -7619,7 +7668,8 @@ const GAME = {
          "y": 31,
          "anim": "appear"
         }
-       ]
+       ],
+       "terme": "long"
       },
       {
        "id": "d",
@@ -7649,7 +7699,8 @@ const GAME = {
          "y": 26,
          "anim": "fade"
         }
-       ]
+       ],
+       "terme": "long"
       }
      ],
      "multi": {
@@ -7672,7 +7723,7 @@ const GAME = {
         "d"
        ]
       ],
-      "hint": "Tu peux combiner une mesure d'urgence et une mesure de fond."
+      "hint": "Une réponse pour le court terme, une pour le long terme."
      }
     },
     {

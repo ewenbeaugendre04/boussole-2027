@@ -186,58 +186,67 @@ function openEvent(ev){
   var major = ev.kind === 'majeur', vis = visibleChoices(ev), M = multiOf(ev);
   if(M) M.pairs = M.pairs.map(function(p){ return p.filter(function(id){ return vis.some(function(c){ return c.id === id; }); }); }).filter(function(p){ return p.length >= 2; });
   if(M && !M.pairs.length) M = null;
+  /* une seule réponse, sauf événements « multi » : une réponse à court terme + une à long terme */
+  var G = null;
+  if(M){
+    var cIds = [], lIds = [];
+    M.pairs.forEach(function(p){ if(cIds.indexOf(p[0]) < 0) cIds.push(p[0]); p.slice(1).forEach(function(id){ if(lIds.indexOf(id) < 0) lIds.push(id); }); });
+    lIds = lIds.filter(function(id){ return cIds.indexOf(id) < 0; });
+    var tagged = vis.some(function(c){ return c.terme; });
+    var inL = tagged ? function(c){ return c.terme === 'long'; } : function(c){ return lIds.indexOf(c.id) >= 0; };
+    var inC = function(c){ return !inL(c); };
+    vis = vis.filter(inC).concat(vis.filter(inL));
+    G = { grp:function(c){ return inL(c) ? 'long' : 'court'; } };
+  }
   applyRecall(ev);
   var html = '<div class="chead">' + medal(ev.sector, major ? 'major' : '') + '<div class="meta"><b>' + (major ? 'Événement majeur' : 'Au quotidien') + '</b><br>' + esc(regionLabel(ev.region) || 'Tout le pays') + ', ' + esc(sectorLabel(ev.sector)) + '</div></div>' + recallHtml(ev) +
     '<h2 class="ctitle">' + esc(ev.title) + '</h2><p class="ctext">' + esc(evText(ev)) + '</p>' + realHtml(ev.real) +
     (ev.context ? '<details class="ctx"><summary>Ce qu\'il faut savoir</summary><p>' + esc(ev.context) + '</p></details>' : '') +
-    (M ? '<div class="mhint"><span class="mh-k">Deux réponses possibles</span>' + esc(M.hint || 'Tu peux combiner deux réponses compatibles.') + '<small>Coche le rond de chaque réponse, jusqu\'à ' + M.max + '.</small></div>' : '') +
+    (G ? '<div class="mhint"><span class="mh-k">Deux décisions</span>Choisissez une réponse pour le court terme, puis une pour le long terme.</div>' : '') +
     '<div class="choices" role="list">' + vis.map(function(ch, i){
-      var pk = M && M.pairs.some(function(p){ return p.indexOf(ch.id) >= 0; });
-      return '<button class="choice' + (pk ? ' pickable' : '') + '" role="listitem" aria-expanded="false" data-i="' + i + '" data-cid="' + esc(ch.id) + '">' + (pk ? '<span class="mpick" role="checkbox" aria-checked="false" tabindex="0" aria-label="Cocher : ' + esc(choiceLabel(ch)) + '"></span>' : '') + '<span class="cl">' + esc(choiceLabel(ch)) + '</span>' + termLine(ch) + '<div class="det">' + termDetail(ch) +
+      var pk = false, gh = '';
+      if(G){ var g = G.grp(ch), pg = i ? G.grp(vis[i - 1]) : ''; if(g !== pg) gh = '<div class="mgrp">' + (g === 'long' ? 'Long terme : une réponse' : 'Court terme : une réponse') + '</div>'; }
+      return gh + '<button class="choice" role="listitem" aria-expanded="false" data-i="' + i + '" data-cid="' + esc(ch.id) + '"' + (G ? ' data-g="' + G.grp(ch) + '"' : '') + '>' + '<span class="cl">' + esc(choiceLabel(ch)) + '</span>' + termLine(ch) + '<div class="det">' + termDetail(ch) +
         '<div class="pm"><span class="sg" aria-hidden="true">+</span><div><div class="pl">Ce que ça peut apporter</div>' + esc(ch.plus || '') + '</div></div>' +
         '<div class="pm"><span class="sg" aria-hidden="true">−</span><div><div class="pl">Ce que ça peut coûter</div>' + esc(ch.minus || '') + '</div></div>' +
         '<div class="chips">' + budgetChips(ch.budget, ch.once, ch.budget_note) + indChips(ch.ind) + '</div>' +
-        '<div class="confirm-row"><span class="btn brass pressable confirm" role="button" tabindex="0" data-ok="' + i + '">Choisir ceci</span></div>' +
+        '<div class="confirm-row"><span class="btn brass pressable confirm" role="button" tabindex="0" data-ok="' + i + '">' + (G ? (G.grp(ch) === 'long' ? 'Retenir pour le long terme' : 'Retenir pour le court terme') : 'Choisir ceci') + '</span></div>' +
         '</div></button>';
-    }).join('') + '</div>' + (M ? '<div class="mbar" aria-live="polite"><span class="mmsg"></span><button class="btn brass pressable" id="mGo" disabled>Valider les 2 réponses</button></div>' : '');
+    }).join('') + '</div>' + (G ? '<div class="mbar" aria-live="polite"><span class="mmsg"></span><button class="btn brass pressable" id="mGo" disabled>Valider mes 2 décisions</button></div>' : '');
   if(!vis.length) html += '<button class="btn wide brass pressable" id="evAck">Compris</button>';
   var card = openCard(html, { anim:'flipin', label:ev.title, cls:'evcard', onClose:function(){ if(!S.decided[ev.id] && RUN.ev === ev) abortEvent(); } });
   var ack = card.querySelector('#evAck'); if(ack) ack.addEventListener('click', function(){ decide(ev, { id:'_', label:'Pris en compte' }, card); });
   card.querySelectorAll('.choice').forEach(function(btn){
     btn.addEventListener('click', function(e){
       var ok = e.target.closest('[data-ok]');
-      if(ok){ e.stopPropagation(); decide(ev, vis[+ok.getAttribute('data-ok')], card); return; }
-      if(e.target.closest('.mpick')){ e.stopPropagation(); togglePick(btn); return; }
+      if(ok){ e.stopPropagation(); if(G) pickIn(btn); else decide(ev, vis[+ok.getAttribute('data-ok')], card); return; }
       var open = btn.getAttribute('aria-expanded') === 'true';
       card.querySelectorAll('.choice').forEach(function(b){ b.setAttribute('aria-expanded', 'false'); });
       btn.setAttribute('aria-expanded', open ? 'false' : 'true');
       snd('tap'); vibe(6);
       if(!open) setTimeout(function(){ revealIn(card, btn); }, 40);
     });
-    btn.addEventListener('keydown', function(e){ var ok = e.target.closest && e.target.closest('[data-ok]'); if(ok && (e.key === 'Enter' || e.key === ' ')){ e.preventDefault(); e.stopPropagation(); decide(ev, vis[+ok.getAttribute('data-ok')], card); }
-      var pk = e.target.closest && e.target.closest('.mpick'); if(pk && (e.key === 'Enter' || e.key === ' ')){ e.preventDefault(); e.stopPropagation(); togglePick(btn); } });
+    btn.addEventListener('keydown', function(e){ var ok = e.target.closest && e.target.closest('[data-ok]'); if(ok && (e.key === 'Enter' || e.key === ' ')){ e.preventDefault(); e.stopPropagation(); if(G) pickIn(btn); else decide(ev, vis[+ok.getAttribute('data-ok')], card); } });
   });
-  /* deux réponses compatibles : on coche, on refuse les mélanges impossibles, puis on valide */
-  var picked = [], msgT = 0;
-  function say(t, bad){ var m = card.querySelector('.mmsg'); if(!m) return; m.textContent = t; m.classList.toggle('bad', !!bad); if(bad){ m.classList.remove('shake'); void m.offsetWidth; m.classList.add('shake'); clearTimeout(msgT); msgT = setTimeout(syncBar, 2200); } }
+  /* événement multi : une réponse par groupe (court terme, long terme), puis validation */
+  var sel = { court:null, long:null };
+  function say(t){ var m = card.querySelector('.mmsg'); if(m) m.textContent = t; }
   function syncBar(){
-    var go = card.querySelector('#mGo'); if(!go) return;
-    go.disabled = picked.length < 2; go.textContent = picked.length >= 2 ? 'Valider les ' + picked.length + ' réponses' : 'Valider les 2 réponses';
-    say(picked.length === 0 ? 'Aucune réponse cochée.' : picked.length === 1 ? 'Une réponse cochée : choisis-en une compatible, ou valide-la seule dans sa fiche.' : 'Combinaison compatible : les effets s\'additionnent.');
-    card.querySelector('.mbar').classList.toggle('ready', picked.length >= 2);
+    var go = card.querySelector('#mGo'); if(!go) return; var n = (sel.court ? 1 : 0) + (sel.long ? 1 : 0);
+    go.disabled = n < 1; go.textContent = n === 2 ? 'Valider mes 2 décisions' : 'Valider ma décision';
+    say(n === 0 ? 'Aucune réponse choisie.' : !sel.court ? 'Vous pouvez aussi choisir pour le court terme.' : !sel.long ? 'Vous pouvez aussi choisir pour le long terme.' : 'Les effets des deux décisions s\'additionnent.');
+    card.querySelector('.mbar').classList.toggle('ready', n >= 1);
   }
-  function togglePick(btn){
-    var id = btn.getAttribute('data-cid'), cb = btn.querySelector('.mpick'), at = picked.indexOf(id);
-    if(at >= 0){ picked.splice(at, 1); cb.setAttribute('aria-checked', 'false'); btn.classList.remove('picked'); snd('tap'); syncBar(); return; }
-    var next = picked.concat([id]);
-    if(next.length > M.max){ say('Pas plus de ' + M.max + ' réponses.', true); vibe([8, 40, 8]); return; }
-    if(!comboOK(M, next)){ say('Ces réponses ne vont pas ensemble.', true); vibe([8, 40, 8]); btn.classList.remove('nope'); void btn.offsetWidth; btn.classList.add('nope'); return; }
-    picked = next; cb.setAttribute('aria-checked', 'true'); btn.classList.add('picked'); snd('tap'); vibe(8); syncBar();
+  function pickIn(btn){
+    var g = btn.getAttribute('data-g') || 'court', id = btn.getAttribute('data-cid');
+    card.querySelectorAll('.choice[data-g="' + g + '"]').forEach(function(b){ b.classList.remove('picked'); });
+    sel[g] = sel[g] === id ? null : id; if(sel[g]) btn.classList.add('picked');
+    btn.setAttribute('aria-expanded', 'false'); snd('tap'); vibe(8); syncBar();
   }
-  if(M){ syncBar(); card.querySelector('#mGo').addEventListener('click', function(){
-    if(picked.length < 2 || !comboOK(M, picked)) return;
-    var order = vis.filter(function(c){ return picked.indexOf(c.id) >= 0; });
-    decide(ev, mergeChoices(order), card);
+  if(G){ syncBar(); card.querySelector('#mGo').addEventListener('click', function(){
+    if(!sel.court && !sel.long) return;
+    var order = vis.filter(function(c){ return c.id === sel.court || c.id === sel.long; });
+    decide(ev, order.length > 1 ? mergeChoices(order) : order[0], card);
   }); }
 }
 function decide(ev, ch, card){

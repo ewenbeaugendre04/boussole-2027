@@ -439,5 +439,13 @@
   "prompt": "petit immeuble de centre-ville",
   "credits": 4,
   "essais": 1
+ },
+ {
+  "id": "logo",
+  "categorie": "interface",
+  "url": "https://img.recraft.ai/2FUb5PMZP0ZATp6GSPCblrGhO0I1PHjvdlG-u3hbDHY/raw:1/plain/abs://prod/images/a2a36f2d-5f33-4baf-b5b4-fb588aee1770",
+  "prompt": "icône d appli : île isométrique + rose des vents",
+  "credits": 4,
+  "essais": 1
  }
 ]

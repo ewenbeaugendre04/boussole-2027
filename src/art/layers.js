@@ -154,6 +154,7 @@ function bakeDecor(){
       b[i].setAttribute('style', st); b[i].removeAttribute('class');
     }
     $('app').classList.remove('notrans');
+    if(typeof sprSvg === 'function' && SPR_READY) clone.insertAdjacentHTML('beforeend', sprSvg());
     clone.setAttribute('width', Math.round(r.width * sc)); clone.setAttribute('height', Math.round(r.height * sc));
     clone.setAttribute('xmlns', NS); clone.removeAttribute('id'); clone.removeAttribute('style');
     var url = URL.createObjectURL(new Blob([new XMLSerializer().serializeToString(clone)], { type:'image/svg+xml' }));

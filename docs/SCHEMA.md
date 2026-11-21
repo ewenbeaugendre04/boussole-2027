@@ -173,3 +173,7 @@ Quand un événement porte sur un sujet déjà traité, il rappelle le choix fai
 
 ## Réformes : jusqu'à 2 par semaine, 5 ou 6 proposées
 `day.offer` contient 5 ou 6 propositions ; le joueur peut en appliquer jusqu'à 2 par semaine (`GAME.rules.reforms_per_week = 2`).
+
+## 2.8 (21/11/2026)
+- `choice.terme` : `"court"` ou `"long"`, pour les événements `multi`. Le joueur retient au plus une réponse par groupe (court terme, long terme). Sans `multi`, une seule réponse.
+- `budget.dette_source` : source et date du chiffre de dette affiché.
