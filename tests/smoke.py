@@ -15,7 +15,7 @@ with sync_playwright() as p:
             weeks = pg.evaluate('typeof GAME !== "undefined" ? GAME.days.length : 0')
             audit = pg.evaluate('window.__boussole && window.__boussole.fxAudit ? window.__boussole.fxAudit(true).bad : -1')
             print(page, vp, 'semaines', weeks, 'objets mal placés', audit, 'erreurs', errs)
-            ok = ok and not errs and weeks == 16 and audit == 0
+            ok = ok and not errs and weeks == 20 and audit == 0
             pg.close()
     b.close()
 sys.exit(0 if ok else 1)

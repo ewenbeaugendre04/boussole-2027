@@ -5129,211 +5129,173 @@ const GAME = {
     {
      "id": "v25_vache_folle",
      "kind": "majeur",
-     "region": "national",
+     "region": "auvergne_rhone_alpes",
      "sector": "agriculture",
-     "title": "Vache folle : plus personne n'achète de bœuf",
-     "simple": "Une vache malade est repérée à l'abattoir. La viande du même troupeau a déjà été vendue en supermarché. Les Français ont peur : ils n'achètent presque plus de bœuf, et les cantines le retirent des menus.",
-     "expert": "Cas d'encéphalopathie spongiforme bovine (ESB) détecté à l'abattoir, retrait de lots déjà commercialisés, effondrement de la demande de viande bovine. Les farines animales, déjà interdites pour les bovins, restent utilisées pour les porcs et les volailles, avec un risque de contamination croisée.",
-     "context": "La maladie de la vache folle vient de farines fabriquées avec des restes d'animaux. Chez l'humain, une forme de la maladie de Creutzfeldt-Jakob lui est liée. Les éleveurs, eux, ne sont pas responsables de la crise mais en subissent le coût.",
+     "title": "Une maladie de la peau frappe les vaches des Alpes",
+     "simple": "Une maladie contagieuse des bovins, venue d'Italie, touche des élevages de Savoie. La règle impose d'abattre tout le troupeau touché. Les éleveurs sont sous le choc. Que faire ?",
+     "expert": "Foyers de dermatose nodulaire contagieuse (DNC), maladie virale transmise par insectes : dépeuplement total des foyers, zones réglementées, vaccination obligatoire autour des foyers et restrictions de mouvements des bovins.",
+     "context": "La maladie n'est pas dangereuse pour l'humain mais ruine les élevages et bloque les exportations. Abattre vite limite la propagation ; vacciner largement coûte et peut fermer certains marchés.",
      "real": {
-      "date": "Fin octobre à mi-novembre 2000",
-      "place": "Eure ; magasins d'une grande enseigne ; toute la France",
-      "fact": "Un bovin atteint de l'ESB a été conduit à l'abattoir par un négociant de l'Eure ; la viande d'animaux du même lot avait été vendue en grande surface. La consommation de bœuf s'est effondrée et le gouvernement a suspendu les farines animales dans l'alimentation de tous les animaux d'élevage.",
-      "figures": "Baisses hebdomadaires des achats de bœuf de 13 %, 24 %, 37 % puis 47 %. Les farines animales étaient déjà interdites pour les bovins depuis une décennie.",
+      "date": "29 juin 2025 (premier foyer) ; automne 2025 (extension)",
+      "place": "Savoie et Haute-Savoie, puis d'autres départements",
+      "fact": "Un premier foyer de dermatose nodulaire contagieuse a été confirmé dans un élevage de Savoie. L'État a imposé l'abattage des troupeaux touchés et une vaccination autour des foyers, ce qui a provoqué la colère d'éleveurs.",
+      "figures": "Vaccination obligatoire dans un rayon d'environ 50 km autour des foyers.",
       "sources": [
        {
-        "label": "Larousse, Journal de l'année : vache folle, la grande peur de l'an 2000",
-        "url": "https://www.larousse.fr/archives/journaux_annee/2001/124/vache_folle_la_grande_peur_de_l_an_2000"
+        "label": "Ministère de l'Agriculture : dermatose nodulaire contagieuse, foire aux questions",
+        "url": "https://www.agriculture.gouv.fr/dermatose-nodulaire-contagieuse-des-bovins-dnc-foire-aux-questions"
        },
        {
-        "label": "Universalis : interdiction des farines d'origine animale",
-        "url": "https://www.universalis.fr/encyclopedie/interdiction-des-farines-d-origine-animale/"
+        "label": "Réussir : un foyer de DNC confirmé dans un élevage en Savoie",
+        "url": "https://www.reussir.fr/lesmarches/un-foyer-de-dermatose-nodulaire-contagieuse-dnc-confirme-dans-un-elevage-bovin-en-savoie"
        }
       ]
      },
      "camera": {
-      "region": "national",
-      "x": 46,
-      "y": 30,
-      "zoom": 1.2
+      "region": "auvergne_rhone_alpes",
+      "x": 72,
+      "y": 56,
+      "zoom": 2.4
      },
      "fx": [
       {
        "obj": "troupeau",
-       "x": 38,
-       "y": 22,
-       "anim": "appear"
+       "x": 72,
+       "y": 56,
+       "anim": "pulse"
       },
       {
-       "obj": "supermarche",
-       "x": 52,
-       "y": 26,
+       "obj": "ferme",
+       "x": 73,
+       "y": 57,
        "anim": "appear",
-       "delay": 0.4
+       "delay": 0.3
       },
       {
-       "obj": "etiquette",
-       "x": 52,
-       "y": 22,
-       "anim": "appear",
-       "label": "Ventes de bœuf : -47 %",
-       "delay": 0.8
-      },
-      {
-       "obj": "ecole",
-       "x": 46,
-       "y": 36,
-       "anim": "close",
-       "delay": 1.1
+       "obj": "camion",
+       "x": 69,
+       "y": 56,
+       "anim": "move",
+       "to": {
+        "x": 72,
+        "y": 56
+       },
+       "delay": 0.6
       }
      ],
      "choices": [
       {
        "id": "a",
-       "label": "Interdire toutes les farines animales, pour tous les élevages",
-       "label_expert": "Suspension générale des farines animales pour toutes les espèces",
-       "plus": "Une règle claire qui rassure les acheteurs.",
-       "minus": "Il faut détruire les stocks et importer du soja.",
-       "budget": -0.5,
-       "axes": {
-        "soc": 1,
-        "eco": -1
-       },
-       "ind": {
-        "cohesion": 2,
-        "souverainete": -1
-       },
-       "real_note": "C'est ce qui a été décidé : suspension générale des farines animales pour tous les animaux d'élevage.",
-       "followup": "Les farines interdites s'entassent dans des entrepôts : il faut payer pour les brûler en cimenterie.",
-       "followup_in": 1,
-       "followup_budget": -0.1,
-       "fx": [
-        {
-         "obj": "usine_fermee",
-         "x": 40,
-         "y": 30,
-         "anim": "close"
-        },
-        {
-         "obj": "cargo",
-         "x": 2,
-         "y": 60,
-         "anim": "move",
-         "to": {
-          "x": 15,
-          "y": 50
-         },
-         "label": "Soja importé"
-        },
-        {
-         "obj": "etiquette",
-         "x": 40,
-         "y": 27,
-         "anim": "appear",
-         "label": "Farines interdites"
-        }
-       ],
-       "budget_note": "Destruction des stocks payée par l'État : le déficit augmente."
-      },
-      {
-       "id": "b",
-       "label": "Tester toutes les vaches avant la vente",
-       "label_expert": "Dépistage systématique de l'ESB à l'abattoir",
-       "plus": "Chaque bête malade est repérée à temps.",
-       "minus": "Des tests chers, des abattoirs ralentis.",
-       "budget": -0.4,
+       "label": "Abattre tout le troupeau touché, comme la règle le prévoit",
+       "label_expert": "Dépeuplement total des foyers et zones réglementées",
+       "plus": "La maladie s'arrête plus vite.",
+       "minus": "Des éleveurs perdent tout leur troupeau.",
+       "budget": -0.1,
        "axes": {
         "soc": 1
        },
        "ind": {
-        "cohesion": 1,
-        "services": 1
+        "emploi": -1,
+        "cohesion": -1,
+        "souverainete": 1
        },
+       "budget_note": "Indemnités d'abattage : le déficit augmente (estimation du jeu).",
        "fx": [
-        {
-         "obj": "loupe",
-         "x": 38,
-         "y": 22,
-         "anim": "pulse"
-        },
         {
          "obj": "troupeau",
-         "x": 38,
-         "y": 22,
-         "anim": "move",
-         "to": {
-          "x": 44,
-          "y": 26
-         }
-        }
-       ],
-       "budget_note": "Tests payés par l'État : le déficit augmente."
-      },
-      {
-       "id": "c",
-       "label": "Indemniser les éleveurs et rassurer par une campagne",
-       "label_expert": "Indemnisation des éleveurs et campagne d'information sanitaire",
-       "plus": "Les fermes tiennent le temps que la peur passe.",
-       "minus": "Beaucoup d'argent public, sans lever le doute.",
-       "budget": -0.3,
-       "once": -0.2,
-       "axes": {
-        "eco": -1
-       },
-       "ind": {
-        "emploi": 1,
-        "cohesion": 1
-       },
-       "fx": [
-        {
-         "obj": "euro_flux",
-         "x": 52,
-         "y": 26,
-         "anim": "flow",
-         "to": {
-          "x": 38,
-          "y": 22
-         }
+         "x": 72,
+         "y": 56,
+         "anim": "fade"
         },
         {
          "obj": "ferme",
-         "x": 36,
-         "y": 24,
-         "anim": "pulse"
+         "x": 73,
+         "y": 57,
+         "anim": "close"
         }
-       ],
-       "budget_note": "Indemnités et campagne payées par l'État : le déficit augmente."
+       ]
+      },
+      {
+       "id": "b",
+       "label": "Vacciner tous les bovins du pays",
+       "label_expert": "Vaccination généralisée du cheptel bovin",
+       "plus": "Les élevages sont protégés partout.",
+       "minus": "Des exportations bloquées pendant des mois.",
+       "budget": -0.3,
+       "axes": {
+        "soc": -1
+       },
+       "ind": {
+        "services": 1,
+        "emploi": -1
+       },
+       "budget_note": "Achat des vaccins : le déficit augmente (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "cabinet_medical",
+         "x": 71,
+         "y": 55,
+         "anim": "appear"
+        },
+        {
+         "obj": "troupeau",
+         "x": 72,
+         "y": 56,
+         "anim": "appear"
+        }
+       ]
+      },
+      {
+       "id": "c",
+       "label": "N'abattre que les bêtes malades et vacciner autour",
+       "label_expert": "Abattage partiel et vaccination en anneau",
+       "plus": "Les éleveurs gardent une partie des bêtes.",
+       "minus": "Un risque que le virus circule plus longtemps.",
+       "budget": 0,
+       "axes": {
+        "soc": -1
+       },
+       "ind": {
+        "cohesion": 1
+       },
+       "budget_note": "Vaccins fournis par la banque européenne de vaccins : pas d'effet sur le déficit (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "troupeau",
+         "x": 72,
+         "y": 56,
+         "anim": "pulse"
+        },
+        {
+         "obj": "cabinet_medical",
+         "x": 71,
+         "y": 55,
+         "anim": "appear"
+        }
+       ]
       },
       {
        "id": "d",
-       "label": "Payer les contrôles par une taxe sur la viande vendue",
-       "label_expert": "Taxe d'équarrissage sur les ventes de viande",
-       "plus": "Les contrôles se font sans creuser le déficit.",
-       "minus": "La viande coûte un peu plus cher en rayon.",
-       "budget": 0.3,
+       "label": "Faire payer les contrôles par une cotisation des filières",
+       "label_expert": "Cotisation interprofessionnelle pour le fonds sanitaire",
+       "plus": "L'État dépense moins.",
+       "minus": "Le prix de la viande augmente un peu.",
+       "budget": 0.1,
        "axes": {
-        "eco": -1
+        "eco": 1
        },
        "ind": {
-        "pouvoir_achat": -1,
-        "services": 1
+        "pouvoir_achat": -1
        },
-       "real_note": "Une taxe sur les achats de viande finançait déjà l'élimination des carcasses (service public de l'équarrissage).",
+       "budget_note": "Cotisation des filières : le déficit baisse (estimation du jeu).",
        "fx": [
         {
          "obj": "pieces",
-         "x": 52,
-         "y": 26,
+         "x": 72,
+         "y": 56,
          "anim": "rise"
-        },
-        {
-         "obj": "loupe",
-         "x": 38,
-         "y": 22,
-         "anim": "pulse"
         }
-       ],
-       "budget_note": "Une taxe paie les contrôles : le déficit baisse."
+       ]
       },
       {
        "id": "e",
@@ -5350,31 +5312,25 @@ const GAME = {
         "emploi": 1,
         "pouvoir_achat": -1
        },
-       "requires": {
-        "event": "v22_mercosur",
-        "choice": "b"
-       },
        "fx": [
         {
          "obj": "ferme",
-         "x": 36,
-         "y": 24,
+         "x": 73,
+         "y": 57,
          "anim": "pulse"
-        },
-        {
-         "obj": "ferme",
-         "x": 40,
-         "y": 27,
-         "anim": "grow"
         }
-       ]
+       ],
+       "requires": {
+        "event": "v22_mercosur",
+        "choice": "b"
+       }
       }
      ],
      "recall": [
       {
        "event": "v22_mercosur",
        "choice": "a",
-       "text": "Il y a quatre semaines, tu as voté contre l'accord avec l'Amérique du Sud : la viande importée ne s'ajoutera pas à la crise.",
+       "text": "Il y a quatre semaines, vous avez voté contre l'accord avec l'Amérique du Sud : la viande importée ne s'ajoutera pas à la crise sanitaire.",
        "ind": {
         "cohesion": 1
        }
@@ -5382,17 +5338,17 @@ const GAME = {
       {
        "event": "v22_mercosur",
        "choice": "b",
-       "text": "Il y a quatre semaines, tu as obtenu la clause de sauvegarde de l'accord : tu peux la déclencher si la viande importée afflue pendant la crise."
+       "text": "Il y a quatre semaines, vous avez obtenu la clause de sauvegarde de l'accord : vous pouvez la déclencher si la viande importée afflue pendant la crise sanitaire."
       },
       {
        "event": "v22_mercosur",
        "choice": "c",
-       "text": "Il y a quatre semaines, tu as versé des aides d'urgence aux éleveurs : une deuxième crise en un mois, et les éleveurs demandent de nouveau de l'aide."
+       "text": "Il y a quatre semaines, vous avez versé des aides d'urgence aux éleveurs : une deuxième crise en un mois, et les éleveurs demandent de nouveau de l'aide."
       },
       {
        "event": "v22_mercosur",
        "choice": "d",
-       "text": "Il y a quatre semaines, tu as joué l'accord commercial : la viande importée arrive au moment où les Français fuient le bœuf.",
+       "text": "Il y a quatre semaines, vous avez joué l'accord commercial : la viande importée arrive alors que les éleveurs perdent leurs troupeaux.",
        "ind": {
         "emploi": -1
        }
@@ -6121,237 +6077,176 @@ const GAME = {
     {
      "id": "v25_lothar",
      "kind": "majeur",
-     "region": "national",
+     "region": "hauts_de_france",
      "sector": "energie",
-     "title": "Deux tempêtes coupent le courant à des millions de foyers",
-     "simple": "Deux tempêtes traversent le pays coup sur coup, avec des vents à près de 200 km/h. Des arbres tombent sur les routes et les lignes électriques. Des millions de familles n'ont plus de lumière ni de chauffage, parfois pendant des jours.",
-     "expert": "Tempêtes extratropicales successives : chute de pylônes haute tension, destruction de milliers de kilomètres de lignes aériennes de distribution, chablis massifs. Mobilisation d'équipes venues d'autres régions et de pays voisins, débat sur l'enfouissement des réseaux.",
-     "context": "Une ligne aérienne coûte beaucoup moins cher qu'une ligne enterrée, mais elle tombe avec les arbres. Les forêts abattues mettent des dizaines d'années à repousser, et le bois tombé doit être sorti vite avant de pourrir.",
+     "title": "Le Nord sous l'eau pendant des semaines",
+     "simple": "Dans le Nord, la pluie ne s'arrête pas. Des villages sont inondés deux fois en deux mois. Des familles ont tout perdu. Comment les aider et éviter que cela recommence ?",
+     "expert": "Inondations répétées dans le bassin de l'Aa et de la Liane : état de catastrophe naturelle, entretien des wateringues (réseau de canaux de drainage), relogement et prévention.",
+     "context": "Dans le Nord, une partie des terres est sous le niveau de la mer et drainée par des canaux. Les entretenir et les moderniser coûte cher ; ne rien faire expose à de nouvelles crues.",
      "real": {
-      "date": "26 au 28 décembre 1999",
-      "place": "Toute la France, surtout le nord, l'est et le sud-ouest",
-      "fact": "Deux tempêtes successives, Lothar puis Martin, ont traversé la France. Elles ont fait 92 morts dans le pays, privé 3,5 millions de foyers d'électricité et abattu des forêts entières.",
-      "figures": "92 morts en France (140 en Europe) ; 3,5 millions de foyers sans courant ; environ 97 millions de m³ de bois abattu, près de 5 % du stock forestier ; 9 à 15 Md€ de dégâts.",
+      "date": "Novembre 2023 à janvier 2024",
+      "place": "Pas-de-Calais, vallée de l'Aa",
+      "fact": "Des pluies exceptionnelles ont provoqué des inondations à répétition dans le Pas-de-Calais. L'État a reconnu l'état de catastrophe naturelle et mis en place des aides pour les particuliers et les entreprises.",
+      "figures": "Des centaines de communes reconnues en catastrophe naturelle.",
       "sources": [
        {
-        "label": "Notre-planete.info : les tempêtes de fin décembre en France",
-        "url": "https://www.notre-planete.info/terre/risques_naturels/tempetes-1999-France.php"
+        "label": "Ministère de l'Économie : dispositif de soutien après les inondations du Nord-Pas-de-Calais",
+        "url": "https://www.economie.gouv.fr/actualites/inondations-nord-pas-de-calais-dispositif-soutien-particuliers-entreprises"
        },
        {
-        "label": "Universalis : tempêtes en France",
-        "url": "https://www.universalis.fr/encyclopedie/tempetes-en-france/"
+        "label": "Ministère de la Transition écologique : comité de suivi des inondations",
+        "url": "https://www.ecologie.gouv.fr/comite-suivi-des-inondations-gouvernement-poursuit-laccompagnement-des-sinistres-du-nord-pas-calais"
        }
       ]
      },
      "camera": {
-      "region": "national",
-      "x": 54,
-      "y": 38,
-      "zoom": 1.1
+      "region": "hauts_de_france",
+      "x": 52,
+      "y": 8,
+      "zoom": 2.4
      },
      "fx": [
       {
-       "obj": "tempete",
-       "x": 30,
-       "y": 30,
-       "anim": "move",
-       "to": {
-        "x": 80,
-        "y": 25
-       }
-      },
-      {
-       "obj": "pylone",
-       "x": 58,
-       "y": 30,
-       "anim": "shake",
-       "delay": 0.4
-      },
-      {
-       "obj": "foret",
-       "x": 72,
-       "y": 32,
-       "anim": "shake",
-       "count": 3,
-       "delay": 0.7
+       "obj": "inondation",
+       "x": 52,
+       "y": 9,
+       "anim": "appear"
       },
       {
        "obj": "maison",
-       "x": 46,
-       "y": 40,
-       "anim": "close",
-       "count": 3,
-       "delay": 1
+       "x": 53,
+       "y": 9,
+       "anim": "shake",
+       "delay": 0.3
       },
       {
-       "obj": "etiquette",
-       "x": 52,
-       "y": 44,
-       "anim": "appear",
-       "label": "3,5 millions de foyers sans courant",
-       "delay": 1.3
+       "obj": "orage",
+       "x": 50,
+       "y": 7,
+       "anim": "pulse",
+       "delay": 0.5
       }
      ],
      "choices": [
       {
        "id": "a",
-       "label": "Enterrer les lignes électriques les plus exposées",
-       "label_expert": "Programme d'enfouissement des lignes, aides publiques et tarif de réseau",
-       "plus": "Le courant résiste mieux aux prochaines tempêtes.",
-       "minus": "Un chantier énorme, payé sur les factures.",
-       "budget": -1.5,
+       "label": "Racheter les maisons les plus exposées",
+       "label_expert": "Acquisition amiable des biens exposés via le fonds Barnier",
+       "plus": "Les familles quittent les zones à risque.",
+       "minus": "Un coût élevé et des villages qui se vident.",
+       "budget": -0.4,
        "axes": {
         "eco": -1
        },
        "ind": {
-        "services": 3,
-        "emploi": 1,
-        "pouvoir_achat": -1
+        "cohesion": 1,
+        "services": 1
        },
-       "real_note": "Après ces tempêtes, un programme de sécurisation du réseau a été lancé, avec davantage de lignes enterrées.",
+       "budget_note": "Rachats par le fonds de prévention : le déficit augmente (estimation du jeu).",
        "fx": [
         {
-         "obj": "chantier_grue",
-         "x": 58,
-         "y": 30,
-         "anim": "grow"
-        },
-        {
-         "obj": "pylone",
-         "x": 58,
-         "y": 30,
+         "obj": "maison",
+         "x": 53,
+         "y": 9,
          "anim": "fade"
         },
         {
-         "obj": "maison",
-         "x": 46,
-         "y": 40,
-         "anim": "appear",
-         "count": 3
+         "obj": "champ",
+         "x": 53,
+         "y": 9,
+         "anim": "appear"
         }
        ],
-       "budget_note": "Part publique des travaux, le reste sur les factures : le déficit augmente.",
        "terme": "long"
       },
       {
        "id": "b",
-       "label": "Appeler l'armée et des équipes de toute l'Europe",
-       "label_expert": "Mobiliser l'armée et le mécanisme européen de protection civile",
-       "plus": "La lumière revient plus vite chez les gens.",
-       "minus": "Coûteux, et le réseau reste aussi fragile.",
+       "label": "Envoyer l'armée et des pompes en urgence",
+       "label_expert": "Mobilisation des moyens militaires et de sécurité civile",
+       "plus": "Des secours rapides et visibles.",
+       "minus": "Une aide qui ne règle pas le fond.",
        "budget": 0,
-       "once": -0.5,
        "axes": {
-        "eu": -1
+        "soc": 1
        },
        "ind": {
-        "cohesion": 2,
-        "services": 1
+        "cohesion": 1
        },
        "fx": [
         {
          "obj": "camion",
-         "x": 90,
-         "y": 14,
+         "x": 50,
+         "y": 10,
          "anim": "move",
          "to": {
-          "x": 58,
-          "y": 30
-         },
-         "count": 4
+          "x": 52,
+          "y": 9
+         }
         },
         {
-         "obj": "drapeau_ue",
-         "x": 63,
-         "y": 3,
+         "obj": "ambulance",
+         "x": 54,
+         "y": 10,
          "anim": "appear"
-        },
-        {
-         "obj": "maison",
-         "x": 46,
-         "y": 40,
-         "anim": "appear",
-         "count": 3
         }
        ],
-       "budget_note": "Renforts payés une fois : le déficit augmente une fois.",
        "terme": "court"
       },
       {
        "id": "c",
-       "label": "Aider à sortir le bois tombé et à replanter",
-       "label_expert": "Plan chablis : aides au débardage, au stockage et au reboisement",
-       "plus": "Le bois est sauvé et les forêts repoussent.",
-       "minus": "Les prix du bois s'effondrent pour des années.",
+       "label": "Aider les communes à curer les canaux",
+       "label_expert": "Fonds d'urgence pour l'entretien des wateringues",
+       "plus": "L'eau s'évacue plus vite.",
+       "minus": "Des travaux à refaire chaque année.",
        "budget": -0.1,
-       "once": -0.5,
        "axes": {
         "env": -1
        },
        "ind": {
-        "emploi": 1,
-        "co2": -1
+        "services": 1
        },
+       "budget_note": "Subventions aux communes : le déficit augmente (estimation du jeu).",
        "fx": [
         {
-         "obj": "camion",
-         "x": 72,
-         "y": 32,
-         "anim": "move",
-         "to": {
-          "x": 60,
-          "y": 40
-         }
-        },
-        {
-         "obj": "foret",
-         "x": 72,
-         "y": 32,
-         "anim": "grow"
+         "obj": "chantier_grue",
+         "x": 51,
+         "y": 8,
+         "anim": "appear"
         }
        ],
-       "budget_note": "Aides aux forestiers, puis replantation : le déficit augmente.",
        "terme": "court"
       },
       {
        "id": "d",
-       "label": "Faire payer la reconstruction par une surprime d'assurance",
-       "label_expert": "Relever la surprime catastrophes naturelles des contrats d'assurance",
-       "plus": "La réparation se fait sans creuser le déficit.",
-       "minus": "Tous les assurés paient leur contrat plus cher.",
+       "label": "Relever la surprime d'assurance catastrophes naturelles",
+       "label_expert": "Hausse du taux de la surprime CatNat",
+       "plus": "Le régime d'indemnisation reste solide.",
+       "minus": "Les contrats d'assurance coûtent plus cher.",
        "budget": 0.4,
        "axes": {
         "eco": 1
        },
        "ind": {
-        "pouvoir_achat": -1,
-        "services": 1
+        "pouvoir_achat": -1
        },
+       "budget_note": "La surprime finance les indemnisations : le déficit baisse (estimation du jeu).",
        "fx": [
         {
          "obj": "pieces",
-         "x": 46,
-         "y": 40,
+         "x": 52,
+         "y": 8,
          "anim": "rise"
-        },
-        {
-         "obj": "maison",
-         "x": 46,
-         "y": 40,
-         "anim": "appear",
-         "count": 3
         }
        ],
-       "budget_note": "Surprime versée au régime public de réassurance : le déficit baisse.",
        "terme": "long"
       },
       {
        "id": "e",
-       "label": "Indemniser chaque foyer privé de courant plus de cinq heures",
-       "label_expert": "Renforcer l'indemnisation automatique des coupures longues",
-       "plus": "Les foyers sont remboursés sans démarche.",
-       "minus": "Le gestionnaire du réseau paie, tarifs à la hausse.",
-       "budget": 0,
+       "label": "Indemniser chaque foyer inondé sans attendre l'assurance",
+       "label_expert": "Aide forfaitaire d'urgence de l'État aux sinistrés",
+       "plus": "Les familles peuvent repartir vite.",
+       "minus": "Une dépense lourde, sans prévention.",
+       "budget": -0.1,
        "axes": {
         "eco": -1
        },
@@ -6359,30 +6254,13 @@ const GAME = {
         "pouvoir_achat": 1,
         "cohesion": 1
        },
+       "budget_note": "Aide d'urgence : le déficit augmente (estimation du jeu).",
        "fx": [
         {
-         "obj": "camion",
-         "x": 90,
-         "y": 14,
-         "anim": "move",
-         "to": {
-          "x": 58,
-          "y": 30
-         },
-         "count": 4
-        },
-        {
-         "obj": "drapeau_ue",
-         "x": 63,
-         "y": 3,
-         "anim": "appear"
-        },
-        {
          "obj": "maison",
-         "x": 46,
-         "y": 40,
-         "anim": "appear",
-         "count": 3
+         "x": 53,
+         "y": 9,
+         "anim": "appear"
         }
        ],
        "terme": "court"
@@ -6392,7 +6270,7 @@ const GAME = {
       {
        "event": "v22_xynthia",
        "choice": "a",
-       "text": "Il y a deux semaines, après la tempête en Vendée, tu as racheté les maisons les plus exposées : cette fois, la côte compte moins de sinistrés.",
+       "text": "Il y a deux semaines, après la tempête en Vendée, vous avez racheté les maisons les plus exposées : la méthode est rodée pour le Nord.",
        "ind": {
         "cohesion": 1
        }
@@ -6400,17 +6278,17 @@ const GAME = {
       {
        "event": "v22_xynthia",
        "choice": "b",
-       "text": "Il y a deux semaines, tu as fait rehausser les digues : elles tiennent sur la côte, mais le vent frappe surtout les lignes électriques à l'intérieur."
+       "text": "Il y a deux semaines, vous avez fait rehausser les digues : elles tiennent sur la côte, mais l'eau monte cette fois par les rivières de l'intérieur."
       },
       {
        "event": "v22_xynthia",
        "choice": "c",
-       "text": "Il y a deux semaines, tu as interdit de construire en zone de submersion : la règle protège la côte, pas les forêts ni les réseaux électriques."
+       "text": "Il y a deux semaines, vous avez interdit de construire en zone de submersion : la règle protège la côte, pas les villages de l'intérieur."
       },
       {
        "event": "v22_xynthia",
        "choice": "d",
-       "text": "Il y a deux semaines, tu as indemnisé vite les sinistrés de Vendée : les assureurs, déjà sollicités, relèvent leurs tarifs.",
+       "text": "Il y a deux semaines, vous avez indemnisé vite les sinistrés de Vendée : les assureurs, déjà sollicités, relèvent leurs tarifs.",
        "ind": {
         "pouvoir_achat": -1
        }
@@ -10241,7 +10119,7 @@ const GAME = {
       {
        "event": "v25_vache_folle",
        "choice": "a",
-       "text": "Il y a quelques semaines, vous avez interdit toutes les farines animales : la chaîne de contrôle alimentaire est plus réactive.",
+       "text": "Il y a quelques semaines, vous avez fait abattre les troupeaux malades : les services vétérinaires savent agir vite.",
        "ind": {
         "services": 1
        }
@@ -10249,12 +10127,12 @@ const GAME = {
       {
        "event": "v25_vache_folle",
        "choice": "b",
-       "text": "Il y a quelques semaines, vous avez fait tester toutes les vaches : les laboratoires vétérinaires sont débordés."
+       "text": "Il y a quelques semaines, vous avez fait vacciner tous les bovins : les laboratoires vétérinaires sont débordés."
       },
       {
        "event": "v25_vache_folle",
        "choice": "c",
-       "text": "Il y a quelques semaines, vous avez misé sur une campagne pour rassurer : les familles se méfient cette fois de ces discours.",
+       "text": "Il y a quelques semaines, vous avez choisi un abattage partiel : les éleveurs vous font davantage confiance.",
        "ind": {
         "cohesion": -1
        }
@@ -10262,7 +10140,7 @@ const GAME = {
       {
        "event": "v25_vache_folle",
        "choice": "d",
-       "text": "Il y a quelques semaines, vous avez financé les contrôles par une taxe sur la viande : cette recette paie aussi des inspecteurs.",
+       "text": "Il y a quelques semaines, vous avez fait payer les contrôles par les filières : cette recette paie aussi des inspecteurs.",
        "ind": {
         "services": 1
        }
@@ -11872,255 +11750,227 @@ const GAME = {
     {
      "id": "v27_erika",
      "kind": "majeur",
-     "region": "pays_de_la_loire",
+     "region": "nouvelle_aquitaine",
      "sector": "transports",
-     "title": "Un pétrolier se brise, la marée noire touche les plages",
-     "simple": "Un vieux pétrolier se casse en deux au large de la Bretagne. Des milliers de tonnes de fioul lourd arrivent sur les plages. Des bénévoles ramassent le pétrole à la main, des oiseaux meurent par milliers.",
-     "expert": "Naufrage d'un pétrolier sous pavillon de complaisance affrété par une major : pollution de quelque 400 km de côtes, plan Polmar-Terre, débat sur la responsabilité de l'affréteur, préjudice écologique reconnu ensuite par la Cour de cassation.",
-     "context": "Beaucoup de navires sont immatriculés dans des pays aux contrôles faibles. Après ce naufrage, l'Europe a interdit les pétroliers à simple coque. La justice a ensuite reconnu le préjudice fait à la nature.",
+     "title": "La pêche fermée un mois pour sauver les dauphins",
+     "simple": "Des centaines de dauphins meurent chaque hiver dans les filets au large de l'Atlantique. La justice impose de fermer la pêche pendant un mois. Les pêcheurs restent à quai. Que faire ?",
+     "expert": "Fermeture spatio-temporelle de la pêche au filet et au chalut pélagique dans le golfe de Gascogne pour réduire les captures accidentelles de petits cétacés, avec indemnisation par le fonds européen pour les affaires maritimes.",
+     "context": "Les dauphins sont protégés par le droit européen. Fermer la pêche les protège mais coûte aux pêcheurs, aux criées et aux poissonniers ; équiper les bateaux de répulsifs coûte aussi.",
      "real": {
-      "date": "12 décembre 1999",
-      "place": "Au large du Finistère ; côtes du Finistère à la Charente-Maritime",
-      "fact": "Le pétrolier Erika s'est brisé en deux au large de la Bretagne, polluant environ 400 km de côtes. Des dizaines de milliers de bénévoles ont nettoyé les plages ; la justice a plus tard reconnu le préjudice écologique.",
-      "figures": "Environ 20 000 tonnes de fioul déversées ; 150 000 à 300 000 oiseaux morts selon les estimations ; environ 400 km de côtes souillées.",
+      "date": "22 janvier au 20 février 2024 (puis reconduite en 2025)",
+      "place": "Golfe de Gascogne, de la Bretagne au Pays basque",
+      "fact": "Sur décision du Conseil d'État, la pêche avec certains engins a été interdite pendant un mois dans le golfe de Gascogne pour protéger les dauphins. L'État et l'Union européenne ont indemnisé les pêcheurs.",
+      "figures": "Un mois de fermeture, indemnisée à hauteur d'une grande partie du chiffre d'affaires.",
       "sources": [
        {
-        "label": "Cedre : fiche sur le naufrage de l'Erika",
-        "url": "https://cedre.fr/en/resources/incident-information-sheets/erika"
+        "label": "Préfecture de Nouvelle-Aquitaine : les premiers pêcheurs indemnisés",
+        "url": "https://www.prefectures-regions.gouv.fr/nouvelle-aquitaine/Actualites/Fermeture-de-la-peche-dans-le-Golfe-de-Gascogne-les-premiers-pecheurs-indemnises-par-l-Etat"
        },
        {
-        "label": "Universalis : marée noire de l'Erika",
-        "url": "https://www.universalis.fr/encyclopedie/maree-noire-de-l-erika/"
+        "label": "Ministère de la Mer : captures accidentelles de petits cétacés",
+        "url": "https://mer.gouv.fr/captures-accidentelles-de-petits-cetaces-dans-le-golfe-de-gascogne"
        }
       ]
      },
      "camera": {
-      "region": "pays_de_la_loire",
-      "x": 19,
-      "y": 43,
+      "region": "nouvelle_aquitaine",
+      "x": 24,
+      "y": 56,
       "zoom": 2.2
      },
      "fx": [
       {
-       "obj": "cargo",
-       "x": 9,
-       "y": 45,
+       "obj": "bateau_peche",
+       "x": 13,
+       "y": 55,
        "anim": "shake"
       },
       {
-       "obj": "foule",
-       "x": 21,
-       "y": 42,
-       "anim": "appear",
-       "delay": 0.4
-      },
-      {
-       "obj": "camion",
+       "obj": "port",
        "x": 27,
-       "y": 41,
-       "anim": "move",
-       "to": {
-        "x": 22,
-        "y": 43
-       },
-       "delay": 0.7
+       "y": 55,
+       "anim": "appear",
+       "delay": 0.3
       },
       {
-       "obj": "etiquette",
-       "x": 20,
-       "y": 38,
+       "obj": "foule",
+       "x": 29,
+       "y": 56,
        "anim": "appear",
-       "label": "400 km de côtes souillées",
-       "delay": 1
+       "delay": 0.6
       }
      ],
      "recall": [
       {
-       "event": "v22_xynthia",
+       "event": "v26_brexit_peche",
        "choice": "a",
-       "text": "Après la tempête sur la côte, vous avez racheté les maisons les plus exposées : le littoral a moins d'habitations en première ligne."
+       "text": "Après l'accord avec Londres, vous aviez indemnisé les bateaux bloqués : les pêcheurs savent que l'État peut payer."
       },
       {
-       "event": "v22_xynthia",
+       "event": "v26_brexit_peche",
        "choice": "b",
-       "text": "Après la tempête sur la côte, vous avez rehaussé les digues : elles ne retiennent pas le pétrole."
+       "text": "Après l'accord avec Londres, vous aviez financé la casse de bateaux : la flotte est plus petite, la fermeture touche moins de navires."
       },
       {
-       "event": "v22_xynthia",
+       "event": "v26_brexit_peche",
        "choice": "c",
-       "text": "Après la tempête sur la côte, vous avez interdit de construire en zone inondable : les communes du littoral ont moins de recettes."
+       "text": "Après l'accord avec Londres, vous aviez bloqué les arrivages britanniques : les criées sont déjà fragiles."
       },
       {
-       "event": "v22_xynthia",
+       "event": "v26_brexit_peche",
        "choice": "d",
-       "text": "Après la tempête sur la côte, vous avez indemnisé vite : les habitants connaissent la marche à suivre.",
-       "ind": {
-        "cohesion": 1
-       }
+       "text": "Après l'accord avec Londres, vous aviez laissé l'Europe négocier : Bruxelles finance cette fois une partie des indemnités."
       },
       {
-       "event": "v22_xynthia",
+       "event": "v26_brexit_peche",
        "choice": "e",
-       "text": "Après la tempête sur la côte, vous avez augmenté la surprime catastrophes naturelles : la marée noire, elle, n'est pas couverte."
+       "text": "Après l'accord avec Londres, vous aviez saisi le tribunal de l'accord : les pêcheurs se demandent qui défend leurs intérêts ici."
       }
      ],
      "choices": [
       {
        "id": "a",
-       "label": "Mobiliser l'armée et les bénévoles pour nettoyer",
-       "label_expert": "Déclenchement du plan Polmar-Terre avec renfort militaire",
-       "plus": "Les plages sont nettoyées plus vite.",
-       "minus": "Coûteux, et risqué pour les bénévoles.",
-       "budget": 0,
-       "once": -0.15,
+       "label": "Fermer la pêche et indemniser les pêcheurs",
+       "label_expert": "Fermeture d'un mois et indemnisation par l'État et le fonds européen",
+       "plus": "Les dauphins sont protégés, les pêcheurs payés.",
+       "minus": "Un coût public chaque hiver.",
+       "budget": -0.08,
        "axes": {
-        "soc": 1
+        "env": -1
        },
        "ind": {
+        "co2": -1,
         "cohesion": 1
        },
-       "budget_note": "Dépenses de nettoyage avancées par l'État : le déficit augmente une fois (estimation du jeu).",
+       "budget_note": "Indemnités : le déficit augmente (estimation du jeu).",
        "fx": [
         {
-         "obj": "foule",
-         "x": 21,
-         "y": 42,
-         "anim": "appear",
-         "count": 2
+         "obj": "bateau_peche",
+         "x": 13,
+         "y": 55,
+         "anim": "appear"
         },
         {
-         "obj": "camion",
-         "x": 27,
-         "y": 41,
-         "anim": "move",
-         "to": {
-          "x": 22,
-          "y": 43
-         }
+         "obj": "pieces",
+         "x": 28,
+         "y": 56,
+         "anim": "rise"
         }
        ]
       },
       {
        "id": "b",
-       "label": "Faire payer l'armateur et l'affréteur pétrolier",
-       "label_expert": "Action en responsabilité contre armateur, affréteur et société de classification",
-       "plus": "Les pollueurs paient les dégâts.",
-       "minus": "Procès de dix ans, sommes incertaines.",
-       "budget": 0.1,
+       "label": "Équiper les bateaux de répulsifs et de caméras",
+       "label_expert": "Dispositifs acoustiques de dissuasion et caméras embarquées",
+       "plus": "La pêche continue presque normalement.",
+       "minus": "Des résultats incertains selon les scientifiques.",
+       "budget": 0,
        "axes": {
-        "env": -1,
-        "eco": -1
+        "env": 1
        },
        "ind": {
-        "cohesion": 1
+        "emploi": 1
        },
-       "budget_note": "Indemnités récupérées auprès des responsables : recette, le déficit baisse (estimation du jeu).",
+       "budget_note": "Équipements financés par le fonds européen pour la pêche : pas d'effet sur le déficit (estimation du jeu).",
        "fx": [
         {
-         "obj": "parlement",
-         "x": 23,
-         "y": 40,
-         "anim": "appear"
+         "obj": "bateau_peche",
+         "x": 13,
+         "y": 55,
+         "anim": "move",
+         "to": {
+          "x": 11,
+          "y": 58
+         }
         },
         {
-         "obj": "pieces",
-         "x": 21,
-         "y": 42,
-         "anim": "rise"
+         "obj": "antenne",
+         "x": 27,
+         "y": 55,
+         "anim": "appear"
         }
        ]
       },
       {
        "id": "c",
-       "label": "Interdire les vieux pétroliers dans nos eaux",
-       "label_expert": "Interdiction des pétroliers à simple coque dans la zone économique exclusive",
-       "plus": "Moins de risque de nouveau naufrage.",
-       "minus": "Le transport du pétrole coûte plus cher.",
-       "budget": 0,
+       "label": "Fermer sans indemniser",
+       "label_expert": "Fermeture sans compensation financière",
+       "plus": "Aucune dépense publique.",
+       "minus": "Des pêcheurs au bord de la faillite.",
+       "budget": 0.05,
        "axes": {
-        "env": -1,
-        "eu": 1
+        "eco": 1,
+        "env": -1
        },
        "ind": {
-        "pouvoir_achat": -1,
-        "souverainete": 1
+        "emploi": -2,
+        "cohesion": -1
        },
+       "budget_note": "Pas d'indemnités : le déficit baisse (estimation du jeu).",
        "fx": [
         {
-         "obj": "cargo",
-         "x": 9,
-         "y": 45,
-         "anim": "move",
-         "to": {
-          "x": 4,
-          "y": 58
-         }
+         "obj": "bateau_peche",
+         "x": 13,
+         "y": 55,
+         "anim": "appear"
         },
         {
-         "obj": "douane",
-         "x": 21,
-         "y": 44,
-         "anim": "appear"
+         "obj": "port",
+         "x": 27,
+         "y": 55,
+         "anim": "close"
         }
        ]
       },
       {
        "id": "d",
-       "label": "Taxer chaque tonne de pétrole débarquée pour un fonds marées noires",
-       "label_expert": "Contribution par tonne de pétrole débarquée affectée à un fonds national",
-       "plus": "Un fonds prêt pour la prochaine fois.",
-       "minus": "Le carburant coûte un peu plus cher.",
-       "budget": 0.08,
+       "label": "Demander à l'Europe d'assouplir la règle",
+       "label_expert": "Demande de révision des mesures de protection des cétacés",
+       "plus": "Les bateaux peuvent sortir.",
+       "minus": "Le risque d'une condamnation par la justice.",
+       "budget": 0.02,
        "axes": {
-        "env": -1,
-        "eco": -1
+        "eu": 2,
+        "env": 1
        },
        "ind": {
-        "pouvoir_achat": -1
+        "emploi": 1,
+        "co2": 1
        },
-       "budget_note": "Recette de la contribution : le déficit baisse (estimation du jeu).",
+       "budget_note": "Pas de fermeture à indemniser : le déficit baisse un peu (estimation du jeu).",
        "fx": [
         {
-         "obj": "pieces",
-         "x": 22,
-         "y": 44,
-         "anim": "rise"
-        },
-        {
-         "obj": "port",
-         "x": 23,
-         "y": 45,
-         "anim": "appear"
+         "obj": "bateau_peche",
+         "x": 13,
+         "y": 55,
+         "anim": "move",
+         "to": {
+          "x": 11,
+          "y": 58
+         }
         }
        ]
       },
       {
        "id": "e",
-       "label": "Indemniser le tourisme et la pêche touchés",
-       "label_expert": "Fonds d'aide aux professionnels du tourisme, de la pêche et des huîtres",
-       "plus": "Hôtels et pêcheurs passent la saison.",
-       "minus": "Une dépense de plus pour l'État.",
-       "budget": 0,
-       "once": -0.1,
+       "label": "Taxer le poisson vendu pour financer la protection",
+       "label_expert": "Taxe sur les premières ventes en criée",
+       "plus": "Une recette pour indemniser.",
+       "minus": "Le poisson coûte un peu plus cher.",
+       "budget": 0.04,
        "axes": {
         "eco": -1
        },
        "ind": {
-        "emploi": 1
+        "pouvoir_achat": -1
        },
-       "budget_note": "Aides publiques aux professionnels : le déficit augmente une fois (estimation du jeu).",
+       "budget_note": "Recette de la taxe : le déficit baisse (estimation du jeu).",
        "fx": [
         {
          "obj": "pieces",
-         "x": 22,
-         "y": 42,
+         "x": 27,
+         "y": 55,
          "anim": "rise"
-        },
-        {
-         "obj": "maison",
-         "x": 23,
-         "y": 43,
-         "anim": "appear"
         }
        ]
       }
@@ -14174,23 +14024,23 @@ const GAME = {
      "kind": "majeur",
      "region": "outre_mer",
      "sector": "sante",
-     "title": "Une épidémie transmise par les moustiques touche un habitant sur trois",
-     "simple": "Sur l'île de La Réunion, un virus transmis par le moustique tigre rend malade un tiers de la population. Fièvres, douleurs aux articulations : les hôpitaux débordent.",
-     "expert": "Épidémie de chikungunya transmise par Aedes albopictus : démoustication massive par insecticides, appui de l'armée, débat sur l'usage des pesticides, recherche vaccinale et effets sur le tourisme.",
+     "title": "Le chikungunya revient en force sur l'île de La Réunion",
+     "simple": "Sur l'île de La Réunion, un moustique transmet une maladie qui donne de fortes douleurs. Des dizaines de milliers d'habitants sont touchés. Un vaccin existe, mais pose question pour les plus âgés. Que faire ?",
+     "expert": "Épidémie de chikungunya transmise par Aedes albopictus : lutte antivectorielle, campagne de vaccination ciblée (Ixchiq) puis suspension de la recommandation chez les 65 ans et plus après des effets indésirables graves.",
      "context": "Le moustique tigre s'installe aussi en métropole. Supprimer les eaux stagnantes est la méthode la plus efficace. Les insecticides tuent aussi d'autres insectes.",
      "real": {
-      "date": "2005 à 2006",
-      "place": "La Réunion et Mayotte",
-      "fact": "Une épidémie de chikungunya a touché environ un tiers des habitants de La Réunion. L'État a mobilisé l'armée pour la démoustication et lancé des recherches sur la maladie.",
-      "figures": "Environ 266 000 personnes infectées sur quelque 770 000 habitants ; plus de 200 décès où le virus était mentionné.",
+      "date": "Janvier à mai 2025",
+      "place": "La Réunion",
+      "fact": "La Réunion a connu une forte épidémie de chikungunya, la première de cette ampleur depuis vingt ans. Une campagne de vaccination a été lancée, puis la recommandation a été suspendue pour les plus de 65 ans.",
+      "figures": "Plus de 44 000 cas confirmés au printemps.",
       "sources": [
        {
-        "label": "Santé publique France : l'épidémie de chikungunya à La Réunion et à Mayotte",
-        "url": "https://www.santepubliquefrance.fr/regions-et-territoires/ocean-indien/article/lepidemie-de-chikungunya-a-la-reunion-et-a-mayotte-france-2005-2006-le-contexte-et-les-questions-de"
+        "label": "Santé publique France : chikungunya à La Réunion, une épidémie en cours",
+        "url": "https://www.santepubliquefrance.fr/index.php/en/les-actualites/chikungunya-reunion-ongoing-outbreak-requires-everyones-vigilance"
        },
        {
-        "label": "Académie de médecine : le cas de l'épidémie de chikungunya dans l'océan Indien",
-        "url": "https://www.academie-medecine.fr/maladies-infectieuses-emergentes-le-cas-de-lepidemie-de-chikungunya-dans-locean-indien-2005-2006/"
+        "label": "ANSM : campagne vaccinale contre le chikungunya (Ixchiq)",
+        "url": "https://ansm.sante.fr/actualites/lansm-accompagne-la-campagne-vaccinale-contre-le-chikungunya-vaccin-ixchiq"
        }
       ]
      },
@@ -14202,32 +14052,28 @@ const GAME = {
      },
      "fx": [
       {
-       "obj": "moustique",
-       "x": 7,
-       "y": 90,
-       "anim": "pulse"
-      },
-      {
        "obj": "hopital",
        "x": 8,
        "y": 89,
-       "anim": "pulse",
-       "delay": 0.3
+       "anim": "pulse"
       },
       {
        "obj": "foule",
        "x": 6,
        "y": 91,
        "anim": "appear",
-       "delay": 0.6
+       "delay": 0.3
       },
       {
-       "obj": "etiquette",
+       "obj": "ambulance",
        "x": 7,
-       "y": 86,
-       "anim": "appear",
-       "label": "Un habitant sur trois",
-       "delay": 1
+       "y": 90,
+       "anim": "move",
+       "to": {
+        "x": 8,
+        "y": 89
+       },
+       "delay": 0.6
       }
      ],
      "choices": [
@@ -14259,7 +14105,7 @@ const GAME = {
          }
         },
         {
-         "obj": "moustique",
+         "obj": "foule",
          "x": 7,
          "y": 90,
          "anim": "fade"
@@ -14296,10 +14142,10 @@ const GAME = {
       },
       {
        "id": "c",
-       "label": "Financer la recherche d'un vaccin",
-       "label_expert": "Programme de recherche vaccinale avec les instituts publics",
-       "plus": "Une protection durable à l'avenir.",
-       "minus": "Rien avant plusieurs années.",
+       "label": "Vacciner en priorité les personnes fragiles",
+       "label_expert": "Campagne de vaccination ciblée et suivi des effets indésirables",
+       "plus": "Les plus exposés sont protégés vite.",
+       "minus": "Des effets indésirables chez les plus âgés.",
        "budget": -0.05,
        "axes": {
         "eco": -1
@@ -14564,6 +14410,2491 @@ const GAME = {
       }
      ]
     }
+   ]
+  },
+  {
+   "day": 17,
+   "season": "ete",
+   "title": "Des rails sabotés et des prix qui débordent",
+   "mood": "tendu",
+   "weather": "soleil",
+   "intro": "Des trains à l'arrêt en plein départ en vacances, une île qui proteste contre le prix des courses : l'été se tend.",
+   "events": [
+    {
+     "id": "v28_sabotage_tgv",
+     "kind": "majeur",
+     "region": "national",
+     "sector": "transports",
+     "title": "Incendies volontaires sur les lignes à grande vitesse",
+     "simple": "Dans la nuit, des câbles brûlent le long de plusieurs lignes de TGV. Des centaines de milliers de voyageurs restent à quai. Comment protéger le réseau ?",
+     "expert": "Actes de malveillance coordonnés contre les installations de signalisation de trois lignes à grande vitesse : saturation des circulations, enquête du parquet antiterroriste et question de la protection des infrastructures critiques.",
+     "context": "Le réseau ferré compte près de 28 000 km de voies, impossibles à surveiller partout. Protéger les points sensibles coûte cher ; ne rien faire expose à de nouvelles pannes.",
+     "real": {
+      "date": "26 juillet 2024",
+      "place": "Lignes Atlantique, Nord et Est",
+      "fact": "Quelques heures avant l'ouverture des Jeux de Paris, des incendies volontaires ont touché des installations de la SNCF sur trois lignes à grande vitesse. Le trafic a été très perturbé tout le week-end.",
+      "figures": "Environ 800 000 voyageurs touchés.",
+      "sources": [
+       {
+        "label": "Franceinfo : attaque massive sur le réseau TGV",
+        "url": "https://www.franceinfo.fr/economie/transports/sncf/attaque-massive-sur-le-reseau-tgv/"
+       },
+       {
+        "label": "Le Club des juristes : le parquet de Paris saisi de l'enquête",
+        "url": "https://www.leclubdesjuristes.com/en-bref/attaque-massive-contre-le-reseau-tgv-sncf-le-parquet-de-paris-saisi-de-lenquete-6727/"
+       }
+      ]
+     },
+     "camera": {
+      "region": "national",
+      "x": 50,
+      "y": 32,
+      "zoom": 1.3
+     },
+     "fx": [
+      {
+       "obj": "tgv",
+       "x": 48,
+       "y": 30,
+       "anim": "shake"
+      },
+      {
+       "obj": "incendie",
+       "x": 46,
+       "y": 33,
+       "anim": "smoke",
+       "delay": 0.3
+      },
+      {
+       "obj": "foule",
+       "x": 52,
+       "y": 26,
+       "anim": "appear",
+       "delay": 0.6
+      },
+      {
+       "obj": "voiture_police",
+       "x": 44,
+       "y": 34,
+       "anim": "move",
+       "to": {
+        "x": 46,
+        "y": 33
+       },
+       "delay": 0.9
+      }
+     ],
+     "choices": [
+      {
+       "id": "a",
+       "label": "Surveiller les lignes avec des drones et des agents",
+       "label_expert": "Plan de sûreté des infrastructures ferroviaires critiques (drones, agents)",
+       "plus": "Les points sensibles sont gardés.",
+       "minus": "Un coût annuel élevé pour la SNCF et l'État.",
+       "budget": -0.3,
+       "axes": {
+        "soc": 1
+       },
+       "ind": {
+        "services": 1,
+        "cohesion": 1
+       },
+       "budget_note": "Agents et équipements : le déficit augmente (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "voiture_police",
+         "x": 46,
+         "y": 33,
+         "anim": "appear"
+        },
+        {
+         "obj": "antenne",
+         "x": 48,
+         "y": 31,
+         "anim": "grow"
+        }
+       ]
+      },
+      {
+       "id": "b",
+       "label": "Doubler les câbles pour que le réseau tienne seul",
+       "label_expert": "Redondance et enfouissement des câbles de signalisation",
+       "plus": "Une panne locale ne bloque plus tout.",
+       "minus": "Des années de travaux sur les voies.",
+       "budget": -0.5,
+       "axes": {
+        "env": -1
+       },
+       "ind": {
+        "services": 2,
+        "emploi": 1
+       },
+       "budget_note": "Travaux sur le réseau : le déficit augmente (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "chantier_grue",
+         "x": 46,
+         "y": 33,
+         "anim": "grow"
+        },
+        {
+         "obj": "tgv",
+         "x": 48,
+         "y": 30,
+         "anim": "move",
+         "to": {
+          "x": 44,
+          "y": 36
+         }
+        }
+       ]
+      },
+      {
+       "id": "c",
+       "label": "Faire payer les réparations par la SNCF, sans aide",
+       "label_expert": "Prise en charge des réparations sur le budget propre de l'opérateur",
+       "plus": "Pas de dépense nouvelle pour l'État.",
+       "minus": "Moins d'argent pour l'entretien ailleurs.",
+       "budget": 0.1,
+       "axes": {
+        "eco": 1
+       },
+       "ind": {
+        "services": -1
+       },
+       "budget_note": "Pas d'aide publique : le déficit baisse légèrement (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "chantier_grue",
+         "x": 46,
+         "y": 33,
+         "anim": "appear"
+        },
+        {
+         "obj": "pieces",
+         "x": 50,
+         "y": 30,
+         "anim": "rise"
+        }
+       ]
+      },
+      {
+       "id": "d",
+       "label": "Alourdir les peines pour atteinte aux réseaux",
+       "label_expert": "Aggravation des sanctions pénales pour sabotage d'infrastructures essentielles",
+       "plus": "Un message ferme aux auteurs.",
+       "minus": "Dissuade peu ceux qui sont décidés.",
+       "budget": 0.02,
+       "axes": {
+        "soc": 2
+       },
+       "ind": {
+        "cohesion": -1
+       },
+       "budget_note": "Amendes plus lourdes : petite recette, le déficit baisse (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "commissariat",
+         "x": 52,
+         "y": 28,
+         "anim": "appear"
+        },
+        {
+         "obj": "prison",
+         "x": 54,
+         "y": 30,
+         "anim": "appear"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "v28_martinique_vie_chere",
+     "kind": "majeur",
+     "region": "outre_mer",
+     "sector": "salaires",
+     "title": "Des barrages contre le prix des courses",
+     "simple": "Sur une île des Antilles, la nourriture coûte bien plus cher qu'en métropole. Des habitants bloquent les routes depuis des semaines. Que faire ?",
+     "expert": "Mobilisation contre la vie chère : écart de prix alimentaires d'environ 40 % avec l'Hexagone, protocole négocié sur l'octroi de mer, la TVA et les marges de la distribution.",
+     "context": "Les produits arrivent par bateau, paient des taxes locales et passent par peu de distributeurs. Baisser les taxes réduit les recettes des collectivités ; encadrer les marges touche les entreprises.",
+     "real": {
+      "date": "Septembre à octobre 2024 (protocole signé le 16 octobre)",
+      "place": "Martinique",
+      "fact": "Un mouvement contre la vie chère a bloqué l'île pendant plusieurs semaines. L'État, la collectivité et la grande distribution ont signé un protocole visant à baisser les prix de milliers de produits alimentaires.",
+      "figures": "Objectif : baisse moyenne de 20 % sur environ 6 000 produits.",
+      "sources": [
+       {
+        "label": "LSA : la grande distribution signe un accord pour baisser les prix de 20 %",
+        "url": "https://www.lsa-conso.fr/martinique-la-grande-distribution-signe-un-accord-visant-a-baisser-les-prix-de-l-alimentaire-de-20,457711"
+       },
+       {
+        "label": "Le Club des juristes : vers une sortie de crise pour la Martinique ?",
+        "url": "https://www.leclubdesjuristes.com/en-bref/vers-une-sortie-de-crise-pour-la-martinique-7352/"
+       }
+      ]
+     },
+     "camera": {
+      "region": "outre_mer",
+      "x": 7,
+      "y": 90,
+      "zoom": 2.6
+     },
+     "fx": [
+      {
+       "obj": "supermarche",
+       "x": 8,
+       "y": 89,
+       "anim": "pulse"
+      },
+      {
+       "obj": "manifestants",
+       "x": 6,
+       "y": 91,
+       "anim": "appear",
+       "delay": 0.3
+      },
+      {
+       "obj": "pieces",
+       "x": 8,
+       "y": 88,
+       "anim": "rise",
+       "delay": 0.6
+      }
+     ],
+     "recall": [
+      {
+       "event": "v22_bouclier",
+       "choice": "a",
+       "text": "Pendant la flambée de l'énergie, vous aviez plafonné les prix pour tous : les habitants demandent le même traitement pour l'alimentation."
+      },
+      {
+       "event": "v22_bouclier",
+       "choice": "b",
+       "text": "Pendant la flambée de l'énergie, vous aviez aidé les ménages modestes : ils réclament une aide ciblée sur les courses."
+      },
+      {
+       "event": "v22_bouclier",
+       "choice": "c",
+       "text": "Pendant la flambée de l'énergie, vous aviez misé sur la sobriété : ici, on ne peut pas moins manger."
+      },
+      {
+       "event": "v22_bouclier",
+       "choice": "d",
+       "text": "Pendant la flambée de l'énergie, vous aviez taxé les profits exceptionnels : les manifestants veulent la même chose pour la distribution."
+      },
+      {
+       "event": "v22_bouclier",
+       "choice": "e",
+       "text": "Pendant la flambée de l'énergie, vous aviez sorti les prix du marché européen : l'idée d'un prix fixé par l'État revient."
+      }
+     ],
+     "choices": [
+      {
+       "id": "a",
+       "label": "Supprimer la TVA sur les produits de base",
+       "label_expert": "Exonération de TVA et compensation de l'octroi de mer",
+       "plus": "Une baisse visible dans les rayons.",
+       "minus": "Une perte de recettes chaque année.",
+       "budget": -0.15,
+       "axes": {
+        "eco": -1
+       },
+       "ind": {
+        "pouvoir_achat": 2,
+        "cohesion": 1
+       },
+       "budget_note": "Moins de taxes perçues : le déficit augmente (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "supermarche",
+         "x": 8,
+         "y": 89,
+         "anim": "appear"
+        },
+        {
+         "obj": "pieces",
+         "x": 7,
+         "y": 88,
+         "anim": "fade"
+        }
+       ]
+      },
+      {
+       "id": "b",
+       "label": "Encadrer les marges de la grande distribution",
+       "label_expert": "Plafonnement réglementaire des marges et contrôle par l'observatoire des prix",
+       "plus": "Les prix baissent sans argent public.",
+       "minus": "Des distributeurs menacent de réduire l'offre.",
+       "budget": 0,
+       "axes": {
+        "eco": -2
+       },
+       "ind": {
+        "pouvoir_achat": 1,
+        "emploi": -1
+       },
+       "fx": [
+        {
+         "obj": "supermarche",
+         "x": 8,
+         "y": 89,
+         "anim": "close"
+        },
+        {
+         "obj": "mairie",
+         "x": 6,
+         "y": 90,
+         "anim": "appear"
+        }
+       ]
+      },
+      {
+       "id": "c",
+       "label": "Ouvrir le marché à de nouveaux distributeurs",
+       "label_expert": "Réforme de la concurrence (lutte contre les exclusivités d'importation)",
+       "plus": "Plus de concurrence, des prix qui baissent.",
+       "minus": "Des effets lents, des emplois locaux fragilisés.",
+       "budget": 0.05,
+       "axes": {
+        "eco": 2
+       },
+       "ind": {
+        "pouvoir_achat": 1,
+        "emploi": -1
+       },
+       "budget_note": "Moins d'aides à verser à terme : le déficit baisse (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "cargo",
+         "x": 3,
+         "y": 93,
+         "anim": "move",
+         "to": {
+          "x": 5,
+          "y": 91
+         }
+        },
+        {
+         "obj": "commerce",
+         "x": 8,
+         "y": 90,
+         "anim": "appear"
+        }
+       ]
+      },
+      {
+       "id": "d",
+       "label": "Aider la production agricole locale",
+       "label_expert": "Soutien aux filières agricoles locales pour réduire les importations",
+       "plus": "Moins de dépendance aux bateaux.",
+       "minus": "Coûteux et lent à produire ses effets.",
+       "budget": -0.08,
+       "axes": {
+        "eu": 1,
+        "env": -1
+       },
+       "ind": {
+        "souverainete": 1,
+        "emploi": 1
+       },
+       "budget_note": "Subventions agricoles : le déficit augmente (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "champ",
+         "x": 6,
+         "y": 89,
+         "anim": "grow"
+        },
+        {
+         "obj": "ferme",
+         "x": 7,
+         "y": 91,
+         "anim": "appear"
+        }
+       ]
+      },
+      {
+       "id": "e",
+       "label": "Rétablir l'ordre et lever les barrages",
+       "label_expert": "Opérations de maintien de l'ordre et couvre-feu ciblé",
+       "plus": "Les routes et les magasins rouvrent.",
+       "minus": "La colère reste sans réponse sur les prix.",
+       "budget": 0.02,
+       "axes": {
+        "soc": 2
+       },
+       "ind": {
+        "cohesion": -2
+       },
+       "budget_note": "Fin du blocage de l'économie : le déficit baisse un peu (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "voiture_police",
+         "x": 6,
+         "y": 91,
+         "anim": "appear"
+        },
+        {
+         "obj": "manifestants",
+         "x": 6,
+         "y": 91,
+         "anim": "fade"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "v28_france_travail_cyber",
+     "kind": "banal",
+     "region": "ile_de_france",
+     "sector": "numerique",
+     "title": "Les données de millions de demandeurs d'emploi volées",
+     "simple": "Des pirates ont copié les noms, adresses et numéros de sécurité sociale de millions d'inscrits à l'agence pour l'emploi. Comment réagir ?",
+     "expert": "Exfiltration de données personnelles d'un système d'information public via des comptes de conseillers usurpés : notification à la CNIL, plainte et renforcement de l'authentification.",
+     "context": "Les services publics conservent beaucoup de données. Les protéger coûte de l'argent et du temps ; une fuite expose les personnes aux arnaques.",
+     "real": {
+      "date": "13 mars 2024",
+      "place": "France Travail, Paris",
+      "fact": "France Travail a annoncé une cyberattaque ayant exposé les données de personnes inscrites sur vingt ans. La CNIL a ouvert une enquête.",
+      "figures": "Jusqu'à 43 millions de personnes potentiellement concernées.",
+      "sources": [
+       {
+        "label": "CNIL : enquête sur la fuite de données de France Travail",
+        "url": "https://www.cnil.fr/fr/france-travail-la-cnil-enquete-sur-la-fuite-de-donnees-et-donne-des-conseils-pour-se-proteger"
+       },
+       {
+        "label": "France Travail : communiqué sur la cyberattaque",
+        "url": "https://www.francetravail.org/accueil/communiques/2024/france-travail-et-cap-emploi-victimes-dune-cyberattaque.html?type=article"
+       }
+      ]
+     },
+     "camera": {
+      "region": "ile_de_france",
+      "x": 52,
+      "y": 24,
+      "zoom": 2.4
+     },
+     "fx": [
+      {
+       "obj": "cyberattaque",
+       "x": 52,
+       "y": 24,
+       "anim": "pulse"
+      },
+      {
+       "obj": "immeuble",
+       "x": 53,
+       "y": 25,
+       "anim": "shake",
+       "delay": 0.3
+      },
+      {
+       "obj": "antenne",
+       "x": 50,
+       "y": 23,
+       "anim": "appear",
+       "delay": 0.6
+      }
+     ],
+     "choices": [
+      {
+       "id": "a",
+       "label": "Créer une agence de cybersécurité pour les services publics",
+       "label_expert": "Renforcement des moyens de l'ANSSI et équipes dédiées aux administrations",
+       "plus": "Des systèmes mieux protégés partout.",
+       "minus": "Des centaines de recrutements à payer.",
+       "budget": -0.2,
+       "axes": {
+        "soc": 1
+       },
+       "ind": {
+        "services": 1,
+        "souverainete": 1
+       },
+       "budget_note": "Recrutements d'experts : le déficit augmente (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "satellite",
+         "x": 52,
+         "y": 22,
+         "anim": "appear"
+        },
+        {
+         "obj": "immeuble",
+         "x": 53,
+         "y": 25,
+         "anim": "grow"
+        }
+       ]
+      },
+      {
+       "id": "b",
+       "label": "Obliger la double authentification et limiter les accès",
+       "label_expert": "Authentification forte obligatoire et cloisonnement des accès des agents",
+       "plus": "Rapide à mettre en place, peu coûteux.",
+       "minus": "Les agents perdent du temps chaque jour.",
+       "budget": 0,
+       "axes": {
+        "soc": 1
+       },
+       "ind": {
+        "services": -1
+       },
+       "fx": [
+        {
+         "obj": "antenne",
+         "x": 50,
+         "y": 23,
+         "anim": "appear"
+        }
+       ]
+      },
+      {
+       "id": "c",
+       "label": "Garder moins de données et effacer les anciennes",
+       "label_expert": "Minimisation des données et durée de conservation réduite",
+       "plus": "Beaucoup moins de données à voler.",
+       "minus": "Moins d'historique pour les dossiers.",
+       "budget": 0.01,
+       "axes": {
+        "soc": -1
+       },
+       "ind": {
+        "services": -1
+       },
+       "budget_note": "Moins de stockage : le déficit baisse à peine (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "cyberattaque",
+         "x": 52,
+         "y": 24,
+         "anim": "fade"
+        }
+       ]
+      },
+      {
+       "id": "d",
+       "label": "Sanctionner les prestataires informatiques fautifs",
+       "label_expert": "Pénalités contractuelles et exclusion des marchés publics",
+       "plus": "L'argent des pénalités revient à l'État.",
+       "minus": "Moins de candidats aux marchés.",
+       "budget": 0.03,
+       "axes": {
+        "eco": 1
+       },
+       "ind": {
+        "emploi": -1
+       },
+       "budget_note": "Pénalités encaissées : le déficit baisse un peu (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "pieces",
+         "x": 52,
+         "y": 24,
+         "anim": "rise"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "offer": [
+    "report_age_65",
+    "referendum_immigration",
+    "lutte_fraude",
+    "regularisation_metiers_tension",
+    "taxe_billets_premium"
+   ]
+  },
+  {
+   "day": 18,
+   "season": "automne",
+   "title": "Crues, hauts-fourneaux et pesticides",
+   "mood": "tendu",
+   "weather": "pluie",
+   "intro": "Une ville de l'Ouest sous l'eau, une aciérie qui réduit ses effectifs, une loi agricole contestée : la semaine est chargée.",
+   "events": [
+    {
+     "id": "v28_rennes_crue",
+     "kind": "majeur",
+     "region": "bretagne",
+     "sector": "logement",
+     "title": "Une ville de l'Ouest les pieds dans l'eau",
+     "simple": "Après plusieurs tempêtes, la rivière déborde au cœur d'une grande ville bretonne. Des centaines d'habitants sont évacués. Comment se protéger ?",
+     "expert": "Crue d'une ampleur inédite depuis quarante ans après trois dépressions successives : vigilance rouge crues, évacuations, question des zones d'expansion des crues et de l'urbanisation en zone inondable.",
+     "context": "Les sols gorgés d'eau ne retiennent plus la pluie. Laisser des champs s'inonder protège les villes mais coûte aux agriculteurs ; construire des digues coûte cher et ne suffit pas toujours.",
+     "real": {
+      "date": "26 au 29 janvier 2025",
+      "place": "Rennes et Redon, Ille-et-Vilaine",
+      "fact": "Après la tempête Herminia et d'autres dépressions, l'Ille-et-Vilaine a été placée en vigilance rouge crues. Des quartiers de Rennes ont été inondés.",
+      "figures": "Environ 600 personnes évacuées en Ille-et-Vilaine.",
+      "sources": [
+       {
+        "label": "Reporterre : à Rennes inondée, « on a peur pour la suite »",
+        "url": "https://reporterre.net/A-Rennes-inondee-on-a-peur-pour-la-suite"
+       },
+       {
+        "label": "Maire info : la vigilance rouge s'étend au Morbihan et à la Loire-Atlantique",
+        "url": "https://www.maire-info.com/imprimer2.php?param=29336"
+       }
+      ]
+     },
+     "camera": {
+      "region": "bretagne",
+      "x": 22,
+      "y": 31,
+      "zoom": 2.4
+     },
+     "fx": [
+      {
+       "obj": "inondation",
+       "x": 22,
+       "y": 31,
+       "anim": "appear"
+      },
+      {
+       "obj": "maison",
+       "x": 23,
+       "y": 32,
+       "anim": "shake",
+       "delay": 0.3
+      },
+      {
+       "obj": "orage",
+       "x": 20,
+       "y": 29,
+       "anim": "pulse",
+       "delay": 0.5
+      },
+      {
+       "obj": "ambulance",
+       "x": 25,
+       "y": 31,
+       "anim": "move",
+       "to": {
+        "x": 22,
+        "y": 31
+       },
+       "delay": 0.8
+      }
+     ],
+     "recall": [
+      {
+       "event": "v25_lothar",
+       "choice": "a",
+       "text": "Il y a quelques semaines, dans le Nord, vous aviez racheté les maisons trop exposées : la méthode est connue, les familles d'ici la demandent."
+      },
+      {
+       "event": "v25_lothar",
+       "choice": "b",
+       "text": "Il y a quelques semaines, dans le Nord, vous aviez envoyé l'armée et des pompes : les mêmes équipes repartent vers l'Ouest."
+      },
+      {
+       "event": "v25_lothar",
+       "choice": "c",
+       "text": "Il y a quelques semaines, dans le Nord, vous aviez aidé les communes à curer les canaux : cette fois, la rivière déborde en pleine ville."
+      },
+      {
+       "event": "v25_lothar",
+       "choice": "d",
+       "text": "Il y a quelques semaines, dans le Nord, vous aviez relevé la surprime d'assurance : le fonds a de quoi payer."
+      },
+      {
+       "event": "v25_lothar",
+       "choice": "e",
+       "text": "Il y a quelques semaines, dans le Nord, vous aviez indemnisé chaque foyer inondé : les sinistrés d'ici attendent la même chose."
+      }
+     ],
+     "choices": [
+      {
+       "id": "a",
+       "label": "Laisser des champs en amont servir de zones d'inondation",
+       "label_expert": "Zones d'expansion des crues indemnisées en amont",
+       "plus": "Les villes sont mieux protégées.",
+       "minus": "Des agriculteurs perdent des récoltes.",
+       "budget": -0.1,
+       "axes": {
+        "env": -1
+       },
+       "ind": {
+        "cohesion": 1,
+        "emploi": -1
+       },
+       "budget_note": "Indemnités aux agriculteurs : le déficit augmente (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "champ",
+         "x": 18,
+         "y": 30,
+         "anim": "appear"
+        },
+        {
+         "obj": "inondation",
+         "x": 18,
+         "y": 30,
+         "anim": "appear"
+        }
+       ]
+      },
+      {
+       "id": "b",
+       "label": "Construire des digues et des bassins de retenue",
+       "label_expert": "Programme d'ouvrages hydrauliques de protection",
+       "plus": "Une protection solide des quartiers.",
+       "minus": "Cher, et inutile si l'eau monte plus haut.",
+       "budget": -0.3,
+       "axes": {
+        "env": 1
+       },
+       "ind": {
+        "services": 1,
+        "emploi": 1
+       },
+       "budget_note": "Travaux publics : le déficit augmente (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "barrage",
+         "x": 20,
+         "y": 30,
+         "anim": "grow"
+        },
+        {
+         "obj": "chantier_grue",
+         "x": 21,
+         "y": 31,
+         "anim": "appear"
+        }
+       ]
+      },
+      {
+       "id": "c",
+       "label": "Interdire de construire en zone inondable",
+       "label_expert": "Gel des permis de construire dans les zones d'aléa fort",
+       "plus": "Moins de sinistrés lors des prochaines crues.",
+       "minus": "Moins de logements neufs, des terrains perdus.",
+       "budget": 0.02,
+       "axes": {
+        "soc": 1
+       },
+       "ind": {
+        "pouvoir_achat": -1
+       },
+       "budget_note": "Moins d'indemnisations futures : le déficit baisse un peu (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "chantier_grue",
+         "x": 23,
+         "y": 32,
+         "anim": "fade"
+        },
+        {
+         "obj": "mairie",
+         "x": 24,
+         "y": 31,
+         "anim": "appear"
+        }
+       ]
+      },
+      {
+       "id": "d",
+       "label": "Laisser les assureurs indemniser seuls",
+       "label_expert": "Indemnisation par le régime catastrophes naturelles, sans fonds d'État",
+       "plus": "Pas de dépense publique supplémentaire.",
+       "minus": "Des franchises lourdes pour les sinistrés.",
+       "budget": 0.05,
+       "axes": {
+        "eco": 1
+       },
+       "ind": {
+        "pouvoir_achat": -1,
+        "cohesion": -1
+       },
+       "budget_note": "Pas d'aide d'État : le déficit baisse (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "maison",
+         "x": 23,
+         "y": 32,
+         "anim": "appear"
+        },
+        {
+         "obj": "pieces",
+         "x": 22,
+         "y": 30,
+         "anim": "rise"
+        }
+       ]
+      },
+      {
+       "id": "e",
+       "label": "Relever la taxe locale contre les inondations",
+       "label_expert": "Hausse du plafond de la taxe GEMAPI des intercommunalités",
+       "plus": "Une recette dédiée à la prévention.",
+       "minus": "Une taxe de plus pour les habitants.",
+       "budget": 0.05,
+       "axes": {
+        "eco": -1
+       },
+       "ind": {
+        "pouvoir_achat": -1,
+        "services": 1
+       },
+       "budget_note": "Recette de la taxe : le déficit baisse (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "pieces",
+         "x": 22,
+         "y": 31,
+         "anim": "rise"
+        },
+        {
+         "obj": "mairie",
+         "x": 24,
+         "y": 31,
+         "anim": "appear"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "v28_arcelor_dunkerque",
+     "kind": "majeur",
+     "region": "hauts_de_france",
+     "sector": "salaires",
+     "title": "L'aciérie du Nord annonce des centaines de suppressions de postes",
+     "simple": "Un géant de l'acier veut supprimer environ 600 emplois dans ses usines du Nord. Il dit que l'acier importé, moins cher, le met en danger. Que faire ?",
+     "expert": "Plan de réduction d'effectifs d'un sidérurgiste dans un contexte de surcapacités mondiales et de décarbonation reportée : débat sur la nationalisation, les mesures de sauvegarde commerciales et les aides publiques conditionnées.",
+     "context": "L'acier est utile pour l'armée, l'industrie et l'énergie. Le produire en France coûte plus cher qu'ailleurs ; le perdre crée une dépendance.",
+     "real": {
+      "date": "23 avril 2025",
+      "place": "Dunkerque, Nord, et six autres sites",
+      "fact": "ArcelorMittal a annoncé un projet de suppression d'environ 600 postes dans sept sites français, dont Dunkerque. Des élus ont demandé une nationalisation, d'autres une protection commerciale européenne.",
+      "figures": "Environ 600 postes concernés sur 7 sites.",
+      "sources": [
+       {
+        "label": "Banque des territoires : 600 postes supprimés chez ArcelorMittal",
+        "url": "https://www.banquedesterritoires.fr/suppressions-de-600-postes-chez-arcelormittal-les-elus-expriment-leur-desarroi"
+       },
+       {
+        "label": "Le Journal des entreprises : environ 600 emplois dans 7 usines",
+        "url": "https://www.lejournaldesentreprises.com/article/arcelormittal-projette-de-supprimer-environ-600-emplois-dans-7-usines-francaises-2118302"
+       }
+      ]
+     },
+     "camera": {
+      "region": "hauts_de_france",
+      "x": 53,
+      "y": 7,
+      "zoom": 2.4
+     },
+     "fx": [
+      {
+       "obj": "usine",
+       "x": 53,
+       "y": 8,
+       "anim": "smoke"
+      },
+      {
+       "obj": "manifestants",
+       "x": 55,
+       "y": 9,
+       "anim": "appear",
+       "delay": 0.4
+      },
+      {
+       "obj": "cargo",
+       "x": 38,
+       "y": 7,
+       "anim": "move",
+       "to": {
+        "x": 40,
+        "y": 8
+       },
+       "delay": 0.7
+      }
+     ],
+     "recall": [
+      {
+       "event": "v22_florange",
+       "choice": "a",
+       "text": "À Florange, vous aviez nationalisé l'usine le temps d'un repreneur : les salariés du Nord demandent la même chose."
+      },
+      {
+       "event": "v22_florange",
+       "choice": "b",
+       "text": "À Florange, vous aviez obtenu un accord sans licenciement : le groupe refuse cette fois de s'y engager."
+      },
+      {
+       "event": "v22_florange",
+       "choice": "c",
+       "text": "À Florange, vous aviez défendu une taxe carbone sur l'acier importé : elle commence à être discutée à Bruxelles."
+      },
+      {
+       "event": "v22_florange",
+       "choice": "d",
+       "text": "À Florange, vous aviez laissé fermer et aidé la reconversion : le bassin d'emploi du Nord craint le même sort."
+      },
+      {
+       "event": "v22_florange",
+       "choice": "e",
+       "text": "À Florange, vous aviez exigé le remboursement des aides : le groupe hésite à demander de nouvelles aides."
+      }
+     ],
+     "choices": [
+      {
+       "id": "a",
+       "label": "Nationaliser temporairement les usines",
+       "label_expert": "Prise de participation majoritaire temporaire de l'État",
+       "plus": "L'acier et les emplois restent en France.",
+       "minus": "Des milliards à mettre sur la table.",
+       "budget": -1,
+       "axes": {
+        "eco": -2,
+        "eu": 1
+       },
+       "ind": {
+        "emploi": 2,
+        "souverainete": 2
+       },
+       "budget_note": "Rachat et investissements : le déficit augmente (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "usine",
+         "x": 53,
+         "y": 8,
+         "anim": "grow"
+        },
+        {
+         "obj": "mairie",
+         "x": 56,
+         "y": 9,
+         "anim": "appear"
+        }
+       ]
+      },
+      {
+       "id": "b",
+       "label": "Demander à l'Europe des quotas sur l'acier importé",
+       "label_expert": "Renforcement des mesures de sauvegarde européennes sur l'acier",
+       "plus": "L'acier européen est protégé des importations.",
+       "minus": "L'acier coûte plus cher à l'industrie.",
+       "budget": 0.05,
+       "axes": {
+        "eu": -1
+       },
+       "ind": {
+        "emploi": 1,
+        "pouvoir_achat": -1
+       },
+       "budget_note": "Droits de douane perçus : le déficit baisse un peu (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "cargo",
+         "x": 38,
+         "y": 7,
+         "anim": "fade"
+        },
+        {
+         "obj": "port",
+         "x": 52,
+         "y": 7,
+         "anim": "appear"
+        }
+       ]
+      },
+      {
+       "id": "c",
+       "label": "Aider à investir dans un acier moins polluant",
+       "label_expert": "Subventions conditionnées à la décarbonation (fours électriques)",
+       "plus": "Une usine modernisée et moins polluante.",
+       "minus": "De l'argent public sans garantie de maintien.",
+       "budget": -0.4,
+       "axes": {
+        "env": -1
+       },
+       "ind": {
+        "co2": -2,
+        "emploi": 1
+       },
+       "budget_note": "Subvention industrielle : le déficit augmente (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "usine",
+         "x": 53,
+         "y": 8,
+         "anim": "grow"
+        },
+        {
+         "obj": "pylone",
+         "x": 55,
+         "y": 8,
+         "anim": "appear"
+        }
+       ]
+      },
+      {
+       "id": "d",
+       "label": "Laisser l'entreprise décider et financer la reconversion",
+       "label_expert": "Accompagnement par contrats de sécurisation professionnelle, sans intervention au capital",
+       "plus": "Pas d'argent public dans une usine en difficulté.",
+       "minus": "Des familles et une ville fragilisées.",
+       "budget": 0.2,
+       "axes": {
+        "eco": 2
+       },
+       "ind": {
+        "emploi": -2,
+        "cohesion": -1
+       },
+       "budget_note": "Pas d'aide à l'entreprise : le déficit baisse (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "usine",
+         "x": 53,
+         "y": 8,
+         "anim": "close"
+        },
+        {
+         "obj": "ecole",
+         "x": 56,
+         "y": 9,
+         "anim": "appear"
+        }
+       ]
+      },
+      {
+       "id": "e",
+       "label": "Exiger le remboursement des aides publiques reçues",
+       "label_expert": "Clause de remboursement des aides en cas de suppressions d'emplois",
+       "plus": "L'argent public revient à l'État.",
+       "minus": "Le groupe peut quitter la France plus vite.",
+       "budget": 0.05,
+       "axes": {
+        "eco": -1
+       },
+       "ind": {
+        "emploi": -1
+       },
+       "budget_note": "Aides remboursées : le déficit baisse (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "pieces",
+         "x": 53,
+         "y": 8,
+         "anim": "rise"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "v28_loi_pesticide",
+     "kind": "banal",
+     "region": "national",
+     "sector": "agriculture",
+     "title": "Une loi agricole rouvre la porte à un pesticide interdit",
+     "simple": "Une loi veut autoriser de nouveau un insecticide interdit en France mais permis ailleurs en Europe. Une pétition réunit deux millions de signatures. Que décider ?",
+     "expert": "Loi de simplification agricole prévoyant la réintroduction par dérogation d'un néonicotinoïde (acétamipride) ; pétition citoyenne record et saisine du Conseil constitutionnel.",
+     "context": "Certains producteurs disent ne pas avoir d'autre solution contre les ravageurs et subir la concurrence des pays voisins. Des scientifiques et apiculteurs alertent sur les effets pour les abeilles et la santé.",
+     "real": {
+      "date": "8 juillet 2025 (adoption) ; 7 août 2025 (décision du Conseil constitutionnel)",
+      "place": "Parlement, Paris",
+      "fact": "La loi agricole dite « Duplomb » a été adoptée. Une pétition contre elle a dépassé deux millions de signatures. Le Conseil constitutionnel a censuré la réintroduction de l'acétamipride.",
+      "figures": "Plus de 2 millions de signatures sur le site de l'Assemblée.",
+      "sources": [
+       {
+        "label": "LCP : la pétition dépasse les deux millions de signatures",
+        "url": "https://lcp.fr/actualites/loi-duplomb-la-petition-depasse-les-deux-millions-de-signatures-391460"
+       },
+       {
+        "label": "Terre-net : la simplification validée, l'acétamipride censuré",
+        "url": "https://www.terre-net.fr/reglementation/article/886171/la-decision-du-conseil-constitutionnel-sur-la-loi-duplomb"
+       }
+      ]
+     },
+     "camera": {
+      "region": "national",
+      "x": 50,
+      "y": 40,
+      "zoom": 1.3
+     },
+     "fx": [
+      {
+       "obj": "champ",
+       "x": 46,
+       "y": 40,
+       "anim": "appear"
+      },
+      {
+       "obj": "tracteur",
+       "x": 47,
+       "y": 41,
+       "anim": "move",
+       "to": {
+        "x": 45,
+        "y": 39
+       },
+       "delay": 0.3
+      },
+      {
+       "obj": "parlement",
+       "x": 52,
+       "y": 24,
+       "anim": "pulse",
+       "delay": 0.6
+      }
+     ],
+     "choices": [
+      {
+       "id": "a",
+       "label": "Autoriser le pesticide sous conditions strictes",
+       "label_expert": "Dérogation encadrée et temporaire pour certaines filières",
+       "plus": "Les producteurs restent compétitifs.",
+       "minus": "Des inquiétudes pour la santé et les abeilles.",
+       "budget": 0.03,
+       "axes": {
+        "env": 2,
+        "eu": -1
+       },
+       "ind": {
+        "emploi": 1,
+        "co2": 1
+       },
+       "budget_note": "Récoltes préservées, moins d'aides : le déficit baisse un peu (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "tracteur",
+         "x": 46,
+         "y": 40,
+         "anim": "appear"
+        },
+        {
+         "obj": "champ",
+         "x": 46,
+         "y": 40,
+         "anim": "grow"
+        }
+       ]
+      },
+      {
+       "id": "b",
+       "label": "Maintenir l'interdiction et aider à trouver d'autres solutions",
+       "label_expert": "Interdiction maintenue et plan de recherche sur les alternatives",
+       "plus": "Santé et biodiversité protégées.",
+       "minus": "Des pertes de récoltes à compenser.",
+       "budget": -0.1,
+       "axes": {
+        "env": -2
+       },
+       "ind": {
+        "emploi": -1,
+        "co2": -1
+       },
+       "budget_note": "Aides et recherche : le déficit augmente (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "champ",
+         "x": 46,
+         "y": 40,
+         "anim": "grow"
+        },
+        {
+         "obj": "ferme",
+         "x": 48,
+         "y": 41,
+         "anim": "appear"
+        }
+       ]
+      },
+      {
+       "id": "c",
+       "label": "Interdire les produits importés traités avec ce pesticide",
+       "label_expert": "Clause miroir sur les importations alimentaires",
+       "plus": "Une concurrence plus juste pour les producteurs.",
+       "minus": "Des prix plus élevés et des tensions commerciales.",
+       "budget": 0.01,
+       "axes": {
+        "eu": 1
+       },
+       "ind": {
+        "souverainete": 1,
+        "pouvoir_achat": -1
+       },
+       "budget_note": "Redevances de contrôle : le déficit baisse à peine (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "camion",
+         "x": 60,
+         "y": 30,
+         "anim": "fade"
+        },
+        {
+         "obj": "entrepot",
+         "x": 58,
+         "y": 32,
+         "anim": "appear"
+        }
+       ]
+      },
+      {
+       "id": "d",
+       "label": "Indemniser les producteurs sans changer la loi",
+       "label_expert": "Fonds d'indemnisation des pertes liées aux ravageurs",
+       "plus": "Un soutien rapide aux exploitations.",
+       "minus": "Une dépense qui revient chaque année.",
+       "budget": -0.15,
+       "axes": {
+        "eco": -1
+       },
+       "ind": {
+        "pouvoir_achat": 1
+       },
+       "budget_note": "Indemnités versées : le déficit augmente (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "pieces",
+         "x": 46,
+         "y": 40,
+         "anim": "rise"
+        },
+        {
+         "obj": "ferme",
+         "x": 48,
+         "y": 41,
+         "anim": "appear"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "offer": [
+    "contribution_ue",
+    "renovation_massive",
+    "smic_hausse",
+    "baisse_cotisations_net",
+    "fusion_agences",
+    "surtaxe_grandes_entreprises"
+   ]
+  },
+  {
+   "day": 19,
+   "season": "automne",
+   "title": "Un réacteur s'allume, une frontière se ferme",
+   "mood": "calme",
+   "weather": "vent",
+   "intro": "Un nouveau réacteur produit ses premiers kilowattheures, le voisin allemand contrôle ses frontières, une métropole révise ses règles de circulation.",
+   "events": [
+    {
+     "id": "v28_epr_flamanville",
+     "kind": "majeur",
+     "region": "normandie",
+     "sector": "energie",
+     "title": "Le nouveau réacteur normand est enfin raccordé",
+     "simple": "Après dix-sept ans de chantier et un coût multiplié, le nouveau réacteur de la Manche envoie son premier courant sur le réseau. Faut-il en construire d'autres ?",
+     "expert": "Couplage au réseau du réacteur EPR de Flamanville 3 avec douze ans de retard ; la Cour des comptes réévalue son coût et s'interroge sur la rentabilité du programme EPR2.",
+     "context": "Le nucléaire produit environ deux tiers de l'électricité française, avec peu de CO2. Les nouveaux chantiers coûtent des dizaines de milliards et prennent plus de dix ans ; les renouvelables sont plus rapides mais intermittentes.",
+     "real": {
+      "date": "21 décembre 2024",
+      "place": "Flamanville, Manche",
+      "fact": "L'EPR de Flamanville a été raccordé au réseau électrique, une première en France depuis 25 ans, après dix-sept ans de chantier.",
+      "figures": "Coût de construction réévalué à environ 23,7 Md€ par la Cour des comptes.",
+      "sources": [
+       {
+        "label": "EDF : le réacteur produit ses premiers électrons",
+        "url": "https://www.edf.fr/groupe-edf/espaces-dedies/journalistes/tous-les-communiques-de-presse/point-d-actualite-sur-l-epr-de-flamanville-le-reacteur-produit-ses-premiers-electrons-sur-le-reseau-electrique-national"
+       },
+       {
+        "label": "Connaissance des énergies : la Cour des comptes recalcule le coût de Flamanville 3",
+        "url": "https://www.connaissancedesenergies.org/afp/programme-depr-la-cour-des-comptes-publie-un-rapport-critique-et-recalcule-le-cout-de-flamanville-3-250114"
+       }
+      ]
+     },
+     "camera": {
+      "region": "normandie",
+      "x": 31,
+      "y": 16,
+      "zoom": 2.4
+     },
+     "fx": [
+      {
+       "obj": "centrale_nucleaire",
+       "x": 31,
+       "y": 16,
+       "anim": "pulse"
+      },
+      {
+       "obj": "pylone",
+       "x": 33,
+       "y": 17,
+       "anim": "appear",
+       "delay": 0.3
+      },
+      {
+       "obj": "chantier_grue",
+       "x": 32,
+       "y": 15,
+       "anim": "fade",
+       "delay": 0.6
+      }
+     ],
+     "recall": [
+      {
+       "event": "v22_fukushima",
+       "choice": "a",
+       "text": "Après l'accident au Japon, vous aviez renforcé la sûreté : le nouveau réacteur intègre ces exigences."
+      },
+      {
+       "event": "v22_fukushima",
+       "choice": "b",
+       "text": "Après l'accident au Japon, vous aviez fermé les plus vieux réacteurs : ce nouveau réacteur compense en partie."
+      },
+      {
+       "event": "v22_fukushima",
+       "choice": "c",
+       "text": "Après l'accident au Japon, vous aviez visé moitié moins de nucléaire : ce réacteur relance le débat."
+      },
+      {
+       "event": "v22_fukushima",
+       "choice": "d",
+       "text": "Après l'accident au Japon, vous aviez prolongé les réacteurs : ce nouveau venu s'ajoute au parc existant."
+      },
+      {
+       "event": "v22_fukushima",
+       "choice": "e",
+       "text": "Après l'accident au Japon, vous aviez choisi de nouveaux réacteurs : le premier est enfin en service."
+      }
+     ],
+     "choices": [
+      {
+       "id": "a",
+       "label": "Lancer six nouveaux réacteurs",
+       "label_expert": "Programme EPR2 de six réacteurs avec prêt bonifié de l'État",
+       "plus": "Une électricité stable et peu carbonée pour longtemps.",
+       "minus": "Des dizaines de milliards, des retards possibles.",
+       "budget": -1.5,
+       "axes": {
+        "env": -1,
+        "eu": 1
+       },
+       "ind": {
+        "co2": -2,
+        "souverainete": 2,
+        "emploi": 2
+       },
+       "budget_note": "EPR2 estimé à environ 73 Md€ par EDF : le déficit augmente (prêts et garanties).",
+       "fx": [
+        {
+         "obj": "centrale_nucleaire",
+         "x": 33,
+         "y": 20,
+         "anim": "grow"
+        },
+        {
+         "obj": "chantier_grue",
+         "x": 34,
+         "y": 20,
+         "anim": "appear"
+        }
+       ]
+      },
+      {
+       "id": "b",
+       "label": "Miser sur l'éolien en mer et le solaire",
+       "label_expert": "Appels d'offres renouvelables accélérés et stockage",
+       "plus": "Plus rapide à construire et à raccorder.",
+       "minus": "Une production qui dépend du vent et du soleil.",
+       "budget": -0.6,
+       "axes": {
+        "env": -2
+       },
+       "ind": {
+        "co2": -2,
+        "emploi": 1
+       },
+       "budget_note": "Soutien aux renouvelables : le déficit augmente (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "eolienne_mer",
+         "x": 30,
+         "y": 9,
+         "anim": "grow"
+        },
+        {
+         "obj": "panneaux_solaires",
+         "x": 35,
+         "y": 19,
+         "anim": "appear"
+        }
+       ]
+      },
+      {
+       "id": "c",
+       "label": "Vendre l'électricité plus cher aux gros consommateurs",
+       "label_expert": "Contrat de long terme à prix élevé pour l'industrie électro-intensive",
+       "plus": "EDF rembourse plus vite sa dette.",
+       "minus": "L'industrie paie plus cher son énergie.",
+       "budget": 0.4,
+       "axes": {
+        "eco": 1
+       },
+       "ind": {
+        "emploi": -1
+       },
+       "budget_note": "Recettes d'EDF et dividendes : le déficit baisse (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "usine",
+         "x": 36,
+         "y": 19,
+         "anim": "pulse"
+        },
+        {
+         "obj": "pieces",
+         "x": 31,
+         "y": 16,
+         "anim": "rise"
+        }
+       ]
+      },
+      {
+       "id": "d",
+       "label": "Faire une pause et auditer le chantier avant tout",
+       "label_expert": "Moratoire sur les nouveaux projets et audit indépendant",
+       "plus": "Pas de nouvelle dépense sans garantie.",
+       "minus": "Des compétences risquent de se perdre.",
+       "budget": 0.3,
+       "axes": {
+        "eco": 1
+       },
+       "ind": {
+        "emploi": -1,
+        "souverainete": -1
+       },
+       "budget_note": "Investissements reportés : le déficit baisse (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "chantier_grue",
+         "x": 32,
+         "y": 15,
+         "anim": "close"
+        },
+        {
+         "obj": "mairie",
+         "x": 33,
+         "y": 17,
+         "anim": "appear"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "v28_controles_allemagne",
+     "kind": "majeur",
+     "region": "allemagne",
+     "sector": "immigration",
+     "title": "Le voisin allemand contrôle toutes ses frontières",
+     "simple": "L'Allemagne rétablit des contrôles à toutes ses frontières, y compris avec la France, pour limiter l'immigration irrégulière. Que fait la France ?",
+     "expert": "Réintroduction temporaire des contrôles aux frontières intérieures de l'espace Schengen par l'Allemagne (article 25 du code frontières Schengen) : effets sur les travailleurs frontaliers et sur les refoulements.",
+     "context": "Chaque jour, des dizaines de milliers de frontaliers traversent le Rhin. Des contrôles rassurent une partie des habitants mais ralentissent le travail, le commerce et les camions.",
+     "real": {
+      "date": "16 septembre 2024",
+      "place": "Frontières de l'Allemagne, dont le Rhin",
+      "fact": "L'Allemagne a étendu des contrôles temporaires à toutes ses frontières terrestres, y compris avec la France, pour au moins six mois, puis les a prolongés.",
+      "figures": "Neuf pays voisins concernés.",
+      "sources": [
+       {
+        "label": "Euronews : l'Allemagne va renforcer les contrôles de toutes ses frontières",
+        "url": "https://fr.euronews.com/2024/09/10/lallemagne-va-renforcer-les-controles-de-toutes-ses-frontieres"
+       },
+       {
+        "label": "Le Club des juristes : rétablissement des contrôles aux frontières de l'Allemagne",
+        "url": "https://www.leclubdesjuristes.com/international/retablissement-des-controles-aux-frontieres-de-lallemagne-quel-avenir-pour-la-politique-migratoire-commune-en-europe-7082/"
+       }
+      ]
+     },
+     "camera": {
+      "region": "allemagne",
+      "x": 84,
+      "y": 22,
+      "zoom": 1.3
+     },
+     "fx": [
+      {
+       "obj": "voiture_police",
+       "x": 83,
+       "y": 23,
+       "anim": "appear"
+      },
+      {
+       "obj": "camion",
+       "x": 80,
+       "y": 24,
+       "anim": "move",
+       "to": {
+        "x": 83,
+        "y": 23
+       },
+       "delay": 0.3
+      },
+      {
+       "obj": "foule",
+       "x": 82,
+       "y": 24,
+       "anim": "appear",
+       "delay": 0.6
+      }
+     ],
+     "choices": [
+      {
+       "id": "a",
+       "label": "Rétablir aussi nos contrôles aux frontières",
+       "label_expert": "Contrôles réciproques aux frontières intérieures",
+       "plus": "Une réponse ferme et visible aux frontières.",
+       "minus": "Des bouchons et des coûts pour les frontaliers.",
+       "budget": -0.15,
+       "axes": {
+        "eu": 2,
+        "soc": 1
+       },
+       "ind": {
+        "souverainete": 1,
+        "emploi": -1
+       },
+       "budget_note": "Policiers supplémentaires : le déficit augmente (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "voiture_police",
+         "x": 79,
+         "y": 24,
+         "anim": "appear"
+        },
+        {
+         "obj": "commissariat",
+         "x": 78,
+         "y": 23,
+         "anim": "appear"
+        }
+       ]
+      },
+      {
+       "id": "b",
+       "label": "Négocier des patrouilles communes franco-allemandes",
+       "label_expert": "Brigades mixtes et coopération policière renforcée",
+       "plus": "Moins de bouchons, une action concertée.",
+       "minus": "Moins visible pour les habitants.",
+       "budget": 0,
+       "axes": {
+        "eu": -1
+       },
+       "ind": {
+        "cohesion": 1
+       },
+       "budget_note": "Patrouilles financées par le fonds européen pour la sécurité intérieure : pas d'effet sur le déficit (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "voiture_police",
+         "x": 82,
+         "y": 23,
+         "anim": "move",
+         "to": {
+          "x": 80,
+          "y": 23
+         }
+        },
+        {
+         "obj": "voiture_police",
+         "x": 81,
+         "y": 24,
+         "anim": "appear"
+        }
+       ]
+      },
+      {
+       "id": "c",
+       "label": "Pousser l'Europe à renforcer ses frontières extérieures",
+       "label_expert": "Accélération du pacte asile et migration et des moyens de Frontex",
+       "plus": "Les contrôles internes pourraient s'arrêter.",
+       "minus": "Des résultats lents, une facture européenne.",
+       "budget": 0,
+       "axes": {
+        "eu": -2
+       },
+       "ind": {
+        "souverainete": -1
+       },
+       "fx": [
+        {
+         "obj": "parlement",
+         "x": 63,
+         "y": 4,
+         "anim": "pulse"
+        }
+       ]
+      },
+      {
+       "id": "d",
+       "label": "Accepter les contrôles et aider les frontaliers",
+       "label_expert": "Indemnisation des retards et facilités pour les travailleurs frontaliers",
+       "plus": "Les relations avec le voisin restent bonnes.",
+       "minus": "Une dépense pour un problème venu d'ailleurs.",
+       "budget": -0.02,
+       "axes": {
+        "eco": -1
+       },
+       "ind": {
+        "pouvoir_achat": 1
+       },
+       "budget_note": "Aides aux frontaliers : le déficit augmente (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "bus",
+         "x": 80,
+         "y": 24,
+         "anim": "move",
+         "to": {
+          "x": 84,
+          "y": 22
+         }
+        }
+       ]
+      },
+      {
+       "id": "e",
+       "label": "Ne rien changer et laisser faire Berlin",
+       "label_expert": "Statu quo, sans contre-mesure",
+       "plus": "Aucune dépense nouvelle pour l'État.",
+       "minus": "Les frontaliers subissent les retards.",
+       "budget": 0.02,
+       "axes": {
+        "eco": 1
+       },
+       "ind": {
+        "cohesion": -1,
+        "emploi": -1
+       },
+       "budget_note": "Aucune dépense : le déficit baisse un peu (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "camion",
+         "x": 80,
+         "y": 24,
+         "anim": "appear"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "v28_zfe_strasbourg",
+     "kind": "banal",
+     "region": "grand_est",
+     "sector": "transports",
+     "title": "Les vieilles voitures bientôt interdites en ville",
+     "simple": "Une grande ville de l'Est interdit peu à peu les voitures les plus polluantes. Des habitants sans moyens de changer de voiture protestent. Que décider ?",
+     "expert": "Zone à faibles émissions mobilité (ZFE-m) et calendrier d'interdiction des vignettes Crit'Air ; l'Assemblée a voté leur suppression, que le Conseil constitutionnel a ensuite censurée pour un motif de procédure.",
+     "context": "La pollution de l'air cause des maladies et des décès. Changer de voiture coûte cher, surtout pour les ménages modestes et ceux qui habitent loin des transports.",
+     "real": {
+      "date": "28 mai 2025 (vote de l'Assemblée)",
+      "place": "Strasbourg et autres métropoles",
+      "fact": "L'Assemblée nationale a voté la suppression des zones à faibles émissions. Le Conseil constitutionnel a ensuite censuré cette mesure : les ZFE sont restées en place.",
+      "figures": "Une quarantaine de ZFE prévues en France.",
+      "sources": [
+       {
+        "label": "LCP : la suppression des ZFE approuvée par l'Assemblée",
+        "url": "https://lcp.fr/actualites/zfe-la-suppression-des-zones-a-faibles-emissions-approuvee-par-l-assemblee-nationale"
+       },
+       {
+        "label": "L'argus : les ZFE restent en place après le Conseil constitutionnel",
+        "url": "https://www.largus.fr/actualite-automobile/zfe-elles-restent-finalement-en-place-sur-decision-du-conseil-constitutionnel-2196820.html"
+       }
+      ]
+     },
+     "camera": {
+      "region": "grand_est",
+      "x": 80,
+      "y": 28,
+      "zoom": 2.4
+     },
+     "fx": [
+      {
+       "obj": "voiture",
+       "x": 79,
+       "y": 28,
+       "anim": "smoke"
+      },
+      {
+       "obj": "bus",
+       "x": 81,
+       "y": 29,
+       "anim": "appear",
+       "delay": 0.3
+      },
+      {
+       "obj": "manifestants",
+       "x": 78,
+       "y": 27,
+       "anim": "appear",
+       "delay": 0.6
+      }
+     ],
+     "choices": [
+      {
+       "id": "a",
+       "label": "Maintenir l'interdiction avec une prime à l'achat",
+       "label_expert": "Calendrier ZFE maintenu et prime à la conversion renforcée",
+       "plus": "Un air plus sain en ville.",
+       "minus": "Une prime coûteuse pour l'État.",
+       "budget": -0.2,
+       "axes": {
+        "env": -2
+       },
+       "ind": {
+        "co2": -1,
+        "services": 1
+       },
+       "budget_note": "Prime à la conversion : le déficit augmente (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "pylone",
+         "x": 80,
+         "y": 28,
+         "anim": "appear"
+        },
+        {
+         "obj": "voiture",
+         "x": 79,
+         "y": 28,
+         "anim": "fade"
+        }
+       ]
+      },
+      {
+       "id": "b",
+       "label": "Supprimer l'interdiction",
+       "label_expert": "Abrogation des zones à faibles émissions",
+       "plus": "Les ménages gardent leur voiture.",
+       "minus": "La pollution baisse moins vite.",
+       "budget": 0.02,
+       "axes": {
+        "env": 2
+       },
+       "ind": {
+        "pouvoir_achat": 1,
+        "co2": 1
+       },
+       "budget_note": "Plus de prime à verser : le déficit baisse un peu (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "voiture",
+         "x": 79,
+         "y": 28,
+         "anim": "move",
+         "to": {
+          "x": 81,
+          "y": 27
+         }
+        }
+       ]
+      },
+      {
+       "id": "c",
+       "label": "Reporter de deux ans et développer les transports en commun",
+       "label_expert": "Report du calendrier et financement de lignes de bus express",
+       "plus": "Le temps de proposer d'autres solutions.",
+       "minus": "Les travaux de transports coûtent cher.",
+       "budget": -0.1,
+       "axes": {
+        "env": -1
+       },
+       "ind": {
+        "services": 1
+       },
+       "budget_note": "Lignes de bus financées : le déficit augmente (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "bus",
+         "x": 81,
+         "y": 29,
+         "anim": "move",
+         "to": {
+          "x": 78,
+          "y": 27
+         }
+        }
+       ]
+      },
+      {
+       "id": "d",
+       "label": "Remplacer l'interdiction par un péage urbain",
+       "label_expert": "Péage de congestion modulé selon la pollution du véhicule",
+       "plus": "Une recette pour les transports.",
+       "minus": "Une taxe de plus pour circuler.",
+       "budget": 0.05,
+       "axes": {
+        "eco": 1,
+        "env": -1
+       },
+       "ind": {
+        "pouvoir_achat": -1,
+        "co2": -1
+       },
+       "budget_note": "Recette du péage : le déficit baisse (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "pieces",
+         "x": 80,
+         "y": 28,
+         "anim": "rise"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "offer": [
+    "prix_planchers_agricoles",
+    "sortie_pesticides",
+    "tva_sociale",
+    "cessions_actifs",
+    "taxe_kerosene_train",
+    "plafonner_allegements"
+   ]
+  },
+  {
+   "day": 20,
+   "season": "hiver",
+   "title": "Autoroute, trafic de drogue et électroménager",
+   "mood": "tendu",
+   "weather": "neige",
+   "intro": "Un chantier d'autoroute suspendu par la justice, une ville du Sud face aux trafiquants, la dernière usine d'électroménager qui ferme : dernière semaine.",
+   "events": [
+    {
+     "id": "v28_a69",
+     "kind": "majeur",
+     "region": "occitanie",
+     "sector": "transports",
+     "title": "La justice arrête une autoroute à moitié construite",
+     "simple": "Le tribunal annule l'autorisation d'une autoroute entre deux villes du Sud-Ouest, alors que les travaux sont bien avancés. Que faire du chantier ?",
+     "expert": "Annulation de l'autorisation environnementale de l'A69 Castres-Toulouse faute de « raison impérative d'intérêt public majeur » ; l'État fait appel, la cour administrative d'appel rétablit ensuite les autorisations.",
+     "context": "Les élus du territoire défendent un désenclavement attendu depuis longtemps. Les opposants dénoncent des terres et des arbres détruits pour un gain de temps limité. Arrêter un chantier avancé coûte aussi de l'argent.",
+     "real": {
+      "date": "27 février 2025 (annulation) ; décembre 2025 (appel)",
+      "place": "Entre Castres (Tarn) et Toulouse",
+      "fact": "Le tribunal administratif de Toulouse a annulé l'autorisation environnementale de l'autoroute A69 et le chantier s'est arrêté. L'État a fait appel ; la cour administrative d'appel a ensuite rétabli les autorisations, ce que le Conseil d'État a confirmé.",
+      "figures": "Autoroute de 53 km, travaux avancés à environ 70 % au moment de l'annulation.",
+      "sources": [
+       {
+        "label": "Tribunal administratif de Toulouse : communiqué sur l'A69",
+        "url": "https://toulouse.tribunal-administratif.fr/content/download/225843/document/CP_A69.pdf"
+       },
+       {
+        "label": "Banque des territoires : la cour d'appel valide les autorisations",
+        "url": "https://www.banquedesterritoires.fr/autoroute-a69-la-cour-administrative-dappel-de-toulouse-valide-les-autorisations-environnementales"
+       }
+      ]
+     },
+     "camera": {
+      "region": "occitanie",
+      "x": 54,
+      "y": 76,
+      "zoom": 2.4
+     },
+     "fx": [
+      {
+       "obj": "chantier_grue",
+       "x": 55,
+       "y": 76,
+       "anim": "close"
+      },
+      {
+       "obj": "camion",
+       "x": 53,
+       "y": 77,
+       "anim": "appear",
+       "delay": 0.3
+      },
+      {
+       "obj": "foret",
+       "x": 56,
+       "y": 75,
+       "anim": "appear",
+       "delay": 0.5
+      },
+      {
+       "obj": "manifestants",
+       "x": 52,
+       "y": 76,
+       "anim": "appear",
+       "delay": 0.8
+      }
+     ],
+     "recall": [
+      {
+       "event": "v28_zfe_strasbourg",
+       "choice": "a",
+       "text": "La semaine dernière, vous avez maintenu les zones à faibles émissions : les opposants à l'autoroute s'en réclament."
+      },
+      {
+       "event": "v28_zfe_strasbourg",
+       "choice": "b",
+       "text": "La semaine dernière, vous avez supprimé les zones à faibles émissions : les partisans de l'autoroute y voient un signal."
+      },
+      {
+       "event": "v28_zfe_strasbourg",
+       "choice": "c",
+       "text": "La semaine dernière, vous avez misé sur les bus express : certains demandent la même solution ici."
+      },
+      {
+       "event": "v28_zfe_strasbourg",
+       "choice": "d",
+       "text": "La semaine dernière, vous avez créé un péage urbain : l'autoroute, elle aussi, serait à péage."
+      }
+     ],
+     "choices": [
+      {
+       "id": "a",
+       "label": "Finir l'autoroute après l'appel",
+       "label_expert": "Poursuite du chantier sous réserve de la décision d'appel",
+       "plus": "Le territoire est désenclavé.",
+       "minus": "Des terres et des arbres en moins.",
+       "budget": -0.05,
+       "axes": {
+        "env": 2
+       },
+       "ind": {
+        "emploi": 1,
+        "co2": 1
+       },
+       "budget_note": "Compensations publiques : le déficit augmente un peu (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "chantier_grue",
+         "x": 55,
+         "y": 76,
+         "anim": "grow"
+        },
+        {
+         "obj": "voiture",
+         "x": 53,
+         "y": 77,
+         "anim": "move",
+         "to": {
+          "x": 57,
+          "y": 75
+         }
+        }
+       ]
+      },
+      {
+       "id": "b",
+       "label": "Abandonner et renaturer le tracé",
+       "label_expert": "Abandon du projet et restauration écologique des emprises",
+       "plus": "Les terres agricoles sont rendues.",
+       "minus": "Des indemnités au concessionnaire.",
+       "budget": -0.4,
+       "axes": {
+        "env": -2
+       },
+       "ind": {
+        "co2": -1,
+        "emploi": -1
+       },
+       "budget_note": "Indemnités et travaux de remise en état : le déficit augmente (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "foret",
+         "x": 55,
+         "y": 76,
+         "anim": "grow"
+        },
+        {
+         "obj": "champ",
+         "x": 54,
+         "y": 77,
+         "anim": "appear"
+        }
+       ]
+      },
+      {
+       "id": "c",
+       "label": "Transformer le tracé en route nationale sans péage",
+       "label_expert": "Requalification en route express gratuite à 2x1 voie",
+       "plus": "Un compromis moins coûteux pour les usagers.",
+       "minus": "L'État paie l'entretien à la place du péage.",
+       "budget": -0.1,
+       "axes": {
+        "eco": -1
+       },
+       "ind": {
+        "pouvoir_achat": 1
+       },
+       "budget_note": "Entretien public : le déficit augmente (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "voiture",
+         "x": 53,
+         "y": 77,
+         "anim": "appear"
+        }
+       ]
+      },
+      {
+       "id": "d",
+       "label": "Simplifier les recours contre les grands chantiers",
+       "label_expert": "Réforme du contentieux environnemental (délais de recours raccourcis)",
+       "plus": "Moins de chantiers arrêtés en cours de route.",
+       "minus": "Moins de possibilités de contester un projet.",
+       "budget": 0.1,
+       "axes": {
+        "soc": 1,
+        "env": 1
+       },
+       "ind": {
+        "emploi": 1,
+        "cohesion": -1
+       },
+       "budget_note": "Moins de surcoûts liés aux arrêts : le déficit baisse (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "parlement",
+         "x": 52,
+         "y": 24,
+         "anim": "appear"
+        }
+       ]
+      },
+      {
+       "id": "e",
+       "label": "Faire payer le péage plus cher pour rembourser le retard",
+       "label_expert": "Hausse des tarifs de péage pour couvrir les surcoûts",
+       "plus": "Le contribuable ne paie pas le retard.",
+       "minus": "Les usagers paient plus cher.",
+       "budget": 0.05,
+       "axes": {
+        "eco": 1
+       },
+       "ind": {
+        "pouvoir_achat": -1
+       },
+       "budget_note": "Surcoûts couverts par l'usager : le déficit baisse (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "pieces",
+         "x": 55,
+         "y": 76,
+         "anim": "rise"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "v28_narcotrafic",
+     "kind": "majeur",
+     "region": "paca",
+     "sector": "securite",
+     "title": "Des fusillades liées au trafic de drogue dans une ville du Sud",
+     "simple": "Dans une grande ville du Sud, les règlements de comptes entre trafiquants se multiplient. Une nouvelle loi veut frapper plus fort. Quelle priorité ?",
+     "expert": "Loi visant à sortir la France du piège du narcotrafic : parquet national anticriminalité organisée (Pnaco), quartiers de haute sécurité, gel administratif des avoirs et techniques de renseignement élargies.",
+     "context": "Le trafic de drogue brasse des milliards et recrute des adolescents. Plus de policiers et de prisons coûte cher ; la prévention et les soins agissent lentement ; certaines mesures touchent aux libertés.",
+     "real": {
+      "date": "13 juin 2025 (loi promulguée)",
+      "place": "Marseille et toute la France",
+      "fact": "La loi « narcotrafic » a créé un parquet national spécialisé, des quartiers de haute sécurité en prison et de nouveaux outils d'enquête.",
+      "figures": "Un parquet national anticriminalité organisée créé par la loi.",
+      "sources": [
+       {
+        "label": "Vie publique : loi du 13 juin 2025 contre le narcotrafic",
+        "url": "https://www.vie-publique.fr/loi/297230-loi-du-13-juin-2025-visant-sortir-la-france-du-piege-du-narcotrafic"
+       },
+       {
+        "label": "Info.gouv : loi contre le narcotrafic, ce qu'il faut retenir",
+        "url": "https://www.info.gouv.fr/actualite/loi-contre-le-narcotrafic-ce-quil-faut-retenir"
+       }
+      ]
+     },
+     "camera": {
+      "region": "paca",
+      "x": 74,
+      "y": 80,
+      "zoom": 2.4
+     },
+     "fx": [
+      {
+       "obj": "voiture_police",
+       "x": 74,
+       "y": 79,
+       "anim": "move",
+       "to": {
+        "x": 75,
+        "y": 80
+       }
+      },
+      {
+       "obj": "immeuble",
+       "x": 75,
+       "y": 80,
+       "anim": "pulse",
+       "delay": 0.3
+      },
+      {
+       "obj": "commissariat",
+       "x": 73,
+       "y": 79,
+       "anim": "appear",
+       "delay": 0.6
+      }
+     ],
+     "choices": [
+      {
+       "id": "a",
+       "label": "Recruter des enquêteurs et des magistrats spécialisés",
+       "label_expert": "Renforcement des effectifs de police judiciaire et du parquet spécialisé",
+       "plus": "Les réseaux sont mieux poursuivis.",
+       "minus": "Des salaires à payer chaque année.",
+       "budget": -0.3,
+       "axes": {
+        "soc": 1
+       },
+       "ind": {
+        "services": 1,
+        "cohesion": 1
+       },
+       "budget_note": "Recrutements : le déficit augmente (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "commissariat",
+         "x": 73,
+         "y": 79,
+         "anim": "grow"
+        },
+        {
+         "obj": "voiture_police",
+         "x": 75,
+         "y": 80,
+         "anim": "appear"
+        }
+       ]
+      },
+      {
+       "id": "b",
+       "label": "Saisir et revendre les biens des trafiquants",
+       "label_expert": "Saisie et confiscation élargies des avoirs criminels",
+       "plus": "L'argent du trafic revient à l'État.",
+       "minus": "Des procédures longues et contestées.",
+       "budget": 0.15,
+       "axes": {
+        "soc": 1
+       },
+       "ind": {
+        "cohesion": 1
+       },
+       "budget_note": "Biens saisis revendus : le déficit baisse (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "pieces",
+         "x": 74,
+         "y": 80,
+         "anim": "rise"
+        },
+        {
+         "obj": "voiture",
+         "x": 75,
+         "y": 80,
+         "anim": "fade"
+        }
+       ]
+      },
+      {
+       "id": "c",
+       "label": "Miser sur la prévention et les soins aux consommateurs",
+       "label_expert": "Prévention, éducation et réduction des risques",
+       "plus": "Moins de jeunes recrutés à terme.",
+       "minus": "Des effets lents à mesurer.",
+       "budget": -0.1,
+       "axes": {
+        "soc": -1
+       },
+       "ind": {
+        "services": 1,
+        "cohesion": 1
+       },
+       "budget_note": "Programmes de prévention : le déficit augmente (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "ecole",
+         "x": 73,
+         "y": 80,
+         "anim": "appear"
+        },
+        {
+         "obj": "cabinet_medical",
+         "x": 75,
+         "y": 79,
+         "anim": "appear"
+        }
+       ]
+      },
+      {
+       "id": "d",
+       "label": "Légaliser et taxer le cannabis",
+       "label_expert": "Légalisation encadrée avec monopole de vente et taxe",
+       "plus": "Une recette nouvelle, un marché noir réduit.",
+       "minus": "Des risques pour la santé, un débat moral.",
+       "budget": 0.5,
+       "axes": {
+        "soc": -2,
+        "eco": 1
+       },
+       "ind": {
+        "services": -1
+       },
+       "budget_note": "Taxe sur les ventes : le déficit baisse (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "commerce",
+         "x": 74,
+         "y": 80,
+         "anim": "appear"
+        },
+        {
+         "obj": "pieces",
+         "x": 74,
+         "y": 79,
+         "anim": "rise"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "v28_brandt",
+     "kind": "banal",
+     "region": "centre_val_de_loire",
+     "sector": "salaires",
+     "title": "La dernière usine d'électroménager du pays ferme",
+     "simple": "Le dernier fabricant français de fours et de lave-linge est liquidé. Environ 700 salariés perdent leur emploi près d'Orléans et dans le Loir-et-Cher. Que faire ?",
+     "expert": "Liquidation judiciaire du groupe Brandt faute d'offre de reprise industrielle viable, malgré un projet de société coopérative soutenu par les collectivités.",
+     "context": "Les appareils fabriqués en Asie coûtent moins cher. Sauver une usine demande de l'argent public sans garantie ; la laisser partir fait perdre des savoir-faire.",
+     "real": {
+      "date": "11 décembre 2025",
+      "place": "Saint-Jean-de-la-Ruelle (Loiret) et Vendôme (Loir-et-Cher)",
+      "fact": "Le tribunal a prononcé la liquidation de Brandt, dernier fabricant de gros électroménager en France. Un projet de reprise en coopérative n'a pas abouti.",
+      "figures": "Environ 700 emplois supprimés.",
+      "sources": [
+       {
+        "label": "Public Sénat : Brandt en liquidation judiciaire, 700 emplois supprimés",
+        "url": "https://www.publicsenat.fr/actualites/economie/brandt-en-liquidation-judiciaire-quelque-700-emplois-supprimes"
+       },
+       {
+        "label": "Banque des territoires : la liquidation de Brandt suscite la consternation",
+        "url": "https://www.banquedesterritoires.fr/la-liquidation-de-brandt-dernier-fabricant-delectromenager-en-france-suscite-la-consternation"
+       }
+      ]
+     },
+     "camera": {
+      "region": "centre_val_de_loire",
+      "x": 47,
+      "y": 35,
+      "zoom": 2.4
+     },
+     "fx": [
+      {
+       "obj": "usine",
+       "x": 47,
+       "y": 35,
+       "anim": "close"
+      },
+      {
+       "obj": "manifestants",
+       "x": 48,
+       "y": 36,
+       "anim": "appear",
+       "delay": 0.3
+      },
+      {
+       "obj": "camion",
+       "x": 45,
+       "y": 34,
+       "anim": "move",
+       "to": {
+        "x": 42,
+        "y": 33
+       },
+       "delay": 0.6
+      }
+     ],
+     "recall": [
+      {
+       "event": "v28_arcelor_dunkerque",
+       "choice": "a",
+       "text": "Il y a deux semaines, vous avez nationalisé l'aciérie du Nord : les salariés d'ici demandent la même chose."
+      },
+      {
+       "event": "v28_arcelor_dunkerque",
+       "choice": "b",
+       "text": "Il y a deux semaines, vous avez demandé des quotas sur l'acier importé : on réclame la même protection pour l'électroménager."
+      },
+      {
+       "event": "v28_arcelor_dunkerque",
+       "choice": "c",
+       "text": "Il y a deux semaines, vous avez financé un acier moins polluant : on attend une aide comparable ici."
+      },
+      {
+       "event": "v28_arcelor_dunkerque",
+       "choice": "d",
+       "text": "Il y a deux semaines, vous avez laissé l'aciérie décider seule : vous restez cohérent, ou vous changez de ligne."
+      },
+      {
+       "event": "v28_arcelor_dunkerque",
+       "choice": "e",
+       "text": "Il y a deux semaines, vous avez exigé le remboursement des aides de l'aciérie : la même règle s'appliquerait ici."
+      }
+     ],
+     "choices": [
+      {
+       "id": "a",
+       "label": "Financer la reprise par les salariés en coopérative",
+       "label_expert": "Prêt public et participation des collectivités à une SCOP",
+       "plus": "Les savoir-faire restent en France.",
+       "minus": "Un pari risqué pour l'argent public.",
+       "budget": -0.05,
+       "axes": {
+        "eco": -1
+       },
+       "ind": {
+        "emploi": 1,
+        "souverainete": 1
+       },
+       "budget_note": "Prêt et subvention : le déficit augmente (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "usine",
+         "x": 47,
+         "y": 35,
+         "anim": "grow"
+        }
+       ]
+      },
+      {
+       "id": "b",
+       "label": "Réserver une part des achats publics au « fabriqué en France »",
+       "label_expert": "Critères d'origine dans la commande publique",
+       "plus": "Des débouchés pour les usines françaises.",
+       "minus": "Des achats publics plus chers.",
+       "budget": -0.03,
+       "axes": {
+        "eu": 1
+       },
+       "ind": {
+        "emploi": 1
+       },
+       "budget_note": "Achats plus chers : le déficit augmente un peu (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "entrepot",
+         "x": 46,
+         "y": 36,
+         "anim": "appear"
+        }
+       ]
+      },
+      {
+       "id": "c",
+       "label": "Accompagner les salariés vers d'autres emplois",
+       "label_expert": "Cellule de reclassement et formations financées",
+       "plus": "Une aide concrète aux familles.",
+       "minus": "L'usine et ses savoir-faire disparaissent.",
+       "budget": 0.02,
+       "axes": {
+        "eco": 1
+       },
+       "ind": {
+        "emploi": -1
+       },
+       "budget_note": "Pas d'argent dans l'usine : le déficit baisse un peu (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "ecole",
+         "x": 48,
+         "y": 36,
+         "anim": "appear"
+        },
+        {
+         "obj": "usine",
+         "x": 47,
+         "y": 35,
+         "anim": "fade"
+        }
+       ]
+      },
+      {
+       "id": "d",
+       "label": "Baisser les impôts de production des usines",
+       "label_expert": "Allègement de la cotisation foncière des entreprises industrielles",
+       "plus": "Les usines restantes deviennent plus compétitives.",
+       "minus": "Moins de recettes pour les communes et l'État.",
+       "budget": -0.2,
+       "axes": {
+        "eco": 2
+       },
+       "ind": {
+        "emploi": 1
+       },
+       "budget_note": "Moins d'impôts perçus : le déficit augmente (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "usine",
+         "x": 49,
+         "y": 34,
+         "anim": "appear"
+        },
+        {
+         "obj": "pieces",
+         "x": 47,
+         "y": 35,
+         "anim": "fade"
+        }
+       ]
+      },
+      {
+       "id": "e",
+       "label": "Laisser faire le marché",
+       "label_expert": "Aucune intervention publique dans la liquidation",
+       "plus": "Pas de dépense publique.",
+       "minus": "Une région fragilisée.",
+       "budget": 0.05,
+       "axes": {
+        "eco": 2
+       },
+       "ind": {
+        "emploi": -2,
+        "cohesion": -1
+       },
+       "budget_note": "Aucune aide : le déficit baisse (estimation du jeu).",
+       "fx": [
+        {
+         "obj": "usine",
+         "x": 47,
+         "y": 35,
+         "anim": "close"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "offer": [
+    "regulation_installation_medecins",
+    "jour_ferie_travaille",
+    "tva_energie_5_5",
+    "leasing_electrique",
+    "encadrement_loyers"
    ]
   }
  ],

@@ -73,3 +73,6 @@
 ## Technique
 - Dépôt public : github.com/ewenbeaugendre04/boussole-2027 ; site : ewenbeaugendre04.github.io/boussole-2027 (déploiement auto via Actions si les contrôles passent).
 - Voir `CLAUDE.md` (où modifier quoi) et `docs/SCHEMA.md` (format des données).
+
+## Lot du 21/11 nuit (20 semaines)
+- 20 semaines : 12 événements récents ajoutés (semaines 17-20, 2024-2025 : sabotage TGV, vie chère Martinique, France Travail, crue de Rennes, ArcelorMittal, loi pesticide, EPR, contrôles allemands, ZFE, A69, narcotrafic, Brandt) ; 4 anciens remplacés (vache folle → dermatose 2025, Lothar → crues Pas-de-Calais, Erika → pêche golfe de Gascogne, chikungunya → Réunion 2025) ; choix nouveaux 32 + / 32 − ; offres 17-20 = semaines 10-13 ; bilan mensuel en semaine 20 (4 bilans + final).

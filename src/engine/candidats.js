@@ -102,6 +102,8 @@ function candHook(){
       b.innerHTML = CAND_ICO; b.setAttribute('data-csec', el.getAttribute('data-sec'));
       h.appendChild(b);
     });
+    var cb0 = document.querySelector('.card .cbody');
+    if(cb0 && !cb0.querySelector('#oCand')){ var ob = document.createElement('button'); ob.id = 'oCand'; ob.className = 'cd-link pressable'; ob.innerHTML = CAND_ICO + '<span>Candidats : proches de vos choix et dossier complet</span>'; cb0.insertBefore(ob, cb0.children[1] || null); ob.addEventListener('click', function(e){ e.stopPropagation(); closeCard(true); var o = orientation(); if(AXK.some(function(k){ return o.glob[k].n; })) openCandGlobal(); else openCandidats(); }); }
     var body = document.querySelector('.card .cbody');
     if(body) body.addEventListener('click', function(e){ var b = e.target.closest('[data-csec]'); if(b){ e.stopPropagation(); var s = b.getAttribute('data-csec'); closeCard(true); openCandSecteur(s); } });
   };
