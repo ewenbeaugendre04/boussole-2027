@@ -44,6 +44,14 @@
 - Réponses : une seule, sauf événements `multi` = une au court terme + une au long terme (`choice.terme`), validation possible avec une seule des deux.
 - FPS : sprites cuits dans l'image du décor (data URI + `<use>`), zoom max 2,6 ; repli sur la couche HTML si le chargement échoue (file://).
 - Déploiement Pages en 2 jobs (assemblage puis déploiement) pour éviter l'erreur d'artefact.
+- Lot contenu (21/11 soir) : 31 choix ajoutés, tirés de positions réelles des programmes (sans nom), 1 par événement à 4 choix, 2 pour Seine, médicaments, Louvre (160 choix) ; 11 réduisent le déficit, 10 l'augmentent, 10 neutres ; rappels (`recall`) complétés en « vous ».
+- `multi` gardé sur 6 événements seulement (canicule, émeutes, Nouvelle-Calédonie, Xynthia, bouclier énergie, Lothar) ; retiré ailleurs avec les `terme`.
+- Chiffres sourcés dans `budget_note` : EPR2 ~73 Md€ (EDF), ISF 4,2 Md€ / IFI 2,4 Md€, franchise doublée ~0,75 Md€ (Les Echos) ; les autres petits montants sont des « estimations du jeu » à vérifier.
+
+## Lot du 21/11 après-midi
+- 31 choix ajoutés depuis les programmes (sans noms), `multi` gardé sur 6 événements ; 66 objets Recraft ajoutés (120 au total) ; ~384 crédits restants (Ewen veut garder ~50 générations).
+- Échelle des objets d'événement alignée sur le décor (`SPR_W`, x2) ; montagnes, collines, phares, voiliers, plages en sprites ; hôpital à croix rouge ; silhouettes d'outre-mer.
+- À faire : rappels encore au « tu » ; vérifier les petits montants notés « estimation du jeu » ; objets faibles (montagne seule, métro, marée noire, conteneurs).
 
 ## Prochaines étapes
 1. FAIT (21/11) : 51 SVG dans `assets/library/svg/` (9,5 Mo, ~190 Ko chacun, avec métadonnées C2PA de provenance IA à conserver). Trop lourds pour le jeu : produire des sprites WebP (~256 px) via Playwright pour le build.

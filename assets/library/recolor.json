@@ -1,5 +1,5 @@
 {
- "_doc": "Retouches de couleur appliqu\u00e9es aux SVG avant fabrication des sprites. hue: plage de teinte (deg) vis\u00e9e ; to: teinte cible ou null ; sat: facteur saturation ; light: d\u00e9calage luminosit\u00e9 (-1..1).",
+ "_doc": "Retouches de couleur appliquées aux SVG avant fabrication des sprites. hue: plage de teinte (deg) visée ; to: teinte cible ou null ; sat: facteur saturation ; light: décalage luminosité (-1..1).",
  "tgv": [
   {
    "hue": [
@@ -190,6 +190,94 @@
    "to": 40,
    "sat": 0.75,
    "light": 0.05
+  }
+ ],
+ "ambulance": [
+  {
+   "hue": [
+    170,
+    215
+   ],
+   "to": null,
+   "sat": 0.05,
+   "light": 0.18
+  }
+ ],
+ "voiture_police": [
+  {
+   "hue": [
+    170,
+    215
+   ],
+   "min_l": 0.5,
+   "to": null,
+   "sat": 0.05,
+   "light": 0.2
+  },
+  {
+   "hue": [
+    170,
+    215
+   ],
+   "max_l": 0.5,
+   "to": 225,
+   "sat": 0.9,
+   "light": -0.12
+  }
+ ],
+ "char": [
+  {
+   "hue": [
+    170,
+    215
+   ],
+   "to": 75,
+   "sat": 0.38,
+   "light": -0.12
+  }
+ ],
+ "soldats": [
+  {
+   "hue": [
+    170,
+    215
+   ],
+   "to": 75,
+   "sat": 0.38,
+   "light": -0.12
+  }
+ ],
+ "fregate": [
+  {
+   "hue": [
+    170,
+    215
+   ],
+   "to": 210,
+   "sat": 0.08,
+   "light": 0.02
+  }
+ ],
+ "avion_militaire": [
+  {
+   "hue": [
+    170,
+    215
+   ],
+   "to": 210,
+   "sat": 0.08,
+   "light": 0.02
+  }
+ ],
+ "drone": [
+  {
+   "hue": [
+    170,
+    215
+   ],
+   "to": 210,
+   "sat": 0.08,
+   "light": 0.02
   }
  ]
 }

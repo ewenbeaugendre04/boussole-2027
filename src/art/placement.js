@@ -153,6 +153,8 @@ function objEl(name, k, label, flip){
   if(!OBJ[name]) label = label || String(name).replace(/_/g, ' ');
   var w = def.w || 24, h = def.h || 24, sc = LOCAL * k * (def.s || 1);
   var pw = w * sc, ph = h * sc;
+  var spr0 = OBJ_SPR[name];
+  if(spr0 && SPR_AR[spr0] && typeof VBK === 'number'){ pw = (SPR_W[spr0] || 2.4) * VBK * 2; ph = pw * SPR_AR[spr0]; sc = pw / w; } /* même échelle que le décor (x2 pour la lisibilité) */
   var el = document.createElement('div'); el.className = 'fx o-' + name;
   var b = document.createElement('div'); b.className = 'fxb';
   b.style.cssText = 'width:' + F(pw) + 'px;height:' + F(ph) + 'px;left:' + F(-pw / 2) + 'px;top:' + F(-ph + 2 * sc) + 'px';

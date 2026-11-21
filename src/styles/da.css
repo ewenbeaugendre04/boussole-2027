@@ -51,8 +51,8 @@ body{font-weight:600}
 .real-st{border-color:var(--brass-d)!important;color:var(--brass-d)}
 /* trains : bien opaques */
 .mv.tgv{opacity:1!important;filter:drop-shadow(0 1.5px 1px rgba(10,50,60,.45)) saturate(1.1)}
-.fxb.fxspr img{width:100%;height:100%;object-fit:contain;object-position:50% 100%;display:block;transform:scale(1.25);transform-origin:50% 100%;filter:drop-shadow(0 2px 2px rgba(10,60,70,.18))}
-.fxb.fxspr img.flip{transform:scale(-1.25,1.25)}
+.fxb.fxspr img{width:100%;height:100%;object-fit:contain;object-position:50% 100%;display:block;filter:drop-shadow(0 2px 2px rgba(10,60,70,.18))}
+.fxb.fxspr img.flip{transform:scaleX(-1)}
 /* doublon de « Lancer la semaine » : le bouton du dock suffit */
 #launch,#launch.on{display:none!important}
 /* événements « multi » : groupes court / long terme */

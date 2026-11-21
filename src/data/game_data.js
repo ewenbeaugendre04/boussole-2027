@@ -537,8 +537,7 @@ const GAME = {
          },
          "count": 3
         }
-       ],
-       "terme": "long"
+       ]
       },
       {
        "id": "b",
@@ -577,8 +576,7 @@ const GAME = {
          "y": 48,
          "anim": "pulse"
         }
-       ],
-       "terme": "long"
+       ]
       },
       {
        "id": "c",
@@ -619,8 +617,7 @@ const GAME = {
          "anim": "pulse"
         }
        ],
-       "budget_note": "Aide ponctuelle versée par l'État : le déficit augmente une fois.",
-       "terme": "court"
+       "budget_note": "Aide ponctuelle versée par l'État : le déficit augmente une fois."
       },
       {
        "id": "d",
@@ -662,24 +659,50 @@ const GAME = {
          "anim": "rise"
         }
        ],
-       "budget_note": "Plus d'exportations, donc plus d'impôts sur les bénéfices : le déficit baisse un peu.",
-       "terme": "long"
-      }
-     ],
-     "multi": {
-      "max": 2,
-      "pairs": [
-       [
-        "b",
-        "c"
-       ],
-       [
-        "a",
-        "c"
+       "budget_note": "Plus d'exportations, donc plus d'impôts sur les bénéfices : le déficit baisse un peu."
+      },
+      {
+       "id": "e",
+       "label": "Interdire la viande produite avec des produits interdits chez nous",
+       "label_expert": "Imposer des mesures miroirs sur les importations agricoles",
+       "plus": "Mêmes règles pour tous, concurrence plus loyale.",
+       "minus": "Contrôles difficiles, prix un peu plus élevés.",
+       "budget": 0,
+       "axes": {
+        "env": -1,
+        "eu": 1
+       },
+       "ind": {
+        "souverainete": 1,
+        "pouvoir_achat": -1
+       },
+       "fx": [
+        {
+         "obj": "douane",
+         "x": 30,
+         "y": 50,
+         "anim": "appear",
+         "stay": true
+        },
+        {
+         "obj": "cargo",
+         "x": 15,
+         "y": 52,
+         "anim": "move",
+         "to": {
+          "x": 2,
+          "y": 60
+         }
+        },
+        {
+         "obj": "loupe",
+         "x": 32,
+         "y": 48,
+         "anim": "pulse"
+        }
        ]
-      ],
-      "hint": "Une réponse pour le court terme, une pour le long terme."
-     }
+      }
+     ]
     },
     {
      "id": "v22_canicule_2003",
@@ -919,6 +942,50 @@ const GAME = {
        ],
        "budget_note": "Salaires de nouveaux soignants chaque année : le déficit augmente.",
        "terme": "long"
+      },
+      {
+       "id": "e",
+       "label": "Planter des arbres dans les villes et les cours d'école",
+       "label_expert": "Financer la végétalisation urbaine et des cours d'école « oasis »",
+       "plus": "Villes plus fraîches pour des décennies.",
+       "minus": "Effet lent, arbres longs à pousser.",
+       "budget": -0.3,
+       "axes": {
+        "env": -2,
+        "eco": -1
+       },
+       "ind": {
+        "co2": -1,
+        "services": 1,
+        "emploi": 1
+       },
+       "fx": [
+        {
+         "obj": "soignants",
+         "x": 53,
+         "y": 26,
+         "anim": "appear",
+         "count": 3
+        },
+        {
+         "obj": "hopital",
+         "x": 54,
+         "y": 27,
+         "anim": "pulse"
+        },
+        {
+         "obj": "euro_flux",
+         "x": 52,
+         "y": 50,
+         "anim": "flow",
+         "to": {
+          "x": 53,
+          "y": 26
+         }
+        }
+       ],
+       "budget_note": "Subventions aux communes (ordre de grandeur du Fonds vert, estimation du jeu) : le déficit augmente.",
+       "terme": "long"
       }
      ],
      "multi": {
@@ -935,6 +1002,14 @@ const GAME = {
        [
         "c",
         "d"
+       ],
+       [
+        "a",
+        "e"
+       ],
+       [
+        "c",
+        "e"
        ]
       ],
       "hint": "Une réponse pour le court terme, une pour le long terme."
@@ -1115,6 +1190,88 @@ const GAME = {
          "anim": "pulse"
         }
        ]
+      },
+      {
+       "id": "d",
+       "label": "Arrêter de financer la baignade, garder l'argent",
+       "label_expert": "Suspendre les crédits publics du plan baignade",
+       "plus": "Économies, priorité à d'autres dépenses.",
+       "minus": "Les rivières restent sales en été.",
+       "budget": 0.05,
+       "axes": {
+        "eco": 1,
+        "env": 1
+       },
+       "ind": {
+        "services": -1,
+        "co2": 1
+       },
+       "fx": [
+        {
+         "obj": "panneau",
+         "x": 53,
+         "y": 22,
+         "anim": "blink",
+         "label": "Économies"
+        },
+        {
+         "obj": "personnage",
+         "x": 51,
+         "y": 24,
+         "anim": "fade",
+         "count": 3
+        },
+        {
+         "obj": "loupe",
+         "x": 50,
+         "y": 22,
+         "anim": "pulse"
+        }
+       ],
+       "budget_note": "Crédits annulés (estimation du jeu) : le déficit baisse un peu."
+      },
+      {
+       "id": "e",
+       "label": "Rendre baignables les rivières de toutes les grandes villes",
+       "label_expert": "Étendre l'objectif de baignade aux cours d'eau urbains",
+       "plus": "Eau plus propre et loisirs gratuits partout.",
+       "minus": "Gros travaux d'assainissement à financer.",
+       "budget": -0.2,
+       "axes": {
+        "env": -2,
+        "eco": -1
+       },
+       "ind": {
+        "services": 1,
+        "co2": -1,
+        "cohesion": 1
+       },
+       "fx": [
+        {
+         "obj": "chantier_grue",
+         "x": 50,
+         "y": 26,
+         "anim": "grow"
+        },
+        {
+         "obj": "barrage",
+         "x": 51,
+         "y": 26,
+         "anim": "appear",
+         "label": "Rivières propres"
+        },
+        {
+         "obj": "fleche",
+         "x": 51,
+         "y": 26,
+         "anim": "move",
+         "to": {
+          "x": 52,
+          "y": 24
+         }
+        }
+       ],
+       "budget_note": "Travaux d'assainissement aidés par l'État (estimation du jeu) : le déficit augmente."
       }
      ]
     }
@@ -1377,6 +1534,45 @@ const GAME = {
         }
        ],
        "budget_note": "Aides aux agriculteurs pour entretenir les parcelles : le déficit augmente un peu."
+      },
+      {
+       "id": "e",
+       "label": "Recruter des forestiers publics pour entretenir les bois",
+       "label_expert": "Renforcer les effectifs de l'Office national des forêts",
+       "plus": "Forêts entretenues toute l'année.",
+       "minus": "Dépense durable, résultats lents.",
+       "budget": -0.1,
+       "axes": {
+        "eco": -2
+       },
+       "ind": {
+        "services": 1,
+        "emploi": 1,
+        "co2": -1
+       },
+       "fx": [
+        {
+         "obj": "champ",
+         "x": 52,
+         "y": 85,
+         "anim": "grow",
+         "count": 3,
+         "stay": true
+        },
+        {
+         "obj": "ferme",
+         "x": 53,
+         "y": 84,
+         "anim": "appear"
+        },
+        {
+         "obj": "incendie",
+         "x": 50,
+         "y": 85,
+         "anim": "fade"
+        }
+       ],
+       "budget_note": "Emplois publics nouveaux (estimation du jeu) : le déficit augmente."
       }
      ],
      "recall": [
@@ -1408,6 +1604,11 @@ const GAME = {
        "ind": {
         "services": 1
        }
+      },
+      {
+       "event": "v22_canicule_2003",
+       "choice": "e",
+       "text": "La semaine dernière, pendant la canicule, vous avez fait planter des arbres en ville : les jeunes plants ne protègent pas encore du feu, mais la mesure est saluée."
       }
      ]
     },
@@ -1646,6 +1847,45 @@ const GAME = {
         }
        ],
        "budget_note": "Électricité produite sans nouvelle centrale, dividendes en plus : le déficit baisse."
+      },
+      {
+       "id": "e",
+       "label": "Construire de nouveaux réacteurs nucléaires",
+       "label_expert": "Lancer un programme de six réacteurs de nouvelle génération",
+       "plus": "Électricité bas carbone pour un siècle.",
+       "minus": "Chantiers très coûteux, retards fréquents.",
+       "budget": -1,
+       "axes": {
+        "env": 1,
+        "eu": 1
+       },
+       "ind": {
+        "souverainete": 3,
+        "emploi": 1,
+        "co2": -1,
+        "cohesion": -1
+       },
+       "fx": [
+        {
+         "obj": "chantier_grue",
+         "x": 70,
+         "y": 56,
+         "anim": "grow"
+        },
+        {
+         "obj": "centrale_nucleaire",
+         "x": 70,
+         "y": 54,
+         "anim": "smoke"
+        },
+        {
+         "obj": "pieces",
+         "x": 70,
+         "y": 52,
+         "anim": "rise"
+        }
+       ],
+       "budget_note": "Six réacteurs chiffrés à environ 73 Md€ par l'électricien public, en partie aidés par l'État : le déficit augmente."
       }
      ]
     },
@@ -1754,8 +1994,7 @@ const GAME = {
          "anim": "fade"
         }
        ],
-       "budget_note": "Subventions ponctuelles aux usines : le déficit augmente une fois.",
-       "terme": "long"
+       "budget_note": "Subventions ponctuelles aux usines : le déficit augmente une fois."
       },
       {
        "id": "b",
@@ -1791,8 +2030,7 @@ const GAME = {
          "y": 42,
          "anim": "fade"
         }
-       ],
-       "terme": "court"
+       ]
       },
       {
        "id": "c",
@@ -1828,28 +2066,89 @@ const GAME = {
          "count": 2
         }
        ],
-       "budget_note": "Moins de boîtes remboursées pour rien : le déficit baisse un peu.",
-       "terme": "court"
+       "budget_note": "Moins de boîtes remboursées pour rien : le déficit baisse un peu."
+      },
+      {
+       "id": "d",
+       "label": "Créer un fabricant public de médicaments",
+       "label_expert": "Créer un pôle public du médicament pour les produits essentiels",
+       "plus": "Production garantie des médicaments vitaux.",
+       "minus": "Coût pour l'État, gestion publique lente.",
+       "budget": -0.1,
+       "axes": {
+        "eco": -2,
+        "eu": 1
+       },
+       "ind": {
+        "souverainete": 2,
+        "emploi": 1
+       },
+       "fx": [
+        {
+         "obj": "usine",
+         "x": 68,
+         "y": 42,
+         "anim": "grow",
+         "stay": true
+        },
+        {
+         "obj": "camion",
+         "x": 68,
+         "y": 42,
+         "anim": "move",
+         "to": {
+          "x": 66,
+          "y": 40
+         }
+        },
+        {
+         "obj": "cargo",
+         "x": 78,
+         "y": 86,
+         "anim": "fade"
+        }
+       ],
+       "once": -0.3,
+       "budget_note": "Création et fonctionnement de l'établissement (estimation du jeu) : le déficit augmente."
+      },
+      {
+       "id": "e",
+       "label": "Doubler la somme payée par le patient sur chaque boîte",
+       "label_expert": "Doubler la franchise médicale par boîte de médicament",
+       "plus": "Économies pour l'Assurance maladie.",
+       "minus": "Pèse sur les malades chroniques.",
+       "budget": 0.75,
+       "axes": {
+        "eco": 1
+       },
+       "ind": {
+        "pouvoir_achat": -1,
+        "cohesion": -1
+       },
+       "fx": [
+        {
+         "obj": "colis",
+         "x": 66,
+         "y": 40,
+         "anim": "appear"
+        },
+        {
+         "obj": "pieces",
+         "x": 66,
+         "y": 38,
+         "anim": "rise"
+        },
+        {
+         "obj": "personnage",
+         "x": 67,
+         "y": 42,
+         "anim": "appear",
+         "count": 2
+        }
+       ],
+       "budget_note": "Environ 0,75 Md€ d'économies selon la presse économique (Les Echos) : le déficit baisse."
       }
-     ],
-     "multi": {
-      "max": 2,
-      "pairs": [
-       [
-        "a",
-        "b"
-       ],
-       [
-        "b",
-        "c"
-       ],
-       [
-        "a",
-        "c"
-       ]
-      ],
-      "hint": "Une réponse pour le court terme, une pour le long terme."
-     }
+     ]
     },
     {
      "id": "v22_emeutes",
@@ -2080,6 +2379,43 @@ const GAME = {
        ],
        "budget_note": "Une partie des dégâts remboursée par les auteurs : le déficit baisse un peu.",
        "terme": "court"
+      },
+      {
+       "id": "e",
+       "label": "Suspendre les allocations des parents de mineurs condamnés",
+       "label_expert": "Suspendre les allocations familiales des parents de mineurs délinquants",
+       "plus": "Responsabilise les familles.",
+       "minus": "Punit aussi les frères et sœurs.",
+       "budget": 0.01,
+       "axes": {
+        "soc": 2
+       },
+       "ind": {
+        "cohesion": -1
+       },
+       "fx": [
+        {
+         "obj": "etiquette",
+         "x": 53,
+         "y": 22,
+         "anim": "appear",
+         "label": "Allocations"
+        },
+        {
+         "obj": "pieces",
+         "x": 53,
+         "y": 25,
+         "anim": "rise"
+        },
+        {
+         "obj": "mairie",
+         "x": 53,
+         "y": 25,
+         "anim": "appear"
+        }
+       ],
+       "budget_note": "Allocations suspendues : petite économie, le déficit baisse à peine.",
+       "terme": "long"
       }
      ],
      "multi": {
@@ -2100,6 +2436,14 @@ const GAME = {
        [
         "b",
         "d"
+       ],
+       [
+        "a",
+        "e"
+       ],
+       [
+        "d",
+        "e"
        ]
       ],
       "hint": "Une réponse pour le court terme, une pour le long terme."
@@ -2353,6 +2697,48 @@ const GAME = {
         }
        ],
        "budget_note": "Aides à la reconversion des salariés : le déficit augmente un peu."
+      },
+      {
+       "id": "e",
+       "label": "Faire rembourser les aides publiques si l'usine ferme",
+       "label_expert": "Conditionner les aides publiques au maintien de l'emploi",
+       "plus": "L'argent public ne finance pas les fermetures.",
+       "minus": "Les investisseurs peuvent hésiter.",
+       "budget": 0.05,
+       "axes": {
+        "eco": -1
+       },
+       "ind": {
+        "cohesion": 1,
+        "emploi": -1
+       },
+       "fx": [
+        {
+         "obj": "usine_fermee",
+         "x": 74,
+         "y": 18,
+         "anim": "close"
+        },
+        {
+         "obj": "usine",
+         "x": 76,
+         "y": 20,
+         "anim": "appear",
+         "label": "Aides remboursées"
+        },
+        {
+         "obj": "personnage",
+         "x": 74,
+         "y": 20,
+         "anim": "move",
+         "to": {
+          "x": 76,
+          "y": 20
+         },
+         "count": 3
+        }
+       ],
+       "budget_note": "Aides récupérées (estimation du jeu) : le déficit baisse un peu."
       }
      ]
     },
@@ -2588,6 +2974,45 @@ const GAME = {
        ],
        "budget_note": "Le prêt sort une fois puis est remboursé avec intérêts : le déficit baisse ensuite.",
        "terme": "long"
+      },
+      {
+       "id": "e",
+       "label": "Négocier un nouveau statut avec une large autonomie",
+       "label_expert": "Négocier un statut d'État associé au sein de la République",
+       "plus": "Une sortie politique durable à la crise.",
+       "minus": "Accord fragile, contesté des deux côtés.",
+       "budget": 0,
+       "axes": {
+        "soc": -1,
+        "eu": -1
+       },
+       "ind": {
+        "cohesion": 1,
+        "souverainete": -1
+       },
+       "fx": [
+        {
+         "obj": "personnage",
+         "x": 7,
+         "y": 90,
+         "anim": "appear",
+         "count": 3,
+         "label": "Nouveau statut"
+        },
+        {
+         "obj": "mairie",
+         "x": 6,
+         "y": 88,
+         "anim": "appear"
+        },
+        {
+         "obj": "commerce",
+         "x": 6,
+         "y": 89,
+         "anim": "fade"
+        }
+       ],
+       "terme": "long"
       }
      ],
      "multi": {
@@ -2600,6 +3025,14 @@ const GAME = {
        [
         "c",
         "d"
+       ],
+       [
+        "a",
+        "e"
+       ],
+       [
+        "b",
+        "e"
        ]
       ],
       "hint": "Une réponse pour le court terme, une pour le long terme."
@@ -2779,6 +3212,80 @@ const GAME = {
          "anim": "fade"
         }
        ]
+      },
+      {
+       "id": "d",
+       "label": "Confier la surveillance à des sociétés privées",
+       "label_expert": "Externaliser le gardiennage des musées nationaux",
+       "plus": "Moins cher, plus souple à organiser.",
+       "minus": "Moins de contrôle sur les agents.",
+       "budget": 0.01,
+       "axes": {
+        "eco": 2
+       },
+       "ind": {
+        "services": -1,
+        "emploi": 1
+       },
+       "fx": [
+        {
+         "obj": "bulle",
+         "x": 55,
+         "y": 21,
+         "anim": "appear",
+         "label": "Sécurité privée"
+        },
+        {
+         "obj": "parlement",
+         "x": 52,
+         "y": 24,
+         "anim": "pulse"
+        },
+        {
+         "obj": "cadenas",
+         "x": 52,
+         "y": 22,
+         "anim": "fade"
+        }
+       ],
+       "budget_note": "Gardiennage moins coûteux (estimation du jeu) : le déficit baisse un peu."
+      },
+      {
+       "id": "e",
+       "label": "Recruter des gardiens dans tous les musées publics",
+       "label_expert": "Créer des postes d'agents de surveillance dans les musées nationaux",
+       "plus": "Plus de gardiens, salles mieux protégées.",
+       "minus": "Une dépense durable pour l’État chaque année.",
+       "budget": -0.05,
+       "axes": {
+        "eco": -2
+       },
+       "ind": {
+        "services": 1,
+        "emploi": 1
+       },
+       "fx": [
+        {
+         "obj": "cadenas",
+         "x": 52,
+         "y": 22,
+         "anim": "appear",
+         "stay": true
+        },
+        {
+         "obj": "antenne",
+         "x": 54,
+         "y": 24,
+         "anim": "spin"
+        },
+        {
+         "obj": "policiers",
+         "x": 51,
+         "y": 25,
+         "anim": "appear"
+        }
+       ],
+       "budget_note": "Postes publics nouveaux (estimation du jeu) : le déficit augmente."
       }
      ]
     },
@@ -3023,6 +3530,47 @@ const GAME = {
          "anim": "appear"
         }
        ]
+      },
+      {
+       "id": "e",
+       "label": "Rétablir l'impôt sur la fortune pour payer la crise",
+       "label_expert": "Rétablir l'impôt de solidarité sur la fortune",
+       "plus": "Les plus riches participent à l'effort.",
+       "minus": "Risque de départs de grandes fortunes.",
+       "budget": 2,
+       "axes": {
+        "eco": -2
+       },
+       "ind": {
+        "cohesion": 1,
+        "emploi": -1
+       },
+       "fx": [
+        {
+         "obj": "euro_flux",
+         "x": 52,
+         "y": 24,
+         "anim": "flow",
+         "to": {
+          "x": 30,
+          "y": 42
+         }
+        },
+        {
+         "obj": "commerce",
+         "x": 30,
+         "y": 42,
+         "anim": "pulse",
+         "count": 3
+        },
+        {
+         "obj": "hopital",
+         "x": 52,
+         "y": 26,
+         "anim": "pulse"
+        }
+       ],
+       "budget_note": "L'ancien impôt rapportait environ 4,2 Md€, l'impôt actuel sur l'immobilier environ 2,4 Md€ : recette nette, le déficit baisse."
       }
      ],
      "recall": [
@@ -3046,6 +3594,16 @@ const GAME = {
        "event": "v22_medicaments",
        "choice": "c",
        "text": "La semaine dernière, tu as fait vendre les antibiotiques à l'unité : les pharmaciens savent déjà rationner, mais les stocks restent maigres."
+      },
+      {
+       "event": "v22_medicaments",
+       "choice": "d",
+       "text": "Il y a peu, vous avez créé un fabricant public de médicaments : il commence à produire du paracétamol, utile pour les malades du virus."
+      },
+      {
+       "event": "v22_medicaments",
+       "choice": "e",
+       "text": "Il y a peu, vous avez doublé la franchise sur les boîtes : l'Assurance maladie a un peu plus de marge, mais des malades renoncent à des achats."
       }
      ]
     }
@@ -3301,6 +3859,45 @@ const GAME = {
        ],
        "budget_note": "Part publique des indemnisations : le déficit augmente une fois.",
        "terme": "court"
+      },
+      {
+       "id": "e",
+       "label": "Augmenter la surprime « catastrophes naturelles » des assurances",
+       "label_expert": "Relever le taux de la surprime catastrophes naturelles",
+       "plus": "Le régime d'aide reste financé.",
+       "minus": "Assurances plus chères pour tous.",
+       "budget": 0.2,
+       "axes": {
+        "eco": 1
+       },
+       "ind": {
+        "pouvoir_achat": -1,
+        "services": 1
+       },
+       "fx": [
+        {
+         "obj": "panneau",
+         "x": 26,
+         "y": 44,
+         "anim": "appear",
+         "label": "Assurance",
+         "stay": true
+        },
+        {
+         "obj": "chantier_grue",
+         "x": 26,
+         "y": 45,
+         "anim": "close"
+        },
+        {
+         "obj": "immeuble",
+         "x": 30,
+         "y": 44,
+         "anim": "grow"
+        }
+       ],
+       "budget_note": "Moins d'appels à la garantie de l'État (estimation du jeu) : le déficit baisse.",
+       "terme": "long"
       }
      ],
      "multi": {
@@ -3321,6 +3918,10 @@ const GAME = {
        [
         "a",
         "c"
+       ],
+       [
+        "d",
+        "e"
        ]
       ],
       "hint": "Une réponse pour le court terme, une pour le long terme."
@@ -3924,6 +4525,11 @@ const GAME = {
        "ind": {
         "pouvoir_achat": 1
        }
+      },
+      {
+       "event": "v22_fukushima",
+       "choice": "e",
+       "text": "Il y a peu, vous avez lancé de nouveaux réacteurs : les chantiers avancent, mais ils ne produiront rien avant longtemps."
       }
      ],
      "multi": {
@@ -4185,6 +4791,48 @@ const GAME = {
         }
        ],
        "budget_note": "Argent versé par l'Union européenne : le déficit baisse une fois."
+      },
+      {
+       "id": "e",
+       "label": "Réduire les impôts de ceux qui investissent dans la reconstruction",
+       "label_expert": "Créer une défiscalisation pour l'investissement productif à Mayotte",
+       "plus": "Les entreprises reviennent vite.",
+       "minus": "Avantage fiscal, effets mal contrôlés.",
+       "budget": -0.1,
+       "axes": {
+        "eco": 2
+       },
+       "ind": {
+        "emploi": 2,
+        "cohesion": -1
+       },
+       "fx": [
+        {
+         "obj": "chantier_grue",
+         "x": 7,
+         "y": 90,
+         "anim": "grow",
+         "stay": true
+        },
+        {
+         "obj": "maison",
+         "x": 8,
+         "y": 91,
+         "anim": "grow",
+         "count": 3
+        },
+        {
+         "obj": "euro_flux",
+         "x": 52,
+         "y": 50,
+         "anim": "flow",
+         "to": {
+          "x": 7,
+          "y": 90
+         }
+        }
+       ],
+       "budget_note": "Impôts en moins (estimation du jeu) : le déficit augmente."
       }
      ]
     },
@@ -4418,6 +5066,45 @@ const GAME = {
         }
        ],
        "budget_note": "Subvention au camion-boulangerie : le déficit augmente très peu."
+      },
+      {
+       "id": "e",
+       "label": "Reprendre la boulangerie en coopérative avec les habitants",
+       "label_expert": "Créer une société coopérative d'intérêt collectif",
+       "plus": "Le village garde son commerce.",
+       "minus": "Repose sur des bénévoles motivés.",
+       "budget": 0,
+       "axes": {
+        "eco": -1,
+        "soc": -1
+       },
+       "ind": {
+        "cohesion": 2,
+        "emploi": 1
+       },
+       "fx": [
+        {
+         "obj": "chantier_grue",
+         "x": 51,
+         "y": 31,
+         "anim": "grow"
+        },
+        {
+         "obj": "boulangerie",
+         "x": 51,
+         "y": 31,
+         "anim": "appear",
+         "delay": 1,
+         "stay": true
+        },
+        {
+         "obj": "file_attente",
+         "x": 52,
+         "y": 33,
+         "anim": "appear",
+         "delay": 1.4
+        }
+       ]
       }
      ]
     }
@@ -4546,8 +5233,7 @@ const GAME = {
          "label": "Farines interdites"
         }
        ],
-       "budget_note": "Destruction des stocks payée par l'État : le déficit augmente.",
-       "terme": "court"
+       "budget_note": "Destruction des stocks payée par l'État : le déficit augmente."
       },
       {
        "id": "b",
@@ -4581,8 +5267,7 @@ const GAME = {
          }
         }
        ],
-       "budget_note": "Tests payés par l'État : le déficit augmente.",
-       "terme": "court"
+       "budget_note": "Tests payés par l'État : le déficit augmente."
       },
       {
        "id": "c",
@@ -4617,8 +5302,7 @@ const GAME = {
          "anim": "pulse"
         }
        ],
-       "budget_note": "Indemnités et campagne payées par l'État : le déficit augmente.",
-       "terme": "court"
+       "budget_note": "Indemnités et campagne payées par l'État : le déficit augmente."
       },
       {
        "id": "d",
@@ -4649,8 +5333,7 @@ const GAME = {
          "anim": "pulse"
         }
        ],
-       "budget_note": "Une taxe paie les contrôles : le déficit baisse.",
-       "terme": "long"
+       "budget_note": "Une taxe paie les contrôles : le déficit baisse."
       },
       {
        "id": "e",
@@ -4684,8 +5367,7 @@ const GAME = {
          "y": 27,
          "anim": "grow"
         }
-       ],
-       "terme": "court"
+       ]
       }
      ],
      "recall": [
@@ -4714,30 +5396,13 @@ const GAME = {
        "ind": {
         "emploi": -1
        }
+      },
+      {
+       "event": "v22_mercosur",
+       "choice": "e",
+       "text": "Il y a quelques semaines, vous avez interdit la viande produite avec des produits interdits chez nous : les importations contrôlées rassurent un peu."
       }
-     ],
-     "multi": {
-      "max": 2,
-      "pairs": [
-       [
-        "a",
-        "c"
-       ],
-       [
-        "b",
-        "c"
-       ],
-       [
-        "c",
-        "d"
-       ],
-       [
-        "a",
-        "d"
-       ]
-      ],
-      "hint": "Une réponse pour le court terme, une pour le long terme."
-     }
+     ]
     },
     {
      "id": "v25_pfas",
@@ -4930,6 +5595,37 @@ const GAME = {
          "anim": "pulse"
         }
        ]
+      },
+      {
+       "id": "e",
+       "label": "Interdire ces produits dans les objets du quotidien",
+       "label_expert": "Interdire les PFAS dans les biens de consommation courante",
+       "plus": "On coupe la pollution à la source.",
+       "minus": "Industriels à adapter, emplois menacés.",
+       "budget": 0,
+       "axes": {
+        "env": -2,
+        "eco": -1
+       },
+       "ind": {
+        "services": 1,
+        "emploi": -1
+       },
+       "fx": [
+        {
+         "obj": "usine",
+         "x": 66,
+         "y": 57,
+         "anim": "close"
+        },
+        {
+         "obj": "cadenas",
+         "x": 68,
+         "y": 56,
+         "anim": "appear",
+         "stay": true
+        }
+       ]
       }
      ]
     },
@@ -5113,6 +5809,39 @@ const GAME = {
          "x": 75,
          "y": 20,
          "anim": "appear"
+        }
+       ]
+      },
+      {
+       "id": "e",
+       "label": "Plafonner les marges des supermarchés sur le beurre",
+       "label_expert": "Encadrer les marges de la grande distribution sur les produits de base",
+       "plus": "Prix plus bas en rayon.",
+       "minus": "Marques et rayons moins fournis.",
+       "budget": 0,
+       "axes": {
+        "eco": -2
+       },
+       "ind": {
+        "pouvoir_achat": 1,
+        "emploi": -1
+       },
+       "fx": [
+        {
+         "obj": "camion",
+         "x": 36,
+         "y": 23,
+         "anim": "move",
+         "to": {
+          "x": 41,
+          "y": 20
+         }
+        },
+        {
+         "obj": "pieces",
+         "x": 36,
+         "y": 23,
+         "anim": "rise"
         }
        ]
       }
@@ -5329,6 +6058,46 @@ const GAME = {
         }
        ],
        "budget_note": "La taxe sur les vols paie plus que le train : le déficit baisse un peu."
+      },
+      {
+       "id": "e",
+       "label": "Racheter des voitures-lits et rouvrir dix lignes",
+       "label_expert": "Lancer un plan national de trains de nuit avec matériel neuf",
+       "plus": "Un vrai réseau de nuit dans tout le pays.",
+       "minus": "Achat de trains très coûteux.",
+       "budget": -0.05,
+       "axes": {
+        "env": -2,
+        "eco": -1
+       },
+       "ind": {
+        "services": 2,
+        "co2": -1
+       },
+       "fx": [
+        {
+         "obj": "train",
+         "x": 52,
+         "y": 24,
+         "anim": "move",
+         "to": {
+          "x": 84,
+          "y": 76
+         }
+        },
+        {
+         "obj": "euro_flux",
+         "x": 52,
+         "y": 30,
+         "anim": "flow",
+         "to": {
+          "x": 70,
+          "y": 60
+         }
+        }
+       ],
+       "once": -0.5,
+       "budget_note": "Achat de matériel et exploitation (estimation du jeu) : le déficit augmente."
       }
      ]
     }
@@ -5575,6 +6344,48 @@ const GAME = {
        ],
        "budget_note": "Surprime versée au régime public de réassurance : le déficit baisse.",
        "terme": "long"
+      },
+      {
+       "id": "e",
+       "label": "Indemniser chaque foyer privé de courant plus de cinq heures",
+       "label_expert": "Renforcer l'indemnisation automatique des coupures longues",
+       "plus": "Les foyers sont remboursés sans démarche.",
+       "minus": "Le gestionnaire du réseau paie, tarifs à la hausse.",
+       "budget": 0,
+       "axes": {
+        "eco": -1
+       },
+       "ind": {
+        "pouvoir_achat": 1,
+        "cohesion": 1
+       },
+       "fx": [
+        {
+         "obj": "camion",
+         "x": 90,
+         "y": 14,
+         "anim": "move",
+         "to": {
+          "x": 58,
+          "y": 30
+         },
+         "count": 4
+        },
+        {
+         "obj": "drapeau_ue",
+         "x": 63,
+         "y": 3,
+         "anim": "appear"
+        },
+        {
+         "obj": "maison",
+         "x": 46,
+         "y": 40,
+         "anim": "appear",
+         "count": 3
+        }
+       ],
+       "terme": "court"
       }
      ],
      "recall": [
@@ -5603,6 +6414,11 @@ const GAME = {
        "ind": {
         "pouvoir_achat": -1
        }
+      },
+      {
+       "event": "v22_xynthia",
+       "choice": "e",
+       "text": "Il y a quelques semaines, vous avez augmenté la surprime d'assurance : le régime d'indemnisation a de quoi payer les dégâts de la tempête."
       }
      ],
      "multi": {
@@ -5622,6 +6438,14 @@ const GAME = {
        ],
        [
         "c",
+        "d"
+       ],
+       [
+        "e",
+        "a"
+       ],
+       [
+        "e",
         "d"
        ]
       ],
@@ -5729,8 +6553,7 @@ const GAME = {
          "anim": "appear"
         }
        ],
-       "budget_note": "Frais de déplacement des médecins : le déficit augmente un peu.",
-       "terme": "court"
+       "budget_note": "Frais de déplacement des médecins : le déficit augmente un peu."
       },
       {
        "id": "b",
@@ -5764,8 +6587,7 @@ const GAME = {
          "anim": "appear"
         }
        ],
-       "budget_note": "Primes payées par l'Assurance maladie : le déficit augmente.",
-       "terme": "court"
+       "budget_note": "Primes payées par l'Assurance maladie : le déficit augmente."
       },
       {
        "id": "c",
@@ -5795,8 +6617,7 @@ const GAME = {
          "label": "Pharmacie"
         }
        ],
-       "budget_note": "Actes moins chers que la consultation : le déficit baisse un peu.",
-       "terme": "court"
+       "budget_note": "Actes moins chers que la consultation : le déficit baisse un peu."
       },
       {
        "id": "d",
@@ -5826,28 +6647,39 @@ const GAME = {
          "anim": "grow"
         }
        ],
-       "budget_note": "Places d'études et stages à financer : le déficit augmente.",
-       "terme": "long"
+       "budget_note": "Places d'études et stages à financer : le déficit augmente."
+      },
+      {
+       "id": "e",
+       "label": "Ouvrir des centres de santé avec des médecins salariés",
+       "label_expert": "Créer des centres de santé publics à médecins salariés",
+       "plus": "Les jeunes médecins y viennent plus.",
+       "minus": "Coût pour l'État et les communes.",
+       "budget": -0.15,
+       "axes": {
+        "eco": -2
+       },
+       "ind": {
+        "services": 2,
+        "emploi": 1
+       },
+       "fx": [
+        {
+         "obj": "eleves",
+         "x": 52,
+         "y": 30,
+         "anim": "appear"
+        },
+        {
+         "obj": "hopital",
+         "x": 50,
+         "y": 34,
+         "anim": "grow"
+        }
+       ],
+       "budget_note": "Salaires et locaux (estimation du jeu) : le déficit augmente."
       }
-     ],
-     "multi": {
-      "max": 2,
-      "pairs": [
-       [
-        "c",
-        "d"
-       ],
-       [
-        "b",
-        "d"
-       ],
-       [
-        "a",
-        "d"
-       ]
-      ],
-      "hint": "Une réponse pour le court terme, une pour le long terme."
-     }
+     ]
     },
     {
      "id": "v25_notre_dame",
@@ -6036,6 +6868,42 @@ const GAME = {
          "anim": "appear"
         }
        ]
+      },
+      {
+       "id": "e",
+       "label": "Lancer un grand plan pour les églises de village",
+       "label_expert": "Financer un plan de restauration du patrimoine religieux rural",
+       "plus": "Le patrimoine des campagnes est sauvé.",
+       "minus": "Dépense nouvelle pour l'État.",
+       "budget": -0.1,
+       "axes": {
+        "soc": 1,
+        "eco": -1
+       },
+       "ind": {
+        "cohesion": 1,
+        "emploi": 1
+       },
+       "fx": [
+        {
+         "obj": "foule",
+         "x": 52,
+         "y": 27,
+         "anim": "move",
+         "to": {
+          "x": 53,
+          "y": 24
+         }
+        },
+        {
+         "obj": "panneau",
+         "x": 52,
+         "y": 21,
+         "anim": "appear",
+         "label": "Patrimoine"
+        }
+       ],
+       "budget_note": "Subventions de restauration (estimation du jeu) : le déficit augmente."
       }
      ]
     },
@@ -6221,6 +7089,36 @@ const GAME = {
          "label": "Réseau français"
         }
        ]
+      },
+      {
+       "id": "e",
+       "label": "Obliger les opérateurs à garder leurs antennes allumées",
+       "label_expert": "Imposer des batteries de secours aux antennes de téléphonie",
+       "plus": "On peut appeler les secours même sans courant.",
+       "minus": "Coût pour les opérateurs, forfaits plus chers.",
+       "budget": 0,
+       "axes": {
+        "eco": -1,
+        "soc": 1
+       },
+       "ind": {
+        "services": 1,
+        "pouvoir_achat": -1
+       },
+       "fx": [
+        {
+         "obj": "hopital",
+         "x": 50,
+         "y": 52,
+         "anim": "pulse"
+        },
+        {
+         "obj": "mairie",
+         "x": 47,
+         "y": 54,
+         "anim": "appear"
+        }
+       ]
       }
      ]
     }
@@ -6338,8 +7236,7 @@ const GAME = {
          "anim": "appear",
          "label": "Baissez d'un degré"
         }
-       ],
-       "terme": "court"
+       ]
       },
       {
        "id": "b",
@@ -6369,8 +7266,7 @@ const GAME = {
          "y": 24,
          "anim": "rise"
         }
-       ],
-       "terme": "court"
+       ]
       },
       {
        "id": "c",
@@ -6402,8 +7298,7 @@ const GAME = {
          "anim": "smoke",
          "delay": 0.5
         }
-       ],
-       "terme": "long"
+       ]
       },
       {
        "id": "d",
@@ -6434,8 +7329,7 @@ const GAME = {
          "y": 48,
          "anim": "close"
         }
-       ],
-       "terme": "court"
+       ]
       },
       {
        "id": "e",
@@ -6473,8 +7367,7 @@ const GAME = {
           "y": 80
          }
         }
-       ],
-       "terme": "court"
+       ]
       }
      ],
      "recall": [
@@ -6507,30 +7400,13 @@ const GAME = {
        "ind": {
         "souverainete": 1
        }
+      },
+      {
+       "event": "v22_fukushima",
+       "choice": "e",
+       "text": "Il y a quelques semaines, vous avez lancé de nouveaux réacteurs : ils sont encore en chantier et n'aident pas pendant ce grand froid."
       }
-     ],
-     "multi": {
-      "max": 2,
-      "pairs": [
-       [
-        "a",
-        "d"
-       ],
-       [
-        "b",
-        "c"
-       ],
-       [
-        "a",
-        "b"
-       ],
-       [
-        "c",
-        "e"
-       ]
-      ],
-      "hint": "Une réponse pour le court terme, une pour le long terme."
-     }
+     ]
     },
     {
      "id": "v26_crous",
@@ -6712,6 +7588,38 @@ const GAME = {
          "anim": "pulse"
         }
        ]
+      },
+      {
+       "id": "e",
+       "label": "Faire payer plus cher les étudiants venus hors d'Europe",
+       "label_expert": "Appliquer pleinement les droits différenciés aux étudiants extra-européens",
+       "plus": "Recettes pour les universités.",
+       "minus": "Moins d'étudiants étrangers attirés.",
+       "budget": 0.05,
+       "axes": {
+        "eu": 1,
+        "eco": 1
+       },
+       "ind": {
+        "cohesion": -1,
+        "services": 1
+       },
+       "fx": [
+        {
+         "obj": "colis",
+         "x": 50,
+         "y": 26,
+         "anim": "appear",
+         "count": 2
+        },
+        {
+         "obj": "file_attente",
+         "x": 52,
+         "y": 24,
+         "anim": "pulse"
+        }
+       ],
+       "budget_note": "Droits d'inscription plus élevés (estimation du jeu, non vérifiée) : recette, le déficit baisse."
       }
      ]
     },
@@ -6908,6 +7816,40 @@ const GAME = {
           "x": 99,
           "y": 30
          }
+        }
+       ]
+      },
+      {
+       "id": "e",
+       "label": "Emprunter ensemble en Europe pour aider la Grèce",
+       "label_expert": "Mutualiser une partie des dettes par des euro-obligations",
+       "plus": "La zone euro se montre solidaire.",
+       "minus": "La France s'engage pour les autres.",
+       "budget": 0,
+       "axes": {
+        "eu": -2,
+        "eco": -1
+       },
+       "ind": {
+        "cohesion": 1,
+        "souverainete": -1
+       },
+       "fx": [
+        {
+         "obj": "euro_flux",
+         "x": 63,
+         "y": 4,
+         "anim": "flow",
+         "to": {
+          "x": 99,
+          "y": 30
+         }
+        },
+        {
+         "obj": "drapeau_ue",
+         "x": 63,
+         "y": 6,
+         "anim": "appear"
         }
        ]
       }
@@ -7107,6 +8049,38 @@ const GAME = {
          }
         }
        ]
+      },
+      {
+       "id": "e",
+       "label": "Faire payer l'entrée des voitures en ville",
+       "label_expert": "Instaurer un péage urbain pendant les pics de pollution",
+       "plus": "Moins de voitures, recette en plus.",
+       "minus": "Pénalise ceux qui n'ont pas d'autre choix.",
+       "budget": 0.01,
+       "axes": {
+        "eco": 1,
+        "env": -1
+       },
+       "ind": {
+        "co2": -1,
+        "cohesion": -1
+       },
+       "fx": [
+        {
+         "obj": "etiquette",
+         "x": 66,
+         "y": 58,
+         "anim": "appear",
+         "label": "Péage"
+        },
+        {
+         "obj": "voiture",
+         "x": 65,
+         "y": 56,
+         "anim": "fade"
+        }
+       ],
+       "budget_note": "Recette du péage : le déficit baisse un peu."
       }
      ]
     }
@@ -7329,6 +8303,41 @@ const GAME = {
          }
         }
        ]
+      },
+      {
+       "id": "e",
+       "label": "Payer l'aide avec les revenus des avoirs russes gelés",
+       "label_expert": "Affecter les revenus des avoirs russes immobilisés à l'aide",
+       "plus": "L'agresseur paie, pas le contribuable.",
+       "minus": "Base juridique fragile, risques financiers.",
+       "budget": 0.1,
+       "axes": {
+        "eu": -1,
+        "soc": 1
+       },
+       "ind": {
+        "souverainete": 1,
+        "cohesion": 1
+       },
+       "fx": [
+        {
+         "obj": "euro_flux",
+         "x": 63,
+         "y": 4,
+         "anim": "flow",
+         "to": {
+          "x": 97,
+          "y": 13
+         }
+        },
+        {
+         "obj": "drapeau_ue",
+         "x": 96,
+         "y": 14,
+         "anim": "appear"
+        }
+       ],
+       "budget_note": "Une part de l'aide est financée sans impôt : le déficit baisse un peu."
       }
      ]
     },
@@ -7515,6 +8524,34 @@ const GAME = {
          "anim": "pulse"
         }
        ]
+      },
+      {
+       "id": "e",
+       "label": "Saisir le tribunal prévu par l'accord avec Londres",
+       "label_expert": "Engager la procédure d'arbitrage de l'accord de commerce",
+       "plus": "On fait respecter l'accord par le droit.",
+       "minus": "Procédure lente, bateaux toujours à quai.",
+       "budget": 0,
+       "axes": {
+        "eu": 1
+       },
+       "ind": {
+        "souverainete": 1
+       },
+       "fx": [
+        {
+         "obj": "batiment_ue",
+         "x": 63,
+         "y": 3,
+         "anim": "appear"
+        },
+        {
+         "obj": "drapeau_ue",
+         "x": 60,
+         "y": 5,
+         "anim": "pulse"
+        }
+       ]
       }
      ]
     },
@@ -7606,8 +8643,7 @@ const GAME = {
          "y": 26,
          "anim": "appear"
         }
-       ],
-       "terme": "court"
+       ]
       },
       {
        "id": "b",
@@ -7637,8 +8673,7 @@ const GAME = {
          "y": 27,
          "anim": "pulse"
         }
-       ],
-       "terme": "long"
+       ]
       },
       {
        "id": "c",
@@ -7668,8 +8703,7 @@ const GAME = {
          "y": 31,
          "anim": "appear"
         }
-       ],
-       "terme": "long"
+       ]
       },
       {
        "id": "d",
@@ -7699,32 +8733,39 @@ const GAME = {
          "y": 26,
          "anim": "fade"
         }
-       ],
-       "terme": "long"
-      }
-     ],
-     "multi": {
-      "max": 2,
-      "pairs": [
-       [
-        "a",
-        "b"
-       ],
-       [
-        "a",
-        "c"
-       ],
-       [
-        "b",
-        "c"
-       ],
-       [
-        "c",
-        "d"
        ]
-      ],
-      "hint": "Une réponse pour le court terme, une pour le long terme."
-     }
+      },
+      {
+       "id": "e",
+       "label": "Augmenter la taxe locale pour financer les digues",
+       "label_expert": "Relever la taxe pour la gestion des milieux aquatiques",
+       "plus": "Les digues sont payées localement.",
+       "minus": "Impôt local en hausse pour les ménages.",
+       "budget": 0.05,
+       "axes": {
+        "eco": -1
+       },
+       "ind": {
+        "services": 1,
+        "pouvoir_achat": -1
+       },
+       "fx": [
+        {
+         "obj": "barrage",
+         "x": 58,
+         "y": 30,
+         "anim": "grow"
+        },
+        {
+         "obj": "chantier_grue",
+         "x": 57,
+         "y": 31,
+         "anim": "appear"
+        }
+       ],
+       "budget_note": "Ouvrages financés par les collectivités, moins d'aide de l'État : le déficit baisse."
+      }
+     ]
     },
     {
      "id": "v26_vigipirate",
@@ -7908,6 +8949,36 @@ const GAME = {
          "label": "Urgence attentat"
         }
        ]
+      },
+      {
+       "id": "e",
+       "label": "Expulser les étrangers fichés pour radicalisation",
+       "label_expert": "Expulser les étrangers inscrits au fichier de radicalisation",
+       "plus": "On éloigne les personnes jugées dangereuses.",
+       "minus": "Droit et pays d'origine freinent les renvois.",
+       "budget": 0,
+       "axes": {
+        "soc": 2,
+        "eu": 1
+       },
+       "ind": {
+        "souverainete": 1,
+        "cohesion": -1
+       },
+       "fx": [
+        {
+         "obj": "file_attente",
+         "x": 50,
+         "y": 25,
+         "anim": "appear"
+        },
+        {
+         "obj": "loupe",
+         "x": 52,
+         "y": 23,
+         "anim": "pulse"
+        }
+       ]
       }
      ],
      "recall": [
@@ -7939,6 +9010,11 @@ const GAME = {
        "event": "v22_emeutes",
        "choice": "d",
        "text": "Il y a six semaines, tu as fait payer les dégâts aux auteurs condamnés : la mesure est populaire, mais les tensions restent vives."
+      },
+      {
+       "event": "v22_emeutes",
+       "choice": "e",
+       "text": "Il y a quelques semaines, vous avez suspendu des allocations après les émeutes : la mesure reste discutée dans les quartiers."
       }
      ]
     }

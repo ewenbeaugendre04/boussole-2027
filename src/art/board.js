@@ -71,8 +71,8 @@ function buildBoard(){
   h.push('</g>');
   // objets debout, triés par profondeur
   var up = [];
-  function mountain(lon, lat, s, cap){ var p = P(lon, lat); up.push({ y:p[1], s:mountainSvg(p[0], p[1], s, cap) }); }
-  function hill(lon, lat, s){ var p = P(lon, lat); up.push({ y:p[1], s:hillSvg(p[0], p[1], s) }); }
+  function mountain(){ /* montagnes : sprites */ }
+  function hill(){ /* collines : sprites */ }
   function tree(x, y, s){ up.push({ y:y, s:treeSvg(x, y, s) }); }
   function forest(lon, lat, n, spread){ var c = P(lon, lat); for(var i = 0; i < n; i++){ tree(c[0] + (R() - .5) * spread, c[1] + (R() - .5) * spread * .6, .8 + R() * .4); } }
   var glows = [];
@@ -98,7 +98,7 @@ function buildBoard(){
   var beams = [];
   [[-4.78,48.42],[-1.9,49.72],[1.6,50.75],[-1.55,43.5],[5.25,43.2],[-2.2,47.25]].forEach(function(l){
     var p = P(l[0], l[1]);
-    up.push({ y:p[1], s:'<g><rect x="' + F(p[0]-.45) + '" y="' + F(p[1]-3) + '" width=".9" height="3" fill="var(--house)" stroke="var(--roof-d)" stroke-width=".18"/><rect x="' + F(p[0]-.45) + '" y="' + F(p[1]-2) + '" width=".9" height=".6" fill="var(--roof)"/><rect x="' + F(p[0]-.5) + '" y="' + F(p[1]-3.7) + '" width="1" height=".7" fill="var(--win)"/></g>' });
+    /* phare : sprite (art/sprites.js) */
     LH.push([p[0], p[1] - 3.35]); beams.push('<g class="beam" style="transform-origin:' + F(p[0]) + 'px ' + F(p[1]-3.35) + 'px;animation-delay:-' + F(R()*6) + 's"><path d="M' + F(p[0]) + ',' + F(p[1]-3.35) + 'l16,-2.2v4.4z" fill="url(#beamg)"/></g>');
   });
   up.sort(function(a, b){ return a.y - b.y; });
@@ -115,9 +115,21 @@ function insetSvg(){
   var r = REGIONS.filter(function(r){ return r.inset; })[0]; if(!r) return '';
   var p = RP(r.x, r.y), x = p[0], y = p[1], o = '<g class="inset">';
   o += '<rect x="' + F(x - 9) + '" y="' + F(y - 7.5) + '" width="18" height="13" rx="2.2" fill="var(--sea-deep)" opacity=".55" stroke="var(--foam)" stroke-width=".35" stroke-dasharray="1 .8"/>';
-  [[-5.5,-2.5,1.6],[-1,1.5,1.2],[4,-3,1.9],[5.5,2,1],[-5,2.5,.8]].forEach(function(i){
-    o += '<ellipse cx="' + F(x + i[0]) + '" cy="' + F(y + i[1] + .5) + '" rx="' + F(i[2] * 1.3) + '" ry="' + F(i[2] * .8) + '" fill="var(--cliff)"/><ellipse cx="' + F(x + i[0]) + '" cy="' + F(y + i[1]) + '" rx="' + F(i[2] * 1.3) + '" ry="' + F(i[2] * .8) + '" fill="var(--land)"/>';
-    o += '<circle cx="' + F(x + i[0] + .2) + '" cy="' + F(y + i[1] - .6) + '" r="' + F(i[2] * .45) + '" fill="var(--forest)"/>';
+  /* territoires d'outre-mer : silhouettes simplifiées mais reconnaissables (échelles non respectées) */
+  var OM = [
+    ['Guadeloupe', -5.6, -3.2, [[-1.6,-.9],[-1.1,-1.5],[-.6,-1.2],[-.4,.2],[-.8,1.3],[-1.5,1.1],[-1.8,.2]], [[-.2,-.5],[.5,-1.4],[1.2,-1.6],[1.7,-1.1],[1.1,-.6],[.6,-.1],[.1,0]]],
+    ['Martinique', -1.6, -3.6, [[-.7,-1.3],[-.1,-1.6],[.4,-1],[.9,-.4],[1,.5],[.6,1.3],[.1,1],[-.4,.6],[-.9,.4],[-.6,-.3]]],
+    ['Guyane', 3.4, -2.6, [[-1.6,-1.6],[.2,-1.9],[1.6,-1.1],[2.1,.1],[1.4,1.4],[.2,2.1],[-.9,1.9],[-1.5,.8],[-1.9,-.4]]],
+    ['La Réunion', -5.4, 2.4, [[-1.2,-.5],[-.5,-1.1],[.5,-1],[1.2,-.4],[1.1,.5],[.4,1],[-.6,.9],[-1.2,.3]]],
+    ['Mayotte', -2.2, 1.6, [[-.3,-.9],[.3,-.8],[.4,0],[.1,.8],[-.3,.6],[-.5,-.1]]],
+    ['Nouvelle-Calédonie', 1.6, 2.6, [[-2.4,-1.2],[-1.6,-1.2],[.4,0],[2.4,1],[2.2,1.4],[1.2,1.2],[-.6,.2],[-2.3,-.8]]],
+    ['Polynésie', 6.1, 2.2, [[-.3,-.3],[.3,-.3],[.3,.3],[-.3,.3]], [[.8,.5],[1.2,.5],[1.2,.9],[.8,.9]], [[-.9,.8],[-.5,.8],[-.5,1.2],[-.9,1.2]]]
+  ];
+  OM.forEach(function(t){
+    t.slice(3).forEach(function(pts){
+      var d = smooth(pts.map(function(q){ return [x + t[1] + q[0], y + t[2] + q[1]]; }), true);
+      o += '<path d="' + d + '" transform="translate(0,.55)" fill="var(--cliff)"/><path d="' + d + '" fill="var(--land)" stroke="#F6E3A4" stroke-width=".35" paint-order="stroke"/>';
+    });
   });
   o += '<text class="rlabel" x="' + F(x) + '" y="' + F(y + 8.6) + '" text-anchor="middle" style="stroke:var(--sea)">' + esc(r.label || 'Outre-mer') + '</text></g>';
   return o;

@@ -17,7 +17,7 @@ function buildMovers(){
   var tmp = document.createElementNS(NS, 'path'); svg.appendChild(tmp);
   MV.boats = routes.map(function(r, i){
     tmp.setAttribute('d', smooth(L(r), false));
-    var el = document.createElement('div'); el.className = 'mv boat'; el.innerHTML = BOAT_SVG;
+    var el = document.createElement('div'); el.className = 'mv boat'; el.innerHTML = '<img src="' + SPR_DIR + 'voilier.webp" alt="" style="width:100%;height:100%;object-fit:contain;object-position:50% 100%">';
     el.style.width = F(5.2 * VBK) + 'px'; el.style.height = F(4.6 * VBK) + 'px'; el.style.marginLeft = F(-2.6 * VBK) + 'px'; el.style.marginTop = F(-3.2 * VBK) + 'px';
     ml.appendChild(el);
     return { el:el, s:samplePath(tmp, 60), t:(i * .29) % 1, sp:.012 + i * .002, dir:1 };
