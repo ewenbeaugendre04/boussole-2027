@@ -1,0 +1,20 @@
+name: Contrôles
+on: [push, pull_request]
+jobs:
+  verifier:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - name: Données du jeu
+        run: node tests/check_data.js
+      - name: Assemblage
+        run: python3 scripts/build.py
+      - name: Test de chargement (Playwright)
+        run: |
+          pip install playwright
+          python -m playwright install --with-deps chromium
+          python3 tests/smoke.py

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#86AEB0">
+<title>Boussole 2027</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,400..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles/base.css">
+<link rel="stylesheet" href="styles/plateau.css">
+<link rel="stylesheet" href="styles/sheets.css">
+</head>
+<body>
+<div id="app">
+  <header id="hud">
+    <div class="hud-row">
+      <button class="day-token pressable" id="dayToken" aria-label="Jour en cours"><span class="dn" id="dNum">1</span><span class="dm" id="dMon">sept.</span></button>
+      <button class="plate pressable" id="plate" aria-label="Voir le budget">
+        <span class="cnt"><span class="k">Déficit</span><span class="v" id="vDef">0</span><span class="u" id="uDef">Md€ par an</span><span class="dl" id="dlDef"></span></span>
+        <span class="cnt"><span class="k">Dette</span><span class="v" id="vDebt">0</span><span class="u" id="uDebt">Md€</span><span class="dl" id="dlDebt"></span></span>
+        <span class="cnt"><span class="k" id="kSolde">Solde ponctuel</span><span class="v" id="vSolde">0</span><span class="u" id="uSolde">Md€ cumulés</span><span class="dl" id="dlSolde"></span></span>
+      </button>
+      <button class="round-btn pressable" id="menuBtn" aria-label="Réglages">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+    <div id="gauges" aria-label="Indicateurs"></div>
+  </header>
+  <main id="board" aria-label="Plateau : la France">
+    <div id="world">
+      <svg id="map" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Carte du pays"></svg>
+      <img id="decorImg" class="lay" alt="" aria-hidden="true" decoding="async">
+      <svg id="labelsvg" class="lay" aria-hidden="true"></svg>
+      <svg id="wavesA" class="lay waves" aria-hidden="true"></svg><svg id="wavesB" class="lay waves" aria-hidden="true"></svg>
+      <svg id="foamsvg" class="lay" aria-hidden="true"></svg>
+      <div id="movers" class="lay" aria-hidden="true"></div>
+      <div id="cloudl" class="lay" aria-hidden="true"></div>
+      <div id="stayl" class="lay fxlayer" aria-hidden="true"></div>
+      <div id="fxl" class="lay fxlayer" aria-hidden="true"></div>
+      <div id="labl" class="lay fxlayer" aria-hidden="true"></div>
+      <div id="pinl" class="lay"></div>
+    </div>
+    <canvas id="wx"></canvas>
+    <div id="tint"></div>
+    <div id="ribbon"><svg class="wi" id="ribW" viewBox="0 0 40 40"></svg><div><div class="rt" id="ribT"></div><div class="rs" id="ribS"></div></div></div>
+    <button id="launch" class="pressable" type="button"></button><div id="quests" role="status"></div><div id="reforms" aria-label="Réformes en cours"></div><div id="caption" aria-live="polite"></div><div id="ann" role="status" aria-live="polite"></div><div id="tray" aria-label="À lire"></div>
+  </main>
+  <nav id="dock">
+    <button class="dock-side pressable" id="deckBtn">
+      <svg viewBox="0 0 30 26"><rect x="4" y="5" width="13" height="18" rx="2.5" transform="rotate(-12 10 14)" fill="var(--paper-3)" stroke="var(--line)" stroke-width="1.6"/><rect x="9" y="3" width="13" height="18" rx="2.5" fill="var(--paper)" stroke="var(--line)" stroke-width="1.6"/><rect x="13" y="5" width="13" height="18" rx="2.5" transform="rotate(10 19 14)" fill="var(--brass)" stroke="var(--line)" stroke-width="1.6"/></svg>
+      <span>Propositions</span><b class="badge" id="deckBadge">0</b>
+    </button>
+    <button class="main-btn pressable" id="mainBtn"><span id="mainT">À décider</span><small id="mainS"></small></button>
+    <button class="dock-side pressable" id="orientBtn">
+      <svg viewBox="0 0 30 26"><circle cx="15" cy="13" r="11" fill="var(--paper-2)" stroke="var(--line)" stroke-width="1.8"/><path d="M15 4l3 9-3 9-3-9z" fill="var(--ink)"/><path d="M15 4l3 9h-6z" fill="var(--brass)"/><circle cx="15" cy="13" r="1.6" fill="var(--paper)"/></svg>
+      <span>Mon orientation</span>
+    </button>
+  </nav>
+</div>
+<div id="dayIntro" role="status"><div class="in"><svg class="wi" id="diW" viewBox="0 0 40 40"></svg><div><div class="t1" id="diA"></div><div class="t2" id="diB"></div><div class="t3" id="diC"></div></div></div></div>
+<div id="toasts" aria-live="polite"></div>
+<section id="result" role="status" aria-live="polite"></section>
+<div id="dayTitle" aria-live="polite"><div class="dt-in"><div class="dt-k" id="dtK"></div><div class="dt-big" id="dtBig"></div><div class="dt-sub" id="dtSub"></div><div class="dt-w"><svg viewBox="0 0 40 40" id="dtW"></svg><span id="dtWx"></span></div><div class="dt-q" id="dtQ"></div></div></div>
+<div id="layer" aria-hidden="true"><div id="scrim"></div><div class="card-wrap" id="cardWrap"></div></div>
+<div id="dusk"><div class="stars" id="stars"></div><div class="orb sun" id="sun"></div><div class="orb moon" id="moon"></div><div class="dtxt"><div class="a" id="duA"></div><div class="b" id="duB"></div><div class="c" id="duC"></div></div></div>
+<!-- Données du jeu (contenu, budget, propositions) -->
+<script src="data/game_data.js"></script>
+<!-- Moteur -->
+<script src="engine/core.js"></script>
+<script src="art/board.js"></script>
+<script src="art/objects.js"></script>
+<script src="art/placement.js"></script>
+<script src="art/layers.js"></script>
+<script src="engine/camera.js"></script>
+<script src="engine/pins.js"></script>
+<script src="engine/flow.js"></script>
+<script src="engine/hud.js"></script>
+<script src="engine/modal.js"></script>
+<script src="engine/reforms.js"></script>
+<script src="engine/orientation.js"></script>
+<script src="engine/budget.js"></script>
+<script src="engine/settings.js"></script>
+<script src="engine/launch.js"></script>
+<script src="engine/loop.js"></script>
+</body>
+</html>
