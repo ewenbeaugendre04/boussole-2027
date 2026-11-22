@@ -84,7 +84,7 @@ function sprList(){
   put('port', 0.15, 49.47, 3.6); put('porte_conteneurs', 0.0, 49.55, 3.6); put('grue_portuaire', 0.3, 49.45, 2.6); put('port', -1.48, 43.5, 3.2); put('port', 3.7, 43.4, 3.2); put('port', 2.35, 51.03, 3.4);
   put('usine_aero', 1.3, 43.66, 3.4); put('chantier_naval', -2.22, 47.27, 4.4); /* grands sites : aéronautique (Toulouse), chantiers navals (Saint-Nazaire) */
   put('dune', -1.13, 44.5, 3.4); put('dune', -1.2, 44.15, 3); /* dune du Pilat, côte landaise */
-  for(var pi = 0; pi < 22; pi++) put('pin', -1.15 + R() * .75, 43.8 + R() * 1.05, 1.5 + R() * .4, R() < .5); /* pins des Landes */
+  for(var pi = 0; pi < 22; pi++) put('pin', -0.95 + R() * .6, 43.85 + R() * .95, 1.5 + R() * .4, R() < .5); /* pins des Landes */
   // forêts (Landes, Sologne, Vosges, Ardennes, Morvan, Bretagne, Massif central, Jura)
   [[2.0,47.55,5,.4],[7.0,48.4,5,.35],[4.75,49.85,4,.3],[4.05,47.15,4,.3],[-3.3,48.15,4,.35],[2.6,45.0,4,.4],[6.0,46.6,3,.3],[1.4,45.1,4,.4],[5.75,44.2,3,.3],[9.15,42.0,3,.25],[0.6,48.6,3,.3],[3.0,48.4,3,.3]].forEach(function(f){ cluster(f[0], f[1], Math.round(f[2] * 1.8), f[3] * 1.1, f[1] > 47.5 || f[0] > 5.5 ? ['arbre', 'sapins', 'arbre_automne', 'arbre', 'sapins', 'arbre_jaune'] : ['arbre', 'arbre_automne', 'arbre', 'arbre_jaune', 'sapins'], 1.4); });
   // sapins à l'est (Alsace, Lorraine, Vosges, Jura, Ardennes)
