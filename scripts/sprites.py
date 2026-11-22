@@ -8,6 +8,7 @@ ROOT = Path(__file__).resolve().parent.parent
 LIB, OUT = ROOT/'assets/library', ROOT/'assets/sprites'
 SIZE = 1024
 ALLWHITE = {'chantier_naval'}
+SNOW_OFFWHITE = {'chaine_alpes', 'chaine_pyrenees'}  # neige presque blanche : sinon le retrait du fond blanc la rend transparente
 RULES = json.load(open(LIB/'recolor.json'))
 def recolor(svg, rules):
     def fix(m):
@@ -32,6 +33,13 @@ def main(ids):
         for i in ids:
             svg = (LIB/'svg'/f'{i}.svg').read_text()
             if i in RULES: svg = recolor(svg, RULES[i])
+            if i in SNOW_OFFWHITE:
+                def _ow(m):
+                    r_, g_, b_ = [int(x) for x in m.group(2).split(',')]
+                    return m.group(1) + ('"rgb(236,241,245)' if min(r_, g_, b_) > 228 else m.group(0)[len(m.group(1)):])
+                k = svg.find('fill="rgb(255,255,255)"')  # 1er aplat blanc = fond : reste blanc pour être retiré
+                k = svg.find('>', k) + 1 if k >= 0 else 0
+                svg = svg[:k] + re.sub(r'((?:fill|stop-color)=)"rgb\(([^)]*)\)', _ow, svg[k:])
             (LIB/'svg_final').mkdir(exist_ok=True); (LIB/'svg_final'/f'{i}.svg').write_text(svg)
             svg = re.sub(r'<svg ', f'<svg style="width:{SIZE}px;height:{SIZE}px" ', svg, count=1)
             svg = re.sub(r'\swidth="\d+" height="\d+"', '', svg, count=1)
