@@ -61,10 +61,11 @@ function sprList(){
   put('mt_basse', 3.0, 45.95, 2.4, 1); put('montagnes_douces', 2.45, 44.9, 2.4); put('mt_basse', 3.5, 45.25, 2.5, 1); put('montagnes_douces', 2.95, 44.45, 2.1, 1); /* Massif central (suite) */
   put('montagnes_douces', 5.7, 46.15, 2.1, 1); put('mt_basse', 6.6, 47.25, 2.2); /* Jura (suite) */
   put('mt_basse', 6.1, 46.7, 2.2); put('montagnes_douces', 5.85, 46.6, 2, 1); put('mt_basse', 6.45, 47.1, 2.1, 1); /* Jura (plus) */
+  put('mt_haute', 9.0, 42.2, 3.6); put('mt_basse', 9.15, 41.85, 3, 1); put('montagnes_douces', 9.05, 42.6, 2.6); /* Corse */
   put('montagnes_douces', 7.1, 48.65, 2.1); put('mt_basse', 6.75, 48.15, 2.1, 1); /* Vosges (suite) */
   put('lac', 6.17, 45.86, 1.9); /* lac d'Annecy */
   put('chaine_alpes', 6.75, 44.0, 8); /* Alpes : chaîne nord-sud le long de la frontière */
-  put('chaine_pyrenees', 0.7, 42.33, 38, 1); /* Pyrénées : une chaîne sur toute la frontière */
+  put('chaine_pyrenees', 0.7, 42.27, 38, 1); /* Pyrénées : une chaîne sur toute la frontière */
   [[-4.78,48.42],[-1.9,49.65],[1.6,50.7],[-1.45,43.5],[-2.2,47.28]].forEach(function(l){ put('phare', l[0], l[1], 1.4); });
   put('parasols', 3.5, 43.45, 2.4); put('parasols', -1.3, 44.6, 2.2); put('parasols', 6.9, 43.55, 2.2); put('voilier', -2.6, 46.5, 1.8); put('voilier', 5.6, 42.9, 1.8); put('voilier', -1.9, 49.95, 1.8);
   put('gare', 2.45, 48.95, 2.2); put('stade', 2.3, 48.7, 2.6); put('universite', 4.95, 45.68, 2.2); put('hopital', 1.5, 43.55, 2.4); put('ferme', 0.2, 46.9, 2.4); put('ferme', 3.9, 48.1, 2.3); put('colza', 0.9, 48.65, 3); put('colza', 4.6, 49.55, 3);
@@ -72,7 +73,7 @@ function sprList(){
   put('aeroport', 2.55, 49.0, 3.8); put('aeroport', 1.37, 43.63, 3.4); put('aeroport', -1.61, 47.15, 3.2); put('aeroport', 5.22, 43.44, 3.2); /* Roissy, Toulouse, Nantes, Marseille */
   put('port', 0.15, 49.47, 3.6); put('porte_conteneurs', 0.0, 49.55, 3.6); put('grue_portuaire', 0.3, 49.45, 2.6); put('port', -1.48, 43.5, 3.2); put('port', 3.7, 43.4, 3.2); put('port', 2.35, 51.03, 3.4);
   put('usine_aero', 1.3, 43.66, 3.4); put('chantier_naval', -2.22, 47.27, 4.4); /* grands sites : aéronautique (Toulouse), chantiers navals (Saint-Nazaire) */
-  put('dune', -1.13, 44.5, 3.4); put('dune', -1.2, 44.15, 3); /* dune du Pilat, côte landaise */
+  put('dune', -1.19, 44.59, 4.2); put('dune', -1.2, 44.15, 3); /* dune du Pilat, côte landaise */
   for(var pi = 0; pi < 22; pi++) put('pin', -0.8 + R() * .5, 43.85 + R() * .8, 1.5 + R() * .4, R() < .5); /* pins des Landes */
   // forêts (Landes, Sologne, Vosges, Ardennes, Morvan, Bretagne, Massif central, Jura)
   [[2.0,47.55,5,.4],[7.0,48.4,5,.35],[4.75,49.85,4,.3],[4.05,47.15,4,.3],[-3.3,48.15,4,.35],[2.6,45.0,4,.4],[6.0,46.6,3,.3],[1.4,45.1,4,.4],[5.75,44.2,3,.3],[9.15,42.0,3,.25],[0.6,48.6,3,.3],[3.0,48.4,3,.3]].forEach(function(f){ cluster(f[0], f[1], Math.round(f[2] * 1.8), f[3] * 1.1, f[1] > 47.5 || f[0] > 5.5 ? ['arbre', 'sapins', 'arbre_automne', 'arbre', 'sapins', 'arbre_jaune'] : ['arbre', 'arbre_automne', 'arbre', 'arbre_jaune', 'sapins'], 1.4); });
@@ -98,8 +99,8 @@ function sprItems(){
   var kept = [];
   items.forEach(function(it){
     var bx = [it.x - it.w * .42, it.y - it.h * .55, it.x + it.w * .42, it.y + it.h * .08];
-    if(!SPR_MARINE[it.id] && ((it.x0 > -1.3 && it.x0 < -0.95 && it.y0 > 44.55 && it.y0 < 44.78) || (it.x0 > -1.05 && it.x0 < -0.55 && it.y0 > 45.05 && it.y0 < 45.65))) return;
-    if(MASK && !SPR_MARINE[it.id] && !/^chaine/.test(it.id) && (terrainU(bx[0], it.y) === 0 || terrainU(bx[2], it.y) === 0)) return; /* pieds dans l'eau : non */
+    if(!SPR_MARINE[it.id] && it.id !== 'dune' && ((it.x0 > -1.3 && it.x0 < -0.95 && it.y0 > 44.55 && it.y0 < 44.78) || (it.x0 > -1.05 && it.x0 < -0.55 && it.y0 > 45.05 && it.y0 < 45.65))) return;
+    if(MASK && !SPR_MARINE[it.id] && !/^(chaine|dune)/.test(it.id) && (terrainU(bx[0], it.y) === 0 || terrainU(bx[2], it.y) === 0)) return; /* pieds dans l'eau : non */
     var MTN = false;
     var clash = kept.some(function(k){ if(MTN && /massif|pic|montagne|colline/.test(k.id)) return false; var ix = Math.min(bx[2], k.b[2]) - Math.max(bx[0], k.b[0]), iy = Math.min(bx[3], k.b[3]) - Math.max(bx[1], k.b[1]);
       return ix > 0 && iy > 0 && ix * iy > .35 * Math.min((bx[2] - bx[0]) * (bx[3] - bx[1]), (k.b[2] - k.b[0]) * (k.b[3] - k.b[1])); });
