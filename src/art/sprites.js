@@ -64,7 +64,7 @@ function sprList(){
   put('montagnes_douces', 7.1, 48.65, 2.1); put('mt_basse', 6.75, 48.15, 2.1, 1); /* Vosges (suite) */
   put('lac', 6.17, 45.86, 1.9); /* lac d'Annecy */
   put('chaine_alpes', 6.75, 44.0, 8); /* Alpes : chaîne nord-sud le long de la frontière */
-  put('chaine_pyrenees', 0.75, 42.22, 34, 1); /* Pyrénées : une chaîne sur toute la frontière */
+  put('chaine_pyrenees', 0.7, 42.38, 38, 1); /* Pyrénées : une chaîne sur toute la frontière */
   [[-4.78,48.42],[-1.9,49.65],[1.6,50.7],[-1.45,43.5],[-2.2,47.28]].forEach(function(l){ put('phare', l[0], l[1], 1.4); });
   put('parasols', 3.5, 43.45, 2.4); put('parasols', -1.3, 44.6, 2.2); put('parasols', 6.9, 43.55, 2.2); put('voilier', -2.6, 46.5, 1.8); put('voilier', 5.6, 42.9, 1.8); put('voilier', -1.9, 49.95, 1.8);
   put('gare', 2.45, 48.95, 2.2); put('stade', 2.3, 48.7, 2.6); put('universite', 4.95, 45.68, 2.2); put('hopital', 1.5, 43.55, 2.4); put('ferme', 0.2, 46.9, 2.4); put('ferme', 3.9, 48.1, 2.3); put('colza', 0.9, 48.65, 3); put('colza', 4.6, 49.55, 3);
@@ -112,7 +112,14 @@ function sprItems(){
 /* Performance : les sprites sont « cuits » dans l'image du décor (une seule image au lieu de ~250 balises).
    Il faut leurs données (data URI) car une image SVG ne charge pas de fichiers externes.
    Si le chargement échoue (ex. page ouverte en file://), on garde la couche HTML #sprl. */
-var SPR_DATA = {}, SPR_READY = false, SPR_LOADING = false;
+var SPR_DATA = {}, SPR_NUIT = {}, SPR_READY = false, SPR_LOADING = false, MT_NUIT = /^(mt_|chaine|massif|montagnes|arbre|pin|sapins|ble|colza|vignes|serre|ferme|dune|lac|vache|tracteur|solaire|parasols)/;
+/* nuit : copie assombrie des reliefs, pleine résolution (un filtre SVG rendait l'image floue) */
+function sprNuit(id){
+  return new Promise(function(ok){ var im = new Image(); im.onload = function(){ try{
+    var c = document.createElement('canvas'); c.width = im.naturalWidth; c.height = im.naturalHeight; var x = c.getContext('2d');
+    x.drawImage(im, 0, 0); x.globalCompositeOperation = 'source-atop'; x.fillStyle = 'rgba(20,24,58,.42)'; x.fillRect(0, 0, c.width, c.height);
+    SPR_NUIT[id] = c.toDataURL('image/webp', .9); }catch(e){} ok(); }; im.onerror = ok; im.src = SPR_DATA[id]; });
+}
 function loadSprData(){
   if(SPR_LOADING || SPR_READY || !window.fetch || !window.FileReader) return; SPR_LOADING = true;
   var ids = []; sprList().forEach(function(s){ if(ids.indexOf(s[0]) < 0) ids.push(s[0]); });
@@ -120,17 +127,15 @@ function loadSprData(){
     return fetch(SPR_DIR + id + '.webp').then(function(r){ if(!r.ok) throw new Error(id); return r.blob(); }).then(function(b){
       return new Promise(function(ok, ko){ var fr = new FileReader(); fr.onload = function(){ SPR_DATA[id] = fr.result; ok(); }; fr.onerror = ko; fr.readAsDataURL(b); });
     });
-  })).then(function(){ SPR_READY = true; var l = $('sprl'); if(l) l.innerHTML = ''; BAKE.key = ''; BAKE.cache = {}; bakeDecor(); }).catch(function(){ SPR_LOADING = false; });
+  })).then(function(){ return Promise.all(ids.filter(function(id){ return MT_NUIT.test(id); }).map(sprNuit)).catch(function(){}); }).then(function(){ SPR_READY = true; var l = $('sprl'); if(l) l.innerHTML = ''; BAKE.key = ''; BAKE.cache = {}; bakeDecor(); }).catch(function(){ SPR_LOADING = false; });
 }
 function sprSvg(){
   if(!SPR_READY) return '';
   var used = {}, items = sprItems(), defs = '', uses = '';
-  /* nuit : reliefs assombris (verts plus sombres, neige légèrement grisée) */
   var nuit = document.documentElement.getAttribute('data-theme') === 'dark' || ($('app') && $('app').classList.contains('is-night'));
-  if(nuit) defs += '<filter id="nuitMt" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values=".62 0 0 0 0  0 .58 0 0 0  0 0 .7 0 .02  0 0 0 1 0"/></filter>';
   items.forEach(function(it){
-    if(!used[it.id]){ used[it.id] = 1; defs += '<image id="sp_' + it.id + '" href="' + SPR_DATA[it.id] + '" width="1" height="' + (SPR_AR[it.id] || 1) + '" preserveAspectRatio="none"/>'; }
-    uses += '<use href="#sp_' + it.id + '" transform="translate(' + F(it.f ? it.x + it.w / 2 : it.x - it.w / 2) + ',' + F(it.y - it.h * .86) + ') scale(' + (it.f ? '-' : '') + F(it.w) + ',' + F(it.w * (it.sy || 1)) + ')"' + (nuit && /^(mt_|chaine|massif|montagnes)/.test(it.id) ? ' filter="url(#nuitMt)"' : '') + '/>';
+    if(!used[it.id]){ used[it.id] = 1; defs += '<image id="sp_' + it.id + '" href="' + (nuit && SPR_NUIT[it.id] || SPR_DATA[it.id]) + '" width="1" height="' + (SPR_AR[it.id] || 1) + '" preserveAspectRatio="none"/>'; }
+    uses += '<use href="#sp_' + it.id + '" transform="translate(' + F(it.f ? it.x + it.w / 2 : it.x - it.w / 2) + ',' + F(it.y - it.h * .86) + ') scale(' + (it.f ? '-' : '') + F(it.w) + ',' + F(it.w * (it.sy || 1)) + ')"/>';
   });
   return '<defs>' + defs + '</defs><g>' + uses + '</g>';
 }
