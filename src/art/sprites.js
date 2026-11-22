@@ -121,9 +121,12 @@ function loadSprData(){
 function sprSvg(){
   if(!SPR_READY) return '';
   var used = {}, items = sprItems(), defs = '', uses = '';
+  /* nuit : reliefs assombris (verts plus sombres, neige légèrement grisée) */
+  var nuit = document.documentElement.getAttribute('data-theme') === 'dark' || ($('app') && $('app').classList.contains('is-night'));
+  if(nuit) defs += '<filter id="nuitMt" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values=".62 0 0 0 0  0 .58 0 0 0  0 0 .7 0 .02  0 0 0 1 0"/></filter>';
   items.forEach(function(it){
     if(!used[it.id]){ used[it.id] = 1; defs += '<image id="sp_' + it.id + '" href="' + SPR_DATA[it.id] + '" width="1" height="' + (SPR_AR[it.id] || 1) + '" preserveAspectRatio="none"/>'; }
-    uses += '<use href="#sp_' + it.id + '" transform="translate(' + F(it.f ? it.x + it.w / 2 : it.x - it.w / 2) + ',' + F(it.y - it.h * .86) + ') scale(' + (it.f ? '-' : '') + F(it.w) + ',' + F(it.w * (it.sy || 1)) + ')"/>';
+    uses += '<use href="#sp_' + it.id + '" transform="translate(' + F(it.f ? it.x + it.w / 2 : it.x - it.w / 2) + ',' + F(it.y - it.h * .86) + ') scale(' + (it.f ? '-' : '') + F(it.w) + ',' + F(it.w * (it.sy || 1)) + ')"' + (nuit && /^(mt_|chaine|massif)/.test(it.id) ? ' filter="url(#nuitMt)"' : '') + '/>';
   });
   return '<defs>' + defs + '</defs><g>' + uses + '</g>';
 }
