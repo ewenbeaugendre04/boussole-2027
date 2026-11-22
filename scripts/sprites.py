@@ -8,7 +8,7 @@ ROOT = Path(__file__).resolve().parent.parent
 LIB, OUT = ROOT/'assets/library', ROOT/'assets/sprites'
 SIZE = 1024
 ALLWHITE = {'chantier_naval'}
-SNOW_OFFWHITE = {'chaine_alpes', 'chaine_pyrenees'}  # neige presque blanche : sinon le retrait du fond blanc la rend transparente
+SNOW_OFFWHITE = {'chaine_alpes', 'chaine_pyrenees', 'massif_alpes_a'}  # neige presque blanche : sinon le retrait du fond blanc la rend transparente
 RULES = json.load(open(LIB/'recolor.json'))
 def recolor(svg, rules):
     def fix(m):

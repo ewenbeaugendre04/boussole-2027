@@ -1254,5 +1254,13 @@
   "prompt": "chaine_alpes (forme adaptée, style chaine_iso)",
   "credits": 4,
   "essais": 2
+ },
+ {
+  "id": "massif_alpes_a",
+  "url": "https://img.recraft.ai/HmxG-sTo8KOsUD8J8Mi3eBq6ZAPGf8XlhVUqfC5EXes/raw:1/plain/abs://prod/images/6e7784bb-ad12-43d3-80e3-69b67663126d"
+ },
+ {
+  "id": "massif_central",
+  "url": "https://img.recraft.ai/vg4w_LxorvbvoI4mzxZ6WRt-RyRjUnoqWCrwPhnw5PA/raw:1/plain/abs://prod/images/dc72bf4c-d098-4f52-8220-c79af444faab (recoloré sans neige)"
  }
 ]
