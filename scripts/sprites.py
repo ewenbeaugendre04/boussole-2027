@@ -8,7 +8,8 @@ ROOT = Path(__file__).resolve().parent.parent
 LIB, OUT = ROOT/'assets/library', ROOT/'assets/sprites'
 SIZE = int(os.environ.get('SIZE', 1024))
 ALLWHITE = {'chantier_naval'}
-SNOW_OFFWHITE = {'chaine_alpes', 'chaine_pyrenees', 'massif_alpes_a'}  # neige presque blanche : sinon le retrait du fond blanc la rend transparente
+REPLACE = {'chaine_pyrenees': {'221,222,221': '146,158,134'}}  # moins de neige : ombres de neige -> roche
+SNOW_OFFWHITE = {'chaine_alpes', 'chaine_pyrenees', 'massif_alpes_a', 'massif_alpes_b'}  # neige presque blanche : sinon le retrait du fond blanc la rend transparente
 RULES = json.load(open(LIB/'recolor.json'))
 def recolor(svg, rules):
     def fix(m):
@@ -32,6 +33,7 @@ def main(ids):
         b = p.chromium.launch(); pg = b.new_page(viewport={'width': SIZE, 'height': SIZE})
         for i in ids:
             svg = (LIB/'svg'/f'{i}.svg').read_text()
+            for a_, b_ in REPLACE.get(i, {}).items(): svg = svg.replace(f'rgb({a_})', f'rgb({b_})')
             if i in RULES: svg = recolor(svg, RULES[i])
             if i in SNOW_OFFWHITE:
                 def _ow(m):
