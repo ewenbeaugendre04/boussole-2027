@@ -55,7 +55,7 @@ function sprList(){
   // relief et littoral (sprites Recraft)
   // montagnes : massifs en vue isométrique du dessus, sans socle ; chacun placé une fois
   put('chaine_alpes', 6.75, 44.0, 8); /* Alpes : chaîne nord-sud le long de la frontière */
-  put('chaine_pyrenees', 0.75, 42.9, 30, 1); /* Pyrénées : une chaîne sur toute la frontière */
+  put('chaine_pyrenees', 0.75, 42.66, 30, 1); /* Pyrénées : une chaîne sur toute la frontière */
   [[-4.78,48.42],[-1.9,49.65],[1.6,50.7],[-1.45,43.5],[-2.2,47.28]].forEach(function(l){ put('phare', l[0], l[1], 1.4); });
   put('parasols', 3.5, 43.45, 2.4); put('parasols', -1.3, 44.6, 2.2); put('parasols', 6.9, 43.55, 2.2); put('voilier', -2.6, 46.5, 1.8); put('voilier', 5.6, 42.9, 1.8); put('voilier', -1.9, 49.95, 1.8);
   put('gare', 2.45, 48.95, 2.2); put('stade', 2.3, 48.7, 2.6); put('universite', 4.95, 45.68, 2.2); put('hopital', 1.5, 43.55, 2.4); put('ferme', 0.2, 46.9, 2.4); put('ferme', 3.9, 48.1, 2.3); put('colza', 0.9, 48.65, 3); put('colza', 4.6, 49.55, 3);
@@ -80,7 +80,7 @@ function sprItems(){
   var items = [];
   sprList().forEach(function(s){
     var p = P(s[1], s[2]), t = terrainU(p[0], p[1]), marine = !!SPR_MARINE[s[0]];
-    if(MASK && SPR_MARINE[s[0]] !== 2 && (marine ? t !== 0 : t !== 1)) return;
+    if(MASK && SPR_MARINE[s[0]] !== 2 && !/^chaine/.test(s[0]) && (marine ? t !== 0 : t !== 1)) return;
     items.push({ id:s[0], x0:s[1], y0:s[2], x:p[0], y:p[1], w:s[3], h:s[3] * (SPR_AR[s[0]] || 1) * (s[5] || 1), f:s[4], sy:s[5] || 1 });
   });
   /* pas de superposition : les éléments placés d'abord (monuments, villes, relief) gardent leur place */
