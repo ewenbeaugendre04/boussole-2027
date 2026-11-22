@@ -39,6 +39,19 @@ function buildMovers(){
     ml.appendChild(b); return b;
   });
 }
+/* nuage plus naturel : silhouette irrégulière (bosses de tailles variées), base plate, ombre douce dessous, bords légèrement flous */
+var CLOUD_N = 0;
+function cloudSvg(R, fill){
+  var id = 'cb' + (CLOUD_N++), n = 6 + Math.floor(R() * 4), top = '', base = '', x = -12;
+  for(var j = 0; j < n; j++){
+    var t = j / (n - 1), r = (1.6 + Math.sin(t * Math.PI) * 3.4) * (.75 + R() * .5), cy = -r * .55 + (R() - .5) * 1.2;
+    top += '<circle cx="' + F(x) + '" cy="' + F(cy) + '" r="' + F(r) + '"/>'; x += 24 / (n - 1) * (.8 + R() * .4);
+  }
+  base = '<ellipse cx="0" cy="1.2" rx="13.5" ry="2.2"/>';
+  return '<svg viewBox="-34 -18 68 30" overflow="visible" style="width:100%;display:block"><defs><filter id="' + id + '" x="-20%" y="-30%" width="140%" height="160%"><feGaussianBlur stdDeviation=".35"/></filter></defs>'
+    + '<g filter="url(#' + id + ')"><g fill="#3A5A6A" opacity=".10" transform="translate(1.5,3.2)">' + top + base + '</g>'
+    + '<g fill="#DCE6EE">' + top + base + '</g><g fill="' + fill + '" transform="translate(-.5,-.7) scale(.97)">' + top + '</g></g></svg>';
+}
 function buildClouds(weather){
   var R = rng(hash('c' + (S ? S.dayIdx : 0) + weather));
   var n = { soleil:3, pluie:6, neige:5, canicule:1, vent:4 }[weather] || 3;
@@ -46,11 +59,9 @@ function buildClouds(weather){
   cl.innerHTML = '';
   MV.clouds = [];
   for(var i = 0; i < n; i++){
-    var circles = '', k = 3 + Math.floor(R() * 3), s = .8 + R() * .9;
-    for(var j = 0; j < k; j++){ circles += '<circle cx="' + F((j - k / 2) * 2.6 * s) + '" cy="' + F(-Math.sin(j / (k - 1 || 1) * Math.PI) * 1.8 * s) + '" r="' + F((2.2 + R() * 1.2) * s) + '"/>'; }
-    circles += '<ellipse cx="0" cy="' + F(.8 * s) + '" rx="' + F(k * 1.5 * s) + '" ry="' + F(1.4 * s) + '"/>';
+    var s = .8 + R() * .9;
     var el = document.createElement('div'); el.className = 'mv cloud';
-    el.innerHTML = '<svg viewBox="-16 -8 40 26"><g fill="var(--shadow)" opacity=".07" transform="translate(4,10)">' + circles + '</g><g fill="' + (dark ? 'var(--mist)' : 'var(--cloud)') + '" style="opacity:var(--cloud-o)">' + circles + '</g></svg>';
+    el.innerHTML = '<div style="opacity:var(--cloud-o);transform:scale(' + F(s) + ')">' + cloudSvg(R, dark ? '#C9D3DB' : '#FFFFFF') + '</div>';
     el.style.width = F(40 * VBK) + 'px'; el.style.height = F(26 * VBK) + 'px'; el.style.marginLeft = F(-16 * VBK) + 'px'; el.style.marginTop = F(-8 * VBK) + 'px';
     cl.appendChild(el);
     MV.clouds.push({ el:el, x:VBX + WM / VBK - 30 + R() * ((WW - 2 * WM) / VBK + 40), y:VBY + WM / VBK - 10 + R() * ((WH - 2 * WM) / VBK), sp:(weather === 'vent' ? 3 : 1) * (.6 + R() * .7) });

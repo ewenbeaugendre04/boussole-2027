@@ -27,7 +27,7 @@ function sprList(){
   }
   // monuments des grandes villes
   put('tour_eiffel', 2.29, 48.92, 2.6); put('arc_triomphe', 2.52, 48.74, 2.6); put('fourviere', 4.78, 45.8, 3.4); put('basilique_marseille', 5.37, 43.36, 3); put('cathedrale_strasbourg', 7.72, 48.62, 2.5);
-  put('beffroi_lille', 3.07, 50.62, 2); put('bourse_bordeaux', -0.57, 44.86, 3.8); put('mont_saint_michel', -1.56, 48.66, 1.8);
+  put('beffroi_lille', 3.07, 50.62, 2); put('bourse_bordeaux', -0.57, 44.86, 3.8); put('mont_saint_michel', -1.6, 48.7, 1.8);
   // villes et villages : des maisons partout
   /* ville structurée : centre (haussmann, commerces), couronne (immeubles), périphérie (pavillons) ; quartier d'affaires optionnel */
   function city(lon, lat, r, o){
@@ -63,7 +63,7 @@ function sprList(){
   put('mt_haute', 9.0, 42.2, 3.6); put('mt_basse', 9.15, 41.85, 3, 1); put('montagnes_douces', 9.05, 42.6, 2.6); /* Corse */
   put('montagnes_douces', 7.1, 48.65, 2.1); put('mt_basse', 6.75, 48.15, 2.1, 1); /* Vosges (suite) */
   put('lac', 6.17, 45.86, 1.9); /* lac d'Annecy */
-  put('massif_alpes_a', 6.5, 45.0, 15); put('mt_neige', 6.85, 44.42, 3.4); put('mt_basse', 6.45, 44.3, 2.9, 1); put('mt_basse', 7.15, 44.2, 2.7); put('pavillon', 2.56, 44.42, 2); put('maison_pierre', 2.4, 44.32, 2); put('pavillon', 2.62, 44.27, 2, 1); /* Rodez */ put('montagnes_douces', 6.55, 44.15, 2.6); put('mt_basse', 6.3, 44.55, 2.6, 1); /* Alpes du Sud, le long de la frontière */ put('massif_central', 2.9, 45.15, 11); /* Alpes : chaîne nord-sud le long de la frontière */
+  put('massif_alpes_a', 6.5, 45.0, 15); put('mt_neige', 6.85, 44.42, 3.4); put('mt_basse', 6.45, 44.3, 2.9, 1); put('mt_basse', 7.15, 44.2, 2.7); put('mt_basse', 6.15, 44.12, 2.8); put('montagnes_douces', 6.5, 43.92, 2.5, 1); put('mt_basse', 5.85, 44.38, 2.5, 1); /* sous les Alpes */ put('pavillon', 2.56, 44.42, 2); put('maison_pierre', 2.4, 44.32, 2); put('pavillon', 2.62, 44.27, 2, 1); /* Rodez */ put('montagnes_douces', 6.55, 44.15, 2.6); put('mt_basse', 6.3, 44.55, 2.6, 1); /* Alpes du Sud, le long de la frontière */ put('massif_central', 2.9, 45.15, 11); /* Alpes : chaîne nord-sud le long de la frontière */
   put('chaine_pyrenees', -0.35, 42.72, 21, 1, 1.2, 3); put('chaine_pyrenees', 1.85, 42.45, 20, 1, 1.2, 3); /* Pyrénées : une chaîne sur toute la frontière */
   [[-4.78,48.42],[-1.9,49.65],[1.6,50.7],[-1.45,43.5],[-2.2,47.28]].forEach(function(l){ put('phare', l[0], l[1], 1.4); });
   put('parasols', 3.5, 43.45, 2.4); put('parasols', -1.3, 44.6, 2.2); put('parasols', 6.9, 43.55, 2.2); put('voilier', -2.6, 46.5, 1.8); put('voilier', 5.6, 42.9, 1.8); put('voilier', -1.9, 49.95, 1.8);
@@ -99,7 +99,7 @@ function sprItems(){
   items.forEach(function(it){
     var bx = [it.x - it.w * .42, it.y - it.h * .55, it.x + it.w * .42, it.y + it.h * .08];
     if(!SPR_MARINE[it.id] && it.id !== 'dune' && ((it.x0 > -1.3 && it.x0 < -0.95 && it.y0 > 44.55 && it.y0 < 44.78) || (it.x0 > -1.05 && it.x0 < -0.55 && it.y0 > 45.05 && it.y0 < 45.65))) return;
-    if(MASK && !SPR_MARINE[it.id] && !/^(chaine|dune)/.test(it.id) && (terrainU(bx[0], it.y) === 0 || terrainU(bx[2], it.y) === 0)) return; /* pieds dans l'eau : non */
+    if(MASK && !SPR_MARINE[it.id] && !/^(chaine|dune)/.test(it.id) && (terrainU(bx[0] - it.w * .3, it.y) === 0 || terrainU(bx[2] + it.w * .3, it.y) === 0 || terrainU(it.x, it.y + it.h * .35) === 0 || terrainU(it.x, it.y - it.h * .3) === 0)) return; /* marge : ni pieds dans l'eau ni collé au rivage */ /* pieds dans l'eau : non */
     var MTN = false;
     var clash = kept.some(function(k){ if(BIG_SPR.test(k.id) && !BIG_SPR.test(it.id)){ var m = (k.b[2] - k.b[0]) * .12; if(bx[2] > k.b[0] - m && bx[0] < k.b[2] + m && bx[3] > k.b[1] - m && bx[1] < k.b[3] + m) return true; } if(MTN && /massif|pic|montagne|colline/.test(k.id)) return false; var ix = Math.min(bx[2], k.b[2]) - Math.max(bx[0], k.b[0]), iy = Math.min(bx[3], k.b[3]) - Math.max(bx[1], k.b[1]);
       return ix > 0 && iy > 0 && ((BIG_SPR.test(k.id) !== BIG_SPR.test(it.id)) || ix * iy > .35 * Math.min((bx[2] - bx[0]) * (bx[3] - bx[1]), (k.b[2] - k.b[0]) * (k.b[3] - k.b[1]))); });
@@ -170,11 +170,11 @@ function buildBirds(){
   ml.querySelectorAll('.birds,.nuage').forEach(function(e){ e.remove(); });
   /* petits nuages qui passent lentement, d'ouest en est */
   [[[-6, 49.2], [10, 48.4], 0, 1.2], [[-6, 46.2], [10, 45.6], 22, .9], [[-6, 43.8], [10, 44.6], 45, 1]].forEach(function(v){
-    var a = P(v[0][0], v[0][1]), b = P(v[1][0], v[1][1]), qa = U2P(a[0], a[1]), qb = U2P(b[0], b[1]), w = VBK * 7 * v[3];
+    var a = P(v[0][0], v[0][1]), b = P(v[1][0], v[1][1]), qa = U2P(a[0], a[1]), qb = U2P(b[0], b[1]), w = VBK * 14 * v[3];
     var el = document.createElement('div'); el.className = 'nuage';
     el.style.setProperty('--x0', F(qa[0]) + 'px'); el.style.setProperty('--y0', F(qa[1]) + 'px'); el.style.setProperty('--x1', F(qb[0]) + 'px'); el.style.setProperty('--y1', F(qb[1]) + 'px');
     el.style.animationDelay = '-' + v[2] + 's'; el.style.width = F(w) + 'px';
-    el.innerHTML = '<svg viewBox="0 0 60 26"><ellipse cx="30" cy="22" rx="24" ry="3" fill="#0E4A5A" opacity=".08"/><g fill="#fff"><circle cx="18" cy="14" r="8"/><circle cx="30" cy="10" r="10"/><circle cx="42" cy="14" r="8"/><rect x="12" y="13" width="36" height="8" rx="4"/></g></svg>';
+    el.innerHTML = cloudSvg(rng(hash('n' + v[2])), '#FFFFFF');
     ml.appendChild(el);
   });
   [[[-2, 47.5], [8, 49.5], 0], [[6, 43.5], [-1, 46.8], 14], [[1, 50.5], [4.5, 44.5], 27]].forEach(function(v){

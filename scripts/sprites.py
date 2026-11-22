@@ -9,6 +9,7 @@ LIB, OUT = ROOT/'assets/library', ROOT/'assets/sprites'
 SIZE = int(os.environ.get('SIZE', 1024))
 ALLWHITE = {'chantier_naval'}
 REPLACE = {'chaine_pyrenees': {'221,222,221': '146,158,134'}}  # moins de neige : ombres de neige -> roche
+MUTE = {'massif_alpes_a', 'chaine_pyrenees'}  # couleurs adoucies (demande d'Ewen)
 SNOW_OFFWHITE = {'chaine_alpes', 'chaine_pyrenees', 'massif_alpes_a', 'massif_alpes_b'}  # neige presque blanche : sinon le retrait du fond blanc la rend transparente
 RULES = json.load(open(LIB/'recolor.json'))
 def recolor(svg, rules):
@@ -66,6 +67,10 @@ def main(ids):
                         r_, g_, b_, a_ = px[xx, yy]
                         if a_ and r_ > 246 and g_ > 246 and b_ > 246: px[xx, yy] = (0, 0, 0, 0)
             im = im.crop(im.getbbox())
+            if i in MUTE:
+                import numpy as np
+                a_ = np.array(im).astype(float); c_ = a_[..., :3]; g_ = c_.mean(axis=2, keepdims=True); c_ = g_ + (c_ - g_) * .62
+                c_ = np.where(g_ < 110, c_ * .78 + np.array([96, 110, 120]) * .22, c_); a_[..., :3] = np.clip(c_, 0, 255); im = Image.fromarray(a_.astype('uint8'))
             im.save(OUT/f'{i}.webp', 'WEBP', quality=86, method=6)
         b.close()
     print(len(ids), 'sprites,', sum(os.path.getsize(OUT/f'{i}.webp') for i in ids)//1024, 'Ko')
