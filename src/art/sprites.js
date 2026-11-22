@@ -57,11 +57,11 @@ function sprList(){
   put('massif_iso', 6.7, 45.6, 9.5); /* Alpes du Nord : Mont-Blanc, Vanoise, Écrins */
   put('chaine_iso', 6.65, 44.62, 9, 1); /* Alpes du Sud : la chaîne, orientée comme les Alpes */
   /* Pyrénées : montagnes isolées le long de la frontière (plus de chaîne en diagonale) */
-  [['mt_basse',-1.35,43.25,4.6],['mt_haute',-0.7,43.1,5.4],['mt_basse',-0.05,43.0,5],['mt_haute',0.6,42.9,5.8],['mt_basse',1.25,42.82,4.8],['mt_haute',1.9,42.72,5.2],['mt_basse',2.55,42.62,4.4]].forEach(function(m, i){ put(m[0], m[1], m[2], m[3], i % 2); });
+  put('chaine_iso', -0.6, 43.08, 8.5, 1); put('chaine_iso', 1.55, 42.75, 8, 1); put('mt_haute', 0.55, 42.85, 4.4); /* Pyrénées : deux tronçons de chaîne et un sommet au centre */
   /* montagnes isolées entre les massifs alpins, pour combler */
   [['mt_haute',6.35,45.1,5.2],['mt_basse',6.05,44.85,4.4],['mt_haute',6.0,45.45,4.6],['mt_basse',6.25,44.15,4.4],['mt_haute',7.05,44.1,4.6],['mt_basse',6.15,46.25,4.2]].forEach(function(m, i){ put(m[0], m[1], m[2], m[3], i % 2); });
-  put('colline', 2.9, 45.8, 3.2); put('colline', 2.75, 45.45, 2.8, 1); put('montagnes_douces', 3.05, 45.05, 3.6); put('colline', 3.5, 44.6, 3, 1); /* Massif central */
-  put('montagnes_douces', 6.95, 48.15, 3.4, 1); put('montagnes_douces', 6.1, 46.65, 3.4); put('massif_brun', 9.05, 42.2, 3.8); /* Vosges, Jura, Corse */
+  put('mt_basse', 2.85, 45.6, 4.2); put('mt_basse', 3.25, 44.95, 3.4, 1); put('massif_iso', 2.7, 45.15, 3.6); /* Massif central : quelques reliefs, pas de répétition à l'identique */
+  put('mt_basse', 6.95, 48.15, 3.4, 1); put('mt_basse', 6.1, 46.65, 3); put('massif_brun', 9.05, 42.2, 3.8); /* Vosges, Jura, Corse */
   [[2.8,45.4],[3.0,44.9],[3.6,44.5],[2.5,45.8],[7.0,48.1],[5.9,46.6]].forEach(function(c){ put('colline', c[0], c[1], 2.2); });
   [[-4.78,48.42],[-1.9,49.65],[1.6,50.7],[-1.45,43.5],[-2.2,47.28]].forEach(function(l){ put('phare', l[0], l[1], 1.4); });
   put('parasols', 3.5, 43.45, 2.4); put('parasols', -1.3, 44.6, 2.2); put('parasols', 6.9, 43.55, 2.2); put('voilier', -2.6, 46.5, 1.8); put('voilier', 5.6, 42.9, 1.8); put('voilier', -1.9, 49.95, 1.8);
