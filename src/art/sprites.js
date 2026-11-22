@@ -60,10 +60,11 @@ function sprList(){
   put('mt_basse', 7.0, 48.35, 2.8, 1); put('mt_basse', 6.9, 47.95, 2.4); /* Vosges */
   put('mt_basse', 3.0, 45.95, 2.4, 1); put('montagnes_douces', 2.45, 44.9, 2.4); put('mt_basse', 3.5, 45.25, 2.5, 1); put('montagnes_douces', 2.95, 44.45, 2.1, 1); /* Massif central (suite) */
   put('montagnes_douces', 5.7, 46.15, 2.1, 1); put('mt_basse', 6.6, 47.25, 2.2); /* Jura (suite) */
+  put('mt_basse', 6.1, 46.7, 2.2); put('montagnes_douces', 5.85, 46.6, 2, 1); put('mt_basse', 6.45, 47.1, 2.1, 1); /* Jura (plus) */
   put('montagnes_douces', 7.1, 48.65, 2.1); put('mt_basse', 6.75, 48.15, 2.1, 1); /* Vosges (suite) */
   put('lac', 6.17, 45.86, 1.9); /* lac d'Annecy */
   put('chaine_alpes', 6.75, 44.0, 8); /* Alpes : chaîne nord-sud le long de la frontière */
-  put('chaine_pyrenees', 0.75, 42.42, 30, 1); /* Pyrénées : une chaîne sur toute la frontière */
+  put('chaine_pyrenees', 0.75, 42.22, 34, 1); /* Pyrénées : une chaîne sur toute la frontière */
   [[-4.78,48.42],[-1.9,49.65],[1.6,50.7],[-1.45,43.5],[-2.2,47.28]].forEach(function(l){ put('phare', l[0], l[1], 1.4); });
   put('parasols', 3.5, 43.45, 2.4); put('parasols', -1.3, 44.6, 2.2); put('parasols', 6.9, 43.55, 2.2); put('voilier', -2.6, 46.5, 1.8); put('voilier', 5.6, 42.9, 1.8); put('voilier', -1.9, 49.95, 1.8);
   put('gare', 2.45, 48.95, 2.2); put('stade', 2.3, 48.7, 2.6); put('universite', 4.95, 45.68, 2.2); put('hopital', 1.5, 43.55, 2.4); put('ferme', 0.2, 46.9, 2.4); put('ferme', 3.9, 48.1, 2.3); put('colza', 0.9, 48.65, 3); put('colza', 4.6, 49.55, 3);
