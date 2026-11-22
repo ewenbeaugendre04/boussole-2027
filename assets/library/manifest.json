@@ -1166,5 +1166,29 @@
   "prompt": "grand pic alpin enneigé",
   "credits": 4,
   "essais": 1
+ },
+ {
+  "id": "massif_alpes_nord",
+  "categorie": "decor",
+  "url": "https://img.recraft.ai/138bIUh_66H6ywXojnkJOAOojejD-PQ3fb7iWiPKhFU/raw:1/plain/abs://prod/images/a17cb9c9-5f29-4da4-8b89-ccef070cfd36",
+  "prompt": "massif_alpes_nord",
+  "credits": 4,
+  "essais": 1
+ },
+ {
+  "id": "massif_alpes_sud",
+  "categorie": "decor",
+  "url": "https://img.recraft.ai/vQo-LUsY5UwFEfoxJYgH2MVH5DaZy9lAf3GVTf7383k/raw:1/plain/abs://prod/images/d4ff8bc2-6c35-44d2-94c1-baee7df309bf",
+  "prompt": "massif_alpes_sud",
+  "credits": 4,
+  "essais": 1
+ },
+ {
+  "id": "massif_pyrenees",
+  "categorie": "decor",
+  "url": "https://img.recraft.ai/xHb5PaxijrBoFT5Ht2nGltpDIXGc4tXL3i9czxisEdI/raw:1/plain/abs://prod/images/0150257b-7b6a-4668-92ff-8f1ceb363a01",
+  "prompt": "massif_pyrenees",
+  "credits": 4,
+  "essais": 1
  }
 ]
