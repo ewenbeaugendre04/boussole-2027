@@ -19,7 +19,7 @@ function openGuide(after){
     var g = GUIDE[i], last = i === GUIDE.length - 1;
     var html = '<div class="guide"><div class="g-scene"><img class="g-cap" src="' + SPR_DIR + 'mascotte.webp" alt="Cap, la mascotte">' +
       '<div class="g-bulle"><b>' + esc(g[0]) + '</b><p>' + esc(g[1]) + '</p></div></div>' +
-      '<div class="g-dots">' + GUIDE.map(function(_, k){ return '<i' + (k === i ? ' class="on"' : '') + '></i>'; }).join('') + '</div>' +
+      '<p class="g-hint">Touchez la bulle ou glissez pour continuer</p><div class="g-dots">' + GUIDE.map(function(_, k){ return '<i' + (k === i ? ' class="on"' : '') + '></i>'; }).join('') + '</div>' +
       '<div class="g-btns">' + (i ? '<button class="btn pressable" id="gPrev">Retour</button>' : '<button class="btn pressable" id="gSkip">Passer</button>') +
       '<button class="btn brass pressable" id="gNext">' + (last ? 'C\'est parti' : 'Suivant') + '</button></div>' +
       (last ? '<p class="g-legal">En continuant, vous acceptez les <a href="#" id="gCgu">conditions d\'utilisation</a>.</p>' : '') + '</div>';
@@ -29,6 +29,11 @@ function openGuide(after){
     c.querySelector('#gNext').onclick = function(){ if(last) done(); else { i++; draw(); } };
     var p = c.querySelector('#gPrev'); if(p) p.onclick = function(){ i--; draw(); };
     var s = c.querySelector('#gSkip'); if(s) s.onclick = done;
+    /* un toucher sur la bulle ou un glissement passe à l'explication suivante */
+    c.querySelector('.g-scene').onclick = function(){ if(!last){ i++; draw(); } };
+    var x0 = null; c.addEventListener('touchstart', function(e){ x0 = e.touches[0].clientX; }, { passive:true });
+    c.addEventListener('touchend', function(e){ if(x0 === null) return; var dx = e.changedTouches[0].clientX - x0; x0 = null;
+      if(dx < -40 && !last){ i++; draw(); } else if(dx > 40 && i){ i--; draw(); } }, { passive:true });
     var l = c.querySelector('#gCgu'); if(l) l.onclick = function(e){ e.preventDefault(); openLegal('cgu', function(){ draw(); }); };
   }
   draw();

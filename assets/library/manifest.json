@@ -1070,5 +1070,21 @@
   "prompt": "mascotte Cap (chouette 2D, boussole)",
   "credits": 4,
   "essais": 1
+ },
+ {
+  "id": "montagnes_douces",
+  "categorie": "decor",
+  "url": "https://img.recraft.ai/fX4dHQla1xKUV3WZgR3ncUgpvbvBX7vU8Wvga18VW1c/raw:1/plain/abs://prod/images/0d5b3a1d-208a-465a-b709-fe74053e648a",
+  "prompt": "montagnes_douces",
+  "credits": 4,
+  "essais": 1
+ },
+ {
+  "id": "pic_neige",
+  "categorie": "decor",
+  "url": "https://img.recraft.ai/-86Ay6zO8DXDrBCwP6ogXcdCszNrtKKUfTf1-exKegs/raw:1/plain/abs://prod/images/c6e26c1a-d0f7-4add-86ff-355cc0291e74",
+  "prompt": "pic_neige",
+  "credits": 4,
+  "essais": 1
  }
 ]
