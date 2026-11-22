@@ -6,7 +6,7 @@ from PIL import Image
 from playwright.sync_api import sync_playwright
 ROOT = Path(__file__).resolve().parent.parent
 LIB, OUT = ROOT/'assets/library', ROOT/'assets/sprites'
-SIZE = 1024
+SIZE = int(os.environ.get('SIZE', 1024))
 ALLWHITE = {'chantier_naval'}
 SNOW_OFFWHITE = {'chaine_alpes', 'chaine_pyrenees', 'massif_alpes_a'}  # neige presque blanche : sinon le retrait du fond blanc la rend transparente
 RULES = json.load(open(LIB/'recolor.json'))

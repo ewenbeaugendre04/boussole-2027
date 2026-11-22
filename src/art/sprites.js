@@ -48,24 +48,23 @@ function sprList(){
   put('centrale_nucleaire', 1.58, 47.72, 3.4); put('centrale_nucleaire', 6.22, 49.41, 3.2); put('centrale_nucleaire', 4.73, 44.33, 3.2); put('centrale_nucleaire', 5.27, 45.8, 3);
   put('eolienne', 1.75, 48.25, 2.2); put('eolienne', 2.1, 48.15, 2.2); put('eolienne', 2.9, 50.2, 2.2); put('eolienne', 3.3, 50.05, 2.2); put('eolienne', -3.2, 48.25, 2.1);
   put('eolien_mer', -2.62, 47.05, 2.4); put('eolien_mer', -2.4, 46.9, 2.4); put('eolien_mer', 0.25, 49.98, 2.4);
-  put('solaire', 5.25, 43.95, 3.2); put('barrage', 6.35, 44.53, 3.4); put('grue_portuaire', 0.12, 49.47, 2.6); put('grue_portuaire', 4.88, 43.42, 2.4);
+  put('solaire', 5.25, 43.95, 3.2); put('barrage', 4.78, 44.72, 3); put('grue_portuaire', 0.12, 49.47, 2.6); put('grue_portuaire', 4.88, 43.42, 2.4);
   put('porte_conteneurs', -0.25, 49.75, 4.6); put('bateau_peche', -4.9, 47.7, 2.6);
   put('ble', 1.6, 48.05, 4.2); put('ble', 3.5, 49.3, 3.8); put('ble', 0.6, 46.3, 3.4); put('vignes', -0.25, 44.98, 3.4); put('vignes', 4.75, 47.05, 3.2); put('vignes', 4.0, 49.05, 3.2);
   put('vache', -0.7, 49.0, 1.8); put('vache', 2.75, 45.35, 1.8); put('tracteur', 1.3, 48.3, 1.7); put('serre', -1.4, 47.0, 2.2); put('usine', 6.05, 48.05, 2.8); put('usine', 3.2, 50.4, 2.6);
   // relief et littoral (sprites Recraft)
   // montagnes : massifs en vue isométrique du dessus, sans socle ; chacun placé une fois
   /* Massif central, Jura, Vosges : quelques montagnes basses sans neige, tailles variées */
-  put('mt_basse', 2.85, 45.65, 3.6); put('mt_basse', 2.65, 45.2, 3, 1); put('mt_basse', 3.2, 44.85, 3.3); put('mt_basse', 3.65, 44.45, 2.7, 1);
+  put('mt_basse', 3.65, 44.45, 2.7, 1); put('montagnes_douces', 2.2, 45.7, 2.2);
   put('mt_basse', 5.95, 46.45, 2.8); put('mt_basse', 6.35, 46.95, 2.4, 1); /* Jura */
   put('mt_basse', 7.0, 48.35, 2.8, 1); put('mt_basse', 6.9, 47.95, 2.4); /* Vosges */
-  put('mt_basse', 3.0, 45.95, 2.4, 1); put('montagnes_douces', 2.45, 44.9, 2.4); put('mt_basse', 3.5, 45.25, 2.5, 1); put('montagnes_douces', 2.95, 44.45, 2.1, 1); /* Massif central (suite) */
   put('montagnes_douces', 5.7, 46.15, 2.1, 1); put('mt_basse', 6.6, 47.25, 2.2); /* Jura (suite) */
   put('mt_basse', 6.1, 46.7, 2.2); put('montagnes_douces', 5.85, 46.6, 2, 1); put('mt_basse', 6.45, 47.1, 2.1, 1); /* Jura (plus) */
   put('mt_haute', 9.0, 42.2, 3.6); put('mt_basse', 9.15, 41.85, 3, 1); put('montagnes_douces', 9.05, 42.6, 2.6); /* Corse */
   put('montagnes_douces', 7.1, 48.65, 2.1); put('mt_basse', 6.75, 48.15, 2.1, 1); /* Vosges (suite) */
   put('lac', 6.17, 45.86, 1.9); /* lac d'Annecy */
-  put('massif_alpes_a', 6.5, 45.0, 15); put('mt_basse', 6.0, 44.05, 2.6); put('montagnes_douces', 6.7, 44.2, 2.4, 1); put('massif_central', 2.9, 45.15, 11); /* Alpes : chaîne nord-sud le long de la frontière */
-  put('chaine_pyrenees', -0.45, 42.85, 25, 0, 1.25, 3); put('chaine_pyrenees', 1.95, 42.56, 24, 0, 1.25, 3); /* Pyrénées : une chaîne sur toute la frontière */
+  put('massif_alpes_a', 6.5, 45.0, 15); put('massif_alpes_a', 6.85, 44.2, 9, 1); put('montagnes_douces', 6.55, 44.15, 2.6); put('mt_basse', 6.3, 44.55, 2.6, 1); /* Alpes du Sud, le long de la frontière */ put('massif_central', 2.9, 45.15, 11); /* Alpes : chaîne nord-sud le long de la frontière */
+  put('chaine_pyrenees', -0.45, 42.77, 25, 1, 1.25, 3); put('chaine_pyrenees', 1.95, 42.5, 24, 1, 1.25, 3); /* Pyrénées : une chaîne sur toute la frontière */
   [[-4.78,48.42],[-1.9,49.65],[1.6,50.7],[-1.45,43.5],[-2.2,47.28]].forEach(function(l){ put('phare', l[0], l[1], 1.4); });
   put('parasols', 3.5, 43.45, 2.4); put('parasols', -1.3, 44.6, 2.2); put('parasols', 6.9, 43.55, 2.2); put('voilier', -2.6, 46.5, 1.8); put('voilier', 5.6, 42.9, 1.8); put('voilier', -1.9, 49.95, 1.8);
   put('gare', 2.45, 48.95, 2.2); put('stade', 2.3, 48.7, 2.6); put('universite', 4.95, 45.68, 2.2); put('hopital', 1.5, 43.55, 2.4); put('ferme', 0.2, 46.9, 2.4); put('ferme', 3.9, 48.1, 2.3); put('colza', 0.9, 48.65, 3); put('colza', 4.6, 49.55, 3);
