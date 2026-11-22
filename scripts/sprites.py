@@ -41,7 +41,10 @@ def main(ids):
                 k = svg.find('>', k) + 1 if k >= 0 else 0
                 svg = svg[:k] + re.sub(r'((?:fill|stop-color)=)"rgb\(([^)]*)\)', _ow, svg[k:])
             (LIB/'svg_final').mkdir(exist_ok=True); (LIB/'svg_final'/f'{i}.svg').write_text(svg)
-            svg = re.sub(r'<svg ', f'<svg style="width:{SIZE}px;height:{SIZE}px" ', svg, count=1)
+            vb = re.search(r'viewBox="[\d.\-]+ [\d.\-]+ ([\d.]+) ([\d.]+)"', svg)
+            ar_ = float(vb.group(2)) / float(vb.group(1)) if vb else 1.0
+            sw, sh = (SIZE, SIZE * ar_) if ar_ <= 1 else (SIZE / ar_, SIZE)  # garder les proportions (les SVG Recraft ont preserveAspectRatio="none")
+            svg = re.sub(r'<svg ', f'<svg style="width:{sw:.0f}px;height:{sh:.0f}px" ', svg, count=1)
             svg = re.sub(r'\swidth="\d+" height="\d+"', '', svg, count=1)
             pg.set_content(f'<html><body style="margin:0;background:transparent">{svg}</body></html>')
             im = Image.open(io.BytesIO(pg.screenshot(omit_background=True, clip={'x':0,'y':0,'width':SIZE,'height':SIZE}))).convert('RGBA')
