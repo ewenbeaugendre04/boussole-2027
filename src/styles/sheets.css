@@ -141,7 +141,7 @@
 
 /* v2.4 : étiquettes non coupées, couleurs plus vives, bouton Répondre */
 .l-etiquette{clip-path:none!important;border-radius:.35em!important;padding:.18em .6em!important}
-#decorImg,#map{filter:saturate(1.3) contrast(1.08)}
+#decorImg,#map{filter:saturate(1.08) contrast(1.05)}
 #fxl,#stayl{filter:saturate(1.25) contrast(1.06)}
 #answerBtn{position:fixed;left:50%;bottom:calc(110px + env(safe-area-inset-bottom));transform:translateX(-50%) translateY(20px);opacity:0;pointer-events:none;z-index:40;transition:opacity .25s,transform .25s;font-size:17px;padding:14px 26px;white-space:nowrap}
 #answerBtn.on{opacity:1;transform:translateX(-50%);pointer-events:auto}

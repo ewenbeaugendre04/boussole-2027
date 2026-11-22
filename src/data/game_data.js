@@ -182,8 +182,8 @@ const GAME = {
   {
    "id": "frontiere_est",
    "label": "Frontière est de l'Europe",
-   "x": 97,
-   "y": 13,
+   "x": 98,
+   "y": 6,
    "abroad": true
   },
   {
