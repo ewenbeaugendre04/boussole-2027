@@ -104,7 +104,7 @@ button{font:inherit;color:inherit;cursor:pointer}
 #board[data-weather="vent"] #tint{background:linear-gradient(100deg,rgba(255,255,255,.06),transparent)}
 [data-theme="dark"] #board #tint{opacity:.5}
 .sea-rect{fill:var(--sea);transition:fill 1s}
-.land-top{fill:var(--land);stroke:#F6E3A4;stroke-width:1.1;paint-order:stroke;stroke-linejoin:round;transition:fill 1s}
+.land-top{fill:var(--land);stroke:var(--sand,#F6E3A4);stroke-width:1.1;paint-order:stroke;stroke-linejoin:round;transition:fill 1s}
 .wave{fill:none;stroke:var(--wave);stroke-width:.45;stroke-linecap:round;opacity:0;animation:wave 7s ease-in-out infinite}
 @keyframes wave{0%,100%{opacity:0;transform:translateX(0)}45%{opacity:.75}70%{opacity:.2;transform:translateX(2.4px)}}
 .foam{fill:none;stroke:var(--foam);stroke-linejoin:round;animation:foam 5.5s ease-in-out infinite}

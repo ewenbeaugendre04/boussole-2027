@@ -91,3 +91,12 @@ body{font-weight:600}
 .card[data-multi] .choice .confirm,.choice[data-g] .confirm{display:none!important}
 .rp-why p.fc{background:#EEF5F4;color:var(--ink)}.rp-why small{color:var(--ink-3);font-weight:700}
 .toast span{max-width:340px;line-height:1.35}
+/* guide de départ et pages légales */
+.guide{text-align:center}.g-cap{width:96px;margin:2px auto 4px;display:block;animation:capBob 2.4s ease-in-out infinite}
+@keyframes capBob{50%{transform:translateY(-5px) rotate(-3deg)}}
+@media (prefers-reduced-motion:reduce){.g-cap{animation:none}}
+.guide p{font-size:14px;line-height:1.45;color:var(--ink-2);margin:6px 4px 10px}
+.g-dots{display:flex;gap:6px;justify-content:center;margin:6px 0 12px}.g-dots i{width:7px;height:7px;border-radius:9px;background:var(--line)}.g-dots i.on{background:var(--brass);width:18px}
+.g-btns{display:flex;gap:8px}.g-btns .btn{flex:1}.g-legal{font-size:12px!important;color:var(--ink-3)!important}.g-legal a,.m-links a{color:var(--brass-d);font-weight:800}
+.m-legal{margin-top:6px}.m-links{font-size:12px;text-align:center;margin:8px 0 0;color:var(--ink-3)}.legal-p{font-size:13.5px;line-height:1.5;color:var(--ink-2)}
+[data-theme="dark"],.is-night{--sand:#7E7458}

@@ -1038,5 +1038,29 @@
   "prompt": "Single isolated mobile-game asset, one independent object only, consistent 30-degree isometric view, light from top-left, vivid playful chunky shapes, NO base tile, NO ground, NO outlines, NO text, NO flags, plain white background: two hospital caregivers in light blue scrubs standing side by side",
   "credits": 4,
   "essais": 1
+ },
+ {
+  "id": "massif",
+  "categorie": "decor",
+  "url": "https://img.recraft.ai/EPYzaom6gEW1m6rpgY36avHvTK-x5slQa2Z9zvvcPvk/raw:1/plain/abs://prod/images/7cd88cfe-4a50-4b4b-b5c4-0b07070f7427",
+  "prompt": "massif",
+  "credits": 4,
+  "essais": 1
+ },
+ {
+  "id": "aeroport",
+  "categorie": "decor",
+  "url": "https://img.recraft.ai/XtoTr0FJrdWrBPvbEnUoZH-pWsqDENTxn7rvPVfjdew/raw:1/plain/abs://prod/images/ab78f9d0-944a-437a-819a-3e7c83ef2626",
+  "prompt": "aeroport",
+  "credits": 4,
+  "essais": 1
+ },
+ {
+  "id": "port",
+  "categorie": "decor",
+  "url": "https://img.recraft.ai/Q3MROgASITpGXEO1V4Idb0353PO4lp-Fe_7_glmh8GQ/raw:1/plain/abs://prod/images/7665188b-0f0b-457d-90fc-aedbc47bb859",
+  "prompt": "port",
+  "credits": 4,
+  "essais": 1
  }
 ]

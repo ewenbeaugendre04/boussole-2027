@@ -46,7 +46,7 @@ function buildBoard(){
     }
   });
   // grandes zones de couleur (bocage, forêts, plaines)
-  [[-0.9,44.3,7,'#3F9A3D'],[2.6,47.0,6,'#86D05A'],[5.5,48.3,5,'#4FA944'],[1.0,45.6,6,'#4FA944'],[3.8,49.3,6,'#A6DC63'],[-2.5,48.1,6,'#5CB84B'],[0.2,47.6,5,'#8BD45C'],[4.6,46.4,5,'#5CB84B']].forEach(function(z){ var c = P(z[0], z[1]); h.push('<ellipse cx="' + F(c[0]) + '" cy="' + F(c[1]) + '" rx="' + z[2] + '" ry="' + F(z[2] * .55) + '" fill="' + z[3] + '" opacity=".5"/>'); });
+  [[-0.9,44.3,7,'var(--forest)'],[2.6,47.0,6,'var(--field-b)'],[5.5,48.3,5,'var(--hill)'],[1.0,45.6,6,'var(--hill)'],[3.8,49.3,6,'var(--field-b)'],[-2.5,48.1,6,'var(--land-2)'],[0.2,47.6,5,'var(--field-b)'],[4.6,46.4,5,'var(--land-2)']].forEach(function(z){ var c = P(z[0], z[1]); h.push('<ellipse cx="' + F(c[0]) + '" cy="' + F(c[1]) + '" rx="' + z[2] + '" ry="' + F(z[2] * .55) + '" fill="' + z[3] + '" opacity=".5"/>'); });
   // rivières
   var rivers = [
     [[4.4,48.3],[3.4,48.5],[2.7,48.6],[2.35,48.85],[1.9,49.0],[1.2,49.3],[0.3,49.45]],

@@ -63,6 +63,10 @@
 - Bug corrigé : les convois `move` avec `count` > 3 (tracteurs Mercosur) formaient une longue file poussée vers la côte ; désormais rangées de 3 (`spawnFx`, `placement.js`).
 - À vérifier : petits montants « estimation du jeu » des nouveaux choix ; textes `real` à relire par Ewen.
 
+## 22/11
+- Montagnes réalistes (sprite `massif`), 3 aéroports et 3 petits ports ; mode nuit : zones de couleur et plages adaptées, panneaux sombres.
+- Guide de départ (5 écrans, mascotte « Cap » = boussole, neutralité, données locales) + pages Conditions, Confidentialité, Publicité (pas de pub politique ni ciblée sur les réponses), À propos (`src/engine/guide.js`). À compléter avant les stores : éditeur, contact, hébergeur.
+
 ## Prochaines étapes
 1. FAIT (21/11) : 51 SVG dans `assets/library/svg/` (9,5 Mo, ~190 Ko chacun, avec métadonnées C2PA de provenance IA à conserver). Trop lourds pour le jeu : produire des sprites WebP (~256 px) via Playwright pour le build.
 2. Retoucher les couleurs dans les SVG : TGV, vache, toit haussmannien (trop bleus), fumée de l'incendie en gris, crue en marron. Régénérer : cyclone, nuage_neige, fourviere, arc_triomphe.
