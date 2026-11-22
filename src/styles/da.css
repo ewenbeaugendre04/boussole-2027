@@ -106,3 +106,9 @@ body{font-weight:600}
 [data-theme="dark"],.is-night{--sand:#7E7458}
 .oops{position:fixed;left:12px;right:12px;bottom:18px;z-index:99999;background:var(--paper);color:var(--ink);border-radius:16px;padding:12px 14px;box-shadow:0 4px 0 var(--tranche),0 10px 30px rgba(0,0,0,.25);display:grid;gap:4px;font:600 13px/1.4 var(--f-body)}.oops button{justify-self:start;margin-top:4px;border:0;border-radius:12px;padding:8px 14px;background:var(--brass);color:#fff;font:900 13px var(--f-body)}
 .g-scene{cursor:pointer}.g-hint{text-align:center;font-size:11.5px!important;color:var(--ink-3)!important;margin:0 0 4px!important}
+.birds{position:absolute;left:0;top:0;pointer-events:none;opacity:0;z-index:5;animation:birdFly 40s linear infinite}
+.birds svg{width:100%;display:block}.birds .wing{transform-origin:center;animation:flap .5s ease-in-out infinite alternate}
+@keyframes birdFly{0%{transform:translate(var(--x0),var(--y0));opacity:0}3%{opacity:.75}30%{opacity:.75}33%{transform:translate(var(--x1),var(--y1));opacity:0}100%{transform:translate(var(--x1),var(--y1));opacity:0}}
+@keyframes flap{to{transform:scaleY(.45)}}
+@media (prefers-reduced-motion:reduce){.birds{display:none}}
+body.cinema .birds{opacity:0!important}

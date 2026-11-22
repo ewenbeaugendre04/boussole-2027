@@ -1066,8 +1066,8 @@
  {
   "id": "mascotte",
   "categorie": "interface",
-  "url": "https://img.recraft.ai/JHX7uBWffiZcBIN9rXFswaK_BuEq1YaTXtTLq-uED1A/raw:1/plain/abs://prod/images/06223b49-da96-4c71-bdb5-d744efd68ea4",
-  "prompt": "mascotte Cap (chouette 2D, boussole)",
+  "url": "https://img.recraft.ai/rFsuwTKa6K9sV2RoGIKy0jHO6xNYtxxPjHC1EAKN7Og/raw:1/plain/abs://prod/images/b2b827d2-d65e-4500-88bb-70bb8a2e81c3",
+  "prompt": "mascotte renard (remplace la chouette)",
   "credits": 4,
   "essais": 1
  },
@@ -1117,6 +1117,38 @@
   "url": "variante couleur de pic_neige",
   "prompt": "pic_brun",
   "credits": 0,
+  "essais": 1
+ },
+ {
+  "id": "dune",
+  "categorie": "decor",
+  "url": "https://img.recraft.ai/iWeVpNMdKPn-O0KJbTl-OueQ8L50r_2gXLkjm8qXevM/raw:1/plain/abs://prod/images/9e5f6dfb-8958-448d-8dc2-811ad92d7559",
+  "prompt": "dune",
+  "credits": 4,
+  "essais": 1
+ },
+ {
+  "id": "pin",
+  "categorie": "decor",
+  "url": "https://img.recraft.ai/eXNR5VniqypwQxAwLeuZLPya48ulMRlJn0xqabsdEuQ/raw:1/plain/abs://prod/images/efdcfbec-0a23-48b1-ae3f-66eb742b6a0e",
+  "prompt": "pin",
+  "credits": 4,
+  "essais": 1
+ },
+ {
+  "id": "usine_aero",
+  "categorie": "decor",
+  "url": "https://img.recraft.ai/ZKLDkBZFCcbNNXdOsPDldWFB9jUDoi6koPpXGIVR47E/raw:1/plain/abs://prod/images/cfaafc9c-cc79-45fa-9946-6be7e9028f10",
+  "prompt": "usine_aero",
+  "credits": 4,
+  "essais": 1
+ },
+ {
+  "id": "chantier_naval",
+  "categorie": "decor",
+  "url": "https://img.recraft.ai/k_tVx7UzLM6QZqhaHU3XDqEl4cZxAxarifYyX1KfLRo/raw:1/plain/abs://prod/images/a468831c-1d44-4b75-a1a3-bbd626a55744",
+  "prompt": "chantier_naval",
+  "credits": 4,
   "essais": 1
  }
 ]
