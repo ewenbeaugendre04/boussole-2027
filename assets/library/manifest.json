@@ -1086,5 +1086,37 @@
   "prompt": "pic_neige",
   "credits": 4,
   "essais": 1
+ },
+ {
+  "id": "arbre_automne",
+  "categorie": "decor",
+  "url": "https://img.recraft.ai/mSkT93Kmp6dqz7ySaJxtONy8tuqv6wWQawhfhWgkr7M/raw:1/plain/abs://prod/images/fa2eb2c5-4e24-4c61-a9a5-c062374105ad",
+  "prompt": "arbre_automne",
+  "credits": 4,
+  "essais": 1
+ },
+ {
+  "id": "arbre_jaune",
+  "categorie": "decor",
+  "url": "variante couleur de arbre_automne",
+  "prompt": "arbre_jaune",
+  "credits": 0,
+  "essais": 1
+ },
+ {
+  "id": "massif_brun",
+  "categorie": "decor",
+  "url": "variante couleur de massif",
+  "prompt": "massif_brun",
+  "credits": 0,
+  "essais": 1
+ },
+ {
+  "id": "pic_brun",
+  "categorie": "decor",
+  "url": "variante couleur de pic_neige",
+  "prompt": "pic_brun",
+  "credits": 0,
+  "essais": 1
  }
 ]
