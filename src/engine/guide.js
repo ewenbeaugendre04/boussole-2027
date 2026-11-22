@@ -1,12 +1,12 @@
 'use strict';
 /* =========================================================
-   Guide de départ (présenté par « Cap », la boussole — pas de personnage humain)
+   Guide de départ (présenté par « Cap », une chouette mascotte (pas de personnage humain))
    + pages légales : conditions d'utilisation, confidentialité, publicité, mentions.
    Affiché une fois au premier lancement, puis accessible depuis le menu.
    ========================================================= */
 var GUIDE_KEY = 'boussole27_guide_vu';
 var GUIDE = [
-  ['Bonjour, je suis Cap.', 'Vous êtes aux commandes du pays jusqu\'aux prochaines élections. Chaque semaine, des situations inspirées de faits réels arrivent sur la carte : à vous de décider.'],
+  ['Bonjour, je suis Cap !', 'Vous êtes aux commandes du pays jusqu\'aux prochaines élections. Chaque semaine, des situations inspirées de faits réels arrivent sur la carte : à vous de décider.'],
   ['Vos décisions ont des effets', 'Budget, dette, emploi, pouvoir d\'achat, climat… Chaque choix fait bouger les jauges. Les vrais résultats arrivent parfois quelques semaines plus tard, comme dans la réalité.'],
   ['Découvrir vos orientations', 'Au fil des semaines, « Mon orientation » montre vos tendances, secteur par secteur. Le but : mieux comprendre les enjeux et vos propres priorités, pas vous dire pour qui voter.'],
   ['Une application neutre', 'Aucun parti, aucune couleur politique dans le jeu. Les propositions viennent de tout l\'éventail politique et chaque chiffre est sourcé. Le dossier des candidats est indicatif.'],
@@ -17,8 +17,8 @@ function openGuide(after){
   var i = 0;
   function draw(){
     var g = GUIDE[i], last = i === GUIDE.length - 1;
-    var html = '<div class="guide"><img class="g-cap" src="' + SPR_DIR + 'logo.webp" alt="">' +
-      '<h2 class="ctitle">' + esc(g[0]) + '</h2><p>' + esc(g[1]) + '</p>' +
+    var html = '<div class="guide"><div class="g-scene"><img class="g-cap" src="' + SPR_DIR + 'mascotte.webp" alt="Cap, la mascotte">' +
+      '<div class="g-bulle"><b>' + esc(g[0]) + '</b><p>' + esc(g[1]) + '</p></div></div>' +
       '<div class="g-dots">' + GUIDE.map(function(_, k){ return '<i' + (k === i ? ' class="on"' : '') + '></i>'; }).join('') + '</div>' +
       '<div class="g-btns">' + (i ? '<button class="btn pressable" id="gPrev">Retour</button>' : '<button class="btn pressable" id="gSkip">Passer</button>') +
       '<button class="btn brass pressable" id="gNext">' + (last ? 'C\'est parti' : 'Suivant') + '</button></div>' +

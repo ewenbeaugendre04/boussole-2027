@@ -1062,5 +1062,13 @@
   "prompt": "port",
   "credits": 4,
   "essais": 1
+ },
+ {
+  "id": "mascotte",
+  "categorie": "interface",
+  "url": "https://img.recraft.ai/JHX7uBWffiZcBIN9rXFswaK_BuEq1YaTXtTLq-uED1A/raw:1/plain/abs://prod/images/06223b49-da96-4c71-bdb5-d744efd68ea4",
+  "prompt": "mascotte Cap (chouette 2D, boussole)",
+  "credits": 4,
+  "essais": 1
  }
 ]

@@ -25,3 +25,26 @@ Les fichiers JavaScript sont des scripts classiques chargés dans l'ordre de `sr
 
 ## Neutralité
 Aucun nom de candidat ni de parti dans le contenu, aucune couleur de parti, plus et moins de même poids pour chaque choix, chiffres réels sourcés et signalés comme ordres de grandeur.
+
+## Architecture (pour la future appli)
+
+```
+src/
+  index.html            coquille : styles, balisage, scripts dans l'ordre
+  engine/garde.js       garde-fou d'erreurs (chargé en premier)
+  data/                 contenu pur (JSON) : game_data.js, candidats.js — aucun code
+  engine/               logique : core (état, budget), camera, flow (déroulé), modal (cartes),
+                        reforms, orientation, budget, candidats, guide (tuto + pages légales), loop
+  art/                  rendu : board (plateau SVG), layers (cuisson du décor), placement (terre/mer),
+                        objects (anciens dessins), sprites (bibliothèque Recraft → carte)
+  styles/               base (thèmes), plateau, sheets, da (direction artistique, chargée en dernier)
+assets/
+  library/              sources Recraft : svg/ (originaux C2PA), svg_final/ (couleurs retouchées), manifest.json, recolor.json
+  sprites/ icons/ fonts/  fichiers servis par le jeu (générés par scripts/sprites.py)
+scripts/                build.py (dist/), sprites.py, gen_candidats.js
+tests/                  check_data.js (contenu), smoke.py (Playwright, 2 tailles d'écran)
+```
+
+Principes : contenu séparé du code ; tout est local (aucun appel réseau, sauvegarde dans le stockage du navigateur) ;
+chaque modification passe `node tests/check_data.js && python3 scripts/build.py && python3 tests/smoke.py`, rejoués par la CI.
+Pour l'App Store / Play Store : emballer `dist/` avec Capacitor (aucun serveur nécessaire).

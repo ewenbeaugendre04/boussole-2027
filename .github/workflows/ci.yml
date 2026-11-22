@@ -9,6 +9,8 @@ jobs:
         with: { node-version: 20 }
       - uses: actions/setup-python@v5
         with: { python-version: '3.12' }
+      - name: Syntaxe JavaScript
+        run: for f in src/engine/*.js src/art/*.js src/data/*.js; do node --check "$f" || exit 1; done
       - name: Données du jeu
         run: node tests/check_data.js
       - name: Assemblage
