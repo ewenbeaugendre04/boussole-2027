@@ -1190,5 +1190,21 @@
   "prompt": "massif_pyrenees",
   "credits": 4,
   "essais": 1
+ },
+ {
+  "id": "massif_iso",
+  "categorie": "decor",
+  "url": "https://img.recraft.ai/MdOn9KSlheOIOS2wQZ3FZq3w0_Gu4YgqXH8ncNXtIfY/raw:1/plain/abs://prod/images/47a41aad-809c-4a80-8694-06d5892c7ba0",
+  "prompt": "massif_iso (vue iso du dessus, sans socle)",
+  "credits": 4,
+  "essais": 1
+ },
+ {
+  "id": "chaine_iso",
+  "categorie": "decor",
+  "url": "https://img.recraft.ai/Ve_dCaqtrfwvEwh1NrZZFEi0xY4ZXvS4JekDgF05qQ0/raw:1/plain/abs://prod/images/0ff83d1a-5078-41cd-82fd-6ef7d4b68d3c",
+  "prompt": "chaine_iso (vue iso du dessus, sans socle)",
+  "credits": 4,
+  "essais": 1
  }
 ]
