@@ -1150,5 +1150,21 @@
   "prompt": "chantier_naval",
   "credits": 4,
   "essais": 1
+ },
+ {
+  "id": "massif_pics",
+  "categorie": "decor",
+  "url": "https://img.recraft.ai/XQ1AXAOydWwiVDbP25_l_sZQFr3rM00CfQtYzwLSkXY/raw:1/plain/abs://prod/images/12825ef8-7bc2-4263-9358-10d8622dc3e1",
+  "prompt": "massif de 4 pics enneigés",
+  "credits": 4,
+  "essais": 1
+ },
+ {
+  "id": "pic_alpin",
+  "categorie": "decor",
+  "url": "https://img.recraft.ai/UzJJyBaHyUgLgLAD7zqu4WVLHWO8qIuX11iRWHYUj0A/raw:1/plain/abs://prod/images/26bbe7f0-6b1a-4fa1-ad0d-06339b33d91b",
+  "prompt": "grand pic alpin enneigé",
+  "credits": 4,
+  "essais": 1
  }
 ]

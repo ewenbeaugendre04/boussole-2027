@@ -7,6 +7,7 @@ from playwright.sync_api import sync_playwright
 ROOT = Path(__file__).resolve().parent.parent
 LIB, OUT = ROOT/'assets/library', ROOT/'assets/sprites'
 SIZE = 1024
+ALLWHITE = {'chantier_naval'}
 RULES = json.load(open(LIB/'recolor.json'))
 def recolor(svg, rules):
     def fix(m):
@@ -46,6 +47,11 @@ def main(ids):
                     px[x, y] = (0,0,0,0)
                     for nx, ny in ((x+1,y),(x-1,y),(x,y+1),(x,y-1)):
                         if 0 <= nx < w and 0 <= ny < h and (nx,ny) not in seen: seen.add((nx,ny)); q.append((nx,ny))
+            if i in ALLWHITE:  # blanc enfermé dans le dessin (ex. sous le portique) : on le retire aussi
+                for yy in range(h):
+                    for xx in range(w):
+                        r_, g_, b_, a_ = px[xx, yy]
+                        if a_ and r_ > 246 and g_ > 246 and b_ > 246: px[xx, yy] = (0, 0, 0, 0)
             im = im.crop(im.getbbox())
             im.save(OUT/f'{i}.webp', 'WEBP', quality=86, method=6)
         b.close()

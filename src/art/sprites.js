@@ -5,7 +5,7 @@
    énergie, fermes, ports. Positions en lon/lat ; vérif terre/mer.
    ========================================================= */
 var SPR_DIR = 'assets/sprites/';
-var SPR_AR = {"aeroport":0.926,"ambulance":0.71,"antenne":1.954,"arbre":1.5,"arbre_automne":1.322,"arbre_jaune":1.322,"arc_triomphe":1.246,"avion":0.646,"avion_militaire":0.676,"barrage":0.801,"barriere":0.629,"basilique_marseille":1.51,"bateau_migrants":0.8,"bateau_peche":0.88,"beffroi_lille":2.989,"billets":1.008,"ble":0.696,"boulangerie":1.087,"bourse_bordeaux":0.774,"bus":0.877,"caddie":1.044,"cadenas":1.292,"camion":0.882,"camion_citerne":0.868,"camping_car":0.836,"canadair":0.819,"cathedrale_strasbourg":2.068,"centrale_charbon":1.132,"centrale_gaz":1.341,"centrale_nucleaire":1.109,"chantier_epr":1.462,"chantier_naval":0.975,"char":0.814,"colis":1.117,"colline":1.201,"colza":0.611,"commissariat":0.974,"conteneurs":1.593,"creche":0.649,"cyberattaque":1.098,"cyclone":1.029,"drapeau":2.296,"drone":0.744,"dune":0.747,"eclair":2.102,"ecole":1.196,"ehpad":0.926,"entrepot":0.759,"eolien_mer":2.294,"eolienne":2.349,"facture":1.92,"ferme":0.899,"ferry":0.941,"feu":0.946,"foule":1.007,"fourviere":1.018,"fregate":0.705,"gare":0.81,"goutte":1.399,"grue_chantier":1.04,"grue_portuaire":1.196,"haussmann":1.848,"hemicycle":1.036,"hopital":1.401,"immeuble":1.587,"lac":0.781,"logo":0.795,"loupe":1.352,"mairie":0.962,"maison_bretonne":1.278,"maison_isolation":1.101,"maison_pierre":1.143,"manifestation":0.867,"maree_noire":0.704,"mascotte":1.22,"massif":0.73,"massif_brun":0.73,"metro":0.863,"mine":0.941,"moissonneuse":0.781,"mont_saint_michel":1.465,"montagne":1.357,"montagnes":1.13,"montagnes_douces":0.946,"nuage_neige":1.477,"nuage_orage":1.181,"panneau":1.593,"parasols":0.899,"pavillon":1.014,"peniche":0.808,"personnage":3.169,"petit_immeuble":1.515,"phare":1.403,"pharmacie":1.0,"pic_brun":1.028,"pic_neige":1.028,"pieces":0.76,"pin":1.857,"piscine":0.632,"pluie":1.299,"pompiers":0.924,"port":1.0,"porte_conteneurs":0.783,"poste_frontiere":1.096,"prison":0.989,"puits_petrole":1.111,"pylone_ht":2.166,"sapins":1.051,"satellite":0.925,"segment_rails":1.136,"serre":0.891,"smog":0.874,"soignants":1.596,"solaire":0.668,"soldats":1.059,"soleil_canicule":0.69,"stade":0.891,"station_service":0.953,"supermarche":0.921,"tente_camping":0.848,"terminal_gnl":0.848,"tgv":1.169,"tgv_seul":1.384,"thermometre":2.905,"tour_bureaux":1.728,"tour_eiffel":1.883,"tracteur":0.869,"train_fret":1.447,"tram":0.87,"tribunal":1.022,"universite":1.057,"urne":1.237,"usine":0.965,"usine_aero":0.891,"usine_fermee":1.1,"vache":0.866,"vague_crue":0.845,"valise":1.59,"velo":0.924,"velodrome":0.747,"vignes":0.689,"voilier":1.237,"voiture":0.858,"voiture_police":0.772};
+var SPR_AR = {"aeroport":0.926,"ambulance":0.71,"antenne":1.954,"arbre":1.5,"arbre_automne":1.322,"arbre_jaune":1.322,"arc_triomphe":1.246,"avion":0.646,"avion_militaire":0.676,"barrage":0.801,"barriere":0.629,"basilique_marseille":1.51,"bateau_migrants":0.8,"bateau_peche":0.88,"beffroi_lille":2.989,"billets":1.008,"ble":0.696,"boulangerie":1.087,"bourse_bordeaux":0.774,"bus":0.877,"caddie":1.044,"cadenas":1.292,"camion":0.882,"camion_citerne":0.868,"camping_car":0.836,"canadair":0.819,"cathedrale_strasbourg":2.068,"centrale_charbon":1.132,"centrale_gaz":1.341,"centrale_nucleaire":1.109,"chantier_epr":1.462,"chantier_naval":0.975,"char":0.814,"colis":1.117,"colline":1.201,"colza":0.611,"commissariat":0.974,"conteneurs":1.593,"creche":0.649,"cyberattaque":1.098,"cyclone":1.029,"drapeau":2.296,"drone":0.744,"dune":0.747,"eclair":2.102,"ecole":1.196,"ehpad":0.926,"entrepot":0.759,"eolien_mer":2.294,"eolienne":2.349,"facture":1.92,"ferme":0.899,"ferry":0.941,"feu":0.946,"foule":1.007,"fourviere":1.018,"fregate":0.705,"gare":0.81,"goutte":1.399,"grue_chantier":1.04,"grue_portuaire":1.196,"haussmann":1.848,"hemicycle":1.036,"hopital":1.401,"immeuble":1.587,"lac":0.781,"logo":0.795,"loupe":1.352,"mairie":0.962,"maison_bretonne":1.278,"maison_isolation":1.101,"maison_pierre":1.143,"manifestation":0.867,"maree_noire":0.704,"mascotte":1.22,"massif":0.73,"massif_brun":0.73,"massif_pics":1.127,"metro":0.863,"mine":0.941,"moissonneuse":0.781,"mont_saint_michel":1.465,"montagne":1.357,"montagnes":1.13,"montagnes_douces":0.946,"nuage_neige":1.477,"nuage_orage":1.181,"panneau":1.593,"parasols":0.899,"pavillon":1.014,"peniche":0.808,"personnage":3.169,"petit_immeuble":1.515,"phare":1.403,"pharmacie":1.0,"pic_alpin":0.865,"pic_brun":1.028,"pic_neige":1.028,"pieces":0.76,"pin":1.857,"piscine":0.632,"pluie":1.299,"pompiers":0.924,"port":1.0,"porte_conteneurs":0.783,"poste_frontiere":1.096,"prison":0.989,"puits_petrole":1.111,"pylone_ht":2.166,"sapins":1.051,"satellite":0.925,"segment_rails":1.136,"serre":0.891,"smog":0.874,"soignants":1.596,"solaire":0.668,"soldats":1.059,"soleil_canicule":0.69,"stade":0.891,"station_service":0.953,"supermarche":0.921,"tente_camping":0.848,"terminal_gnl":0.848,"tgv":1.169,"tgv_seul":1.384,"thermometre":2.905,"tour_bureaux":1.728,"tour_eiffel":1.883,"tracteur":0.869,"train_fret":1.447,"tram":0.87,"tribunal":1.022,"universite":1.057,"urne":1.237,"usine":0.965,"usine_aero":0.891,"usine_fermee":1.1,"vache":0.866,"vague_crue":0.845,"valise":1.59,"velo":0.924,"velodrome":0.747,"vignes":0.689,"voilier":1.237,"voiture":0.858,"voiture_police":0.772};
 /* objets d'événement (OBJ) dessinés par un sprite de la bibliothèque */
 var OBJ_SPR = { tracteur:'tracteur', camion:'camion', voiture:'voiture', train:'gare', tgv:'gare', avion:'avion', cargo:'porte_conteneurs', bateau_peche:'bateau_peche',
   eolienne:'eolienne', eolienne_mer:'eolien_mer', centrale_nucleaire:'centrale_nucleaire', centrale_gaz:'centrale_gaz', panneaux_solaires:'solaire', barrage:'barrage', pylone:'pylone_ht',
@@ -18,7 +18,7 @@ var SPR_W = { tracteur:1.7, camion:2.2, voiture:1.5, train_fret:4, tgv_seul:5, a
   solaire:3, barrage:3.4, pylone_ht:2, pavillon:2, immeuble:2.2, usine:2.8, grue_chantier:2.6, ecole:2.6, hopital:2.8, mairie:2.6, hemicycle:3.2, grue_portuaire:2.6, ble:3.2, vache:1.5, arbre:1.5,
   feu:2.6, vague_crue:3, soleil_canicule:2.8, nuage_neige:2.8, nuage_orage:2.8, pieces:1.8, ambulance:1.7, pompiers:2, voiture_police:1.5, bus:2.4, manifestation:3, foule:2.6, char:2.2, fregate:4,
   bateau_migrants:2.4, maree_noire:4.4, centrale_charbon:3, phare:1.6, voilier:1.8, ferry:4, drapeau:1.4, panneau:1.6, loupe:1.6, cadenas:1.3, colis:1.3, usine_fermee:2.8, station_service:2.4, barriere:2.2, personnage:0.9, soignants:1.4, poste_frontiere:2.4, gare:3, urne:1.4, supermarche:2.8, entrepot:2.8, boulangerie:2, ferme:2.6, pharmacie:2, antenne:1.6, satellite:2, cyberattaque:2, conteneurs:2.6, thermometre:1.4, commissariat:2.6, prison:3, velo:1.2 };
-var SPR_MARINE = { eolien_mer:1, porte_conteneurs:1, bateau_peche:1, voilier:1, ferry:1, fregate:1, bateau_migrants:1, maree_noire:1 };
+var SPR_MARINE = { chantier_naval:2, eolien_mer:1, porte_conteneurs:1, bateau_peche:1, voilier:1, ferry:1, fregate:1, bateau_migrants:1, maree_noire:1 };
 function sprList(){
   var R = rng(1789), out = [];
   function put(id, lon, lat, w, flip){ out.push([id, lon, lat, w, flip ? 1 : 0]); }
@@ -53,32 +53,42 @@ function sprList(){
   put('ble', 1.6, 48.05, 4.2); put('ble', 3.5, 49.3, 3.8); put('ble', 0.6, 46.3, 3.4); put('vignes', -0.25, 44.98, 3.4); put('vignes', 4.75, 47.05, 3.2); put('vignes', 4.0, 49.05, 3.2);
   put('vache', -0.7, 49.0, 1.8); put('vache', 2.75, 45.35, 1.8); put('tracteur', 1.3, 48.3, 1.7); put('serre', -1.4, 47.0, 2.2); put('usine', 6.05, 48.05, 2.8); put('usine', 3.2, 50.4, 2.6);
   // relief et littoral (sprites Recraft)
-  // montagnes : de vraies chaînes le long d'un axe, plus hautes au centre, espacées régulièrement
-  function chaine(a, b, n, wMax, kinds){
-    for(var i = 0; i < n; i++){
-      var t = n > 1 ? i / (n - 1) : .5, h = .55 + .45 * Math.sin(Math.PI * t); /* crête au milieu */
-      put(kinds[i % kinds.length], a[0] + (b[0] - a[0]) * t + (R() - .5) * .12, a[1] + (b[1] - a[1]) * t + (R() - .5) * .1, wMax * h, i % 2);
+  // montagnes : une seule famille de modèles, tailles fixes ; Alpes et Pyrénées collées à la frontière, serrées en massifs
+  var MW = { pic_alpin:3.4, massif_pics:3.4, massif:3.2, pic_neige:2.6, massif_brun:3.2, pic_brun:2.6, montagnes_douces:2.8, colline:2.2 };
+  function frontiere(pts, step, front, back, off){
+    for(var i = 0; i < pts.length - 1; i++){
+      var a = pts[i], b = pts[i + 1], d = Math.hypot(b[0] - a[0], b[1] - a[1]), n = Math.max(1, Math.round(d / step));
+      for(var j = 0; j < n; j++){
+        var t = j / n, x = a[0] + (b[0] - a[0]) * t, y = a[1] + (b[1] - a[1]) * t, k = front[(i * 3 + j) % front.length];
+        put(k, x + (R() - .5) * .06, y + (R() - .5) * .05, MW[k], R() < .5);
+        if(back){ var kb = back[(i + j) % back.length]; put(kb, x + off[0] + (R() - .5) * .1, y + off[1] + (R() - .5) * .08, MW[kb], R() < .5); }
+      }
     }
   }
-  chaine([6.0, 46.2], [7.2, 44.0], 9, 4.6, ['massif', 'pic_neige', 'massif', 'massif_brun']); /* Alpes : hautes, enneigées */
-  chaine([5.8, 45.4], [6.3, 44.4], 3, 3, ['massif_brun', 'montagnes_douces']); /* Préalpes */
-  chaine([-1.4, 43.1], [2.9, 42.5], 9, 3.4, ['montagnes_douces', 'massif_brun', 'montagnes_douces', 'pic_brun']); /* Pyrénées : moins hautes */
-  chaine([8.95, 42.55], [9.25, 41.8], 3, 2.8, ['massif_brun', 'montagnes_douces']); /* Corse */
-  chaine([2.6, 45.9], [3.4, 44.6], 4, 2.4, ['colline', 'montagnes_douces']); /* Massif central : relief arrondi */
-  chaine([6.85, 48.5], [7.1, 47.8], 3, 2.2, ['montagnes_douces', 'colline']); /* Vosges */
-  chaine([5.7, 46.2], [6.5, 47.2], 3, 2.2, ['colline', 'montagnes_douces']); /* Jura */
+  /* Alpes : du Mont-Blanc à la Méditerranée ; les plus hauts (enneigés) au nord, une rangée plus basse côté France */
+  frontiere([[6.85,46.25],[6.95,45.85],[7.05,45.5],[6.95,45.15],[6.85,44.8],[6.95,44.45],[7.35,44.12]], .2, ['pic_alpin', 'massif_pics', 'massif', 'pic_alpin', 'massif'], ['massif_brun', 'pic_neige', 'montagnes_douces'], [-.32, .02]);
+  /* Pyrénées : moins hautes, peu de neige */
+  frontiere([[-1.55,43.2],[-1.0,43.02],[-0.3,42.86],[0.4,42.74],[1.1,42.66],[1.8,42.56],[2.5,42.46],[3.0,42.48]], .22, ['massif_brun', 'pic_brun', 'massif', 'montagnes_douces', 'massif_brun'], ['montagnes_douces', 'colline'], [0, .14]);
+  frontiere([[9.0,42.55],[9.2,41.85]], .2, ['massif_brun', 'montagnes_douces'], null); /* Corse */
+  /* Massif central : chaîne des Puys (collines alignées) et reliefs arrondis */
+  frontiere([[2.9,45.95],[2.95,45.6]], .1, ['colline'], null);
+  [[2.75,45.15],[3.25,44.75],[3.7,44.4]].forEach(function(c){ put('montagnes_douces', c[0], c[1], MW.montagnes_douces, R() < .5); put('colline', c[0] + .25, c[1] - .1, MW.colline, R() < .5); });
+  /* Vosges, Jura : reliefs doux */
+  frontiere([[7.0,48.55],[6.9,47.9]], .2, ['montagnes_douces', 'colline'], null); frontiere([[5.75,46.2],[6.45,47.1]], .22, ['colline', 'montagnes_douces'], null);
   [[2.8,45.4],[3.0,44.9],[3.6,44.5],[2.5,45.8],[7.0,48.1],[5.9,46.6]].forEach(function(c){ put('colline', c[0], c[1], 2.2); });
   [[-4.78,48.42],[-1.9,49.65],[1.6,50.7],[-1.45,43.5],[-2.2,47.28]].forEach(function(l){ put('phare', l[0], l[1], 1.4); });
   put('parasols', 3.5, 43.45, 2.4); put('parasols', -1.3, 44.6, 2.2); put('parasols', 6.9, 43.55, 2.2); put('voilier', -2.6, 46.5, 1.8); put('voilier', 5.6, 42.9, 1.8); put('voilier', -1.9, 49.95, 1.8);
   put('gare', 2.45, 48.95, 2.2); put('stade', 2.3, 48.7, 2.6); put('universite', 4.95, 45.68, 2.2); put('hopital', 1.5, 43.55, 2.4); put('ferme', 0.2, 46.9, 2.4); put('ferme', 3.9, 48.1, 2.3); put('colza', 0.9, 48.65, 3); put('colza', 4.6, 49.55, 3);
   // quelques aéroports et ports (petits)
   put('aeroport', 2.55, 49.0, 3.8); put('aeroport', 1.37, 43.63, 3.4); put('aeroport', -1.61, 47.15, 3.2); put('aeroport', 5.22, 43.44, 3.2); /* Roissy, Toulouse, Nantes, Marseille */
-  put('port', 0.15, 49.47, 3.6); put('port', -1.48, 43.5, 3.2); put('port', 3.7, 43.4, 3.2); put('port', 2.35, 51.03, 3.4);
-  put('usine_aero', 1.3, 43.66, 3.4); put('chantier_naval', -2.2, 47.28, 3.6); /* grands sites : aéronautique (Toulouse), chantiers navals (Saint-Nazaire) */
-  put('dune', -1.25, 44.58, 3.6); put('dune', -1.3, 44.2, 3); /* dune du Pilat, côte landaise */
+  put('port', 0.15, 49.47, 3.6); put('porte_conteneurs', 0.0, 49.55, 3.6); put('grue_portuaire', 0.3, 49.45, 2.6); put('port', -1.48, 43.5, 3.2); put('port', 3.7, 43.4, 3.2); put('port', 2.35, 51.03, 3.4);
+  put('usine_aero', 1.3, 43.66, 3.4); put('chantier_naval', -2.22, 47.27, 4.4); /* grands sites : aéronautique (Toulouse), chantiers navals (Saint-Nazaire) */
+  put('dune', -1.13, 44.5, 3.4); put('dune', -1.2, 44.15, 3); /* dune du Pilat, côte landaise */
   for(var pi = 0; pi < 22; pi++) put('pin', -1.15 + R() * .75, 43.8 + R() * 1.05, 1.5 + R() * .4, R() < .5); /* pins des Landes */
   // forêts (Landes, Sologne, Vosges, Ardennes, Morvan, Bretagne, Massif central, Jura)
   [[2.0,47.55,5,.4],[7.0,48.4,5,.35],[4.75,49.85,4,.3],[4.05,47.15,4,.3],[-3.3,48.15,4,.35],[2.6,45.0,4,.4],[6.0,46.6,3,.3],[1.4,45.1,4,.4],[5.75,44.2,3,.3],[9.15,42.0,3,.25],[0.6,48.6,3,.3],[3.0,48.4,3,.3]].forEach(function(f){ cluster(f[0], f[1], Math.round(f[2] * 1.8), f[3] * 1.1, f[1] > 47.5 || f[0] > 5.5 ? ['arbre', 'sapins', 'arbre_automne', 'arbre', 'sapins', 'arbre_jaune'] : ['arbre', 'arbre_automne', 'arbre', 'arbre_jaune', 'sapins'], 1.4); });
+  // sapins à l'est (Alsace, Lorraine, Vosges, Jura, Ardennes)
+  [[7.1,48.3],[6.9,48.6],[6.6,48.0],[7.3,47.9],[6.2,46.9],[5.9,46.4],[4.7,49.8],[6.8,49.0]].forEach(function(f){ cluster(f[0], f[1], 6, .22, ['sapins', 'sapins', 'arbre'], 1.4); });
   // plus de champs et de vignes
   put('ble', 2.5, 48.35, 3.4); put('ble', 1.0, 49.2, 3.2); put('ble', 4.3, 48.5, 3.2); put('ble', -0.3, 46.6, 3); put('ble', 1.6, 43.85, 3); put('ble', 2.9, 49.75, 3);
   put('vignes', -0.6, 45.25, 3); put('vignes', 4.85, 44.5, 3); put('vignes', 3.2, 43.35, 3.2); put('vignes', 7.3, 48.15, 2.6); put('vignes', 0.4, 47.3, 2.6);
@@ -90,17 +100,19 @@ function sprItems(){
   var items = [];
   sprList().forEach(function(s){
     var p = P(s[1], s[2]), t = terrainU(p[0], p[1]), marine = !!SPR_MARINE[s[0]];
-    if(MASK && (marine ? t !== 0 : t !== 1)) return;
-    items.push({ id:s[0], x:p[0], y:p[1], w:s[3], h:s[3] * (SPR_AR[s[0]] || 1), f:s[4] });
+    if(MASK && SPR_MARINE[s[0]] !== 2 && (marine ? t !== 0 : t !== 1)) return;
+    items.push({ id:s[0], x0:s[1], y0:s[2], x:p[0], y:p[1], w:s[3], h:s[3] * (SPR_AR[s[0]] || 1), f:s[4] });
   });
   /* pas de superposition : les éléments placés d'abord (monuments, villes, relief) gardent leur place */
-  var PRIO = { massif:0, pic_neige:0, massif_brun:0, pic_brun:0, montagnes_douces:0, colline:0, tour_eiffel:0, arc_triomphe:0, fourviere:0, basilique_marseille:0, cathedrale_strasbourg:0, beffroi_lille:0, bourse_bordeaux:0, mont_saint_michel:0, aeroport:0, port:0, usine_aero:0, chantier_naval:0, dune:0 };
+  var PRIO = { pic_alpin:0, massif_pics:0, massif:0, pic_neige:0, massif_brun:0, pic_brun:0, montagnes_douces:0, colline:0, tour_eiffel:0, arc_triomphe:0, fourviere:0, basilique_marseille:0, cathedrale_strasbourg:0, beffroi_lille:0, bourse_bordeaux:0, mont_saint_michel:0, aeroport:0, port:0, usine_aero:0, chantier_naval:0, dune:0 };
   items = items.map(function(it, k){ it.k = k; return it; }).sort(function(a, b){ return ((PRIO[a.id] === 0 ? 0 : 1) - (PRIO[b.id] === 0 ? 0 : 1)) || a.k - b.k; });
   var kept = [];
   items.forEach(function(it){
     var bx = [it.x - it.w * .42, it.y - it.h * .55, it.x + it.w * .42, it.y + it.h * .08];
+    if(!SPR_MARINE[it.id] && ((it.x0 > -1.3 && it.x0 < -0.95 && it.y0 > 44.55 && it.y0 < 44.78) || (it.x0 > -1.05 && it.x0 < -0.55 && it.y0 > 45.05 && it.y0 < 45.65))) return;
     if(MASK && !SPR_MARINE[it.id] && (terrainU(bx[0], it.y) === 0 || terrainU(bx[2], it.y) === 0)) return; /* pieds dans l'eau : non */
-    var clash = kept.some(function(k){ var ix = Math.min(bx[2], k.b[2]) - Math.max(bx[0], k.b[0]), iy = Math.min(bx[3], k.b[3]) - Math.max(bx[1], k.b[1]);
+    var MTN = PRIO[it.id] === 0 && /massif|pic|montagne|colline/.test(it.id);
+    var clash = kept.some(function(k){ if(MTN && /massif|pic|montagne|colline/.test(k.id)) return false; var ix = Math.min(bx[2], k.b[2]) - Math.max(bx[0], k.b[0]), iy = Math.min(bx[3], k.b[3]) - Math.max(bx[1], k.b[1]);
       return ix > 0 && iy > 0 && ix * iy > .35 * Math.min((bx[2] - bx[0]) * (bx[3] - bx[1]), (k.b[2] - k.b[0]) * (k.b[3] - k.b[1])); });
     if(!clash){ it.b = bx; kept.push(it); }
   });
