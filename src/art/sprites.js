@@ -54,6 +54,11 @@ function sprList(){
   put('vache', -0.7, 49.0, 1.8); put('vache', 2.75, 45.35, 1.8); put('tracteur', 1.3, 48.3, 1.7); put('serre', -1.4, 47.0, 2.2); put('usine', 6.05, 48.05, 2.8); put('usine', 3.2, 50.4, 2.6);
   // relief et littoral (sprites Recraft)
   // montagnes : massifs en vue isométrique du dessus, sans socle ; chacun placé une fois
+  /* Massif central, Jura, Vosges : quelques montagnes basses sans neige, tailles variées */
+  put('mt_basse', 2.85, 45.65, 3.6); put('mt_basse', 2.65, 45.2, 3, 1); put('mt_basse', 3.2, 44.85, 3.3); put('mt_basse', 3.65, 44.45, 2.7, 1);
+  put('mt_basse', 5.95, 46.45, 2.8); put('mt_basse', 6.35, 46.95, 2.4, 1); /* Jura */
+  put('mt_basse', 7.0, 48.35, 2.8, 1); put('mt_basse', 6.9, 47.95, 2.4); /* Vosges */
+  put('lac', 6.17, 45.86, 1.9); put('lac', 6.42, 46.33, 3); /* lacs d'Annecy et Léman */
   put('chaine_alpes', 6.75, 44.0, 8); /* Alpes : chaîne nord-sud le long de la frontière */
   put('chaine_pyrenees', 0.75, 42.66, 30, 1); /* Pyrénées : une chaîne sur toute la frontière */
   [[-4.78,48.42],[-1.9,49.65],[1.6,50.7],[-1.45,43.5],[-2.2,47.28]].forEach(function(l){ put('phare', l[0], l[1], 1.4); });
@@ -64,7 +69,7 @@ function sprList(){
   put('port', 0.15, 49.47, 3.6); put('porte_conteneurs', 0.0, 49.55, 3.6); put('grue_portuaire', 0.3, 49.45, 2.6); put('port', -1.48, 43.5, 3.2); put('port', 3.7, 43.4, 3.2); put('port', 2.35, 51.03, 3.4);
   put('usine_aero', 1.3, 43.66, 3.4); put('chantier_naval', -2.22, 47.27, 4.4); /* grands sites : aéronautique (Toulouse), chantiers navals (Saint-Nazaire) */
   put('dune', -1.13, 44.5, 3.4); put('dune', -1.2, 44.15, 3); /* dune du Pilat, côte landaise */
-  for(var pi = 0; pi < 22; pi++) put('pin', -0.95 + R() * .6, 43.85 + R() * .95, 1.5 + R() * .4, R() < .5); /* pins des Landes */
+  for(var pi = 0; pi < 22; pi++) put('pin', -0.8 + R() * .5, 43.85 + R() * .8, 1.5 + R() * .4, R() < .5); /* pins des Landes */
   // forêts (Landes, Sologne, Vosges, Ardennes, Morvan, Bretagne, Massif central, Jura)
   [[2.0,47.55,5,.4],[7.0,48.4,5,.35],[4.75,49.85,4,.3],[4.05,47.15,4,.3],[-3.3,48.15,4,.35],[2.6,45.0,4,.4],[6.0,46.6,3,.3],[1.4,45.1,4,.4],[5.75,44.2,3,.3],[9.15,42.0,3,.25],[0.6,48.6,3,.3],[3.0,48.4,3,.3]].forEach(function(f){ cluster(f[0], f[1], Math.round(f[2] * 1.8), f[3] * 1.1, f[1] > 47.5 || f[0] > 5.5 ? ['arbre', 'sapins', 'arbre_automne', 'arbre', 'sapins', 'arbre_jaune'] : ['arbre', 'arbre_automne', 'arbre', 'arbre_jaune', 'sapins'], 1.4); });
   // sapins à l'est (Alsace, Lorraine, Vosges, Jura, Ardennes)
@@ -80,11 +85,11 @@ function sprItems(){
   var items = [];
   sprList().forEach(function(s){
     var p = P(s[1], s[2]), t = terrainU(p[0], p[1]), marine = !!SPR_MARINE[s[0]];
-    if(MASK && SPR_MARINE[s[0]] !== 2 && !/^chaine/.test(s[0]) && (marine ? t !== 0 : t !== 1)) return;
+    if(MASK && SPR_MARINE[s[0]] !== 2 && !/^(chaine|lac)/.test(s[0]) && (marine ? t !== 0 : t !== 1)) return;
     items.push({ id:s[0], x0:s[1], y0:s[2], x:p[0], y:p[1], w:s[3], h:s[3] * (SPR_AR[s[0]] || 1) * (s[5] || 1), f:s[4], sy:s[5] || 1 });
   });
   /* pas de superposition : les éléments placés d'abord (monuments, villes, relief) gardent leur place */
-  var PRIO = { chaine_alpes:0, chaine_pyrenees:0, mt_haute:0, mt_basse:0, arete:0, pic_sapins:0, massif_iso:0, chaine_iso:0, massif_alpes_nord:0, massif_alpes_sud:0, massif_pyrenees:0, pic_alpin:0, massif_pics:0, massif:0, pic_neige:0, massif_brun:0, pic_brun:0, montagnes_douces:0, colline:0, tour_eiffel:0, arc_triomphe:0, fourviere:0, basilique_marseille:0, cathedrale_strasbourg:0, beffroi_lille:0, bourse_bordeaux:0, mont_saint_michel:0, aeroport:0, port:0, usine_aero:0, chantier_naval:0, dune:0 };
+  var PRIO = { lac:0, chaine_alpes:0, chaine_pyrenees:0, mt_haute:0, mt_basse:0, arete:0, pic_sapins:0, massif_iso:0, chaine_iso:0, massif_alpes_nord:0, massif_alpes_sud:0, massif_pyrenees:0, pic_alpin:0, massif_pics:0, massif:0, pic_neige:0, massif_brun:0, pic_brun:0, montagnes_douces:0, colline:0, tour_eiffel:0, arc_triomphe:0, fourviere:0, basilique_marseille:0, cathedrale_strasbourg:0, beffroi_lille:0, bourse_bordeaux:0, mont_saint_michel:0, aeroport:0, port:0, usine_aero:0, chantier_naval:0, dune:0 };
   items = items.map(function(it, k){ it.k = k; return it; }).sort(function(a, b){ return ((PRIO[a.id] === 0 ? 0 : 1) - (PRIO[b.id] === 0 ? 0 : 1)) || a.k - b.k; });
   var kept = [];
   items.forEach(function(it){
