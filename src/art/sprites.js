@@ -21,7 +21,7 @@ var SPR_W = { tracteur:1.7, camion:2.2, voiture:1.5, train_fret:4, tgv_seul:5, a
 var SPR_MARINE = { chantier_naval:2, eolien_mer:1, porte_conteneurs:1, bateau_peche:1, voilier:1, ferry:1, fregate:1, bateau_migrants:1, maree_noire:1 };
 function sprList(){
   var R = rng(1789), out = [];
-  function put(id, lon, lat, w, flip, sy){ out.push([id, lon, lat, w, flip ? 1 : 0, sy || 1]); }
+  function put(id, lon, lat, w, flip, sy, rot){ out.push([id, lon, lat, w, flip ? 1 : 0, sy || 1, rot || 0]); }
   function cluster(lon, lat, n, sp, kinds, w){
     for(var i = 0; i < n; i++){ var k = kinds[Math.floor(R() * kinds.length)]; put(k, lon + (R() - .5) * 2 * sp * 1.3, lat + (R() - .5) * 2 * sp * .8, (w || 2) * (k === 'petit_immeuble' || k === 'haussmann' || k === 'immeuble' ? 1.08 : 1)); }
   }
@@ -65,7 +65,7 @@ function sprList(){
   put('montagnes_douces', 7.1, 48.65, 2.1); put('mt_basse', 6.75, 48.15, 2.1, 1); /* Vosges (suite) */
   put('lac', 6.17, 45.86, 1.9); /* lac d'Annecy */
   put('chaine_alpes', 6.75, 44.0, 8); /* Alpes : chaîne nord-sud le long de la frontière */
-  put('chaine_pyrenees', 0.7, 42.21, 38, 1); /* Pyrénées : une chaîne sur toute la frontière */
+  put('chaine_pyrenees', 0.7, 42.25, 38, 1, 1, 4); /* Pyrénées : une chaîne sur toute la frontière */
   [[-4.78,48.42],[-1.9,49.65],[1.6,50.7],[-1.45,43.5],[-2.2,47.28]].forEach(function(l){ put('phare', l[0], l[1], 1.4); });
   put('parasols', 3.5, 43.45, 2.4); put('parasols', -1.3, 44.6, 2.2); put('parasols', 6.9, 43.55, 2.2); put('voilier', -2.6, 46.5, 1.8); put('voilier', 5.6, 42.9, 1.8); put('voilier', -1.9, 49.95, 1.8);
   put('gare', 2.45, 48.95, 2.2); put('stade', 2.3, 48.7, 2.6); put('universite', 4.95, 45.68, 2.2); put('hopital', 1.5, 43.55, 2.4); put('ferme', 0.2, 46.9, 2.4); put('ferme', 3.9, 48.1, 2.3); put('colza', 0.9, 48.65, 3); put('colza', 4.6, 49.55, 3);
@@ -73,7 +73,7 @@ function sprList(){
   put('aeroport', 2.55, 49.0, 3.8); put('aeroport', 1.37, 43.63, 3.4); put('aeroport', -1.61, 47.15, 3.2); put('aeroport', 5.22, 43.44, 3.2); /* Roissy, Toulouse, Nantes, Marseille */
   put('port', 0.15, 49.47, 3.6); put('porte_conteneurs', 0.0, 49.55, 3.6); put('grue_portuaire', 0.3, 49.45, 2.6); put('port', -1.48, 43.5, 3.2); put('port', 3.7, 43.4, 3.2); put('port', 2.35, 51.03, 3.4);
   put('usine_aero', 1.3, 43.66, 3.4); put('chantier_naval', -2.22, 47.27, 4.4); /* grands sites : aéronautique (Toulouse), chantiers navals (Saint-Nazaire) */
-  put('dune', -0.98, 44.38, 4.6); put('dune', -1.2, 44.15, 3); /* dune du Pilat, côte landaise */
+  put('dune', -0.98, 44.4, 2.8); /* petite dune du Pilat */
   for(var pi = 0; pi < 22; pi++) put('pin', -0.8 + R() * .5, 43.85 + R() * .8, 1.5 + R() * .4, R() < .5); /* pins des Landes */
   // forêts (Landes, Sologne, Vosges, Ardennes, Morvan, Bretagne, Massif central, Jura)
   [[2.0,47.55,5,.4],[7.0,48.4,5,.35],[4.75,49.85,4,.3],[4.05,47.15,4,.3],[-3.3,48.15,4,.35],[2.6,45.0,4,.4],[6.0,46.6,3,.3],[1.4,45.1,4,.4],[5.75,44.2,3,.3],[9.15,42.0,3,.25],[0.6,48.6,3,.3],[3.0,48.4,3,.3]].forEach(function(f){ cluster(f[0], f[1], Math.round(f[2] * 1.8), f[3] * 1.1, f[1] > 47.5 || f[0] > 5.5 ? ['arbre', 'sapins', 'arbre_automne', 'arbre', 'sapins', 'arbre_jaune'] : ['arbre', 'arbre_automne', 'arbre', 'arbre_jaune', 'sapins'], 1.4); });
@@ -91,7 +91,7 @@ function sprItems(){
   sprList().forEach(function(s){
     var p = P(s[1], s[2]), t = terrainU(p[0], p[1]), marine = !!SPR_MARINE[s[0]];
     if(MASK && SPR_MARINE[s[0]] !== 2 && !/^(chaine|lac)/.test(s[0]) && (marine ? t !== 0 : t !== 1)) return;
-    items.push({ id:s[0], x0:s[1], y0:s[2], x:p[0], y:p[1], w:s[3], h:s[3] * (SPR_AR[s[0]] || 1) * (s[5] || 1), f:s[4], sy:s[5] || 1 });
+    items.push({ id:s[0], x0:s[1], y0:s[2], x:p[0], y:p[1], w:s[3], h:s[3] * (SPR_AR[s[0]] || 1) * (s[5] || 1), f:s[4], sy:s[5] || 1, r:s[6] || 0 });
   });
   /* pas de superposition : les éléments placés d'abord (monuments, villes, relief) gardent leur place */
   var PRIO = { lac:0, chaine_alpes:0, chaine_pyrenees:0, mt_haute:0, mt_basse:0, arete:0, pic_sapins:0, massif_iso:0, chaine_iso:0, massif_alpes_nord:0, massif_alpes_sud:0, massif_pyrenees:0, pic_alpin:0, massif_pics:0, massif:0, pic_neige:0, massif_brun:0, pic_brun:0, montagnes_douces:0, colline:0, tour_eiffel:0, arc_triomphe:0, fourviere:0, basilique_marseille:0, cathedrale_strasbourg:0, beffroi_lille:0, bourse_bordeaux:0, mont_saint_michel:0, aeroport:0, port:0, usine_aero:0, chantier_naval:0, dune:0 };
@@ -106,6 +106,10 @@ function sprItems(){
       return ix > 0 && iy > 0 && ix * iy > .35 * Math.min((bx[2] - bx[0]) * (bx[3] - bx[1]), (k.b[2] - k.b[0]) * (k.b[3] - k.b[1])); });
     if(!clash){ it.b = bx; kept.push(it); }
   });
+  /* maison posée sur un arbre : on la passe juste en dessous */
+  kept.forEach(function(h){ if(!/pavillon|maison|immeuble|boulangerie/.test(h.id)) return;
+    kept.forEach(function(t){ if(!/^(pin|arbre|sapins)/.test(t.id)) return; var b = h.b, c = t.b;
+      if(b[0] < c[2] && b[2] > c[0] && b[1] < c[3] && b[3] > c[1] && h.y <= t.y + h.h * .3){ var d = t.y + h.h * .45 - h.y; h.y += d; h.b = [b[0], b[1] + d, b[2], b[3] + d]; } }); });
   items = kept;
   items.sort(function(a, b){ return a.y - b.y; });
   return items;
@@ -136,7 +140,7 @@ function sprSvg(){
   var nuit = document.documentElement.getAttribute('data-theme') === 'dark' || ($('app') && $('app').classList.contains('is-night'));
   items.forEach(function(it){
     if(!used[it.id]){ used[it.id] = 1; defs += '<image id="sp_' + it.id + '" href="' + (nuit && SPR_NUIT[it.id] || SPR_DATA[it.id]) + '" width="1" height="' + (SPR_AR[it.id] || 1) + '" preserveAspectRatio="none"/>'; }
-    uses += '<use href="#sp_' + it.id + '" transform="translate(' + F(it.f ? it.x + it.w / 2 : it.x - it.w / 2) + ',' + F(it.y - it.h * .86) + ') scale(' + (it.f ? '-' : '') + F(it.w) + ',' + F(it.w * (it.sy || 1)) + ')"/>';
+    uses += '<use href="#sp_' + it.id + '" transform="' + (it.r ? 'rotate(' + it.r + ' ' + F(it.x) + ' ' + F(it.y) + ') ' : '') + 'translate(' + F(it.f ? it.x + it.w / 2 : it.x - it.w / 2) + ',' + F(it.y - it.h * .86) + ') scale(' + (it.f ? '-' : '') + F(it.w) + ',' + F(it.w * (it.sy || 1)) + ')"/>';
   });
   return '<defs>' + defs + '</defs><g>' + uses + '</g>';
 }
