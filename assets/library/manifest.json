@@ -1206,5 +1206,21 @@
   "prompt": "chaine_iso (vue iso du dessus, sans socle)",
   "credits": 4,
   "essais": 1
+ },
+ {
+  "id": "arete",
+  "categorie": "decor",
+  "url": "https://img.recraft.ai/6QjihdsOlWs8YaYs2PHhNkiDC0YJBvhgX59IV6teDbY/raw:1/plain/abs://prod/images/d0c9246e-c33f-4ef0-bea0-f1a71683b7d2",
+  "prompt": "arete",
+  "credits": 4,
+  "essais": 1
+ },
+ {
+  "id": "pic_sapins",
+  "categorie": "decor",
+  "url": "https://img.recraft.ai/W8wnXzQlywn6xeFsiZlUuajX9h3WtNs7bHPvZzSoXS8/raw:1/plain/abs://prod/images/a6392021-5eca-41b7-b6c9-64e9419074ee",
+  "prompt": "pic_sapins",
+  "credits": 4,
+  "essais": 1
  }
 ]
