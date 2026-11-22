@@ -5,7 +5,7 @@
    énergie, fermes, ports. Positions en lon/lat ; vérif terre/mer.
    ========================================================= */
 var SPR_DIR = 'assets/sprites/';
-var SPR_AR = {"aeroport":0.926,"ambulance":0.71,"antenne":1.954,"arbre":1.5,"arbre_automne":1.322,"arbre_jaune":1.322,"arc_triomphe":1.246,"arete":0.887,"avion":0.646,"avion_militaire":0.676,"barrage":0.801,"barriere":0.629,"basilique_marseille":1.51,"bateau_migrants":0.8,"bateau_peche":0.88,"beffroi_lille":2.989,"billets":1.008,"ble":0.696,"boulangerie":1.087,"bourse_bordeaux":0.774,"bus":0.877,"caddie":1.044,"cadenas":1.292,"camion":0.882,"camion_citerne":0.868,"camping_car":0.836,"canadair":0.819,"cathedrale_strasbourg":2.068,"centrale_charbon":1.132,"centrale_gaz":1.341,"centrale_nucleaire":1.109,"chaine_iso":0.999,"chantier_epr":1.462,"chantier_naval":0.975,"char":0.814,"colis":1.117,"colline":1.201,"colza":0.611,"commissariat":0.974,"conteneurs":1.593,"creche":0.649,"cyberattaque":1.098,"cyclone":1.029,"drapeau":2.296,"drone":0.744,"dune":0.747,"eclair":2.102,"ecole":1.196,"ehpad":0.926,"entrepot":0.759,"eolien_mer":2.294,"eolienne":2.349,"facture":1.92,"ferme":0.899,"ferry":0.941,"feu":0.946,"foule":1.007,"fourviere":1.018,"fregate":0.705,"gare":0.81,"goutte":1.399,"grue_chantier":1.04,"grue_portuaire":1.196,"haussmann":1.848,"hemicycle":1.036,"hopital":1.401,"immeuble":1.587,"lac":0.781,"logo":0.795,"loupe":1.352,"mairie":0.962,"maison_bretonne":1.278,"maison_isolation":1.101,"maison_pierre":1.143,"manifestation":0.867,"maree_noire":0.704,"mascotte":1.22,"massif":0.73,"massif_alpes_nord":1.373,"massif_alpes_sud":1.084,"massif_brun":0.73,"massif_iso":1.061,"massif_pics":1.127,"massif_pyrenees":1.255,"metro":0.863,"mine":0.941,"moissonneuse":0.781,"mont_saint_michel":1.465,"montagne":1.357,"montagnes":1.13,"montagnes_douces":0.946,"mt_basse":0.494,"mt_haute":1.03,"nuage_neige":1.477,"nuage_orage":1.181,"panneau":1.593,"parasols":0.899,"pavillon":1.014,"peniche":0.808,"personnage":3.169,"petit_immeuble":1.515,"phare":1.403,"pharmacie":1.0,"pic_alpin":0.865,"pic_brun":1.028,"pic_neige":1.029,"pic_sapins":0.894,"pieces":0.76,"pin":1.857,"piscine":0.632,"pluie":1.299,"pompiers":0.924,"port":1.0,"porte_conteneurs":0.783,"poste_frontiere":1.096,"prison":0.989,"puits_petrole":1.111,"pylone_ht":2.166,"sapins":1.051,"satellite":0.925,"segment_rails":1.136,"serre":0.891,"smog":0.874,"soignants":1.596,"solaire":0.668,"soldats":1.059,"soleil_canicule":0.69,"stade":0.891,"station_service":0.953,"supermarche":0.921,"tente_camping":0.848,"terminal_gnl":0.848,"tgv":1.169,"tgv_seul":1.384,"thermometre":2.905,"tour_bureaux":1.728,"tour_eiffel":1.883,"tracteur":0.869,"train_fret":1.447,"tram":0.87,"tribunal":1.022,"universite":1.057,"urne":1.237,"usine":0.965,"usine_aero":0.891,"usine_fermee":1.1,"vache":0.866,"vague_crue":0.845,"valise":1.59,"velo":0.924,"velodrome":0.747,"vignes":0.689,"voilier":1.237,"voiture":0.858,"voiture_police":0.772};
+var SPR_AR = {"aeroport":0.926,"ambulance":0.71,"antenne":1.954,"arbre":1.5,"arbre_automne":1.322,"arbre_jaune":1.322,"arc_triomphe":1.246,"arete":0.887,"avion":0.646,"avion_militaire":0.676,"barrage":0.801,"barriere":0.629,"basilique_marseille":1.51,"bateau_migrants":0.8,"bateau_peche":0.88,"beffroi_lille":2.989,"billets":1.008,"ble":0.696,"boulangerie":1.087,"bourse_bordeaux":0.774,"bus":0.877,"caddie":1.044,"cadenas":1.292,"camion":0.882,"camion_citerne":0.868,"camping_car":0.836,"canadair":0.819,"cathedrale_strasbourg":2.068,"centrale_charbon":1.132,"centrale_gaz":1.341,"centrale_nucleaire":1.109,"chaine_alpes":1.424,"chaine_iso":0.999,"chaine_pyrenees":0.769,"chantier_epr":1.462,"chantier_naval":0.975,"char":0.814,"colis":1.117,"colline":1.201,"colza":0.611,"commissariat":0.974,"conteneurs":1.593,"creche":0.649,"cyberattaque":1.098,"cyclone":1.029,"drapeau":2.296,"drone":0.744,"dune":0.747,"eclair":2.102,"ecole":1.196,"ehpad":0.926,"entrepot":0.759,"eolien_mer":2.294,"eolienne":2.349,"facture":1.92,"ferme":0.899,"ferry":0.941,"feu":0.946,"foule":1.007,"fourviere":1.018,"fregate":0.705,"gare":0.81,"goutte":1.399,"grue_chantier":1.04,"grue_portuaire":1.196,"haussmann":1.848,"hemicycle":1.036,"hopital":1.401,"immeuble":1.587,"lac":0.781,"logo":0.795,"loupe":1.352,"mairie":0.962,"maison_bretonne":1.278,"maison_isolation":1.101,"maison_pierre":1.143,"manifestation":0.867,"maree_noire":0.704,"mascotte":1.22,"massif":0.73,"massif_alpes_nord":1.373,"massif_alpes_sud":1.084,"massif_brun":0.73,"massif_iso":1.062,"massif_pics":1.127,"massif_pyrenees":1.255,"metro":0.863,"mine":0.941,"moissonneuse":0.781,"mont_saint_michel":1.465,"montagne":1.357,"montagnes":1.13,"montagnes_douces":0.946,"mt_basse":0.494,"mt_haute":1.03,"nuage_neige":1.477,"nuage_orage":1.181,"panneau":1.593,"parasols":0.899,"pavillon":1.014,"peniche":0.808,"personnage":3.169,"petit_immeuble":1.515,"phare":1.403,"pharmacie":1.0,"pic_alpin":0.865,"pic_brun":1.028,"pic_neige":1.029,"pic_sapins":0.894,"pieces":0.76,"pin":1.857,"piscine":0.632,"pluie":1.299,"pompiers":0.924,"port":1.0,"porte_conteneurs":0.783,"poste_frontiere":1.096,"prison":0.989,"puits_petrole":1.111,"pylone_ht":2.166,"sapins":1.051,"satellite":0.925,"segment_rails":1.136,"serre":0.891,"smog":0.874,"soignants":1.596,"solaire":0.668,"soldats":1.059,"soleil_canicule":0.69,"stade":0.891,"station_service":0.953,"supermarche":0.921,"tente_camping":0.848,"terminal_gnl":0.848,"tgv":1.169,"tgv_seul":1.384,"thermometre":2.905,"tour_bureaux":1.728,"tour_eiffel":1.883,"tracteur":0.869,"train_fret":1.447,"tram":0.87,"tribunal":1.022,"universite":1.057,"urne":1.237,"usine":0.965,"usine_aero":0.891,"usine_fermee":1.1,"vache":0.866,"vague_crue":0.845,"valise":1.59,"velo":0.924,"velodrome":0.747,"vignes":0.689,"voilier":1.237,"voiture":0.858,"voiture_police":0.772};
 /* objets d'événement (OBJ) dessinés par un sprite de la bibliothèque */
 var OBJ_SPR = { tracteur:'tracteur', camion:'camion', voiture:'voiture', train:'gare', tgv:'gare', avion:'avion', cargo:'porte_conteneurs', bateau_peche:'bateau_peche',
   eolienne:'eolienne', eolienne_mer:'eolien_mer', centrale_nucleaire:'centrale_nucleaire', centrale_gaz:'centrale_gaz', panneaux_solaires:'solaire', barrage:'barrage', pylone:'pylone_ht',
@@ -21,7 +21,7 @@ var SPR_W = { tracteur:1.7, camion:2.2, voiture:1.5, train_fret:4, tgv_seul:5, a
 var SPR_MARINE = { chantier_naval:2, eolien_mer:1, porte_conteneurs:1, bateau_peche:1, voilier:1, ferry:1, fregate:1, bateau_migrants:1, maree_noire:1 };
 function sprList(){
   var R = rng(1789), out = [];
-  function put(id, lon, lat, w, flip){ out.push([id, lon, lat, w, flip ? 1 : 0]); }
+  function put(id, lon, lat, w, flip, sy){ out.push([id, lon, lat, w, flip ? 1 : 0, sy || 1]); }
   function cluster(lon, lat, n, sp, kinds, w){
     for(var i = 0; i < n; i++){ var k = kinds[Math.floor(R() * kinds.length)]; put(k, lon + (R() - .5) * 2 * sp * 1.3, lat + (R() - .5) * 2 * sp * .8, (w || 2) * (k === 'petit_immeuble' || k === 'haussmann' || k === 'immeuble' ? 1.08 : 1)); }
   }
@@ -54,12 +54,11 @@ function sprList(){
   put('vache', -0.7, 49.0, 1.8); put('vache', 2.75, 45.35, 1.8); put('tracteur', 1.3, 48.3, 1.7); put('serre', -1.4, 47.0, 2.2); put('usine', 6.05, 48.05, 2.8); put('usine', 3.2, 50.4, 2.6);
   // relief et littoral (sprites Recraft)
   // montagnes : massifs en vue isométrique du dessus, sans socle ; chacun placé une fois
-  put('massif_iso', 6.7, 45.6, 9.5); /* Alpes du Nord : Mont-Blanc, Vanoise, Écrins */
-  put('chaine_iso', 6.65, 44.62, 9, 1); /* Alpes du Sud : la chaîne, orientée comme les Alpes */
+  put('chaine_alpes', 6.6, 44.35, 11); /* Alpes : chaîne nord-sud le long de la frontière */
   /* Pyrénées : montagnes isolées le long de la frontière (plus de chaîne en diagonale) */
-  put('chaine_iso', -0.6, 43.08, 8.5, 1); put('chaine_iso', 1.55, 42.75, 8, 1); put('mt_haute', 0.55, 42.85, 4.4); /* Pyrénées : deux tronçons de chaîne et un sommet au centre */
+  put('chaine_pyrenees', 0.7, 42.85, 30, 1, .5); /* Pyrénées : une chaîne, aplatie pour suivre la frontière */
   /* montagnes isolées entre les massifs alpins, pour combler */
-  [['mt_haute',6.35,45.1,5.2],['mt_basse',6.05,44.85,4.4],['mt_haute',6.0,45.45,4.6],['mt_basse',6.25,44.15,4.4],['mt_haute',7.05,44.1,4.6],['mt_basse',6.15,46.25,4.2]].forEach(function(m, i){ put(m[0], m[1], m[2], m[3], i % 2); });
+  [['mt_basse',6.15,44.4,4.2],['mt_haute',6.2,45.8,4.4,1]].forEach(function(m){ put(m[0], m[1], m[2], m[3], m[4]); });
   put('mt_basse', 2.85, 45.6, 4.2); put('mt_basse', 3.25, 44.95, 3.4, 1); put('massif_iso', 2.7, 45.15, 3.6); /* Massif central : quelques reliefs, pas de répétition à l'identique */
   put('mt_basse', 6.95, 48.15, 3.4, 1); put('mt_basse', 6.1, 46.65, 3); put('massif_brun', 9.05, 42.2, 3.8); /* Vosges, Jura, Corse */
   [[2.8,45.4],[3.0,44.9],[3.6,44.5],[2.5,45.8],[7.0,48.1],[5.9,46.6]].forEach(function(c){ put('colline', c[0], c[1], 2.2); });
@@ -88,10 +87,10 @@ function sprItems(){
   sprList().forEach(function(s){
     var p = P(s[1], s[2]), t = terrainU(p[0], p[1]), marine = !!SPR_MARINE[s[0]];
     if(MASK && SPR_MARINE[s[0]] !== 2 && (marine ? t !== 0 : t !== 1)) return;
-    items.push({ id:s[0], x0:s[1], y0:s[2], x:p[0], y:p[1], w:s[3], h:s[3] * (SPR_AR[s[0]] || 1), f:s[4] });
+    items.push({ id:s[0], x0:s[1], y0:s[2], x:p[0], y:p[1], w:s[3], h:s[3] * (SPR_AR[s[0]] || 1) * (s[5] || 1), f:s[4], sy:s[5] || 1 });
   });
   /* pas de superposition : les éléments placés d'abord (monuments, villes, relief) gardent leur place */
-  var PRIO = { mt_haute:0, mt_basse:0, arete:0, pic_sapins:0, massif_iso:0, chaine_iso:0, massif_alpes_nord:0, massif_alpes_sud:0, massif_pyrenees:0, pic_alpin:0, massif_pics:0, massif:0, pic_neige:0, massif_brun:0, pic_brun:0, montagnes_douces:0, colline:0, tour_eiffel:0, arc_triomphe:0, fourviere:0, basilique_marseille:0, cathedrale_strasbourg:0, beffroi_lille:0, bourse_bordeaux:0, mont_saint_michel:0, aeroport:0, port:0, usine_aero:0, chantier_naval:0, dune:0 };
+  var PRIO = { chaine_alpes:0, chaine_pyrenees:0, mt_haute:0, mt_basse:0, arete:0, pic_sapins:0, massif_iso:0, chaine_iso:0, massif_alpes_nord:0, massif_alpes_sud:0, massif_pyrenees:0, pic_alpin:0, massif_pics:0, massif:0, pic_neige:0, massif_brun:0, pic_brun:0, montagnes_douces:0, colline:0, tour_eiffel:0, arc_triomphe:0, fourviere:0, basilique_marseille:0, cathedrale_strasbourg:0, beffroi_lille:0, bourse_bordeaux:0, mont_saint_michel:0, aeroport:0, port:0, usine_aero:0, chantier_naval:0, dune:0 };
   items = items.map(function(it, k){ it.k = k; return it; }).sort(function(a, b){ return ((PRIO[a.id] === 0 ? 0 : 1) - (PRIO[b.id] === 0 ? 0 : 1)) || a.k - b.k; });
   var kept = [];
   items.forEach(function(it){
@@ -125,7 +124,7 @@ function sprSvg(){
   var used = {}, items = sprItems(), defs = '', uses = '';
   items.forEach(function(it){
     if(!used[it.id]){ used[it.id] = 1; defs += '<image id="sp_' + it.id + '" href="' + SPR_DATA[it.id] + '" width="1" height="' + (SPR_AR[it.id] || 1) + '" preserveAspectRatio="none"/>'; }
-    uses += '<use href="#sp_' + it.id + '" transform="translate(' + F(it.f ? it.x + it.w / 2 : it.x - it.w / 2) + ',' + F(it.y - it.h * .86) + ') scale(' + (it.f ? '-' : '') + F(it.w) + ',' + F(it.w) + ')"/>';
+    uses += '<use href="#sp_' + it.id + '" transform="translate(' + F(it.f ? it.x + it.w / 2 : it.x - it.w / 2) + ',' + F(it.y - it.h * .86) + ') scale(' + (it.f ? '-' : '') + F(it.w) + ',' + F(it.w * (it.sy || 1)) + ')"/>';
   });
   return '<defs>' + defs + '</defs><g>' + uses + '</g>';
 }
@@ -135,7 +134,7 @@ function buildSprites(){
   loadSprData();
   l.innerHTML = sprItems().map(function(it){
     var w = it.w * VBK, h = it.h * VBK, q = U2P(it.x, it.y);
-    return '<img src="' + SPR_DIR + it.id + '.webp" alt="" decoding="async" loading="lazy" style="left:' + F(q[0] - w / 2) + 'px;top:' + F(q[1] - h * .86) + 'px;width:' + F(w) + 'px' + (it.f ? ';transform:scaleX(-1)' : '') + '">';
+    return '<img src="' + SPR_DIR + it.id + '.webp" alt="" decoding="async" loading="lazy" style="left:' + F(q[0] - w / 2) + 'px;top:' + F(q[1] - h * .86) + 'px;width:' + F(w) + 'px;height:' + F(h) + 'px' + (it.f ? ';transform:scaleX(-1)' : '') + '">';
   }).join('');
 }
 /* Animation sur la terre : de petits vols d'oiseaux traversent la carte de temps en temps (trajectoire droite, battement d'ailes). */

@@ -1238,5 +1238,21 @@
   "prompt": "mt_basse (style massif iso)",
   "credits": 4,
   "essais": 1
+ },
+ {
+  "id": "chaine_pyrenees",
+  "categorie": "decor",
+  "url": "https://img.recraft.ai/xrvgwsNlY4IT1fiE5QoTCBqiySWU2-L-oTbUih289cM/raw:1/plain/abs://prod/images/eb1c0922-ab10-4a13-ae2a-d53d435e205f",
+  "prompt": "chaine_pyrenees (forme adaptée, style chaine_iso)",
+  "credits": 4,
+  "essais": 2
+ },
+ {
+  "id": "chaine_alpes",
+  "categorie": "decor",
+  "url": "https://img.recraft.ai/AOx_xj4t2kZTxjqsCso5UYJQcWntQkKn05yn_dO5PgQ/raw:1/plain/abs://prod/images/c4917af4-8d3b-411e-a174-27bb3cde77ab",
+  "prompt": "chaine_alpes (forme adaptée, style chaine_iso)",
+  "credits": 4,
+  "essais": 1
  }
 ]
