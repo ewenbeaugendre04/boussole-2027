@@ -18,7 +18,7 @@ var SPR_W = { tracteur:1.7, camion:2.2, voiture:1.5, train_fret:4, tgv_seul:5, a
   solaire:3, barrage:3.4, pylone_ht:2, pavillon:2, immeuble:2.2, usine:2.8, grue_chantier:2.6, ecole:2.6, hopital:2.8, mairie:2.6, hemicycle:3.2, grue_portuaire:2.6, ble:3.2, vache:1.5, arbre:1.5,
   feu:2.6, vague_crue:3, soleil_canicule:2.8, nuage_neige:2.8, nuage_orage:2.8, pieces:1.8, ambulance:1.7, pompiers:2, voiture_police:1.5, bus:2.4, manifestation:3, foule:2.6, char:2.2, fregate:4,
   bateau_migrants:2.4, maree_noire:4.4, centrale_charbon:3, phare:1.6, voilier:1.8, ferry:4, drapeau:1.4, panneau:1.6, loupe:1.6, cadenas:1.3, colis:1.3, usine_fermee:2.8, station_service:2.4, barriere:2.2, personnage:0.9, soignants:1.4, poste_frontiere:2.4, gare:3, urne:1.4, supermarche:2.8, entrepot:2.8, boulangerie:2, ferme:2.6, pharmacie:2, antenne:1.6, satellite:2, cyberattaque:2, conteneurs:2.6, thermometre:1.4, commissariat:2.6, prison:3, velo:1.2 };
-var SPR_MARINE = { chantier_naval:2, eolien_mer:1, porte_conteneurs:1, bateau_peche:1, voilier:1, ferry:1, fregate:1, bateau_migrants:1, maree_noire:1 };
+var SPR_MARINE = { chantier_naval:2, mont_saint_michel:2, eolien_mer:1, porte_conteneurs:1, bateau_peche:1, voilier:1, ferry:1, fregate:1, bateau_migrants:1, maree_noire:1 };
 function sprList(){
   var R = rng(1789), out = [];
   function put(id, lon, lat, w, flip, sy, rot){ out.push([id, lon, lat, w, flip ? 1 : 0, sy || 1, rot || 0]); }
@@ -27,7 +27,7 @@ function sprList(){
   }
   // monuments des grandes villes
   put('tour_eiffel', 2.29, 48.92, 2.6); put('arc_triomphe', 2.52, 48.74, 2.6); put('fourviere', 4.78, 45.8, 3.4); put('basilique_marseille', 5.37, 43.36, 3); put('cathedrale_strasbourg', 7.72, 48.62, 2.5);
-  put('beffroi_lille', 3.07, 50.62, 2); put('bourse_bordeaux', -0.57, 44.86, 3.8); put('mont_saint_michel', -1.51, 48.66, 3.2);
+  put('beffroi_lille', 3.07, 50.62, 2); put('bourse_bordeaux', -0.57, 44.86, 3.8); put('mont_saint_michel', -1.47, 48.52, 1.8);
   // villes et villages : des maisons partout
   /* ville structurée : centre (haussmann, commerces), couronne (immeubles), périphérie (pavillons) ; quartier d'affaires optionnel */
   function city(lon, lat, r, o){
@@ -65,7 +65,7 @@ function sprList(){
   put('montagnes_douces', 7.1, 48.65, 2.1); put('mt_basse', 6.75, 48.15, 2.1, 1); /* Vosges (suite) */
   put('lac', 6.17, 45.86, 1.9); /* lac d'Annecy */
   put('chaine_alpes', 6.75, 44.0, 8); /* Alpes : chaîne nord-sud le long de la frontière */
-  put('chaine_pyrenees', 0.7, 42.25, 38, 1, 1, 4); /* Pyrénées : une chaîne sur toute la frontière */
+  put('chaine_pyrenees', -0.45, 42.85, 25, 1, 1.25, 3); put('chaine_pyrenees', 1.95, 42.6, 24, 0, 1.25, 3); /* Pyrénées : une chaîne sur toute la frontière */
   [[-4.78,48.42],[-1.9,49.65],[1.6,50.7],[-1.45,43.5],[-2.2,47.28]].forEach(function(l){ put('phare', l[0], l[1], 1.4); });
   put('parasols', 3.5, 43.45, 2.4); put('parasols', -1.3, 44.6, 2.2); put('parasols', 6.9, 43.55, 2.2); put('voilier', -2.6, 46.5, 1.8); put('voilier', 5.6, 42.9, 1.8); put('voilier', -1.9, 49.95, 1.8);
   put('gare', 2.45, 48.95, 2.2); put('stade', 2.3, 48.7, 2.6); put('universite', 4.95, 45.68, 2.2); put('hopital', 1.5, 43.55, 2.4); put('ferme', 0.2, 46.9, 2.4); put('ferme', 3.9, 48.1, 2.3); put('colza', 0.9, 48.65, 3); put('colza', 4.6, 49.55, 3);

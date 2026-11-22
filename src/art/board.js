@@ -106,7 +106,7 @@ function buildBoard(){
   h.push('<g id="upright">' + up.map(function(u){ return u.s; }).join('') + '</g>');
   // noms de régions
   h.push(insetSvg());
-  $('labelsvg').innerHTML = ('<g id="rlabels">' + REGIONS.filter(function(r){ return !r.national && !r.inset && r.abroad; /* pas de noms de régions françaises (demande d'Ewen) */ }).map(function(r){ var p = RP(r.x, r.y); return '<text class="rlabel' + (r.abroad ? ' abroad' : '') + '" x="' + F(p[0]) + '" y="' + F(p[1] + (r.abroad ? -1.8 : 3.6)) + '" text-anchor="middle">' + esc(shortRegion(r.label)) + '</text>'; }).join('') + '</g>');
+  $('labelsvg').innerHTML = ('<g id="rlabels">' + REGIONS.filter(function(r){ return !r.national && !r.inset && r.abroad && r.id !== 'frontiere_est'; /* pas de noms de régions françaises (demande d'Ewen) */ }).map(function(r){ var p = RP(r.x, r.y); return '<text class="rlabel' + (r.abroad ? ' abroad' : '') + '" x="' + F(p[0]) + '" y="' + F(p[1] + (r.abroad ? -1.8 : 3.6)) + '" text-anchor="middle">' + esc(shortRegion(r.label)) + '</text>'; }).join('') + '</g>');
   svg.innerHTML = h.join('');
   franceEl = $('frTop'); corseEl = $('coTop'); buildMask();
   buildWaves(R);
