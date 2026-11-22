@@ -54,7 +54,7 @@ function sprList(){
   put('vache', -0.7, 49.0, 1.8); put('vache', 2.75, 45.35, 1.8); put('tracteur', 1.3, 48.3, 1.7); put('serre', -1.4, 47.0, 2.2); put('usine', 6.05, 48.05, 2.8); put('usine', 3.2, 50.4, 2.6);
   // relief et littoral (sprites Recraft)
   // montagnes : une seule famille de modèles, tailles fixes ; Alpes et Pyrénées collées à la frontière, serrées en massifs
-  var MW = { pic_alpin:3.4, massif_pics:3.4, massif:3.2, pic_neige:2.6, massif_brun:3.2, pic_brun:2.6, montagnes_douces:2.8, colline:2.2 };
+  var MW = { pic_alpin:5.2, massif_pics:5.4, massif:5, pic_neige:4, massif_brun:5, pic_brun:4, montagnes_douces:4.2, colline:3.4 }; /* tailles fixes, assez grandes pour être lisibles */
   function frontiere(pts, step, front, back, off){
     for(var i = 0; i < pts.length - 1; i++){
       var a = pts[i], b = pts[i + 1], d = Math.hypot(b[0] - a[0], b[1] - a[1]), n = Math.max(1, Math.round(d / step));
@@ -66,13 +66,13 @@ function sprList(){
     }
   }
   /* Alpes : du Mont-Blanc à la Méditerranée ; les plus hauts (enneigés) au nord, une rangée plus basse côté France */
-  frontiere([[6.85,46.25],[6.95,45.85],[7.05,45.5],[6.95,45.15],[6.85,44.8],[6.95,44.45],[7.35,44.12]], .2, ['pic_alpin', 'massif_pics', 'massif', 'pic_alpin', 'massif'], ['massif_brun', 'pic_neige', 'montagnes_douces'], [-.32, .02]);
+  frontiere([[6.85,46.25],[6.95,45.85],[7.05,45.5],[6.95,45.15],[6.85,44.8],[6.95,44.45],[7.35,44.12]], .3, ['pic_alpin', 'massif_pics', 'massif', 'pic_neige', 'massif_pics', 'pic_alpin', 'massif'], ['massif_brun', 'pic_brun', 'massif'], [-.42, .03]);
   /* Pyrénées : moins hautes, peu de neige */
-  frontiere([[-1.55,43.2],[-1.0,43.02],[-0.3,42.86],[0.4,42.74],[1.1,42.66],[1.8,42.56],[2.5,42.46],[3.0,42.48]], .22, ['massif_brun', 'pic_brun', 'massif', 'montagnes_douces', 'massif_brun'], ['montagnes_douces', 'colline'], [0, .14]);
-  frontiere([[9.0,42.55],[9.2,41.85]], .2, ['massif_brun', 'montagnes_douces'], null); /* Corse */
+  frontiere([[-1.55,43.2],[-1.0,43.02],[-0.3,42.86],[0.4,42.74],[1.1,42.66],[1.8,42.56],[2.5,42.46],[3.0,42.48]], .34, ['massif_brun', 'massif', 'pic_brun', 'massif_pics', 'massif_brun', 'pic_neige'], ['pic_brun', 'massif_brun'], [0, .2]);
+  frontiere([[9.0,42.55],[9.2,41.85]], .3, ['massif_brun', 'pic_brun'], null); /* Corse */
   /* Massif central : chaîne des Puys (collines alignées) et reliefs arrondis */
-  frontiere([[2.9,45.95],[2.95,45.6]], .1, ['colline'], null);
-  [[2.75,45.15],[3.25,44.75],[3.7,44.4]].forEach(function(c){ put('montagnes_douces', c[0], c[1], MW.montagnes_douces, R() < .5); put('colline', c[0] + .25, c[1] - .1, MW.colline, R() < .5); });
+  frontiere([[2.92,46.0],[2.95,45.55]], .16, ['colline', 'colline', 'pic_brun'], null); /* chaîne des Puys */
+  [[2.75,45.2],[3.15,44.85],[3.6,44.5],[2.5,45.6],[3.5,45.3],[2.9,44.6]].forEach(function(c, i){ put(i % 2 ? 'colline' : 'montagnes_douces', c[0], c[1], i % 2 ? MW.colline : MW.montagnes_douces, R() < .5); put('massif_brun', c[0] + .3, c[1] - .12, MW.massif_brun * .8, R() < .5); });
   /* Vosges, Jura : reliefs doux */
   frontiere([[7.0,48.55],[6.9,47.9]], .2, ['montagnes_douces', 'colline'], null); frontiere([[5.75,46.2],[6.45,47.1]], .22, ['colline', 'montagnes_douces'], null);
   [[2.8,45.4],[3.0,44.9],[3.6,44.5],[2.5,45.8],[7.0,48.1],[5.9,46.6]].forEach(function(c){ put('colline', c[0], c[1], 2.2); });
@@ -154,7 +154,16 @@ function buildSprites(){
 /* Animation sur la terre : de petits vols d'oiseaux traversent la carte de temps en temps (trajectoire droite, battement d'ailes). */
 function buildBirds(){
   var ml = $('movers'); if(!ml || typeof U2P !== 'function') return;
-  ml.querySelectorAll('.birds').forEach(function(e){ e.remove(); });
+  ml.querySelectorAll('.birds,.nuage').forEach(function(e){ e.remove(); });
+  /* petits nuages qui passent lentement, d'ouest en est */
+  [[[-6, 49.2], [10, 48.4], 0, 1.2], [[-6, 46.2], [10, 45.6], 22, .9], [[-6, 43.8], [10, 44.6], 45, 1]].forEach(function(v){
+    var a = P(v[0][0], v[0][1]), b = P(v[1][0], v[1][1]), qa = U2P(a[0], a[1]), qb = U2P(b[0], b[1]), w = VBK * 7 * v[3];
+    var el = document.createElement('div'); el.className = 'nuage';
+    el.style.setProperty('--x0', F(qa[0]) + 'px'); el.style.setProperty('--y0', F(qa[1]) + 'px'); el.style.setProperty('--x1', F(qb[0]) + 'px'); el.style.setProperty('--y1', F(qb[1]) + 'px');
+    el.style.animationDelay = '-' + v[2] + 's'; el.style.width = F(w) + 'px';
+    el.innerHTML = '<svg viewBox="0 0 60 26"><ellipse cx="30" cy="22" rx="24" ry="3" fill="#0E4A5A" opacity=".08"/><g fill="#fff"><circle cx="18" cy="14" r="8"/><circle cx="30" cy="10" r="10"/><circle cx="42" cy="14" r="8"/><rect x="12" y="13" width="36" height="8" rx="4"/></g></svg>';
+    ml.appendChild(el);
+  });
   [[[-2, 47.5], [8, 49.5], 0], [[6, 43.5], [-1, 46.8], 14], [[1, 50.5], [4.5, 44.5], 27]].forEach(function(v){
     var a = P(v[0][0], v[0][1]), b = P(v[1][0], v[1][1]), qa = U2P(a[0], a[1]), qb = U2P(b[0], b[1]), s = VBK * .9;
     var el = document.createElement('div'); el.className = 'birds';

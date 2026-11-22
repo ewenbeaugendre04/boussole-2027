@@ -112,3 +112,9 @@ body{font-weight:600}
 @keyframes flap{to{transform:scaleY(.45)}}
 @media (prefers-reduced-motion:reduce){.birds{display:none}}
 body.cinema .birds{opacity:0!important}
+.nuage{position:absolute;left:0;top:0;pointer-events:none;z-index:6;opacity:.85;animation:nuageGo 70s linear infinite}
+.nuage svg{width:100%;display:block}
+@keyframes nuageGo{0%{transform:translate(var(--x0),var(--y0));opacity:0}6%{opacity:.85}94%{opacity:.85}100%{transform:translate(var(--x1),var(--y1));opacity:0}}
+.is-night .nuage,[data-theme="dark"] .nuage{opacity:.35}
+@media (prefers-reduced-motion:reduce){.nuage{display:none}}
+body.cinema .nuage{opacity:0!important}
