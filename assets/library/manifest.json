@@ -1222,5 +1222,21 @@
   "prompt": "pic_sapins",
   "credits": 4,
   "essais": 1
+ },
+ {
+  "id": "mt_haute",
+  "categorie": "decor",
+  "url": "https://img.recraft.ai/w7ncVXY9mPzQeJ2tyjEm1X__7jtkauQuUAVn5BiQTuQ/raw:1/plain/abs://prod/images/d91d118e-7bd3-42af-b4e9-96bd2425067d",
+  "prompt": "mt_haute (style massif iso)",
+  "credits": 4,
+  "essais": 1
+ },
+ {
+  "id": "mt_basse",
+  "categorie": "decor",
+  "url": "https://img.recraft.ai/0GgXlbtHbWqhY8-7-5lK_PSyTjxEwC9TGKdt181RTgQ/raw:1/plain/abs://prod/images/9c8476ca-804d-4f51-a456-c404edfb5cf5",
+  "prompt": "mt_basse (style massif iso)",
+  "credits": 4,
+  "essais": 1
  }
 ]
