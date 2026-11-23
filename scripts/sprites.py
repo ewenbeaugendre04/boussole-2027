@@ -72,7 +72,11 @@ def main(ids):
                 a_ = np.array(im).astype(float); c_ = a_[..., :3]; g_ = c_.mean(axis=2, keepdims=True); c_ = g_ + (c_ - g_) * .62
                 c_ = np.where(g_ < 110, c_ * .78 + np.array([96, 110, 120]) * .22, c_)
                 if i == 'massif_alpes_a':  # fondu dans le décor : moins de contraste, teinte verte
-                    m_ = c_[a_[..., 3] > 128].mean(axis=0); c_ = m_ + (c_ - m_) * .72; c_ = c_ * .88 + np.array([150, 180, 130]) * .12
+                    lum_ = a_[..., :3].mean(axis=2, keepdims=True); neige_ = lum_ > 196
+                    m_ = c_[a_[..., 3] > 128].mean(axis=0); c_ = m_ + (c_ - m_) * .8
+                    hh_ = a_.shape[0]; t_ = np.clip((np.arange(hh_)[:, None, None] / hh_ - .55) / .45, 0, 1)  # bas du massif seulement
+                    c_ = c_ * (1 - .35 * t_) + np.array([118, 170, 96]) * .35 * t_
+                    c_ = np.where(neige_, np.array([241, 245, 248]), c_)  # neige bien blanche
                 a_[..., :3] = np.clip(c_, 0, 255); im = Image.fromarray(a_.astype('uint8'))
             im.save(OUT/f'{i}.webp', 'WEBP', quality=86, method=6)
         b.close()

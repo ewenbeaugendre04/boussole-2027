@@ -75,7 +75,8 @@ function sprList(){
   put('dune', -0.98, 44.4, 2.8); /* petite dune du Pilat */
   for(var pi = 0; pi < 22; pi++) put('pin', -0.8 + R() * .5, 43.85 + R() * .8, 1.5 + R() * .4, R() < .5); /* pins des Landes */
   // forêts (Landes, Sologne, Vosges, Ardennes, Morvan, Bretagne, Massif central, Jura)
-  [[2.0,47.55,5,.4],[7.0,48.4,5,.35],[4.75,49.85,4,.3],[4.05,47.15,4,.3],[-3.3,48.15,4,.35],[2.6,45.0,4,.4],[6.0,46.6,3,.3],[1.4,45.1,4,.4],[5.75,44.2,3,.3],[9.15,42.0,3,.25],[0.6,48.6,3,.3],[3.0,48.4,3,.3]].forEach(function(f){ cluster(f[0], f[1], Math.round(f[2] * 1.8), f[3] * 1.1, f[1] > 47.5 || f[0] > 5.5 ? ['arbre', 'sapins', 'arbre_automne', 'arbre', 'sapins', 'arbre_jaune'] : ['arbre', 'arbre_automne', 'arbre', 'arbre_jaune', 'sapins'], 1.4); });
+  [[2.0,47.55,5,.4],[7.0,48.4,5,.35],[4.75,49.85,4,.3],[4.05,47.15,4,.3],[-3.3,48.15,4,.35],[2.6,45.0,4,.4],[6.0,46.6,3,.3],[1.4,45.1,4,.4],[9.15,42.0,3,.25],[0.6,48.6,3,.3],[3.0,48.4,3,.3]].forEach(function(f){ cluster(f[0], f[1], Math.round(f[2] * 1.8), f[3] * 1.1, f[1] > 47.5 || f[0] > 5.5 ? ['arbre', 'sapins', 'arbre_automne', 'arbre', 'sapins', 'arbre_jaune'] : ['arbre', 'arbre_automne', 'arbre', 'arbre_jaune', 'sapins'], 1.4); });
+  put('arbre', 5.0, 44.3, 1.7); put('arbre_jaune', 5.95, 44.5, 1.7); put('arbre_automne', 5.5, 43.75, 1.7, 1); /* Provence : arbres espacés */
   // sapins à l'est (Alsace, Lorraine, Vosges, Jura, Ardennes)
   [[7.1,48.3],[6.9,48.6],[6.6,48.0],[7.3,47.9],[6.2,46.9],[5.9,46.4],[4.7,49.8],[6.8,49.0]].forEach(function(f){ cluster(f[0], f[1], 6, .22, ['sapins', 'sapins', 'arbre'], 1.4); });
   // plus de champs et de vignes
