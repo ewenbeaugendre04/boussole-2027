@@ -21,7 +21,7 @@ var SPR_W = { tracteur:1.7, camion:2.2, voiture:1.5, train_fret:4, tgv_seul:5, a
 var SPR_MARINE = { chantier_naval:2, mont_saint_michel:2, eolien_mer:1, porte_conteneurs:1, bateau_peche:1, voilier:1, ferry:1, fregate:1, bateau_migrants:1, maree_noire:1 };
 function sprList(){
   var R = rng(1789), out = [];
-  function put(id, lon, lat, w, flip, sy, rot){ out.push([id, lon, lat, w, flip ? 1 : 0, sy || 1, rot || 0]); }
+  function put(id, lon, lat, w, flip, sy, rot, pied){ out.push([id, lon, lat, w, flip ? 1 : 0, sy || 1, rot || 0, pied ? 1 : 0]); }
   function cluster(lon, lat, n, sp, kinds, w){
     for(var i = 0; i < n; i++){ var k = kinds[Math.floor(R() * kinds.length)]; put(k, lon + (R() - .5) * 2 * sp * 1.3, lat + (R() - .5) * 2 * sp * .8, (w || 2) * (k === 'petit_immeuble' || k === 'haussmann' || k === 'immeuble' ? 1.08 : 1)); }
   }
@@ -77,6 +77,7 @@ function sprList(){
   // forêts (Landes, Sologne, Vosges, Ardennes, Morvan, Bretagne, Massif central, Jura)
   [[2.0,47.55,5,.4],[7.0,48.4,5,.35],[4.75,49.85,4,.3],[4.05,47.15,4,.3],[-3.3,48.15,4,.35],[2.6,45.0,4,.4],[6.0,46.6,3,.3],[1.4,45.1,4,.4],[9.15,42.0,3,.25],[0.6,48.6,3,.3],[3.0,48.4,3,.3]].forEach(function(f){ cluster(f[0], f[1], Math.round(f[2] * 1.8), f[3] * 1.1, f[1] > 47.5 || f[0] > 5.5 ? ['arbre', 'sapins', 'arbre_automne', 'arbre', 'sapins', 'arbre_jaune'] : ['arbre', 'arbre_automne', 'arbre', 'arbre_jaune', 'sapins'], 1.4); });
   put('arbre', 5.0, 44.3, 1.7); put('arbre_jaune', 5.95, 44.5, 1.7); put('arbre_automne', 5.5, 43.75, 1.7, 1); /* Provence : arbres espacés */
+  [[5.45,44.98],[5.55,45.25],[6.05,44.78],[6.75,44.8],[2.35,45.12],[3.45,45.1],[2.85,44.98],[-0.9,43.3],[0.2,43.22],[1.3,43.08],[2.3,42.95]].forEach(function(f, i){ put('sapins', f[0], f[1], 2, i % 2, 1, 0, 1); }); /* sapins au pied des montagnes */
   // sapins à l'est (Alsace, Lorraine, Vosges, Jura, Ardennes)
   [[7.1,48.3],[6.9,48.6],[6.6,48.0],[7.3,47.9],[6.2,46.9],[5.9,46.4],[4.7,49.8],[6.8,49.0]].forEach(function(f){ cluster(f[0], f[1], 6, .22, ['sapins', 'sapins', 'arbre'], 1.4); });
   // plus de champs et de vignes
@@ -91,7 +92,7 @@ function sprItems(){
   sprList().forEach(function(s){
     var p = P(s[1], s[2]), t = terrainU(p[0], p[1]), marine = !!SPR_MARINE[s[0]];
     if(MASK && SPR_MARINE[s[0]] !== 2 && !/^(chaine|lac)/.test(s[0]) && (marine ? t !== 0 : t !== 1)) return;
-    items.push({ id:s[0], x0:s[1], y0:s[2], x:p[0], y:p[1], w:s[3], h:s[3] * (SPR_AR[s[0]] || 1) * (s[5] || 1), f:s[4], sy:s[5] || 1, r:s[6] || 0 });
+    items.push({ id:s[0], x0:s[1], y0:s[2], x:p[0], y:p[1], w:s[3], h:s[3] * (SPR_AR[s[0]] || 1) * (s[5] || 1), f:s[4], sy:s[5] || 1, r:s[6] || 0, pied:s[7] || 0 });
   });
   /* pas de superposition : les éléments placés d'abord (monuments, villes, relief) gardent leur place */
   var PRIO = { lac:0, massif_alpes_a:-1, massif_alpes_b:-1, mt_neige:0, massif_central:-1, chaine_alpes:0, chaine_pyrenees:0, mt_haute:0, mt_basse:0, arete:0, pic_sapins:0, massif_iso:0, chaine_iso:0, massif_alpes_nord:0, massif_alpes_sud:0, massif_pyrenees:0, pic_alpin:0, massif_pics:0, massif:0, pic_neige:0, massif_brun:0, pic_brun:0, montagnes_douces:0, colline:0, tour_eiffel:0, arc_triomphe:0, fourviere:0, basilique_marseille:0, cathedrale_strasbourg:0, beffroi_lille:0, bourse_bordeaux:0, mont_saint_michel:0, aeroport:0, port:0, usine_aero:0, chantier_naval:0, dune:0 };
@@ -103,9 +104,9 @@ function sprItems(){
     if(!SPR_MARINE[it.id] && it.id !== 'dune' && ((it.x0 > -1.3 && it.x0 < -0.95 && it.y0 > 44.55 && it.y0 < 44.78) || (it.x0 > -1.05 && it.x0 < -0.55 && it.y0 > 45.05 && it.y0 < 45.65))) return;
     if(MASK && !SPR_MARINE[it.id] && !/^(chaine|dune)/.test(it.id) && (terrainU(bx[0] - it.w * .3, it.y) === 0 || terrainU(bx[2] + it.w * .3, it.y) === 0 || terrainU(it.x, it.y + it.h * .35) === 0 || terrainU(it.x, it.y - it.h * .3) === 0)) return; /* marge : ni pieds dans l'eau ni collé au rivage */ /* pieds dans l'eau : non */
     var MTN = false;
-    var clash = kept.some(function(k){ if(BIG_SPR.test(k.id) && !BIG_SPR.test(it.id)){ var m = (k.b[2] - k.b[0]) * .12; if(bx[2] > k.b[0] - m && bx[0] < k.b[2] + m && bx[3] > k.b[1] - m && bx[1] < k.b[3] + m) return true; } if(MTN && /massif|pic|montagne|colline/.test(k.id)) return false; var ix = Math.min(bx[2], k.b[2]) - Math.max(bx[0], k.b[0]), iy = Math.min(bx[3], k.b[3]) - Math.max(bx[1], k.b[1]);
+    var clash = !it.pied && kept.some(function(k){ if(BIG_SPR.test(k.id) && !BIG_SPR.test(it.id)){ var m = /^(pin|arbre|sapins)/.test(it.id) ? -(k.b[2] - k.b[0]) * .04 : (k.b[2] - k.b[0]) * .12; if(bx[2] > k.b[0] - m && bx[0] < k.b[2] + m && bx[3] > k.b[1] - m && bx[1] < k.b[3] + m) return true; } if(MTN && /massif|pic|montagne|colline/.test(k.id)) return false; var ix = Math.min(bx[2], k.b[2]) - Math.max(bx[0], k.b[0]), iy = Math.min(bx[3], k.b[3]) - Math.max(bx[1], k.b[1]);
       return ix > 0 && iy > 0 && ((BIG_SPR.test(k.id) !== BIG_SPR.test(it.id)) || ix * iy > .35 * Math.min((bx[2] - bx[0]) * (bx[3] - bx[1]), (k.b[2] - k.b[0]) * (k.b[3] - k.b[1]))); });
-    if(!clash && /^(pin|arbre|sapins)/.test(it.id)) clash = kept.some(function(k){ if(!/^(mt_|montagnes|massif|chaine|pin|arbre|sapins)/.test(k.id)) return false; var ix = Math.min(bx[2], k.b[2]) - Math.max(bx[0], k.b[0]), iy = Math.min(bx[3], k.b[3]) - Math.max(bx[1], k.b[1]); return ix > 0 && iy > 0 && ix * iy > (/^(pin|arbre|sapins)/.test(k.id) ? .15 : 0) * (bx[2] - bx[0]) * (bx[3] - bx[1]); });
+    if(!clash && !it.pied && /^(pin|arbre|sapins)/.test(it.id)) clash = kept.some(function(k){ if(!/^(mt_|montagnes|massif|chaine|pin|arbre|sapins)/.test(k.id)) return false; var ix = Math.min(bx[2], k.b[2]) - Math.max(bx[0], k.b[0]), iy = Math.min(bx[3], k.b[3]) - Math.max(bx[1], k.b[1]); return ix > 0 && iy > 0 && ix * iy > (/^(pin|arbre|sapins)/.test(k.id) ? .15 : it.id === 'sapins' ? .3 : 0) * (bx[2] - bx[0]) * (bx[3] - bx[1]); });
     if(!clash && MASK && /pavillon|maison|immeuble|boulangerie|haussmann|ferme/.test(it.id)){ var mx = it.w * 1.3, my = it.h * 1.1; if(terrainU(it.x - mx, it.y) === 0 || terrainU(it.x + mx, it.y) === 0 || terrainU(it.x, it.y + my) === 0 || terrainU(it.x, it.y - my) === 0) clash = true; } /* maisons : loin du rivage */
     if(!clash){ it.b = bx; kept.push(it); }
   });
