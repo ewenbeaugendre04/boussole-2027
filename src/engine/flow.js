@@ -216,7 +216,7 @@ function showRecap(){
     '<div class="rc-sec">Budget et indicateurs</div><div class="kv rc-kv"><span>Déficit annuel</span><b>' + f1(wk.def) + ' → ' + f1(curDeficit()) + ' ' + esc(UNIT) + '</b><span>Dette</span><b>' + f1(wk.dette) + ' → ' + f1(S.dette) + ' ' + esc(UNIT) + '</b><span>À la clôture de la semaine</span><b>+' + f1(weekly) + ' ' + esc(UNIT) + ' de dette</b></div>' +
     (inds ? '<div class="chips">' + inds + '</div>' : '<p class="muted" style="margin:6px 0 0">Les indicateurs n\'ont pas bougé cette semaine.</p>') +
     (refs ? '<div class="rc-sec">Réforme en cours</div><ul class="rc-list">' + refs + '</ul>' : '') + progressHtml() +
-    '<p class="muted" style="margin:10px 0 0">Un résumé de tes choix, sans note : aucune direction n\'est meilleure qu\'une autre.</p>';
+    '<p class="muted" style="margin:10px 0 0">Un résumé de vos choix, sans note : aucune direction n\'est meilleure qu\'une autre.</p>';
   var last = S.dayIdx + 1 >= DAYS.length;
   var card = openCard(html, { label:'Bilan du mois', cls:'sheet recap', anim:'flipin', footer:'<div class="confirm-row" style="margin:0"><button class="btn pressable" data-close>Rester</button><button class="btn brass pressable" id="rcNext">' + (last ? 'Voir le bilan final' : 'Semaine suivante') + '</button></div>' });
   runEff(card);

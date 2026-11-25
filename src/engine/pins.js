@@ -15,13 +15,19 @@ function renderPins(popIds){
     if(!o){ var a = k * 2.35, r = 6.5 * Math.sqrt(k - 1); o = [Math.cos(a) * r, Math.sin(a) * r * .8]; }
     return [base[0] + o[0], base[1] + o[1]];
   }
-  Object.keys(S.decided).forEach(function(id){
-    var m = EVMAP[id]; if(!m || m.day === S.dayIdx) return;
-    var p = pos(m.ev.region); items.push({ y:p[1], s:pinHtml('past', id, 'done', p, m.ev) });
-  });
+  /* plus de drapeau une fois la mission terminée : seuls les événements à traiter restent sur la carte */
   todayEvents().forEach(function(ev){
-    var p = pos(ev.region), done = !!S.decided[ev.id];
+    if(S.decided[ev.id]) return;
+    var p = pos(ev.region), done = false;
     items.push({ y:p[1], s:pinHtml(done ? 'done' : (ev.kind === 'majeur' ? 'major' : 'banal'), ev.id, done ? 'done' : 'event', p, ev) });
+  });
+  /* réformes en chantier : barre d'avancement façon « amélioration » au-dessus d'un bâtiment */
+  Object.keys(S.reforms || {}).forEach(function(id){
+    var r = S.reforms[id], pr = progById(id); if(!r || r.status !== 'en_cours' || !pr) return;
+    var steps = arr(pr.steps), tot = progWeeks(pr), done = 0;
+    for(var k = 0; k < r.step && k < steps.length; k++) done += Math.max(1, num(steps[k].weeks, 1));
+    if(steps[r.step]) done += Math.max(1, num(steps[r.step].weeks, 1)) - r.left;
+    var p = pos(nationalRegion()); items.push({ y:p[1], s:reformBar(id, pr, Math.max(0, Math.min(1, done / Math.max(1, tot))), tot - done, p) });
   });
   S.notes.forEach(function(n){
     if(n.due > S.dayIdx || n.read || !n.shown) return;
@@ -60,6 +66,12 @@ function pinHtml(kind, id, type, p, obj){
   }
   return o + '</svg></button>';
 }
+function reformBar(id, pr, f, left, p){
+  var q = U2P(p[0] - 20, p[1] + 6), w = 148;
+  return '<button class="rfbar pressable" data-id="' + esc(id) + '" data-type="reform" aria-label="' + esc('Réforme en cours : ' + pr.label + ', ' + Math.round(f * 100) + ' %') + '" style="left:' + F(q[0] - w / 2) + 'px;top:' + F(q[1] - 40) + 'px;width:' + F(w) + 'px">'
+    + '<span class="rf-ic"><img src="' + SPR_DIR + 'grue_chantier.webp" alt=""></span><span class="rf-tx"><b>' + esc(shortLabel(pr.label)) + '</b><span class="rf-tr"><i style="width:' + Math.round(f * 100) + '%"></i></span><small>' + (left > 0 ? left + ' sem. restante' + (left > 1 ? 's' : '') : 'Bientôt prête') + '</small></span></button>';
+}
+function shortLabel(t){ t = String(t || ''); return t.length > 26 ? t.slice(0, 25).replace(/\s+\S*$/, '') + '…' : t; }
 function pinRect(id){ var el = $('pinl').querySelector('[data-id="' + cssEsc(id) + '"]'); return el ? el.getBoundingClientRect() : null; }
 $('pinl').addEventListener('click', function(e){ var p = e.target.closest('.pin'); if(p) onPin(p.getAttribute('data-id'), p.getAttribute('data-type')); });
 function onPin(id, type){
@@ -67,6 +79,7 @@ function onPin(id, type){
   snd('tap');
   if(type === 'event'){ var m = EVMAP[id]; if(m) playEvent(m.ev); }
   else if(type === 'note'){ var n = S.notes.filter(function(n){ return n.id === id; })[0]; if(n) playNote(n); }
+  else if(type === 'reform'){ openReform(id); }
   else if(type === 'done'){ var mm = EVMAP[id]; if(mm) openRecap(mm.ev); }
 }
 

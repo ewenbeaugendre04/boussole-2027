@@ -106,7 +106,7 @@ function applyRecall(ev){
   S.recallDone[ev.id] = r.choice || true;
   var b = num(r.budget), ch = applyInd(r.ind);
   if(b) S.annual += b;
-  if(b || Object.keys(ch).length){ logImpact({ kind:'recall', title:ev.title, label:'Suite de ta décision passée', ind:ch, budget:b, once:0 }); save(); setTimeout(function(){ renderAll(ch); }, 500); }
+  if(b || Object.keys(ch).length){ logImpact({ kind:'recall', title:ev.title, label:'Suite de votre décision passée', ind:ch, budget:b, once:0 }); save(); setTimeout(function(){ renderAll(ch); }, 500); }
   else save();
 }
 /* journal des effets : sert aux annonces, au récap mensuel et au bilan */

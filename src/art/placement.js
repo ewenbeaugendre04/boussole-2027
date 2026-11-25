@@ -197,6 +197,8 @@ function placeLabel(el, x, y, labLayer, sf, ownRc, fontPx, inPlanche){
   SCENE.labs.push(best.rc); lab._rc = best.rc;
   return best;
 }
+/* véhicules dont le dessin regarde vers la gauche (les autres regardent à droite) */
+var VEH_LEFT = { tracteur:1, camion:1, voiture:1, bus:1, tgv:1, ferry:1, voiture_police:1 };
 function spawnFx(fx, layer, opts){
   opts = opts || {};
   var k = opts.k || fxK(), n = clamp(Math.round(num(fx.count, 1)), 1, 12), def = OBJ[fx.obj] || OBJ.etiquette;
@@ -215,7 +217,7 @@ function spawnFx(fx, layer, opts){
   var sf = planche ? null : safeRect();
   var els = [], delay = num(fx.delay) * ds, groupOff = null;
   for(var i = 0; i < n; i++){
-    var el = objEl(fx.obj, k, i === 0 ? fx.label : null, moving && dx < 0 && def.veh);
+    var el = objEl(fx.obj, k, i === 0 ? fx.label : null, moving && def.veh && (VEH_LEFT[fx.obj] ? dx > 0 : dx < 0)); /* le véhicule regarde toujours vers où il roule */
     var x, y, rc = null;
     if(moving){
       /* convoi compact : rangées de 3 au plus (une longue file finissait poussée le long des côtes) */

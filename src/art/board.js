@@ -106,7 +106,7 @@ function buildBoard(){
   h.push('<g id="upright">' + up.map(function(u){ return u.s; }).join('') + '</g>');
   // noms de régions
   h.push(insetSvg());
-  $('labelsvg').innerHTML = ('<g id="rlabels">' + REGIONS.filter(function(r){ return !r.national && !r.inset && r.abroad && r.id !== 'frontiere_est'; /* pas de noms de régions françaises (demande d'Ewen) */ }).map(function(r){ var p = RP(r.x, r.y); return '<text class="rlabel' + (r.abroad ? ' abroad' : '') + '" x="' + F(p[0]) + '" y="' + F(p[1] + (r.abroad ? -1.8 : 3.6)) + '" text-anchor="middle">' + esc(shortRegion(r.label)) + '</text>'; }).join('') + '</g>');
+  $('labelsvg').innerHTML = ('<g id="rlabels">' + REGIONS.filter(function(r){ return !r.national && !r.inset && r.abroad && r.id !== 'frontiere_est'; /* pas de noms de régions françaises (demande d'Ewen) */ }).map(function(r){ var p = RP(r.x, r.y); return '<text class="rlabel' + (r.abroad ? ' abroad' : '') + '" x="' + F(p[0]) + '" y="' + F(p[1] + (r.abroad ? -1.8 : 3.6)) + '" text-anchor="middle">' + esc(shortRegion(r.label)) + '</text>'; }).join('') + [['Royaume-Uni', 22, 4], ['Suisse', 94, 46], ['Italie', 99, 66], ['Belgique', 72, 6]].map(function(c){ var p = RP(c[1], c[2]); return '<text class="rlabel abroad" x="' + F(p[0]) + '" y="' + F(p[1]) + '" text-anchor="middle">' + c[0] + '</text>'; }).join('') + '</g>'); /* pays voisins (étiquettes seules) */
   svg.innerHTML = h.join('');
   franceEl = $('frTop'); corseEl = $('coTop'); buildMask();
   buildWaves(R);

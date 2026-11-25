@@ -60,7 +60,7 @@ function sprList(){
   put('mt_basse', 7.0, 48.35, 2.8, 1); put('mt_basse', 6.9, 47.95, 2.4); /* Vosges */
   put('montagnes_douces', 5.7, 46.15, 2.1, 1); put('mt_basse', 6.6, 47.25, 2.2); /* Jura (suite) */
   put('mt_basse', 6.1, 46.7, 2.2); put('montagnes_douces', 5.85, 46.6, 2, 1); put('mt_basse', 6.45, 47.1, 2.1, 1); /* Jura (plus) */
-  put('mt_haute', 9.0, 42.2, 3.6); put('mt_basse', 9.15, 41.85, 3, 1); put('montagnes_douces', 9.05, 42.6, 2.6); /* Corse */
+  put('mt_neige', 9.05, 42.25, 3.4); put('mt_basse', 9.15, 41.9, 2.8, 1); put('mt_basse', 8.95, 42.55, 2.6); put('sapins', 9.3, 42.05, 1.6, 0, 1, 0, 1); /* Corse */
   put('montagnes_douces', 7.1, 48.65, 2.1); put('mt_basse', 6.75, 48.15, 2.1, 1); /* Vosges (suite) */
   put('lac', 6.17, 45.86, 1.9); /* lac d'Annecy */
   put('massif_alpes_a', 6.5, 45.0, 15); put('mt_neige', 6.85, 44.42, 3.4); put('mt_basse', 6.45, 44.3, 2.9, 1); put('mt_basse', 7.15, 44.2, 2.7); put('mt_basse', 6.2, 44.62, 2.9); put('montagnes_douces', 6.6, 44.45, 2.6, 1); put('mt_basse', 5.9, 44.8, 2.6, 1); put('mt_basse', 6.55, 44.78, 2.8); /* sous les Alpes */ put('pavillon', 2.56, 44.42, 2); put('maison_pierre', 2.4, 44.32, 2); put('pavillon', 2.62, 44.27, 2, 1); /* Rodez */ put('montagnes_douces', 6.55, 44.15, 2.6); put('mt_basse', 6.3, 44.55, 2.6, 1); /* Alpes du Sud, le long de la frontière */ put('massif_central', 2.9, 45.15, 11); /* Alpes : chaîne nord-sud le long de la frontière */
@@ -157,7 +157,8 @@ function sprBig(list, nuit){
   var l = $('sprl'); if(!l || typeof U2P !== 'function') return;
   l.innerHTML = list.map(function(it){
     var w = it.w * VBK, h = it.h * VBK, q = U2P(it.x, it.y), src = nuit && SPR_NUIT[it.id] || SPR_DIR + it.id + '.webp';
-    return '<img src="' + src + '" alt="" decoding="async" style="left:' + F(q[0] - w / 2) + 'px;top:' + F(q[1] - h * .86) + 'px;width:' + F(w) + 'px;height:' + F(h) + 'px;transform-origin:50% 86%;transform:' + (it.r ? 'rotate(' + it.r + 'deg) ' : '') + (it.f ? 'scaleX(-1)' : 'none') + '">';
+    var ombre = '<i class="relief-pied" style="left:' + F(q[0] - w * .55) + 'px;top:' + F(q[1] - h * .34) + 'px;width:' + F(w * 1.1) + 'px;height:' + F(h * .48) + 'px"></i>'; /* fondu herbe / massif */
+    return ombre + '<img src="' + src + '" alt="" decoding="async" style="left:' + F(q[0] - w / 2) + 'px;top:' + F(q[1] - h * .86) + 'px;width:' + F(w) + 'px;height:' + F(h) + 'px;transform-origin:50% 86%;transform:' + (it.r ? 'rotate(' + it.r + 'deg) ' : '') + (it.f ? 'scaleX(-1)' : 'none') + '">';
   }).join('');
 }
 function buildSprites(){

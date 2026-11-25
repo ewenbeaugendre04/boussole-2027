@@ -16,7 +16,7 @@ function showTitle(){
   // le plateau tourne en fond
   if(!S){ S = freshState(1); S._preview = true; renderAll(); $('pinl').innerHTML = ''; $('stayl').innerHTML = ''; buildClouds('soleil'); setWeather('soleil'); }
   var html = '<div class="logo">' + COMPASS + '<h1>Boussole<span>2027</span></h1></div>' +
-    '<p class="pitch">Aux commandes du pays, semaine après semaine. Des choix concrets, un budget qui tourne, et ta boussole qui se dessine.</p>';
+    '<p class="pitch">Aux commandes du pays, semaine après semaine. Des choix concrets, un budget qui tourne, et votre boussole qui se dessine.</p>';
   if(saved && !saved.finished){
     html += '<button class="btn brass pressable" id="btnContinue" data-autofocus>Continuer la partie<br><small style="font-family:var(--f-body);font-weight:400;font-size:13px">semaine ' + (saved.dayIdx + 1) + ' sur ' + DAYS.length + ', ' + MONTHS[(saved.month - 1) % 12] + ' ' + saved.year + '</small></button><button class="btn pressable" id="btnNew">Nouvelle partie</button>';
   } else {
@@ -31,7 +31,7 @@ function showTitle(){
 }
 function showLevel(){
   var opts = [[1, 'De loin', 'Je découvre, explique-moi simplement.'], [2, 'Un peu', 'Je suis l\'actu de temps en temps.'], [3, 'De près', 'Donne-moi les détails et les vrais termes.']];
-  var html = '<h2 class="lvq">La politique, tu suis ça comment ?</h2><p class="muted" style="margin:0 0 4px;font-size:14px">On adapte les textes du jeu. Tu pourras changer dans les réglages.</p>' +
+  var html = '<h2 class="lvq">La politique, vous suivez ça comment ?</h2><p class="muted" style="margin:0 0 4px;font-size:14px">On adapte les textes du jeu. Vous pourrez changer dans les réglages.</p>' +
     opts.map(function(o){ return '<button class="lvl pressable" data-lvl="' + o[0] + '"><span class="dots" aria-hidden="true">' + [1,2,3].map(function(k){ return '<i class="' + (k <= o[0] ? 'f' : '') + '" style="height:' + (8 + k * 6) + 'px"></i>'; }).join('') + '</span><span><b>' + o[1] + '</b><span>' + o[2] + '</span></span></button>'; }).join('');
   var s = screen(html, 'level');
   s.querySelectorAll('.lvl').forEach(function(b){ b.addEventListener('click', function(){
