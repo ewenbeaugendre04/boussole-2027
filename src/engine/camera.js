@@ -98,6 +98,7 @@ function stayInfo(key){
   return t + (ch ? '<br>Ton choix : ' + esc(choiceLabel(ch)) : '');
 }
 function tapInfo(wx, wy){
+  return; /* plus de notification au toucher d'une région, d'un pays ou d'un objet (demande d'Ewen) */
   var hit = null;
   Array.prototype.forEach.call($('stayl').children, function(el){ var rc = el._rc; if(rc && el._stay && wx > rc.l - 4 && wx < rc.r + 4 && wy > rc.t - 4 && wy < rc.b + 4) hit = el; });
   if(hit){ var t = stayInfo(hit._stay.key); if(t){ toast(t, 3200); return; } }

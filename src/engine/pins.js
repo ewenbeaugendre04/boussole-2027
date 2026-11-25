@@ -67,9 +67,8 @@ function pinHtml(kind, id, type, p, obj){
   return o + '</svg></button>';
 }
 function reformBar(id, pr, f, left, p){
-  var q = U2P(p[0] - 20, p[1] + 6), w = 148;
-  return '<button class="rfbar pressable" data-id="' + esc(id) + '" data-type="reform" aria-label="' + esc('Réforme en cours : ' + pr.label + ', ' + Math.round(f * 100) + ' %') + '" style="left:' + F(q[0] - w / 2) + 'px;top:' + F(q[1] - 40) + 'px;width:' + F(w) + 'px">'
-    + '<span class="rf-ic"><img src="' + SPR_DIR + 'grue_chantier.webp" alt=""></span><span class="rf-tx"><b>' + esc(shortLabel(pr.label)) + '</b><span class="rf-tr"><i style="width:' + Math.round(f * 100) + '%"></i></span><small>' + (left > 0 ? left + ' sem. restante' + (left > 1 ? 's' : '') : 'Bientôt prête') + '</small></span></button>';
+  var q = U2P(p[0] - 7, p[1] + 3);
+  return '<button class="rfbar pressable" data-id="' + esc(id) + '" data-type="reform" aria-label="' + esc('Réforme en cours : ' + pr.label + ', ' + Math.round(f * 100) + ' %, ' + left + ' semaine(s) restante(s)') + '" style="left:' + F(q[0] - 20) + 'px;top:' + F(q[1] - 30) + 'px"><img src="' + SPR_DIR + 'grue_chantier.webp" alt=""><span class="rf-tr"><i style="width:' + Math.max(8, Math.round(f * 100)) + '%"></i></span></button>';
 }
 function shortLabel(t){ t = String(t || ''); return t.length > 26 ? t.slice(0, 25).replace(/\s+\S*$/, '') + '…' : t; }
 function pinRect(id){ var el = $('pinl').querySelector('[data-id="' + cssEsc(id) + '"]'); return el ? el.getBoundingClientRect() : null; }

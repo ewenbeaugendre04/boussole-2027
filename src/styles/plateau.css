@@ -195,12 +195,9 @@
 
 
 
-/* barre d'avancement d'une réforme en chantier */
-.rfbar{position:absolute;display:flex;gap:5px;align-items:center;padding:4px 7px 4px 4px;border-radius:12px;background:var(--paper);border:1.5px solid var(--line);box-shadow:0 3px 0 rgba(0,0,0,.12);font:inherit;color:var(--ink);text-align:left;pointer-events:auto}
-.rfbar .rf-ic{flex:none;width:30px;height:30px;display:grid;place-items:center}.rfbar .rf-ic img{width:30px;height:30px;object-fit:contain}
-.rfbar .rf-ic svg{width:16px;height:16px;color:#fff;fill:#fff}
-.rfbar .rf-tx{display:flex;flex-direction:column;min-width:0;flex:1}
-.rfbar b{font-size:11px;line-height:1.15;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.rfbar small{font-size:10px;opacity:.7}
-.rfbar .rf-tr{height:6px;border-radius:4px;background:rgba(0,0,0,.1);overflow:hidden;margin:2px 0 1px}
-.rfbar .rf-tr i{display:block;height:100%;border-radius:4px;background:linear-gradient(90deg,#F2B33D,#F28C38);transition:width .6s}
+/* barre d'avancement d'une réforme en chantier : petite grue + jauge, sans cadre ni texte */
+.rfbar{position:absolute;width:40px;height:38px;padding:0;border:0;background:none;display:flex;flex-direction:column;align-items:center;gap:2px;pointer-events:auto;cursor:pointer}
+.rfbar img{width:28px;height:28px;object-fit:contain;filter:drop-shadow(0 1px 1px rgba(0,0,0,.25))}
+.rfbar .rf-tr{width:30px;height:5px;border-radius:3px;background:rgba(0,0,0,.28);overflow:hidden;box-shadow:0 0 0 1.5px rgba(255,255,255,.85)}
+.rfbar .rf-tr i{display:block;height:100%;border-radius:3px;background:linear-gradient(90deg,#F2B33D,#F28C38);transition:width .6s}
+.rfbar:active{transform:scale(.92)}
