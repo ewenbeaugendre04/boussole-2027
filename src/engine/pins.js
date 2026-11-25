@@ -66,13 +66,15 @@ function pinHtml(kind, id, type, p, obj){
   }
   return o + '</svg></button>';
 }
+/* bâtiment parlant selon le domaine de la réforme */
+var RF_SPR = { energie:'eolienne', europe:'hemicycle', salaires:'billets', logement:'immeuble', sante:'hopital', securite:'commissariat', immigration:'poste_frontiere', ecole:'ecole', agriculture:'ferme', defense:'fregate', numerique:'antenne', retraites:'ehpad', fiscalite:'mairie', transports:'gare' };
 function reformBar(id, pr, f, left, p){
   var q = U2P(p[0] - 7, p[1] + 3);
-  return '<button class="rfbar pressable" data-id="' + esc(id) + '" data-type="reform" aria-label="' + esc('Réforme en cours : ' + pr.label + ', ' + Math.round(f * 100) + ' %, ' + left + ' semaine(s) restante(s)') + '" style="left:' + F(q[0] - 20) + 'px;top:' + F(q[1] - 30) + 'px"><img src="' + SPR_DIR + 'grue_chantier.webp" alt=""><span class="rf-tr"><i style="width:' + Math.max(8, Math.round(f * 100)) + '%"></i></span></button>';
+  return '<button class="rfbar pressable" data-id="' + esc(id) + '" data-type="reform" aria-label="' + esc('Réforme en cours : ' + pr.label + ', ' + Math.round(f * 100) + ' %, ' + left + ' semaine(s) restante(s)') + '" style="left:' + F(q[0] - 20) + 'px;top:' + F(q[1] - 30) + 'px"><img src="' + SPR_DIR + (RF_SPR[pr.sector] || 'grue_chantier') + '.webp" alt=""><span class="rf-tr"><i style="width:' + Math.max(8, Math.round(f * 100)) + '%"></i></span></button>';
 }
 function shortLabel(t){ t = String(t || ''); return t.length > 26 ? t.slice(0, 25).replace(/\s+\S*$/, '') + '…' : t; }
 function pinRect(id){ var el = $('pinl').querySelector('[data-id="' + cssEsc(id) + '"]'); return el ? el.getBoundingClientRect() : null; }
-$('pinl').addEventListener('click', function(e){ var p = e.target.closest('.pin'); if(p) onPin(p.getAttribute('data-id'), p.getAttribute('data-type')); });
+$('pinl').addEventListener('click', function(e){ var p = e.target.closest('.pin, .rfbar'); if(p) onPin(p.getAttribute('data-id'), p.getAttribute('data-type')); });
 function onPin(id, type){
   if(RUN.busy) return;
   snd('tap');

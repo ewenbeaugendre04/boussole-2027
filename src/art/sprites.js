@@ -143,7 +143,8 @@ function sprSvg(){
   var used = {}, items = sprItems(), defs = '', uses = '';
   var nuit = document.documentElement.getAttribute('data-theme') === 'dark' || ($('app') && $('app').classList.contains('is-night'));
   var big = [];
-  items = items.filter(function(it){ if(BIG_SPR.test(it.id)){ big.push(it); return false; } return true; });
+  items = items.filter(function(it){ if(BIG_SPR.test(it.id) || it.pied){ big.push(it); return false; } return true; });
+  big.sort(function(a, b){ return a.y - b.y; });
   sprBig(big, nuit);
   items.forEach(function(it){
     if(!used[it.id]){ used[it.id] = 1; defs += '<image id="sp_' + it.id + '" href="' + (nuit && SPR_NUIT[it.id] || SPR_DATA[it.id]) + '" width="1" height="' + (SPR_AR[it.id] || 1) + '" preserveAspectRatio="none"/>'; }
@@ -157,7 +158,8 @@ function sprBig(list, nuit){
   var l = $('sprl'); if(!l || typeof U2P !== 'function') return;
   l.innerHTML = list.map(function(it){
     var w = it.w * VBK, h = it.h * VBK, q = U2P(it.x, it.y), src = nuit && SPR_NUIT[it.id] || SPR_DIR + it.id + '.webp';
-    var ombre = '<i class="relief-pied" style="left:' + F(q[0] - w * .68) + 'px;top:' + F(q[1] - h * .3) + 'px;width:' + F(w * 1.36) + 'px;height:' + F(h * .55) + 'px"></i>'; /* fondu herbe / massif */
+    if(it.pied) return '<img src="' + src + '" alt="" decoding="async" style="left:' + F(q[0] - w / 2) + 'px;top:' + F(q[1] - h * .86) + 'px;width:' + F(w) + 'px;height:' + F(h) + 'px;' + (it.f ? 'transform:scaleX(-1)' : '') + '">'; /* sapins du pied : devant le massif */
+    var ombre = /^chaine/.test(it.id) ? '' : '<i class="relief-pied" style="left:' + F(q[0] - w * .4) + 'px;top:' + F(q[1] - h * .2) + 'px;width:' + F(w * .8) + 'px;height:' + F(h * .26) + 'px"></i>'; /* embase verte (pas sous les Pyrénées, posées sur la côte) */ /* embase verte */
     return ombre + '<img src="' + src + '" alt="" decoding="async" style="left:' + F(q[0] - w / 2) + 'px;top:' + F(q[1] - h * .86) + 'px;width:' + F(w) + 'px;height:' + F(h) + 'px;transform-origin:50% 86%;transform:' + (it.r ? 'rotate(' + it.r + 'deg) ' : '') + (it.f ? 'scaleX(-1)' : 'none') + '">';
   }).join('');
 }
