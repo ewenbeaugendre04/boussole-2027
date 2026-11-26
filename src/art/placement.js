@@ -198,7 +198,7 @@ function placeLabel(el, x, y, labLayer, sf, ownRc, fontPx, inPlanche){
   return best;
 }
 /* véhicules dont le dessin regarde vers la gauche (les autres regardent à droite) */
-var VEH_LEFT = { tracteur:1, camion:1, voiture:1, bus:1, tgv:1, ferry:1, voiture_police:1 };
+var VEH_LEFT = { char:1, tracteur:1, camion:1, voiture:1, bus:1, tgv:1, ferry:1, voiture_police:1 };
 function spawnFx(fx, layer, opts){
   opts = opts || {};
   var k = opts.k || fxK(), n = clamp(Math.round(num(fx.count, 1)), 1, 12), def = OBJ[fx.obj] || OBJ.etiquette;

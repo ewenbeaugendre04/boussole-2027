@@ -274,6 +274,14 @@ var OBJ = {
   antenne:{ cat:'symboles', w:16, h:24, d:
     sh(3) + '<g fill="none" stroke="var(--roof-d)" stroke-width=".5" stroke-linejoin="round"><path d="M-2.4,0L0,-17L2.4,0M-1.6,-5H1.6M-1,-10H1M-2,-2.5L1.4,-7.5M2,-2.5L-1.4,-7.5"/></g>' + C_(0, -17.6, .9, 'var(--brass)') +
     '<g class="blk">' + P_('M-3,-20Q-4.4,-17.6 -3,-15.2M3,-20Q4.4,-17.6 3,-15.2M-5,-21.4Q-7.2,-17.6 -5,-13.8M5,-21.4Q7.2,-17.6 5,-13.8', 'none', ' stroke="var(--roof-d)" stroke-width=".45" stroke-linecap="round"') + '</g>' },
+  char:{ cat:'transports', w:20, h:14, veh:1, d:
+    sh(8) + R_(-8, -5, 16, 5, '#6E8B4E', SK) + R_(-4, -9, 8, 4, '#5C7A40', SK) + R_(-11, -8, 7, 1.4, '#5C7A40', SK) },
+  missile:{ cat:'symboles', w:14, h:14, d:
+    P_('M-5,4L4,-5L6,-6L5,-4L-4,5Z', '#8FA3A8', SK) + P_('M-5,4L-7,6L-4,5Z', '#F2A33A', SK) },
+  chien:{ cat:'nature', w:11, h:11, d:
+    sh(4) + R_(-4, -5, 7, 4, '#B08A4E', SK) + R_(2, -8, 3.5, 3.5, '#B08A4E', SK) },
+  chat:{ cat:'nature', w:10, h:10, d:
+    sh(3.5) + R_(-3.5, -5, 6, 4, '#7F8C8D', SK) + R_(1.5, -8, 3, 3, '#7F8C8D', SK) },
   colis:{ cat:'symboles', w:12, h:12, d:
     sh(4.5) + P_('M-4,0V-5.4L0,-7L4,-5.4V0L0,1.4Z', '#D4B07A', SK) + P_('M-4,-5.4L0,-4L4,-5.4M0,-4V1.4', 'none', ' stroke="#A9834C" stroke-width=".4"') + P_('M-2,-6.2L2,-4.7', 'none', ' stroke="var(--paper)" stroke-width=".8"') },
   conteneurs:{ cat:'symboles', w:22, h:14, d:

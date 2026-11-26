@@ -7,7 +7,7 @@ const GAME = new Function(src + '; return GAME;')();
 const errors = [], warns = [];
 const err = m => errors.push(m), warn = m => warns.push(m);
 // Bibliothèque v2 (SCHEMA.md, section VERSION 2)
-const OBJS = new Set(('tracteur camion voiture bus train tgv avion cargo ferry bateau_peche velo ambulance voiture_police ' +
+const OBJS = new Set(('char missile chien chat tracteur camion voiture bus train tgv avion cargo ferry bateau_peche velo ambulance voiture_police ' +
   'eolienne eolienne_mer centrale_nucleaire centrale_gaz panneaux_solaires barrage pylone borne_recharge station_service ' +
   'maison immeuble usine usine_fermee chantier_grue ecole hopital cabinet_medical mairie commissariat prison boulangerie commerce supermarche entrepot port aeroport parlement batiment_ue ferme ' +
   'foule manifestants barrage_agricole policiers soignants eleves file_attente personnage ' +
