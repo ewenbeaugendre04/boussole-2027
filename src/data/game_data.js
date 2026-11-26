@@ -10270,6 +10270,141 @@ const GAME = {
        ]
       }
      ]
+    },
+    {
+     "id": "v29_a13",
+     "kind": "banal",
+     "region": "ile_de_france",
+     "sector": "transports",
+     "title": "Le tunnel de l'A13 fermé neuf mois",
+     "simple": "Un vieux tunnel de l'autoroute vers la Normandie ferme pour travaux pendant neuf mois. Bouchons, péages en plus pour le détour : les automobilistes râlent. Que faire ?",
+     "expert": "Fermeture du tube nord du tunnel de Saint-Cloud (A13), sens Paris-province, pour des travaux de confortement ; reports de trafic vers l'A14 à péage.",
+     "context": "Le tunnel a près d'un siècle : réparer est indispensable. Compenser les usagers coûte ; ne rien faire reporte les bouchons dans les petites rues.",
+     "real": {
+      "date": "Du 16 novembre 2026 à fin août 2027",
+      "place": "Saint-Cloud (Hauts-de-Seine)",
+      "fact": "Le tunnel de Saint-Cloud est fermé dans le sens Paris-province pour plus de neuf mois de travaux de confortement.",
+      "figures": "Tube nord vieux de près d'un siècle.",
+      "sources": [
+       {
+        "label": "Préfecture d'Île-de-France : fermeture du tunnel de Saint-Cloud pour 9 mois",
+        "url": "https://www.prefectures-regions.gouv.fr/ile-de-france/Actualites/Fermeture-du-tunnel-de-Saint-Cloud-sur-l-autoroute-A13-a-partir-du-16-novembre-pour-9-mois"
+       },
+       {
+        "label": "Assemblée nationale : question sur les péages du détour par l'A14",
+        "url": "https://questions.assemblee-nationale.fr/dyn/17/questions/QANR5L17QE17635.pdf"
+       }
+      ]
+     },
+     "camera": {
+      "region": "ile_de_france",
+      "x": 50,
+      "y": 24,
+      "zoom": 2.2
+     },
+     "fx": [
+      {
+       "obj": "chantier_grue",
+       "x": 50,
+       "y": 24,
+       "anim": "pulse"
+      },
+      {
+       "obj": "voiture",
+       "x": 47.4,
+       "y": 25.5,
+       "anim": "move",
+       "to": {
+        "x": 51,
+        "y": 22.1
+       },
+       "delay": 0.2
+      },
+      {
+       "obj": "panneau",
+       "x": 51,
+       "y": 23,
+       "anim": "appear",
+       "label": "Tunnel fermé",
+       "delay": 0.5
+      }
+     ],
+     "choices": [
+      {
+       "id": "a",
+       "label": "Péage gratuit sur le détour pendant les travaux",
+       "label_expert": "Gratuité temporaire du péage de l'itinéraire de déviation",
+       "plus": "Les automobilistes ne paient pas plus.",
+       "minus": "L'État compense le concessionnaire.",
+       "budget": -0.05,
+       "axes": {
+        "eco": -1
+       },
+       "ind": {
+        "pouvoir_achat": 1
+       },
+       "fx": [
+        {
+         "obj": "pieces",
+         "x": 48,
+         "y": 23,
+         "anim": "appear"
+        }
+       ],
+       "budget_note": "Compensation du péage : faible coût, le déficit augmente très peu."
+      },
+      {
+       "id": "b",
+       "label": "Plus de trains et de bus pendant le chantier",
+       "label_expert": "Renfort temporaire des transports en commun vers l'ouest",
+       "plus": "Moins de voitures sur la route.",
+       "minus": "Coûte aux finances publiques.",
+       "budget": -0.05,
+       "axes": {
+        "env": 1
+       },
+       "ind": {
+        "co2": -1,
+        "services": 1
+       },
+       "fx": [
+        {
+         "obj": "train",
+         "x": 45.6,
+         "y": 23.6,
+         "anim": "move",
+         "to": {
+          "x": 52,
+          "y": 24
+         }
+        }
+       ],
+       "budget_note": "Trains et bus en plus : faible coût, le déficit augmente très peu."
+      },
+      {
+       "id": "c",
+       "label": "Travailler jour et nuit pour finir plus tôt",
+       "label_expert": "Chantier en continu pour réduire la durée de fermeture",
+       "plus": "Fermeture raccourcie.",
+       "minus": "Surcoût et nuisances pour les riverains.",
+       "budget": -0.03,
+       "axes": {
+        "eco": 0
+       },
+       "ind": {
+        "emploi": 1
+       },
+       "fx": [
+        {
+         "obj": "chantier_grue",
+         "x": 50,
+         "y": 24,
+         "anim": "grow"
+        }
+       ],
+       "budget_note": "Travaux de nuit : surcoût, le déficit augmente très peu."
+      }
+     ]
     }
    ]
   },
@@ -11695,6 +11830,128 @@ const GAME = {
        ]
       }
      ]
+    },
+    {
+     "id": "v32_cse",
+     "kind": "banal",
+     "region": "auvergne_rhone_alpes",
+     "sector": "salaires",
+     "title": "Plus d'heures pour les élus du personnel ?",
+     "simple": "Dans une PME, l'élue du personnel dit manquer de temps pour défendre ses collègues. Une proposition de loi veut augmenter les heures qu'on lui accorde. Le patron craint pour la production. Que faire ?",
+     "expert": "Proposition de loi relevant le crédit d'heures de délégation des élus du comité social et économique (CSE), notamment de 10 à 16 heures par mois dans les entreprises de moins de 50 salariés.",
+     "context": "Des élus mieux armés améliorent le dialogue social ; mais ces heures sont payées par l'entreprise, ce qui pèse sur les petites structures.",
+     "real": {
+      "date": "Mars 2026 (proposition de loi déposée)",
+      "place": "Assemblée nationale",
+      "fact": "Une proposition de loi prévoit de relever les heures de délégation des élus du CSE, dans le cadre de la lutte contre les violences au travail.",
+      "figures": "Minimum porté de 10 à 16 heures par mois dans les entreprises de moins de 50 salariés.",
+      "sources": [
+       {
+        "label": "Éditions Tissot : vers de nouveaux leviers pour les représentants du personnel",
+        "url": "https://www.editions-tissot.fr/actualite/representants-du-personnel-ce/violences-sexistes-et-sexuelles-au-travail-vers-de-nouveaux-leviers-pour-les-representants-du-personnel"
+       }
+      ]
+     },
+     "camera": {
+      "region": "auvergne_rhone_alpes",
+      "x": 66,
+      "y": 58,
+      "zoom": 2
+     },
+     "fx": [
+      {
+       "obj": "usine",
+       "x": 66,
+       "y": 58,
+       "anim": "pulse"
+      },
+      {
+       "obj": "personnage",
+       "x": 68,
+       "y": 59,
+       "anim": "appear",
+       "delay": 0.3
+      },
+      {
+       "obj": "bulle",
+       "x": 65,
+       "y": 56,
+       "anim": "appear",
+       "label": "CSE",
+       "delay": 0.5
+      }
+     ],
+     "choices": [
+      {
+       "id": "a",
+       "label": "Augmenter les heures de délégation",
+       "label_expert": "Relèvement légal du crédit d'heures des élus du CSE",
+       "plus": "Élus mieux armés pour les salariés.",
+       "minus": "Coût pour les petites entreprises.",
+       "budget": 0,
+       "axes": {
+        "eco": -1
+       },
+       "ind": {
+        "cohesion": 1,
+        "emploi": -1
+       },
+       "fx": [
+        {
+         "obj": "bulle",
+         "x": 65,
+         "y": 56,
+         "anim": "grow",
+         "label": "CSE"
+        }
+       ]
+      },
+      {
+       "id": "b",
+       "label": "Ne rien changer",
+       "label_expert": "Maintien du crédit d'heures actuel",
+       "plus": "Pas de charge en plus.",
+       "minus": "Élus débordés dans certaines entreprises.",
+       "budget": 0,
+       "axes": {
+        "eco": 1
+       },
+       "ind": {
+        "cohesion": -1
+       },
+       "fx": [
+        {
+         "obj": "usine",
+         "x": 66,
+         "y": 58,
+         "anim": "blink"
+        }
+       ]
+      },
+      {
+       "id": "c",
+       "label": "Laisser chaque entreprise négocier",
+       "label_expert": "Crédit d'heures fixé par accord d'entreprise",
+       "plus": "S'adapte à chaque situation.",
+       "minus": "Inégalités entre salariés.",
+       "budget": 0,
+       "axes": {
+        "eco": 1
+       },
+       "ind": {
+        "cohesion": 0,
+        "emploi": 1
+       },
+       "fx": [
+        {
+         "obj": "personnage",
+         "x": 68,
+         "y": 59,
+         "anim": "grow"
+        }
+       ]
+      }
+     ]
     }
    ]
   },
@@ -13005,6 +13262,135 @@ const GAME = {
          "x": 80,
          "y": 45,
          "anim": "appear"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "v34_periscolaire",
+     "kind": "banal",
+     "region": "centre_val_de_loire",
+     "sector": "ecole",
+     "title": "Cours le matin, sport et ateliers l'après-midi ?",
+     "simple": "Une convention de citoyens tirés au sort propose les matières classiques le matin et des activités pratiques, sportives et culturelles l'après-midi. Les parents sont partagés. Que faire ?",
+     "expert": "Propositions de la Convention citoyenne sur les temps de l'enfant : apprentissages théoriques le matin, pratiques l'après-midi, devoirs faits à l'école, activités gratuites.",
+     "context": "Les spécialistes du sommeil y sont favorables ; mais encadrer des activités l'après-midi coûte cher aux communes et demande du personnel.",
+     "real": {
+      "date": "23 novembre 2025 (rapport final)",
+      "place": "Conseil économique, social et environnemental",
+      "fact": "La Convention citoyenne a adopté vingt propositions, dont une journée avec la théorie le matin et des activités pratiques, artistiques et sportives l'après-midi.",
+      "figures": "Début des cours à 9 h, fin des cours vers 15 h 30, puis devoirs à l'école et activités gratuites.",
+      "sources": [
+       {
+        "label": "Vie publique : rapport de la Convention citoyenne sur les temps de l'enfant",
+        "url": "https://www.vie-publique.fr/rapport/301032-rapport-de-la-convention-citoyenne-sur-les-temps-de-lenfant-cese"
+       },
+       {
+        "label": "Banque des territoires : la convention veut bousculer l'organisation scolaire",
+        "url": "https://www.banquedesterritoires.fr/la-convention-citoyenne-sur-les-temps-de-lenfant-veut-bousculer-lorganisation-scolaire"
+       }
+      ]
+     },
+     "camera": {
+      "region": "centre_val_de_loire",
+      "x": 46,
+      "y": 38,
+      "zoom": 2
+     },
+     "fx": [
+      {
+       "obj": "ecole",
+       "x": 46,
+       "y": 38,
+       "anim": "pulse"
+      },
+      {
+       "obj": "eleves",
+       "x": 48,
+       "y": 39,
+       "anim": "appear",
+       "delay": 0.3
+      },
+      {
+       "obj": "panneau",
+       "x": 44,
+       "y": 37,
+       "anim": "appear",
+       "label": "Après-midi : ateliers",
+       "delay": 0.5
+      }
+     ],
+     "choices": [
+      {
+       "id": "a",
+       "label": "Généraliser avec des activités gratuites",
+       "label_expert": "Généralisation des activités périscolaires gratuites l'après-midi",
+       "plus": "Égalité d'accès au sport et à la culture.",
+       "minus": "Coût élevé pour l'État et les communes.",
+       "budget": -0.6,
+       "axes": {
+        "soc": -1,
+        "eco": -1
+       },
+       "ind": {
+        "cohesion": 2,
+        "services": 1,
+        "emploi": 1
+       },
+       "fx": [
+        {
+         "obj": "eleves",
+         "x": 48,
+         "y": 39,
+         "anim": "grow"
+        }
+       ],
+       "budget_note": "Animateurs et activités : le déficit augmente."
+      },
+      {
+       "id": "b",
+       "label": "Tester dans quelques villes volontaires",
+       "label_expert": "Expérimentation dans des communes volontaires",
+       "plus": "On mesure avant de généraliser.",
+       "minus": "Inégalités entre territoires.",
+       "budget": -0.05,
+       "axes": {
+        "soc": 0
+       },
+       "ind": {
+        "services": 1
+       },
+       "fx": [
+        {
+         "obj": "ecole",
+         "x": 46,
+         "y": 38,
+         "anim": "grow"
+        }
+       ],
+       "budget_note": "Expérimentation : faible coût, le déficit augmente très peu."
+      },
+      {
+       "id": "c",
+       "label": "Garder les horaires actuels",
+       "label_expert": "Maintien de l'organisation actuelle de la journée scolaire",
+       "plus": "Pas de chamboulement pour les familles.",
+       "minus": "Rythmes jugés inadaptés aux enfants.",
+       "budget": 0,
+       "axes": {
+        "soc": 1
+       },
+       "ind": {
+        "cohesion": -1
+       },
+       "fx": [
+        {
+         "obj": "panneau",
+         "x": 44,
+         "y": 37,
+         "anim": "appear",
+         "label": "Inchangé"
         }
        ]
       }
@@ -14377,6 +14763,133 @@ const GAME = {
        ]
       }
      ]
+    },
+    {
+     "id": "v37_animaux",
+     "kind": "banal",
+     "region": "occitanie",
+     "sector": "agriculture",
+     "title": "Record d'animaux abandonnés pendant l'été",
+     "simple": "Pendant les vacances, près de 10 000 chiens et chats ont été recueillis par la SPA, un record. Les refuges sont pleins. Que faire ?",
+     "expert": "Hausse des abandons estivaux et des signalements de maltraitance ; saturation des refuges et débat sur la stérilisation des chats et la responsabilisation des acquéreurs.",
+     "context": "Durcir les règles responsabilise les maîtres ; aider les refuges coûte ; stériliser les chats errants limite les naissances.",
+     "real": {
+      "date": "Été 2026 (bilan publié en septembre)",
+      "place": "64 refuges de la SPA en France",
+      "fact": "La SPA a recueilli 9 508 animaux en deux mois d'été, un record, dont une grande majorité de chats.",
+      "figures": "+20,8 % en un an ; 6 572 chats et 2 220 chiens.",
+      "sources": [
+       {
+        "label": "La Gazette France : record des abandons dans les refuges de la SPA",
+        "url": "https://www.lagazettefrance.fr/article/animaux-record-des-abandons-cet-ete-dans-les-refuges-de-la-spa"
+       },
+       {
+        "label": "Consoglobe : bilan de l'été dans les refuges",
+        "url": "https://www.consoglobe.com/?p=10425759"
+       }
+      ]
+     },
+     "camera": {
+      "region": "occitanie",
+      "x": 50,
+      "y": 78,
+      "zoom": 2.2
+     },
+     "fx": [
+      {
+       "obj": "chien",
+       "x": 49,
+       "y": 78,
+       "anim": "appear"
+      },
+      {
+       "obj": "chat",
+       "x": 52,
+       "y": 79,
+       "anim": "appear",
+       "delay": 0.3
+      },
+      {
+       "obj": "panneau",
+       "x": 51,
+       "y": 76,
+       "anim": "appear",
+       "label": "Refuge complet",
+       "delay": 0.6
+      }
+     ],
+     "choices": [
+      {
+       "id": "a",
+       "label": "Stériliser les chats obligatoirement",
+       "label_expert": "Stérilisation obligatoire des chats non destinés à la reproduction",
+       "plus": "Moins de chatons abandonnés.",
+       "minus": "Coût pour les propriétaires.",
+       "budget": -0.05,
+       "axes": {
+        "env": 1
+       },
+       "ind": {
+        "cohesion": 1
+       },
+       "fx": [
+        {
+         "obj": "chat",
+         "x": 52,
+         "y": 79,
+         "anim": "grow"
+        }
+       ],
+       "budget_note": "Aide aux communes pour les chats errants : le déficit augmente très peu."
+      },
+      {
+       "id": "b",
+       "label": "Aider les refuges",
+       "label_expert": "Subvention nationale aux refuges et associations",
+       "plus": "Animaux mieux accueillis.",
+       "minus": "Ne traite pas la cause.",
+       "budget": -0.1,
+       "axes": {
+        "soc": 0
+       },
+       "ind": {
+        "services": 1,
+        "cohesion": 1
+       },
+       "fx": [
+        {
+         "obj": "pieces",
+         "x": 50,
+         "y": 77,
+         "anim": "appear"
+        }
+       ],
+       "budget_note": "Subventions : le déficit augmente un peu."
+      },
+      {
+       "id": "c",
+       "label": "Punir plus fort l'abandon",
+       "label_expert": "Aggravation des sanctions et contrôles de l'identification",
+       "plus": "Message dissuasif.",
+       "minus": "Difficile à prouver.",
+       "budget": 0.02,
+       "axes": {
+        "soc": 1
+       },
+       "ind": {
+        "cohesion": 0
+       },
+       "fx": [
+        {
+         "obj": "policiers",
+         "x": 53,
+         "y": 77,
+         "anim": "appear"
+        }
+       ],
+       "budget_note": "Amendes : petite recette, le déficit baisse très peu."
+      }
+     ]
     }
    ]
   },
@@ -15633,6 +16146,131 @@ const GAME = {
          "obj": "ferme",
          "x": 48,
          "y": 41,
+         "anim": "appear"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "v30_vsa",
+     "kind": "banal",
+     "region": "ile_de_france",
+     "sector": "securite",
+     "title": "Des caméras qui repèrent seules les situations à risque",
+     "simple": "Dans les gares et les stades, des logiciels analysent les images des caméras et donnent l'alerte en cas de foule anormale ou de colis abandonné. L'essai devait s'arrêter, il est prolongé. Que faire ?",
+     "expert": "Prolongation de l'expérimentation de la vidéoprotection algorithmique (sans reconnaissance faciale), lancée pour les grands événements sportifs.",
+     "context": "Pour les uns, un outil utile contre le terrorisme ; pour les autres, un bilan encore limité (fausses alertes) et un risque pour les libertés.",
+     "real": {
+      "date": "Prolongation votée en 2025-2026, jusqu'au 31 décembre 2027",
+      "place": "Parlement",
+      "fact": "L'expérimentation, lancée pour les Jeux de Paris, a été prolongée ; le Sénat a voté une seconde prolongation et une extension à certains bâtiments.",
+      "figures": "Bilan jugé « limité mais réel » ; fausses alertes relevées pendant le premier essai.",
+      "sources": [
+       {
+        "label": "Public Sénat : le Sénat prolonge et étend la vidéosurveillance algorithmique",
+        "url": "https://www.publicsenat.fr/actualites/parlementaire/loi-ripost-le-senat-prolonge-et-etend-le-recours-a-la-video-surveillance-algorithmique"
+       },
+       {
+        "label": "Clubic : la vidéosurveillance algorithmique prolongée",
+        "url": "https://www.clubic.com/actualite-592201-souriez-vous-etes-filmes-la-videosurveillance-algorithmique-se-prolonge-jusqu-en-2027.html"
+       }
+      ]
+     },
+     "camera": {
+      "region": "ile_de_france",
+      "x": 52,
+      "y": 24,
+      "zoom": 2.2
+     },
+     "fx": [
+      {
+       "obj": "antenne",
+       "x": 49.6,
+       "y": 23,
+       "anim": "pulse"
+      },
+      {
+       "obj": "foule",
+       "x": 54,
+       "y": 25,
+       "anim": "appear",
+       "delay": 0.3
+      },
+      {
+       "obj": "loupe",
+       "x": 52.3,
+       "y": 21.9,
+       "anim": "blink",
+       "delay": 0.6
+      }
+     ],
+     "choices": [
+      {
+       "id": "a",
+       "label": "Rendre le dispositif définitif",
+       "label_expert": "Pérennisation de la vidéoprotection algorithmique",
+       "plus": "Outil disponible partout.",
+       "minus": "Libertés publiques en question.",
+       "budget": -0.05,
+       "axes": {
+        "soc": 2
+       },
+       "ind": {
+        "cohesion": 0,
+        "services": 1
+       },
+       "fx": [
+        {
+         "obj": "antenne",
+         "x": 49.9,
+         "y": 23,
+         "anim": "grow"
+        }
+       ],
+       "budget_note": "Logiciels et caméras : faible coût, le déficit augmente très peu."
+      },
+      {
+       "id": "b",
+       "label": "Prolonger l'essai avec une évaluation indépendante",
+       "label_expert": "Prolongation encadrée et évaluée par une autorité indépendante",
+       "plus": "On juge sur des preuves.",
+       "minus": "Décision repoussée.",
+       "budget": -0.03,
+       "axes": {
+        "soc": 0
+       },
+       "ind": {
+        "cohesion": 1
+       },
+       "fx": [
+        {
+         "obj": "loupe",
+         "x": 52.1,
+         "y": 22,
+         "anim": "grow"
+        }
+       ],
+       "budget_note": "Évaluation : faible coût, le déficit augmente très peu."
+      },
+      {
+       "id": "c",
+       "label": "Arrêter l'expérimentation",
+       "label_expert": "Fin de l'expérimentation à son terme",
+       "plus": "Protège la vie privée.",
+       "minus": "Un outil en moins pour la police.",
+       "budget": 0,
+       "axes": {
+        "soc": -2
+       },
+       "ind": {
+        "cohesion": 0
+       },
+       "fx": [
+        {
+         "obj": "cadenas",
+         "x": 51.1,
+         "y": 25.1,
          "anim": "appear"
         }
        ]
@@ -17390,141 +18028,6 @@ const GAME = {
        "budget_note": "Économies sur les tournées : petite recette, le déficit baisse un peu."
       }
      ]
-    },
-    {
-     "id": "v29_a13",
-     "kind": "banal",
-     "region": "ile_de_france",
-     "sector": "transports",
-     "title": "Le tunnel de l'A13 fermé neuf mois",
-     "simple": "Un vieux tunnel de l'autoroute vers la Normandie ferme pour travaux pendant neuf mois. Bouchons, péages en plus pour le détour : les automobilistes râlent. Que faire ?",
-     "expert": "Fermeture du tube nord du tunnel de Saint-Cloud (A13), sens Paris-province, pour des travaux de confortement ; reports de trafic vers l'A14 à péage.",
-     "context": "Le tunnel a près d'un siècle : réparer est indispensable. Compenser les usagers coûte ; ne rien faire reporte les bouchons dans les petites rues.",
-     "real": {
-      "date": "Du 16 novembre 2026 à fin août 2027",
-      "place": "Saint-Cloud (Hauts-de-Seine)",
-      "fact": "Le tunnel de Saint-Cloud est fermé dans le sens Paris-province pour plus de neuf mois de travaux de confortement.",
-      "figures": "Tube nord vieux de près d'un siècle.",
-      "sources": [
-       {
-        "label": "Préfecture d'Île-de-France : fermeture du tunnel de Saint-Cloud pour 9 mois",
-        "url": "https://www.prefectures-regions.gouv.fr/ile-de-france/Actualites/Fermeture-du-tunnel-de-Saint-Cloud-sur-l-autoroute-A13-a-partir-du-16-novembre-pour-9-mois"
-       },
-       {
-        "label": "Assemblée nationale : question sur les péages du détour par l'A14",
-        "url": "https://questions.assemblee-nationale.fr/dyn/17/questions/QANR5L17QE17635.pdf"
-       }
-      ]
-     },
-     "camera": {
-      "region": "ile_de_france",
-      "x": 50,
-      "y": 24,
-      "zoom": 2.2
-     },
-     "fx": [
-      {
-       "obj": "chantier_grue",
-       "x": 50,
-       "y": 24,
-       "anim": "pulse"
-      },
-      {
-       "obj": "voiture",
-       "x": 47.4,
-       "y": 25.5,
-       "anim": "move",
-       "to": {
-        "x": 51,
-        "y": 22.1
-       },
-       "delay": 0.2
-      },
-      {
-       "obj": "panneau",
-       "x": 51,
-       "y": 23,
-       "anim": "appear",
-       "label": "Tunnel fermé",
-       "delay": 0.5
-      }
-     ],
-     "choices": [
-      {
-       "id": "a",
-       "label": "Péage gratuit sur le détour pendant les travaux",
-       "label_expert": "Gratuité temporaire du péage de l'itinéraire de déviation",
-       "plus": "Les automobilistes ne paient pas plus.",
-       "minus": "L'État compense le concessionnaire.",
-       "budget": -0.05,
-       "axes": {
-        "eco": -1
-       },
-       "ind": {
-        "pouvoir_achat": 1
-       },
-       "fx": [
-        {
-         "obj": "pieces",
-         "x": 48,
-         "y": 23,
-         "anim": "appear"
-        }
-       ],
-       "budget_note": "Compensation du péage : faible coût, le déficit augmente très peu."
-      },
-      {
-       "id": "b",
-       "label": "Plus de trains et de bus pendant le chantier",
-       "label_expert": "Renfort temporaire des transports en commun vers l'ouest",
-       "plus": "Moins de voitures sur la route.",
-       "minus": "Coûte aux finances publiques.",
-       "budget": -0.05,
-       "axes": {
-        "env": 1
-       },
-       "ind": {
-        "co2": -1,
-        "services": 1
-       },
-       "fx": [
-        {
-         "obj": "train",
-         "x": 45.6,
-         "y": 23.6,
-         "anim": "move",
-         "to": {
-          "x": 52,
-          "y": 24
-         }
-        }
-       ],
-       "budget_note": "Trains et bus en plus : faible coût, le déficit augmente très peu."
-      },
-      {
-       "id": "c",
-       "label": "Travailler jour et nuit pour finir plus tôt",
-       "label_expert": "Chantier en continu pour réduire la durée de fermeture",
-       "plus": "Fermeture raccourcie.",
-       "minus": "Surcoût et nuisances pour les riverains.",
-       "budget": -0.03,
-       "axes": {
-        "eco": 0
-       },
-       "ind": {
-        "emploi": 1
-       },
-       "fx": [
-        {
-         "obj": "chantier_grue",
-         "x": 50,
-         "y": 24,
-         "anim": "grow"
-        }
-       ],
-       "budget_note": "Travaux de nuit : surcoût, le déficit augmente très peu."
-      }
-     ]
     }
    ],
    "offer": [
@@ -18051,131 +18554,6 @@ const GAME = {
         }
        ],
        "budget_note": "Moins de TVA encaissée : le déficit augmente."
-      }
-     ]
-    },
-    {
-     "id": "v30_vsa",
-     "kind": "banal",
-     "region": "ile_de_france",
-     "sector": "securite",
-     "title": "Des caméras qui repèrent seules les situations à risque",
-     "simple": "Dans les gares et les stades, des logiciels analysent les images des caméras et donnent l'alerte en cas de foule anormale ou de colis abandonné. L'essai devait s'arrêter, il est prolongé. Que faire ?",
-     "expert": "Prolongation de l'expérimentation de la vidéoprotection algorithmique (sans reconnaissance faciale), lancée pour les grands événements sportifs.",
-     "context": "Pour les uns, un outil utile contre le terrorisme ; pour les autres, un bilan encore limité (fausses alertes) et un risque pour les libertés.",
-     "real": {
-      "date": "Prolongation votée en 2025-2026, jusqu'au 31 décembre 2027",
-      "place": "Parlement",
-      "fact": "L'expérimentation, lancée pour les Jeux de Paris, a été prolongée ; le Sénat a voté une seconde prolongation et une extension à certains bâtiments.",
-      "figures": "Bilan jugé « limité mais réel » ; fausses alertes relevées pendant le premier essai.",
-      "sources": [
-       {
-        "label": "Public Sénat : le Sénat prolonge et étend la vidéosurveillance algorithmique",
-        "url": "https://www.publicsenat.fr/actualites/parlementaire/loi-ripost-le-senat-prolonge-et-etend-le-recours-a-la-video-surveillance-algorithmique"
-       },
-       {
-        "label": "Clubic : la vidéosurveillance algorithmique prolongée",
-        "url": "https://www.clubic.com/actualite-592201-souriez-vous-etes-filmes-la-videosurveillance-algorithmique-se-prolonge-jusqu-en-2027.html"
-       }
-      ]
-     },
-     "camera": {
-      "region": "ile_de_france",
-      "x": 52,
-      "y": 24,
-      "zoom": 2.2
-     },
-     "fx": [
-      {
-       "obj": "antenne",
-       "x": 49.6,
-       "y": 23,
-       "anim": "pulse"
-      },
-      {
-       "obj": "foule",
-       "x": 54,
-       "y": 25,
-       "anim": "appear",
-       "delay": 0.3
-      },
-      {
-       "obj": "loupe",
-       "x": 52.3,
-       "y": 21.9,
-       "anim": "blink",
-       "delay": 0.6
-      }
-     ],
-     "choices": [
-      {
-       "id": "a",
-       "label": "Rendre le dispositif définitif",
-       "label_expert": "Pérennisation de la vidéoprotection algorithmique",
-       "plus": "Outil disponible partout.",
-       "minus": "Libertés publiques en question.",
-       "budget": -0.05,
-       "axes": {
-        "soc": 2
-       },
-       "ind": {
-        "cohesion": 0,
-        "services": 1
-       },
-       "fx": [
-        {
-         "obj": "antenne",
-         "x": 49.9,
-         "y": 23,
-         "anim": "grow"
-        }
-       ],
-       "budget_note": "Logiciels et caméras : faible coût, le déficit augmente très peu."
-      },
-      {
-       "id": "b",
-       "label": "Prolonger l'essai avec une évaluation indépendante",
-       "label_expert": "Prolongation encadrée et évaluée par une autorité indépendante",
-       "plus": "On juge sur des preuves.",
-       "minus": "Décision repoussée.",
-       "budget": -0.03,
-       "axes": {
-        "soc": 0
-       },
-       "ind": {
-        "cohesion": 1
-       },
-       "fx": [
-        {
-         "obj": "loupe",
-         "x": 52.1,
-         "y": 22,
-         "anim": "grow"
-        }
-       ],
-       "budget_note": "Évaluation : faible coût, le déficit augmente très peu."
-      },
-      {
-       "id": "c",
-       "label": "Arrêter l'expérimentation",
-       "label_expert": "Fin de l'expérimentation à son terme",
-       "plus": "Protège la vie privée.",
-       "minus": "Un outil en moins pour la police.",
-       "budget": 0,
-       "axes": {
-        "soc": -2
-       },
-       "ind": {
-        "cohesion": 0
-       },
-       "fx": [
-        {
-         "obj": "cadenas",
-         "x": 51.1,
-         "y": 25.1,
-         "anim": "appear"
-        }
-       ]
       }
      ]
     }
@@ -19303,128 +19681,6 @@ const GAME = {
        "budget_note": "Places en plus : le déficit augmente un peu."
       }
      ]
-    },
-    {
-     "id": "v32_cse",
-     "kind": "banal",
-     "region": "auvergne_rhone_alpes",
-     "sector": "salaires",
-     "title": "Plus d'heures pour les élus du personnel ?",
-     "simple": "Dans une PME, l'élue du personnel dit manquer de temps pour défendre ses collègues. Une proposition de loi veut augmenter les heures qu'on lui accorde. Le patron craint pour la production. Que faire ?",
-     "expert": "Proposition de loi relevant le crédit d'heures de délégation des élus du comité social et économique (CSE), notamment de 10 à 16 heures par mois dans les entreprises de moins de 50 salariés.",
-     "context": "Des élus mieux armés améliorent le dialogue social ; mais ces heures sont payées par l'entreprise, ce qui pèse sur les petites structures.",
-     "real": {
-      "date": "Mars 2026 (proposition de loi déposée)",
-      "place": "Assemblée nationale",
-      "fact": "Une proposition de loi prévoit de relever les heures de délégation des élus du CSE, dans le cadre de la lutte contre les violences au travail.",
-      "figures": "Minimum porté de 10 à 16 heures par mois dans les entreprises de moins de 50 salariés.",
-      "sources": [
-       {
-        "label": "Éditions Tissot : vers de nouveaux leviers pour les représentants du personnel",
-        "url": "https://www.editions-tissot.fr/actualite/representants-du-personnel-ce/violences-sexistes-et-sexuelles-au-travail-vers-de-nouveaux-leviers-pour-les-representants-du-personnel"
-       }
-      ]
-     },
-     "camera": {
-      "region": "auvergne_rhone_alpes",
-      "x": 66,
-      "y": 58,
-      "zoom": 2
-     },
-     "fx": [
-      {
-       "obj": "usine",
-       "x": 66,
-       "y": 58,
-       "anim": "pulse"
-      },
-      {
-       "obj": "personnage",
-       "x": 68,
-       "y": 59,
-       "anim": "appear",
-       "delay": 0.3
-      },
-      {
-       "obj": "bulle",
-       "x": 65,
-       "y": 56,
-       "anim": "appear",
-       "label": "CSE",
-       "delay": 0.5
-      }
-     ],
-     "choices": [
-      {
-       "id": "a",
-       "label": "Augmenter les heures de délégation",
-       "label_expert": "Relèvement légal du crédit d'heures des élus du CSE",
-       "plus": "Élus mieux armés pour les salariés.",
-       "minus": "Coût pour les petites entreprises.",
-       "budget": 0,
-       "axes": {
-        "eco": -1
-       },
-       "ind": {
-        "cohesion": 1,
-        "emploi": -1
-       },
-       "fx": [
-        {
-         "obj": "bulle",
-         "x": 65,
-         "y": 56,
-         "anim": "grow",
-         "label": "CSE"
-        }
-       ]
-      },
-      {
-       "id": "b",
-       "label": "Ne rien changer",
-       "label_expert": "Maintien du crédit d'heures actuel",
-       "plus": "Pas de charge en plus.",
-       "minus": "Élus débordés dans certaines entreprises.",
-       "budget": 0,
-       "axes": {
-        "eco": 1
-       },
-       "ind": {
-        "cohesion": -1
-       },
-       "fx": [
-        {
-         "obj": "usine",
-         "x": 66,
-         "y": 58,
-         "anim": "blink"
-        }
-       ]
-      },
-      {
-       "id": "c",
-       "label": "Laisser chaque entreprise négocier",
-       "label_expert": "Crédit d'heures fixé par accord d'entreprise",
-       "plus": "S'adapte à chaque situation.",
-       "minus": "Inégalités entre salariés.",
-       "budget": 0,
-       "axes": {
-        "eco": 1
-       },
-       "ind": {
-        "cohesion": 0,
-        "emploi": 1
-       },
-       "fx": [
-        {
-         "obj": "personnage",
-         "x": 68,
-         "y": 59,
-         "anim": "grow"
-        }
-       ]
-      }
-     ]
     }
    ],
    "offer": [
@@ -20529,135 +20785,6 @@ const GAME = {
         }
        ],
        "budget_note": "Aménagements : faible coût, le déficit augmente très peu."
-      }
-     ]
-    },
-    {
-     "id": "v34_periscolaire",
-     "kind": "banal",
-     "region": "centre_val_de_loire",
-     "sector": "ecole",
-     "title": "Cours le matin, sport et ateliers l'après-midi ?",
-     "simple": "Une convention de citoyens tirés au sort propose les matières classiques le matin et des activités pratiques, sportives et culturelles l'après-midi. Les parents sont partagés. Que faire ?",
-     "expert": "Propositions de la Convention citoyenne sur les temps de l'enfant : apprentissages théoriques le matin, pratiques l'après-midi, devoirs faits à l'école, activités gratuites.",
-     "context": "Les spécialistes du sommeil y sont favorables ; mais encadrer des activités l'après-midi coûte cher aux communes et demande du personnel.",
-     "real": {
-      "date": "23 novembre 2025 (rapport final)",
-      "place": "Conseil économique, social et environnemental",
-      "fact": "La Convention citoyenne a adopté vingt propositions, dont une journée avec la théorie le matin et des activités pratiques, artistiques et sportives l'après-midi.",
-      "figures": "Début des cours à 9 h, fin des cours vers 15 h 30, puis devoirs à l'école et activités gratuites.",
-      "sources": [
-       {
-        "label": "Vie publique : rapport de la Convention citoyenne sur les temps de l'enfant",
-        "url": "https://www.vie-publique.fr/rapport/301032-rapport-de-la-convention-citoyenne-sur-les-temps-de-lenfant-cese"
-       },
-       {
-        "label": "Banque des territoires : la convention veut bousculer l'organisation scolaire",
-        "url": "https://www.banquedesterritoires.fr/la-convention-citoyenne-sur-les-temps-de-lenfant-veut-bousculer-lorganisation-scolaire"
-       }
-      ]
-     },
-     "camera": {
-      "region": "centre_val_de_loire",
-      "x": 46,
-      "y": 38,
-      "zoom": 2
-     },
-     "fx": [
-      {
-       "obj": "ecole",
-       "x": 46,
-       "y": 38,
-       "anim": "pulse"
-      },
-      {
-       "obj": "eleves",
-       "x": 48,
-       "y": 39,
-       "anim": "appear",
-       "delay": 0.3
-      },
-      {
-       "obj": "panneau",
-       "x": 44,
-       "y": 37,
-       "anim": "appear",
-       "label": "Après-midi : ateliers",
-       "delay": 0.5
-      }
-     ],
-     "choices": [
-      {
-       "id": "a",
-       "label": "Généraliser avec des activités gratuites",
-       "label_expert": "Généralisation des activités périscolaires gratuites l'après-midi",
-       "plus": "Égalité d'accès au sport et à la culture.",
-       "minus": "Coût élevé pour l'État et les communes.",
-       "budget": -0.6,
-       "axes": {
-        "soc": -1,
-        "eco": -1
-       },
-       "ind": {
-        "cohesion": 2,
-        "services": 1,
-        "emploi": 1
-       },
-       "fx": [
-        {
-         "obj": "eleves",
-         "x": 48,
-         "y": 39,
-         "anim": "grow"
-        }
-       ],
-       "budget_note": "Animateurs et activités : le déficit augmente."
-      },
-      {
-       "id": "b",
-       "label": "Tester dans quelques villes volontaires",
-       "label_expert": "Expérimentation dans des communes volontaires",
-       "plus": "On mesure avant de généraliser.",
-       "minus": "Inégalités entre territoires.",
-       "budget": -0.05,
-       "axes": {
-        "soc": 0
-       },
-       "ind": {
-        "services": 1
-       },
-       "fx": [
-        {
-         "obj": "ecole",
-         "x": 46,
-         "y": 38,
-         "anim": "grow"
-        }
-       ],
-       "budget_note": "Expérimentation : faible coût, le déficit augmente très peu."
-      },
-      {
-       "id": "c",
-       "label": "Garder les horaires actuels",
-       "label_expert": "Maintien de l'organisation actuelle de la journée scolaire",
-       "plus": "Pas de chamboulement pour les familles.",
-       "minus": "Rythmes jugés inadaptés aux enfants.",
-       "budget": 0,
-       "axes": {
-        "soc": 1
-       },
-       "ind": {
-        "cohesion": -1
-       },
-       "fx": [
-        {
-         "obj": "panneau",
-         "x": 44,
-         "y": 37,
-         "anim": "appear",
-         "label": "Inchangé"
-        }
-       ]
       }
      ]
     }
@@ -22418,133 +22545,6 @@ const GAME = {
          "anim": "grow"
         }
        ]
-      }
-     ]
-    },
-    {
-     "id": "v37_animaux",
-     "kind": "banal",
-     "region": "occitanie",
-     "sector": "agriculture",
-     "title": "Record d'animaux abandonnés pendant l'été",
-     "simple": "Pendant les vacances, près de 10 000 chiens et chats ont été recueillis par la SPA, un record. Les refuges sont pleins. Que faire ?",
-     "expert": "Hausse des abandons estivaux et des signalements de maltraitance ; saturation des refuges et débat sur la stérilisation des chats et la responsabilisation des acquéreurs.",
-     "context": "Durcir les règles responsabilise les maîtres ; aider les refuges coûte ; stériliser les chats errants limite les naissances.",
-     "real": {
-      "date": "Été 2026 (bilan publié en septembre)",
-      "place": "64 refuges de la SPA en France",
-      "fact": "La SPA a recueilli 9 508 animaux en deux mois d'été, un record, dont une grande majorité de chats.",
-      "figures": "+20,8 % en un an ; 6 572 chats et 2 220 chiens.",
-      "sources": [
-       {
-        "label": "La Gazette France : record des abandons dans les refuges de la SPA",
-        "url": "https://www.lagazettefrance.fr/article/animaux-record-des-abandons-cet-ete-dans-les-refuges-de-la-spa"
-       },
-       {
-        "label": "Consoglobe : bilan de l'été dans les refuges",
-        "url": "https://www.consoglobe.com/?p=10425759"
-       }
-      ]
-     },
-     "camera": {
-      "region": "occitanie",
-      "x": 50,
-      "y": 78,
-      "zoom": 2.2
-     },
-     "fx": [
-      {
-       "obj": "chien",
-       "x": 49,
-       "y": 78,
-       "anim": "appear"
-      },
-      {
-       "obj": "chat",
-       "x": 52,
-       "y": 79,
-       "anim": "appear",
-       "delay": 0.3
-      },
-      {
-       "obj": "panneau",
-       "x": 51,
-       "y": 76,
-       "anim": "appear",
-       "label": "Refuge complet",
-       "delay": 0.6
-      }
-     ],
-     "choices": [
-      {
-       "id": "a",
-       "label": "Stériliser les chats obligatoirement",
-       "label_expert": "Stérilisation obligatoire des chats non destinés à la reproduction",
-       "plus": "Moins de chatons abandonnés.",
-       "minus": "Coût pour les propriétaires.",
-       "budget": -0.05,
-       "axes": {
-        "env": 1
-       },
-       "ind": {
-        "cohesion": 1
-       },
-       "fx": [
-        {
-         "obj": "chat",
-         "x": 52,
-         "y": 79,
-         "anim": "grow"
-        }
-       ],
-       "budget_note": "Aide aux communes pour les chats errants : le déficit augmente très peu."
-      },
-      {
-       "id": "b",
-       "label": "Aider les refuges",
-       "label_expert": "Subvention nationale aux refuges et associations",
-       "plus": "Animaux mieux accueillis.",
-       "minus": "Ne traite pas la cause.",
-       "budget": -0.1,
-       "axes": {
-        "soc": 0
-       },
-       "ind": {
-        "services": 1,
-        "cohesion": 1
-       },
-       "fx": [
-        {
-         "obj": "pieces",
-         "x": 50,
-         "y": 77,
-         "anim": "appear"
-        }
-       ],
-       "budget_note": "Subventions : le déficit augmente un peu."
-      },
-      {
-       "id": "c",
-       "label": "Punir plus fort l'abandon",
-       "label_expert": "Aggravation des sanctions et contrôles de l'identification",
-       "plus": "Message dissuasif.",
-       "minus": "Difficile à prouver.",
-       "budget": 0.02,
-       "axes": {
-        "soc": 1
-       },
-       "ind": {
-        "cohesion": 0
-       },
-       "fx": [
-        {
-         "obj": "policiers",
-         "x": 53,
-         "y": 77,
-         "anim": "appear"
-        }
-       ],
-       "budget_note": "Amendes : petite recette, le déficit baisse très peu."
       }
      ]
     }

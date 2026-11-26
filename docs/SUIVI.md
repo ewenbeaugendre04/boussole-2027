@@ -114,3 +114,4 @@
 - Préférence d'Ewen : générer les personnes une par une (pas de groupes en « brochette »), pour pouvoir les réutiliser. La file d'attente n'a pas pu être découpée proprement (peau = couleur du socle).
 - Nouveaux objets : char, missile, chien, chat (objects.js + check_data).
 - 3 situations : dissuasion nucléaire avancée (S27), réarmement / LPM +36 Md€ (S28), animaux abandonnés (S29). Toutes les semaines 21-30 ont 4 situations ; les semaines 1 et 9-20 en ont encore 3.
+- Semaines : 5 situations déplacées des semaines 21-30 vers 10-18 (alternance 3/4 situations). Vérification en images : carte jour/nuit, 6 cartes de situation, aucune erreur JS ni dessin manquant.
