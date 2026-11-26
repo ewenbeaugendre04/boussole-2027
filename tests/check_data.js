@@ -273,6 +273,7 @@ GAME.programs.forEach(p => {
   if (!sectors.has(p.sector)) err(w + ' : secteur inconnu ' + p.sector);
   if (typeof p.budget !== 'number') err(w + ' : budget manquant');
   if (V26 && !p.budget_note) err(w + ' : budget_note manquant');
+  if (!Array.isArray(p.sources) || !p.sources.length || p.sources.some(x => !x.label || !/^https:\/\//.test(x.url))) err(w + ' : sources manquantes ou sans url https');
   if (V26 && p.budget_note) checkNote(p.budget_note, (p.budget || 0) + (p.once || 0), w);
   if (V26 && p.fx) checkFx(p.fx, w, 0, 8);
   checkAxes(p.axes, w); checkInd(p.ind, w);

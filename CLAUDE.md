@@ -8,5 +8,5 @@
   - dessin des objets animés : `src/art/objects.js` ; placement terre/mer : `src/art/placement.js` ; plateau : `src/art/board.js` ;
   - caméra : `src/engine/camera.js` ; déroulé des événements : `src/engine/flow.js` ; cartes et fenêtres : `src/engine/modal.js` ; réformes : `src/engine/reforms.js` ;
   - styles : `src/styles/`.
-- Après chaque changement : `node tests/check_data.js && python3 scripts/build.py && python3 tests/smoke.py`.
+- Après chaque changement : `node tests/check_data.js && node tests/check_assets.js && python3 scripts/build.py && python3 tests/smoke.py`.
 - Neutralité absolue (voir README). Langue : français.

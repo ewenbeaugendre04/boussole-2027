@@ -1,4 +1,5 @@
 // Rend leur position d'origine aux superpositions voulues (feu sur forêt, foule devant usine, météo sur un lieu…).
+if (!process.argv[2]) { console.log('Usage : node scripts/restaure_decor.js <ancien game_data.js>'); process.exit(1); }
 const fs=require('fs'),F=__dirname+'/../src/data/game_data.js';
 const rd=p=>{const S=fs.readFileSync(p,'utf8'),A=S.indexOf('{'),B=S.lastIndexOf('}')+1;return{S,A,B,G:JSON.parse(S.slice(A,B))};};
 const N=rd(F),O=rd(process.argv[2]);

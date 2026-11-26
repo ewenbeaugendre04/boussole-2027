@@ -10,7 +10,7 @@ const ADD = {
   simple: "Un vieux tunnel de l'autoroute vers la Normandie ferme pour travaux pendant neuf mois. Bouchons, péages en plus pour le détour : les automobilistes râlent. Que faire ?",
   expert: "Fermeture du tube nord du tunnel de Saint-Cloud (A13), sens Paris-province, pour des travaux de confortement ; reports de trafic vers l'A14 à péage.",
   context: "Le tunnel a près d'un siècle : réparer est indispensable. Compenser les usagers coûte ; ne rien faire reporte les bouchons dans les petites rues.",
-  real: { date: 'Du 16 novembre 2026 à fin août 2027', place: 'Saint-Cloud (Hauts-de-Seine)', fact: "Le tunnel de Saint-Cloud est fermé dans le sens Paris-province pour plus de neuf mois de travaux de confortement.", figures: 'Tube nord vieux de près d'un siècle.',
+  real: { date: 'Du 16 novembre 2026 à fin août 2027', place: 'Saint-Cloud (Hauts-de-Seine)', fact: "Le tunnel de Saint-Cloud est fermé dans le sens Paris-province pour plus de neuf mois de travaux de confortement.", figures: "Tube nord vieux de près d'un siècle.",
     sources: [src('Préfecture d\'Île-de-France : fermeture du tunnel de Saint-Cloud pour 9 mois', 'https://www.prefectures-regions.gouv.fr/ile-de-france/Actualites/Fermeture-du-tunnel-de-Saint-Cloud-sur-l-autoroute-A13-a-partir-du-16-novembre-pour-9-mois'), src('Assemblée nationale : question sur les péages du détour par l\'A14', 'https://questions.assemblee-nationale.fr/dyn/17/questions/QANR5L17QE17635.pdf')] },
   camera: { region: 'ile_de_france', x: 50, y: 24, zoom: 2.2 },
   fx: [f('chantier_grue', 50, 24, 'pulse'), f('voiture', 47, 25, 'move', { to: { x: 49, y: 24 }, delay: 0.2 }), f('panneau', 51, 23, 'appear', { label: 'Tunnel fermé', delay: 0.5 })],

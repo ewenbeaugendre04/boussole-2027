@@ -23570,6 +23570,16 @@ const GAME = {
      "label": "Examen au Sénat puis décrets d'application",
      "weeks": 1
     }
+   ],
+   "sources": [
+    {
+     "label": "Fondation iFRAP : comparateur des programmes 2027",
+     "url": "https://www.ifrap.org/comparateurs/presidentielle-2027"
+    },
+    {
+     "label": "Programmes 2027 : mesures sourcées par candidat",
+     "url": "https://programmes-2027.fr/"
+    }
    ]
   },
   {
@@ -23630,6 +23640,16 @@ const GAME = {
     {
      "label": "Examen au Sénat puis décrets d'application",
      "weeks": 1
+    }
+   ],
+   "sources": [
+    {
+     "label": "Fondation iFRAP : comparateur des programmes 2027",
+     "url": "https://www.ifrap.org/comparateurs/presidentielle-2027"
+    },
+    {
+     "label": "Programmes 2027 : mesures sourcées par candidat",
+     "url": "https://programmes-2027.fr/"
     }
    ]
   },
@@ -23833,7 +23853,17 @@ const GAME = {
       "later": []
      }
     ]
-   }
+   },
+   "sources": [
+    {
+     "label": "Fondation iFRAP : comparateur des programmes 2027",
+     "url": "https://www.ifrap.org/comparateurs/presidentielle-2027"
+    },
+    {
+     "label": "Programmes 2027 : mesures sourcées par candidat",
+     "url": "https://programmes-2027.fr/"
+    }
+   ]
   },
   {
    "id": "report_age_65",
@@ -24020,6 +24050,16 @@ const GAME = {
      "weeks": 1,
      "block": false
     }
+   ],
+   "sources": [
+    {
+     "label": "Fondation iFRAP : comparateur des programmes 2027",
+     "url": "https://www.ifrap.org/comparateurs/presidentielle-2027"
+    },
+    {
+     "label": "Programmes 2027 : mesures sourcées par candidat",
+     "url": "https://programmes-2027.fr/"
+    }
    ]
   },
   {
@@ -24081,6 +24121,16 @@ const GAME = {
      "label": "Examen au Sénat puis décrets d'application",
      "weeks": 1
     }
+   ],
+   "sources": [
+    {
+     "label": "Fondation iFRAP : comparateur des programmes 2027",
+     "url": "https://www.ifrap.org/comparateurs/presidentielle-2027"
+    },
+    {
+     "label": "Programmes 2027 : mesures sourcées par candidat",
+     "url": "https://programmes-2027.fr/"
+    }
    ]
   },
   {
@@ -24134,6 +24184,16 @@ const GAME = {
      "label": "Vote du budget au Parlement",
      "weeks": 1,
      "block": false
+    }
+   ],
+   "sources": [
+    {
+     "label": "Fondation iFRAP : comparateur des programmes 2027",
+     "url": "https://www.ifrap.org/comparateurs/presidentielle-2027"
+    },
+    {
+     "label": "Programmes 2027 : mesures sourcées par candidat",
+     "url": "https://programmes-2027.fr/"
     }
    ]
   },
@@ -24629,7 +24689,17 @@ const GAME = {
       "later": []
      }
     ]
-   }
+   },
+   "sources": [
+    {
+     "label": "Fondation iFRAP : comparateur des programmes 2027",
+     "url": "https://www.ifrap.org/comparateurs/presidentielle-2027"
+    },
+    {
+     "label": "Programmes 2027 : mesures sourcées par candidat",
+     "url": "https://programmes-2027.fr/"
+    }
+   ]
   },
   {
    "id": "reseaux_sociaux_15",
@@ -24689,6 +24759,16 @@ const GAME = {
     {
      "label": "Examen au Sénat puis décrets d'application",
      "weeks": 1
+    }
+   ],
+   "sources": [
+    {
+     "label": "Fondation iFRAP : comparateur des programmes 2027",
+     "url": "https://www.ifrap.org/comparateurs/presidentielle-2027"
+    },
+    {
+     "label": "Programmes 2027 : mesures sourcées par candidat",
+     "url": "https://programmes-2027.fr/"
     }
    ]
   },
@@ -24815,7 +24895,17 @@ const GAME = {
       }
      }
     ]
-   }
+   },
+   "sources": [
+    {
+     "label": "Fondation iFRAP : comparateur des programmes 2027",
+     "url": "https://www.ifrap.org/comparateurs/presidentielle-2027"
+    },
+    {
+     "label": "Programmes 2027 : mesures sourcées par candidat",
+     "url": "https://programmes-2027.fr/"
+    }
+   ]
   },
   {
    "id": "revalorisation_enseignants",
@@ -24864,6 +24954,16 @@ const GAME = {
      "label": "Vote du budget au Parlement",
      "weeks": 1,
      "block": false
+    }
+   ],
+   "sources": [
+    {
+     "label": "Fondation iFRAP : comparateur des programmes 2027",
+     "url": "https://www.ifrap.org/comparateurs/presidentielle-2027"
+    },
+    {
+     "label": "Programmes 2027 : mesures sourcées par candidat",
+     "url": "https://programmes-2027.fr/"
     }
    ]
   },
@@ -25334,7 +25434,17 @@ const GAME = {
       "budget_note": "Fraudes et surcoûts des aides : le déficit augmente."
      }
     ]
-   }
+   },
+   "sources": [
+    {
+     "label": "Fondation iFRAP : comparateur des programmes 2027",
+     "url": "https://www.ifrap.org/comparateurs/presidentielle-2027"
+    },
+    {
+     "label": "Programmes 2027 : mesures sourcées par candidat",
+     "url": "https://programmes-2027.fr/"
+    }
+   ]
   },
   {
    "id": "taxe_kerosene_train",
@@ -25384,6 +25494,16 @@ const GAME = {
      "label": "Vote du budget au Parlement",
      "weeks": 1,
      "block": false
+    }
+   ],
+   "sources": [
+    {
+     "label": "Fondation iFRAP : comparateur des programmes 2027",
+     "url": "https://www.ifrap.org/comparateurs/presidentielle-2027"
+    },
+    {
+     "label": "Programmes 2027 : mesures sourcées par candidat",
+     "url": "https://programmes-2027.fr/"
     }
    ]
   },
@@ -25495,7 +25615,17 @@ const GAME = {
       }
      }
     ]
-   }
+   },
+   "sources": [
+    {
+     "label": "Fondation iFRAP : comparateur des programmes 2027",
+     "url": "https://www.ifrap.org/comparateurs/presidentielle-2027"
+    },
+    {
+     "label": "Programmes 2027 : mesures sourcées par candidat",
+     "url": "https://programmes-2027.fr/"
+    }
+   ]
   },
   {
    "id": "leasing_electrique",
@@ -25546,6 +25676,16 @@ const GAME = {
     {
      "label": "Décret et circulaires d'application",
      "weeks": 1
+    }
+   ],
+   "sources": [
+    {
+     "label": "Fondation iFRAP : comparateur des programmes 2027",
+     "url": "https://www.ifrap.org/comparateurs/presidentielle-2027"
+    },
+    {
+     "label": "Programmes 2027 : mesures sourcées par candidat",
+     "url": "https://programmes-2027.fr/"
     }
    ]
   },
@@ -25656,6 +25796,16 @@ const GAME = {
      "weeks": 1,
      "block": false
     }
+   ],
+   "sources": [
+    {
+     "label": "Fondation iFRAP : comparateur des programmes 2027",
+     "url": "https://www.ifrap.org/comparateurs/presidentielle-2027"
+    },
+    {
+     "label": "Programmes 2027 : mesures sourcées par candidat",
+     "url": "https://programmes-2027.fr/"
+    }
    ]
   },
   {
@@ -25761,7 +25911,17 @@ const GAME = {
       "budget_note": "Amendes et contentieux européens : le déficit augmente."
      }
     ]
-   }
+   },
+   "sources": [
+    {
+     "label": "Fondation iFRAP : comparateur des programmes 2027",
+     "url": "https://www.ifrap.org/comparateurs/presidentielle-2027"
+    },
+    {
+     "label": "Programmes 2027 : mesures sourcées par candidat",
+     "url": "https://programmes-2027.fr/"
+    }
+   ]
   },
   {
    "id": "referendum_immigration",
@@ -25918,7 +26078,17 @@ const GAME = {
       "later": []
      }
     ]
-   }
+   },
+   "sources": [
+    {
+     "label": "Fondation iFRAP : comparateur des programmes 2027",
+     "url": "https://www.ifrap.org/comparateurs/presidentielle-2027"
+    },
+    {
+     "label": "Programmes 2027 : mesures sourcées par candidat",
+     "url": "https://programmes-2027.fr/"
+    }
+   ]
   },
   {
    "id": "service_militaire",
@@ -25972,6 +26142,16 @@ const GAME = {
     {
      "label": "Examen au Sénat puis décrets d'application",
      "weeks": 1
+    }
+   ],
+   "sources": [
+    {
+     "label": "Fondation iFRAP : comparateur des programmes 2027",
+     "url": "https://www.ifrap.org/comparateurs/presidentielle-2027"
+    },
+    {
+     "label": "Programmes 2027 : mesures sourcées par candidat",
+     "url": "https://programmes-2027.fr/"
     }
    ]
   },
@@ -26036,6 +26216,16 @@ const GAME = {
     {
      "label": "Examen au Sénat puis décrets d'application",
      "weeks": 1
+    }
+   ],
+   "sources": [
+    {
+     "label": "Fondation iFRAP : comparateur des programmes 2027",
+     "url": "https://www.ifrap.org/comparateurs/presidentielle-2027"
+    },
+    {
+     "label": "Programmes 2027 : mesures sourcées par candidat",
+     "url": "https://programmes-2027.fr/"
     }
    ]
   },
