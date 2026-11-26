@@ -47,6 +47,36 @@ réforme;rsa_suspendu_condamnes;"Suspendre le RSA des personnes condamnées pour
 réforme;sortie_otan;"Sortir de l'OTAN";defense;0.2;0;0;0;0;-1;1;0
 réforme;recrutement_justice;"Recruter 8 500 magistrats et personnels de justice";securite;-0.6;0;0;0;0;1;0;1
 réforme;requisition_logements_vacants;"Réquisitionner les logements vacants pour loger les sans-abri";logement;-0.2;0;0;0;0;2;0;1
+réforme;abroger_reformes_chomage;"Annuler les dernières réformes de l'assurance chômage";salaires;-4;0;1;-1;0;1;0;0
+réforme;plan_chomage_jeunes;"Grand plan contre le chômage des jeunes";salaires;-2;0;0;1;0;1;0;0
+réforme;interdire_licenciements_boursiers;"Interdire les licenciements dans les entreprises qui font des bénéfices";salaires;0;0;0;1;0;1;0;0
+réforme;renationaliser_autoroutes;"Reprendre les autoroutes à l'État";transports;-2;0;1;0;0;0;1;0
+réforme;blocage_prix_essentiels;"Bloquer les prix des produits de première nécessité";fiscalite;-1;0;2;-1;0;0;0;0
+réforme;secu_100;"Rembourser les soins à 100 % par la Sécurité sociale";sante;-20;0;2;0;0;1;0;1
+réforme;fin_35_heures;"Mettre fin aux 35 heures";salaires;3;0;1;1;0;-1;0;0
+réforme;supprimer_ame;"Supprimer l'aide médicale d'État";immigration;0.8;0;0;0;0;-1;0;0
+réforme;alleger_succession;"Alléger les droits de succession";fiscalite;-3;0;1;0;0;-1;0;0
+réforme;privatiser_france_travail;"Confier l'accompagnement des chômeurs au privé";salaires;0.5;0;0;1;0;0;0;-1
+réforme;allocation_sociale_unique;"Fusionner les aides sociales en une seule allocation";fiscalite;1;0;-1;0;0;0;0;1
+réforme;plan_economies_200;"Plan de 200 milliards d'économies";fiscalite;15;0;0;-1;0;-1;0;-2
+réforme;regle_or;"Inscrire une règle d'or budgétaire dans la Constitution";fiscalite;0;0;0;0;0;0;1;0
+réforme;retraite_points;"Retraite par points pour tous";retraites;0;0;0;0;0;-1;0;0
+réforme;conge_aidants;"Mieux payer le congé des proches aidants";sante;-0.3;0;1;0;0;1;0;0
+réforme;simplification_normes;"Supprimer une norme pour chaque norme créée";numerique;0.5;0;0;1;0;0;0;0
+réforme;capitalisation_complement;"Ajouter une part de retraite par capitalisation";retraites;-1;0;0;0;0;0;1;0
+réforme;tenue_unique;"Tenue commune à l'école";ecole;-0.4;0;0;0;0;1;0;0
+réforme;pass_rail;"Un abonnement unique et bon marché pour le train";transports;-1.5;0;1;0;-1;0;0;0
+réforme;taxe_superprofits;"Taxer les superprofits";fiscalite;4;0;0;-1;0;1;0;0
+réforme;interdire_jets_prives;"Interdire les vols en jet privé non essentiels";transports;0.05;0;0;0;-1;1;0;0
+réforme;pub_polluants;"Interdire la publicité pour les produits très polluants";energie;0;0;0;-1;-1;0;0;0
+réforme;semaine_4_jours;"Semaine de quatre jours";salaires;-1;0;0;0;-1;1;0;0
+réforme;cantine_bio_locale;"Cantines 100 % bio et locales";agriculture;-1;0;0;1;-1;0;0;0
+réforme;impot_fortune_financiere;"Remplacer l'impôt sur l'immobilier par un impôt sur la fortune financière";fiscalite;0.5;0;0;0;0;1;0;0
+réforme;quotas_etudiants;"Quotas d'étudiants étrangers par filière";immigration;0;0;0;0;0;0;1;0
+réforme;immigration_selon_chomage;"Lier l'immigration de travail au chômage";immigration;0;0;0;0;0;0;1;0
+réforme;part_fiscale_2e_enfant;"Une part fiscale pleine dès le deuxième enfant";fiscalite;-3;0;1;0;0;0;0;0
+réforme;demi_part_veufs;"Une demi-part fiscale pour les veufs et veuves";fiscalite;-1.5;0;1;0;0;0;0;0
+réforme;aah_seuil_pauvrete;"Allocation adulte handicapé au-dessus du seuil de pauvreté";sante;-2;0;1;0;0;1;0;0
 choix;v22_mercosur/a;"L'Europe signe l'accord avec l'Amérique du Sud, les tracteurs montent à Paris → Voter contre et saisir la justice européenne";agriculture;0;0;0;-1;0;1;2;0
 choix;v22_mercosur/b;"L'Europe signe l'accord avec l'Amérique du Sud, les tracteurs montent à Paris → Activer la clause de sauvegarde dès la première hausse";agriculture;0;0;0;0;0;0;1;0
 choix;v22_mercosur/c;"L'Europe signe l'accord avec l'Amérique du Sud, les tracteurs montent à Paris → Aides d'urgence aux éleveurs les plus exposés";agriculture;0;-0.3;0;1;0;1;0;0

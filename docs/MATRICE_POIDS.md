@@ -41,7 +41,7 @@ Comparaison des réformes entre elles avec le barème ci-dessus. Les ordres de g
 | Services publics en hausse sans dépense | regulation_installation_medecins | services 3, budget 0 |
 | Effet isolé très fort | sortie_nucleaire | Souveraineté -8 ≈ -8 (1 Md€ de dépendance aux importations en moins par point) |
 
-## Réformes (48)
+## Réformes (78)
 
 | Réforme | Budget Md€/an | Ponctuel Md€ | Pouvoir d'achat | Emploi | Émissions de CO₂ | Cohésion sociale | Souveraineté | Services publics |
 |---|---|---|---|---|---|---|---|---|
@@ -93,20 +93,50 @@ Comparaison des réformes entre elles avec le barème ci-dessus. Les ordres de g
 | Sortir de l'OTAN (`sortie_otan`) | 0.2 | 0 |  |  |  | -1 (-20 000) | 1 (+1) |  |
 | Recruter 8 500 magistrats et personnels de justice (`recrutement_justice`) | -0.6 | 0 |  |  |  | 1 (+20 000) |  | 1 (+1) |
 | Réquisitionner les logements vacants pour loger les sans-abri (`requisition_logements_vacants`) | -0.2 | 0 |  |  |  | 2 (+40 000) |  | 1 (+1) |
+| Annuler les dernières réformes de l'assurance chômage (`abroger_reformes_chomage`) | -4 | 0 | 1 (+1,6) | -1 (-50 000) |  | 1 (+20 000) |  |  |
+| Grand plan contre le chômage des jeunes (`plan_chomage_jeunes`) | -2 | 0 |  | 1 (+50 000) |  | 1 (+20 000) |  |  |
+| Interdire les licenciements dans les entreprises qui font des bénéfices (`interdire_licenciements_boursiers`) | 0 | 0 |  | 1 (+50 000) |  | 1 (+20 000) |  |  |
+| Reprendre les autoroutes à l'État (`renationaliser_autoroutes`) | -2 | 0 | 1 (+1,6) |  |  |  | 1 (+1) |  |
+| Bloquer les prix des produits de première nécessité (`blocage_prix_essentiels`) | -1 | 0 | 2 (+3,2) | -1 (-50 000) |  |  |  |  |
+| Rembourser les soins à 100 % par la Sécurité sociale (`secu_100`) | -20 | 0 | 2 (+3,2) |  |  | 1 (+20 000) |  | 1 (+1) |
+| Mettre fin aux 35 heures (`fin_35_heures`) | 3 | 0 | 1 (+1,6) | 1 (+50 000) |  | -1 (-20 000) |  |  |
+| Supprimer l'aide médicale d'État (`supprimer_ame`) | 0.8 | 0 |  |  |  | -1 (-20 000) |  |  |
+| Alléger les droits de succession (`alleger_succession`) | -3 | 0 | 1 (+1,6) |  |  | -1 (-20 000) |  |  |
+| Confier l'accompagnement des chômeurs au privé (`privatiser_france_travail`) | 0.5 | 0 |  | 1 (+50 000) |  |  |  | -1 (-1) |
+| Fusionner les aides sociales en une seule allocation (`allocation_sociale_unique`) | 1 | 0 | -1 (-1,6) |  |  |  |  | 1 (+1) |
+| Plan de 200 milliards d'économies (`plan_economies_200`) | 15 | 0 |  | -1 (-50 000) |  | -1 (-20 000) |  | -2 (-2) |
+| Inscrire une règle d'or budgétaire dans la Constitution (`regle_or`) | 0 | 0 |  |  |  |  | 1 (+1) |  |
+| Retraite par points pour tous (`retraite_points`) | 0 | 0 |  |  |  | -1 (-20 000) |  |  |
+| Mieux payer le congé des proches aidants (`conge_aidants`) | -0.3 | 0 | 1 (+1,6) |  |  | 1 (+20 000) |  |  |
+| Supprimer une norme pour chaque norme créée (`simplification_normes`) | 0.5 | 0 |  | 1 (+50 000) |  |  |  |  |
+| Ajouter une part de retraite par capitalisation (`capitalisation_complement`) | -1 | 0 |  |  |  |  | 1 (+1) |  |
+| Tenue commune à l'école (`tenue_unique`) | -0.4 | 0 |  |  |  | 1 (+20 000) |  |  |
+| Un abonnement unique et bon marché pour le train (`pass_rail`) | -1.5 | 0 | 1 (+1,6) |  | -1 (-1) |  |  |  |
+| Taxer les superprofits (`taxe_superprofits`) | 4 | 0 |  | -1 (-50 000) |  | 1 (+20 000) |  |  |
+| Interdire les vols en jet privé non essentiels (`interdire_jets_prives`) | 0.05 | 0 |  |  | -1 (-1) | 1 (+20 000) |  |  |
+| Interdire la publicité pour les produits très polluants (`pub_polluants`) | 0 | 0 |  | -1 (-50 000) | -1 (-1) |  |  |  |
+| Semaine de quatre jours (`semaine_4_jours`) | -1 | 0 |  |  | -1 (-1) | 1 (+20 000) |  |  |
+| Cantines 100 % bio et locales (`cantine_bio_locale`) | -1 | 0 |  | 1 (+50 000) | -1 (-1) |  |  |  |
+| Remplacer l'impôt sur l'immobilier par un impôt sur la fortune financière (`impot_fortune_financiere`) | 0.5 | 0 |  |  |  | 1 (+20 000) |  |  |
+| Quotas d'étudiants étrangers par filière (`quotas_etudiants`) | 0 | 0 |  |  |  |  | 1 (+1) |  |
+| Lier l'immigration de travail au chômage (`immigration_selon_chomage`) | 0 | 0 |  |  |  |  | 1 (+1) |  |
+| Une part fiscale pleine dès le deuxième enfant (`part_fiscale_2e_enfant`) | -3 | 0 | 1 (+1,6) |  |  |  |  |  |
+| Une demi-part fiscale pour les veufs et veuves (`demi_part_veufs`) | -1.5 | 0 | 1 (+1,6) |  |  |  |  |  |
+| Allocation adulte handicapé au-dessus du seuil de pauvreté (`aah_seuil_pauvrete`) | -2 | 0 | 1 (+1,6) |  |  | 1 (+20 000) |  |  |
 
 ## Classements par indicateur (réformes)
 
-**Pouvoir d'achat** : tva_energie_5_5 +6, baisse_cotisations_net +5, sortie_marche_electricite +5, tva_premiere_necessite +5, smic_hausse +4, encadrement_loyers +3, reduction_impot_familles +3, retraite_60 +2, renovation_massive +2, leasing_electrique +2, rsa_jeunes +1, ir_14_tranches +1, interets_emprunt_deductibles +1, report_age_65 -1, assurance_chomage -1, taxe_kerosene_train -1, jour_ferie_travaille -1, niches_brunes -2, prix_planchers_agricoles -3, tva_sociale -3, sortie_nucleaire -5.
+**Pouvoir d'achat** : tva_energie_5_5 +6, baisse_cotisations_net +5, sortie_marche_electricite +5, tva_premiere_necessite +5, smic_hausse +4, encadrement_loyers +3, reduction_impot_familles +3, retraite_60 +2, renovation_massive +2, leasing_electrique +2, blocage_prix_essentiels +2, secu_100 +2, rsa_jeunes +1, ir_14_tranches +1, interets_emprunt_deductibles +1, abroger_reformes_chomage +1, renationaliser_autoroutes +1, fin_35_heures +1, alleger_succession +1, conge_aidants +1, pass_rail +1, part_fiscale_2e_enfant +1, demi_part_veufs +1, aah_seuil_pauvrete +1, report_age_65 -1, assurance_chomage -1, taxe_kerosene_train -1, jour_ferie_travaille -1, allocation_sociale_unique -1, niches_brunes -2, prix_planchers_agricoles -3, tva_sociale -3, sortie_nucleaire -5.
 
-**Emploi** : relance_nucleaire +4, regularisation_metiers_tension +3, baisse_impots_production +3, report_age_65 +3, assurance_chomage +3, defense_europeenne_emprunt +3, renovation_massive +3, tva_sociale +3, prix_planchers_agricoles +2, recrutements_publics +2, peines_planchers +1, baisse_cotisations_net +1, tva_energie_5_5 +1, jour_ferie_travaille +1, reduction_impot_familles +1, taxe_hauts_patrimoines -1, cessions_actifs -1, sortie_nucleaire -1, taxe_kerosene_train -1, niches_brunes -1, service_militaire -1, contribution_ue -1, vols_courts_train -1, smic_hausse -2, surtaxe_grandes_entreprises -2, sortie_pesticides -2, retraite_60 -3, plafonner_allegements -3.
+**Emploi** : relance_nucleaire +4, regularisation_metiers_tension +3, baisse_impots_production +3, report_age_65 +3, assurance_chomage +3, defense_europeenne_emprunt +3, renovation_massive +3, tva_sociale +3, prix_planchers_agricoles +2, recrutements_publics +2, peines_planchers +1, baisse_cotisations_net +1, tva_energie_5_5 +1, jour_ferie_travaille +1, reduction_impot_familles +1, plan_chomage_jeunes +1, interdire_licenciements_boursiers +1, fin_35_heures +1, privatiser_france_travail +1, simplification_normes +1, cantine_bio_locale +1, taxe_hauts_patrimoines -1, cessions_actifs -1, sortie_nucleaire -1, taxe_kerosene_train -1, niches_brunes -1, service_militaire -1, contribution_ue -1, vols_courts_train -1, abroger_reformes_chomage -1, blocage_prix_essentiels -1, plan_economies_200 -1, taxe_superprofits -1, pub_polluants -1, smic_hausse -2, surtaxe_grandes_entreprises -2, sortie_pesticides -2, retraite_60 -3, plafonner_allegements -3.
 
-**Émissions de CO₂** : tva_energie_5_5 +4, sortie_nucleaire +2, relance_nucleaire -1, sortie_pesticides -1, taxe_billets_premium -1, taxe_kerosene_train -2, leasing_electrique -2, vols_courts_train -2, niches_brunes -3, renovation_massive -4.
+**Émissions de CO₂** : tva_energie_5_5 +4, sortie_nucleaire +2, relance_nucleaire -1, sortie_pesticides -1, taxe_billets_premium -1, pass_rail -1, interdire_jets_prives -1, pub_polluants -1, semaine_4_jours -1, cantine_bio_locale -1, taxe_kerosene_train -2, leasing_electrique -2, vols_courts_train -2, niches_brunes -3, renovation_massive -4.
 
-**Cohésion sociale** : rsa_jeunes +4, retraite_60 +3, service_militaire +3, smic_hausse +2, taxe_hauts_patrimoines +2, reseaux_sociaux_15 +2, ir_14_tranches +2, requisition_logements_vacants +2, peines_planchers +1, lutte_fraude +1, taxe_billets_premium +1, recrutements_publics +1, tva_premiere_necessite +1, recrutement_justice +1, encadrement_loyers -1, renovation_massive -1, sortie_pesticides -1, leasing_electrique -1, niches_brunes -1, controle_prestations -1, interets_emprunt_deductibles -1, rsa_suspendu_condamnes -1, sortie_otan -1, regularisation_metiers_tension -3, assurance_chomage -3, referendum_immigration -3, jour_ferie_travaille -4, report_age_65 -7.
+**Cohésion sociale** : rsa_jeunes +4, retraite_60 +3, service_militaire +3, smic_hausse +2, taxe_hauts_patrimoines +2, reseaux_sociaux_15 +2, ir_14_tranches +2, requisition_logements_vacants +2, peines_planchers +1, lutte_fraude +1, taxe_billets_premium +1, recrutements_publics +1, tva_premiere_necessite +1, recrutement_justice +1, abroger_reformes_chomage +1, plan_chomage_jeunes +1, interdire_licenciements_boursiers +1, secu_100 +1, conge_aidants +1, tenue_unique +1, taxe_superprofits +1, interdire_jets_prives +1, semaine_4_jours +1, impot_fortune_financiere +1, aah_seuil_pauvrete +1, encadrement_loyers -1, renovation_massive -1, sortie_pesticides -1, leasing_electrique -1, niches_brunes -1, controle_prestations -1, interets_emprunt_deductibles -1, rsa_suspendu_condamnes -1, sortie_otan -1, fin_35_heures -1, supprimer_ame -1, alleger_succession -1, plan_economies_200 -1, retraite_points -1, regularisation_metiers_tension -3, assurance_chomage -3, referendum_immigration -3, jour_ferie_travaille -4, report_age_65 -7.
 
-**Souveraineté** : relance_nucleaire +4, baisse_impots_production +2, defense_europeenne_emprunt +2, sortie_marche_electricite +2, service_militaire +2, prix_planchers_agricoles +2, contribution_ue +2, controle_prestations +1, tva_sociale +1, sortie_otan +1, surtaxe_grandes_entreprises -1, leasing_electrique -1, cessions_actifs -2, sortie_pesticides -2, sortie_nucleaire -8.
+**Souveraineté** : relance_nucleaire +4, baisse_impots_production +2, defense_europeenne_emprunt +2, sortie_marche_electricite +2, service_militaire +2, prix_planchers_agricoles +2, contribution_ue +2, controle_prestations +1, tva_sociale +1, sortie_otan +1, renationaliser_autoroutes +1, regle_or +1, capitalisation_complement +1, quotas_etudiants +1, immigration_selon_chomage +1, surtaxe_grandes_entreprises -1, leasing_electrique -1, cessions_actifs -2, sortie_pesticides -2, sortie_nucleaire -8.
 
-**Services publics** : recrutements_publics +6, revalorisation_enseignants +4, regulation_installation_medecins +3, rsa_jeunes +1, recrutement_justice +1, requisition_logements_vacants +1, peines_planchers -1, vols_courts_train -1, fusion_agences -2, non_remplacement_fonctionnaires -6.
+**Services publics** : recrutements_publics +6, revalorisation_enseignants +4, regulation_installation_medecins +3, rsa_jeunes +1, recrutement_justice +1, requisition_logements_vacants +1, secu_100 +1, allocation_sociale_unique +1, peines_planchers -1, vols_courts_train -1, privatiser_france_travail -1, fusion_agences -2, plan_economies_200 -2, non_remplacement_fonctionnaires -6.
 
 ## Choix des événements (454)
 

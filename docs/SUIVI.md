@@ -108,3 +108,5 @@
 - smoke.py attend 30 semaines.
 - Préférence d'Ewen : les chevauchements qui servent le décor (feu sur forêt, sapin au pied d'une montagne, foule devant un bâtiment, météo sur un lieu) sont voulus et ne doivent pas être écartés. `audit_fx.js` les ignore (liste DECOR) ; `restaure_decor.js` a rendu 632 positions d'origine.
 - Décor : une maison qui touche un arbre est toujours placée derrière lui (sprites.js, 3 passes) ; contrôle en jeu : 0 maison devant un arbre.
+- 30 propositions 2027 ajoutées (6 par famille, `scripts/propositions_30.js`, familles dans `tests/familles_30.json`) : 78 au total, 5 nouvelles avec blocage (Sécu à 100 %, fin des 35 h, AME, retraite par points, plan de 200 Md€). Sources : comparateurs iFRAP, République 2027, Qui propose quoi, Programmes 2027, presse.
+- `scripts/offres.js` : redistribue les offres des semaines 2 à 30 (une par famille + une liée aux situations, 6 semaines d'écart). Les 78 propositions sont offertes au moins une fois, 15-16 par famille.

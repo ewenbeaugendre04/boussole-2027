@@ -368,6 +368,8 @@ if (V21) {
   /* propositions 2027 ajoutées le 26/11/2026 */
   FAMILLES.gauche.push('ir_14_tranches', 'recrutements_publics'); FAMILLES.centre.push('reduction_impot_familles', 'recrutement_justice'); FAMILLES.droite.push('interets_emprunt_deductibles', 'rsa_suspendu_condamnes'); FAMILLES.souverainiste.push('tva_premiere_necessite', 'sortie_otan'); FAMILLES.ecologiste.push('requisition_logements_vacants');
 }
+/* 30 propositions 2027 ajoutées le 27/11/2026 */
+{ const F30 = JSON.parse(require('fs').readFileSync(__dirname + '/familles_30.json', 'utf8')); Object.entries(F30).forEach(([id, f]) => FAMILLES[f].push(id)); }
 if (V27) {
   FAMILLES.gauche.push('rsa_jeunes');
   FAMILLES.droite.push('jour_ferie_travaille');
@@ -392,6 +394,7 @@ if (V26) {
 }
 if (V21) {
   const famOf = id => Object.keys(FAMILLES).find(f => FAMILLES[f].includes(id));
+  if (process.env.DUMP_FAM) require('fs').writeFileSync(process.env.DUMP_FAM, JSON.stringify(FAMILLES));
   const offFam = {}; offered.forEach(id => offFam[famOf(id)] = (offFam[famOf(id)] || 0) + 1);
   const blkFam = {}; GAME.programs.filter(p => p.block).forEach(p => blkFam[famOf(p.id)] = (blkFam[famOf(p.id)] || 0) + 1);
   const levFam = {}; Object.keys(FAMILLES).forEach(f => levFam[f] = { positif: 0, negatif: 0, neutre: 0 });

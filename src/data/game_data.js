@@ -1251,12 +1251,12 @@ const GAME = {
     "text": "À partir de cette semaine, vous pouvez lancer jusqu'à deux réformes par semaine, parmi les cinq ou six du menu Propositions. Une réforme passe par plusieurs étapes (Conseil des ministres, Parlement…) : ses effets n'arrivent qu'à la fin, et certaines peuvent bloquer ou dépendre d'un vote."
    },
    "offer": [
-    "sortie_nucleaire",
+    "peines_planchers",
     "relance_nucleaire",
+    "sortie_nucleaire",
     "sortie_marche_electricite",
-    "assurance_chomage",
-    "taxe_hauts_patrimoines",
-    "peines_planchers"
+    "recrutements_publics",
+    "secu_100"
    ],
    "events": [
     {
@@ -2421,12 +2421,12 @@ const GAME = {
    "weather": "vent",
    "intro": "Semaine 3. Une usine s'éteint, une île du Pacifique s'embrase, un virus revient.",
    "offer": [
-    "report_age_65",
-    "referendum_immigration",
-    "lutte_fraude",
-    "regularisation_metiers_tension",
-    "requisition_logements_vacants",
-    "ir_14_tranches"
+    "recrutement_justice",
+    "semaine_4_jours",
+    "tva_premiere_necessite",
+    "smic_hausse",
+    "baisse_cotisations_net",
+    "plafonner_allegements"
    ],
    "events": [
     {
@@ -3580,12 +3580,12 @@ const GAME = {
    "weather": "pluie",
    "intro": "Semaine 4. Une tempête frappe la côte, la colère monte sur les ronds-points, et les factures d'énergie s'envolent.",
    "offer": [
-    "contribution_ue",
     "renovation_massive",
-    "smic_hausse",
-    "baisse_cotisations_net",
-    "fusion_agences",
-    "surtaxe_grandes_entreprises"
+    "tva_energie_5_5",
+    "taxe_hauts_patrimoines",
+    "baisse_impots_production",
+    "lutte_fraude",
+    "encadrement_loyers"
    ],
    "events": [
     {
@@ -5082,11 +5082,11 @@ const GAME = {
    "intro": "Semaine 5. Les jours raccourcissent. Une alerte sanitaire vide les rayons de viande, une pollution invisible inquiète le sud de Lyon, et le beurre se fait rare.",
    "offer": [
     "prix_planchers_agricoles",
-    "sortie_pesticides",
-    "tva_sociale",
-    "cessions_actifs",
+    "renationaliser_autoroutes",
+    "report_age_65",
+    "regulation_installation_medecins",
     "taxe_kerosene_train",
-    "plafonner_allegements"
+    "conge_aidants"
    ],
    "events": [
     {
@@ -6030,12 +6030,12 @@ const GAME = {
    "weather": "vent",
    "intro": "Semaine 6. L'hiver s'installe. Une tempête géante abat forêts et lignes électriques, des villages cherchent un médecin, et Paris retrouve sa cathédrale.",
    "offer": [
-    "regulation_installation_medecins",
-    "jour_ferie_travaille",
-    "tva_energie_5_5",
-    "leasing_electrique",
-    "encadrement_loyers",
-    "interets_emprunt_deductibles"
+    "surtaxe_grandes_entreprises",
+    "non_remplacement_fonctionnaires",
+    "fusion_agences",
+    "niches_brunes",
+    "controle_prestations",
+    "ir_14_tranches"
    ],
    "events": [
     {
@@ -6974,12 +6974,12 @@ const GAME = {
    "weather": "neige",
    "intro": "Semaine 7. Le froid mord tout le pays : les radiateurs tournent à plein, l'Europe se divise sur la Grèce, l'air devient irrespirable à Lyon et des étudiants font la queue pour manger.",
    "offer": [
-    "niches_brunes",
-    "non_remplacement_fonctionnaires",
-    "rsa_jeunes",
-    "revalorisation_enseignants",
-    "controle_prestations",
-    "reseaux_sociaux_15"
+    "assurance_chomage",
+    "defense_europeenne_emprunt",
+    "leasing_electrique",
+    "contribution_ue",
+    "retraite_60",
+    "revalorisation_enseignants"
    ],
    "events": [
     {
@@ -7936,12 +7936,12 @@ const GAME = {
    "weather": "pluie",
    "intro": "Semaine 8. L'hiver s'achève sans répit : des familles fuient la guerre aux portes de l'Europe, la Seine déborde, les pêcheurs de Boulogne attendent leurs licences et le pays relève son niveau d'alerte.",
    "offer": [
-    "retraite_60",
-    "baisse_impots_production",
-    "defense_europeenne_emprunt",
-    "vols_courts_train",
-    "service_militaire",
-    "recrutements_publics"
+    "reseaux_sociaux_15",
+    "sortie_pesticides",
+    "referendum_immigration",
+    "regularisation_metiers_tension",
+    "interets_emprunt_deductibles",
+    "rsa_suspendu_condamnes"
    ],
    "events": [
     {
@@ -8871,12 +8871,12 @@ const GAME = {
    "weather": "vent",
    "intro": "Une tempête frappe l'ouest pendant qu'une grève paralyse les transports.",
    "offer": [
-    "sortie_nucleaire",
-    "relance_nucleaire",
-    "sortie_marche_electricite",
-    "assurance_chomage",
-    "taxe_hauts_patrimoines",
-    "peines_planchers"
+    "pub_polluants",
+    "aah_seuil_pauvrete",
+    "abroger_reformes_chomage",
+    "cessions_actifs",
+    "retraite_points",
+    "capitalisation_complement"
    ],
    "events": [
     {
@@ -9610,12 +9610,12 @@ const GAME = {
    "weather": "neige",
    "intro": "La saison de ski tourne court, et deux affaires sanitaires inquiètent les familles.",
    "offer": [
-    "report_age_65",
-    "referendum_immigration",
-    "lutte_fraude",
-    "regularisation_metiers_tension",
+    "service_militaire",
+    "plan_chomage_jeunes",
+    "fin_35_heures",
+    "reduction_impot_familles",
     "taxe_billets_premium",
-    "tva_premiere_necessite"
+    "interdire_licenciements_boursiers"
    ],
    "events": [
     {
@@ -10281,12 +10281,12 @@ const GAME = {
    "weather": "pluie",
    "intro": "Un incendie d'usine, un hôpital piraté : la semaine commence mal.",
    "offer": [
-    "contribution_ue",
-    "renovation_massive",
-    "smic_hausse",
-    "baisse_cotisations_net",
-    "fusion_agences",
-    "surtaxe_grandes_entreprises"
+    "blocage_prix_essentiels",
+    "supprimer_ame",
+    "simplification_normes",
+    "cantine_bio_locale",
+    "sortie_otan",
+    "rsa_jeunes"
    ],
    "events": [
     {
@@ -10974,12 +10974,12 @@ const GAME = {
    "weather": "soleil",
    "intro": "Réserves dans les champs, robinets à sec outre-mer, pompes vides : la semaine manque de tout.",
    "offer": [
-    "prix_planchers_agricoles",
-    "sortie_pesticides",
-    "tva_sociale",
-    "cessions_actifs",
-    "taxe_kerosene_train",
-    "plafonner_allegements"
+    "alleger_succession",
+    "regle_or",
+    "requisition_logements_vacants",
+    "impot_fortune_financiere",
+    "recrutements_publics",
+    "privatiser_france_travail"
    ],
    "events": [
     {
@@ -11706,12 +11706,12 @@ const GAME = {
    "weather": "pluie",
    "intro": "Le pétrole arrive sur les plages, et le collège change ses règles.",
    "offer": [
-    "regulation_installation_medecins",
-    "jour_ferie_travaille",
-    "tva_energie_5_5",
-    "leasing_electrique",
-    "encadrement_loyers",
-    "reduction_impot_familles"
+    "tenue_unique",
+    "pass_rail",
+    "quotas_etudiants",
+    "renationaliser_autoroutes",
+    "allocation_sociale_unique",
+    "interdire_jets_prives"
    ],
    "events": [
     {
@@ -12348,12 +12348,12 @@ const GAME = {
    "weather": "soleil",
    "intro": "Un territoire bloqué, des lycéens inquiets et des villages sans eau.",
    "offer": [
-    "niches_brunes",
-    "non_remplacement_fonctionnaires",
-    "rsa_jeunes",
-    "revalorisation_enseignants",
-    "controle_prestations",
-    "reseaux_sociaux_15"
+    "taxe_superprofits",
+    "immigration_selon_chomage",
+    "secu_100",
+    "plan_economies_200",
+    "tva_sociale",
+    "jour_ferie_travaille"
    ],
    "events": [
     {
@@ -13020,12 +13020,12 @@ const GAME = {
    "weather": "soleil",
    "intro": "Bruxelles tranche sur une grande fusion, une ville pleure ses morts, une plage devient dangereuse.",
    "offer": [
-    "retraite_60",
-    "baisse_impots_production",
+    "part_fiscale_2e_enfant",
+    "encadrement_loyers",
+    "interets_emprunt_deductibles",
     "defense_europeenne_emprunt",
     "vols_courts_train",
-    "service_militaire",
-    "rsa_suspendu_condamnes"
+    "demi_part_veufs"
    ],
    "events": [
     {
@@ -13736,12 +13736,12 @@ const GAME = {
    "weather": "canicule",
    "intro": "Un record de chaleur, une épidémie outre-mer, des piscines fermées : l'été commence fort.",
    "offer": [
-    "sortie_nucleaire",
-    "relance_nucleaire",
-    "sortie_marche_electricite",
-    "assurance_chomage",
-    "taxe_hauts_patrimoines",
-    "peines_planchers"
+    "smic_hausse",
+    "baisse_cotisations_net",
+    "regulation_installation_medecins",
+    "semaine_4_jours",
+    "tva_premiere_necessite",
+    "plafonner_allegements"
    ],
    "events": [
     {
@@ -14969,12 +14969,12 @@ const GAME = {
     }
    ],
    "offer": [
-    "report_age_65",
-    "referendum_immigration",
-    "lutte_fraude",
-    "regularisation_metiers_tension",
-    "taxe_billets_premium",
-    "sortie_otan"
+    "assurance_chomage",
+    "reseaux_sociaux_15",
+    "taxe_kerosene_train",
+    "sortie_marche_electricite",
+    "abroger_reformes_chomage",
+    "leasing_electrique"
    ]
   },
   {
@@ -15641,12 +15641,12 @@ const GAME = {
     }
    ],
    "offer": [
-    "contribution_ue",
+    "relance_nucleaire",
     "renovation_massive",
-    "smic_hausse",
-    "baisse_cotisations_net",
-    "fusion_agences",
-    "surtaxe_grandes_entreprises"
+    "prix_planchers_agricoles",
+    "plan_chomage_jeunes",
+    "fin_35_heures",
+    "sortie_pesticides"
    ]
   },
   {
@@ -16226,12 +16226,12 @@ const GAME = {
     }
    ],
    "offer": [
-    "prix_planchers_agricoles",
-    "sortie_pesticides",
-    "tva_sociale",
-    "cessions_actifs",
-    "taxe_kerosene_train",
-    "plafonner_allegements"
+    "sortie_nucleaire",
+    "tva_energie_5_5",
+    "regularisation_metiers_tension",
+    "supprimer_ame",
+    "recrutement_justice",
+    "referendum_immigration"
    ]
   },
   {
@@ -16859,12 +16859,12 @@ const GAME = {
     }
    ],
    "offer": [
-    "regulation_installation_medecins",
-    "jour_ferie_travaille",
-    "tva_energie_5_5",
-    "leasing_electrique",
-    "encadrement_loyers",
-    "recrutement_justice"
+    "controle_prestations",
+    "interdire_licenciements_boursiers",
+    "peines_planchers",
+    "lutte_fraude",
+    "taxe_billets_premium",
+    "rsa_suspendu_condamnes"
    ]
   },
   {
@@ -17528,12 +17528,12 @@ const GAME = {
     }
    ],
    "offer": [
-    "ir_14_tranches",
-    "requisition_logements_vacants",
-    "interets_emprunt_deductibles",
-    "recrutements_publics",
-    "tva_premiere_necessite",
-    "reduction_impot_familles"
+    "rsa_jeunes",
+    "privatiser_france_travail",
+    "conge_aidants",
+    "pass_rail",
+    "contribution_ue",
+    "interdire_jets_prives"
    ]
   },
   {
@@ -18181,12 +18181,12 @@ const GAME = {
     }
    ],
    "offer": [
-    "non_remplacement_fonctionnaires",
-    "reseaux_sociaux_15",
-    "revalorisation_enseignants",
-    "niches_brunes",
-    "controle_prestations",
-    "rsa_jeunes"
+    "baisse_impots_production",
+    "fusion_agences",
+    "cantine_bio_locale",
+    "service_militaire",
+    "taxe_hauts_patrimoines",
+    "sortie_otan"
    ]
   },
   {
@@ -18789,12 +18789,12 @@ const GAME = {
     }
    ],
    "offer": [
-    "retraite_60",
-    "baisse_impots_production",
-    "defense_europeenne_emprunt",
-    "service_militaire",
+    "revalorisation_enseignants",
     "vols_courts_train",
-    "rsa_suspendu_condamnes"
+    "aah_seuil_pauvrete",
+    "surtaxe_grandes_entreprises",
+    "report_age_65",
+    "simplification_normes"
    ]
   },
   {
@@ -19428,12 +19428,12 @@ const GAME = {
     }
    ],
    "offer": [
-    "taxe_hauts_patrimoines",
-    "peines_planchers",
-    "assurance_chomage",
-    "relance_nucleaire",
-    "sortie_nucleaire",
-    "sortie_marche_electricite"
+    "niches_brunes",
+    "quotas_etudiants",
+    "ir_14_tranches",
+    "non_remplacement_fonctionnaires",
+    "tenue_unique",
+    "immigration_selon_chomage"
    ]
   },
   {
@@ -20060,12 +20060,12 @@ const GAME = {
     }
    ],
    "offer": [
-    "regularisation_metiers_tension",
-    "report_age_65",
-    "lutte_fraude",
-    "taxe_billets_premium",
-    "referendum_immigration",
-    "sortie_otan"
+    "impot_fortune_financiere",
+    "retraite_60",
+    "cessions_actifs",
+    "retraite_points",
+    "requisition_logements_vacants",
+    "capitalisation_complement"
    ]
   },
   {
@@ -20663,12 +20663,12 @@ const GAME = {
     }
    ],
    "offer": [
-    "smic_hausse",
-    "surtaxe_grandes_entreprises",
-    "baisse_cotisations_net",
-    "fusion_agences",
-    "renovation_massive",
-    "contribution_ue"
+    "blocage_prix_essentiels",
+    "alleger_succession",
+    "reduction_impot_familles",
+    "pub_polluants",
+    "part_fiscale_2e_enfant",
+    "regle_or"
    ]
   },
   {
@@ -21152,12 +21152,12 @@ const GAME = {
     }
    ],
    "offer": [
-    "plafonner_allegements",
-    "cessions_actifs",
-    "taxe_kerosene_train",
-    "sortie_pesticides",
-    "prix_planchers_agricoles",
-    "tva_sociale"
+    "allocation_sociale_unique",
+    "tva_sociale",
+    "taxe_superprofits",
+    "demi_part_veufs",
+    "renationaliser_autoroutes",
+    "plan_economies_200"
    ]
   },
   {
@@ -21615,12 +21615,12 @@ const GAME = {
     }
    ],
    "offer": [
-    "encadrement_loyers",
-    "regulation_installation_medecins",
-    "leasing_electrique",
-    "tva_energie_5_5",
+    "reseaux_sociaux_15",
+    "semaine_4_jours",
+    "tva_premiere_necessite",
+    "smic_hausse",
     "jour_ferie_travaille",
-    "recrutement_justice"
+    "plafonner_allegements"
    ]
   },
   {
@@ -22117,12 +22117,12 @@ const GAME = {
     }
    ],
    "offer": [
-    "ir_14_tranches",
+    "taxe_kerosene_train",
+    "referendum_immigration",
     "recrutements_publics",
-    "tva_premiere_necessite",
-    "reduction_impot_familles",
-    "interets_emprunt_deductibles",
-    "requisition_logements_vacants"
+    "supprimer_ame",
+    "regulation_installation_medecins",
+    "secu_100"
    ]
   },
   {
@@ -22714,12 +22714,12 @@ const GAME = {
     }
    ],
    "offer": [
-    "non_remplacement_fonctionnaires",
-    "reseaux_sociaux_15",
-    "revalorisation_enseignants",
-    "niches_brunes",
     "controle_prestations",
-    "rsa_jeunes"
+    "encadrement_loyers",
+    "interets_emprunt_deductibles",
+    "recrutement_justice",
+    "renovation_massive",
+    "taxe_hauts_patrimoines"
    ]
   }
  ],
@@ -27090,6 +27090,1667 @@ const GAME = {
     {
      "label": "data.gouv.fr : programmes présidentielle 2027 résumés par thème",
      "url": "https://www.data.gouv.fr/reuses/programmes-presidentielle-2027-le-programme-de-chaque-candidat-resume-et-analyse-theme-par-theme"
+    }
+   ]
+  },
+  {
+   "origin": "Proposition présente dans au moins un programme présidentiel",
+   "once": 0,
+   "later": [],
+   "steps": [
+    {
+     "label": "Dépôt du texte",
+     "weeks": 1
+    },
+    {
+     "label": "Débat et vote au Parlement",
+     "weeks": 1
+    }
+   ],
+   "id": "abroger_reformes_chomage",
+   "label": "Annuler les dernières réformes de l'assurance chômage",
+   "term": "Abrogation des réformes récentes de l'assurance chômage",
+   "sector": "salaires",
+   "simple": "Les chômeurs retrouvent des droits plus longs et plus faciles à ouvrir.",
+   "expert": "Retour aux règles d'indemnisation antérieures (durée, conditions d'affiliation).",
+   "budget": -4,
+   "budget_note": "Coût d'environ 4 Md€ par an : le déficit augmente.",
+   "axes": {
+    "eco": -2
+   },
+   "ind": {
+    "pouvoir_achat": 1,
+    "cohesion": 1,
+    "emploi": -1
+   },
+   "why_cost": "Plus d'allocations versées.",
+   "why_gain": "Meilleure protection des chômeurs.",
+   "benefits": [
+    "Revenus mieux protégés.",
+    "Moins de précarité."
+   ],
+   "problems": [
+    "Coût pour l'assurance chômage.",
+    "Retour à l'emploi parfois moins rapide."
+   ],
+   "sources": [
+    {
+     "label": "Fondation iFRAP : comparateur des programmes 2027",
+     "url": "https://www.ifrap.org/comparateurs/presidentielle-2027"
+    },
+    {
+     "label": "Programmes 2027 : mesures sourcées par candidat",
+     "url": "https://programmes-2027.fr/"
+    }
+   ]
+  },
+  {
+   "origin": "Proposition présente dans au moins un programme présidentiel",
+   "once": 0,
+   "later": [],
+   "steps": [
+    {
+     "label": "Dépôt du texte",
+     "weeks": 1
+    },
+    {
+     "label": "Débat et vote au Parlement",
+     "weeks": 1
+    }
+   ],
+   "id": "plan_chomage_jeunes",
+   "label": "Grand plan contre le chômage des jeunes",
+   "term": "Plan national d'emplois aidés et de formation pour les moins de 26 ans",
+   "sector": "salaires",
+   "simple": "Des contrats aidés et des formations sont proposés aux jeunes sans emploi.",
+   "expert": "Contrats aidés, formations qualifiantes et accompagnement renforcé des 16-25 ans.",
+   "budget": -2,
+   "budget_note": "Coût d'environ 2 Md€ par an : le déficit augmente.",
+   "axes": {
+    "eco": -1
+   },
+   "ind": {
+    "emploi": 1,
+    "cohesion": 1
+   },
+   "why_cost": "Financer contrats et formations.",
+   "why_gain": "Des jeunes mis le pied à l'étrier.",
+   "benefits": [
+    "Moins de jeunes sans emploi.",
+    "Formations vers les métiers qui recrutent."
+   ],
+   "problems": [
+    "Coût élevé.",
+    "Emplois aidés parfois sans suite."
+   ],
+   "sources": [
+    {
+     "label": "Fondation iFRAP : comparateur des programmes 2027",
+     "url": "https://www.ifrap.org/comparateurs/presidentielle-2027"
+    },
+    {
+     "label": "République 2027 : programmes par thème",
+     "url": "https://republique2027.fr/programmes"
+    }
+   ]
+  },
+  {
+   "origin": "Proposition présente dans au moins un programme présidentiel",
+   "once": 0,
+   "later": [],
+   "steps": [
+    {
+     "label": "Dépôt du texte",
+     "weeks": 1
+    },
+    {
+     "label": "Débat et vote au Parlement",
+     "weeks": 1
+    }
+   ],
+   "id": "interdire_licenciements_boursiers",
+   "label": "Interdire les licenciements dans les entreprises qui font des bénéfices",
+   "term": "Interdiction des licenciements économiques en cas de bénéfices distribués",
+   "sector": "salaires",
+   "simple": "Une entreprise qui verse des dividendes ne peut plus licencier pour motif économique.",
+   "expert": "Encadrement des licenciements économiques dans les entreprises bénéficiaires.",
+   "budget": 0,
+   "budget_note": "Pas d'effet direct notable sur le déficit.",
+   "axes": {
+    "eco": -2
+   },
+   "ind": {
+    "emploi": 1,
+    "cohesion": 1,
+    "souverainete": 0
+   },
+   "why_cost": "Pas de dépense publique.",
+   "why_gain": "Emplois protégés.",
+   "benefits": [
+    "Salariés protégés.",
+    "Moins de délocalisations rapides."
+   ],
+   "problems": [
+    "Les entreprises investissent moins en France.",
+    "Contentieux nombreux."
+   ],
+   "sources": [
+    {
+     "label": "Qui propose quoi 2027 : chaque programme en trois lignes",
+     "url": "https://quiproposequoi2027.fr/"
+    },
+    {
+     "label": "Programmes 2027 : mesures sourcées par candidat",
+     "url": "https://programmes-2027.fr/"
+    }
+   ]
+  },
+  {
+   "origin": "Proposition présente dans au moins un programme présidentiel",
+   "once": 0,
+   "later": [],
+   "steps": [
+    {
+     "label": "Dépôt du texte",
+     "weeks": 1
+    },
+    {
+     "label": "Débat et vote au Parlement",
+     "weeks": 1
+    }
+   ],
+   "id": "renationaliser_autoroutes",
+   "label": "Reprendre les autoroutes à l'État",
+   "term": "Rachat anticipé des concessions autoroutières",
+   "sector": "transports",
+   "simple": "L'État reprend la gestion des autoroutes et peut baisser les péages.",
+   "expert": "Fin anticipée des concessions avec indemnisation des sociétés.",
+   "budget": -2,
+   "budget_note": "Coût d'environ 2 Md€ par an : le déficit augmente.",
+   "axes": {
+    "eco": -2
+   },
+   "ind": {
+    "pouvoir_achat": 1,
+    "souverainete": 1
+   },
+   "why_cost": "Indemniser les sociétés d'autoroute, rachat étalé.",
+   "why_gain": "Péages sous contrôle public.",
+   "benefits": [
+    "Péages moins chers possibles.",
+    "Recettes reprises par l'État."
+   ],
+   "problems": [
+    "Indemnisation très coûteuse.",
+    "Entretien à la charge de l'État."
+   ],
+   "sources": [
+    {
+     "label": "Qui propose quoi 2027 : chaque programme en trois lignes",
+     "url": "https://quiproposequoi2027.fr/"
+    },
+    {
+     "label": "République 2027 : programmes par thème",
+     "url": "https://republique2027.fr/programmes"
+    }
+   ]
+  },
+  {
+   "origin": "Proposition présente dans au moins un programme présidentiel",
+   "once": 0,
+   "later": [],
+   "steps": [
+    {
+     "label": "Dépôt du texte",
+     "weeks": 1
+    },
+    {
+     "label": "Débat et vote au Parlement",
+     "weeks": 1
+    }
+   ],
+   "id": "blocage_prix_essentiels",
+   "label": "Bloquer les prix des produits de première nécessité",
+   "term": "Encadrement temporaire des prix de produits essentiels",
+   "sector": "fiscalite",
+   "simple": "Le prix des pâtes, du lait ou de l'énergie ne peut plus augmenter pendant un temps.",
+   "expert": "Gel ou plafonnement administratif des prix d'un panier de biens essentiels.",
+   "budget": -1,
+   "budget_note": "Coût d'environ 1 Md€ par an : le déficit augmente.",
+   "axes": {
+    "eco": -2
+   },
+   "ind": {
+    "pouvoir_achat": 2,
+    "emploi": -1
+   },
+   "why_cost": "Aider les petits producteurs touchés.",
+   "why_gain": "Les ménages modestes respirent.",
+   "benefits": [
+    "Pouvoir d'achat protégé.",
+    "Effet immédiat."
+   ],
+   "problems": [
+    "Risque de pénuries.",
+    "Marges des producteurs écrasées."
+   ],
+   "sources": [
+    {
+     "label": "Qui propose quoi 2027 : chaque programme en trois lignes",
+     "url": "https://quiproposequoi2027.fr/"
+    },
+    {
+     "label": "Programmes 2027 : mesures sourcées par candidat",
+     "url": "https://programmes-2027.fr/"
+    }
+   ]
+  },
+  {
+   "origin": "Proposition présente dans au moins un programme présidentiel",
+   "once": 0,
+   "later": [],
+   "steps": [
+    {
+     "label": "Dépôt du texte",
+     "weeks": 1
+    },
+    {
+     "label": "Débat et vote au Parlement",
+     "weeks": 1,
+     "block": true
+    }
+   ],
+   "id": "secu_100",
+   "label": "Rembourser les soins à 100 % par la Sécurité sociale",
+   "term": "Prise en charge intégrale des soins prescrits par l'Assurance maladie",
+   "sector": "sante",
+   "simple": "Plus besoin de mutuelle pour les soins courants : la Sécu paie tout.",
+   "expert": "Intégration des complémentaires dans l'Assurance maladie obligatoire.",
+   "budget": -20,
+   "budget_note": "Coût d'environ 20 Md€ par an : le déficit augmente.",
+   "axes": {
+    "eco": -2
+   },
+   "ind": {
+    "pouvoir_achat": 2,
+    "services": 1,
+    "cohesion": 1
+   },
+   "why_cost": "L'Assurance maladie paie à la place des mutuelles ; cotisations à revoir.",
+   "why_gain": "Plus de reste à charge.",
+   "benefits": [
+    "Fin des mutuelles obligatoires.",
+    "Accès égal aux soins."
+   ],
+   "problems": [
+    "Coût public très élevé.",
+    "Emplois des mutuelles menacés."
+   ],
+   "sources": [
+    {
+     "label": "Qui propose quoi 2027 : chaque programme en trois lignes",
+     "url": "https://quiproposequoi2027.fr/"
+    },
+    {
+     "label": "Programmes 2027 : mesures sourcées par candidat",
+     "url": "https://programmes-2027.fr/"
+    }
+   ],
+   "block": {
+    "title": "Blocage à l'Assemblée",
+    "text": "Une partie des députés refuse le texte : il ne passe pas.",
+    "choices": [
+     {
+      "id": "abandon",
+      "label": "Abandonner la réforme",
+      "label_expert": "Retrait du texte par le gouvernement",
+      "outcome": "abandon",
+      "plus": "Pas de conflit.",
+      "minus": "Rien ne change.",
+      "ind": {},
+      "axes": {}
+     },
+     {
+      "id": "493",
+      "label": "Passer en force avec le 49.3",
+      "label_expert": "Adoption sans vote par l'article 49.3",
+      "outcome": "pass",
+      "plus": "La réforme s'applique entièrement.",
+      "minus": "Censure possible, colère de l'opposition.",
+      "ind": {
+       "cohesion": -2
+      },
+      "axes": {
+       "soc": 1
+      }
+     },
+     {
+      "id": "compromis",
+      "label": "Compromis : d'abord les soins dentaires et optiques",
+      "label_expert": "Adoption d'une version amendée du texte",
+      "outcome": "amend",
+      "factor": 0.5,
+      "plus": "Le texte passe.",
+      "minus": "Effets réduits de moitié.",
+      "ind": {},
+      "axes": {}
+     }
+    ]
+   }
+  },
+  {
+   "origin": "Proposition présente dans au moins un programme présidentiel",
+   "once": 0,
+   "later": [],
+   "steps": [
+    {
+     "label": "Dépôt du texte",
+     "weeks": 1
+    },
+    {
+     "label": "Débat et vote au Parlement",
+     "weeks": 1,
+     "block": true
+    }
+   ],
+   "id": "fin_35_heures",
+   "label": "Mettre fin aux 35 heures",
+   "term": "Relèvement de la durée légale du travail",
+   "sector": "salaires",
+   "simple": "Les salariés travaillent un peu plus, payés plus, sans heures supplémentaires majorées au-delà de 35 heures.",
+   "expert": "Négociation de la durée du travail par accord d'entreprise, au-delà de 35 heures.",
+   "budget": 3,
+   "budget_note": "Économie ou recette d'environ 3 Md€ par an : le déficit baisse.",
+   "axes": {
+    "eco": 2
+   },
+   "ind": {
+    "pouvoir_achat": 1,
+    "emploi": 1,
+    "cohesion": -1
+   },
+   "why_cost": "Pas de dépense.",
+   "why_gain": "Plus de production et de cotisations.",
+   "benefits": [
+    "Salaires plus élevés.",
+    "Plus de recettes publiques."
+   ],
+   "problems": [
+    "Plus de fatigue.",
+    "Fin des majorations d'heures sup."
+   ],
+   "sources": [
+    {
+     "label": "France Actus : un programme de 142 propositions détaillé",
+     "url": "https://www.franceactus.info/news/edouard-philippe-programme-2027-142-propositions/"
+    },
+    {
+     "label": "Fondation iFRAP : comparateur des programmes 2027",
+     "url": "https://www.ifrap.org/comparateurs/presidentielle-2027"
+    }
+   ],
+   "block": {
+    "title": "Blocage à l'Assemblée",
+    "text": "Une partie des députés refuse le texte : il ne passe pas.",
+    "choices": [
+     {
+      "id": "abandon",
+      "label": "Abandonner la réforme",
+      "label_expert": "Retrait du texte par le gouvernement",
+      "outcome": "abandon",
+      "plus": "Pas de conflit.",
+      "minus": "Rien ne change.",
+      "ind": {},
+      "axes": {}
+     },
+     {
+      "id": "493",
+      "label": "Passer en force avec le 49.3",
+      "label_expert": "Adoption sans vote par l'article 49.3",
+      "outcome": "pass",
+      "plus": "La réforme s'applique entièrement.",
+      "minus": "Censure possible, colère de l'opposition.",
+      "ind": {
+       "cohesion": -2
+      },
+      "axes": {
+       "soc": 1
+      }
+     },
+     {
+      "id": "compromis",
+      "label": "Compromis : seulement par accord d'entreprise",
+      "label_expert": "Adoption d'une version amendée du texte",
+      "outcome": "amend",
+      "factor": 0.5,
+      "plus": "Le texte passe.",
+      "minus": "Effets réduits de moitié.",
+      "ind": {},
+      "axes": {}
+     }
+    ]
+   }
+  },
+  {
+   "origin": "Proposition présente dans au moins un programme présidentiel",
+   "once": 0,
+   "later": [],
+   "steps": [
+    {
+     "label": "Dépôt du texte",
+     "weeks": 1
+    },
+    {
+     "label": "Débat et vote au Parlement",
+     "weeks": 1,
+     "block": true
+    }
+   ],
+   "id": "supprimer_ame",
+   "label": "Supprimer l'aide médicale d'État",
+   "term": "Remplacement de l'AME par une aide médicale d'urgence",
+   "sector": "immigration",
+   "simple": "Les étrangers sans papiers ne sont plus soignés gratuitement, sauf urgence.",
+   "expert": "Transformation de l'AME en aide médicale d'urgence limitée.",
+   "budget": 0.8,
+   "budget_note": "Économie ou recette d'environ 0.8 Md€ par an : le déficit baisse.",
+   "axes": {
+    "soc": 2
+   },
+   "ind": {
+    "cohesion": -1,
+    "services": 0
+   },
+   "why_cost": "Pas de dépense.",
+   "why_gain": "Économie sur l'AME.",
+   "benefits": [
+    "Économie de plusieurs centaines de millions.",
+    "Message de fermeté."
+   ],
+   "problems": [
+    "Maladies soignées plus tard, à l'hôpital.",
+    "Risque pour la santé publique."
+   ],
+   "sources": [
+    {
+     "label": "Fondation iFRAP : comparateur des programmes 2027",
+     "url": "https://www.ifrap.org/comparateurs/presidentielle-2027"
+    },
+    {
+     "label": "Programmes 2027 : mesures sourcées par candidat",
+     "url": "https://programmes-2027.fr/"
+    }
+   ],
+   "block": {
+    "title": "Blocage à l'Assemblée",
+    "text": "Une partie des députés refuse le texte : il ne passe pas.",
+    "choices": [
+     {
+      "id": "abandon",
+      "label": "Abandonner la réforme",
+      "label_expert": "Retrait du texte par le gouvernement",
+      "outcome": "abandon",
+      "plus": "Pas de conflit.",
+      "minus": "Rien ne change.",
+      "ind": {},
+      "axes": {}
+     },
+     {
+      "id": "493",
+      "label": "Passer en force avec le 49.3",
+      "label_expert": "Adoption sans vote par l'article 49.3",
+      "outcome": "pass",
+      "plus": "La réforme s'applique entièrement.",
+      "minus": "Censure possible, colère de l'opposition.",
+      "ind": {
+       "cohesion": -2
+      },
+      "axes": {
+       "soc": 1
+      }
+     },
+     {
+      "id": "compromis",
+      "label": "Compromis : aide limitée aux soins urgents et vaccins",
+      "label_expert": "Adoption d'une version amendée du texte",
+      "outcome": "amend",
+      "factor": 0.5,
+      "plus": "Le texte passe.",
+      "minus": "Effets réduits de moitié.",
+      "ind": {},
+      "axes": {}
+     }
+    ]
+   }
+  },
+  {
+   "origin": "Proposition présente dans au moins un programme présidentiel",
+   "once": 0,
+   "later": [],
+   "steps": [
+    {
+     "label": "Dépôt du texte",
+     "weeks": 1
+    },
+    {
+     "label": "Débat et vote au Parlement",
+     "weeks": 1
+    }
+   ],
+   "id": "alleger_succession",
+   "label": "Alléger les droits de succession",
+   "term": "Hausse des abattements sur les donations et successions",
+   "sector": "fiscalite",
+   "simple": "On paie moins d'impôt en héritant de ses parents.",
+   "expert": "Relèvement des abattements en ligne directe.",
+   "budget": -3,
+   "budget_note": "Coût d'environ 3 Md€ par an : le déficit augmente.",
+   "axes": {
+    "eco": 2
+   },
+   "ind": {
+    "pouvoir_achat": 1,
+    "cohesion": -1
+   },
+   "why_cost": "Moins de recettes.",
+   "why_gain": "Transmission facilitée.",
+   "benefits": [
+    "Patrimoine transmis plus facilement.",
+    "Mesure populaire."
+   ],
+   "problems": [
+    "Profite surtout aux gros héritages.",
+    "Moins de recettes."
+   ],
+   "sources": [
+    {
+     "label": "République 2027 : programmes par thème",
+     "url": "https://republique2027.fr/programmes"
+    },
+    {
+     "label": "Fondation iFRAP : comparateur des programmes 2027",
+     "url": "https://www.ifrap.org/comparateurs/presidentielle-2027"
+    }
+   ]
+  },
+  {
+   "origin": "Proposition présente dans au moins un programme présidentiel",
+   "once": 0,
+   "later": [],
+   "steps": [
+    {
+     "label": "Dépôt du texte",
+     "weeks": 1
+    },
+    {
+     "label": "Débat et vote au Parlement",
+     "weeks": 1
+    }
+   ],
+   "id": "privatiser_france_travail",
+   "label": "Confier l'accompagnement des chômeurs au privé",
+   "term": "Ouverture de l'accompagnement des demandeurs d'emploi à des opérateurs privés",
+   "sector": "salaires",
+   "simple": "Des cabinets privés aident les chômeurs, payés selon leurs résultats.",
+   "expert": "Délégation à des opérateurs privés rémunérés au retour à l'emploi.",
+   "budget": 0.5,
+   "budget_note": "Économie ou recette d'environ 0.5 Md€ par an : le déficit baisse.",
+   "axes": {
+    "eco": 2
+   },
+   "ind": {
+    "emploi": 1,
+    "services": -1
+   },
+   "why_cost": "Payer les opérateurs.",
+   "why_gain": "Économies de fonctionnement.",
+   "benefits": [
+    "Rémunération au résultat.",
+    "Plus de suivi personnalisé."
+   ],
+   "problems": [
+    "Les chômeurs les plus éloignés délaissés.",
+    "Agents publics inquiets."
+   ],
+   "sources": [
+    {
+     "label": "France Actus : un programme de 142 propositions détaillé",
+     "url": "https://www.franceactus.info/news/edouard-philippe-programme-2027-142-propositions/"
+    }
+   ]
+  },
+  {
+   "origin": "Proposition présente dans au moins un programme présidentiel",
+   "once": 0,
+   "later": [],
+   "steps": [
+    {
+     "label": "Dépôt du texte",
+     "weeks": 1
+    },
+    {
+     "label": "Débat et vote au Parlement",
+     "weeks": 1
+    }
+   ],
+   "id": "allocation_sociale_unique",
+   "label": "Fusionner les aides sociales en une seule allocation",
+   "term": "Allocation sociale unique plafonnée",
+   "sector": "fiscalite",
+   "simple": "RSA, aides au logement et prime d'activité fusionnés en une aide, avec un plafond.",
+   "expert": "Fusion des minima sociaux et plafonnement global des aides.",
+   "budget": 1,
+   "budget_note": "Économie ou recette d'environ 1 Md€ par an : le déficit baisse.",
+   "axes": {
+    "eco": 2
+   },
+   "ind": {
+    "pouvoir_achat": -1,
+    "services": 1
+   },
+   "why_cost": "Mettre en place le nouveau système.",
+   "why_gain": "Simplicité et économies.",
+   "benefits": [
+    "Plus simple.",
+    "Moins de fraude."
+   ],
+   "problems": [
+    "Certains perdent des droits.",
+    "Chantier informatique lourd."
+   ],
+   "sources": [
+    {
+     "label": "Public Sénat : un plan d'économies de près de 200 milliards",
+     "url": "https://www.publicsenat.fr/actualites/politique/presidentielle-2027-bruno-retailleau-sengage-sur-un-plan-deconomies-de-pres-de-200-milliards-deuros-sil-est-elu"
+    },
+    {
+     "label": "Fondation iFRAP : comparateur des programmes 2027",
+     "url": "https://www.ifrap.org/comparateurs/presidentielle-2027"
+    }
+   ]
+  },
+  {
+   "origin": "Proposition présente dans au moins un programme présidentiel",
+   "once": 0,
+   "later": [],
+   "steps": [
+    {
+     "label": "Dépôt du texte",
+     "weeks": 1
+    },
+    {
+     "label": "Débat et vote au Parlement",
+     "weeks": 1,
+     "block": true
+    }
+   ],
+   "id": "plan_economies_200",
+   "label": "Plan de 200 milliards d'économies",
+   "term": "Plan pluriannuel de réduction des dépenses publiques",
+   "sector": "fiscalite",
+   "simple": "L'État réduit fortement ses dépenses sur plusieurs années.",
+   "expert": "Réduction des dépenses de fonctionnement, des aides et des effectifs.",
+   "budget": 15,
+   "budget_note": "Économie ou recette d'environ 15 Md€ par an : le déficit baisse.",
+   "axes": {
+    "eco": 2
+   },
+   "ind": {
+    "services": -2,
+    "emploi": -1,
+    "cohesion": -1
+   },
+   "why_cost": "Pas de dépense.",
+   "why_gain": "Le déficit baisse fortement.",
+   "benefits": [
+    "Déficit réduit.",
+    "Moins de dette."
+   ],
+   "problems": [
+    "Services publics réduits.",
+    "Croissance freinée à court terme."
+   ],
+   "sources": [
+    {
+     "label": "Public Sénat : un plan d'économies de près de 200 milliards",
+     "url": "https://www.publicsenat.fr/actualites/politique/presidentielle-2027-bruno-retailleau-sengage-sur-un-plan-deconomies-de-pres-de-200-milliards-deuros-sil-est-elu"
+    }
+   ],
+   "block": {
+    "title": "Blocage à l'Assemblée",
+    "text": "Une partie des députés refuse le texte : il ne passe pas.",
+    "choices": [
+     {
+      "id": "abandon",
+      "label": "Abandonner la réforme",
+      "label_expert": "Retrait du texte par le gouvernement",
+      "outcome": "abandon",
+      "plus": "Pas de conflit.",
+      "minus": "Rien ne change.",
+      "ind": {},
+      "axes": {}
+     },
+     {
+      "id": "493",
+      "label": "Passer en force avec le 49.3",
+      "label_expert": "Adoption sans vote par l'article 49.3",
+      "outcome": "pass",
+      "plus": "La réforme s'applique entièrement.",
+      "minus": "Censure possible, colère de l'opposition.",
+      "ind": {
+       "cohesion": -2
+      },
+      "axes": {
+       "soc": 1
+      }
+     },
+     {
+      "id": "compromis",
+      "label": "Compromis : moitié moins d'économies",
+      "label_expert": "Adoption d'une version amendée du texte",
+      "outcome": "amend",
+      "factor": 0.5,
+      "plus": "Le texte passe.",
+      "minus": "Effets réduits de moitié.",
+      "ind": {},
+      "axes": {}
+     }
+    ]
+   }
+  },
+  {
+   "origin": "Proposition présente dans au moins un programme présidentiel",
+   "once": 0,
+   "later": [],
+   "steps": [
+    {
+     "label": "Dépôt du texte",
+     "weeks": 1
+    },
+    {
+     "label": "Débat et vote au Parlement",
+     "weeks": 1
+    }
+   ],
+   "id": "regle_or",
+   "label": "Inscrire une règle d'or budgétaire dans la Constitution",
+   "term": "Constitutionnalisation d'une trajectoire de déficit",
+   "sector": "fiscalite",
+   "simple": "La Constitution oblige à réduire le déficit chaque année.",
+   "expert": "Règle constitutionnelle d'équilibre ou de déficit maximal.",
+   "budget": 0,
+   "budget_note": "Pas d'effet direct notable sur le déficit.",
+   "axes": {
+    "eco": 1
+   },
+   "ind": {
+    "cohesion": 0,
+    "souverainete": 1
+   },
+   "why_cost": "Pas de dépense.",
+   "why_gain": "Rassure les prêteurs.",
+   "benefits": [
+    "Crédibilité financière.",
+    "Discipline durable."
+   ],
+   "problems": [
+    "Moins de marges en cas de crise.",
+    "Révision constitutionnelle difficile."
+   ],
+   "sources": [
+    {
+     "label": "République 2027 : programmes par thème",
+     "url": "https://republique2027.fr/programmes"
+    },
+    {
+     "label": "Fondation iFRAP : comparateur des programmes 2027",
+     "url": "https://www.ifrap.org/comparateurs/presidentielle-2027"
+    }
+   ]
+  },
+  {
+   "origin": "Proposition présente dans au moins un programme présidentiel",
+   "once": 0,
+   "later": [],
+   "steps": [
+    {
+     "label": "Dépôt du texte",
+     "weeks": 1
+    },
+    {
+     "label": "Débat et vote au Parlement",
+     "weeks": 1,
+     "block": true
+    }
+   ],
+   "id": "retraite_points",
+   "label": "Retraite par points pour tous",
+   "term": "Système universel de retraite par points",
+   "sector": "retraites",
+   "simple": "Chaque euro cotisé donne les mêmes droits, quel que soit le métier.",
+   "expert": "Fusion des régimes dans un système à points.",
+   "budget": 0,
+   "budget_note": "Pas d'effet direct notable sur le déficit.",
+   "axes": {
+    "eco": 1
+   },
+   "ind": {
+    "cohesion": -1,
+    "services": 0
+   },
+   "why_cost": "Coût de transition.",
+   "why_gain": "Système lisible et équitable.",
+   "benefits": [
+    "Mêmes règles pour tous.",
+    "Fin des régimes spéciaux."
+   ],
+   "problems": [
+    "Valeur du point incertaine.",
+    "Forte opposition syndicale."
+   ],
+   "sources": [
+    {
+     "label": "Programmes 2027 : mesures sourcées par candidat",
+     "url": "https://programmes-2027.fr/"
+    }
+   ],
+   "block": {
+    "title": "Blocage à l'Assemblée",
+    "text": "Une partie des députés refuse le texte : il ne passe pas.",
+    "choices": [
+     {
+      "id": "abandon",
+      "label": "Abandonner la réforme",
+      "label_expert": "Retrait du texte par le gouvernement",
+      "outcome": "abandon",
+      "plus": "Pas de conflit.",
+      "minus": "Rien ne change.",
+      "ind": {},
+      "axes": {}
+     },
+     {
+      "id": "493",
+      "label": "Passer en force avec le 49.3",
+      "label_expert": "Adoption sans vote par l'article 49.3",
+      "outcome": "pass",
+      "plus": "La réforme s'applique entièrement.",
+      "minus": "Censure possible, colère de l'opposition.",
+      "ind": {
+       "cohesion": -2
+      },
+      "axes": {
+       "soc": 1
+      }
+     },
+     {
+      "id": "compromis",
+      "label": "Compromis : seulement pour les nouveaux entrants",
+      "label_expert": "Adoption d'une version amendée du texte",
+      "outcome": "amend",
+      "factor": 0.5,
+      "plus": "Le texte passe.",
+      "minus": "Effets réduits de moitié.",
+      "ind": {},
+      "axes": {}
+     }
+    ]
+   }
+  },
+  {
+   "origin": "Proposition présente dans au moins un programme présidentiel",
+   "once": 0,
+   "later": [],
+   "steps": [
+    {
+     "label": "Dépôt du texte",
+     "weeks": 1
+    },
+    {
+     "label": "Débat et vote au Parlement",
+     "weeks": 1
+    }
+   ],
+   "id": "conge_aidants",
+   "label": "Mieux payer le congé des proches aidants",
+   "term": "Revalorisation de l'allocation journalière du proche aidant",
+   "sector": "sante",
+   "simple": "Celui qui s'occupe d'un parent malade est mieux indemnisé.",
+   "expert": "Hausse et allongement de l'allocation journalière du proche aidant.",
+   "budget": -0.3,
+   "budget_note": "Coût d'environ 0.3 Md€ par an : le déficit augmente.",
+   "axes": {
+    "soc": 0
+   },
+   "ind": {
+    "cohesion": 1,
+    "pouvoir_achat": 1
+   },
+   "why_cost": "Indemnités en plus.",
+   "why_gain": "Aidants soutenus.",
+   "benefits": [
+    "Aidants moins épuisés.",
+    "Maintien à domicile."
+   ],
+   "problems": [
+    "Coût modeste mais durable.",
+    "Démarches encore lourdes."
+   ],
+   "sources": [
+    {
+     "label": "Fondation iFRAP : comparateur des programmes 2027",
+     "url": "https://www.ifrap.org/comparateurs/presidentielle-2027"
+    }
+   ]
+  },
+  {
+   "origin": "Proposition présente dans au moins un programme présidentiel",
+   "once": 0,
+   "later": [],
+   "steps": [
+    {
+     "label": "Dépôt du texte",
+     "weeks": 1
+    },
+    {
+     "label": "Débat et vote au Parlement",
+     "weeks": 1
+    }
+   ],
+   "id": "simplification_normes",
+   "label": "Supprimer une norme pour chaque norme créée",
+   "term": "Règle de compensation des normes nouvelles",
+   "sector": "numerique",
+   "simple": "Pour chaque nouvelle règle, l'administration doit en supprimer une.",
+   "expert": "Principe « une norme créée, une norme supprimée » et revue des procédures.",
+   "budget": 0.5,
+   "budget_note": "Économie ou recette d'environ 0.5 Md€ par an : le déficit baisse.",
+   "axes": {
+    "eco": 1
+   },
+   "ind": {
+    "emploi": 1
+   },
+   "why_cost": "Pas de dépense.",
+   "why_gain": "Moins de paperasse.",
+   "benefits": [
+    "Entreprises et mairies soulagées.",
+    "Gain de temps."
+   ],
+   "problems": [
+    "Risque d'affaiblir des protections.",
+    "Effet souvent symbolique."
+   ],
+   "sources": [
+    {
+     "label": "République 2027 : programmes par thème",
+     "url": "https://republique2027.fr/programmes"
+    },
+    {
+     "label": "Programmes 2027 : mesures sourcées par candidat",
+     "url": "https://programmes-2027.fr/"
+    }
+   ]
+  },
+  {
+   "origin": "Proposition présente dans au moins un programme présidentiel",
+   "once": 0,
+   "later": [],
+   "steps": [
+    {
+     "label": "Dépôt du texte",
+     "weeks": 1
+    },
+    {
+     "label": "Débat et vote au Parlement",
+     "weeks": 1
+    }
+   ],
+   "id": "capitalisation_complement",
+   "label": "Ajouter une part de retraite par capitalisation",
+   "term": "Pilier collectif de retraite par capitalisation",
+   "sector": "retraites",
+   "simple": "Une petite partie des cotisations est placée pour compléter la retraite.",
+   "expert": "Création d'un étage obligatoire par capitalisation.",
+   "budget": -1,
+   "budget_note": "Coût d'environ 1 Md€ par an : le déficit augmente.",
+   "axes": {
+    "eco": 2
+   },
+   "ind": {
+    "pouvoir_achat": 0,
+    "souverainete": 1
+   },
+   "why_cost": "Financer la transition.",
+   "why_gain": "Retraites mieux financées à long terme.",
+   "benefits": [
+    "Épargne investie dans les entreprises.",
+    "Moins de dépendance aux actifs."
+   ],
+   "problems": [
+    "Dépend des marchés financiers.",
+    "Double cotisation pendant la transition."
+   ],
+   "sources": [
+    {
+     "label": "Fondation iFRAP : comparateur des programmes 2027",
+     "url": "https://www.ifrap.org/comparateurs/presidentielle-2027"
+    },
+    {
+     "label": "Programmes 2027 : mesures sourcées par candidat",
+     "url": "https://programmes-2027.fr/"
+    }
+   ]
+  },
+  {
+   "origin": "Proposition présente dans au moins un programme présidentiel",
+   "once": 0,
+   "later": [],
+   "steps": [
+    {
+     "label": "Dépôt du texte",
+     "weeks": 1
+    },
+    {
+     "label": "Débat et vote au Parlement",
+     "weeks": 1
+    }
+   ],
+   "id": "tenue_unique",
+   "label": "Tenue commune à l'école",
+   "term": "Généralisation d'une tenue scolaire commune",
+   "sector": "ecole",
+   "simple": "Les élèves portent la même tenue simple à l'école.",
+   "expert": "Généralisation après expérimentation d'une tenue commune.",
+   "budget": -0.4,
+   "budget_note": "Coût d'environ 0.4 Md€ par an : le déficit augmente.",
+   "axes": {
+    "soc": 1
+   },
+   "ind": {
+    "cohesion": 1
+   },
+   "why_cost": "Achat des tenues.",
+   "why_gain": "Moins de comparaison entre élèves.",
+   "benefits": [
+    "Moins de harcèlement sur les vêtements.",
+    "Sentiment d'appartenance."
+   ],
+   "problems": [
+    "Coût pour l'État ou les familles.",
+    "Efficacité discutée."
+   ],
+   "sources": [
+    {
+     "label": "Programmes 2027 : mesures sourcées par candidat",
+     "url": "https://programmes-2027.fr/"
+    }
+   ]
+  },
+  {
+   "origin": "Proposition présente dans au moins un programme présidentiel",
+   "once": 0,
+   "later": [],
+   "steps": [
+    {
+     "label": "Dépôt du texte",
+     "weeks": 1
+    },
+    {
+     "label": "Débat et vote au Parlement",
+     "weeks": 1
+    }
+   ],
+   "id": "pass_rail",
+   "label": "Un abonnement unique et bon marché pour le train",
+   "term": "Abonnement national à prix réduit sur les trains régionaux",
+   "sector": "transports",
+   "simple": "Pour un prix fixe par mois, on prend tous les trains régionaux.",
+   "expert": "Abonnement national sur TER et Intercités, sur le modèle allemand.",
+   "budget": -1.5,
+   "budget_note": "Coût d'environ 1.5 Md€ par an : le déficit augmente.",
+   "axes": {
+    "env": 2
+   },
+   "ind": {
+    "pouvoir_achat": 1,
+    "co2": -1
+   },
+   "why_cost": "Compenser les recettes perdues.",
+   "why_gain": "Moins de voitures.",
+   "benefits": [
+    "Train moins cher.",
+    "Moins d'émissions."
+   ],
+   "problems": [
+    "Trains déjà saturés.",
+    "Coût annuel."
+   ],
+   "sources": [
+    {
+     "label": "Programmes 2027 : mesures sourcées par candidat",
+     "url": "https://programmes-2027.fr/"
+    },
+    {
+     "label": "Qui propose quoi 2027 : chaque programme en trois lignes",
+     "url": "https://quiproposequoi2027.fr/"
+    }
+   ]
+  },
+  {
+   "origin": "Proposition présente dans au moins un programme présidentiel",
+   "once": 0,
+   "later": [],
+   "steps": [
+    {
+     "label": "Dépôt du texte",
+     "weeks": 1
+    },
+    {
+     "label": "Débat et vote au Parlement",
+     "weeks": 1
+    }
+   ],
+   "id": "taxe_superprofits",
+   "label": "Taxer les superprofits",
+   "term": "Contribution exceptionnelle sur les bénéfices exceptionnels",
+   "sector": "fiscalite",
+   "simple": "Les entreprises qui gagnent exceptionnellement beaucoup paient une taxe en plus.",
+   "expert": "Surtaxe sur la part des bénéfices au-dessus de la moyenne.",
+   "budget": 4,
+   "budget_note": "Économie ou recette d'environ 4 Md€ par an : le déficit baisse.",
+   "axes": {
+    "eco": -2
+   },
+   "ind": {
+    "cohesion": 1,
+    "emploi": -1
+   },
+   "why_cost": "Pas de dépense.",
+   "why_gain": "Recettes nouvelles.",
+   "benefits": [
+    "Partage des profits de crise.",
+    "Recette rapide."
+   ],
+   "problems": [
+    "Investissement découragé.",
+    "Profits difficiles à définir."
+   ],
+   "sources": [
+    {
+     "label": "Programmes 2027 : mesures sourcées par candidat",
+     "url": "https://programmes-2027.fr/"
+    },
+    {
+     "label": "République 2027 : programmes par thème",
+     "url": "https://republique2027.fr/programmes"
+    }
+   ]
+  },
+  {
+   "origin": "Proposition présente dans au moins un programme présidentiel",
+   "once": 0,
+   "later": [],
+   "steps": [
+    {
+     "label": "Dépôt du texte",
+     "weeks": 1
+    },
+    {
+     "label": "Débat et vote au Parlement",
+     "weeks": 1
+    }
+   ],
+   "id": "interdire_jets_prives",
+   "label": "Interdire les vols en jet privé non essentiels",
+   "term": "Interdiction des vols privés de loisir",
+   "sector": "transports",
+   "simple": "Les vols en jet privé pour le loisir sont interdits.",
+   "expert": "Interdiction des vols d'affaires et de loisir en jet privé, hors urgences.",
+   "budget": 0.05,
+   "budget_note": "Économie ou recette d'environ 0.05 Md€ par an : le déficit baisse.",
+   "axes": {
+    "env": 2
+   },
+   "ind": {
+    "co2": -1,
+    "cohesion": 1
+   },
+   "why_cost": "Pas de dépense.",
+   "why_gain": "Petite recette sur les vols restants.",
+   "benefits": [
+    "Mesure symbolique de justice climatique.",
+    "Moins d'émissions."
+   ],
+   "problems": [
+    "Faible effet sur le climat global.",
+    "Emplois de l'aviation d'affaires."
+   ],
+   "sources": [
+    {
+     "label": "Programmes 2027 : mesures sourcées par candidat",
+     "url": "https://programmes-2027.fr/"
+    }
+   ]
+  },
+  {
+   "origin": "Proposition présente dans au moins un programme présidentiel",
+   "once": 0,
+   "later": [],
+   "steps": [
+    {
+     "label": "Dépôt du texte",
+     "weeks": 1
+    },
+    {
+     "label": "Débat et vote au Parlement",
+     "weeks": 1
+    }
+   ],
+   "id": "pub_polluants",
+   "label": "Interdire la publicité pour les produits très polluants",
+   "term": "Interdiction de la publicité pour les SUV et vols courts",
+   "sector": "energie",
+   "simple": "Plus de publicité pour les grosses voitures et les vols à bas prix.",
+   "expert": "Extension de l'interdiction de publicité aux produits les plus émetteurs.",
+   "budget": 0,
+   "budget_note": "Pas d'effet direct notable sur le déficit.",
+   "axes": {
+    "env": 2
+   },
+   "ind": {
+    "co2": -1,
+    "emploi": -1
+   },
+   "why_cost": "Pas de dépense.",
+   "why_gain": "Changement des habitudes.",
+   "benefits": [
+    "Moins d'incitation à polluer.",
+    "Pas de coût public."
+   ],
+   "problems": [
+    "Médias privés de recettes.",
+    "Liberté de commerce réduite."
+   ],
+   "sources": [
+    {
+     "label": "Programmes 2027 : mesures sourcées par candidat",
+     "url": "https://programmes-2027.fr/"
+    },
+    {
+     "label": "Qui propose quoi 2027 : chaque programme en trois lignes",
+     "url": "https://quiproposequoi2027.fr/"
+    }
+   ]
+  },
+  {
+   "origin": "Proposition présente dans au moins un programme présidentiel",
+   "once": 0,
+   "later": [],
+   "steps": [
+    {
+     "label": "Dépôt du texte",
+     "weeks": 1
+    },
+    {
+     "label": "Débat et vote au Parlement",
+     "weeks": 1
+    }
+   ],
+   "id": "semaine_4_jours",
+   "label": "Semaine de quatre jours",
+   "term": "Généralisation de la semaine de travail en quatre jours",
+   "sector": "salaires",
+   "simple": "On travaille quatre jours par semaine, sans baisse de salaire.",
+   "expert": "Incitations à la semaine de quatre jours par accord d'entreprise.",
+   "budget": -1,
+   "budget_note": "Coût d'environ 1 Md€ par an : le déficit augmente.",
+   "axes": {
+    "eco": -1
+   },
+   "ind": {
+    "cohesion": 1,
+    "emploi": 0,
+    "co2": -1
+   },
+   "why_cost": "Aides aux entreprises qui passent à 4 jours.",
+   "why_gain": "Meilleure qualité de vie.",
+   "benefits": [
+    "Moins de trajets.",
+    "Salariés plus reposés."
+   ],
+   "problems": [
+    "Coût pour les entreprises.",
+    "Difficile dans les services continus."
+   ],
+   "sources": [
+    {
+     "label": "Programmes 2027 : mesures sourcées par candidat",
+     "url": "https://programmes-2027.fr/"
+    }
+   ]
+  },
+  {
+   "origin": "Proposition présente dans au moins un programme présidentiel",
+   "once": 0,
+   "later": [],
+   "steps": [
+    {
+     "label": "Dépôt du texte",
+     "weeks": 1
+    },
+    {
+     "label": "Débat et vote au Parlement",
+     "weeks": 1
+    }
+   ],
+   "id": "cantine_bio_locale",
+   "label": "Cantines 100 % bio et locales",
+   "term": "Approvisionnement bio et local de la restauration collective",
+   "sector": "agriculture",
+   "simple": "Les cantines servent des produits bio et produits près de chez soi.",
+   "expert": "Objectif de 100 % de produits durables dans la restauration collective.",
+   "budget": -1,
+   "budget_note": "Coût d'environ 1 Md€ par an : le déficit augmente.",
+   "axes": {
+    "env": 2
+   },
+   "ind": {
+    "co2": -1,
+    "emploi": 1
+   },
+   "why_cost": "Surcoût des produits.",
+   "why_gain": "Débouchés pour les agriculteurs locaux.",
+   "benefits": [
+    "Meilleure alimentation des enfants.",
+    "Agriculteurs locaux soutenus."
+   ],
+   "problems": [
+    "Repas plus chers.",
+    "Pas assez de production bio."
+   ],
+   "sources": [
+    {
+     "label": "Programmes 2027 : mesures sourcées par candidat",
+     "url": "https://programmes-2027.fr/"
+    },
+    {
+     "label": "Fondation iFRAP : comparateur des programmes 2027",
+     "url": "https://www.ifrap.org/comparateurs/presidentielle-2027"
+    }
+   ]
+  },
+  {
+   "origin": "Proposition présente dans au moins un programme présidentiel",
+   "once": 0,
+   "later": [],
+   "steps": [
+    {
+     "label": "Dépôt du texte",
+     "weeks": 1
+    },
+    {
+     "label": "Débat et vote au Parlement",
+     "weeks": 1
+    }
+   ],
+   "id": "impot_fortune_financiere",
+   "label": "Remplacer l'impôt sur l'immobilier par un impôt sur la fortune financière",
+   "term": "Substitution de l'IFI par un impôt sur la fortune financière",
+   "sector": "fiscalite",
+   "simple": "On ne taxe plus la maison, mais les gros placements financiers.",
+   "expert": "Suppression de l'IFI et création d'un impôt sur les actifs financiers.",
+   "budget": 0.5,
+   "budget_note": "Économie ou recette d'environ 0.5 Md€ par an : le déficit baisse.",
+   "axes": {
+    "eco": 0
+   },
+   "ind": {
+    "cohesion": 1,
+    "pouvoir_achat": 0
+   },
+   "why_cost": "Pas de dépense.",
+   "why_gain": "Recette un peu plus élevée.",
+   "benefits": [
+    "Propriétaires soulagés.",
+    "Taxe la rente financière."
+   ],
+   "problems": [
+    "Fuite possible de capitaux.",
+    "Résidence principale déjà peu taxée."
+   ],
+   "sources": [
+    {
+     "label": "République 2027 : programmes par thème",
+     "url": "https://republique2027.fr/programmes"
+    }
+   ]
+  },
+  {
+   "origin": "Proposition présente dans au moins un programme présidentiel",
+   "once": 0,
+   "later": [],
+   "steps": [
+    {
+     "label": "Dépôt du texte",
+     "weeks": 1
+    },
+    {
+     "label": "Débat et vote au Parlement",
+     "weeks": 1
+    }
+   ],
+   "id": "quotas_etudiants",
+   "label": "Quotas d'étudiants étrangers par filière",
+   "term": "Plafonnement des visas étudiants par filière et niveau",
+   "sector": "immigration",
+   "simple": "Le nombre d'étudiants étrangers est limité selon les filières.",
+   "expert": "Quotas annuels de titres de séjour étudiant.",
+   "budget": 0,
+   "budget_note": "Pas d'effet direct notable sur le déficit.",
+   "axes": {
+    "soc": 2
+   },
+   "ind": {
+    "souverainete": 1,
+    "emploi": 0
+   },
+   "why_cost": "Pas de dépense.",
+   "why_gain": "Immigration étudiante maîtrisée.",
+   "benefits": [
+    "Contrôle des flux.",
+    "Places réservées aux besoins du pays."
+   ],
+   "problems": [
+    "Universités privées de talents.",
+    "Moins de rayonnement à l'étranger."
+   ],
+   "sources": [
+    {
+     "label": "Fondation iFRAP : comparateur des programmes 2027",
+     "url": "https://www.ifrap.org/comparateurs/presidentielle-2027"
+    }
+   ]
+  },
+  {
+   "origin": "Proposition présente dans au moins un programme présidentiel",
+   "once": 0,
+   "later": [],
+   "steps": [
+    {
+     "label": "Dépôt du texte",
+     "weeks": 1
+    },
+    {
+     "label": "Débat et vote au Parlement",
+     "weeks": 1
+    }
+   ],
+   "id": "immigration_selon_chomage",
+   "label": "Lier l'immigration de travail au chômage",
+   "term": "Délivrance des titres de travail selon le taux de chômage",
+   "sector": "immigration",
+   "simple": "Moins de visas de travail quand le chômage est élevé.",
+   "expert": "Conditionnement de l'immigration économique au taux de chômage par métier.",
+   "budget": 0,
+   "budget_note": "Pas d'effet direct notable sur le déficit.",
+   "axes": {
+    "soc": 2
+   },
+   "ind": {
+    "souverainete": 1,
+    "emploi": 0
+   },
+   "why_cost": "Pas de dépense.",
+   "why_gain": "Priorité aux chômeurs déjà présents.",
+   "benefits": [
+    "Emplois proposés d'abord aux chômeurs.",
+    "Contrôle des flux."
+   ],
+   "problems": [
+    "Pénuries dans les métiers en tension.",
+    "Lourdeur administrative."
+   ],
+   "sources": [
+    {
+     "label": "Fondation iFRAP : comparateur des programmes 2027",
+     "url": "https://www.ifrap.org/comparateurs/presidentielle-2027"
+    }
+   ]
+  },
+  {
+   "origin": "Proposition présente dans au moins un programme présidentiel",
+   "once": 0,
+   "later": [],
+   "steps": [
+    {
+     "label": "Dépôt du texte",
+     "weeks": 1
+    },
+    {
+     "label": "Débat et vote au Parlement",
+     "weeks": 1
+    }
+   ],
+   "id": "part_fiscale_2e_enfant",
+   "label": "Une part fiscale pleine dès le deuxième enfant",
+   "term": "Quotient familial : part entière dès le deuxième enfant",
+   "sector": "fiscalite",
+   "simple": "Les familles de deux enfants paient moins d'impôt sur le revenu.",
+   "expert": "Passage à une part entière par enfant dès le deuxième.",
+   "budget": -3,
+   "budget_note": "Coût d'environ 3 Md€ par an : le déficit augmente.",
+   "axes": {
+    "soc": 1
+   },
+   "ind": {
+    "pouvoir_achat": 1,
+    "cohesion": 0
+   },
+   "why_cost": "Moins de recettes d'impôt.",
+   "why_gain": "Soutien aux familles.",
+   "benefits": [
+    "Soutien à la natalité.",
+    "Familles aidées."
+   ],
+   "problems": [
+    "Profite aux revenus imposables.",
+    "Coût élevé."
+   ],
+   "sources": [
+    {
+     "label": "Fondation iFRAP : comparateur des programmes 2027",
+     "url": "https://www.ifrap.org/comparateurs/presidentielle-2027"
+    }
+   ]
+  },
+  {
+   "origin": "Proposition présente dans au moins un programme présidentiel",
+   "once": 0,
+   "later": [],
+   "steps": [
+    {
+     "label": "Dépôt du texte",
+     "weeks": 1
+    },
+    {
+     "label": "Débat et vote au Parlement",
+     "weeks": 1
+    }
+   ],
+   "id": "demi_part_veufs",
+   "label": "Une demi-part fiscale pour les veufs et veuves",
+   "term": "Rétablissement de la demi-part des veufs",
+   "sector": "fiscalite",
+   "simple": "Les veufs et veuves paient moins d'impôt.",
+   "expert": "Rétablissement d'une demi-part supplémentaire pour les veufs.",
+   "budget": -1.5,
+   "budget_note": "Coût d'environ 1.5 Md€ par an : le déficit augmente.",
+   "axes": {
+    "soc": 0
+   },
+   "ind": {
+    "pouvoir_achat": 1
+   },
+   "why_cost": "Moins de recettes.",
+   "why_gain": "Aide aux retraités seuls.",
+   "benefits": [
+    "Aide aux personnes seules âgées.",
+    "Mesure simple."
+   ],
+   "problems": [
+    "Coût élevé.",
+    "Ciblage imparfait."
+   ],
+   "sources": [
+    {
+     "label": "Fondation iFRAP : comparateur des programmes 2027",
+     "url": "https://www.ifrap.org/comparateurs/presidentielle-2027"
+    }
+   ]
+  },
+  {
+   "origin": "Proposition présente dans au moins un programme présidentiel",
+   "once": 0,
+   "later": [],
+   "steps": [
+    {
+     "label": "Dépôt du texte",
+     "weeks": 1
+    },
+    {
+     "label": "Débat et vote au Parlement",
+     "weeks": 1
+    }
+   ],
+   "id": "aah_seuil_pauvrete",
+   "label": "Allocation adulte handicapé au-dessus du seuil de pauvreté",
+   "term": "Revalorisation de l'AAH au-dessus du seuil de pauvreté",
+   "sector": "sante",
+   "simple": "Les personnes handicapées touchent une allocation qui les sort de la pauvreté.",
+   "expert": "Revalorisation de l'AAH au niveau du seuil de pauvreté.",
+   "budget": -2,
+   "budget_note": "Coût d'environ 2 Md€ par an : le déficit augmente.",
+   "axes": {
+    "eco": -1
+   },
+   "ind": {
+    "cohesion": 1,
+    "pouvoir_achat": 1
+   },
+   "why_cost": "Allocations en hausse.",
+   "why_gain": "Moins de pauvreté.",
+   "benefits": [
+    "Dignité des personnes handicapées.",
+    "Pouvoir d'achat."
+   ],
+   "problems": [
+    "Coût durable.",
+    "Écart avec d'autres minima."
+   ],
+   "sources": [
+    {
+     "label": "Fondation iFRAP : comparateur des programmes 2027",
+     "url": "https://www.ifrap.org/comparateurs/presidentielle-2027"
     }
    ]
   }
