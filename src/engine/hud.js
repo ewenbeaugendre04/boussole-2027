@@ -122,8 +122,14 @@ function coins(fromRect, n, target){
 }
 
 /* ---------- Toasts ---------- */
-function toast(html, ms){
-  var t = document.createElement('div'); t.className = 'toast'; t.innerHTML = '<span>' + html + '</span>'; $('toasts').appendChild(t);
-  setTimeout(function(){ t.classList.add('out'); setTimeout(function(){ t.remove(); }, 400); }, ms || 2600);
+/* notifications : une seule à la fois, dans une boîte, avec un bouton pour passer à la suivante (pas de minuterie) */
+var TOASTQ = [];
+function toast(html){ TOASTQ.push(html); if(TOASTQ.length === 1) toastShow(); else { var b = document.querySelector('#toasts .tq-b'); if(b) b.textContent = 'Suivant (' + (TOASTQ.length - 1) + ')'; } }
+function toastShow(){
+  var box = $('toasts'); box.innerHTML = ''; if(!TOASTQ.length) return;
+  var rest = TOASTQ.length - 1, t = document.createElement('div'); t.className = 'toast tq'; t.setAttribute('role', 'status');
+  t.innerHTML = '<span>' + TOASTQ[0] + '</span><button class="tq-b pressable">' + (rest ? 'Suivant (' + rest + ')' : 'Fermer') + '</button>';
+  t.querySelector('button').addEventListener('click', function(){ TOASTQ.shift(); t.classList.add('out'); setTimeout(toastShow, 180); });
+  box.appendChild(t);
 }
 
