@@ -145,7 +145,7 @@ var BAKE = { cache:{}, key:'', job:null };
 var BAKE_PROPS = ['fill', 'stroke', 'opacity', 'stroke-width', 'fill-opacity', 'stroke-opacity', 'stop-color', 'stop-opacity', 'display'];
 function decorKey(){
   var r = board.getBoundingClientRect();
-  return document.documentElement.getAttribute('data-theme') + ($('app').classList.contains('is-night') ? 'N' : '') + (board.getAttribute('data-weather') === 'neige' ? 'S' : '') + Math.round(r.width) + 'x' + Math.round(r.height) + '@' + F(VBX) + ',' + F(VBY) + ',' + F(VBK);
+  return (typeof carteSig === 'function' ? carteSig() : '') + document.documentElement.getAttribute('data-theme') + ($('app').classList.contains('is-night') ? 'N' : '') + (board.getAttribute('data-weather') === 'neige' ? 'S' : '') + Math.round(r.width) + 'x' + Math.round(r.height) + '@' + F(VBX) + ',' + F(VBY) + ',' + F(VBK);
 }
 function bakeDecor(){
   var key = decorKey(), img = $('decorImg');

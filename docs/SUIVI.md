@@ -80,3 +80,10 @@
 
 ## Lot du 21/11 nuit (20 semaines)
 - 20 semaines : 12 événements récents ajoutés (semaines 17-20, 2024-2025 : sabotage TGV, vie chère Martinique, France Travail, crue de Rennes, ArcelorMittal, loi pesticide, EPR, contrôles allemands, ZFE, A69, narcotrafic, Brandt) ; 4 anciens remplacés (vache folle → dermatose 2025, Lothar → crues Pas-de-Calais, Erika → pêche golfe de Gascogne, chikungunya → Réunion 2025) ; choix nouveaux 32 + / 32 − ; offres 17-20 = semaines 10-13 ; bilan mensuel en semaine 20 (4 bilans + final).
+
+## 26/11/2026 : carte vivante
+- Carte allégée : densité des villes et villages réduite (`DENS = .65` dans `src/art/sprites.js`).
+- Réformes qui modifient la carte : table `CARTE_REF` (sprites.js). Pendant le chantier, barre d'avancement sur chaque site (centrales à retirer, grues sur les sites à construire) ; une fois adoptée, les bâtiments disparaissent ou apparaissent (décor recuit via `carteSig()`).
+  Réformes branchées : sortie_nucleaire, relance_nucleaire, peines_planchers, renovation_massive, vols_courts_train, taxe_kerosene_train.
+- Barre de réforme compacte (icône du domaine + jauge), ouvre la fiche au toucher. Plus de drapeaux après les missions, plus de notifications au toucher de la carte.
+- Grands reliefs affichés à part (`#sprl`, nets au zoom) avec embase verte ; sapins du pied devant les massifs.

@@ -23,6 +23,7 @@ function sprList(){
   var R = rng(1789), out = [];
   function put(id, lon, lat, w, flip, sy, rot, pied){ out.push([id, lon, lat, w, flip ? 1 : 0, sy || 1, rot || 0, pied ? 1 : 0]); }
   function cluster(lon, lat, n, sp, kinds, w){
+    n = Math.max(1, Math.round(n * DENS));
     for(var i = 0; i < n; i++){ var k = kinds[Math.floor(R() * kinds.length)]; put(k, lon + (R() - .5) * 2 * sp * 1.3, lat + (R() - .5) * 2 * sp * .8, (w || 2) * (k === 'petit_immeuble' || k === 'haussmann' || k === 'immeuble' ? 1.08 : 1)); }
   }
   // monuments des grandes villes
@@ -32,7 +33,7 @@ function sprList(){
   /* ville structurée : centre (haussmann, commerces), couronne (immeubles), périphérie (pavillons) ; quartier d'affaires optionnel */
   function city(lon, lat, r, o){
     o = o || {}; var core = o.core || ['haussmann', 'haussmann', 'boulangerie'], mid = o.mid || ['petit_immeuble', 'immeuble'], out2 = o.out || ['pavillon', 'pavillon', 'maison_pierre'];
-    function ring(rad, n, kinds, w){ for(var i = 0; i < n; i++){ var a = i / n * 6.283 + R() * .5, d = rad * (.75 + R() * .5); put(kinds[Math.floor(R() * kinds.length)], lon + Math.cos(a) * d * 1.35, lat + Math.sin(a) * d * .85, w); } }
+    function ring(rad, n, kinds, w){ n = Math.max(1, Math.round(n * DENS)); for(var i = 0; i < n; i++){ var a = i / n * 6.283 + R() * .5, d = rad * (.75 + R() * .5); put(kinds[Math.floor(R() * kinds.length)], lon + Math.cos(a) * d * 1.35, lat + Math.sin(a) * d * .85, w); } }
     ring(r * .18, Math.max(2, Math.round(4 * r)), core, 1.7); ring(r * .5, Math.round(7 * r), mid, 1.8); ring(r, Math.round(10 * r), out2, 1.5);
     if(o.affaires) for(var k = 0; k < 4; k++) put('tour_bureaux', o.affaires[0] + (k % 2) * .16, o.affaires[1] + Math.floor(k / 2) * .1, 1.6);
   }
@@ -84,8 +85,25 @@ function sprList(){
   put('ble', 2.5, 48.35, 3.4); put('ble', 1.0, 49.2, 3.2); put('ble', 4.3, 48.5, 3.2); put('ble', -0.3, 46.6, 3); put('ble', 1.6, 43.85, 3); put('ble', 2.9, 49.75, 3);
   put('vignes', -0.6, 45.25, 3); put('vignes', 4.85, 44.5, 3); put('vignes', 3.2, 43.35, 3.2); put('vignes', 7.3, 48.15, 2.6); put('vignes', 0.4, 47.3, 2.6);
   put('vache', -1.3, 48.4, 1.6); put('vache', 3.4, 46.7, 1.6); put('serre', 4.9, 43.75, 2); put('tracteur', 3.0, 49.5, 1.6);
+  /* réformes qui changent la carte : une fois adoptées, des bâtiments disparaissent ou apparaissent ; pendant le chantier, une grue sur les sites à construire */
+  Object.keys(CARTE_REF).forEach(function(id){
+    var c = CARTE_REF[id], st = carteEtat(id); if(!st) return;
+    if(st === 'done'){ if(c.retirer) out = out.filter(function(o){ return c.retirer.indexOf(o[0]) < 0; }); (c.ajouter || []).forEach(function(a){ put(a[0], a[1], a[2], a[3] || SPR_W[a[0]] || 2.4); }); }
+    else (c.ajouter || []).forEach(function(a){ put('grue_chantier', a[1], a[2], 2.2); });
+  });
   return out;
 }
+var DENS = .65; /* densité des villes et villages (carte moins chargée) */
+var CARTE_REF = {
+  sortie_nucleaire: { retirer:['centrale_nucleaire'], ajouter:[['eolienne', 1.95, 47.95], ['eolienne', 5.05, 45.55], ['solaire', 4.35, 44.6, 2.4]] },
+  relance_nucleaire: { ajouter:[['centrale_nucleaire', 0.75, 49.8], ['centrale_nucleaire', 4.85, 45.95]] },
+  peines_planchers: { ajouter:[['prison', 2.85, 48.55], ['prison', 5.05, 43.65]] },
+  renovation_massive: { ajouter:[['maison_isolation', 3.15, 50.35], ['maison_isolation', -1.35, 47.25], ['maison_isolation', 4.95, 46.85]] },
+  vols_courts_train: { ajouter:[['gare', 2.6, 46.6, 2.6]] },
+  taxe_kerosene_train: { ajouter:[['gare', 0.35, 46.2, 2.6]] }
+};
+function carteEtat(id){ var r = (typeof S !== 'undefined' && S && S.reforms) ? S.reforms[id] : null; return r && (r.status === 'done' || r.status === 'en_cours') ? r.status : ''; }
+function carteSig(){ return Object.keys(CARTE_REF).map(carteEtat).join(''); }
 /* positions calculées une fois le masque terre/mer prêt (unités du plateau) */
 function sprItems(){
   var items = [];

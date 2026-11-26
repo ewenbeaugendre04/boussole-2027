@@ -7,6 +7,7 @@ var PIN_SCALE = 1.35;
 var SLOTS = [[0,0],[8,1.8],[-8,1.8],[0,7.5],[8,-6],[-8,-6],[16,.4],[-16,.4],[8,9.5],[-8,9.5]];
 var pinsG = null;
 function renderPins(popIds){
+  if(typeof carteSig === 'function' && carteSig() !== renderPins.sig){ renderPins.sig = carteSig(); if(typeof bakeDecor === 'function' && BAKE.key) bakeDecor(); } /* la carte suit les réformes adoptées */
   pinsG = $('pinl');
   var items = [], slot = {};
   function pos(region){
@@ -27,7 +28,15 @@ function renderPins(popIds){
     var steps = arr(pr.steps), tot = progWeeks(pr), done = 0;
     for(var k = 0; k < r.step && k < steps.length; k++) done += Math.max(1, num(steps[k].weeks, 1));
     if(steps[r.step]) done += Math.max(1, num(steps[r.step].weeks, 1)) - r.left;
-    var p = pos(nationalRegion()); items.push({ y:p[1], s:reformBar(id, pr, Math.max(0, Math.min(1, done / Math.max(1, tot))), tot - done, p) });
+    var fr = Math.max(0, Math.min(1, done / Math.max(1, tot))), c = typeof CARTE_REF !== 'undefined' && CARTE_REF[id];
+    if(c){ /* barre sur chaque bâtiment concerné : ceux qui vont disparaître et les chantiers */
+      var sites = [];
+      if(c.retirer) sprItems().forEach(function(it){ if(c.retirer.indexOf(it.id) >= 0) sites.push([it.x, it.y - it.h * .2]); });
+      (c.ajouter || []).forEach(function(a){ var u = P(a[1], a[2]); sites.push([u[0], u[1]]); });
+      sites.forEach(function(u){ items.push({ y:u[1], s:reformBar(id, pr, fr, tot - done, u, 1) }); });
+      return;
+    }
+    var p = pos(nationalRegion()); items.push({ y:p[1], s:reformBar(id, pr, fr, tot - done, p) });
   });
   S.notes.forEach(function(n){
     if(n.due > S.dayIdx || n.read || !n.shown) return;
@@ -68,9 +77,9 @@ function pinHtml(kind, id, type, p, obj){
 }
 /* bâtiment parlant selon le domaine de la réforme */
 var RF_SPR = { energie:'eolienne', europe:'hemicycle', salaires:'billets', logement:'immeuble', sante:'hopital', securite:'commissariat', immigration:'poste_frontiere', ecole:'ecole', agriculture:'ferme', defense:'fregate', numerique:'antenne', retraites:'ehpad', fiscalite:'mairie', transports:'gare' };
-function reformBar(id, pr, f, left, p){
-  var q = U2P(p[0] - 7, p[1] + 3);
-  return '<button class="rfbar pressable" data-id="' + esc(id) + '" data-type="reform" aria-label="' + esc('Réforme en cours : ' + pr.label + ', ' + Math.round(f * 100) + ' %, ' + left + ' semaine(s) restante(s)') + '" style="left:' + F(q[0] - 20) + 'px;top:' + F(q[1] - 30) + 'px"><img src="' + SPR_DIR + (RF_SPR[pr.sector] || 'grue_chantier') + '.webp" alt=""><span class="rf-tr"><i style="width:' + Math.max(8, Math.round(f * 100)) + '%"></i></span></button>';
+function reformBar(id, pr, f, left, p, surSite){
+  var q = surSite ? U2P(p[0], p[1]) : U2P(p[0] - 7, p[1] + 3);
+  return '<button class="rfbar pressable" data-id="' + esc(id) + '" data-type="reform" aria-label="' + esc('Réforme en cours : ' + pr.label + ', ' + Math.round(f * 100) + ' %, ' + left + ' semaine(s) restante(s)') + '" style="left:' + F(q[0] - 20) + 'px;top:' + F(q[1] - 30) + 'px">' + (surSite ? '' : '<img src="' + SPR_DIR + (RF_SPR[pr.sector] || 'grue_chantier') + '.webp" alt="">') + '<span class="rf-tr"><i style="width:' + Math.max(8, Math.round(f * 100)) + '%"></i></span></button>';
 }
 function shortLabel(t){ t = String(t || ''); return t.length > 26 ? t.slice(0, 25).replace(/\s+\S*$/, '') + '…' : t; }
 function pinRect(id){ var el = $('pinl').querySelector('[data-id="' + cssEsc(id) + '"]'); return el ? el.getBoundingClientRect() : null; }
