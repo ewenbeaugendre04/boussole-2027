@@ -38,6 +38,15 @@ réforme;rsa_jeunes;"Ouvrir le RSA aux jeunes de 18 à 25 ans";salaires;-3;0;1;0
 réforme;jour_ferie_travaille;"Supprimer deux jours fériés pour réduire le déficit";fiscalite;4.2;0;-1;1;0;-4;0;0
 réforme;tva_sociale;"Monter la TVA pour baisser les cotisations sur les salaires";fiscalite;0;0;-3;3;0;0;1;0
 réforme;vols_courts_train;"Interdire les vols intérieurs quand le train met moins de 4 heures";transports;-0.05;0;0;-1;-2;0;0;-1
+réforme;ir_14_tranches;"Un impôt sur le revenu à 14 tranches";fiscalite;3;0;1;0;0;2;0;0
+réforme;recrutements_publics;"500 000 recrutements dans les services publics en cinq ans";sante;-8;0;0;2;0;1;0;6
+réforme;tva_premiere_necessite;"Baisser la TVA sur les produits de première nécessité";salaires;-10;0;5;0;0;1;0;0
+réforme;reduction_impot_familles;"Une réduction d'impôt d'environ 3 000 € pour les familles qui travaillent";fiscalite;-5;0;3;1;0;0;0;0
+réforme;interets_emprunt_deductibles;"Déduire de l'impôt les intérêts d'un prêt immobilier";logement;-1.5;0;1;0;0;-1;0;0
+réforme;rsa_suspendu_condamnes;"Suspendre le RSA des personnes condamnées pour délinquance";securite;0.05;0;0;0;0;-1;0;0
+réforme;sortie_otan;"Sortir de l'OTAN";defense;0.2;0;0;0;0;-1;1;0
+réforme;recrutement_justice;"Recruter 8 500 magistrats et personnels de justice";securite;-0.6;0;0;0;0;1;0;1
+réforme;requisition_logements_vacants;"Réquisitionner les logements vacants pour loger les sans-abri";logement;-0.2;0;0;0;0;2;0;1
 choix;v22_mercosur/a;"L'Europe signe l'accord avec l'Amérique du Sud, les tracteurs montent à Paris → Voter contre et saisir la justice européenne";agriculture;0;0;0;-1;0;1;2;0
 choix;v22_mercosur/b;"L'Europe signe l'accord avec l'Amérique du Sud, les tracteurs montent à Paris → Activer la clause de sauvegarde dès la première hausse";agriculture;0;0;0;0;0;0;1;0
 choix;v22_mercosur/c;"L'Europe signe l'accord avec l'Amérique du Sud, les tracteurs montent à Paris → Aides d'urgence aux éleveurs les plus exposés";agriculture;0;-0.3;0;1;0;1;0;0

@@ -151,7 +151,7 @@ function bakeDecor(){
   var key = decorKey(), img = $('decorImg');
   if(key === BAKE.key) return;
   BAKE.key = key;
-  if(BAKE.cache[key]){ img.src = BAKE.cache[key]; return; }
+  if(BAKE.cache[key]){ img.src = BAKE.cache[key]; if(typeof sprBigRefresh === 'function') sprBigRefresh(); return; } /* les grands reliefs (calque à part) suivent aussi le jour/la nuit */
   try{
     var src = $('map'), r0 = board.getBoundingClientRect(), r = { width:WW || r0.width, height:WH || r0.height }, dpr = window.devicePixelRatio || 1;
     var sc = Math.min(2 * dpr, 4, 8192 / Math.max(r.width, r.height), Math.sqrt(11e6 / (r.width * r.height)));

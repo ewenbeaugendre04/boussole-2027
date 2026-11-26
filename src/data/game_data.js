@@ -2463,7 +2463,8 @@ const GAME = {
     "referendum_immigration",
     "lutte_fraude",
     "regularisation_metiers_tension",
-    "taxe_billets_premium"
+    "requisition_logements_vacants",
+    "ir_14_tranches"
    ],
    "events": [
     {
@@ -6071,7 +6072,8 @@ const GAME = {
     "jour_ferie_travaille",
     "tva_energie_5_5",
     "leasing_electrique",
-    "encadrement_loyers"
+    "encadrement_loyers",
+    "interets_emprunt_deductibles"
    ],
    "events": [
     {
@@ -7976,7 +7978,8 @@ const GAME = {
     "baisse_impots_production",
     "defense_europeenne_emprunt",
     "vols_courts_train",
-    "service_militaire"
+    "service_militaire",
+    "recrutements_publics"
    ],
    "events": [
     {
@@ -9649,7 +9652,8 @@ const GAME = {
     "referendum_immigration",
     "lutte_fraude",
     "regularisation_metiers_tension",
-    "taxe_billets_premium"
+    "taxe_billets_premium",
+    "tva_premiere_necessite"
    ],
    "events": [
     {
@@ -11744,7 +11748,8 @@ const GAME = {
     "jour_ferie_travaille",
     "tva_energie_5_5",
     "leasing_electrique",
-    "encadrement_loyers"
+    "encadrement_loyers",
+    "reduction_impot_familles"
    ],
    "events": [
     {
@@ -13057,7 +13062,8 @@ const GAME = {
     "baisse_impots_production",
     "defense_europeenne_emprunt",
     "vols_courts_train",
-    "service_militaire"
+    "service_militaire",
+    "rsa_suspendu_condamnes"
    ],
    "events": [
     {
@@ -15005,7 +15011,8 @@ const GAME = {
     "referendum_immigration",
     "lutte_fraude",
     "regularisation_metiers_tension",
-    "taxe_billets_premium"
+    "taxe_billets_premium",
+    "sortie_otan"
    ]
   },
   {
@@ -16894,7 +16901,8 @@ const GAME = {
     "jour_ferie_travaille",
     "tva_energie_5_5",
     "leasing_electrique",
-    "encadrement_loyers"
+    "encadrement_loyers",
+    "recrutement_justice"
    ]
   }
  ],
@@ -20436,6 +20444,835 @@ const GAME = {
     {
      "label": "Que Choisir : vols intérieurs courts, un décret à la portée limitée",
      "url": "https://www.quechoisir.org/actualite-vols-interieurs-courts-un-decret-qui-ne-change-rien-n108070/"
+    }
+   ]
+  },
+  {
+   "origin": "Proposition présente dans au moins un programme présidentiel",
+   "once": 0,
+   "later": [],
+   "steps": [
+    {
+     "label": "Dépôt du texte",
+     "weeks": 1
+    },
+    {
+     "label": "Débat et vote au Parlement",
+     "weeks": 1,
+     "block": true
+    }
+   ],
+   "id": "ir_14_tranches",
+   "label": "Un impôt sur le revenu à 14 tranches",
+   "term": "Barème de l'impôt sur le revenu plus progressif",
+   "sector": "fiscalite",
+   "simple": "L'impôt passe de 5 à 14 tranches : les hauts revenus paient plus, les revenus moyens un peu moins.",
+   "expert": "Refonte du barème de l'IR avec 14 tranches au lieu de 5, hausse des taux marginaux supérieurs et baisse pour les premières tranches.",
+   "budget": 3,
+   "budget_note": "Les hauts revenus paient plus que ce que perdent les autres : recette nette modeste (ordre de grandeur, chiffrage non indépendant).",
+   "axes": {
+    "eco": -2
+   },
+   "ind": {
+    "cohesion": 2,
+    "pouvoir_achat": 1
+   },
+   "why_cost": "Les plus hauts revenus peuvent réduire leurs revenus déclarés ou partir : la recette réelle est incertaine.",
+   "why_gain": "Les revenus moyens et modestes paient un peu moins, les très hauts revenus davantage.",
+   "benefits": [
+    "Impôt plus progressif.",
+    "Baisse pour les revenus moyens."
+   ],
+   "problems": [
+    "Risque d'évasion ou de départs.",
+    "Recette incertaine."
+   ],
+   "block": {
+    "title": "Blocage à l'Assemblée",
+    "text": "Une partie des députés refuse le texte : il ne passe pas.",
+    "choices": [
+     {
+      "id": "abandon",
+      "label": "Abandonner la réforme",
+      "label_expert": "Retrait du texte par le gouvernement",
+      "outcome": "abandon",
+      "plus": "Pas de dépense ni de conflit.",
+      "minus": "Rien ne change.",
+      "ind": {},
+      "axes": {}
+     },
+     {
+      "id": "493",
+      "label": "Passer en force avec le 49.3",
+      "label_expert": "Adoption sans vote par l'article 49.3",
+      "outcome": "pass",
+      "plus": "La réforme s'applique entièrement.",
+      "minus": "Censure possible, colère de l'opposition.",
+      "ind": {
+       "cohesion": -2
+      },
+      "axes": {
+       "soc": 1
+      }
+     },
+     {
+      "id": "compromis",
+      "label": "Compromis : moins de tranches",
+      "label_expert": "Adoption d'une version amendée du texte",
+      "outcome": "amend",
+      "factor": 0.5,
+      "plus": "Le texte passe.",
+      "minus": "Effets réduits de moitié.",
+      "ind": {},
+      "axes": {}
+     }
+    ]
+   },
+   "sources": [
+    {
+     "label": "République 2027 : programmes, budget et impôts",
+     "url": "https://republique2027.fr/programmes"
+    },
+    {
+     "label": "data.gouv.fr : programmes présidentielle 2027 résumés par thème",
+     "url": "https://www.data.gouv.fr/reuses/programmes-presidentielle-2027-le-programme-de-chaque-candidat-resume-et-analyse-theme-par-theme"
+    }
+   ]
+  },
+  {
+   "origin": "Proposition présente dans au moins un programme présidentiel",
+   "once": 0,
+   "later": [],
+   "steps": [
+    {
+     "label": "Dépôt du texte",
+     "weeks": 1
+    },
+    {
+     "label": "Débat et vote au Parlement",
+     "weeks": 1,
+     "block": true
+    }
+   ],
+   "id": "recrutements_publics",
+   "label": "500 000 recrutements dans les services publics en cinq ans",
+   "term": "Plan pluriannuel d'embauches publiques",
+   "sector": "sante",
+   "simple": "L'État embauche 100 000 personnes par an : soignants, enseignants, agents.",
+   "expert": "Recrutements dans l'hôpital, l'école et les services de proximité, environ 100 000 postes par an pendant cinq ans.",
+   "budget": -8,
+   "budget_note": "Environ 100 000 agents de plus par an à près de 50 000 € chacun : le déficit augmente chaque année.",
+   "axes": {
+    "eco": -2
+   },
+   "ind": {
+    "services": 6,
+    "emploi": 2,
+    "cohesion": 1
+   },
+   "why_cost": "Chaque agent coûte salaire et cotisations, puis une retraite : la dépense grandit année après année.",
+   "why_gain": "Plus de soignants, d'enseignants et de guichets ouverts.",
+   "benefits": [
+    "Services publics renforcés.",
+    "Emplois créés."
+   ],
+   "problems": [
+    "Dépense durable très élevée.",
+    "Difficile de recruter autant (métiers en tension)."
+   ],
+   "block": {
+    "title": "Blocage à l'Assemblée",
+    "text": "Une partie des députés refuse le texte : il ne passe pas.",
+    "choices": [
+     {
+      "id": "abandon",
+      "label": "Abandonner la réforme",
+      "label_expert": "Retrait du texte par le gouvernement",
+      "outcome": "abandon",
+      "plus": "Pas de dépense ni de conflit.",
+      "minus": "Rien ne change.",
+      "ind": {},
+      "axes": {}
+     },
+     {
+      "id": "493",
+      "label": "Passer en force avec le 49.3",
+      "label_expert": "Adoption sans vote par l'article 49.3",
+      "outcome": "pass",
+      "plus": "La réforme s'applique entièrement.",
+      "minus": "Censure possible, colère de l'opposition.",
+      "ind": {
+       "cohesion": -2
+      },
+      "axes": {
+       "soc": 1
+      }
+     },
+     {
+      "id": "compromis",
+      "label": "Compromis : 250 000 postes",
+      "label_expert": "Adoption d'une version amendée du texte",
+      "outcome": "amend",
+      "factor": 0.5,
+      "plus": "Le texte passe.",
+      "minus": "Effets réduits de moitié.",
+      "ind": {},
+      "axes": {}
+     }
+    ]
+   },
+   "sources": [
+    {
+     "label": "Libnanews : l'État au cœur des programmes 2027",
+     "url": "https://libnanews.com/presidentielle-2027-letat-au-coeur-des-programmes/"
+    },
+    {
+     "label": "data.gouv.fr : programmes présidentielle 2027 résumés par thème",
+     "url": "https://www.data.gouv.fr/reuses/programmes-presidentielle-2027-le-programme-de-chaque-candidat-resume-et-analyse-theme-par-theme"
+    }
+   ]
+  },
+  {
+   "origin": "Proposition présente dans au moins un programme présidentiel",
+   "once": 0,
+   "later": [],
+   "steps": [
+    {
+     "label": "Dépôt du texte",
+     "weeks": 1
+    },
+    {
+     "label": "Débat et vote au Parlement",
+     "weeks": 1,
+     "block": true
+    }
+   ],
+   "id": "tva_premiere_necessite",
+   "label": "Baisser la TVA sur les produits de première nécessité",
+   "term": "TVA réduite ou nulle sur un panier de produits essentiels",
+   "sector": "salaires",
+   "simple": "Les produits de base (alimentation, hygiène) coûtent moins cher en caisse.",
+   "expert": "Taux de TVA réduit ou nul sur une liste de produits de première nécessité.",
+   "budget": -10,
+   "budget_note": "Moins de TVA encaissée sur des achats très courants : le déficit augmente fortement.",
+   "axes": {
+    "eco": -1
+   },
+   "ind": {
+    "pouvoir_achat": 5,
+    "cohesion": 1
+   },
+   "why_cost": "La TVA est la première recette de l'État : même un panier limité représente plusieurs milliards.",
+   "why_gain": "Gain immédiat en caisse, surtout pour les ménages modestes, si les commerçants répercutent la baisse.",
+   "benefits": [
+    "Prix en baisse sur l'essentiel.",
+    "Aide surtout les budgets serrés."
+   ],
+   "problems": [
+    "Coût élevé.",
+    "Baisse pas toujours répercutée sur les prix."
+   ],
+   "block": {
+    "title": "Blocage à l'Assemblée",
+    "text": "Une partie des députés refuse le texte : il ne passe pas.",
+    "choices": [
+     {
+      "id": "abandon",
+      "label": "Abandonner la réforme",
+      "label_expert": "Retrait du texte par le gouvernement",
+      "outcome": "abandon",
+      "plus": "Pas de dépense ni de conflit.",
+      "minus": "Rien ne change.",
+      "ind": {},
+      "axes": {}
+     },
+     {
+      "id": "493",
+      "label": "Passer en force avec le 49.3",
+      "label_expert": "Adoption sans vote par l'article 49.3",
+      "outcome": "pass",
+      "plus": "La réforme s'applique entièrement.",
+      "minus": "Censure possible, colère de l'opposition.",
+      "ind": {
+       "cohesion": -2
+      },
+      "axes": {
+       "soc": 1
+      }
+     },
+     {
+      "id": "compromis",
+      "label": "Compromis : un panier plus petit",
+      "label_expert": "Adoption d'une version amendée du texte",
+      "outcome": "amend",
+      "factor": 0.5,
+      "plus": "Le texte passe.",
+      "minus": "Effets réduits de moitié.",
+      "ind": {},
+      "axes": {}
+     }
+    ]
+   },
+   "sources": [
+    {
+     "label": "ÉlyséeScope : positions et propositions pour 2027",
+     "url": "https://www.elyseescope.com/le-radar/marine-le-pen-positions-programme-20260930"
+    },
+    {
+     "label": "data.gouv.fr : programmes présidentielle 2027 résumés par thème",
+     "url": "https://www.data.gouv.fr/reuses/programmes-presidentielle-2027-le-programme-de-chaque-candidat-resume-et-analyse-theme-par-theme"
+    }
+   ]
+  },
+  {
+   "origin": "Proposition présente dans au moins un programme présidentiel",
+   "once": 0,
+   "later": [],
+   "steps": [
+    {
+     "label": "Dépôt du texte",
+     "weeks": 1
+    },
+    {
+     "label": "Débat et vote au Parlement",
+     "weeks": 1,
+     "block": true
+    }
+   ],
+   "id": "reduction_impot_familles",
+   "label": "Une réduction d'impôt d'environ 3 000 € pour les familles qui travaillent",
+   "term": "Avantage fiscal pour les actifs avec enfants",
+   "sector": "fiscalite",
+   "simple": "Les parents qui travaillent paient environ 3 000 € d'impôt en moins.",
+   "expert": "Réduction d'impôt ciblée sur les foyers actifs avec enfants, avec un prêt à taux zéro pour un logement plus grand à l'arrivée d'un enfant.",
+   "budget": -5,
+   "budget_note": "Ordre de grandeur, chiffrage détaillé non publié : le déficit augmente.",
+   "axes": {
+    "eco": 1,
+    "soc": 1
+   },
+   "ind": {
+    "pouvoir_achat": 3,
+    "emploi": 1
+   },
+   "why_cost": "Plusieurs millions de foyers concernés : la dépense fiscale est importante.",
+   "why_gain": "Travailler rapporte plus aux parents, ce qui peut encourager l'activité.",
+   "benefits": [
+    "Plus de revenu pour les familles actives.",
+    "Incite à travailler."
+   ],
+   "problems": [
+    "Ne touche pas les foyers non imposables.",
+    "Coût important."
+   ],
+   "block": {
+    "title": "Blocage à l'Assemblée",
+    "text": "Une partie des députés refuse le texte : il ne passe pas.",
+    "choices": [
+     {
+      "id": "abandon",
+      "label": "Abandonner la réforme",
+      "label_expert": "Retrait du texte par le gouvernement",
+      "outcome": "abandon",
+      "plus": "Pas de dépense ni de conflit.",
+      "minus": "Rien ne change.",
+      "ind": {},
+      "axes": {}
+     },
+     {
+      "id": "493",
+      "label": "Passer en force avec le 49.3",
+      "label_expert": "Adoption sans vote par l'article 49.3",
+      "outcome": "pass",
+      "plus": "La réforme s'applique entièrement.",
+      "minus": "Censure possible, colère de l'opposition.",
+      "ind": {
+       "cohesion": -2
+      },
+      "axes": {
+       "soc": 1
+      }
+     },
+     {
+      "id": "compromis",
+      "label": "Compromis : une réduction plus petite",
+      "label_expert": "Adoption d'une version amendée du texte",
+      "outcome": "amend",
+      "factor": 0.5,
+      "plus": "Le texte passe.",
+      "minus": "Effets réduits de moitié.",
+      "ind": {},
+      "axes": {}
+     }
+    ]
+   },
+   "sources": [
+    {
+     "label": "Euronews : le programme d'un candidat sur le travail et les dépenses",
+     "url": "https://fr.euronews.com/2026/10/09/presidentielle-2027-edouard-philippe-mise-sur-le-travail-et-la-reduction-des-depenses-publ"
+    },
+    {
+     "label": "data.gouv.fr : programmes présidentielle 2027 résumés par thème",
+     "url": "https://www.data.gouv.fr/reuses/programmes-presidentielle-2027-le-programme-de-chaque-candidat-resume-et-analyse-theme-par-theme"
+    }
+   ]
+  },
+  {
+   "origin": "Proposition présente dans au moins un programme présidentiel",
+   "once": 0,
+   "later": [],
+   "steps": [
+    {
+     "label": "Dépôt du texte",
+     "weeks": 1
+    },
+    {
+     "label": "Débat et vote au Parlement",
+     "weeks": 1,
+     "block": true
+    }
+   ],
+   "id": "interets_emprunt_deductibles",
+   "label": "Déduire de l'impôt les intérêts d'un prêt immobilier",
+   "term": "Déductibilité des intérêts d'emprunt pour la résidence principale",
+   "sector": "logement",
+   "simple": "Ceux qui achètent leur logement paient moins d'impôt, d'autant plus qu'ils ont d'enfants.",
+   "expert": "Crédit ou déduction d'impôt sur les intérêts d'emprunt de la résidence principale, modulé selon le nombre d'enfants.",
+   "budget": -1.5,
+   "budget_note": "Un dispositif proche, déjà essayé, a coûté jusqu'à environ 2 Md€ par an : le déficit augmente.",
+   "axes": {
+    "eco": 1
+   },
+   "ind": {
+    "pouvoir_achat": 1,
+    "cohesion": -1
+   },
+   "why_cost": "L'État renonce à une partie de l'impôt de chaque acheteur pendant plusieurs années.",
+   "why_gain": "Acheter devient plus accessible pour les familles.",
+   "benefits": [
+    "Aide l'accession à la propriété.",
+    "Favorise les familles."
+   ],
+   "problems": [
+    "Peut faire monter les prix.",
+    "Profite peu aux locataires."
+   ],
+   "block": {
+    "title": "Blocage à l'Assemblée",
+    "text": "Une partie des députés refuse le texte : il ne passe pas.",
+    "choices": [
+     {
+      "id": "abandon",
+      "label": "Abandonner la réforme",
+      "label_expert": "Retrait du texte par le gouvernement",
+      "outcome": "abandon",
+      "plus": "Pas de dépense ni de conflit.",
+      "minus": "Rien ne change.",
+      "ind": {},
+      "axes": {}
+     },
+     {
+      "id": "493",
+      "label": "Passer en force avec le 49.3",
+      "label_expert": "Adoption sans vote par l'article 49.3",
+      "outcome": "pass",
+      "plus": "La réforme s'applique entièrement.",
+      "minus": "Censure possible, colère de l'opposition.",
+      "ind": {
+       "cohesion": -2
+      },
+      "axes": {
+       "soc": 1
+      }
+     },
+     {
+      "id": "compromis",
+      "label": "Compromis : limité aux primo-accédants",
+      "label_expert": "Adoption d'une version amendée du texte",
+      "outcome": "amend",
+      "factor": 0.5,
+      "plus": "Le texte passe.",
+      "minus": "Effets réduits de moitié.",
+      "ind": {},
+      "axes": {}
+     }
+    ]
+   },
+   "sources": [
+    {
+     "label": "Public Sénat : déduire les intérêts d'emprunt selon le nombre d'enfants",
+     "url": "https://www.publicsenat.fr/actualites/politique/logement-bruno-retailleau-propose-de-deduire-de-l-imot-les-interets-d-emprunt-pour-un-pret-immobilier-en-fonction-du-nombre-d-enfants"
+    },
+    {
+     "label": "data.gouv.fr : programmes présidentielle 2027 résumés par thème",
+     "url": "https://www.data.gouv.fr/reuses/programmes-presidentielle-2027-le-programme-de-chaque-candidat-resume-et-analyse-theme-par-theme"
+    }
+   ]
+  },
+  {
+   "origin": "Proposition présente dans au moins un programme présidentiel",
+   "once": 0,
+   "later": [],
+   "steps": [
+    {
+     "label": "Dépôt du texte",
+     "weeks": 1
+    },
+    {
+     "label": "Débat et vote au Parlement",
+     "weeks": 1,
+     "block": true
+    }
+   ],
+   "id": "rsa_suspendu_condamnes",
+   "label": "Suspendre le RSA des personnes condamnées pour délinquance",
+   "term": "Suspension automatique du RSA après condamnation",
+   "sector": "securite",
+   "simple": "Une personne condamnée perd son RSA, sauf si le maire s'y oppose.",
+   "expert": "Suspension automatique du revenu de solidarité active en cas de condamnation, avec une possibilité d'opposition du maire au cas par cas.",
+   "budget": 0.05,
+   "budget_note": "Peu de personnes concernées : économie très faible.",
+   "axes": {
+    "soc": 2
+   },
+   "ind": {
+    "cohesion": -1
+   },
+   "why_cost": "Risque de pousser vers plus de précarité des personnes déjà fragiles.",
+   "why_gain": "Message de fermeté : les aides sont liées au respect de la loi.",
+   "benefits": [
+    "Sanction supplémentaire.",
+    "Économie, même faible."
+   ],
+   "problems": [
+    "Risque de précarité et de récidive.",
+    "Contestation juridique possible."
+   ],
+   "block": {
+    "title": "Blocage à l'Assemblée",
+    "text": "Une partie des députés refuse le texte : il ne passe pas.",
+    "choices": [
+     {
+      "id": "abandon",
+      "label": "Abandonner la réforme",
+      "label_expert": "Retrait du texte par le gouvernement",
+      "outcome": "abandon",
+      "plus": "Pas de dépense ni de conflit.",
+      "minus": "Rien ne change.",
+      "ind": {},
+      "axes": {}
+     },
+     {
+      "id": "493",
+      "label": "Passer en force avec le 49.3",
+      "label_expert": "Adoption sans vote par l'article 49.3",
+      "outcome": "pass",
+      "plus": "La réforme s'applique entièrement.",
+      "minus": "Censure possible, colère de l'opposition.",
+      "ind": {
+       "cohesion": -2
+      },
+      "axes": {
+       "soc": 1
+      }
+     },
+     {
+      "id": "compromis",
+      "label": "Compromis : une suspension temporaire",
+      "label_expert": "Adoption d'une version amendée du texte",
+      "outcome": "amend",
+      "factor": 0.5,
+      "plus": "Le texte passe.",
+      "minus": "Effets réduits de moitié.",
+      "ind": {},
+      "axes": {}
+     }
+    ]
+   },
+   "sources": [
+    {
+     "label": "Dakaractu : un candidat mise sur des réformes radicales",
+     "url": "https://www.dakaractu.com/Presidentielle-2027-en-France-Edouard-Philippe-mise-sur-des-reformes-radicales_a278364.amp.html"
+    },
+    {
+     "label": "data.gouv.fr : programmes présidentielle 2027 résumés par thème",
+     "url": "https://www.data.gouv.fr/reuses/programmes-presidentielle-2027-le-programme-de-chaque-candidat-resume-et-analyse-theme-par-theme"
+    }
+   ]
+  },
+  {
+   "origin": "Proposition présente dans au moins un programme présidentiel",
+   "once": 0,
+   "later": [],
+   "steps": [
+    {
+     "label": "Dépôt du texte",
+     "weeks": 1
+    },
+    {
+     "label": "Débat et vote au Parlement",
+     "weeks": 1,
+     "block": true
+    }
+   ],
+   "id": "sortie_otan",
+   "label": "Sortir de l'OTAN",
+   "term": "Retrait de la France de l'Alliance atlantique",
+   "sector": "defense",
+   "simple": "La France quitte l'alliance militaire avec les États-Unis et l'Europe.",
+   "expert": "Retrait du commandement intégré puis de l'Alliance, pour une défense non alignée.",
+   "budget": 0.2,
+   "budget_note": "Contribution à l'Alliance en moins, mais une défense plus autonome à financer seule : effet faible sur le déficit.",
+   "axes": {
+    "eu": 2
+   },
+   "ind": {
+    "souverainete": 1,
+    "cohesion": -1
+   },
+   "why_cost": "Moins de partage de renseignement et de matériel avec les alliés.",
+   "why_gain": "Décisions militaires prises sans dépendre d'une alliance.",
+   "benefits": [
+    "Indépendance diplomatique.",
+    "Pas d'engagement automatique."
+   ],
+   "problems": [
+    "Isolement face aux menaces.",
+    "Tension avec les partenaires européens."
+   ],
+   "block": {
+    "title": "Blocage à l'Assemblée",
+    "text": "Une partie des députés refuse le texte : il ne passe pas.",
+    "choices": [
+     {
+      "id": "abandon",
+      "label": "Abandonner la réforme",
+      "label_expert": "Retrait du texte par le gouvernement",
+      "outcome": "abandon",
+      "plus": "Pas de dépense ni de conflit.",
+      "minus": "Rien ne change.",
+      "ind": {},
+      "axes": {}
+     },
+     {
+      "id": "493",
+      "label": "Passer en force avec le 49.3",
+      "label_expert": "Adoption sans vote par l'article 49.3",
+      "outcome": "pass",
+      "plus": "La réforme s'applique entièrement.",
+      "minus": "Censure possible, colère de l'opposition.",
+      "ind": {
+       "cohesion": -2
+      },
+      "axes": {
+       "soc": 1
+      }
+     },
+     {
+      "id": "compromis",
+      "label": "Compromis : quitter seulement le commandement intégré",
+      "label_expert": "Adoption d'une version amendée du texte",
+      "outcome": "amend",
+      "factor": 0.5,
+      "plus": "Le texte passe.",
+      "minus": "Effets réduits de moitié.",
+      "ind": {},
+      "axes": {}
+     }
+    ]
+   },
+   "sources": [
+    {
+     "label": "Voter en 2027 : comparatif des programmes",
+     "url": "https://voteren2027.fr/"
+    },
+    {
+     "label": "data.gouv.fr : programmes présidentielle 2027 résumés par thème",
+     "url": "https://www.data.gouv.fr/reuses/programmes-presidentielle-2027-le-programme-de-chaque-candidat-resume-et-analyse-theme-par-theme"
+    }
+   ]
+  },
+  {
+   "origin": "Proposition présente dans au moins un programme présidentiel",
+   "once": 0,
+   "later": [],
+   "steps": [
+    {
+     "label": "Dépôt du texte",
+     "weeks": 1
+    },
+    {
+     "label": "Débat et vote au Parlement",
+     "weeks": 1,
+     "block": true
+    }
+   ],
+   "id": "recrutement_justice",
+   "label": "Recruter 8 500 magistrats et personnels de justice",
+   "term": "Renforcement des effectifs de la justice",
+   "sector": "securite",
+   "simple": "Plus de juges et de greffiers pour des procès plus rapides.",
+   "expert": "Recrutement de 8 500 magistrats, greffiers et personnels de justice supplémentaires.",
+   "budget": -0.6,
+   "budget_note": "Environ 8 500 postes à près de 70 000 € : le déficit augmente un peu.",
+   "axes": {
+    "soc": 1
+   },
+   "ind": {
+    "services": 1,
+    "cohesion": 1
+   },
+   "why_cost": "Salaires et formation des nouveaux personnels.",
+   "why_gain": "Délais de jugement raccourcis.",
+   "benefits": [
+    "Justice plus rapide.",
+    "Moins de dossiers en attente."
+   ],
+   "problems": [
+    "Formation longue des magistrats.",
+    "Effets visibles seulement après plusieurs années."
+   ],
+   "block": {
+    "title": "Blocage à l'Assemblée",
+    "text": "Une partie des députés refuse le texte : il ne passe pas.",
+    "choices": [
+     {
+      "id": "abandon",
+      "label": "Abandonner la réforme",
+      "label_expert": "Retrait du texte par le gouvernement",
+      "outcome": "abandon",
+      "plus": "Pas de dépense ni de conflit.",
+      "minus": "Rien ne change.",
+      "ind": {},
+      "axes": {}
+     },
+     {
+      "id": "493",
+      "label": "Passer en force avec le 49.3",
+      "label_expert": "Adoption sans vote par l'article 49.3",
+      "outcome": "pass",
+      "plus": "La réforme s'applique entièrement.",
+      "minus": "Censure possible, colère de l'opposition.",
+      "ind": {
+       "cohesion": -2
+      },
+      "axes": {
+       "soc": 1
+      }
+     },
+     {
+      "id": "compromis",
+      "label": "Compromis : moitié moins de postes",
+      "label_expert": "Adoption d'une version amendée du texte",
+      "outcome": "amend",
+      "factor": 0.5,
+      "plus": "Le texte passe.",
+      "minus": "Effets réduits de moitié.",
+      "ind": {},
+      "axes": {}
+     }
+    ]
+   },
+   "sources": [
+    {
+     "label": "Votons 2027 : programme d'un candidat",
+     "url": "https://votons-2027.fr/candidats/attal/programme"
+    },
+    {
+     "label": "data.gouv.fr : programmes présidentielle 2027 résumés par thème",
+     "url": "https://www.data.gouv.fr/reuses/programmes-presidentielle-2027-le-programme-de-chaque-candidat-resume-et-analyse-theme-par-theme"
+    }
+   ]
+  },
+  {
+   "origin": "Proposition présente dans au moins un programme présidentiel",
+   "once": 0,
+   "later": [],
+   "steps": [
+    {
+     "label": "Dépôt du texte",
+     "weeks": 1
+    },
+    {
+     "label": "Débat et vote au Parlement",
+     "weeks": 1,
+     "block": true
+    }
+   ],
+   "id": "requisition_logements_vacants",
+   "label": "Réquisitionner les logements vacants pour loger les sans-abri",
+   "term": "Réquisition par les préfets de logements inoccupés",
+   "sector": "logement",
+   "simple": "Les préfets peuvent obliger à prêter des logements vides pour loger des personnes à la rue.",
+   "expert": "Usage renforcé du droit de réquisition des logements vacants, avec indemnisation des propriétaires.",
+   "budget": -0.2,
+   "budget_note": "Indemnités versées aux propriétaires et travaux : petite dépense.",
+   "axes": {
+    "eco": -2
+   },
+   "ind": {
+    "cohesion": 2,
+    "services": 1
+   },
+   "why_cost": "Indemniser les propriétaires et remettre en état les logements.",
+   "why_gain": "Des personnes sans abri sont logées rapidement.",
+   "benefits": [
+    "Logement rapide de personnes à la rue.",
+    "Mobilise des logements inutilisés."
+   ],
+   "problems": [
+    "Atteinte au droit de propriété.",
+    "Procédures longues et contestées."
+   ],
+   "block": {
+    "title": "Blocage à l'Assemblée",
+    "text": "Une partie des députés refuse le texte : il ne passe pas.",
+    "choices": [
+     {
+      "id": "abandon",
+      "label": "Abandonner la réforme",
+      "label_expert": "Retrait du texte par le gouvernement",
+      "outcome": "abandon",
+      "plus": "Pas de dépense ni de conflit.",
+      "minus": "Rien ne change.",
+      "ind": {},
+      "axes": {}
+     },
+     {
+      "id": "493",
+      "label": "Passer en force avec le 49.3",
+      "label_expert": "Adoption sans vote par l'article 49.3",
+      "outcome": "pass",
+      "plus": "La réforme s'applique entièrement.",
+      "minus": "Censure possible, colère de l'opposition.",
+      "ind": {
+       "cohesion": -2
+      },
+      "axes": {
+       "soc": 1
+      }
+     },
+     {
+      "id": "compromis",
+      "label": "Compromis : seulement les logements vides depuis longtemps",
+      "label_expert": "Adoption d'une version amendée du texte",
+      "outcome": "amend",
+      "factor": 0.5,
+      "plus": "Le texte passe.",
+      "minus": "Effets réduits de moitié.",
+      "ind": {},
+      "axes": {}
+     }
+    ]
+   },
+   "sources": [
+    {
+     "label": "Présidentielle 2027 : fiches repères des candidats",
+     "url": "https://www.presidentielle-2027.com/candidats-a-la-presidentielle-2027/"
+    },
+    {
+     "label": "data.gouv.fr : programmes présidentielle 2027 résumés par thème",
+     "url": "https://www.data.gouv.fr/reuses/programmes-presidentielle-2027-le-programme-de-chaque-candidat-resume-et-analyse-theme-par-theme"
     }
    ]
   }

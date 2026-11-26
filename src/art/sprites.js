@@ -180,6 +180,8 @@ function sprSvg(){
 }
 /* grands reliefs : images à part (pas cuites dans le décor) pour rester nets au zoom */
 var BIG_SPR = /^(massif_alpes|massif_central|chaine_pyrenees)/;
+function sprNuitActive(){ return document.documentElement.getAttribute('data-theme') === 'dark' || ($('app') && $('app').classList.contains('is-night')); }
+function sprBigRefresh(){ if(!SPR_READY) return; sprBig(sprItems().filter(function(it){ return BIG_SPR.test(it.id) || it.pied; }).sort(function(a, b){ return a.y - b.y; }), sprNuitActive()); }
 function sprBig(list, nuit){
   var l = $('sprl'); if(!l || typeof U2P !== 'function') return;
   l.innerHTML = list.map(function(it){

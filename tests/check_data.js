@@ -365,6 +365,8 @@ if (V21) {
   FAMILLES.centre.push('lutte_fraude', 'fusion_agences');
   FAMILLES.ecologiste.push('niches_brunes', 'taxe_billets_premium');
   FAMILLES.souverainiste.push('contribution_ue', 'controle_prestations');
+  /* propositions 2027 ajoutées le 26/11/2026 */
+  FAMILLES.gauche.push('ir_14_tranches', 'recrutements_publics'); FAMILLES.centre.push('reduction_impot_familles', 'recrutement_justice'); FAMILLES.droite.push('interets_emprunt_deductibles', 'rsa_suspendu_condamnes'); FAMILLES.souverainiste.push('tva_premiere_necessite', 'sortie_otan'); FAMILLES.ecologiste.push('requisition_logements_vacants');
 }
 if (V27) {
   FAMILLES.gauche.push('rsa_jeunes');
