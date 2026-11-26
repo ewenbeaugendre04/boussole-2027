@@ -100,7 +100,15 @@ var CARTE_REF = {
   peines_planchers: { ajouter:[['prison', 2.85, 48.55], ['prison', 5.05, 43.65]] },
   renovation_massive: { ajouter:[['maison_isolation', 3.15, 50.35], ['maison_isolation', -1.35, 47.25], ['maison_isolation', 4.95, 46.85]] },
   vols_courts_train: { ajouter:[['gare', 2.6, 46.6, 2.6]] },
-  taxe_kerosene_train: { ajouter:[['gare', 0.35, 46.2, 2.6]] }
+  taxe_kerosene_train: { ajouter:[['gare', 0.35, 46.2, 2.6]] },
+  /* ajouts plus symboliques */
+  service_militaire: { ajouter:[['soldats', 2.1, 48.2, 2.2], ['soldats', 5.6, 47.3, 2.2]] },
+  sortie_pesticides: { ajouter:[['ferme', 0.9, 47.6, 2.4], ['ferme', 3.6, 49.1, 2.4]] },
+  leasing_electrique: { ajouter:[['voiture', 1.9, 47.0, 1.5], ['voiture', 4.3, 45.4, 1.5]] },
+  regulation_installation_medecins: { ajouter:[['pharmacie', 2.2, 46.1, 1.8], ['pharmacie', 0.2, 45.4, 1.8]] },
+  revalorisation_enseignants: { ajouter:[['ecole', 3.4, 47.6, 2.2], ['ecole', -0.8, 47.9, 2.2]] },
+  sortie_marche_electricite: { ajouter:[['pylone_ht', 2.9, 47.2, 2.4], ['pylone_ht', 5.4, 46.3, 2.4]] },
+  tva_energie_5_5: { ajouter:[['solaire', 1.2, 45.1, 2.2]] }
 };
 function carteEtat(id){ var r = (typeof S !== 'undefined' && S && S.reforms) ? S.reforms[id] : null; return r && (r.status === 'done' || r.status === 'en_cours') ? r.status : ''; }
 function carteSig(){ return Object.keys(CARTE_REF).map(carteEtat).join(''); }

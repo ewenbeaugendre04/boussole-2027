@@ -1,0 +1,367 @@
+type;id;titre;secteur;budget;once;pouvoir_achat;emploi;co2;cohesion;souverainete;services
+réforme;smic_hausse;"Augmenter fortement le SMIC";salaires;-4;0;4;-2;0;2;0;0
+réforme;retraite_60;"Revenir à la retraite à 60 ans";retraites;-15;0;2;-3;0;3;0;0
+réforme;taxe_hauts_patrimoines;"Taxer les très hauts patrimoines";fiscalite;12;0;0;-1;0;2;0;0
+réforme;regularisation_metiers_tension;"Régulariser les sans-papiers qui travaillent dans les métiers en tension";immigration;0.5;0;0;3;0;-3;0;0
+réforme;encadrement_loyers;"Encadrer les loyers dans toutes les villes chères";logement;0;0;3;0;0;-1;0;0
+réforme;surtaxe_grandes_entreprises;"Garder et renforcer la surtaxe sur les bénéfices des très grandes entreprises";fiscalite;8;0;0;-2;0;0;-1;0
+réforme;plafonner_allegements;"Réduire les allègements de cotisations sur les salaires moyens et hauts";salaires;3;0;0;-3;0;0;0;0
+réforme;baisse_impots_production;"Baisser les impôts de production";fiscalite;-8;0;0;3;0;0;2;0
+réforme;report_age_65;"Reporter l'âge de départ à 65 ans";retraites;6;0;-1;3;0;-7;0;0
+réforme;non_remplacement_fonctionnaires;"Ne pas remplacer un fonctionnaire sur deux partant à la retraite";fiscalite;2;0;0;0;0;0;0;-6
+réforme;peines_planchers;"Peines minimales et nouvelles places de prison";securite;-1;-4;0;1;0;1;0;-1
+réforme;baisse_cotisations_net;"Baisser les cotisations pour augmenter le salaire net";salaires;-10;0;5;1;0;0;0;0
+réforme;assurance_chomage;"Durcir les règles de l'assurance chômage";salaires;3.6;0;-1;3;0;-3;0;0
+réforme;cessions_actifs;"Vendre une partie des participations de l'État";fiscalite;-0.1;2;0;-1;0;0;-2;0
+réforme;relance_nucleaire;"Relancer le nucléaire avec de nouveaux réacteurs";energie;-2;-10;0;4;-1;0;4;0
+réforme;defense_europeenne_emprunt;"Financer la défense par un emprunt européen commun";europe;-1;0;0;3;0;0;2;0
+réforme;reseaux_sociaux_15;"Interdire les réseaux sociaux avant 15 ans";numerique;0;0;0;0;0;2;0;0
+réforme;regulation_installation_medecins;"Réguler l'installation des médecins";sante;0;0;0;0;0;0;0;3
+réforme;revalorisation_enseignants;"Mieux payer les enseignants, avec de nouvelles missions";ecole;-4;0;0;0;0;0;0;4
+réforme;lutte_fraude;"Grand plan contre la fraude fiscale et sociale";fiscalite;3;-0.2;0;0;0;1;0;0
+réforme;fusion_agences;"Fusionner ou supprimer un tiers des agences de l'État";fiscalite;1.5;-0.2;0;0;0;0;0;-2
+réforme;sortie_nucleaire;"Sortir progressivement du nucléaire";energie;-6;-15;-5;-1;2;0;-8;0
+réforme;renovation_massive;"Plan massif de rénovation des logements";logement;-8;0;2;3;-4;-1;0;0
+réforme;taxe_kerosene_train;"Taxer le kérosène et financer le train";transports;2;0;-1;-1;-2;0;0;0
+réforme;sortie_pesticides;"Sortir progressivement des pesticides de synthèse";agriculture;-2;0;0;-2;-1;-1;-2;0
+réforme;leasing_electrique;"Voiture électrique à petit prix pour les ménages modestes";transports;-1.5;0;2;0;-2;-1;-1;0
+réforme;niches_brunes;"Supprimer les avantages fiscaux qui favorisent les énergies fossiles";fiscalite;4;0;-2;-1;-3;-1;0;0
+réforme;taxe_billets_premium;"Taxer davantage les jets privés et les billets en classe affaires";transports;0.8;0;0;0;-1;1;0;0
+réforme;sortie_marche_electricite;"Sortir du marché européen de l'électricité";energie;0;-1;5;0;0;0;2;0
+réforme;referendum_immigration;"Organiser un référendum sur l'immigration";immigration;-0.3;0;0;0;0;-3;0;0
+réforme;service_militaire;"Rétablir un service militaire ou national obligatoire";defense;-3;-2;0;-1;0;3;2;0
+réforme;prix_planchers_agricoles;"Instaurer des prix planchers pour les agriculteurs";agriculture;0;0;-3;2;0;0;2;0
+réforme;tva_energie_5_5;"Baisser la TVA sur l'énergie à 5,5 %";energie;-14;0;6;1;4;0;0;0
+réforme;contribution_ue;"Réduire la contribution de la France au budget européen";europe;3;0;0;-1;0;0;2;0
+réforme;controle_prestations;"Carte Vitale biométrique et contrôle des prestations versées à l'étranger";sante;0.5;-0.5;0;0;0;-1;1;0
+réforme;rsa_jeunes;"Ouvrir le RSA aux jeunes de 18 à 25 ans";salaires;-3;0;1;0;0;4;0;1
+réforme;jour_ferie_travaille;"Supprimer deux jours fériés pour réduire le déficit";fiscalite;4.2;0;-1;1;0;-4;0;0
+réforme;tva_sociale;"Monter la TVA pour baisser les cotisations sur les salaires";fiscalite;0;0;-3;3;0;0;1;0
+réforme;vols_courts_train;"Interdire les vols intérieurs quand le train met moins de 4 heures";transports;-0.1;0;0;-1;-2;0;0;-1
+choix;v22_mercosur/a;"L'Europe signe l'accord avec l'Amérique du Sud, les tracteurs montent à Paris → Voter contre et saisir la justice européenne";agriculture;0;0;0;-1;0;1;2;0
+choix;v22_mercosur/b;"L'Europe signe l'accord avec l'Amérique du Sud, les tracteurs montent à Paris → Activer la clause de sauvegarde dès la première hausse";agriculture;0;0;0;0;0;0;1;0
+choix;v22_mercosur/c;"L'Europe signe l'accord avec l'Amérique du Sud, les tracteurs montent à Paris → Aides d'urgence aux éleveurs les plus exposés";agriculture;0;-0.3;0;1;0;1;0;0
+choix;v22_mercosur/d;"L'Europe signe l'accord avec l'Amérique du Sud, les tracteurs montent à Paris → Jouer l'accord : conquérir des marchés pour vins et fromages";agriculture;0.2;0;0;1;0;0;-1;0
+choix;v22_mercosur/e;"L'Europe signe l'accord avec l'Amérique du Sud, les tracteurs montent à Paris → Interdire la viande produite avec des produits interdits chez nous";agriculture;0;0;-1;0;0;0;1;0
+choix;v22_canicule_2003/a;"La canicule tue en silence → Plan d'alerte et registre des personnes fragiles";sante;-0.05;0;0;0;0;2;0;2
+choix;v22_canicule_2003/b;"La canicule tue en silence → Travailler un jour férié pour financer l'aide aux aînés";sante;2.4;0;-1;0;0;-1;0;1
+choix;v22_canicule_2003/c;"La canicule tue en silence → Climatiser les maisons de retraite et les hôpitaux";sante;0;-0.3;0;0;1;0;0;2
+choix;v22_canicule_2003/d;"La canicule tue en silence → Recruter des soignants dans les maisons de retraite";sante;-1;0;0;1;0;0;0;3
+choix;v22_canicule_2003/e;"La canicule tue en silence → Planter des arbres dans les villes et les cours d'école";sante;-0.3;0;0;1;-1;0;0;1
+choix;v22_seine/a;"On se baigne de nouveau dans la Seine → Ouvrir d'autres plages gratuites et surveillées";sante;-0.005;0;0;0;0;1;0;0
+choix;v22_seine/b;"On se baigne de nouveau dans la Seine → Investir encore contre les débordements d'égouts";sante;-0.05;0;0;0;-1;0;0;1
+choix;v22_seine/c;"On se baigne de nouveau dans la Seine → Fermer dès le moindre doute sur l'eau";sante;0;0;0;0;0;-1;0;0
+choix;v22_seine/d;"On se baigne de nouveau dans la Seine → Arrêter de financer la baignade, garder l'argent";sante;0.05;0;0;0;1;0;0;-1
+choix;v22_seine/e;"On se baigne de nouveau dans la Seine → Rendre baignables les rivières de toutes les grandes villes";sante;-0.2;0;0;0;-1;1;0;1
+choix;v22_aude/a;"Le plus grand incendie depuis plus de 70 ans → Acheter des avions bombardiers d'eau";securite;-0.05;-0.5;0;0;0;0;1;1
+choix;v22_aude/b;"Le plus grand incendie depuis plus de 70 ans → Partager les avions avec les pays européens";securite;-0.03;0;0;0;0;0;-1;1
+choix;v22_aude/c;"Le plus grand incendie depuis plus de 70 ans → Débroussaillement obligatoire, avec amendes";securite;0.02;0;0;0;-1;-1;0;0
+choix;v22_aude/d;"Le plus grand incendie depuis plus de 70 ans → Replanter des vignes et des cultures coupe-feu";securite;-0.05;0;0;1;-1;0;0;0
+choix;v22_aude/e;"Le plus grand incendie depuis plus de 70 ans → Recruter des forestiers publics pour entretenir les bois";securite;-0.1;0;0;1;-1;0;0;1
+choix;v22_fukushima/a;"Une catastrophe nucléaire au Japon relance le débat → Renforcer la sûreté de tous les réacteurs";energie;0;-0.5;0;0;0;1;1;0
+choix;v22_fukushima/b;"Une catastrophe nucléaire au Japon relance le débat → Fermer tout de suite les plus vieux réacteurs";energie;-0.1;-0.4;0;-1;0;0;-2;0
+choix;v22_fukushima/c;"Une catastrophe nucléaire au Japon relance le débat → Réduire à la moitié la part du nucléaire";energie;-1;0;0;1;1;0;-2;0
+choix;v22_fukushima/d;"Une catastrophe nucléaire au Japon relance le débat → Prolonger les réacteurs actuels après travaux";energie;0.3;0;0;0;0;-1;2;0
+choix;v22_fukushima/e;"Une catastrophe nucléaire au Japon relance le débat → Construire de nouveaux réacteurs nucléaires";energie;-1;0;0;1;-1;-1;3;0
+choix;v22_medicaments/a;"Pas d'antibiotique pour les enfants → Aider à relocaliser la production en France";sante;0;-0.1;0;1;0;0;1;0
+choix;v22_medicaments/b;"Pas d'antibiotique pour les enfants → Imposer des stocks de quatre mois aux laboratoires";sante;0;0;0;0;0;0;0;1
+choix;v22_medicaments/c;"Pas d'antibiotique pour les enfants → Vendre les antibiotiques à l'unité";sante;0.01;0;0;0;0;0;0;1
+choix;v22_medicaments/d;"Pas d'antibiotique pour les enfants → Créer un fabricant public de médicaments";sante;-0.1;-0.3;0;1;0;0;2;0
+choix;v22_medicaments/e;"Pas d'antibiotique pour les enfants → Doubler la somme payée par le patient sur chaque boîte";sante;0.75;0;-1;0;0;-1;0;0
+choix;v22_emeutes/a;"Nuits d'émeutes après la mort d'un adolescent → Renforts massifs de police et couvre-feux locaux";securite;-0.1;0;0;0;0;-1;0;1
+choix;v22_emeutes/b;"Nuits d'émeutes après la mort d'un adolescent → Plan pour les quartiers : écoles, emploi, transports";securite;-0.5;0;0;1;0;2;0;0
+choix;v22_emeutes/c;"Nuits d'émeutes après la mort d'un adolescent → Enquête indépendante et dialogue police-population";securite;-0.01;0;0;0;0;1;0;0
+choix;v22_emeutes/d;"Nuits d'émeutes après la mort d'un adolescent → Faire payer les dégâts aux auteurs condamnés";securite;0.02;0;0;0;0;-1;0;0
+choix;v22_emeutes/e;"Nuits d'émeutes après la mort d'un adolescent → Suspendre les allocations des parents de mineurs condamnés";securite;0.01;0;0;0;0;-1;0;0
+choix;v22_florange/a;"Les hauts-fourneaux de Florange s'éteignent → Nationaliser l'usine le temps de trouver un repreneur";salaires;-0.1;-1;0;1;0;0;2;0
+choix;v22_florange/b;"Les hauts-fourneaux de Florange s'éteignent → Accord : pas de licenciement, reclassement sur place";salaires;0;0;0;-1;0;-1;0;0
+choix;v22_florange/c;"Les hauts-fourneaux de Florange s'éteignent → Taxer l'acier importé selon son carbone";salaires;0.1;0;-1;0;-1;0;1;0
+choix;v22_florange/d;"Les hauts-fourneaux de Florange s'éteignent → Laisser fermer et aider la reconversion";salaires;-0.03;0;0;-2;0;-1;0;0
+choix;v22_florange/e;"Les hauts-fourneaux de Florange s'éteignent → Faire rembourser les aides publiques si l'usine ferme";salaires;0.05;0;0;-1;0;1;0;0
+choix;v22_caledonie/a;"La Nouvelle-Calédonie s'embrase → État d'urgence et renforts de gendarmes";securite;0;-0.2;0;0;0;-1;0;1
+choix;v22_caledonie/b;"La Nouvelle-Calédonie s'embrase → Suspendre la réforme et rouvrir le dialogue";securite;0;0;0;0;0;2;-1;0
+choix;v22_caledonie/c;"La Nouvelle-Calédonie s'embrase → Grand plan de reconstruction de l'économie";securite;0;-1;0;2;0;1;0;0
+choix;v22_caledonie/d;"La Nouvelle-Calédonie s'embrase → Prêter plutôt que donner, contre des réformes locales";securite;0.05;-0.3;0;1;0;-1;0;0
+choix;v22_caledonie/e;"La Nouvelle-Calédonie s'embrase → Négocier un nouveau statut avec une large autonomie";securite;0;0;0;0;0;1;-1;0
+choix;v22_louvre/a;"Les bijoux de la Couronne volés au Louvre → Plan d'urgence pour la sécurité des musées";securite;0;-0.1;0;0;0;0;0;1
+choix;v22_louvre/b;"Les bijoux de la Couronne volés au Louvre → Billet plus cher pour les visiteurs hors d'Europe";securite;0.03;0;0;0;0;-1;0;0
+choix;v22_louvre/c;"Les bijoux de la Couronne volés au Louvre → Laisser chaque musée gérer sa sécurité";securite;0;0;0;0;0;0;0;-1
+choix;v22_louvre/d;"Les bijoux de la Couronne volés au Louvre → Confier la surveillance à des sociétés privées";securite;0.01;0;0;1;0;0;0;-1
+choix;v22_louvre/e;"Les bijoux de la Couronne volés au Louvre → Recruter des gardiens dans tous les musées publics";securite;-0.05;0;0;1;0;0;0;1
+choix;v22_covid/a;"Le virus revient : faut-il confiner ? → Confiner et payer les salaires : « quoi qu'il en coûte »";salaires;0;-30;2;4;0;1;0;2
+choix;v22_covid/b;"Le virus revient : faut-il confiner ? → Aider seulement les secteurs fermés";salaires;0;-12;0;2;0;0;0;1
+choix;v22_covid/c;"Le virus revient : faut-il confiner ? → Prêts garantis plutôt que subventions";salaires;0;-0.5;0;2;0;0;0;0
+choix;v22_covid/d;"Le virus revient : faut-il confiner ? → Pas de confinement strict, protéger les plus fragiles";salaires;0;0;0;1;0;-2;0;-4
+choix;v22_covid/e;"Le virus revient : faut-il confiner ? → Rétablir l'impôt sur la fortune pour payer la crise";salaires;2;0;0;-1;0;1;0;0
+choix;v22_xynthia/a;"Une tempête submerge la côte vendéenne → Racheter et détruire les maisons les plus exposées";logement;0;-0.3;0;0;0;-1;0;0
+choix;v22_xynthia/b;"Une tempête submerge la côte vendéenne → Rehausser les digues de tout le littoral";logement;-0.05;-0.5;0;1;0;1;0;0
+choix;v22_xynthia/c;"Une tempête submerge la côte vendéenne → Interdire de construire en zone de submersion";logement;0.02;0;-1;0;0;0;0;0
+choix;v22_xynthia/d;"Une tempête submerge la côte vendéenne → Indemniser vite et reconstruire sur place";logement;0;-0.4;0;0;0;1;0;0
+choix;v22_xynthia/e;"Une tempête submerge la côte vendéenne → Augmenter la surprime « catastrophes naturelles » des assurances";logement;0.2;0;-1;0;0;0;0;1
+choix;v22_gilets_jaunes/a;"Les gilets jaunes occupent les ronds-points → Annuler la hausse des taxes sur les carburants";fiscalite;-4;0;2;0;2;2;0;0
+choix;v22_gilets_jaunes/b;"Les gilets jaunes occupent les ronds-points → Annoncer des mesures de pouvoir d'achat";fiscalite;-6;0;3;0;0;1;0;0
+choix;v22_gilets_jaunes/c;"Les gilets jaunes occupent les ronds-points → Garder la taxe et la reverser en chèque aux ménages modestes";fiscalite;0;0;1;0;-2;-1;0;0
+choix;v22_gilets_jaunes/d;"Les gilets jaunes occupent les ronds-points → Maintenir la hausse sans compensation";fiscalite;4;0;-2;0;-2;-4;0;0
+choix;v22_gilets_jaunes/e;"Les gilets jaunes occupent les ronds-points → Organiser un grand débat national";fiscalite;-0.01;0;0;0;0;1;0;0
+choix;v22_bouclier/a;"L'électricité et le gaz flambent → Plafonner les prix pour tout le monde";energie;0;-12;7;0;2;2;0;0
+choix;v22_bouclier/b;"L'électricité et le gaz flambent → Aider seulement les ménages modestes";energie;0;-3;2;0;0;1;0;0
+choix;v22_bouclier/c;"L'électricité et le gaz flambent → Plan de sobriété : baisser le chauffage";energie;0.2;0;-2;0;-3;0;0;0
+choix;v22_bouclier/d;"L'électricité et le gaz flambent → Taxer les profits exceptionnels des producteurs";energie;1;0;0;-1;0;1;0;0
+choix;v22_bouclier/e;"L'électricité et le gaz flambent → Sortir les prix français du marché européen";energie;0;0;3;0;0;0;4;0
+choix;v22_chido/a;"Un cyclone ravage Mayotte → Voter une loi d'urgence qui accélère les chantiers";logement;0;-1;0;0;0;1;0;2
+choix;v22_chido/b;"Un cyclone ravage Mayotte → Reconstruire en dur et résorber les bidonvilles";logement;-0.05;-0.5;0;0;0;-1;0;2
+choix;v22_chido/c;"Un cyclone ravage Mayotte → Durcir les règles d'entrée et d'accès à la nationalité sur l'île";logement;-0.05;0;0;0;0;-2;2;0
+choix;v22_chido/d;"Un cyclone ravage Mayotte → Demander le fonds de solidarité de l'Union européenne";logement;0;0.1;0;0;0;0;0;1
+choix;v22_chido/e;"Un cyclone ravage Mayotte → Réduire les impôts de ceux qui investissent dans la reconstruction";logement;-0.1;0;0;2;0;-1;0;0
+choix;v22_boulangerie/a;"Plus de boulangerie, un distributeur de baguettes → La commune fait construire une boulangerie";fiscalite;0;-0.001;0;0;0;1;0;0
+choix;v22_boulangerie/b;"Plus de boulangerie, un distributeur de baguettes → Garder le distributeur automatique";fiscalite;0;0;0;0;0;-1;0;0
+choix;v22_boulangerie/c;"Plus de boulangerie, un distributeur de baguettes → Baisser les impôts des commerces de village";fiscalite;-0.05;0;0;1;0;0;0;0
+choix;v22_boulangerie/d;"Plus de boulangerie, un distributeur de baguettes → Un camion-boulangerie pour dix villages";fiscalite;-0.01;0;0;0;0;1;0;0
+choix;v22_boulangerie/e;"Plus de boulangerie, un distributeur de baguettes → Reprendre la boulangerie en coopérative avec les habitants";fiscalite;0;0;0;1;0;2;0;0
+choix;v25_vache_folle/a;"Une maladie de la peau frappe les vaches des Alpes → Abattre tout le troupeau touché, comme la règle le prévoit";agriculture;-0.1;0;0;-1;0;-1;1;0
+choix;v25_vache_folle/b;"Une maladie de la peau frappe les vaches des Alpes → Vacciner tous les bovins du pays";agriculture;-0.3;0;0;-1;0;0;0;1
+choix;v25_vache_folle/c;"Une maladie de la peau frappe les vaches des Alpes → N'abattre que les bêtes malades et vacciner autour";agriculture;0;0;0;0;0;1;0;0
+choix;v25_vache_folle/d;"Une maladie de la peau frappe les vaches des Alpes → Faire payer les contrôles par une cotisation des filières";agriculture;0.1;0;-1;0;0;0;0;0
+choix;v25_vache_folle/e;"Une maladie de la peau frappe les vaches des Alpes → Déclencher la clause de sauvegarde sur la viande importée";agriculture;0;0;-1;1;0;0;1;0
+choix;v25_pfas/a;"Des « polluants éternels » dans les œufs du sud de Lyon → Interdire tout de suite les rejets de l'usine";sante;0;0;0;-1;0;1;0;2
+choix;v25_pfas/b;"Des « polluants éternels » dans les œufs du sud de Lyon → Faire payer l'industriel pour chaque gramme rejeté";sante;0.02;0;0;0;0;0;0;1
+choix;v25_pfas/c;"Des « polluants éternels » dans les œufs du sud de Lyon → Financer des filtres dans les usines d'eau potable";sante;0;-0.2;0;0;0;1;0;2
+choix;v25_pfas/d;"Des « polluants éternels » dans les œufs du sud de Lyon → Informer et suivre la santé des habitants, sans contrainte";sante;0;0;0;0;0;-1;0;-1
+choix;v25_pfas/e;"Des « polluants éternels » dans les œufs du sud de Lyon → Interdire ces produits dans les objets du quotidien";sante;0;0;0;-1;0;0;0;1
+choix;v25_beurre/a;"Plus de beurre au supermarché → Rouvrir les négociations entre fabricants et supermarchés";agriculture;0;0;-1;1;0;0;0;0
+choix;v25_beurre/b;"Plus de beurre au supermarché → Laisser les prix s'ajuster tout seuls";agriculture;0;0;0;0;0;-1;0;0
+choix;v25_beurre/c;"Plus de beurre au supermarché → Limiter le nombre de plaquettes par client";agriculture;0;0;0;0;0;1;0;0
+choix;v25_beurre/d;"Plus de beurre au supermarché → Importer du beurre d'autres pays d'Europe";agriculture;0;0;1;0;0;0;-1;0
+choix;v25_beurre/e;"Plus de beurre au supermarché → Plafonner les marges des supermarchés sur le beurre";agriculture;0;0;1;-1;0;0;0;0
+choix;v25_train_nuit/a;"Le train de nuit pour Nice peut-il revenir ? → Subventionner le train de nuit pour le relancer";transports;-0.03;0;0;0;0;0;0;1
+choix;v25_train_nuit/b;"Le train de nuit pour Nice peut-il revenir ? → Laisser la ligne fermée, elle n'est pas rentable";transports;0.02;0;0;0;0;0;0;-1
+choix;v25_train_nuit/c;"Le train de nuit pour Nice peut-il revenir ? → Confier la ligne à une compagnie choisie sur appel d'offres";transports;0.01;0;0;0;0;0;0;1
+choix;v25_train_nuit/d;"Le train de nuit pour Nice peut-il revenir ? → Financer le train par une petite taxe sur les vols";transports;0.01;0;0;0;0;0;0;1
+choix;v25_train_nuit/e;"Le train de nuit pour Nice peut-il revenir ? → Racheter des voitures-lits et rouvrir dix lignes";transports;-0.05;-0.5;0;0;-1;0;0;2
+choix;v25_lothar/a;"Le Nord sous l'eau pendant des semaines → Racheter les maisons les plus exposées";energie;-0.4;0;0;0;0;1;0;1
+choix;v25_lothar/b;"Le Nord sous l'eau pendant des semaines → Envoyer l'armée et des pompes en urgence";energie;0;0;0;0;0;1;0;0
+choix;v25_lothar/c;"Le Nord sous l'eau pendant des semaines → Aider les communes à curer les canaux";energie;-0.1;0;0;0;0;0;0;1
+choix;v25_lothar/d;"Le Nord sous l'eau pendant des semaines → Relever la surprime d'assurance catastrophes naturelles";energie;0.4;0;-1;0;0;0;0;0
+choix;v25_lothar/e;"Le Nord sous l'eau pendant des semaines → Indemniser chaque foyer inondé sans attendre l'assurance";energie;-0.1;0;1;0;0;1;0;0
+choix;v25_medecins/a;"151 territoires en manque de médecins → Obliger les médecins à venir deux jours par mois";sante;-0.05;0;0;0;0;-1;0;3
+choix;v25_medecins/b;"151 territoires en manque de médecins → Mieux payer les médecins volontaires";sante;-0.3;0;0;0;0;0;0;2
+choix;v25_medecins/c;"151 territoires en manque de médecins → Confier plus de soins aux pharmaciens et infirmiers";sante;0.1;0;0;0;0;0;0;2
+choix;v25_medecins/d;"151 territoires en manque de médecins → Former beaucoup plus de médecins dans les facultés";sante;-0.4;0;0;1;0;0;0;1
+choix;v25_medecins/e;"151 territoires en manque de médecins → Ouvrir des centres de santé avec des médecins salariés";sante;-0.15;0;0;1;0;0;0;2
+choix;v25_notre_dame/a;"Notre-Dame rouvre : faut-il payer pour entrer ? → Garder l'entrée gratuite pour tous";fiscalite;0;0;0;0;0;1;0;0
+choix;v25_notre_dame/b;"Notre-Dame rouvre : faut-il payer pour entrer ? → Faire payer 5 € aux touristes pour le patrimoine";fiscalite;0.05;0;0;0;0;-1;0;1
+choix;v25_notre_dame/c;"Notre-Dame rouvre : faut-il payer pour entrer ? → Réduire l'avantage fiscal des très gros dons";fiscalite;0.05;0;0;0;0;-1;0;0
+choix;v25_notre_dame/d;"Notre-Dame rouvre : faut-il payer pour entrer ? → Utiliser les dons restants pour les abords et l'accueil";fiscalite;0;0;0;0;0;1;0;0
+choix;v25_notre_dame/e;"Notre-Dame rouvre : faut-il payer pour entrer ? → Lancer un grand plan pour les églises de village";fiscalite;-0.1;0;0;1;0;1;0;0
+choix;v25_panne_iberique/a;"L'Espagne et le Portugal plongés dans le noir → Envoyer à chaque foyer un guide pour tenir trois jours";energie;-0.02;0;0;0;0;1;0;0
+choix;v25_panne_iberique/b;"L'Espagne et le Portugal plongés dans le noir → Renforcer les lignes électriques avec l'Espagne";energie;0;-0.1;0;0;0;0;-1;1
+choix;v25_panne_iberique/c;"L'Espagne et le Portugal plongés dans le noir → Équiper hôpitaux et mairies de groupes électrogènes";energie;-0.05;0;0;0;0;0;0;1
+choix;v25_panne_iberique/d;"L'Espagne et le Portugal plongés dans le noir → Ne rien changer, notre réseau est plus solide";energie;0;0;0;0;0;0;0;-1
+choix;v25_panne_iberique/e;"L'Espagne et le Portugal plongés dans le noir → Obliger les opérateurs à garder leurs antennes allumées";energie;0;0;-1;0;0;0;0;1
+choix;v26_grand_froid/a;"Le grand froid fait exploser la consommation d'électricité → Demander à chacun de baisser le chauffage le soir";energie;0;0;0;0;-1;1;0;0
+choix;v26_grand_froid/b;"Le grand froid fait exploser la consommation d'électricité → Payer les usines qui s'arrêtent aux heures de pointe";energie;-0.05;0;0;0;-1;0;0;1
+choix;v26_grand_froid/c;"Le grand froid fait exploser la consommation d'électricité → Garder des centrales au gaz en réserve pour les grands froids";energie;0;0;-1;0;2;0;1;0
+choix;v26_grand_froid/d;"Le grand froid fait exploser la consommation d'électricité → Éteindre vitrines, bureaux vides et éclairage public la nuit";energie;0.03;0;0;0;-1;-1;0;0
+choix;v26_grand_froid/e;"Le grand froid fait exploser la consommation d'électricité → Importer du courant d'Espagne par les nouvelles lignes";energie;0;0;0;0;-1;0;-1;1
+choix;v26_crous/a;"Des étudiants font la queue pour manger → Repas à 1 € pour tous les étudiants";ecole;-0.05;0;0;0;0;1;0;1
+choix;v26_crous/b;"Des étudiants font la queue pour manger → Repas à 1 € seulement pour les boursiers et précaires";ecole;-0.015;0;0;0;0;1;0;0
+choix;v26_crous/c;"Des étudiants font la queue pour manger → Augmenter les bourses plutôt que subventionner les repas";ecole;-0.08;0;0;0;0;1;0;0
+choix;v26_crous/d;"Des étudiants font la queue pour manger → Laisser les associations distribuer l'aide alimentaire";ecole;-0.005;0;0;0;0;-1;0;0
+choix;v26_crous/e;"Des étudiants font la queue pour manger → Faire payer plus cher les étudiants venus hors d'Europe";ecole;0.05;0;0;0;0;-1;0;1
+choix;v26_grece/a;"La Grèce au bord de la sortie de l'euro → Prêter vite à la Grèce, avec des conditions allégées";europe;0;0;0;0;0;1;-1;0
+choix;v26_grece/b;"La Grèce au bord de la sortie de l'euro → Laisser la Grèce sortir de l'euro";europe;0;-2;-1;0;0;0;1;0
+choix;v26_grece/c;"La Grèce au bord de la sortie de l'euro → Effacer une partie de la dette grecque";europe;-0.2;0;0;0;0;1;-1;0
+choix;v26_grece/d;"La Grèce au bord de la sortie de l'euro → Prêter seulement contre des réformes strictes";europe;0.1;0;0;0;0;-1;1;0
+choix;v26_grece/e;"La Grèce au bord de la sortie de l'euro → Emprunter ensemble en Europe pour aider la Grèce";europe;0;0;0;0;0;1;-1;0
+choix;v26_pollution_lyon/a;"Une brume de pollution sur Lyon → Circulation alternée : un jour sur deux selon la plaque";transports;0;0;0;0;-1;-1;0;0
+choix;v26_pollution_lyon/b;"Une brume de pollution sur Lyon → Transports en commun gratuits pendant le pic";transports;-0.005;0;0;0;-1;1;0;0
+choix;v26_pollution_lyon/c;"Une brume de pollution sur Lyon → N'autoriser que les voitures les moins polluantes";transports;0;0;0;0;-2;-1;0;0
+choix;v26_pollution_lyon/d;"Une brume de pollution sur Lyon → Simple conseil de limiter ses trajets";transports;0;0;0;0;1;1;0;0
+choix;v26_pollution_lyon/e;"Une brume de pollution sur Lyon → Faire payer l'entrée des voitures en ville";transports;0.01;0;0;0;-1;-1;0;0
+choix;v26_ukraine/a;"Des familles fuient la guerre en Ukraine → Accueillir largement, avec logement et allocation";immigration;-0.6;0;0;0;0;1;0;-1
+choix;v26_ukraine/b;"Des familles fuient la guerre en Ukraine → Loger les familles chez des habitants volontaires";immigration;-0.2;0;0;0;0;2;0;0
+choix;v26_ukraine/c;"Des familles fuient la guerre en Ukraine → Aider surtout les pays voisins de l'Ukraine";immigration;-0.1;0;0;0;0;-1;1;0
+choix;v26_ukraine/d;"Des familles fuient la guerre en Ukraine → Accueillir en misant sur le travail plutôt que les allocations";immigration;0.05;0;0;1;0;-1;0;0
+choix;v26_ukraine/e;"Des familles fuient la guerre en Ukraine → Payer l'aide avec les revenus des avoirs russes gelés";immigration;0.1;0;0;0;0;1;1;0
+choix;v26_brexit_peche/a;"Les pêcheurs de Boulogne privés d'eaux britanniques → Indemniser les bateaux bloqués au port";agriculture;0;-0.03;0;0;0;1;0;0
+choix;v26_brexit_peche/b;"Les pêcheurs de Boulogne privés d'eaux britanniques → Payer la casse des bateaux de ceux qui arrêtent";agriculture;0;-0.02;0;0;0;-1;-1;0
+choix;v26_brexit_peche/c;"Les pêcheurs de Boulogne privés d'eaux britanniques → Bloquer les arrivages britanniques dans nos ports";agriculture;-0.005;0;0;0;0;0;1;-1
+choix;v26_brexit_peche/d;"Les pêcheurs de Boulogne privés d'eaux britanniques → Laisser l'Union européenne négocier les licences";agriculture;0;0;0;0;0;0;-1;0
+choix;v26_brexit_peche/e;"Les pêcheurs de Boulogne privés d'eaux britanniques → Saisir le tribunal prévu par l'accord avec Londres";agriculture;0;0;0;0;0;0;1;0
+choix;v26_crue_seine/a;"La Seine sort de son lit → Indemniser vite les sinistrés";logement;0;-0.1;0;0;0;1;0;0
+choix;v26_crue_seine/b;"La Seine sort de son lit → Adapter les maisons pour qu'elles résistent à l'eau";logement;0;-0.2;0;0;0;0;0;1
+choix;v26_crue_seine/c;"La Seine sort de son lit → Construire de nouveaux bassins de stockage en amont";logement;-0.02;-0.5;0;0;0;0;0;2
+choix;v26_crue_seine/d;"La Seine sort de son lit → Rembourser moins ceux qui rebâtissent en zone inondable";logement;0.05;0;0;0;0;-1;0;0
+choix;v26_crue_seine/e;"La Seine sort de son lit → Augmenter la taxe locale pour financer les digues";logement;0.05;0;-1;0;0;0;0;1
+choix;v26_vigipirate/a;"Le pays passe en alerte maximale → Plus de patrouilles dans les gares et autour des écoles";securite;-0.05;0;0;0;0;0;0;1
+choix;v26_vigipirate/b;"Le pays passe en alerte maximale → Contrôler les sacs à l'entrée des lieux publics";securite;-0.01;0;0;0;0;-1;0;0
+choix;v26_vigipirate/c;"Le pays passe en alerte maximale → Former les habitants aux gestes qui sauvent";securite;-0.01;0;0;0;0;1;0;1
+choix;v26_vigipirate/d;"Le pays passe en alerte maximale → Garder le niveau d'alerte habituel";securite;0;0;0;0;0;1;0;0
+choix;v26_vigipirate/e;"Le pays passe en alerte maximale → Expulser les étrangers fichés pour radicalisation";securite;0;0;0;0;0;-1;1;0
+choix;v27_ciaran/a;"Une tempête géante prive la Bretagne d'électricité → Envoyer des électriciens de toute la France";energie;0;-0.1;0;0;0;1;0;1
+choix;v27_ciaran/b;"Une tempête géante prive la Bretagne d'électricité → Laisser le gestionnaire du réseau payer seul";energie;0;0;0;0;0;-1;0;0
+choix;v27_ciaran/c;"Une tempête géante prive la Bretagne d'électricité → Enterrer les lignes électriques des campagnes";energie;-0.3;0;-1;0;0;0;0;1
+choix;v27_ciaran/d;"Une tempête géante prive la Bretagne d'électricité → Obliger les propriétaires à élaguer près des lignes";energie;0.02;0;0;0;0;-1;0;1
+choix;v27_ciaran/e;"Une tempête géante prive la Bretagne d'électricité → Créer un fonds tempêtes payé par les assurances";energie;0.2;0;-1;0;0;1;0;0
+choix;v27_greve_retraites/a;"Grève record dans les trains et le métro → Retirer la réforme pour apaiser";retraites;-0.4;0;0;0;0;2;0;0
+choix;v27_greve_retraites/b;"Grève record dans les trains et le métro → Tenir bon et aller au vote";retraites;0.5;-0.3;0;-1;0;-2;0;0
+choix;v27_greve_retraites/c;"Grève record dans les trains et le métro → Garder la réforme pour les seuls nouveaux salariés";retraites;0.1;0;0;0;0;-1;0;0
+choix;v27_greve_retraites/d;"Grève record dans les trains et le métro → Instaurer un service minimum garanti";retraites;0;0;0;1;0;-1;0;0
+choix;v27_greve_retraites/e;"Grève record dans les trains et le métro → Financer les retraites par plus de cotisations";retraites;0.6;0;-1;-1;0;1;0;0
+choix;v27_maternite/a;"La maternité de la petite ville ferme → Rouvrir la maternité avec des médecins intérimaires";sante;-0.02;0;0;0;0;0;0;1
+choix;v27_maternite/b;"La maternité de la petite ville ferme → Garder la fermeture, avec un hébergement près du grand hôpital";sante;0.01;0;0;0;0;-1;0;-1
+choix;v27_maternite/c;"La maternité de la petite ville ferme → Créer un centre de suivi tenu par des sages-femmes";sante;0;0;0;0;0;0;0;1
+choix;v27_maternite/d;"La maternité de la petite ville ferme → Payer une équipe d'urgence de garde la nuit";sante;-0.01;0;0;0;0;0;0;1
+choix;v27_chlordecone/a;"Un pesticide interdit a contaminé les Antilles → Indemniser toutes les personnes malades";sante;-0.15;0;0;0;0;2;0;0
+choix;v27_chlordecone/b;"Un pesticide interdit a contaminé les Antilles → Tester gratuitement les habitants et chercher à dépolluer";sante;-0.05;0;0;0;0;0;0;1
+choix;v27_chlordecone/c;"Un pesticide interdit a contaminé les Antilles → Faire payer les fabricants et vendeurs du pesticide";sante;0.03;0;0;0;0;1;0;0
+choix;v27_chlordecone/d;"Un pesticide interdit a contaminé les Antilles → Interdire pêche et cultures dans les zones polluées";sante;0;0;0;-1;0;0;0;1
+choix;v27_chlordecone/e;"Un pesticide interdit a contaminé les Antilles → Taxer les bananes importées hors d'Europe pour financer le plan";sante;0.08;0;-1;0;0;0;1;0
+choix;v27_sambuy/a;"Faute de neige, la station de ski ferme pour de bon → Payer des canons à neige pour sauver la saison";salaires;-0.01;0;0;1;0;0;0;0
+choix;v27_sambuy/b;"Faute de neige, la station de ski ferme pour de bon → Aider le village à vivre du tourisme toute l'année";salaires;0;0;0;-1;0;1;0;0
+choix;v27_sambuy/c;"Faute de neige, la station de ski ferme pour de bon → Laisser fermer, sans argent public";salaires;0.01;0;0;-1;0;-1;0;0
+choix;v27_sambuy/d;"Faute de neige, la station de ski ferme pour de bon → Confier la station à un groupe privé du tourisme";salaires;0.01;0;-1;1;0;0;0;0
+choix;v27_lactalis/a;"Du lait pour bébé contaminé à la salmonelle → Recruter des inspecteurs de l'alimentation";sante;-0.06;0;0;0;0;0;0;1
+choix;v27_lactalis/b;"Du lait pour bébé contaminé à la salmonelle → Faire payer les contrôles aux industriels";sante;0.05;0;-1;0;0;0;0;1
+choix;v27_lactalis/c;"Du lait pour bébé contaminé à la salmonelle → Sanctionner lourdement l'entreprise";sante;0.02;0;0;-1;0;1;0;0
+choix;v27_lactalis/d;"Du lait pour bébé contaminé à la salmonelle → Obliger les magasins à bloquer en caisse les produits rappelés";sante;0;0;0;0;0;0;0;1
+choix;v27_lactalis/e;"Du lait pour bébé contaminé à la salmonelle → Indemniser les familles, sans changer les règles";sante;-0.01;0;0;0;0;1;0;0
+choix;v27_lubrizol/a;"Une usine chimique brûle en pleine ville → Doubler le nombre d'inspecteurs des usines dangereuses";securite;-0.05;0;0;0;0;0;0;1
+choix;v27_lubrizol/b;"Une usine chimique brûle en pleine ville → Indemniser vite les agriculteurs et les commerçants";securite;0;-0.05;0;0;0;1;0;0
+choix;v27_lubrizol/c;"Une usine chimique brûle en pleine ville → Éloigner les usines dangereuses des villes";securite;-0.2;0;0;-1;0;1;0;0
+choix;v27_lubrizol/d;"Une usine chimique brûle en pleine ville → Augmenter les amendes et la taxe des sites à risque";securite;0.04;0;0;-1;0;0;0;1
+choix;v27_lubrizol/e;"Une usine chimique brûle en pleine ville → Laisser l'industriel payer seul les dégâts";securite;0.02;0;0;1;0;-1;0;0
+choix;v27_cyber_hopital/a;"Des pirates paralysent un hôpital et demandent une rançon → Payer un plan national de cybersécurité des hôpitaux";numerique;-0.25;0;0;0;0;0;1;1
+choix;v27_cyber_hopital/b;"Des pirates paralysent un hôpital et demandent une rançon → Refuser de payer et faire tourner l'hôpital sur papier";numerique;0;0;0;0;0;0;1;-1
+choix;v27_cyber_hopital/c;"Des pirates paralysent un hôpital et demandent une rançon → Interdire par la loi le paiement des rançons";numerique;0;0;0;0;0;0;1;-1
+choix;v27_cyber_hopital/d;"Des pirates paralysent un hôpital et demandent une rançon → Regrouper l'informatique des hôpitaux d'une région";numerique;0.03;0;0;0;0;0;0;1
+choix;v27_cyber_hopital/e;"Des pirates paralysent un hôpital et demandent une rançon → Riposter avec les services de l'État contre les pirates";numerique;-0.05;0;0;0;0;0;1;0
+choix;v27_moutarde/a;"Plus de moutarde dans les rayons → Aider les agriculteurs à cultiver la moutarde en France";agriculture;-0.01;0;0;0;0;0;1;0
+choix;v27_moutarde/b;"Plus de moutarde dans les rayons → Laisser le marché s'ajuster";agriculture;0;0;-1;0;0;0;0;0
+choix;v27_moutarde/c;"Plus de moutarde dans les rayons → Réserver la mention « Dijon » aux graines françaises";agriculture;0;0;-1;0;0;0;1;0
+choix;v27_moutarde/d;"Plus de moutarde dans les rayons → Faire financer un stock de sécurité par les industriels";agriculture;0.01;0;-1;0;0;0;1;0
+choix;v27_sainte_soline/a;"Affrontements autour d'une réserve d'eau agricole → Continuer les réserves, avec des règles de partage";agriculture;-0.03;0;0;1;0;-1;0;0
+choix;v27_sainte_soline/b;"Affrontements autour d'une réserve d'eau agricole → Suspendre les chantiers et lancer un débat public";agriculture;0.02;0;0;-1;0;1;0;0
+choix;v27_sainte_soline/c;"Affrontements autour d'une réserve d'eau agricole → Aider les fermes à passer à des cultures moins gourmandes en eau";agriculture;-0.05;0;0;-1;0;1;0;0
+choix;v27_sainte_soline/d;"Affrontements autour d'une réserve d'eau agricole → Faire payer l'eau d'irrigation à son vrai prix";agriculture;0.04;0;-1;-1;0;0;0;0
+choix;v27_sainte_soline/e;"Affrontements autour d'une réserve d'eau agricole → Interdire la manifestation et dissoudre les groupes violents";agriculture;-0.01;0;0;0;0;-1;0;0
+choix;v27_mayotte_eau/a;"À Mayotte, l'eau ne coule plus qu'un jour sur trois → Distribuer gratuitement de l'eau en bouteille à tous";sante;0;-0.1;0;0;0;1;0;1
+choix;v27_mayotte_eau/b;"À Mayotte, l'eau ne coule plus qu'un jour sur trois → Couper l'eau à tour de rôle, sans aide de plus";sante;0;0;0;0;0;-1;0;-1
+choix;v27_mayotte_eau/c;"À Mayotte, l'eau ne coule plus qu'un jour sur trois → Construire une grande usine de dessalement";sante;-0.05;0;0;0;0;0;0;1
+choix;v27_mayotte_eau/d;"À Mayotte, l'eau ne coule plus qu'un jour sur trois → Réparer les fuites, payé par le prix de l'eau";sante;0.02;0;-1;0;0;0;0;1
+choix;v27_mayotte_eau/e;"À Mayotte, l'eau ne coule plus qu'un jour sur trois → Faire payer plus cher les gros consommateurs d'eau";sante;0.01;0;-1;0;0;1;0;0
+choix;v27_carburant/a;"Les stations-service à sec → Réquisitionner les grévistes";energie;0;0;0;0;0;-1;0;0
+choix;v27_carburant/b;"Les stations-service à sec → Taxer les superprofits pour financer les hausses de salaires";energie;0.5;0;1;-1;0;0;0;0
+choix;v27_carburant/c;"Les stations-service à sec → Puiser dans les stocks stratégiques";energie;0;0;0;0;0;0;-1;0
+choix;v27_carburant/d;"Les stations-service à sec → Baisser les taxes sur le carburant pendant la crise";energie;-0.8;0;2;0;0;0;0;0
+choix;v27_erika/a;"La pêche fermée un mois pour sauver les dauphins → Fermer la pêche et indemniser les pêcheurs";transports;-0.08;0;0;0;-1;1;0;0
+choix;v27_erika/b;"La pêche fermée un mois pour sauver les dauphins → Équiper les bateaux de répulsifs et de caméras";transports;0;0;0;1;0;0;0;0
+choix;v27_erika/c;"La pêche fermée un mois pour sauver les dauphins → Fermer sans indemniser";transports;0.05;0;0;-2;0;-1;0;0
+choix;v27_erika/d;"La pêche fermée un mois pour sauver les dauphins → Demander à l'Europe d'assouplir la règle";transports;0.02;0;0;1;1;0;0;0
+choix;v27_erika/e;"La pêche fermée un mois pour sauver les dauphins → Taxer le poisson vendu pour financer la protection";transports;0.04;0;-1;0;0;0;0;0
+choix;v27_groupes_niveau/a;"Des groupes de niveau au collège → Généraliser les groupes de niveau";ecole;-0.3;0;0;0;0;-1;0;1
+choix;v27_groupes_niveau/b;"Des groupes de niveau au collège → Laisser chaque collège décider";ecole;0;0;0;0;0;-1;0;0
+choix;v27_groupes_niveau/c;"Des groupes de niveau au collège → Réduire la taille de toutes les classes";ecole;-0.6;0;0;0;0;0;0;2
+choix;v27_groupes_niveau/d;"Des groupes de niveau au collège → Remplacer les groupes par du soutien en ligne";ecole;0.1;0;0;0;0;0;0;-1
+choix;v27_groupes_niveau/e;"Des groupes de niveau au collège → Orienter plus tôt vers des filières professionnelles";ecole;0.05;0;0;1;0;-1;0;0
+choix;v27_velib/a;"Les vélos en libre-service ne marchent plus → Reprendre le service en régie publique";transports;-0.01;0;0;0;0;0;0;1
+choix;v27_velib/b;"Les vélos en libre-service ne marchent plus → Infliger des pénalités et laisser l'opérateur réparer";transports;0.01;0;0;0;0;0;0;-1
+choix;v27_velib/c;"Les vélos en libre-service ne marchent plus → Ouvrir la ville aux vélos privés sans station";transports;0.01;0;0;0;0;-1;0;1
+choix;v27_velib/d;"Les vélos en libre-service ne marchent plus → Rembourser les abonnés aux frais de l'opérateur";transports;0;0;0;0;0;1;0;0
+choix;v27_guyane/a;"La Guyane bloquée par un grand mouvement social → Signer un grand plan d'urgence";securite;-0.3;0;0;0;0;2;0;1
+choix;v27_guyane/b;"La Guyane bloquée par un grand mouvement social → Envoyer des renforts de police et de gendarmerie";securite;-0.05;0;0;0;0;-1;0;0
+choix;v27_guyane/c;"La Guyane bloquée par un grand mouvement social → Refuser de céder sous la pression des barrages";securite;0;0;0;-1;0;-2;0;0
+choix;v27_guyane/d;"La Guyane bloquée par un grand mouvement social → Donner plus d'autonomie à la collectivité de Guyane";securite;0.05;0;0;0;0;1;0;0
+choix;v27_guyane/e;"La Guyane bloquée par un grand mouvement social → Conditionner l'aide à une meilleure gestion locale";securite;0.05;0;0;0;0;-1;0;0
+choix;v27_parcoursup/a;"Une nouvelle plateforme trie les futurs étudiants → Ouvrir beaucoup plus de places à l'université";ecole;-0.4;0;0;0;0;1;0;1
+choix;v27_parcoursup/b;"Une nouvelle plateforme trie les futurs étudiants → Assumer la sélection à l'entrée de la fac";ecole;0.1;0;0;0;0;-1;0;0
+choix;v27_parcoursup/c;"Une nouvelle plateforme trie les futurs étudiants → Développer l'apprentissage après le bac";ecole;-0.3;0;0;1;0;0;0;0
+choix;v27_parcoursup/d;"Une nouvelle plateforme trie les futurs étudiants → Augmenter les frais d'inscription, avec plus de bourses";ecole;0.3;0;-1;0;0;0;0;1
+choix;v27_parcoursup/e;"Une nouvelle plateforme trie les futurs étudiants → Revenir au tirage au sort pour les filières pleines";ecole;0;0;0;0;0;-1;0;0
+choix;v27_doubs_eau/a;"Des villages ravitaillés en eau par camion → Relier les villages aux réseaux des villes";agriculture;-0.05;0;0;0;0;0;0;1
+choix;v27_doubs_eau/b;"Des villages ravitaillés en eau par camion → Interdire tous les usages non essentiels";agriculture;0.01;0;0;-1;0;0;0;0
+choix;v27_doubs_eau/c;"Des villages ravitaillés en eau par camion → Aider les éleveurs à acheter du fourrage";agriculture;0;-0.03;0;1;0;0;0;0
+choix;v27_doubs_eau/d;"Des villages ravitaillés en eau par camion → Faire payer l'eau plus cher au-delà d'un seuil";agriculture;0.02;0;-1;0;0;0;0;0
+choix;v27_alstom/a;"Bruxelles interdit la fusion de deux géants du train → Accepter la décision et laisser chaque entreprise seule";europe;0;0;0;0;0;0;-1;0
+choix;v27_alstom/b;"Bruxelles interdit la fusion de deux géants du train → Demander de changer les règles européennes de concurrence";europe;0;0;0;0;0;0;1;0
+choix;v27_alstom/c;"Bruxelles interdit la fusion de deux géants du train → Faire entrer l'État au capital du groupe français";europe;0;-0.5;0;0;0;0;2;0
+choix;v27_alstom/d;"Bruxelles interdit la fusion de deux géants du train → Réserver les commandes publiques aux trains faits en Europe";europe;-0.05;0;0;1;0;0;1;0
+choix;v27_alstom/e;"Bruxelles interdit la fusion de deux géants du train → Vendre des parts de l'État pour financer l'innovation";europe;0;0.3;0;0;0;0;-1;0
+choix;v27_rue_aubagne/a;"Deux immeubles s'effondrent au cœur de la ville → Lancer un grand plan de rénovation des quartiers anciens";logement;-0.2;0;0;0;0;1;0;1
+choix;v27_rue_aubagne/b;"Deux immeubles s'effondrent au cœur de la ville → Sanctionner durement les marchands de sommeil";logement;0.02;0;0;0;0;1;0;0
+choix;v27_rue_aubagne/c;"Deux immeubles s'effondrent au cœur de la ville → Obliger un diagnostic de solidité avant chaque location";logement;0;0;-1;0;0;0;0;1
+choix;v27_rue_aubagne/d;"Deux immeubles s'effondrent au cœur de la ville → Reloger les familles évacuées à l'hôtel aux frais de l'État";logement;0;-0.05;0;0;0;1;0;0
+choix;v27_rue_aubagne/e;"Deux immeubles s'effondrent au cœur de la ville → Taxer davantage les logements vides et dégradés";logement;0.03;0;0;0;0;0;0;1
+choix;v27_algues_vertes/a;"Des algues vertes toxiques envahissent une plage → Ramasser les algues chaque jour";agriculture;-0.01;0;0;0;0;1;0;0
+choix;v27_algues_vertes/b;"Des algues vertes toxiques envahissent une plage → Réduire les élevages dans les zones touchées";agriculture;-0.03;0;0;-1;0;0;0;0
+choix;v27_algues_vertes/c;"Des algues vertes toxiques envahissent une plage → Taxer les engrais azotés";agriculture;0.05;0;0;-1;0;0;0;0
+choix;v27_algues_vertes/d;"Des algues vertes toxiques envahissent une plage → Payer les agriculteurs qui changent de pratiques";agriculture;-0.02;0;0;0;0;1;0;0
+choix;v27_algues_vertes/e;"Des algues vertes toxiques envahissent une plage → Faire financer le ramassage par les élevages intensifs";agriculture;0.01;0;0;-1;0;0;0;0
+choix;v27_canicule_2019/a;"Record absolu de chaleur, le brevet est reporté → Rénover et végétaliser toutes les écoles";ecole;-0.5;0;0;0;0;0;0;1
+choix;v27_canicule_2019/b;"Record absolu de chaleur, le brevet est reporté → Adapter le calendrier scolaire aux fortes chaleurs";ecole;0;0;0;0;0;-1;0;0
+choix;v27_canicule_2019/c;"Record absolu de chaleur, le brevet est reporté → Installer la climatisation dans les écoles";ecole;-0.2;0;0;0;0;0;0;1
+choix;v27_canicule_2019/d;"Record absolu de chaleur, le brevet est reporté → Financer l'adaptation par une taxe sur les climatiseurs";ecole;0.05;0;-1;0;0;0;0;0
+choix;v27_canicule_2019/e;"Record absolu de chaleur, le brevet est reporté → Reporter les travaux dans les écoles pour tenir le budget";ecole;0.2;0;0;0;0;0;0;-1
+choix;v27_chikungunya/a;"Le chikungunya revient en force sur l'île de La Réunion → Démoustiquer massivement avec l'armée";sante;0;-0.05;0;0;0;0;0;1
+choix;v27_chikungunya/b;"Le chikungunya revient en force sur l'île de La Réunion → Mobiliser les habitants pour vider les eaux stagnantes";sante;0;0;0;0;0;1;0;0
+choix;v27_chikungunya/c;"Le chikungunya revient en force sur l'île de La Réunion → Vacciner en priorité les personnes fragiles";sante;-0.05;0;0;0;0;0;0;1
+choix;v27_chikungunya/d;"Le chikungunya revient en force sur l'île de La Réunion → Taxer les séjours touristiques pour financer la lutte";sante;0.01;0;0;-1;0;0;0;0
+choix;v27_chikungunya/e;"Le chikungunya revient en force sur l'île de La Réunion → Reporter les soins non urgents pour soulager l'hôpital";sante;0.02;0;0;0;0;0;0;-1
+choix;v27_piscines/a;"Les piscines ferment, faute de maîtres-nageurs → Payer la formation des maîtres-nageurs";salaires;-0.02;0;0;1;0;0;0;0
+choix;v27_piscines/b;"Les piscines ferment, faute de maîtres-nageurs → Mieux payer les maîtres-nageurs municipaux";salaires;-0.02;0;1;0;0;0;0;0
+choix;v27_piscines/c;"Les piscines ferment, faute de maîtres-nageurs → Confier les piscines à des entreprises privées";salaires;0.02;0;-1;0;0;0;0;0
+choix;v27_piscines/d;"Les piscines ferment, faute de maîtres-nageurs → Autoriser des surveillants moins diplômés l'été";salaires;0.01;0;0;0;0;0;0;1
+choix;v28_sabotage_tgv/a;"Incendies volontaires sur les lignes à grande vitesse → Surveiller les lignes avec des drones et des agents";transports;-0.3;0;0;0;0;1;0;1
+choix;v28_sabotage_tgv/b;"Incendies volontaires sur les lignes à grande vitesse → Doubler les câbles pour que le réseau tienne seul";transports;-0.5;0;0;1;0;0;0;2
+choix;v28_sabotage_tgv/c;"Incendies volontaires sur les lignes à grande vitesse → Faire payer les réparations par la SNCF, sans aide";transports;0.1;0;0;0;0;0;0;-1
+choix;v28_sabotage_tgv/d;"Incendies volontaires sur les lignes à grande vitesse → Alourdir les peines pour atteinte aux réseaux";transports;0.02;0;0;0;0;-1;0;0
+choix;v28_martinique_vie_chere/a;"Des barrages contre le prix des courses → Supprimer la TVA sur les produits de base";salaires;-0.15;0;2;0;0;1;0;0
+choix;v28_martinique_vie_chere/b;"Des barrages contre le prix des courses → Encadrer les marges de la grande distribution";salaires;0;0;1;-1;0;0;0;0
+choix;v28_martinique_vie_chere/c;"Des barrages contre le prix des courses → Ouvrir le marché à de nouveaux distributeurs";salaires;0.05;0;1;-1;0;0;0;0
+choix;v28_martinique_vie_chere/d;"Des barrages contre le prix des courses → Aider la production agricole locale";salaires;-0.08;0;0;1;0;0;1;0
+choix;v28_martinique_vie_chere/e;"Des barrages contre le prix des courses → Rétablir l'ordre et lever les barrages";salaires;0.02;0;0;0;0;-2;0;0
+choix;v28_france_travail_cyber/a;"Les données de millions de demandeurs d'emploi volées → Créer une agence de cybersécurité pour les services publics";numerique;-0.2;0;0;0;0;0;1;1
+choix;v28_france_travail_cyber/b;"Les données de millions de demandeurs d'emploi volées → Obliger la double authentification et limiter les accès";numerique;0;0;0;0;0;0;0;-1
+choix;v28_france_travail_cyber/c;"Les données de millions de demandeurs d'emploi volées → Garder moins de données et effacer les anciennes";numerique;0.01;0;0;0;0;0;0;-1
+choix;v28_france_travail_cyber/d;"Les données de millions de demandeurs d'emploi volées → Sanctionner les prestataires informatiques fautifs";numerique;0.03;0;0;-1;0;0;0;0
+choix;v28_rennes_crue/a;"Une ville de l'Ouest les pieds dans l'eau → Laisser des champs en amont servir de zones d'inondation";logement;-0.1;0;0;-1;0;1;0;0
+choix;v28_rennes_crue/b;"Une ville de l'Ouest les pieds dans l'eau → Construire des digues et des bassins de retenue";logement;-0.3;0;0;1;0;0;0;1
+choix;v28_rennes_crue/c;"Une ville de l'Ouest les pieds dans l'eau → Interdire de construire en zone inondable";logement;0.02;0;-1;0;0;0;0;0
+choix;v28_rennes_crue/d;"Une ville de l'Ouest les pieds dans l'eau → Laisser les assureurs indemniser seuls";logement;0.05;0;-1;0;0;-1;0;0
+choix;v28_rennes_crue/e;"Une ville de l'Ouest les pieds dans l'eau → Relever la taxe locale contre les inondations";logement;0.05;0;-1;0;0;0;0;1
+choix;v28_arcelor_dunkerque/a;"L'aciérie du Nord annonce des centaines de suppressions de postes → Nationaliser temporairement les usines";salaires;-1;0;0;2;0;0;2;0
+choix;v28_arcelor_dunkerque/b;"L'aciérie du Nord annonce des centaines de suppressions de postes → Demander à l'Europe des quotas sur l'acier importé";salaires;0.05;0;-1;1;0;0;0;0
+choix;v28_arcelor_dunkerque/c;"L'aciérie du Nord annonce des centaines de suppressions de postes → Aider à investir dans un acier moins polluant";salaires;-0.4;0;0;1;-2;0;0;0
+choix;v28_arcelor_dunkerque/d;"L'aciérie du Nord annonce des centaines de suppressions de postes → Laisser l'entreprise décider et financer la reconversion";salaires;0.2;0;0;-2;0;-1;0;0
+choix;v28_arcelor_dunkerque/e;"L'aciérie du Nord annonce des centaines de suppressions de postes → Exiger le remboursement des aides publiques reçues";salaires;0.05;0;0;-1;0;0;0;0
+choix;v28_loi_pesticide/a;"Une loi agricole rouvre la porte à un pesticide interdit → Autoriser le pesticide sous conditions strictes";agriculture;0.03;0;0;1;1;0;0;0
+choix;v28_loi_pesticide/b;"Une loi agricole rouvre la porte à un pesticide interdit → Maintenir l'interdiction et aider à trouver d'autres solutions";agriculture;-0.1;0;0;-1;-1;0;0;0
+choix;v28_loi_pesticide/c;"Une loi agricole rouvre la porte à un pesticide interdit → Interdire les produits importés traités avec ce pesticide";agriculture;0.01;0;-1;0;0;0;1;0
+choix;v28_loi_pesticide/d;"Une loi agricole rouvre la porte à un pesticide interdit → Indemniser les producteurs sans changer la loi";agriculture;-0.15;0;1;0;0;0;0;0
+choix;v28_epr_flamanville/a;"Le nouveau réacteur normand est enfin raccordé → Lancer six nouveaux réacteurs";energie;-1.5;0;0;2;-2;0;2;0
+choix;v28_epr_flamanville/b;"Le nouveau réacteur normand est enfin raccordé → Miser sur l'éolien en mer et le solaire";energie;-0.6;0;0;1;-2;0;0;0
+choix;v28_epr_flamanville/c;"Le nouveau réacteur normand est enfin raccordé → Vendre l'électricité plus cher aux gros consommateurs";energie;0.4;0;0;-1;0;0;0;0
+choix;v28_epr_flamanville/d;"Le nouveau réacteur normand est enfin raccordé → Faire une pause et auditer le chantier avant tout";energie;0.3;0;0;-1;0;0;-1;0
+choix;v28_controles_allemagne/a;"Le voisin allemand contrôle toutes ses frontières → Rétablir aussi nos contrôles aux frontières";immigration;-0.15;0;0;-1;0;0;1;0
+choix;v28_controles_allemagne/b;"Le voisin allemand contrôle toutes ses frontières → Négocier des patrouilles communes franco-allemandes";immigration;0;0;0;0;0;1;0;0
+choix;v28_controles_allemagne/c;"Le voisin allemand contrôle toutes ses frontières → Pousser l'Europe à renforcer ses frontières extérieures";immigration;0;0;0;0;0;0;-1;0
+choix;v28_controles_allemagne/d;"Le voisin allemand contrôle toutes ses frontières → Accepter les contrôles et aider les frontaliers";immigration;-0.02;0;1;0;0;0;0;0
+choix;v28_controles_allemagne/e;"Le voisin allemand contrôle toutes ses frontières → Ne rien changer et laisser faire Berlin";immigration;0.02;0;0;-1;0;-1;0;0
+choix;v28_zfe_strasbourg/a;"Les vieilles voitures bientôt interdites en ville → Maintenir l'interdiction avec une prime à l'achat";transports;-0.2;0;0;0;-1;0;0;1
+choix;v28_zfe_strasbourg/b;"Les vieilles voitures bientôt interdites en ville → Supprimer l'interdiction";transports;0.02;0;1;0;1;0;0;0
+choix;v28_zfe_strasbourg/c;"Les vieilles voitures bientôt interdites en ville → Reporter de deux ans et développer les transports en commun";transports;-0.1;0;0;0;0;0;0;1
+choix;v28_zfe_strasbourg/d;"Les vieilles voitures bientôt interdites en ville → Remplacer l'interdiction par un péage urbain";transports;0.05;0;-1;0;-1;0;0;0
+choix;v28_a69/a;"La justice arrête une autoroute à moitié construite → Finir l'autoroute après l'appel";transports;-0.05;0;0;1;1;0;0;0
+choix;v28_a69/b;"La justice arrête une autoroute à moitié construite → Abandonner et renaturer le tracé";transports;-0.4;0;0;-1;-1;0;0;0
+choix;v28_a69/c;"La justice arrête une autoroute à moitié construite → Transformer le tracé en route nationale sans péage";transports;-0.1;0;1;0;0;0;0;0
+choix;v28_a69/d;"La justice arrête une autoroute à moitié construite → Simplifier les recours contre les grands chantiers";transports;0.1;0;0;1;0;-1;0;0
+choix;v28_a69/e;"La justice arrête une autoroute à moitié construite → Faire payer le péage plus cher pour rembourser le retard";transports;0.05;0;-1;0;0;0;0;0
+choix;v28_narcotrafic/a;"Des fusillades liées au trafic de drogue dans une ville du Sud → Recruter des enquêteurs et des magistrats spécialisés";securite;-0.3;0;0;0;0;1;0;1
+choix;v28_narcotrafic/b;"Des fusillades liées au trafic de drogue dans une ville du Sud → Saisir et revendre les biens des trafiquants";securite;0.15;0;0;0;0;1;0;0
+choix;v28_narcotrafic/c;"Des fusillades liées au trafic de drogue dans une ville du Sud → Miser sur la prévention et les soins aux consommateurs";securite;-0.1;0;0;0;0;1;0;1
+choix;v28_narcotrafic/d;"Des fusillades liées au trafic de drogue dans une ville du Sud → Légaliser et taxer le cannabis";securite;0.5;0;0;0;0;0;0;-1
+choix;v28_brandt/a;"La dernière usine d'électroménager du pays ferme → Financer la reprise par les salariés en coopérative";salaires;-0.05;0;0;1;0;0;1;0
+choix;v28_brandt/b;"La dernière usine d'électroménager du pays ferme → Réserver une part des achats publics au « fabriqué en France »";salaires;-0.03;0;0;1;0;0;0;0
+choix;v28_brandt/c;"La dernière usine d'électroménager du pays ferme → Accompagner les salariés vers d'autres emplois";salaires;0.02;0;0;-1;0;0;0;0
+choix;v28_brandt/d;"La dernière usine d'électroménager du pays ferme → Baisser les impôts de production des usines";salaires;-0.2;0;0;1;0;0;0;0
+choix;v28_brandt/e;"La dernière usine d'électroménager du pays ferme → Laisser faire le marché";salaires;0.05;0;0;-2;0;-1;0;0
