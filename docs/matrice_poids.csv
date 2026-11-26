@@ -19,12 +19,12 @@ réforme;reseaux_sociaux_15;"Interdire les réseaux sociaux avant 15 ans";numeri
 réforme;regulation_installation_medecins;"Réguler l'installation des médecins";sante;0;0;0;0;0;0;0;3
 réforme;revalorisation_enseignants;"Mieux payer les enseignants, avec de nouvelles missions";ecole;-4;0;0;0;0;0;0;4
 réforme;lutte_fraude;"Grand plan contre la fraude fiscale et sociale";fiscalite;3;-0.2;0;0;0;1;0;0
-réforme;fusion_agences;"Fusionner ou supprimer un tiers des agences de l'État";fiscalite;1.5;-0.2;0;0;0;0;0;-2
+réforme;fusion_agences;"Fusionner ou supprimer un tiers des agences de l'État";fiscalite;0.8;-0.2;0;0;0;0;0;-2
 réforme;sortie_nucleaire;"Sortir progressivement du nucléaire";energie;-6;-15;-5;-1;2;0;-8;0
 réforme;renovation_massive;"Plan massif de rénovation des logements";logement;-8;0;2;3;-4;-1;0;0
-réforme;taxe_kerosene_train;"Taxer le kérosène et financer le train";transports;2;0;-1;-1;-2;0;0;0
+réforme;taxe_kerosene_train;"Taxer le kérosène et financer le train";transports;1;0;-1;-1;-2;0;0;0
 réforme;sortie_pesticides;"Sortir progressivement des pesticides de synthèse";agriculture;-2;0;0;-2;-1;-1;-2;0
-réforme;leasing_electrique;"Voiture électrique à petit prix pour les ménages modestes";transports;-1.5;0;2;0;-2;-1;-1;0
+réforme;leasing_electrique;"Voiture électrique à petit prix pour les ménages modestes";transports;-0.6;0;2;0;-2;-1;-1;0
 réforme;niches_brunes;"Supprimer les avantages fiscaux qui favorisent les énergies fossiles";fiscalite;4;0;-2;-1;-3;-1;0;0
 réforme;taxe_billets_premium;"Taxer davantage les jets privés et les billets en classe affaires";transports;0.8;0;0;0;-1;1;0;0
 réforme;sortie_marche_electricite;"Sortir du marché européen de l'électricité";energie;0;-1;5;0;0;0;2;0
@@ -33,11 +33,11 @@ réforme;service_militaire;"Rétablir un service militaire ou national obligatoi
 réforme;prix_planchers_agricoles;"Instaurer des prix planchers pour les agriculteurs";agriculture;0;0;-3;2;0;0;2;0
 réforme;tva_energie_5_5;"Baisser la TVA sur l'énergie à 5,5 %";energie;-14;0;6;1;4;0;0;0
 réforme;contribution_ue;"Réduire la contribution de la France au budget européen";europe;3;0;0;-1;0;0;2;0
-réforme;controle_prestations;"Carte Vitale biométrique et contrôle des prestations versées à l'étranger";sante;0.5;-0.5;0;0;0;-1;1;0
+réforme;controle_prestations;"Carte Vitale biométrique et contrôle des prestations versées à l'étranger";sante;0.3;-0.5;0;0;0;-1;1;0
 réforme;rsa_jeunes;"Ouvrir le RSA aux jeunes de 18 à 25 ans";salaires;-3;0;1;0;0;4;0;1
 réforme;jour_ferie_travaille;"Supprimer deux jours fériés pour réduire le déficit";fiscalite;4.2;0;-1;1;0;-4;0;0
 réforme;tva_sociale;"Monter la TVA pour baisser les cotisations sur les salaires";fiscalite;0;0;-3;3;0;0;1;0
-réforme;vols_courts_train;"Interdire les vols intérieurs quand le train met moins de 4 heures";transports;-0.1;0;0;-1;-2;0;0;-1
+réforme;vols_courts_train;"Interdire les vols intérieurs quand le train met moins de 4 heures";transports;-0.05;0;0;-1;-2;0;0;-1
 choix;v22_mercosur/a;"L'Europe signe l'accord avec l'Amérique du Sud, les tracteurs montent à Paris → Voter contre et saisir la justice européenne";agriculture;0;0;0;-1;0;1;2;0
 choix;v22_mercosur/b;"L'Europe signe l'accord avec l'Amérique du Sud, les tracteurs montent à Paris → Activer la clause de sauvegarde dès la première hausse";agriculture;0;0;0;0;0;0;1;0
 choix;v22_mercosur/c;"L'Europe signe l'accord avec l'Amérique du Sud, les tracteurs montent à Paris → Aides d'urgence aux éleveurs les plus exposés";agriculture;0;-0.3;0;1;0;1;0;0
@@ -88,23 +88,23 @@ choix;v22_louvre/b;"Les bijoux de la Couronne volés au Louvre → Billet plus c
 choix;v22_louvre/c;"Les bijoux de la Couronne volés au Louvre → Laisser chaque musée gérer sa sécurité";securite;0;0;0;0;0;0;0;-1
 choix;v22_louvre/d;"Les bijoux de la Couronne volés au Louvre → Confier la surveillance à des sociétés privées";securite;0.01;0;0;1;0;0;0;-1
 choix;v22_louvre/e;"Les bijoux de la Couronne volés au Louvre → Recruter des gardiens dans tous les musées publics";securite;-0.05;0;0;1;0;0;0;1
-choix;v22_covid/a;"Le virus revient : faut-il confiner ? → Confiner et payer les salaires : « quoi qu'il en coûte »";salaires;0;-30;2;4;0;1;0;2
-choix;v22_covid/b;"Le virus revient : faut-il confiner ? → Aider seulement les secteurs fermés";salaires;0;-12;0;2;0;0;0;1
+choix;v22_covid/a;"Le virus revient : faut-il confiner ? → Confiner et payer les salaires : « quoi qu'il en coûte »";salaires;0;-70;2;4;0;1;0;2
+choix;v22_covid/b;"Le virus revient : faut-il confiner ? → Aider seulement les secteurs fermés";salaires;0;-30;0;2;0;0;0;1
 choix;v22_covid/c;"Le virus revient : faut-il confiner ? → Prêts garantis plutôt que subventions";salaires;0;-0.5;0;2;0;0;0;0
 choix;v22_covid/d;"Le virus revient : faut-il confiner ? → Pas de confinement strict, protéger les plus fragiles";salaires;0;0;0;1;0;-2;0;-4
-choix;v22_covid/e;"Le virus revient : faut-il confiner ? → Rétablir l'impôt sur la fortune pour payer la crise";salaires;2;0;0;-1;0;1;0;0
+choix;v22_covid/e;"Le virus revient : faut-il confiner ? → Rétablir l'impôt sur la fortune pour payer la crise";salaires;1.8;0;0;-1;0;1;0;0
 choix;v22_xynthia/a;"Une tempête submerge la côte vendéenne → Racheter et détruire les maisons les plus exposées";logement;0;-0.3;0;0;0;-1;0;0
 choix;v22_xynthia/b;"Une tempête submerge la côte vendéenne → Rehausser les digues de tout le littoral";logement;-0.05;-0.5;0;1;0;1;0;0
 choix;v22_xynthia/c;"Une tempête submerge la côte vendéenne → Interdire de construire en zone de submersion";logement;0.02;0;-1;0;0;0;0;0
 choix;v22_xynthia/d;"Une tempête submerge la côte vendéenne → Indemniser vite et reconstruire sur place";logement;0;-0.4;0;0;0;1;0;0
 choix;v22_xynthia/e;"Une tempête submerge la côte vendéenne → Augmenter la surprime « catastrophes naturelles » des assurances";logement;0.2;0;-1;0;0;0;0;1
 choix;v22_gilets_jaunes/a;"Les gilets jaunes occupent les ronds-points → Annuler la hausse des taxes sur les carburants";fiscalite;-4;0;2;0;2;2;0;0
-choix;v22_gilets_jaunes/b;"Les gilets jaunes occupent les ronds-points → Annoncer des mesures de pouvoir d'achat";fiscalite;-6;0;3;0;0;1;0;0
+choix;v22_gilets_jaunes/b;"Les gilets jaunes occupent les ronds-points → Annoncer des mesures de pouvoir d'achat";fiscalite;-10;0;3;0;0;1;0;0
 choix;v22_gilets_jaunes/c;"Les gilets jaunes occupent les ronds-points → Garder la taxe et la reverser en chèque aux ménages modestes";fiscalite;0;0;1;0;-2;-1;0;0
 choix;v22_gilets_jaunes/d;"Les gilets jaunes occupent les ronds-points → Maintenir la hausse sans compensation";fiscalite;4;0;-2;0;-2;-4;0;0
 choix;v22_gilets_jaunes/e;"Les gilets jaunes occupent les ronds-points → Organiser un grand débat national";fiscalite;-0.01;0;0;0;0;1;0;0
-choix;v22_bouclier/a;"L'électricité et le gaz flambent → Plafonner les prix pour tout le monde";energie;0;-12;7;0;2;2;0;0
-choix;v22_bouclier/b;"L'électricité et le gaz flambent → Aider seulement les ménages modestes";energie;0;-3;2;0;0;1;0;0
+choix;v22_bouclier/a;"L'électricité et le gaz flambent → Plafonner les prix pour tout le monde";energie;0;-20;7;0;2;2;0;0
+choix;v22_bouclier/b;"L'électricité et le gaz flambent → Aider seulement les ménages modestes";energie;0;-1.8;2;0;0;1;0;0
 choix;v22_bouclier/c;"L'électricité et le gaz flambent → Plan de sobriété : baisser le chauffage";energie;0.2;0;-2;0;-3;0;0;0
 choix;v22_bouclier/d;"L'électricité et le gaz flambent → Taxer les profits exceptionnels des producteurs";energie;1;0;0;-1;0;1;0;0
 choix;v22_bouclier/e;"L'électricité et le gaz flambent → Sortir les prix français du marché européen";energie;0;0;3;0;0;0;4;0

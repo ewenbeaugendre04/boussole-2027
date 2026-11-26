@@ -65,12 +65,12 @@ Comparaison des réformes entre elles avec le barème ci-dessus. Les ordres de g
 | Réguler l'installation des médecins (`regulation_installation_medecins`) | 0 | 0 |  |  |  |  |  | 3 (+3) |
 | Mieux payer les enseignants, avec de nouvelles missions (`revalorisation_enseignants`) | -4 | 0 |  |  |  |  |  | 4 (+4) |
 | Grand plan contre la fraude fiscale et sociale (`lutte_fraude`) | 3 | -0.2 |  |  |  | 1 (+20 000) |  |  |
-| Fusionner ou supprimer un tiers des agences de l'État (`fusion_agences`) | 1.5 | -0.2 |  |  |  |  |  | -2 (-2) |
+| Fusionner ou supprimer un tiers des agences de l'État (`fusion_agences`) | 0.8 | -0.2 |  |  |  |  |  | -2 (-2) |
 | Sortir progressivement du nucléaire (`sortie_nucleaire`) | -6 | -15 | -5 (-8) | -1 (-50 000) | 2 (+2) |  | -8 (-8) |  |
 | Plan massif de rénovation des logements (`renovation_massive`) | -8 | 0 | 2 (+3,2) | 3 (+150 000) | -4 (-4) | -1 (-20 000) |  |  |
-| Taxer le kérosène et financer le train (`taxe_kerosene_train`) | 2 | 0 | -1 (-1,6) | -1 (-50 000) | -2 (-2) |  |  |  |
+| Taxer le kérosène et financer le train (`taxe_kerosene_train`) | 1 | 0 | -1 (-1,6) | -1 (-50 000) | -2 (-2) |  |  |  |
 | Sortir progressivement des pesticides de synthèse (`sortie_pesticides`) | -2 | 0 |  | -2 (-100 000) | -1 (-1) | -1 (-20 000) | -2 (-2) |  |
-| Voiture électrique à petit prix pour les ménages modestes (`leasing_electrique`) | -1.5 | 0 | 2 (+3,2) |  | -2 (-2) | -1 (-20 000) | -1 (-1) |  |
+| Voiture électrique à petit prix pour les ménages modestes (`leasing_electrique`) | -0.6 | 0 | 2 (+3,2) |  | -2 (-2) | -1 (-20 000) | -1 (-1) |  |
 | Supprimer les avantages fiscaux qui favorisent les énergies fossiles (`niches_brunes`) | 4 | 0 | -2 (-3,2) | -1 (-50 000) | -3 (-3) | -1 (-20 000) |  |  |
 | Taxer davantage les jets privés et les billets en classe affaires (`taxe_billets_premium`) | 0.8 | 0 |  |  | -1 (-1) | 1 (+20 000) |  |  |
 | Sortir du marché européen de l'électricité (`sortie_marche_electricite`) | 0 | -1 | 5 (+8) |  |  |  | 2 (+2) |  |
@@ -79,11 +79,11 @@ Comparaison des réformes entre elles avec le barème ci-dessus. Les ordres de g
 | Instaurer des prix planchers pour les agriculteurs (`prix_planchers_agricoles`) | 0 | 0 | -3 (-4,8) | 2 (+100 000) |  |  | 2 (+2) |  |
 | Baisser la TVA sur l'énergie à 5,5 % (`tva_energie_5_5`) | -14 | 0 | 6 (+9,6) | 1 (+50 000) | 4 (+4) |  |  |  |
 | Réduire la contribution de la France au budget européen (`contribution_ue`) | 3 | 0 |  | -1 (-50 000) |  |  | 2 (+2) |  |
-| Carte Vitale biométrique et contrôle des prestations versées à l'étranger (`controle_prestations`) | 0.5 | -0.5 |  |  |  | -1 (-20 000) | 1 (+1) |  |
+| Carte Vitale biométrique et contrôle des prestations versées à l'étranger (`controle_prestations`) | 0.3 | -0.5 |  |  |  | -1 (-20 000) | 1 (+1) |  |
 | Ouvrir le RSA aux jeunes de 18 à 25 ans (`rsa_jeunes`) | -3 | 0 | 1 (+1,6) |  |  | 4 (+80 000) |  | 1 (+1) |
 | Supprimer deux jours fériés pour réduire le déficit (`jour_ferie_travaille`) | 4.2 | 0 | -1 (-1,6) | 1 (+50 000) |  | -4 (-80 000) |  |  |
 | Monter la TVA pour baisser les cotisations sur les salaires (`tva_sociale`) | 0 | 0 | -3 (-4,8) | 3 (+150 000) |  |  | 1 (+1) |  |
-| Interdire les vols intérieurs quand le train met moins de 4 heures (`vols_courts_train`) | -0.1 | 0 |  | -1 (-50 000) | -2 (-2) |  |  | -1 (-1) |
+| Interdire les vols intérieurs quand le train met moins de 4 heures (`vols_courts_train`) | -0.05 | 0 |  | -1 (-50 000) | -2 (-2) |  |  | -1 (-1) |
 
 ## Classements par indicateur (réformes)
 
@@ -153,23 +153,23 @@ Comparaison des réformes entre elles avec le barème ci-dessus. Les ordres de g
 | 3 | Les bijoux de la Couronne volés au Louvre → Laisser chaque musée gérer sa sécurité | 0 | 0 |  |  |  |  |  | -1 |
 | 3 | Les bijoux de la Couronne volés au Louvre → Confier la surveillance à des sociétés privées | 0.01 | 0 |  | 1 |  |  |  | -1 |
 | 3 | Les bijoux de la Couronne volés au Louvre → Recruter des gardiens dans tous les musées publics | -0.05 | 0 |  | 1 |  |  |  | 1 |
-| 3 | Le virus revient : faut-il confiner ? → Confiner et payer les salaires : « quoi qu'il en coûte » | 0 | -30 | 2 | 4 |  | 1 |  | 2 |
-| 3 | Le virus revient : faut-il confiner ? → Aider seulement les secteurs fermés | 0 | -12 |  | 2 |  |  |  | 1 |
+| 3 | Le virus revient : faut-il confiner ? → Confiner et payer les salaires : « quoi qu'il en coûte » | 0 | -70 | 2 | 4 |  | 1 |  | 2 |
+| 3 | Le virus revient : faut-il confiner ? → Aider seulement les secteurs fermés | 0 | -30 |  | 2 |  |  |  | 1 |
 | 3 | Le virus revient : faut-il confiner ? → Prêts garantis plutôt que subventions | 0 | -0.5 |  | 2 |  |  |  |  |
 | 3 | Le virus revient : faut-il confiner ? → Pas de confinement strict, protéger les plus fragiles | 0 | 0 |  | 1 |  | -2 |  | -4 |
-| 3 | Le virus revient : faut-il confiner ? → Rétablir l'impôt sur la fortune pour payer la crise | 2 | 0 |  | -1 |  | 1 |  |  |
+| 3 | Le virus revient : faut-il confiner ? → Rétablir l'impôt sur la fortune pour payer la crise | 1.8 | 0 |  | -1 |  | 1 |  |  |
 | 4 | Une tempête submerge la côte vendéenne → Racheter et détruire les maisons les plus exposées | 0 | -0.3 |  |  |  | -1 |  |  |
 | 4 | Une tempête submerge la côte vendéenne → Rehausser les digues de tout le littoral | -0.05 | -0.5 |  | 1 |  | 1 |  |  |
 | 4 | Une tempête submerge la côte vendéenne → Interdire de construire en zone de submersion | 0.02 | 0 | -1 |  |  |  |  |  |
 | 4 | Une tempête submerge la côte vendéenne → Indemniser vite et reconstruire sur place | 0 | -0.4 |  |  |  | 1 |  |  |
 | 4 | Une tempête submerge la côte vendéenne → Augmenter la surprime « catastrophes naturelles » des assurances | 0.2 | 0 | -1 |  |  |  |  | 1 |
 | 4 | Les gilets jaunes occupent les ronds-points → Annuler la hausse des taxes sur les carburants | -4 | 0 | 2 |  | 2 | 2 |  |  |
-| 4 | Les gilets jaunes occupent les ronds-points → Annoncer des mesures de pouvoir d'achat | -6 | 0 | 3 |  |  | 1 |  |  |
+| 4 | Les gilets jaunes occupent les ronds-points → Annoncer des mesures de pouvoir d'achat | -10 | 0 | 3 |  |  | 1 |  |  |
 | 4 | Les gilets jaunes occupent les ronds-points → Garder la taxe et la reverser en chèque aux ménages modestes | 0 | 0 | 1 |  | -2 | -1 |  |  |
 | 4 | Les gilets jaunes occupent les ronds-points → Maintenir la hausse sans compensation | 4 | 0 | -2 |  | -2 | -4 |  |  |
 | 4 | Les gilets jaunes occupent les ronds-points → Organiser un grand débat national | -0.01 | 0 |  |  |  | 1 |  |  |
-| 4 | L'électricité et le gaz flambent → Plafonner les prix pour tout le monde | 0 | -12 | 7 |  | 2 | 2 |  |  |
-| 4 | L'électricité et le gaz flambent → Aider seulement les ménages modestes | 0 | -3 | 2 |  |  | 1 |  |  |
+| 4 | L'électricité et le gaz flambent → Plafonner les prix pour tout le monde | 0 | -20 | 7 |  | 2 | 2 |  |  |
+| 4 | L'électricité et le gaz flambent → Aider seulement les ménages modestes | 0 | -1.8 | 2 |  |  | 1 |  |  |
 | 4 | L'électricité et le gaz flambent → Plan de sobriété : baisser le chauffage | 0.2 | 0 | -2 |  | -3 |  |  |  |
 | 4 | L'électricité et le gaz flambent → Taxer les profits exceptionnels des producteurs | 1 | 0 |  | -1 |  | 1 |  |  |
 | 4 | L'électricité et le gaz flambent → Sortir les prix français du marché européen | 0 | 0 | 3 |  |  |  | 4 |  |

@@ -3369,7 +3369,7 @@ const GAME = {
        "plus": "Presque aucune faillite, les emplois sont sauvés.",
        "minus": "Des dizaines de milliards de dette en plus.",
        "budget": 0,
-       "once": -30,
+       "once": -70,
        "axes": {
         "eco": -2,
         "soc": 1
@@ -3415,7 +3415,7 @@ const GAME = {
        "plus": "L'argent va à ceux qui ne peuvent pas travailler.",
        "minus": "Des entreprises fragiles passent entre les mailles.",
        "budget": 0,
-       "once": -12,
+       "once": -30,
        "axes": {
         "eco": -1
        },
@@ -3537,7 +3537,7 @@ const GAME = {
        "label_expert": "Rétablir l'impôt de solidarité sur la fortune",
        "plus": "Les plus riches participent à l'effort.",
        "minus": "Risque de départs de grandes fortunes.",
-       "budget": 2,
+       "budget": 1.8,
        "axes": {
         "eco": -2
        },
@@ -4048,7 +4048,7 @@ const GAME = {
        "label_expert": "Loi d'urgence : prime d'activité relevée, heures supplémentaires défiscalisées",
        "plus": "Les salariés modestes gagnent plus chaque mois.",
        "minus": "Environ 6 milliards par an à financer.",
-       "budget": -6,
+       "budget": -10,
        "axes": {
         "eco": -1
        },
@@ -4287,7 +4287,7 @@ const GAME = {
        "plus": "Personne ne voit sa facture exploser.",
        "minus": "Coût énorme, aide aussi les plus aisés.",
        "budget": 0,
-       "once": -12,
+       "once": -20,
        "axes": {
         "eco": -2,
         "env": 1
@@ -4338,7 +4338,7 @@ const GAME = {
        "plus": "L'argent va à ceux qui en ont besoin.",
        "minus": "Les classes moyennes paient plein pot.",
        "budget": 0,
-       "once": -3,
+       "once": -1.8,
        "axes": {
         "eco": -1
        },
@@ -18698,7 +18698,7 @@ const GAME = {
    "origin": "Proposition présente dans plusieurs programmes",
    "simple": "L'État regroupe ou ferme une partie de ses nombreuses agences.",
    "expert": "Suppression ou fusion d'environ un tiers des agences, opérateurs et organismes consultatifs, avec réinternalisation de missions dans les ministères.",
-   "budget": 1.5,
+   "budget": 0.8,
    "once": -0.2,
    "budget_note": "Coût de réorganisation, puis frais de fonctionnement en moins : le déficit baisse.",
    "axes": {
@@ -19086,7 +19086,7 @@ const GAME = {
    "origin": "Proposition présente dans plusieurs programmes",
    "simple": "Le carburant des avions est taxé. L'argent sert à améliorer les trains.",
    "expert": "Taxation du kérosène sur les vols intérieurs et hausse de la taxe sur les billets, avec affectation des recettes au réseau ferroviaire.",
-   "budget": 2,
+   "budget": 1,
    "once": 0,
    "budget_note": "Taxe sur le kérosène, en partie réinvestie dans le rail : le déficit baisse.",
    "axes": {
@@ -19247,7 +19247,7 @@ const GAME = {
    "origin": "Proposition présente dans plusieurs programmes",
    "simple": "Les ménages modestes peuvent louer une voiture électrique pour une centaine d'euros par mois.",
    "expert": "Généralisation de la location longue durée subventionnée de véhicules électriques, sous conditions de revenus et de trajets domicile-travail.",
-   "budget": -1.5,
+   "budget": -0.6,
    "once": 0,
    "budget_note": "L'État paie une partie des loyers des voitures : le déficit augmente.",
    "axes": {
@@ -20002,7 +20002,7 @@ const GAME = {
    "origin": "Proposition présente dans plusieurs programmes",
    "simple": "La carte Vitale contient une empreinte ou une photo vérifiée, et les aides versées hors de France sont mieux contrôlées.",
    "expert": "Carte Vitale sécurisée par biométrie, contrôle d'existence des retraités résidant à l'étranger, croisement des fichiers sociaux.",
-   "budget": 0.5,
+   "budget": 0.3,
    "once": -0.5,
    "budget_note": "Coût des nouvelles cartes, puis prestations indues évitées : le déficit baisse.",
    "axes": {
@@ -20339,7 +20339,7 @@ const GAME = {
    "origin": "Proposition présente dans plusieurs programmes",
    "simple": "Un vol intérieur serait interdit si le même trajet se fait en train en moins de 4 heures (aujourd'hui : 2 heures 30).",
    "expert": "Extension du seuil de la loi Climat et résilience de 2 h 30 à 4 h, avec dérogation pour les vols de correspondance ; mesure soumise à l'accord de la Commission européenne.",
-   "budget": -0.1,
+   "budget": -0.05,
    "once": 0,
    "budget_note": "Moins de taxes sur les billets et aides aux aéroports touchés : le déficit augmente un peu.",
    "axes": {
