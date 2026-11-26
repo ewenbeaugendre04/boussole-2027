@@ -136,10 +136,10 @@ function sprItems(){
     if(!clash && MASK && /pavillon|maison|immeuble|boulangerie|haussmann|ferme/.test(it.id)){ var mx = it.w * 1.3, my = it.h * 1.1; if(terrainU(it.x - mx, it.y) === 0 || terrainU(it.x + mx, it.y) === 0 || terrainU(it.x, it.y + my) === 0 || terrainU(it.x, it.y - my) === 0) clash = true; } /* maisons : loin du rivage */
     if(!clash){ it.b = bx; kept.push(it); }
   });
-  /* maison posée sur un arbre : on la passe juste en dessous */
-  kept.forEach(function(h){ if(!/pavillon|maison|immeuble|boulangerie/.test(h.id)) return;
+  /* maison qui touche un arbre : toujours derrière (sa base au-dessus du pied de l'arbre, l'arbre dessiné devant) */
+  for(var pass = 0; pass < 3; pass++) kept.forEach(function(h){ if(!/pavillon|maison|immeuble|boulangerie|haussmann|ferme/.test(h.id)) return;
     kept.forEach(function(t){ if(!/^(pin|arbre|sapins)/.test(t.id)) return; var b = h.b, c = t.b;
-      if(b[0] < c[2] && b[2] > c[0] && b[1] < c[3] && b[3] > c[1] && h.y <= t.y + h.h * .3){ var d = t.y + h.h * .45 - h.y; h.y += d; h.b = [b[0], b[1] + d, b[2], b[3] + d]; } }); });
+      if(b[0] < c[2] && b[2] > c[0] && b[1] < c[3] && b[3] > c[1] && h.y > t.y - t.h * .3){ var d = t.y - t.h * .35 - h.y; h.y += d; h.b = [b[0], b[1] + d, b[2], b[3] + d]; } }); });
   items = kept;
   items.sort(function(a, b){ return a.y - b.y; });
   return items;

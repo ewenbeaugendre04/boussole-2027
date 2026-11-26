@@ -107,3 +107,4 @@
 - `scripts/audit_fx.js [--fix]` : écarte les objets qui se chevauchent (distance mini 2,6), rallonge les déplacements trop courts (< 4), recentre la caméra sur les objets. Environ 1 300 chevauchements corrigés.
 - smoke.py attend 30 semaines.
 - Préférence d'Ewen : les chevauchements qui servent le décor (feu sur forêt, sapin au pied d'une montagne, foule devant un bâtiment, météo sur un lieu) sont voulus et ne doivent pas être écartés. `audit_fx.js` les ignore (liste DECOR) ; `restaure_decor.js` a rendu 632 positions d'origine.
+- Décor : une maison qui touche un arbre est toujours placée derrière lui (sprites.js, 3 passes) ; contrôle en jeu : 0 maison devant un arbre.
