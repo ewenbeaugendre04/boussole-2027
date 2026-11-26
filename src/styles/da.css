@@ -122,3 +122,5 @@ body.cinema .nuage{opacity:0!important}
 /* pied des grands massifs : halo vert plus sombre pour fondre la roche dans l'herbe */
 #sprl .relief-pied{position:absolute;pointer-events:none;border-radius:50%;background:radial-gradient(closest-side,#6FBF4E 62%,rgba(111,191,78,.55) 82%,transparent);box-shadow:inset 0 -3px 0 rgba(60,130,50,.35)}
 [data-theme=dark] #sprl .relief-pied{background:radial-gradient(closest-side,#3E4A6A 62%,rgba(62,74,106,.55) 82%,transparent)}
+
+[data-theme="dark"] .rp-why p.fc,.is-night .rp-why p.fc{background:#2F4A55;color:#E8F1F3}
