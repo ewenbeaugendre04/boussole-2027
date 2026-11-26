@@ -95,8 +95,8 @@ function whyHtml(imp){
   if(b <= -.1) out.push(['down', 'Cette décision coûte ' + fmt1(-b) + ' Md€ par an : le déficit se creuse d\'autant.']);
   if(on <= -.1) out.push(['down', 'Dépense ponctuelle de ' + fmt1(-on) + ' Md€, ajoutée à la dette.']);
   if(on >= .1) out.push(['up', 'Rentrée ponctuelle de ' + fmt1(on) + ' Md€.']);
-  if(co <= -1) out.push(['up', 'Moins d\'émissions de CO₂ : la France se rapproche de ses objectifs climat.']);
-  if(co >= 1) out.push(['down', 'Plus d\'émissions de CO₂ : la France s\'éloigne de ses objectifs climat.']);
+  if(co >= 1) out.push(['up', 'Moins d\'émissions de CO₂ : la France se rapproche de ses objectifs climat.']);
+  if(co <= -1) out.push(['down', 'Plus d\'émissions de CO₂ : la France s\'éloigne de ses objectifs climat.']);
   return out;
 }
 /* Prévision tout de suite ; le résultat réel (un peu meilleur ou pire que prévu) arrive en alerte 1 à 2 semaines plus tard */

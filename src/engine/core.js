@@ -17,6 +17,14 @@ var AXES = G.axes || {};
 var AXK = Object.keys(AXES);
 var AXNAME = { eco:'Économie', soc:'Société', eu:'Europe', env:'Environnement' };
 function axName(k){ return (AXES[k] && AXES[k].label) || AXNAME[k] || k; }
+/* Climat : l'indicateur CO₂ est inversé à l'affichage et dans le calcul pour que, comme les autres, plus haut = mieux.
+   Les données gardent « co2 » (émissions) ; on change le signe de tous ses effets au chargement. */
+(function(){
+  var flip = function(o){ if(o && typeof o.co2 === 'number') o.co2 = -o.co2; };
+  var walk = function(x){ if(!x || typeof x !== 'object') return; if(Array.isArray(x)){ x.forEach(walk); return; } if(x.ind) flip(x.ind); Object.keys(x).forEach(function(k){ if(k !== 'ind') walk(x[k]); }); };
+  walk(G.programs); walk(G.days);
+  arr(G.indicators).forEach(function(i){ if(i.id === 'co2'){ i.label = 'Climat'; i.short = 'Climat'; i.good = 'high'; i.hint = 'Plus le score est haut, moins la France émet de CO₂.'; } });
+})();
 var INDS = arr(G.indicators);
 var INDL = {}; INDS.forEach(function(i){ INDL[i.id] = i.label || i.id; });
 var B = G.budget || {};
@@ -102,7 +110,7 @@ var S = null;
 function freshState(level){
   var ind = {}; INDS.forEach(function(i){ ind[i.id] = clamp(num(i.start, 50), 0, 100); });
   return {
-    v:1, gv:G.version || '', level:level || 1, dayIdx:0,
+    v:1, climat:1, gv:G.version || '', level:level || 1, dayIdx:0,
     decided:{}, decidedDay:{}, applied:{}, notes:[], ind:ind, last:{},
     annual:0, onceTotal:0, dette:num(B.dette, 0), year:START_YEAR, month:START_MONTH,
     solde: 0, week:0, reforms:{}, weekApplied:{}, impact:[], recallDone:{}, nudged:{},
@@ -115,6 +123,7 @@ function loadSave(){
   if(!s || typeof s !== 'object' || s.v !== 1 || typeof s.dayIdx !== 'number') return null;
   s.stays = arr(s.stays); s.started = s.started || {}; s.unlockSeen = s.unlockSeen || {}; s.results = arr(s.results); s.start = s.start || { ind:{}, def:BASE_DEF, dette:num(B.dette, 0) }; s.reforms = s.reforms || {}; s.weekApplied = s.weekApplied || {}; s.impact = arr(s.impact); s.recallDone = s.recallDone || {}; s.nudged = s.nudged || {}; s.blockLog = arr(s.blockLog); s.decided = s.decided || {}; s.decidedDay = s.decidedDay || {}; s.applied = s.applied || {}; s.notes = arr(s.notes); s.ind = s.ind || {}; s.last = s.last || {};
   INDS.forEach(function(i){ if(typeof s.ind[i.id] !== 'number') s.ind[i.id] = clamp(num(i.start, 50), 0, 100); });
+  if(!s.climat){ s.climat = 1; s.ind.co2 = 100 - num(s.ind.co2, 50); if(s.start && s.start.ind && typeof s.start.ind.co2 === 'number') s.start.ind.co2 = 100 - s.start.ind.co2; } /* anciennes parties : émissions → climat */
   s.dayIdx = clamp(s.dayIdx, 0, Math.max(0, DAYS.length));
   return s;
 }

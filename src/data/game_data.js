@@ -339,7 +339,7 @@ const GAME = {
   "budget": "Md€ par an (budget) ou Md€ une fois (once). Sujets du quotidien : 0 à 0,1. Grands sujets : 1 à 30.",
   "pouvoir_achat": "1 point ≈ 2 Md€ par an gagnés ou perdus par les ménages.",
   "emploi": "1 point ≈ 25 000 emplois.",
-  "co2": "1 point ≈ 2 millions de tonnes de CO₂ par an (environ 0,5 % des émissions du pays).",
+  "co2": "Climat : 1 point ≈ 2 millions de tonnes de CO₂ évitées par an (environ 0,5 % des émissions du pays). Plus le score est haut, mieux c'est.",
   "autres": "Cohésion, souveraineté, services : 1 à 2 points pour un sujet local, 3 à 8 pour une grande réforme.",
   "induced": {
    "pa_md": 0.6,
@@ -19275,7 +19275,7 @@ const GAME = {
     "Soutient la production si les voitures sont européennes."
    ],
    "problems": [
-    "Coût public de plus d'un milliard d'euros par an.",
+    "Coût public de plusieurs centaines de millions d'euros par an.",
     "Une partie des voitures et batteries est importée.",
     "Les bornes de recharge restent rares à la campagne."
    ],
