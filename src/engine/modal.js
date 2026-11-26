@@ -132,14 +132,16 @@ function impactScore(o){ return Object.keys(o.ind || {}).reduce(function(a, k){ 
 function effRows(o, max){
   var rows = [];
   Object.keys(o.ind || {}).forEach(function(k){ var v = Math.round(num(o.ind[k])); if(v && INDL[k]) rows.push({ k:'ind', id:k, v:v, w:Math.abs(v) }); });
-  if(Math.abs(num(o.budget)) >= .05) rows.push({ k:'def', v:num(o.budget), w:Math.abs(num(o.budget)) * 4 + 1 });
+  /* effet réel sur le compteur : coût direct + recettes induites (consommation, emplois), exactement comme le calcule le déficit affiché */
+  var ic_ = inducedCfg(), oi_ = o.ind || {}, ind_ = num(oi_.pouvoir_achat) * ic_.pa + num(oi_.emploi) * ic_.em, net_ = num(o.budget) + ind_;
+  if(Math.abs(net_) >= .05) rows.push({ k:'def', v:net_, dir:num(o.budget), ind:ind_, w:Math.abs(net_) * 4 + 1 });
   if(Math.abs(num(o.once)) >= .05) rows.push({ k:'once', v:num(o.once), w:Math.abs(num(o.once)) * .6 });
   rows.sort(function(a, b){ return b.w - a.w; });
   return rows.slice(0, max || 4);
 }
 function effText(r){
   if(r.k === 'ind') return esc(INDL[r.id]) + (r.v > 0 ? ' en hausse' : ' en baisse');
-  if(r.k === 'def') return 'Le déficit ' + (r.v > 0 ? 'baisse' : 'augmente') + ' de ' + f1(Math.abs(r.v)) + ' ' + esc(UNIT) + ' par an';
+  if(r.k === 'def') return 'Le déficit ' + (r.v > 0 ? 'baisse' : 'augmente') + ' de ' + f1(Math.abs(r.v)) + ' ' + esc(UNIT) + ' par an' + (Math.abs(r.ind || 0) >= .05 ? ' (' + (Math.abs(r.dir) >= .05 ? 'coût direct ' + (r.dir > 0 ? '−' : '+') + f1(Math.abs(r.dir)) + ', ' : '') + 'recettes ' + (r.ind > 0 ? 'en plus ' : 'en moins ') + f1(Math.abs(r.ind)) + ')' : '');
   return 'Une fois : la dette ' + (r.v > 0 ? 'baisse' : 'augmente') + ' de ' + f1(Math.abs(r.v)) + ' ' + esc(UNIT);
 }
 var ARW = '<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 3 17 11H12.5V17H7.5V11H3Z"/></svg>';
