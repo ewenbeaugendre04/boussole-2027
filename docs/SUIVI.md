@@ -115,3 +115,5 @@
 - Nouveaux objets : char, missile, chien, chat (objects.js + check_data).
 - 3 situations : dissuasion nucléaire avancée (S27), réarmement / LPM +36 Md€ (S28), animaux abandonnés (S29). Toutes les semaines 21-30 ont 4 situations ; les semaines 1 et 9-20 en ont encore 3.
 - Semaines : 5 situations déplacées des semaines 21-30 vers 10-18 (alternance 3/4 situations). Vérification en images : carte jour/nuit, 6 cartes de situation, aucune erreur JS ni dessin manquant.
+- Robustesse : un dessin qui ne se charge pas est ignoré (le reste du décor s'affiche) ; `tests/check_assets.js` vérifie fichiers, ratios, largeurs et objets ; toutes les propositions ont des sources (contrôle ajouté).
+- Villes : cœur en îlots d'immeubles rangés en grille décalée (sans chevauchement, un immeuble peut en masquer un autre derrière lui), puis une couronne de maisons, puis des champs pour les grandes villes. Éoliennes d'Île-de-France déplacées en Beauce.

@@ -34,7 +34,15 @@ function sprList(){
   function city(lon, lat, r, o){
     o = o || {}; var core = o.core || ['haussmann', 'haussmann', 'boulangerie'], mid = o.mid || ['petit_immeuble', 'immeuble'], out2 = o.out || ['pavillon', 'pavillon', 'maison_pierre'];
     function ring(rad, n, kinds, w){ n = Math.max(1, Math.round(n * DENS)); for(var i = 0; i < n; i++){ var a = i / n * 6.283 + R() * .5, d = rad * (.75 + R() * .5); put(kinds[Math.floor(R() * kinds.length)], lon + Math.cos(a) * d * 1.35, lat + Math.sin(a) * d * .85, w); } }
-    ring(r * .18, Math.max(2, Math.round(4 * r)), core, 1.7); ring(r * .5, Math.round(7 * r), mid, 1.8); ring(r, Math.round(10 * r), out2, 1.5);
+    /* cœur : îlots d'immeubles rangés en grille décalée (sans chevauchement), quelques cours vides ; puis une couronne de maisons, puis les champs */
+    var N = Math.max(2, Math.round(2.4 * r)), DX = .26, DY = .15;
+    for(var j = -N; j <= N; j++) for(var i = -N; i <= N; i++){
+      var q = (i * i + j * j) / (N * N + .01); if(q > 1 || (q > .15 && R() < .15)) continue;
+      var kinds = q < .35 ? core.concat(mid) : mid.concat(['boulangerie']);
+      put(kinds[Math.floor(R() * kinds.length)], lon + (i + (j & 1) * .5) * DX, lat + j * DY, 1.5);
+    }
+    ring(r * .62, Math.round(7 * r), out2, 1.4);
+    if(r >= .5) ring(r * 1.05, Math.round(6 * r), ['ble', 'colza', 'ble'], 2.4);
     if(o.affaires) for(var k = 0; k < 4; k++) put('tour_bureaux', o.affaires[0] + (k % 2) * .16, o.affaires[1] + Math.floor(k / 2) * .1, 1.6);
   }
   city(2.35, 48.85, 1.25, { affaires:[2.02, 49.0] }); /* Paris : La Défense en haut à gauche */
@@ -49,7 +57,7 @@ function sprList(){
   put('palais_parlement', 3.0, 48.5, 3); put('caserne', 4.35, 49.05, 3); put('usine_moderne', 5.2, 46.2, 2.6); /* institutions, défense, industrie */
   // énergie, ports, campagne (lieux réels)
   put('centrale_nucleaire', 1.58, 47.72, 3.4); put('centrale_nucleaire', 6.22, 49.41, 3.2); put('centrale_nucleaire', 4.73, 44.33, 3.2); put('centrale_nucleaire', 5.27, 45.8, 3);
-  put('eolienne', 1.75, 48.25, 2.2); put('eolienne', 2.1, 48.15, 2.2); put('eolienne', 2.9, 50.2, 2.2); put('eolienne', 3.3, 50.05, 2.2); put('eolienne', -3.2, 48.25, 2.1);
+  put('eolienne', 1.45, 48.0, 2.2); put('eolienne', 1.8, 47.9, 2.2); put('eolienne', 2.9, 50.2, 2.2); put('eolienne', 3.3, 50.05, 2.2); put('eolienne', -3.2, 48.25, 2.1);
   put('eolien_mer', -2.62, 47.05, 2.4); put('eolien_mer', -2.4, 46.9, 2.4); put('eolien_mer', 0.25, 49.98, 2.4);
   put('solaire', 5.25, 43.95, 3.2); put('barrage', 4.78, 44.72, 3); put('grue_portuaire', 0.12, 49.47, 2.6); put('grue_portuaire', 4.88, 43.42, 2.4);
   put('porte_conteneurs', -0.25, 49.75, 4.6); put('bateau_peche', -4.9, 47.7, 2.6);
@@ -133,7 +141,8 @@ function sprItems(){
     if(MASK && !SPR_MARINE[it.id] && !/^(chaine|dune)/.test(it.id) && (terrainU(bx[0] - it.w * .3, it.y) === 0 || terrainU(bx[2] + it.w * .3, it.y) === 0 || terrainU(it.x, it.y + it.h * .35) === 0 || terrainU(it.x, it.y - it.h * .3) === 0)) return; /* marge : ni pieds dans l'eau ni collé au rivage */ /* pieds dans l'eau : non */
     var MTN = false;
     var clash = !it.pied && kept.some(function(k){ if(BIG_SPR.test(k.id) && !BIG_SPR.test(it.id)){ var m = (k.b[2] - k.b[0]) * .3; /* rien sous un grand massif : sa vraie image déborde largement de sa boîte */ if(bx[2] > k.b[0] - m && bx[0] < k.b[2] + m && bx[3] > k.b[1] - m && bx[1] < k.b[3] + m) return true; } if(MTN && /massif|pic|montagne|colline/.test(k.id)) return false; var ix = Math.min(bx[2], k.b[2]) - Math.max(bx[0], k.b[0]), iy = Math.min(bx[3], k.b[3]) - Math.max(bx[1], k.b[1]);
-      return ix > 0 && iy > 0 && ((BIG_SPR.test(k.id) !== BIG_SPR.test(it.id)) || ix * iy > .35 * Math.min((bx[2] - bx[0]) * (bx[3] - bx[1]), (k.b[2] - k.b[0]) * (k.b[3] - k.b[1]))); });
+      var urb = /immeuble|haussmann|boulangerie|tour_bureaux/; var lim = urb.test(it.id) && urb.test(k.id) && Math.abs(it.y - k.y) > it.h * .12 ? .55 : .35; /* centre-ville : un immeuble peut en masquer un autre derrière lui */
+      return ix > 0 && iy > 0 && ((BIG_SPR.test(k.id) !== BIG_SPR.test(it.id)) || ix * iy > lim * Math.min((bx[2] - bx[0]) * (bx[3] - bx[1]), (k.b[2] - k.b[0]) * (k.b[3] - k.b[1]))); });
     if(!clash && !it.pied && /^(pin|arbre|sapins)/.test(it.id)) clash = kept.some(function(k){ if(!/^(mt_|montagnes|massif|chaine|pin|arbre|sapins)/.test(k.id)) return false; var ix = Math.min(bx[2], k.b[2]) - Math.max(bx[0], k.b[0]), iy = Math.min(bx[3], k.b[3]) - Math.max(bx[1], k.b[1]); return ix > 0 && iy > 0 && ix * iy > (/^(pin|arbre|sapins)/.test(k.id) ? .15 : it.id === 'sapins' ? .3 : 0) * (bx[2] - bx[0]) * (bx[3] - bx[1]); });
     if(!clash && MASK && /pavillon|maison|chalet|mas_|immeuble|boulangerie|haussmann|ferme/.test(it.id)){ var mx = it.w * 1.3, my = it.h * 1.1; if(terrainU(it.x - mx, it.y) === 0 || terrainU(it.x + mx, it.y) === 0 || terrainU(it.x, it.y + my) === 0 || terrainU(it.x, it.y - my) === 0) clash = true; } /* maisons : loin du rivage */
     if(!clash){ it.b = bx; kept.push(it); }
