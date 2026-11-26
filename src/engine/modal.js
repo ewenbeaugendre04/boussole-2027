@@ -5,15 +5,20 @@
 var layer = $('layer'), cardWrap = $('cardWrap'), onClose = null, lastFocus = null;
 function openCard(html, opts){
   opts = opts || {};
-  lastFocus = document.activeElement; placeOverlays();
+  /* navigation dans les menus : la carte précédente est gardée (avec ses actions) pour un retour en arrière */
+  var prev = cardWrap.firstChild, MENU = /^(Réglages|Mon orientation|Candidats|Fiche candidat|Guide|Budget|Propositions de la semaine|Bilan)/;
+  if(prev && layer.classList.contains('on') && MENU.test(prev.getAttribute('aria-label') || '') && opts.back !== false){ CARD_STACK.push({ el:prev, onClose:onClose }); cardWrap.removeChild(prev); }
+  else if(CARD_PEND && opts.back !== false){ CARD_STACK = CARD_PEND.stack.concat([{ el:CARD_PEND.el, onClose:null }]); CARD_PEND = null; }
+  else { if(!layer.classList.contains('on')) lastFocus = document.activeElement; CARD_STACK = []; }
+  placeOverlays();
   cardWrap.innerHTML = '<div class="card ' + (opts.anim || 'risein') + ' ' + (opts.cls || '') + '" role="dialog" aria-modal="true" aria-label="' + esc(opts.label || '') + '">' +
-    '<div class="ctop">' + (opts.grab !== false ? '<div class="grab" aria-hidden="true"></div>' : '') +
+    '<div class="ctop">' + (CARD_STACK.length ? '<button class="backbtn pressable" data-back aria-label="Retour"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></button>' : '') + (opts.grab !== false ? '<div class="grab" aria-hidden="true"></div>' : '') +
     (opts.close !== false ? '<button class="xbtn pressable" data-close aria-label="Fermer">' + XICON + '</button>' : '') + '</div>' +
     '<div class="cbody">' + html + '</div>' + (opts.footer ? '<div class="cfoot">' + opts.footer + '</div>' : '') + '</div>';
   layer.classList.add('on'); layer.setAttribute('aria-hidden', 'false');
   onClose = opts.onClose || null;
   var card = cardWrap.firstChild;
-  card.addEventListener('click', function(e){ if(e.target.closest('[data-close]')) closeCard(); });
+  card.addEventListener('click', function(e){ if(e.target.closest('[data-back]')){ cardBack(); return; } if(e.target.closest('[data-close]')) closeCard(); });
   swipeToClose(card);
   card.addEventListener('toggle', function(e){ var d = e.target; if(d.open) setTimeout(function(){ revealIn(card, d); }, 60); }, true);
   if(opts.anim === 'flipin') snd('flip');
@@ -27,7 +32,19 @@ function revealIn(card, el){
   else if(r.top < br.top) d = r.top - br.top - 8;
   if(d) bd.scrollBy({ top:d, behavior:reduceMotion ? 'auto' : 'smooth' });
 }
+var CARD_STACK = [];
+function cardBack(){
+  var top = CARD_STACK.pop(); if(!top){ closeCard(); return; }
+  var cur = cardWrap.firstChild; if(cur) cardWrap.removeChild(cur);
+  top.el.classList.remove('leave', 'flipin'); top.el.classList.add('risein'); cardWrap.appendChild(top.el); onClose = top.onClose;
+  try{ (top.el.querySelector('.xbtn') || top.el).focus({ preventScroll:true }); }catch(e){}
+}
+var CARD_PEND = null, MENU_RX = /^(Réglages|Mon orientation|Candidats|Fiche candidat|Guide|Budget|Propositions de la semaine|Bilan)/;
 function closeCard(instant){
+  var c0 = cardWrap.firstChild;
+  /* fermeture immédiate suivie d'une ouverture (passage d'un menu à un autre) : on garde la carte pour le retour */
+  if(instant && c0 && MENU_RX.test(c0.getAttribute('aria-label') || '')){ CARD_PEND = { el:c0, onClose:onClose, stack:CARD_STACK.slice() }; setTimeout(function(){ CARD_PEND = null; }, 0); }
+  CARD_STACK = [];
   var card = cardWrap.firstChild;
   var done = function(){ layer.classList.remove('on'); layer.setAttribute('aria-hidden', 'true'); cardWrap.innerHTML = ''; var cb = onClose; onClose = null; if(cb) cb(); try{ if(lastFocus && lastFocus.focus) lastFocus.focus({ preventScroll:true }); }catch(e){} };
   if(!card){ done(); return; }

@@ -223,3 +223,13 @@ function buildBirds(){
     ml.appendChild(el);
   });
 }
+/* garde-fou : dès que le thème ou la nuit change, les grands reliefs se remettent à jour (jour ⇄ nuit) */
+(function(){
+  var last = null;
+  function chk(){ var n = sprNuitActive(); if(n !== last){ last = n; sprBigRefresh(); } }
+  try{
+    var mo = new MutationObserver(chk);
+    mo.observe(document.documentElement, { attributes:true, attributeFilter:['data-theme'] });
+    if($('app')) mo.observe($('app'), { attributes:true, attributeFilter:['class'] });
+  }catch(e){}
+})();

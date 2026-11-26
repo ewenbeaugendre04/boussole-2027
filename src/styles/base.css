@@ -343,3 +343,5 @@ details.ctx p{margin:0;padding:0 12px 11px;font-size:14px;color:var(--ink-2)}
 .coin{position:fixed;z-index:40;width:18px;height:18px;margin:-9px 0 0 -9px;border-radius:50%;background:radial-gradient(circle at 35% 35%,var(--brass-2),var(--brass) 60%,var(--brass-d));border:1.5px solid #6E4B12;pointer-events:none}
 
 
+
+.backbtn{position:absolute;left:12px;top:10px;width:42px;height:42px;border-radius:14px;border:2px solid var(--line);background:var(--paper);color:var(--ink);display:grid;place-items:center;box-shadow:0 3px 0 var(--tranche);z-index:2}
