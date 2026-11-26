@@ -87,3 +87,11 @@
   Réformes branchées : sortie_nucleaire, relance_nucleaire, peines_planchers, renovation_massive, vols_courts_train, taxe_kerosene_train.
 - Barre de réforme compacte (icône du domaine + jauge), ouvre la fiche au toucher. Plus de drapeaux après les missions, plus de notifications au toucher de la carte.
 - Grands reliefs affichés à part (`#sprl`, nets au zoom) avec embase verte ; sapins du pied devant les massifs.
+
+## 26/11/2026 (soir)
+- Actualités retirées (G.news supprimé, showNews = passage direct, le guide s'y insère toujours).
+- Barre d'avancement de la partie : écran d'accueil (Continuer) et menu Réglages.
+- Indicateur CO₂ affiché « Climat » (inversé au chargement dans core.js ; anciennes parties converties via `S.climat`).
+- Notifications en file avec bouton Suivant ; flèche retour dans les menus (pile de cartes dans modal.js).
+- Fiche « Décision prise » : déficit = coût direct + recettes induites (même calcul que le compteur).
+- À faire : 10 semaines de plus (21 à 30), beaucoup de propositions 2027 en plus, dessins manquants (garder 15-20 crédits Recraft).
