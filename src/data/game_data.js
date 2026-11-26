@@ -17390,6 +17390,141 @@ const GAME = {
        "budget_note": "Économies sur les tournées : petite recette, le déficit baisse un peu."
       }
      ]
+    },
+    {
+     "id": "v29_a13",
+     "kind": "banal",
+     "region": "ile_de_france",
+     "sector": "transports",
+     "title": "Le tunnel de l'A13 fermé neuf mois",
+     "simple": "Un vieux tunnel de l'autoroute vers la Normandie ferme pour travaux pendant neuf mois. Bouchons, péages en plus pour le détour : les automobilistes râlent. Que faire ?",
+     "expert": "Fermeture du tube nord du tunnel de Saint-Cloud (A13), sens Paris-province, pour des travaux de confortement ; reports de trafic vers l'A14 à péage.",
+     "context": "Le tunnel a près d'un siècle : réparer est indispensable. Compenser les usagers coûte ; ne rien faire reporte les bouchons dans les petites rues.",
+     "real": {
+      "date": "Du 16 novembre 2026 à fin août 2027",
+      "place": "Saint-Cloud (Hauts-de-Seine)",
+      "fact": "Le tunnel de Saint-Cloud est fermé dans le sens Paris-province pour plus de neuf mois de travaux de confortement.",
+      "figures": "Tube nord vieux de près d'un siècle.",
+      "sources": [
+       {
+        "label": "Préfecture d'Île-de-France : fermeture du tunnel de Saint-Cloud pour 9 mois",
+        "url": "https://www.prefectures-regions.gouv.fr/ile-de-france/Actualites/Fermeture-du-tunnel-de-Saint-Cloud-sur-l-autoroute-A13-a-partir-du-16-novembre-pour-9-mois"
+       },
+       {
+        "label": "Assemblée nationale : question sur les péages du détour par l'A14",
+        "url": "https://questions.assemblee-nationale.fr/dyn/17/questions/QANR5L17QE17635.pdf"
+       }
+      ]
+     },
+     "camera": {
+      "region": "ile_de_france",
+      "x": 50,
+      "y": 24,
+      "zoom": 2.2
+     },
+     "fx": [
+      {
+       "obj": "chantier_grue",
+       "x": 50,
+       "y": 24,
+       "anim": "pulse"
+      },
+      {
+       "obj": "voiture",
+       "x": 47,
+       "y": 25,
+       "anim": "move",
+       "to": {
+        "x": 49,
+        "y": 24
+       },
+       "delay": 0.2
+      },
+      {
+       "obj": "panneau",
+       "x": 51,
+       "y": 23,
+       "anim": "appear",
+       "label": "Tunnel fermé",
+       "delay": 0.5
+      }
+     ],
+     "choices": [
+      {
+       "id": "a",
+       "label": "Péage gratuit sur le détour pendant les travaux",
+       "label_expert": "Gratuité temporaire du péage de l'itinéraire de déviation",
+       "plus": "Les automobilistes ne paient pas plus.",
+       "minus": "L'État compense le concessionnaire.",
+       "budget": -0.05,
+       "axes": {
+        "eco": -1
+       },
+       "ind": {
+        "pouvoir_achat": 1
+       },
+       "fx": [
+        {
+         "obj": "pieces",
+         "x": 48,
+         "y": 23,
+         "anim": "appear"
+        }
+       ],
+       "budget_note": "Compensation du péage : faible coût, le déficit augmente très peu."
+      },
+      {
+       "id": "b",
+       "label": "Plus de trains et de bus pendant le chantier",
+       "label_expert": "Renfort temporaire des transports en commun vers l'ouest",
+       "plus": "Moins de voitures sur la route.",
+       "minus": "Coûte aux finances publiques.",
+       "budget": -0.05,
+       "axes": {
+        "env": 1
+       },
+       "ind": {
+        "co2": -1,
+        "services": 1
+       },
+       "fx": [
+        {
+         "obj": "train",
+         "x": 46,
+         "y": 24,
+         "anim": "move",
+         "to": {
+          "x": 52,
+          "y": 24
+         }
+        }
+       ],
+       "budget_note": "Trains et bus en plus : faible coût, le déficit augmente très peu."
+      },
+      {
+       "id": "c",
+       "label": "Travailler jour et nuit pour finir plus tôt",
+       "label_expert": "Chantier en continu pour réduire la durée de fermeture",
+       "plus": "Fermeture raccourcie.",
+       "minus": "Surcoût et nuisances pour les riverains.",
+       "budget": -0.03,
+       "axes": {
+        "eco": 0
+       },
+       "ind": {
+        "emploi": 1
+       },
+       "fx": [
+        {
+         "obj": "chantier_grue",
+         "x": 50,
+         "y": 24,
+         "anim": "grow"
+        }
+       ],
+       "budget_note": "Travaux de nuit : surcoût, le déficit augmente très peu."
+      }
+     ]
     }
    ],
    "offer": [
@@ -18911,6 +19046,128 @@ const GAME = {
        "budget_note": "Places en plus : le déficit augmente un peu."
       }
      ]
+    },
+    {
+     "id": "v32_cse",
+     "kind": "banal",
+     "region": "auvergne_rhone_alpes",
+     "sector": "salaires",
+     "title": "Plus d'heures pour les élus du personnel ?",
+     "simple": "Dans une PME, l'élue du personnel dit manquer de temps pour défendre ses collègues. Une proposition de loi veut augmenter les heures qu'on lui accorde. Le patron craint pour la production. Que faire ?",
+     "expert": "Proposition de loi relevant le crédit d'heures de délégation des élus du comité social et économique (CSE), notamment de 10 à 16 heures par mois dans les entreprises de moins de 50 salariés.",
+     "context": "Des élus mieux armés améliorent le dialogue social ; mais ces heures sont payées par l'entreprise, ce qui pèse sur les petites structures.",
+     "real": {
+      "date": "Mars 2026 (proposition de loi déposée)",
+      "place": "Assemblée nationale",
+      "fact": "Une proposition de loi prévoit de relever les heures de délégation des élus du CSE, dans le cadre de la lutte contre les violences au travail.",
+      "figures": "Minimum porté de 10 à 16 heures par mois dans les entreprises de moins de 50 salariés.",
+      "sources": [
+       {
+        "label": "Éditions Tissot : vers de nouveaux leviers pour les représentants du personnel",
+        "url": "https://www.editions-tissot.fr/actualite/representants-du-personnel-ce/violences-sexistes-et-sexuelles-au-travail-vers-de-nouveaux-leviers-pour-les-representants-du-personnel"
+       }
+      ]
+     },
+     "camera": {
+      "region": "auvergne_rhone_alpes",
+      "x": 66,
+      "y": 58,
+      "zoom": 2
+     },
+     "fx": [
+      {
+       "obj": "usine",
+       "x": 66,
+       "y": 58,
+       "anim": "pulse"
+      },
+      {
+       "obj": "personnage",
+       "x": 68,
+       "y": 59,
+       "anim": "appear",
+       "delay": 0.3
+      },
+      {
+       "obj": "bulle",
+       "x": 65,
+       "y": 56,
+       "anim": "appear",
+       "label": "CSE",
+       "delay": 0.5
+      }
+     ],
+     "choices": [
+      {
+       "id": "a",
+       "label": "Augmenter les heures de délégation",
+       "label_expert": "Relèvement légal du crédit d'heures des élus du CSE",
+       "plus": "Élus mieux armés pour les salariés.",
+       "minus": "Coût pour les petites entreprises.",
+       "budget": 0,
+       "axes": {
+        "eco": -1
+       },
+       "ind": {
+        "cohesion": 1,
+        "emploi": -1
+       },
+       "fx": [
+        {
+         "obj": "bulle",
+         "x": 65,
+         "y": 56,
+         "anim": "grow",
+         "label": "CSE"
+        }
+       ]
+      },
+      {
+       "id": "b",
+       "label": "Ne rien changer",
+       "label_expert": "Maintien du crédit d'heures actuel",
+       "plus": "Pas de charge en plus.",
+       "minus": "Élus débordés dans certaines entreprises.",
+       "budget": 0,
+       "axes": {
+        "eco": 1
+       },
+       "ind": {
+        "cohesion": -1
+       },
+       "fx": [
+        {
+         "obj": "usine",
+         "x": 66,
+         "y": 58,
+         "anim": "blink"
+        }
+       ]
+      },
+      {
+       "id": "c",
+       "label": "Laisser chaque entreprise négocier",
+       "label_expert": "Crédit d'heures fixé par accord d'entreprise",
+       "plus": "S'adapte à chaque situation.",
+       "minus": "Inégalités entre salariés.",
+       "budget": 0,
+       "axes": {
+        "eco": 1
+       },
+       "ind": {
+        "cohesion": 0,
+        "emploi": 1
+       },
+       "fx": [
+        {
+         "obj": "personnage",
+         "x": 68,
+         "y": 59,
+         "anim": "grow"
+        }
+       ]
+      }
+     ]
     }
    ],
    "offer": [
@@ -19886,6 +20143,135 @@ const GAME = {
         }
        ],
        "budget_note": "Aménagements : faible coût, le déficit augmente très peu."
+      }
+     ]
+    },
+    {
+     "id": "v34_periscolaire",
+     "kind": "banal",
+     "region": "centre_val_de_loire",
+     "sector": "ecole",
+     "title": "Cours le matin, sport et ateliers l'après-midi ?",
+     "simple": "Une convention de citoyens tirés au sort propose les matières classiques le matin et des activités pratiques, sportives et culturelles l'après-midi. Les parents sont partagés. Que faire ?",
+     "expert": "Propositions de la Convention citoyenne sur les temps de l'enfant : apprentissages théoriques le matin, pratiques l'après-midi, devoirs faits à l'école, activités gratuites.",
+     "context": "Les spécialistes du sommeil y sont favorables ; mais encadrer des activités l'après-midi coûte cher aux communes et demande du personnel.",
+     "real": {
+      "date": "23 novembre 2025 (rapport final)",
+      "place": "Conseil économique, social et environnemental",
+      "fact": "La Convention citoyenne a adopté vingt propositions, dont une journée avec la théorie le matin et des activités pratiques, artistiques et sportives l'après-midi.",
+      "figures": "Début des cours à 9 h, fin des cours vers 15 h 30, puis devoirs à l'école et activités gratuites.",
+      "sources": [
+       {
+        "label": "Vie publique : rapport de la Convention citoyenne sur les temps de l'enfant",
+        "url": "https://www.vie-publique.fr/rapport/301032-rapport-de-la-convention-citoyenne-sur-les-temps-de-lenfant-cese"
+       },
+       {
+        "label": "Banque des territoires : la convention veut bousculer l'organisation scolaire",
+        "url": "https://www.banquedesterritoires.fr/la-convention-citoyenne-sur-les-temps-de-lenfant-veut-bousculer-lorganisation-scolaire"
+       }
+      ]
+     },
+     "camera": {
+      "region": "centre_val_de_loire",
+      "x": 46,
+      "y": 38,
+      "zoom": 2
+     },
+     "fx": [
+      {
+       "obj": "ecole",
+       "x": 46,
+       "y": 38,
+       "anim": "pulse"
+      },
+      {
+       "obj": "eleves",
+       "x": 48,
+       "y": 39,
+       "anim": "appear",
+       "delay": 0.3
+      },
+      {
+       "obj": "panneau",
+       "x": 44,
+       "y": 37,
+       "anim": "appear",
+       "label": "Après-midi : ateliers",
+       "delay": 0.5
+      }
+     ],
+     "choices": [
+      {
+       "id": "a",
+       "label": "Généraliser avec des activités gratuites",
+       "label_expert": "Généralisation des activités périscolaires gratuites l'après-midi",
+       "plus": "Égalité d'accès au sport et à la culture.",
+       "minus": "Coût élevé pour l'État et les communes.",
+       "budget": -0.6,
+       "axes": {
+        "soc": -1,
+        "eco": -1
+       },
+       "ind": {
+        "cohesion": 2,
+        "services": 1,
+        "emploi": 1
+       },
+       "fx": [
+        {
+         "obj": "eleves",
+         "x": 48,
+         "y": 39,
+         "anim": "grow"
+        }
+       ],
+       "budget_note": "Animateurs et activités : le déficit augmente."
+      },
+      {
+       "id": "b",
+       "label": "Tester dans quelques villes volontaires",
+       "label_expert": "Expérimentation dans des communes volontaires",
+       "plus": "On mesure avant de généraliser.",
+       "minus": "Inégalités entre territoires.",
+       "budget": -0.05,
+       "axes": {
+        "soc": 0
+       },
+       "ind": {
+        "services": 1
+       },
+       "fx": [
+        {
+         "obj": "ecole",
+         "x": 46,
+         "y": 38,
+         "anim": "grow"
+        }
+       ],
+       "budget_note": "Expérimentation : faible coût, le déficit augmente très peu."
+      },
+      {
+       "id": "c",
+       "label": "Garder les horaires actuels",
+       "label_expert": "Maintien de l'organisation actuelle de la journée scolaire",
+       "plus": "Pas de chamboulement pour les familles.",
+       "minus": "Rythmes jugés inadaptés aux enfants.",
+       "budget": 0,
+       "axes": {
+        "soc": 1
+       },
+       "ind": {
+        "cohesion": -1
+       },
+       "fx": [
+        {
+         "obj": "panneau",
+         "x": 44,
+         "y": 37,
+         "anim": "appear",
+         "label": "Inchangé"
+        }
+       ]
       }
      ]
     }
@@ -21811,6 +22197,132 @@ const GAME = {
         }
        ],
        "budget_note": "Recette supprimée : le déficit augmente."
+      }
+     ]
+    },
+    {
+     "id": "v38_incendies",
+     "kind": "banal",
+     "region": "paca",
+     "sector": "securite",
+     "title": "Des feux de forêt allumés volontairement",
+     "simple": "Pendant la canicule, des milliers d'hectares brûlent. Parmi les centaines de personnes interpellées, beaucoup sont soupçonnées d'avoir mis le feu exprès, dont des mineurs. Que faire ?",
+     "expert": "Vague d'incendies estivaux : interpellations pour mises à feu volontaires, débat sur les peines, la prévention et la surveillance des massifs.",
+     "context": "Neuf départs de feu sur dix sont d'origine humaine. Punir plus fort dissuade-t-il ? Surveiller les massifs et débroussailler coûte cher.",
+     "real": {
+      "date": "Été 2026",
+      "place": "Var, forêt de Fontainebleau et toute la France",
+      "fact": "Plus de 300 personnes ont été interpellées dans des enquêtes sur des départs de feu, dont deux tiers pour des mises à feu volontaires selon le ministre de l'Intérieur.",
+      "figures": "308 interpellations ; neuf départs de feu sur dix d'origine humaine.",
+      "sources": [
+       {
+        "label": "La Libre (AFP) : incendies en France, 308 interpellations",
+        "url": "https://www.lalibre.be/dernieres-depeches/2026/07/31/feux-de-foret-incendies-en-france-308-interpellations-selon-le-ministre-de-linterieur-IUHY3L66VRCR3PKNAGLX2GOS3E/"
+       },
+       {
+        "label": "Europe 1 : un tiers des personnes interpellées sont mineures",
+        "url": "https://www.europe1.fr/node/970473"
+       }
+      ]
+     },
+     "camera": {
+      "region": "paca",
+      "x": 77,
+      "y": 76,
+      "zoom": 2.2
+     },
+     "fx": [
+      {
+       "obj": "incendie",
+       "x": 77,
+       "y": 76,
+       "anim": "smoke"
+      },
+      {
+       "obj": "foret",
+       "x": 75,
+       "y": 75,
+       "anim": "shake",
+       "delay": 0.3
+      },
+      {
+       "obj": "policiers",
+       "x": 79,
+       "y": 77,
+       "anim": "appear",
+       "delay": 0.6
+      }
+     ],
+     "choices": [
+      {
+       "id": "a",
+       "label": "Peines beaucoup plus lourdes pour les incendiaires",
+       "label_expert": "Aggravation des peines pour les incendies volontaires",
+       "plus": "Message dissuasif fort.",
+       "minus": "Effet incertain sur les pyromanes malades.",
+       "budget": 0,
+       "axes": {
+        "soc": 2
+       },
+       "ind": {
+        "cohesion": 1
+       },
+       "fx": [
+        {
+         "obj": "policiers",
+         "x": 79,
+         "y": 77,
+         "anim": "grow"
+        }
+       ]
+      },
+      {
+       "id": "b",
+       "label": "Drones et guetteurs dans les massifs",
+       "label_expert": "Surveillance renforcée des massifs en période à risque",
+       "plus": "Feux repérés plus tôt.",
+       "minus": "Coût chaque été.",
+       "budget": -0.1,
+       "axes": {
+        "soc": 1
+       },
+       "ind": {
+        "services": 1,
+        "co2": -1
+       },
+       "fx": [
+        {
+         "obj": "satellite",
+         "x": 76,
+         "y": 73,
+         "anim": "appear"
+        }
+       ],
+       "budget_note": "Surveillance : le déficit augmente un peu."
+      },
+      {
+       "id": "c",
+       "label": "Débroussaillage et prévention auprès des jeunes",
+       "label_expert": "Obligations de débroussaillement et prévention scolaire",
+       "plus": "Agit sur les causes.",
+       "minus": "Résultats lents.",
+       "budget": -0.05,
+       "axes": {
+        "env": 1
+       },
+       "ind": {
+        "co2": -1,
+        "cohesion": 1
+       },
+       "fx": [
+        {
+         "obj": "foret",
+         "x": 75,
+         "y": 75,
+         "anim": "grow"
+        }
+       ],
+       "budget_note": "Prévention : faible coût, le déficit augmente très peu."
       }
      ]
     }

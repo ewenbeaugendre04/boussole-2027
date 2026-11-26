@@ -108,7 +108,7 @@ Comparaison des réformes entre elles avec le barème ci-dessus. Les ordres de g
 
 **Services publics** : recrutements_publics +6, revalorisation_enseignants +4, regulation_installation_medecins +3, rsa_jeunes +1, recrutement_justice +1, requisition_logements_vacants +1, peines_planchers -1, vols_courts_train -1, fusion_agences -2, non_remplacement_fonctionnaires -6.
 
-## Choix des événements (433)
+## Choix des événements (445)
 
 | Semaine | Choix | Budget | Ponctuel | Pouvoir d'achat | Emploi | Émissions de CO₂ | Cohésion sociale | Souveraineté | Services publics |
 |---|---|---|---|---|---|---|---|---|---|
@@ -450,6 +450,9 @@ Comparaison des réformes entre elles avec le barème ci-dessus. Les ordres de g
 | 21 | Le timbre vert dépasse 1,50 € → Laisser La Poste fixer ses prix | 0 | 0 | -1 |  |  |  |  |  |
 | 21 | Le timbre vert dépasse 1,50 € → Compenser une partie par l'État | -0.1 | 0 | 1 |  |  |  |  | 1 |
 | 21 | Le timbre vert dépasse 1,50 € → Moins de tournées, prix gelé | 0.05 | 0 |  |  |  |  |  | -1 |
+| 21 | Le tunnel de l'A13 fermé neuf mois → Péage gratuit sur le détour pendant les travaux | -0.05 | 0 | 1 |  |  |  |  |  |
+| 21 | Le tunnel de l'A13 fermé neuf mois → Plus de trains et de bus pendant le chantier | -0.05 | 0 |  |  | -1 |  |  | 1 |
+| 21 | Le tunnel de l'A13 fermé neuf mois → Travailler jour et nuit pour finir plus tôt | -0.03 | 0 |  | 1 |  |  |  |  |
 | 22 | L'Europe signe l'accord avec l'Amérique du Sud → Saisir la justice européenne contre l'accord | 0 | 0 |  |  |  |  | 1 |  |
 | 22 | L'Europe signe l'accord avec l'Amérique du Sud → Clauses miroirs et contrôles aux frontières | -0.1 | 0 |  |  |  | 1 | 1 |  |
 | 22 | L'Europe signe l'accord avec l'Amérique du Sud → Aides directes aux éleveurs touchés | -0.5 | 0 |  | 1 |  | 1 |  |  |
@@ -482,6 +485,9 @@ Comparaison des réformes entre elles avec le barème ci-dessus. Les ordres de g
 | 24 | Sans affectation, une lycéenne attend une place → Garder le pouvoir du recteur | 0 | 0 |  |  |  | 1 |  |  |
 | 24 | Sans affectation, une lycéenne attend une place → Laisser les universités choisir | 0 | 0 |  |  |  | -1 |  | 1 |
 | 24 | Sans affectation, une lycéenne attend une place → Créer des places en plus dans les filières demandées | -0.15 | 0 |  |  |  | 1 |  | 1 |
+| 24 | Plus d'heures pour les élus du personnel ? → Augmenter les heures de délégation | 0 | 0 |  | -1 |  | 1 |  |  |
+| 24 | Plus d'heures pour les élus du personnel ? → Ne rien changer | 0 | 0 |  |  |  | -1 |  |  |
+| 24 | Plus d'heures pour les élus du personnel ? → Laisser chaque entreprise négocier | 0 | 0 |  | 1 |  |  |  |  |
 | 25 | De retour de vacances, sa maison est occupée → Expulsion sous 48 heures dans tous les cas | -0.05 | 0 |  |  |  | -1 |  |  |
 | 25 | De retour de vacances, sa maison est occupée → Indemniser vite les propriétaires lésés | -0.05 | 0 |  |  |  | 1 |  |  |
 | 25 | De retour de vacances, sa maison est occupée → Expulser et proposer un hébergement | -0.15 | 0 |  |  |  | 2 |  |  |
@@ -503,6 +509,9 @@ Comparaison des réformes entre elles avec le barème ci-dessus. Les ordres de g
 | 26 | Plus de cigarette sur la plage → Contrôler et verbaliser vraiment | 0.05 | 0 |  |  |  | 1 |  |  |
 | 26 | Plus de cigarette sur la plage → Miser sur la prévention sans amende | -0.05 | 0 |  |  |  |  |  | 1 |
 | 26 | Plus de cigarette sur la plage → Créer des coins fumeurs sur les plages | -0.05 | 0 |  |  |  | 1 |  |  |
+| 26 | Cours le matin, sport et ateliers l'après-midi ? → Généraliser avec des activités gratuites | -0.6 | 0 |  | 1 |  | 2 |  | 1 |
+| 26 | Cours le matin, sport et ateliers l'après-midi ? → Tester dans quelques villes volontaires | -0.05 | 0 |  |  |  |  |  | 1 |
+| 26 | Cours le matin, sport et ateliers l'après-midi ? → Garder les horaires actuels | 0 | 0 |  |  |  | -1 |  |  |
 | 27 | Des drones inconnus survolent une base militaire → Financer un mur anti-drones européen | -0.6 | 0 |  |  |  |  | 2 |  |
 | 27 | Des drones inconnus survolent une base militaire → Équiper d'abord nos propres sites sensibles | -0.4 | 0 |  | 1 |  |  | 2 |  |
 | 27 | Des drones inconnus survolent une base militaire → Autoriser à abattre tout drone suspect | -0.1 | 0 |  |  |  | -1 | 1 |  |
@@ -545,3 +554,6 @@ Comparaison des réformes entre elles avec le barème ci-dessus. Les ordres de g
 | 30 | Les sodas plus chers à cause de la taxe sucre → Augmenter encore la taxe | 0.2 | 0 | -1 |  |  |  |  | 1 |
 | 30 | Les sodas plus chers à cause de la taxe sucre → Garder la taxe telle quelle | 0 | 0 |  |  |  |  |  |  |
 | 30 | Les sodas plus chers à cause de la taxe sucre → Supprimer la taxe, miser sur l'éducation | -0.3 | 0 | 1 |  |  |  |  |  |
+| 30 | Des feux de forêt allumés volontairement → Peines beaucoup plus lourdes pour les incendiaires | 0 | 0 |  |  |  | 1 |  |  |
+| 30 | Des feux de forêt allumés volontairement → Drones et guetteurs dans les massifs | -0.1 | 0 |  |  | -1 |  |  | 1 |
+| 30 | Des feux de forêt allumés volontairement → Débroussaillage et prévention auprès des jeunes | -0.05 | 0 |  |  | -1 | 1 |  |  |

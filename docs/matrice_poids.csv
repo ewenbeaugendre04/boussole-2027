@@ -385,6 +385,9 @@ choix;v29_groenland/d;"Un allié menace d'annexer le Groenland → Rester en ret
 choix;v29_timbre/a;"Le timbre vert dépasse 1,50 € → Laisser La Poste fixer ses prix";salaires;0;0;-1;0;0;0;0;0
 choix;v29_timbre/b;"Le timbre vert dépasse 1,50 € → Compenser une partie par l'État";salaires;-0.1;0;1;0;0;0;0;1
 choix;v29_timbre/c;"Le timbre vert dépasse 1,50 € → Moins de tournées, prix gelé";salaires;0.05;0;0;0;0;0;0;-1
+choix;v29_a13/a;"Le tunnel de l'A13 fermé neuf mois → Péage gratuit sur le détour pendant les travaux";transports;-0.05;0;1;0;0;0;0;0
+choix;v29_a13/b;"Le tunnel de l'A13 fermé neuf mois → Plus de trains et de bus pendant le chantier";transports;-0.05;0;0;0;-1;0;0;1
+choix;v29_a13/c;"Le tunnel de l'A13 fermé neuf mois → Travailler jour et nuit pour finir plus tôt";transports;-0.03;0;0;1;0;0;0;0
 choix;v30_mercosur/a;"L'Europe signe l'accord avec l'Amérique du Sud → Saisir la justice européenne contre l'accord";agriculture;0;0;0;0;0;0;1;0
 choix;v30_mercosur/b;"L'Europe signe l'accord avec l'Amérique du Sud → Clauses miroirs et contrôles aux frontières";agriculture;-0.1;0;0;0;0;1;1;0
 choix;v30_mercosur/c;"L'Europe signe l'accord avec l'Amérique du Sud → Aides directes aux éleveurs touchés";agriculture;-0.5;0;0;1;0;1;0;0
@@ -417,6 +420,9 @@ choix;v32_mayotte/d;"Mayotte : faut-il aller plus loin sur le droit du sol ? →
 choix;v32_parcoursup/a;"Sans affectation, une lycéenne attend une place → Garder le pouvoir du recteur";ecole;0;0;0;0;0;1;0;0
 choix;v32_parcoursup/b;"Sans affectation, une lycéenne attend une place → Laisser les universités choisir";ecole;0;0;0;0;0;-1;0;1
 choix;v32_parcoursup/c;"Sans affectation, une lycéenne attend une place → Créer des places en plus dans les filières demandées";ecole;-0.15;0;0;0;0;1;0;1
+choix;v32_cse/a;"Plus d'heures pour les élus du personnel ? → Augmenter les heures de délégation";salaires;0;0;0;-1;0;1;0;0
+choix;v32_cse/b;"Plus d'heures pour les élus du personnel ? → Ne rien changer";salaires;0;0;0;0;0;-1;0;0
+choix;v32_cse/c;"Plus d'heures pour les élus du personnel ? → Laisser chaque entreprise négocier";salaires;0;0;0;1;0;0;0;0
 choix;v33_squat/a;"De retour de vacances, sa maison est occupée → Expulsion sous 48 heures dans tous les cas";logement;-0.05;0;0;0;0;-1;0;0
 choix;v33_squat/b;"De retour de vacances, sa maison est occupée → Indemniser vite les propriétaires lésés";logement;-0.05;0;0;0;0;1;0;0
 choix;v33_squat/c;"De retour de vacances, sa maison est occupée → Expulser et proposer un hébergement";logement;-0.15;0;0;0;0;2;0;0
@@ -438,6 +444,9 @@ choix;v34_oeufs/c;"La canicule a tué des centaines de milliers de poules → La
 choix;v34_tabac/a;"Plus de cigarette sur la plage → Contrôler et verbaliser vraiment";sante;0.05;0;0;0;0;1;0;0
 choix;v34_tabac/b;"Plus de cigarette sur la plage → Miser sur la prévention sans amende";sante;-0.05;0;0;0;0;0;0;1
 choix;v34_tabac/c;"Plus de cigarette sur la plage → Créer des coins fumeurs sur les plages";sante;-0.05;0;0;0;0;1;0;0
+choix;v34_periscolaire/a;"Cours le matin, sport et ateliers l'après-midi ? → Généraliser avec des activités gratuites";ecole;-0.6;0;0;1;0;2;0;1
+choix;v34_periscolaire/b;"Cours le matin, sport et ateliers l'après-midi ? → Tester dans quelques villes volontaires";ecole;-0.05;0;0;0;0;0;0;1
+choix;v34_periscolaire/c;"Cours le matin, sport et ateliers l'après-midi ? → Garder les horaires actuels";ecole;0;0;0;0;0;-1;0;0
 choix;v35_drones/a;"Des drones inconnus survolent une base militaire → Financer un mur anti-drones européen";defense;-0.6;0;0;0;0;0;2;0
 choix;v35_drones/b;"Des drones inconnus survolent une base militaire → Équiper d'abord nos propres sites sensibles";defense;-0.4;0;0;1;0;0;2;0
 choix;v35_drones/c;"Des drones inconnus survolent une base militaire → Autoriser à abattre tout drone suspect";defense;-0.1;0;0;0;0;-1;1;0
@@ -480,3 +489,6 @@ choix;v38_expulsions/c;"Une famille expulsée pour loyers impayés → Relogemen
 choix;v38_sodas/a;"Les sodas plus chers à cause de la taxe sucre → Augmenter encore la taxe";sante;0.2;0;-1;0;0;0;0;1
 choix;v38_sodas/b;"Les sodas plus chers à cause de la taxe sucre → Garder la taxe telle quelle";sante;0;0;0;0;0;0;0;0
 choix;v38_sodas/c;"Les sodas plus chers à cause de la taxe sucre → Supprimer la taxe, miser sur l'éducation";sante;-0.3;0;1;0;0;0;0;0
+choix;v38_incendies/a;"Des feux de forêt allumés volontairement → Peines beaucoup plus lourdes pour les incendiaires";securite;0;0;0;0;0;1;0;0
+choix;v38_incendies/b;"Des feux de forêt allumés volontairement → Drones et guetteurs dans les massifs";securite;-0.1;0;0;0;-1;0;0;1
+choix;v38_incendies/c;"Des feux de forêt allumés volontairement → Débroussaillage et prévention auprès des jeunes";securite;-0.05;0;0;0;-1;1;0;0
