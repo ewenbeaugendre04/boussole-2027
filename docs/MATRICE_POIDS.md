@@ -108,7 +108,7 @@ Comparaison des réformes entre elles avec le barème ci-dessus. Les ordres de g
 
 **Services publics** : recrutements_publics +6, revalorisation_enseignants +4, regulation_installation_medecins +3, rsa_jeunes +1, recrutement_justice +1, requisition_logements_vacants +1, peines_planchers -1, vols_courts_train -1, fusion_agences -2, non_remplacement_fonctionnaires -6.
 
-## Choix des événements (327)
+## Choix des événements (433)
 
 | Semaine | Choix | Budget | Ponctuel | Pouvoir d'achat | Emploi | Émissions de CO₂ | Cohésion sociale | Souveraineté | Services publics |
 |---|---|---|---|---|---|---|---|---|---|
@@ -439,3 +439,109 @@ Comparaison des réformes entre elles avec le barème ci-dessus. Les ordres de g
 | 20 | La dernière usine d'électroménager du pays ferme → Accompagner les salariés vers d'autres emplois | 0.02 | 0 |  | -1 |  |  |  |  |
 | 20 | La dernière usine d'électroménager du pays ferme → Baisser les impôts de production des usines | -0.2 | 0 |  | 1 |  |  |  |  |
 | 20 | La dernière usine d'électroménager du pays ferme → Laisser faire le marché | 0.05 | 0 |  | -2 |  | -1 |  |  |
+| 21 | Des canots surchargés quittent les plages du Nord → Plus de policiers et de drones sur les plages | -0.25 | 0 |  |  |  | 1 |  |  |
+| 21 | Des canots surchargés quittent les plages du Nord → Faire payer davantage Londres | 0.1 | 0 |  |  |  |  | 1 |  |
+| 21 | Des canots surchargés quittent les plages du Nord → Ouvrir des voies légales et des centres d'accueil | -0.15 | 0 |  |  |  | 1 |  |  |
+| 21 | Des canots surchargés quittent les plages du Nord → Frapper les réseaux de passeurs et leur argent | -0.05 | 0 |  |  |  |  |  | 1 |
+| 21 | Un allié menace d'annexer le Groenland → Front européen uni et ripostes prêtes | 0 | 0 |  | -1 |  |  | 2 |  |
+| 21 | Un allié menace d'annexer le Groenland → Envoyer des moyens militaires symboliques | -0.2 | 0 |  |  |  |  | 2 |  |
+| 21 | Un allié menace d'annexer le Groenland → Négocier discrètement pour éviter les taxes | 0.1 | 0 |  | 1 |  |  | -1 |  |
+| 21 | Un allié menace d'annexer le Groenland → Rester en retrait, ce n'est pas notre affaire | 0 | 0 |  |  |  | -1 |  |  |
+| 21 | Le timbre vert dépasse 1,50 € → Laisser La Poste fixer ses prix | 0 | 0 | -1 |  |  |  |  |  |
+| 21 | Le timbre vert dépasse 1,50 € → Compenser une partie par l'État | -0.1 | 0 | 1 |  |  |  |  | 1 |
+| 21 | Le timbre vert dépasse 1,50 € → Moins de tournées, prix gelé | 0.05 | 0 |  |  |  |  |  | -1 |
+| 22 | L'Europe signe l'accord avec l'Amérique du Sud → Saisir la justice européenne contre l'accord | 0 | 0 |  |  |  |  | 1 |  |
+| 22 | L'Europe signe l'accord avec l'Amérique du Sud → Clauses miroirs et contrôles aux frontières | -0.1 | 0 |  |  |  | 1 | 1 |  |
+| 22 | L'Europe signe l'accord avec l'Amérique du Sud → Aides directes aux éleveurs touchés | -0.5 | 0 |  | 1 |  | 1 |  |  |
+| 22 | L'Europe signe l'accord avec l'Amérique du Sud → Accepter l'accord et viser l'export | 0.1 | 0 |  | 1 |  | -2 |  |  |
+| 22 | Des soldats français pour garantir la paix en Ukraine ? → Engager des soldats français dans la force | -1 | 0 |  |  |  | -1 | 2 |  |
+| 22 | Des soldats français pour garantir la paix en Ukraine ? → Aider seulement en armes et en formation | -0.6 | 0 |  |  |  |  | 1 |  |
+| 22 | Des soldats français pour garantir la paix en Ukraine ? → Surveillance du cessez-le-feu uniquement | -0.2 | 0 |  |  |  |  | 1 |  |
+| 22 | Des soldats français pour garantir la paix en Ukraine ? → Ne pas s'engager, priorité au budget | 0.05 | 0 |  |  |  |  | -2 |  |
+| 22 | Le paquet de café a pris un quart en plus → Ne rien faire, c'est le marché mondial | 0 | 0 | -1 |  |  |  |  |  |
+| 22 | Le paquet de café a pris un quart en plus → Publier les marges des distributeurs | 0 | 0 |  |  |  | 1 |  |  |
+| 22 | Le paquet de café a pris un quart en plus → Baisser la TVA sur le café et le cacao | -0.3 | 0 | 1 |  |  |  |  |  |
+| 23 | Payer sans passer par des entreprises américaines → Rendre Wero obligatoire chez les commerçants | 0.1 | 0 |  | -1 |  |  | 3 |  |
+| 23 | Payer sans passer par des entreprises américaines → Payer impôts et aides via la solution européenne | -0.05 | 0 |  |  |  |  | 2 |  |
+| 23 | Payer sans passer par des entreprises américaines → Soutenir l'euro numérique de la BCE | 0 | 0 |  |  |  | -1 | 2 |  |
+| 23 | Payer sans passer par des entreprises américaines → Laisser le marché choisir | 0 | 0 |  |  |  |  | -1 |  |
+| 23 | Une boulangère refuse la carte sous 5 € → Plafonner les frais bancaires des petits paiements | 0.05 | 0 | 1 |  |  |  |  |  |
+| 23 | Une boulangère refuse la carte sous 5 € → Laisser chaque commerçant fixer son minimum | 0 | 0 |  |  |  | -1 |  |  |
+| 23 | Une boulangère refuse la carte sous 5 € → Aider les commerces à passer au paiement européen | -0.05 | 0 |  |  |  |  | 1 |  |
+| 23 | Les téléphones rangés dans des casiers au collège → Généraliser avec des casiers payés par l'État | -0.05 | 0 |  |  |  | 1 |  | 1 |
+| 23 | Les téléphones rangés dans des casiers au collège → Laisser chaque collège décider | 0 | 0 |  |  |  | -1 |  |  |
+| 23 | Les téléphones rangés dans des casiers au collège → Interdire aussi le portable au lycée | -0.05 | 0 |  |  |  | -1 |  | 1 |
+| 24 | Faut-il faire payer plus cher l'université ? → Hausse forte avec exonération des boursiers | 1.5 | 0 |  |  |  | -2 |  | 2 |
+| 24 | Faut-il faire payer plus cher l'université ? → Hausse modérée et progressive | 0.5 | 0 |  |  |  | -1 |  | 1 |
+| 24 | Faut-il faire payer plus cher l'université ? → Garder des frais bas, l'État paie | -1.5 | 0 |  |  |  | 1 |  | 2 |
+| 24 | Faut-il faire payer plus cher l'université ? → Faire payer surtout les étudiants étrangers | 0.4 | 0 |  |  |  | -1 |  | 1 |
+| 24 | Mayotte : faut-il aller plus loin sur le droit du sol ? → Supprimer le droit du sol à Mayotte | 0.05 | 0 |  |  |  | -2 | 1 |  |
+| 24 | Mayotte : faut-il aller plus loin sur le droit du sol ? → Plus de moyens en mer contre les traversées | -0.2 | 0 |  |  |  |  | 1 |  |
+| 24 | Mayotte : faut-il aller plus loin sur le droit du sol ? → Investir dans les écoles, l'eau et les hôpitaux | -0.6 | 0 |  |  |  | 1 |  | 2 |
+| 24 | Mayotte : faut-il aller plus loin sur le droit du sol ? → Coopérer avec les Comores contre les départs | -0.1 | 0 |  |  |  | 1 |  |  |
+| 24 | Sans affectation, une lycéenne attend une place → Garder le pouvoir du recteur | 0 | 0 |  |  |  | 1 |  |  |
+| 24 | Sans affectation, une lycéenne attend une place → Laisser les universités choisir | 0 | 0 |  |  |  | -1 |  | 1 |
+| 24 | Sans affectation, une lycéenne attend une place → Créer des places en plus dans les filières demandées | -0.15 | 0 |  |  |  | 1 |  | 1 |
+| 25 | De retour de vacances, sa maison est occupée → Expulsion sous 48 heures dans tous les cas | -0.05 | 0 |  |  |  | -1 |  |  |
+| 25 | De retour de vacances, sa maison est occupée → Indemniser vite les propriétaires lésés | -0.05 | 0 |  |  |  | 1 |  |  |
+| 25 | De retour de vacances, sa maison est occupée → Expulser et proposer un hébergement | -0.15 | 0 |  |  |  | 2 |  |  |
+| 25 | De retour de vacances, sa maison est occupée → Taxer les logements vides pour qu'ils soient loués | 0.15 | 0 | 1 |  |  |  |  |  |
+| 25 | Les États-Unis capturent le président du Venezuela → Condamner l'intervention au nom du droit | 0 | 0 |  | -1 |  |  | 1 |  |
+| 25 | Les États-Unis capturent le président du Venezuela → Saluer la fin d'un régime autoritaire | 0 | 0 |  |  |  |  | -1 |  |
+| 25 | Les États-Unis capturent le président du Venezuela → Appeler à des élections sous contrôle de l'ONU | 0.02 | 0 |  |  |  | 1 |  |  |
+| 25 | Les États-Unis capturent le président du Venezuela → Rapatrier les Français et aider les réfugiés | -0.1 | 0 |  |  |  | 1 |  |  |
+| 25 | Payer ses pâtes avec un titre-restaurant → Garder les courses au supermarché pour de bon | 0 | 0 | 1 |  |  |  |  |  |
+| 25 | Payer ses pâtes avec un titre-restaurant → Revenir aux seuls repas au restaurant | 0 | 0 | -1 | 1 |  |  |  |  |
+| 25 | Payer ses pâtes avec un titre-restaurant → Deux plafonds : un pour les courses, un pour le resto | 0 | 0 |  |  |  | 1 |  |  |
+| 26 | Les vins de Bordeaux taxés à 15 % aux États-Unis → Riposte européenne sur des produits américains | 0.3 | 0 | -1 |  |  |  | 1 |  |
+| 26 | Les vins de Bordeaux taxés à 15 % aux États-Unis → Aides et prêts aux viticulteurs touchés | -0.4 | 0 |  | 1 |  | 1 |  |  |
+| 26 | Les vins de Bordeaux taxés à 15 % aux États-Unis → Conquérir l'Asie et l'Amérique du Sud | -0.05 | 0 |  | 1 |  |  | 1 |  |
+| 26 | Les vins de Bordeaux taxés à 15 % aux États-Unis → Négocier une exemption pour le vin | 0 | 0 |  | 1 |  |  | -1 |  |
+| 26 | La canicule a tué des centaines de milliers de poules → Aider à climatiser et ventiler les poulaillers | -0.05 | 0 |  | 1 | 1 |  |  |  |
+| 26 | La canicule a tué des centaines de milliers de poules → Importer des œufs pour faire baisser les prix | 0 | 0 | 1 |  |  |  | -1 |  |
+| 26 | La canicule a tué des centaines de milliers de poules → Laisser le marché s'ajuster | 0 | 0 | -1 |  |  |  |  |  |
+| 26 | Plus de cigarette sur la plage → Contrôler et verbaliser vraiment | 0.05 | 0 |  |  |  | 1 |  |  |
+| 26 | Plus de cigarette sur la plage → Miser sur la prévention sans amende | -0.05 | 0 |  |  |  |  |  | 1 |
+| 26 | Plus de cigarette sur la plage → Créer des coins fumeurs sur les plages | -0.05 | 0 |  |  |  | 1 |  |  |
+| 27 | Des drones inconnus survolent une base militaire → Financer un mur anti-drones européen | -0.6 | 0 |  |  |  |  | 2 |  |
+| 27 | Des drones inconnus survolent une base militaire → Équiper d'abord nos propres sites sensibles | -0.4 | 0 |  | 1 |  |  | 2 |  |
+| 27 | Des drones inconnus survolent une base militaire → Autoriser à abattre tout drone suspect | -0.1 | 0 |  |  |  | -1 | 1 |  |
+| 27 | Des drones inconnus survolent une base militaire → Enquêter avant d'accuser et de dépenser | 0.05 | 0 |  |  |  |  | -1 |  |
+| 27 | La France a reconnu l'État de Palestine : et maintenant ? → Ouvrir une ambassade après libération des otages | 0 | 0 |  |  |  | 1 |  |  |
+| 27 | La France a reconnu l'État de Palestine : et maintenant ? → Financer la reconstruction de Gaza | -0.2 | 0 |  |  |  | 1 |  |  |
+| 27 | La France a reconnu l'État de Palestine : et maintenant ? → Sanctions européennes contre la colonisation | 0 | 0 |  |  |  | -1 |  |  |
+| 27 | La France a reconnu l'État de Palestine : et maintenant ? → Geler la démarche et apaiser Israël | 0.02 | 0 |  |  |  | -1 |  |  |
+| 27 | Un drone de loisir bloque un aéroport régional → Amendes lourdes et immatriculation des drones | 0.02 | 0 |  |  |  |  |  | 1 |
+| 27 | Un drone de loisir bloque un aéroport régional → Brouilleurs autour des aéroports | -0.05 | 0 |  |  |  |  | 1 | 1 |
+| 27 | Un drone de loisir bloque un aéroport régional → Former les pilotes plutôt que punir | 0 | 0 |  |  |  | 1 |  |  |
+| 28 | Une loi contre la mode à tout petit prix → Malus maximal sur la mode jetable | 0.5 | 0 | -1 | 1 | -1 |  |  |  |
+| 28 | Une loi contre la mode à tout petit prix → Malus progressif jusqu'à la fin de la décennie | 0.2 | 0 |  |  | -1 |  |  |  |
+| 28 | Une loi contre la mode à tout petit prix → Aider le textile français à produire moins cher | -0.2 | 0 |  | 1 |  |  | 1 |  |
+| 28 | Une loi contre la mode à tout petit prix → Ne pas pénaliser, informer les acheteurs | 0 | 0 | 1 |  |  |  |  |  |
+| 28 | Une taxe de quelques euros sur les petits colis → Taxer chaque petit colis venu de loin | 0.4 | 0 | -1 | 1 |  |  |  |  |
+| 28 | Une taxe de quelques euros sur les petits colis → Plus de contrôles douaniers à la place | -0.05 | 0 |  |  |  |  |  | 1 |
+| 28 | Une taxe de quelques euros sur les petits colis → Ne rien changer | 0 | 0 | 1 | -1 |  |  |  |  |
+| 28 | Payer ses impôts avec une appli européenne → Proposer l'option, sans obligation | -0.02 | 0 |  |  |  |  | 1 |  |
+| 28 | Payer ses impôts avec une appli européenne → En faire le moyen de paiement par défaut | -0.02 | 0 |  |  |  | -1 | 2 |  |
+| 28 | Payer ses impôts avec une appli européenne → Attendre que le système ait fait ses preuves | 0 | 0 |  |  |  |  | -1 |  |
+| 29 | Londres paie, Paris surveille : à quel prix ? → Accepter l'accord et ses objectifs | 0.2 | 0 |  |  |  | 1 | -1 |  |
+| 29 | Londres paie, Paris surveille : à quel prix ? → Exiger plus d'argent sans condition | 0.3 | 0 |  |  |  |  | 1 |  |
+| 29 | Londres paie, Paris surveille : à quel prix ? → Ne plus faire la police pour Londres | -0.1 | 0 |  |  |  | -1 | 1 |  |
+| 29 | Londres paie, Paris surveille : à quel prix ? → Une réponse européenne commune | 0 | 0 |  |  |  | 1 |  |  |
+| 29 | L'armée française a quitté l'Afrique de l'Ouest → Partenariats d'égal à égal, sans bases | 0.3 | 0 |  |  |  | 1 | -1 |  |
+| 29 | L'armée française a quitté l'Afrique de l'Ouest → Recentrer l'armée sur l'Europe | 0.2 | 0 |  |  |  |  | 1 |  |
+| 29 | L'armée française a quitté l'Afrique de l'Ouest → Garder une capacité d'intervention rapide | -0.2 | 0 |  |  |  |  | 1 |  |
+| 29 | L'armée française a quitté l'Afrique de l'Ouest → Augmenter l'aide au développement | -0.3 | 0 |  |  |  | 1 |  |  |
+| 29 | Rupture de stock à la pharmacie du village → Relocaliser la production en France | -0.15 | 0 |  | 1 |  |  | 2 |  |
+| 29 | Rupture de stock à la pharmacie du village → Obliger les labos à garder des stocks | 0 | 0 | -1 |  |  |  |  | 1 |
+| 29 | Rupture de stock à la pharmacie du village → Laisser les pharmaciens préparer des substituts | 0 | 0 |  |  |  |  |  | 1 |
+| 30 | Un « État de Nouvelle-Calédonie » dans la République ? → Organiser vite le vote sur l'accord | -0.05 | 0 |  |  |  | -1 | 1 |  |
+| 30 | Un « État de Nouvelle-Calédonie » dans la République ? → Rouvrir la négociation avec tous | 0.02 | 0 |  |  |  | 1 |  |  |
+| 30 | Un « État de Nouvelle-Calédonie » dans la République ? → Plan de relance économique massif | -0.4 | 0 |  | 1 |  | 1 |  |  |
+| 30 | Un « État de Nouvelle-Calédonie » dans la République ? → Renforcer l'ordre public d'abord | -0.15 | 0 |  |  |  | -1 |  | 1 |
+| 30 | Une famille expulsée pour loyers impayés → Fonds pour payer les impayés avant l'expulsion | -0.1 | 0 |  |  |  | 2 |  |  |
+| 30 | Une famille expulsée pour loyers impayés → Garder les règles actuelles | 0.02 | 0 |  |  |  | -1 |  |  |
+| 30 | Une famille expulsée pour loyers impayés → Relogement obligatoire avant toute expulsion | -0.15 | 0 |  |  |  | 1 |  | 1 |
+| 30 | Les sodas plus chers à cause de la taxe sucre → Augmenter encore la taxe | 0.2 | 0 | -1 |  |  |  |  | 1 |
+| 30 | Les sodas plus chers à cause de la taxe sucre → Garder la taxe telle quelle | 0 | 0 |  |  |  |  |  |  |
+| 30 | Les sodas plus chers à cause de la taxe sucre → Supprimer la taxe, miser sur l'éducation | -0.3 | 0 | 1 |  |  |  |  |  |

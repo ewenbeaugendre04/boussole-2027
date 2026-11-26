@@ -374,3 +374,109 @@ choix;v28_brandt/b;"La dernière usine d'électroménager du pays ferme → Rés
 choix;v28_brandt/c;"La dernière usine d'électroménager du pays ferme → Accompagner les salariés vers d'autres emplois";salaires;0.02;0;0;-1;0;0;0;0
 choix;v28_brandt/d;"La dernière usine d'électroménager du pays ferme → Baisser les impôts de production des usines";salaires;-0.2;0;0;1;0;0;0;0
 choix;v28_brandt/e;"La dernière usine d'électroménager du pays ferme → Laisser faire le marché";salaires;0.05;0;0;-2;0;-1;0;0
+choix;v29_manche/a;"Des canots surchargés quittent les plages du Nord → Plus de policiers et de drones sur les plages";immigration;-0.25;0;0;0;0;1;0;0
+choix;v29_manche/b;"Des canots surchargés quittent les plages du Nord → Faire payer davantage Londres";immigration;0.1;0;0;0;0;0;1;0
+choix;v29_manche/c;"Des canots surchargés quittent les plages du Nord → Ouvrir des voies légales et des centres d'accueil";immigration;-0.15;0;0;0;0;1;0;0
+choix;v29_manche/d;"Des canots surchargés quittent les plages du Nord → Frapper les réseaux de passeurs et leur argent";immigration;-0.05;0;0;0;0;0;0;1
+choix;v29_groenland/a;"Un allié menace d'annexer le Groenland → Front européen uni et ripostes prêtes";europe;0;0;0;-1;0;0;2;0
+choix;v29_groenland/b;"Un allié menace d'annexer le Groenland → Envoyer des moyens militaires symboliques";europe;-0.2;0;0;0;0;0;2;0
+choix;v29_groenland/c;"Un allié menace d'annexer le Groenland → Négocier discrètement pour éviter les taxes";europe;0.1;0;0;1;0;0;-1;0
+choix;v29_groenland/d;"Un allié menace d'annexer le Groenland → Rester en retrait, ce n'est pas notre affaire";europe;0;0;0;0;0;-1;0;0
+choix;v29_timbre/a;"Le timbre vert dépasse 1,50 € → Laisser La Poste fixer ses prix";salaires;0;0;-1;0;0;0;0;0
+choix;v29_timbre/b;"Le timbre vert dépasse 1,50 € → Compenser une partie par l'État";salaires;-0.1;0;1;0;0;0;0;1
+choix;v29_timbre/c;"Le timbre vert dépasse 1,50 € → Moins de tournées, prix gelé";salaires;0.05;0;0;0;0;0;0;-1
+choix;v30_mercosur/a;"L'Europe signe l'accord avec l'Amérique du Sud → Saisir la justice européenne contre l'accord";agriculture;0;0;0;0;0;0;1;0
+choix;v30_mercosur/b;"L'Europe signe l'accord avec l'Amérique du Sud → Clauses miroirs et contrôles aux frontières";agriculture;-0.1;0;0;0;0;1;1;0
+choix;v30_mercosur/c;"L'Europe signe l'accord avec l'Amérique du Sud → Aides directes aux éleveurs touchés";agriculture;-0.5;0;0;1;0;1;0;0
+choix;v30_mercosur/d;"L'Europe signe l'accord avec l'Amérique du Sud → Accepter l'accord et viser l'export";agriculture;0.1;0;0;1;0;-2;0;0
+choix;v30_ukraine/a;"Des soldats français pour garantir la paix en Ukraine ? → Engager des soldats français dans la force";defense;-1;0;0;0;0;-1;2;0
+choix;v30_ukraine/b;"Des soldats français pour garantir la paix en Ukraine ? → Aider seulement en armes et en formation";defense;-0.6;0;0;0;0;0;1;0
+choix;v30_ukraine/c;"Des soldats français pour garantir la paix en Ukraine ? → Surveillance du cessez-le-feu uniquement";defense;-0.2;0;0;0;0;0;1;0
+choix;v30_ukraine/d;"Des soldats français pour garantir la paix en Ukraine ? → Ne pas s'engager, priorité au budget";defense;0.05;0;0;0;0;0;-2;0
+choix;v30_cafe/a;"Le paquet de café a pris un quart en plus → Ne rien faire, c'est le marché mondial";salaires;0;0;-1;0;0;0;0;0
+choix;v30_cafe/b;"Le paquet de café a pris un quart en plus → Publier les marges des distributeurs";salaires;0;0;0;0;0;1;0;0
+choix;v30_cafe/c;"Le paquet de café a pris un quart en plus → Baisser la TVA sur le café et le cacao";salaires;-0.3;0;1;0;0;0;0;0
+choix;v31_wero/a;"Payer sans passer par des entreprises américaines → Rendre Wero obligatoire chez les commerçants";numerique;0.1;0;0;-1;0;0;3;0
+choix;v31_wero/b;"Payer sans passer par des entreprises américaines → Payer impôts et aides via la solution européenne";numerique;-0.05;0;0;0;0;0;2;0
+choix;v31_wero/c;"Payer sans passer par des entreprises américaines → Soutenir l'euro numérique de la BCE";numerique;0;0;0;0;0;-1;2;0
+choix;v31_wero/d;"Payer sans passer par des entreprises américaines → Laisser le marché choisir";numerique;0;0;0;0;0;0;-1;0
+choix;v31_cartes/a;"Une boulangère refuse la carte sous 5 € → Plafonner les frais bancaires des petits paiements";numerique;0.05;0;1;0;0;0;0;0
+choix;v31_cartes/b;"Une boulangère refuse la carte sous 5 € → Laisser chaque commerçant fixer son minimum";numerique;0;0;0;0;0;-1;0;0
+choix;v31_cartes/c;"Une boulangère refuse la carte sous 5 € → Aider les commerces à passer au paiement européen";numerique;-0.05;0;0;0;0;0;1;0
+choix;v31_portable/a;"Les téléphones rangés dans des casiers au collège → Généraliser avec des casiers payés par l'État";ecole;-0.05;0;0;0;0;1;0;1
+choix;v31_portable/b;"Les téléphones rangés dans des casiers au collège → Laisser chaque collège décider";ecole;0;0;0;0;0;-1;0;0
+choix;v31_portable/c;"Les téléphones rangés dans des casiers au collège → Interdire aussi le portable au lycée";ecole;-0.05;0;0;0;0;-1;0;1
+choix;v32_universite/a;"Faut-il faire payer plus cher l'université ? → Hausse forte avec exonération des boursiers";ecole;1.5;0;0;0;0;-2;0;2
+choix;v32_universite/b;"Faut-il faire payer plus cher l'université ? → Hausse modérée et progressive";ecole;0.5;0;0;0;0;-1;0;1
+choix;v32_universite/c;"Faut-il faire payer plus cher l'université ? → Garder des frais bas, l'État paie";ecole;-1.5;0;0;0;0;1;0;2
+choix;v32_universite/d;"Faut-il faire payer plus cher l'université ? → Faire payer surtout les étudiants étrangers";ecole;0.4;0;0;0;0;-1;0;1
+choix;v32_mayotte/a;"Mayotte : faut-il aller plus loin sur le droit du sol ? → Supprimer le droit du sol à Mayotte";immigration;0.05;0;0;0;0;-2;1;0
+choix;v32_mayotte/b;"Mayotte : faut-il aller plus loin sur le droit du sol ? → Plus de moyens en mer contre les traversées";immigration;-0.2;0;0;0;0;0;1;0
+choix;v32_mayotte/c;"Mayotte : faut-il aller plus loin sur le droit du sol ? → Investir dans les écoles, l'eau et les hôpitaux";immigration;-0.6;0;0;0;0;1;0;2
+choix;v32_mayotte/d;"Mayotte : faut-il aller plus loin sur le droit du sol ? → Coopérer avec les Comores contre les départs";immigration;-0.1;0;0;0;0;1;0;0
+choix;v32_parcoursup/a;"Sans affectation, une lycéenne attend une place → Garder le pouvoir du recteur";ecole;0;0;0;0;0;1;0;0
+choix;v32_parcoursup/b;"Sans affectation, une lycéenne attend une place → Laisser les universités choisir";ecole;0;0;0;0;0;-1;0;1
+choix;v32_parcoursup/c;"Sans affectation, une lycéenne attend une place → Créer des places en plus dans les filières demandées";ecole;-0.15;0;0;0;0;1;0;1
+choix;v33_squat/a;"De retour de vacances, sa maison est occupée → Expulsion sous 48 heures dans tous les cas";logement;-0.05;0;0;0;0;-1;0;0
+choix;v33_squat/b;"De retour de vacances, sa maison est occupée → Indemniser vite les propriétaires lésés";logement;-0.05;0;0;0;0;1;0;0
+choix;v33_squat/c;"De retour de vacances, sa maison est occupée → Expulser et proposer un hébergement";logement;-0.15;0;0;0;0;2;0;0
+choix;v33_squat/d;"De retour de vacances, sa maison est occupée → Taxer les logements vides pour qu'ils soient loués";logement;0.15;0;1;0;0;0;0;0
+choix;v33_venezuela/a;"Les États-Unis capturent le président du Venezuela → Condamner l'intervention au nom du droit";europe;0;0;0;-1;0;0;1;0
+choix;v33_venezuela/b;"Les États-Unis capturent le président du Venezuela → Saluer la fin d'un régime autoritaire";europe;0;0;0;0;0;0;-1;0
+choix;v33_venezuela/c;"Les États-Unis capturent le président du Venezuela → Appeler à des élections sous contrôle de l'ONU";europe;0.02;0;0;0;0;1;0;0
+choix;v33_venezuela/d;"Les États-Unis capturent le président du Venezuela → Rapatrier les Français et aider les réfugiés";europe;-0.1;0;0;0;0;1;0;0
+choix;v33_titres/a;"Payer ses pâtes avec un titre-restaurant → Garder les courses au supermarché pour de bon";salaires;0;0;1;0;0;0;0;0
+choix;v33_titres/b;"Payer ses pâtes avec un titre-restaurant → Revenir aux seuls repas au restaurant";salaires;0;0;-1;1;0;0;0;0
+choix;v33_titres/c;"Payer ses pâtes avec un titre-restaurant → Deux plafonds : un pour les courses, un pour le resto";salaires;0;0;0;0;0;1;0;0
+choix;v34_douanes/a;"Les vins de Bordeaux taxés à 15 % aux États-Unis → Riposte européenne sur des produits américains";agriculture;0.3;0;-1;0;0;0;1;0
+choix;v34_douanes/b;"Les vins de Bordeaux taxés à 15 % aux États-Unis → Aides et prêts aux viticulteurs touchés";agriculture;-0.4;0;0;1;0;1;0;0
+choix;v34_douanes/c;"Les vins de Bordeaux taxés à 15 % aux États-Unis → Conquérir l'Asie et l'Amérique du Sud";agriculture;-0.05;0;0;1;0;0;1;0
+choix;v34_douanes/d;"Les vins de Bordeaux taxés à 15 % aux États-Unis → Négocier une exemption pour le vin";agriculture;0;0;0;1;0;0;-1;0
+choix;v34_oeufs/a;"La canicule a tué des centaines de milliers de poules → Aider à climatiser et ventiler les poulaillers";agriculture;-0.05;0;0;1;1;0;0;0
+choix;v34_oeufs/b;"La canicule a tué des centaines de milliers de poules → Importer des œufs pour faire baisser les prix";agriculture;0;0;1;0;0;0;-1;0
+choix;v34_oeufs/c;"La canicule a tué des centaines de milliers de poules → Laisser le marché s'ajuster";agriculture;0;0;-1;0;0;0;0;0
+choix;v34_tabac/a;"Plus de cigarette sur la plage → Contrôler et verbaliser vraiment";sante;0.05;0;0;0;0;1;0;0
+choix;v34_tabac/b;"Plus de cigarette sur la plage → Miser sur la prévention sans amende";sante;-0.05;0;0;0;0;0;0;1
+choix;v34_tabac/c;"Plus de cigarette sur la plage → Créer des coins fumeurs sur les plages";sante;-0.05;0;0;0;0;1;0;0
+choix;v35_drones/a;"Des drones inconnus survolent une base militaire → Financer un mur anti-drones européen";defense;-0.6;0;0;0;0;0;2;0
+choix;v35_drones/b;"Des drones inconnus survolent une base militaire → Équiper d'abord nos propres sites sensibles";defense;-0.4;0;0;1;0;0;2;0
+choix;v35_drones/c;"Des drones inconnus survolent une base militaire → Autoriser à abattre tout drone suspect";defense;-0.1;0;0;0;0;-1;1;0
+choix;v35_drones/d;"Des drones inconnus survolent une base militaire → Enquêter avant d'accuser et de dépenser";defense;0.05;0;0;0;0;0;-1;0
+choix;v35_palestine/a;"La France a reconnu l'État de Palestine : et maintenant ? → Ouvrir une ambassade après libération des otages";europe;0;0;0;0;0;1;0;0
+choix;v35_palestine/b;"La France a reconnu l'État de Palestine : et maintenant ? → Financer la reconstruction de Gaza";europe;-0.2;0;0;0;0;1;0;0
+choix;v35_palestine/c;"La France a reconnu l'État de Palestine : et maintenant ? → Sanctions européennes contre la colonisation";europe;0;0;0;0;0;-1;0;0
+choix;v35_palestine/d;"La France a reconnu l'État de Palestine : et maintenant ? → Geler la démarche et apaiser Israël";europe;0.02;0;0;0;0;-1;0;0
+choix;v35_aeroport/a;"Un drone de loisir bloque un aéroport régional → Amendes lourdes et immatriculation des drones";transports;0.02;0;0;0;0;0;0;1
+choix;v35_aeroport/b;"Un drone de loisir bloque un aéroport régional → Brouilleurs autour des aéroports";transports;-0.05;0;0;0;0;0;1;1
+choix;v35_aeroport/c;"Un drone de loisir bloque un aéroport régional → Former les pilotes plutôt que punir";transports;0;0;0;0;0;1;0;0
+choix;v36_fastfashion/a;"Une loi contre la mode à tout petit prix → Malus maximal sur la mode jetable";numerique;0.5;0;-1;1;-1;0;0;0
+choix;v36_fastfashion/b;"Une loi contre la mode à tout petit prix → Malus progressif jusqu'à la fin de la décennie";numerique;0.2;0;0;0;-1;0;0;0
+choix;v36_fastfashion/c;"Une loi contre la mode à tout petit prix → Aider le textile français à produire moins cher";numerique;-0.2;0;0;1;0;0;1;0
+choix;v36_fastfashion/d;"Une loi contre la mode à tout petit prix → Ne pas pénaliser, informer les acheteurs";numerique;0;0;1;0;0;0;0;0
+choix;v36_colis/a;"Une taxe de quelques euros sur les petits colis → Taxer chaque petit colis venu de loin";salaires;0.4;0;-1;1;0;0;0;0
+choix;v36_colis/b;"Une taxe de quelques euros sur les petits colis → Plus de contrôles douaniers à la place";salaires;-0.05;0;0;0;0;0;0;1
+choix;v36_colis/c;"Une taxe de quelques euros sur les petits colis → Ne rien changer";salaires;0;0;1;-1;0;0;0;0
+choix;v36_impots/a;"Payer ses impôts avec une appli européenne → Proposer l'option, sans obligation";numerique;-0.02;0;0;0;0;0;1;0
+choix;v36_impots/b;"Payer ses impôts avec une appli européenne → En faire le moyen de paiement par défaut";numerique;-0.02;0;0;0;0;-1;2;0
+choix;v36_impots/c;"Payer ses impôts avec une appli européenne → Attendre que le système ait fait ses preuves";numerique;0;0;0;0;0;0;-1;0
+choix;v37_sandhurst/a;"Londres paie, Paris surveille : à quel prix ? → Accepter l'accord et ses objectifs";immigration;0.2;0;0;0;0;1;-1;0
+choix;v37_sandhurst/b;"Londres paie, Paris surveille : à quel prix ? → Exiger plus d'argent sans condition";immigration;0.3;0;0;0;0;0;1;0
+choix;v37_sandhurst/c;"Londres paie, Paris surveille : à quel prix ? → Ne plus faire la police pour Londres";immigration;-0.1;0;0;0;0;-1;1;0
+choix;v37_sandhurst/d;"Londres paie, Paris surveille : à quel prix ? → Une réponse européenne commune";immigration;0;0;0;0;0;1;0;0
+choix;v37_afrique/a;"L'armée française a quitté l'Afrique de l'Ouest → Partenariats d'égal à égal, sans bases";defense;0.3;0;0;0;0;1;-1;0
+choix;v37_afrique/b;"L'armée française a quitté l'Afrique de l'Ouest → Recentrer l'armée sur l'Europe";defense;0.2;0;0;0;0;0;1;0
+choix;v37_afrique/c;"L'armée française a quitté l'Afrique de l'Ouest → Garder une capacité d'intervention rapide";defense;-0.2;0;0;0;0;0;1;0
+choix;v37_afrique/d;"L'armée française a quitté l'Afrique de l'Ouest → Augmenter l'aide au développement";defense;-0.3;0;0;0;0;1;0;0
+choix;v37_medicaments/a;"Rupture de stock à la pharmacie du village → Relocaliser la production en France";sante;-0.15;0;0;1;0;0;2;0
+choix;v37_medicaments/b;"Rupture de stock à la pharmacie du village → Obliger les labos à garder des stocks";sante;0;0;-1;0;0;0;0;1
+choix;v37_medicaments/c;"Rupture de stock à la pharmacie du village → Laisser les pharmaciens préparer des substituts";sante;0;0;0;0;0;0;0;1
+choix;v38_caledonie/a;"Un « État de Nouvelle-Calédonie » dans la République ? → Organiser vite le vote sur l'accord";securite;-0.05;0;0;0;0;-1;1;0
+choix;v38_caledonie/b;"Un « État de Nouvelle-Calédonie » dans la République ? → Rouvrir la négociation avec tous";securite;0.02;0;0;0;0;1;0;0
+choix;v38_caledonie/c;"Un « État de Nouvelle-Calédonie » dans la République ? → Plan de relance économique massif";securite;-0.4;0;0;1;0;1;0;0
+choix;v38_caledonie/d;"Un « État de Nouvelle-Calédonie » dans la République ? → Renforcer l'ordre public d'abord";securite;-0.15;0;0;0;0;-1;0;1
+choix;v38_expulsions/a;"Une famille expulsée pour loyers impayés → Fonds pour payer les impayés avant l'expulsion";logement;-0.1;0;0;0;0;2;0;0
+choix;v38_expulsions/b;"Une famille expulsée pour loyers impayés → Garder les règles actuelles";logement;0.02;0;0;0;0;-1;0;0
+choix;v38_expulsions/c;"Une famille expulsée pour loyers impayés → Relogement obligatoire avant toute expulsion";logement;-0.15;0;0;0;0;1;0;1
+choix;v38_sodas/a;"Les sodas plus chers à cause de la taxe sucre → Augmenter encore la taxe";sante;0.2;0;-1;0;0;0;0;1
+choix;v38_sodas/b;"Les sodas plus chers à cause de la taxe sucre → Garder la taxe telle quelle";sante;0;0;0;0;0;0;0;0
+choix;v38_sodas/c;"Les sodas plus chers à cause de la taxe sucre → Supprimer la taxe, miser sur l'éducation";sante;-0.3;0;1;0;0;0;0;0

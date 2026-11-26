@@ -95,3 +95,9 @@
 - Notifications en file avec bouton Suivant ; flèche retour dans les menus (pile de cartes dans modal.js).
 - Fiche « Décision prise » : déficit = coût direct + recettes induites (même calcul que le compteur).
 - À faire : 10 semaines de plus (21 à 30), beaucoup de propositions 2027 en plus, dessins manquants (garder 15-20 crédits Recraft).
+
+## 27/11/2026 : semaines 21 à 30
+- 30 événements ajoutés par `scripts/semaines_21_30.js` (sources vérifiées par recherche web) : Manche (un pour un, Sandhurst), Groenland, Mercosur, Ukraine (coalition), Wero, frais de carte, université (frais ×5), Mayotte, Parcoursup, squats, Venezuela, titres-restaurant, droits de douane US sur les vins, œufs/canicule, tabac à la plage, drones/mur anti-drones, Palestine, drone d'aéroport, fast fashion, petits colis, impôts via Wero, Sénégal/Afrique, médicaments, Nouvelle-Calédonie, expulsions, sodas, timbre, café.
+- 2 grandes décisions + au moins 1 banale par semaine, rappel (recall) automatique d'une décision passée du même secteur, 6 propositions par semaine.
+- tests/check_data.js : 30 semaines attendues.
+- Reste : dessins dédiés (Recraft, garder 15-20 crédits), propositions 2027 supplémentaires.
