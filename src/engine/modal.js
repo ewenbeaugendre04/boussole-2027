@@ -96,7 +96,7 @@ function recallHtml(ev){
   var r = activeRecall(ev); if(!r) return '';
   var em = EVMAP[r.event], d = S.decidedDay && S.decidedDay[r.event] != null ? S.decidedDay[r.event] : em ? em.day : null;
   var past = em ? chosen(em.ev) : null, eff = (num(r.budget) || Object.keys(r.ind || {}).length) ? '<div class="chips">' + (num(r.budget) ? budgetChips(r.budget, 0, null, true) : '') + indChips(r.ind) + '</div>' : '';
-  return '<aside class="recall"><div class="rcl-h"><span class="rcl-k">Ta décision passée</span>' + (d != null ? '<span class="rcl-d">Semaine ' + (d + 1) + '</span>' : '') + '</div>' +
+  return '<aside class="recall"><div class="rcl-h"><span class="rcl-k">Votre décision passée</span>' + (d != null ? '<span class="rcl-d">Semaine ' + (d + 1) + '</span>' : '') + '</div>' +
     (past ? '<div class="rcl-c">« ' + esc(choiceLabel(past)) + ' »</div>' : '') + '<p>' + esc(r.text || '') + '</p>' + eff + '</aside>';
 }
 /* petit effet du rappel : appliqué une seule fois, à la première ouverture de la carte */
@@ -284,14 +284,14 @@ function openRecap(ev){
   var ch = chosen(ev);
   var html = '<div class="chead">' + medal(ev.sector, ev.kind === 'majeur' ? 'major' : '') + '<div class="meta"><b>Décision prise</b><br>' + esc(regionLabel(ev.region)) + ', ' + esc(sectorLabel(ev.sector)) + '</div></div>' +
     '<h2 class="ctitle">' + esc(ev.title) + '</h2>' +
-    (ch ? '<p class="ctext">' + (ch.parts ? 'Tes deux réponses : <b>' + ch.parts.map(function(c){ return esc(choiceLabel(c)); }).join('</b> et <b>') + '</b>' : 'Ton choix : <b>' + esc(choiceLabel(ch)) + '</b>') + '</p><div class="pm"><span class="sg">+</span><div>' + esc(ch.plus || '') + '</div></div><div class="pm"><span class="sg">−</span><div>' + esc(ch.minus || '') + '</div></div><div class="chips">' + budgetChips(ch.budget, ch.once, ch.budget_note) + indChips(ch.ind) + '</div>' : '') +
+    (ch ? '<p class="ctext">' + (ch.parts ? 'Vos deux réponses : <b>' + ch.parts.map(function(c){ return esc(choiceLabel(c)); }).join('</b> et <b>') + '</b>' : 'Votre choix : <b>' + esc(choiceLabel(ch)) + '</b>') + '</p><div class="pm"><span class="sg">+</span><div>' + esc(ch.plus || '') + '</div></div><div class="pm"><span class="sg">−</span><div>' + esc(ch.minus || '') + '</div></div><div class="chips">' + budgetChips(ch.budget, ch.once, ch.budget_note) + indChips(ch.ind) + '</div>' : '') +
     '<button class="btn wide pressable" data-close style="margin-top:14px">Fermer</button>';
   openCard(html, { label:ev.title });
 }
 function openNote(n){
   var html = '<div class="chead">' + medal(n.sector || '', 'note') + '<div class="meta"><b>' + (n.from === 'prop' ? 'Effet d\'une proposition' : 'Conséquence d\'un choix') + '</b><br>' + esc(regionLabel(n.region) || 'Tout le pays') + '</div></div>' +
     '<h2 class="ctitle">' + esc(n.title) + '</h2><p class="ctext">' + esc(n.text) + '</p>' +
-    (n.src ? '<p class="muted">' + (n.from === 'prop' ? 'Proposition appliquée : ' : 'Ton choix : ') + '« ' + esc(n.src) + ' »</p>' : '') +
+    (n.src ? '<p class="muted">' + (n.from === 'prop' ? 'Proposition appliquée : ' : 'Votre choix : ') + '« ' + esc(n.src) + ' »</p>' : '') +
     ((num(n.budget) || num(n.once) || Object.keys(n.ind || {}).length) ? '<div class="chips">' + (num(n.budget) || num(n.once) ? budgetChips(n.budget, n.once, n.budget_note) : '') + indChips(n.ind) + '</div>' : '') +
     '<button class="btn wide brass pressable" data-close data-autofocus style="margin-top:14px">Compris</button>';
   openCard(html, { anim:'flipin', label:n.title, onClose:function(){ n.read = true; save(); clearFx(); endScene();

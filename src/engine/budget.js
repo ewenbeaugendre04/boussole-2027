@@ -4,12 +4,12 @@
    ========================================================= */
 function openBudget(){
   var postes = arr(B.postes), max = Math.max.apply(null, postes.map(function(p){ return num(p.montant); }).concat([1]));
-  var html = '<h2 class="ctitle" style="margin-top:2px">Le budget du pays</h2><p class="muted" style="margin:0 0 10px">Chaque semaine, la dette augmente d\'un cinquante-deuxième du déficit annuel. Tes décisions changent ce déficit.</p>' +
+  var html = '<h2 class="ctitle" style="margin-top:2px">Le budget du pays</h2><p class="muted" style="margin:0 0 10px">Chaque semaine, la dette augmente d\'un cinquante-deuxième du déficit annuel. Vos décisions changent ce déficit.</p>' +
     '<div class="kv">' +
     (B.recettes ? '<span>Recettes (départ)</span><b>' + f0(num(B.recettes)) + ' ' + esc(UNIT) + '</b>' : '') +
     (B.depenses ? '<span>Dépenses (départ)</span><b>' + f0(num(B.depenses)) + ' ' + esc(UNIT) + '</b>' : '') +
     '<span>Déficit de départ</span><b>' + f1(BASE_DEF) + ' ' + esc(UNIT) + '</b>' +
-    '<span>Effet direct de tes choix sur le déficit, par an</span><b>' + signed1(-S.annual).replace('-', '−') + ' ' + esc(UNIT) + '</b>' +
+    '<span>Effet direct de vos choix sur le déficit, par an</span><b>' + signed1(-S.annual).replace('-', '−') + ' ' + esc(UNIT) + '</b>' +
     '<span>Recettes induites par le pouvoir d\'achat, par an</span><b>' + signed1(induced().pa) + ' ' + esc(UNIT) + '</b>' +
     '<span>Recettes induites par l\'emploi, par an</span><b>' + signed1(induced().em) + ' ' + esc(UNIT) + '</b>' +
     '<span>Déficit actuel, par an</span><b>' + f1(curDeficit()) + ' ' + esc(UNIT) + '</b>' +

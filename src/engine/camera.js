@@ -95,7 +95,7 @@ function stayInfo(key){
   var m = String(key).split(':'), em = EVMAP[m[1]]; if(!em) return null;
   var ev = em.ev, t = '<b>Semaine ' + (em.day + 1) + ' : ' + esc(ev.title) + '</b>';
   var ch = chosen(ev);
-  return t + (ch ? '<br>Ton choix : ' + esc(choiceLabel(ch)) : '');
+  return t + (ch ? '<br>Votre choix : ' + esc(choiceLabel(ch)) : '');
 }
 function tapInfo(wx, wy){
   return; /* plus de notification au toucher d'une région, d'un pays ou d'un objet (demande d'Ewen) */

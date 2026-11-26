@@ -125,7 +125,7 @@ function openResult(r, p, o){
     '<div class="pm"><span class="sg">−</span><div><div class="pl">Ce que ça coûte</div>' + esc(o.minus || '') + '</div></div>' +
     '<div class="chips">' + budgetChips(num(o.budget) * f, num(o.once) * f, o.budget_note || R.budget_note) + indChips(o.ind) + '</div>' +
     (arr(o.later).length ? '<div class="sec-h" style="font-size:15px">Les semaines suivantes</div><ul class="lst rf-later">' + laterChips(o) + '</ul>' : '') +
-    '<p class="muted" style="margin-top:10px">Issue tirée au sort selon sa probabilité, sauvegardée dans ta partie.</p>';
+    '<p class="muted" style="margin-top:10px">Issue tirée au sort selon sa probabilité, sauvegardée dans votre partie.</p>';
   openCard(html, { anim:'flipin', label:R.title || 'Résultat', cls:'rescard', footer:'<button class="btn wide brass pressable" data-close data-autofocus>Compris</button>', onClose:function(){
     if(r.shown) return;
     r.shown = true;
