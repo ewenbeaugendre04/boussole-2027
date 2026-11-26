@@ -39,7 +39,7 @@ function monthIndex(m){ if(m == null) return 0; var t = String(m).toLowerCase().
 var START_MONTH = Math.min(12, Math.max(1, monthIndex(DAYS[0] && DAYS[0].month) || num(B.mois_depart || G.mois_depart, 9)));
 var START_YEAR = num(B.annee, 2026);
 var PROGS = arr(G.programs);
-var NEWS = arr(G.news);
+var NEWS = []; /* actualités retirées */
 var EVMAP = {};
 DAYS.forEach(function(d, i){ arr(d.events).forEach(function(e){ EVMAP[e.id] = { ev:e, day:i }; }); });
 var MONTHS = ['janvier','février','mars','avril','mai','juin','juillet','août','septembre','octobre','novembre','décembre'];

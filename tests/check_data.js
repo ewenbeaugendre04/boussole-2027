@@ -72,7 +72,7 @@ function checkFx(list, where, min, max) {
 
 const AXES = ['eco', 'soc', 'eu', 'env'];
 
-['version', 'axes', 'sectors', 'regions', 'indicators', 'budget', 'levels', 'news', 'days', 'programs']
+['version', 'axes', 'sectors', 'regions', 'indicators', 'budget', 'levels', 'days', 'programs']
   .forEach(k => { if (GAME[k] === undefined) err('champ racine manquant : ' + k); });
 
 AXES.forEach(a => { if (!GAME.axes[a] || !GAME.axes[a].neg || !GAME.axes[a].pos) err('axe incomplet : ' + a); });
@@ -92,7 +92,7 @@ if (b.jours_par_an === undefined && b.periodes_par_an === undefined) err('budget
 if (V21 && b.periodes_par_an !== 52) err('v2.1 : budget.periodes_par_an doit valoir 52 (semaines)');
 b.sources.forEach(s => { if (!/^https:\/\//.test(s.url)) err('source sans url https : ' + s.label); });
 
-GAME.news.forEach((n, i) => {
+(GAME.news || []).forEach((n, i) => {
   if (!['faux', 'trompeur', 'ingerence', 'vrai'].includes(n.tag)) err('news ' + i + ' : tag invalide');
   ['title', 'text', 'src'].forEach(k => { if (!n[k]) err('news ' + i + ' : ' + k + ' manquant'); });
 });

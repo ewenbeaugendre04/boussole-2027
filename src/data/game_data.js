@@ -369,44 +369,6 @@ const GAME = {
    }
   ]
  },
- "news": [
-  {
-   "tag": "faux",
-   "title": "« Le SMIC sera supprimé en janvier »",
-   "text": "Une capture d'écran circule. Aucun texte de loi, aucun décret ne le prévoit. Le SMIC est fixé par la loi et revalorisé chaque année. Réflexe : chercher la source officielle.",
-   "src": "Exemple fictif, publication virale sur un réseau social"
-  },
-  {
-   "tag": "trompeur",
-   "title": "« La dette a doublé en un an ! »",
-   "text": "Le graphique partagé coupe l'axe vertical à 3 400 Md€ : une hausse de 3 % ressemble à un doublement. Les chiffres sont vrais, le dessin trompe.",
-   "src": "Exemple fictif, infographie partagée par un compte anonyme"
-  },
-  {
-   "tag": "ingerence",
-   "title": "Un faux journal régional publie des articles en série",
-   "text": "Un site imite la maquette d'un quotidien régional. Les articles sont écrits à l'étranger et relayés par des comptes automatisés pour attiser les tensions. Réflexe : vérifier l'adresse du site.",
-   "src": "Exemple fictif inspiré de campagnes d'ingérence documentées"
-  },
-  {
-   "tag": "faux",
-   "title": "Une vidéo annonce le report de l'élection",
-   "text": "Un présentateur télé semble annoncer le report du scrutin. La vidéo est générée par intelligence artificielle : lèvres décalées, voix trop lisse. La date de l'élection est fixée par décret.",
-   "src": "Exemple fictif, vidéo truquée"
-  },
-  {
-   "tag": "trompeur",
-   "title": "« Cette ville interdit les barbecues »",
-   "text": "Vrai en partie : l'interdiction ne vaut que près des forêts, l'été, en période de risque d'incendie. Le titre oublie l'essentiel du contexte.",
-   "src": "Exemple fictif, titre de site d'information"
-  },
-  {
-   "tag": "vrai",
-   "title": "Une vidéo d'inondation est bien récente",
-   "text": "Les images d'une rue inondée semblaient anciennes. La météo, les panneaux et les témoins confirment : elles datent bien de cette semaine. Vérifier, c'est aussi confirmer.",
-   "src": "Exemple fictif, vérification d'une vidéo amateur"
-  }
- ],
  "days": [
   {
    "day": 1,
