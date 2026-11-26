@@ -399,6 +399,9 @@ choix;v30_ukraine/d;"Des soldats français pour garantir la paix en Ukraine ? �
 choix;v30_cafe/a;"Le paquet de café a pris un quart en plus → Ne rien faire, c'est le marché mondial";salaires;0;0;-1;0;0;0;0;0
 choix;v30_cafe/b;"Le paquet de café a pris un quart en plus → Publier les marges des distributeurs";salaires;0;0;0;0;0;1;0;0
 choix;v30_cafe/c;"Le paquet de café a pris un quart en plus → Baisser la TVA sur le café et le cacao";salaires;-0.3;0;1;0;0;0;0;0
+choix;v30_vsa/a;"Des caméras qui repèrent seules les situations à risque → Rendre le dispositif définitif";securite;-0.05;0;0;0;0;0;0;1
+choix;v30_vsa/b;"Des caméras qui repèrent seules les situations à risque → Prolonger l'essai avec une évaluation indépendante";securite;-0.03;0;0;0;0;1;0;0
+choix;v30_vsa/c;"Des caméras qui repèrent seules les situations à risque → Arrêter l'expérimentation";securite;0;0;0;0;0;0;0;0
 choix;v31_wero/a;"Payer sans passer par des entreprises américaines → Rendre Wero obligatoire chez les commerçants";numerique;0.1;0;0;-1;0;0;3;0
 choix;v31_wero/b;"Payer sans passer par des entreprises américaines → Payer impôts et aides via la solution européenne";numerique;-0.05;0;0;0;0;0;2;0
 choix;v31_wero/c;"Payer sans passer par des entreprises américaines → Soutenir l'euro numérique de la BCE";numerique;0;0;0;0;0;-1;2;0
@@ -409,6 +412,9 @@ choix;v31_cartes/c;"Une boulangère refuse la carte sous 5 € → Aider les com
 choix;v31_portable/a;"Les téléphones rangés dans des casiers au collège → Généraliser avec des casiers payés par l'État";ecole;-0.05;0;0;0;0;1;0;1
 choix;v31_portable/b;"Les téléphones rangés dans des casiers au collège → Laisser chaque collège décider";ecole;0;0;0;0;0;-1;0;0
 choix;v31_portable/c;"Les téléphones rangés dans des casiers au collège → Interdire aussi le portable au lycée";ecole;-0.05;0;0;0;0;-1;0;1
+choix;v31_permis/a;"Des mois d'attente pour passer le permis → Recruter beaucoup plus d'inspecteurs";transports;-0.06;0;0;1;0;0;0;1
+choix;v31_permis/b;"Des mois d'attente pour passer le permis → Laisser des examinateurs privés agréés";transports;0;0;0;0;0;-1;0;1
+choix;v31_permis/c;"Des mois d'attente pour passer le permis → Rappeler des inspecteurs retraités";transports;-0.02;0;0;0;0;0;0;1
 choix;v32_universite/a;"Faut-il faire payer plus cher l'université ? → Hausse forte avec exonération des boursiers";ecole;1.5;0;0;0;0;-2;0;2
 choix;v32_universite/b;"Faut-il faire payer plus cher l'université ? → Hausse modérée et progressive";ecole;0.5;0;0;0;0;-1;0;1
 choix;v32_universite/c;"Faut-il faire payer plus cher l'université ? → Garder des frais bas, l'État paie";ecole;-1.5;0;0;0;0;1;0;2
@@ -434,6 +440,9 @@ choix;v33_venezuela/d;"Les États-Unis capturent le président du Venezuela → 
 choix;v33_titres/a;"Payer ses pâtes avec un titre-restaurant → Garder les courses au supermarché pour de bon";salaires;0;0;1;0;0;0;0;0
 choix;v33_titres/b;"Payer ses pâtes avec un titre-restaurant → Revenir aux seuls repas au restaurant";salaires;0;0;-1;1;0;0;0;0
 choix;v33_titres/c;"Payer ses pâtes avec un titre-restaurant → Deux plafonds : un pour les courses, un pour le resto";salaires;0;0;0;0;0;1;0;0
+choix;v33_dimanche/a;"Ouvrir les boulangeries les jours fériés et le dimanche ? → Autoriser, volontariat et paiement double";salaires;0.03;0;1;0;0;-1;0;0
+choix;v33_dimanche/b;"Ouvrir les boulangeries les jours fériés et le dimanche ? → Laisser chaque branche négocier";salaires;0;0;0;0;0;1;0;0
+choix;v33_dimanche/c;"Ouvrir les boulangeries les jours fériés et le dimanche ? → Garder le repos commun";salaires;0;0;-1;0;0;1;0;0
 choix;v34_douanes/a;"Les vins de Bordeaux taxés à 15 % aux États-Unis → Riposte européenne sur des produits américains";agriculture;0.3;0;-1;0;0;0;1;0
 choix;v34_douanes/b;"Les vins de Bordeaux taxés à 15 % aux États-Unis → Aides et prêts aux viticulteurs touchés";agriculture;-0.4;0;0;1;0;1;0;0
 choix;v34_douanes/c;"Les vins de Bordeaux taxés à 15 % aux États-Unis → Conquérir l'Asie et l'Amérique du Sud";agriculture;-0.05;0;0;1;0;0;1;0

@@ -108,7 +108,7 @@ Comparaison des réformes entre elles avec le barème ci-dessus. Les ordres de g
 
 **Services publics** : recrutements_publics +6, revalorisation_enseignants +4, regulation_installation_medecins +3, rsa_jeunes +1, recrutement_justice +1, requisition_logements_vacants +1, peines_planchers -1, vols_courts_train -1, fusion_agences -2, non_remplacement_fonctionnaires -6.
 
-## Choix des événements (445)
+## Choix des événements (454)
 
 | Semaine | Choix | Budget | Ponctuel | Pouvoir d'achat | Emploi | Émissions de CO₂ | Cohésion sociale | Souveraineté | Services publics |
 |---|---|---|---|---|---|---|---|---|---|
@@ -464,6 +464,9 @@ Comparaison des réformes entre elles avec le barème ci-dessus. Les ordres de g
 | 22 | Le paquet de café a pris un quart en plus → Ne rien faire, c'est le marché mondial | 0 | 0 | -1 |  |  |  |  |  |
 | 22 | Le paquet de café a pris un quart en plus → Publier les marges des distributeurs | 0 | 0 |  |  |  | 1 |  |  |
 | 22 | Le paquet de café a pris un quart en plus → Baisser la TVA sur le café et le cacao | -0.3 | 0 | 1 |  |  |  |  |  |
+| 22 | Des caméras qui repèrent seules les situations à risque → Rendre le dispositif définitif | -0.05 | 0 |  |  |  |  |  | 1 |
+| 22 | Des caméras qui repèrent seules les situations à risque → Prolonger l'essai avec une évaluation indépendante | -0.03 | 0 |  |  |  | 1 |  |  |
+| 22 | Des caméras qui repèrent seules les situations à risque → Arrêter l'expérimentation | 0 | 0 |  |  |  |  |  |  |
 | 23 | Payer sans passer par des entreprises américaines → Rendre Wero obligatoire chez les commerçants | 0.1 | 0 |  | -1 |  |  | 3 |  |
 | 23 | Payer sans passer par des entreprises américaines → Payer impôts et aides via la solution européenne | -0.05 | 0 |  |  |  |  | 2 |  |
 | 23 | Payer sans passer par des entreprises américaines → Soutenir l'euro numérique de la BCE | 0 | 0 |  |  |  | -1 | 2 |  |
@@ -474,6 +477,9 @@ Comparaison des réformes entre elles avec le barème ci-dessus. Les ordres de g
 | 23 | Les téléphones rangés dans des casiers au collège → Généraliser avec des casiers payés par l'État | -0.05 | 0 |  |  |  | 1 |  | 1 |
 | 23 | Les téléphones rangés dans des casiers au collège → Laisser chaque collège décider | 0 | 0 |  |  |  | -1 |  |  |
 | 23 | Les téléphones rangés dans des casiers au collège → Interdire aussi le portable au lycée | -0.05 | 0 |  |  |  | -1 |  | 1 |
+| 23 | Des mois d'attente pour passer le permis → Recruter beaucoup plus d'inspecteurs | -0.06 | 0 |  | 1 |  |  |  | 1 |
+| 23 | Des mois d'attente pour passer le permis → Laisser des examinateurs privés agréés | 0 | 0 |  |  |  | -1 |  | 1 |
+| 23 | Des mois d'attente pour passer le permis → Rappeler des inspecteurs retraités | -0.02 | 0 |  |  |  |  |  | 1 |
 | 24 | Faut-il faire payer plus cher l'université ? → Hausse forte avec exonération des boursiers | 1.5 | 0 |  |  |  | -2 |  | 2 |
 | 24 | Faut-il faire payer plus cher l'université ? → Hausse modérée et progressive | 0.5 | 0 |  |  |  | -1 |  | 1 |
 | 24 | Faut-il faire payer plus cher l'université ? → Garder des frais bas, l'État paie | -1.5 | 0 |  |  |  | 1 |  | 2 |
@@ -499,6 +505,9 @@ Comparaison des réformes entre elles avec le barème ci-dessus. Les ordres de g
 | 25 | Payer ses pâtes avec un titre-restaurant → Garder les courses au supermarché pour de bon | 0 | 0 | 1 |  |  |  |  |  |
 | 25 | Payer ses pâtes avec un titre-restaurant → Revenir aux seuls repas au restaurant | 0 | 0 | -1 | 1 |  |  |  |  |
 | 25 | Payer ses pâtes avec un titre-restaurant → Deux plafonds : un pour les courses, un pour le resto | 0 | 0 |  |  |  | 1 |  |  |
+| 25 | Ouvrir les boulangeries les jours fériés et le dimanche ? → Autoriser, volontariat et paiement double | 0.03 | 0 | 1 |  |  | -1 |  |  |
+| 25 | Ouvrir les boulangeries les jours fériés et le dimanche ? → Laisser chaque branche négocier | 0 | 0 |  |  |  | 1 |  |  |
+| 25 | Ouvrir les boulangeries les jours fériés et le dimanche ? → Garder le repos commun | 0 | 0 | -1 |  |  | 1 |  |  |
 | 26 | Les vins de Bordeaux taxés à 15 % aux États-Unis → Riposte européenne sur des produits américains | 0.3 | 0 | -1 |  |  |  | 1 |  |
 | 26 | Les vins de Bordeaux taxés à 15 % aux États-Unis → Aides et prêts aux viticulteurs touchés | -0.4 | 0 |  | 1 |  | 1 |  |  |
 | 26 | Les vins de Bordeaux taxés à 15 % aux États-Unis → Conquérir l'Asie et l'Amérique du Sud | -0.05 | 0 |  | 1 |  |  | 1 |  |

@@ -101,3 +101,8 @@
 - 2 grandes décisions + au moins 1 banale par semaine, rappel (recall) automatique d'une décision passée du même secteur, 6 propositions par semaine.
 - tests/check_data.js : 30 semaines attendues.
 - Reste : dessins dédiés (Recraft, garder 15-20 crédits), propositions 2027 supplémentaires.
+
+### 27/11/2026 (suite)
+- 7 situations ajoutées (A13, CSE, activités l'après-midi, incendies volontaires, vidéosurveillance algorithmique, permis de conduire, travail le dimanche) : semaines 21-26 et 30 à 4 situations.
+- `scripts/audit_fx.js [--fix]` : écarte les objets qui se chevauchent (distance mini 2,6), rallonge les déplacements trop courts (< 4), recentre la caméra sur les objets. Environ 1 300 chevauchements corrigés.
+- smoke.py attend 30 semaines.
