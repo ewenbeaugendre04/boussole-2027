@@ -696,14 +696,14 @@ const GAME = {
      "fx": [
       {
        "obj": "canicule",
-       "x": 55.1,
-       "y": 22.3,
+       "x": 52,
+       "y": 24,
        "anim": "pulse"
       },
       {
        "obj": "immeuble",
-       "x": 49.8,
-       "y": 24.3,
+       "x": 51,
+       "y": 25,
        "anim": "shake",
        "count": 3,
        "delay": 0.3
@@ -755,25 +755,25 @@ const GAME = {
        "fx": [
         {
          "obj": "mairie",
-         "x": 48.2,
-         "y": 27.6,
+         "x": 50,
+         "y": 26,
          "anim": "appear"
         },
         {
          "obj": "personnage",
-         "x": 50.7,
-         "y": 26.8,
+         "x": 51,
+         "y": 25,
          "anim": "move",
          "to": {
-          "x": 54.8,
-          "y": 23.9
+          "x": 53,
+          "y": 25
          },
          "count": 3
         },
         {
          "obj": "antenne",
-         "x": 51.1,
-         "y": 21.6,
+         "x": 52,
+         "y": 22,
          "anim": "pulse",
          "label": "Alerte canicule"
         }
@@ -807,15 +807,15 @@ const GAME = {
         },
         {
          "obj": "pieces",
-         "x": 52.4,
-         "y": 23.8,
+         "x": 52,
+         "y": 24,
          "anim": "rise",
          "count": 3
         },
         {
          "obj": "etiquette",
-         "x": 55.5,
-         "y": 25.4,
+         "x": 55,
+         "y": 25,
          "anim": "appear",
          "label": "Jour férié travaillé"
         }
@@ -854,8 +854,8 @@ const GAME = {
         },
         {
          "obj": "etiquette",
-         "x": 53.7,
-         "y": 24.4,
+         "x": 54,
+         "y": 24,
          "anim": "appear",
          "label": "Salle fraîche"
         }
@@ -880,15 +880,15 @@ const GAME = {
        "fx": [
         {
          "obj": "soignants",
-         "x": 52.6,
-         "y": 25.1,
+         "x": 53,
+         "y": 26,
          "anim": "appear",
          "count": 3
         },
         {
          "obj": "hopital",
-         "x": 54.1,
-         "y": 27.2,
+         "x": 54,
+         "y": 27,
          "anim": "pulse"
         },
         {
@@ -924,15 +924,15 @@ const GAME = {
        "fx": [
         {
          "obj": "soignants",
-         "x": 52.6,
-         "y": 25.3,
+         "x": 53,
+         "y": 26,
          "anim": "appear",
          "count": 3
         },
         {
          "obj": "hopital",
-         "x": 54.2,
-         "y": 27.3,
+         "x": 54,
+         "y": 27,
          "anim": "pulse"
         },
         {
@@ -1007,15 +1007,15 @@ const GAME = {
      "fx": [
       {
        "obj": "personnage",
-       "x": 50.7,
-       "y": 23.7,
+       "x": 51,
+       "y": 24,
        "anim": "appear",
        "count": 5
       },
       {
        "obj": "personnage",
-       "x": 48.9,
-       "y": 23.9,
+       "x": 49,
+       "y": 24,
        "anim": "move",
        "to": {
         "x": 55,
@@ -1032,8 +1032,8 @@ const GAME = {
       },
       {
        "obj": "loupe",
-       "x": 49.6,
-       "y": 20.9,
+       "x": 50,
+       "y": 22,
        "anim": "pulse",
        "delay": 1
       }
@@ -1055,22 +1055,22 @@ const GAME = {
        "fx": [
         {
          "obj": "personnage",
-         "x": 54.5,
-         "y": 26.2,
+         "x": 54,
+         "y": 25,
          "anim": "appear",
          "count": 3
         },
         {
          "obj": "panneau",
-         "x": 55.6,
-         "y": 22.8,
+         "x": 55,
+         "y": 23,
          "anim": "appear",
          "label": "Nouvelle plage"
         },
         {
          "obj": "soignants",
-         "x": 53.3,
-         "y": 23.9,
+         "x": 53,
+         "y": 24,
          "anim": "appear"
         }
        ],
@@ -1093,25 +1093,25 @@ const GAME = {
        "fx": [
         {
          "obj": "chantier_grue",
-         "x": 48.2,
-         "y": 27.1,
+         "x": 50,
+         "y": 26,
          "anim": "grow"
         },
         {
          "obj": "barrage",
-         "x": 53.2,
+         "x": 51,
          "y": 26,
          "anim": "appear",
          "label": "Bassin"
         },
         {
          "obj": "fleche",
-         "x": 50.6,
-         "y": 26.2,
+         "x": 51,
+         "y": 26,
          "anim": "move",
          "to": {
-          "x": 53.3,
-          "y": 22
+          "x": 52,
+          "y": 24
          }
         }
        ],
@@ -1147,8 +1147,8 @@ const GAME = {
         },
         {
          "obj": "loupe",
-         "x": 49.8,
-         "y": 21.2,
+         "x": 50,
+         "y": 22,
          "anim": "pulse"
         }
        ]
@@ -1185,8 +1185,8 @@ const GAME = {
         },
         {
          "obj": "loupe",
-         "x": 49.7,
-         "y": 21.3,
+         "x": 50,
+         "y": 22,
          "anim": "pulse"
         }
        ],
@@ -1211,25 +1211,25 @@ const GAME = {
        "fx": [
         {
          "obj": "chantier_grue",
-         "x": 48.1,
-         "y": 26.8,
+         "x": 50,
+         "y": 26,
          "anim": "grow"
         },
         {
          "obj": "barrage",
-         "x": 53.2,
-         "y": 26.6,
+         "x": 51,
+         "y": 26,
          "anim": "appear",
          "label": "Rivières propres"
         },
         {
          "obj": "fleche",
-         "x": 50.6,
-         "y": 26.2,
+         "x": 51,
+         "y": 26,
          "anim": "move",
          "to": {
-          "x": 53.7,
-          "y": 21.9
+          "x": 52,
+          "y": 24
          }
         }
        ],
@@ -1289,22 +1289,22 @@ const GAME = {
      "fx": [
       {
        "obj": "foret",
-       "x": 55.3,
-       "y": 81.8,
+       "x": 51,
+       "y": 85,
        "anim": "appear",
        "count": 5
       },
       {
        "obj": "incendie",
-       "x": 48.6,
-       "y": 86.5,
+       "x": 50,
+       "y": 85,
        "anim": "smoke",
        "delay": 0.3
       },
       {
        "obj": "incendie",
-       "x": 54.1,
-       "y": 86.8,
+       "x": 53,
+       "y": 86,
        "anim": "smoke",
        "delay": 0.6
       },
@@ -1366,8 +1366,8 @@ const GAME = {
         },
         {
          "obj": "incendie",
-         "x": 49.4,
-         "y": 85.1,
+         "x": 50,
+         "y": 85,
          "anim": "fade"
         }
        ],
@@ -1408,8 +1408,8 @@ const GAME = {
         },
         {
          "obj": "incendie",
-         "x": 53.2,
-         "y": 86.3,
+         "x": 53,
+         "y": 86,
          "anim": "fade"
         }
        ],
@@ -1433,25 +1433,25 @@ const GAME = {
        "fx": [
         {
          "obj": "maison",
-         "x": 50.9,
-         "y": 82.6,
+         "x": 50,
+         "y": 84,
          "anim": "appear",
          "count": 3
         },
         {
          "obj": "tracteur",
-         "x": 48.7,
+         "x": 50,
          "y": 84,
          "anim": "move",
          "to": {
-          "x": 53.5,
-          "y": 85.5
+          "x": 52,
+          "y": 85
          }
         },
         {
          "obj": "incendie",
-         "x": 53.1,
-         "y": 86.6,
+         "x": 53,
+         "y": 86,
          "anim": "fade",
          "delay": 1
         }
@@ -1476,22 +1476,22 @@ const GAME = {
        "fx": [
         {
          "obj": "champ",
-         "x": 51.2,
-         "y": 86.4,
+         "x": 52,
+         "y": 85,
          "anim": "grow",
          "count": 3,
          "stay": true
         },
         {
          "obj": "ferme",
-         "x": 52.6,
-         "y": 84.3,
+         "x": 53,
+         "y": 84,
          "anim": "appear"
         },
         {
          "obj": "incendie",
-         "x": 49.5,
-         "y": 84.5,
+         "x": 50,
+         "y": 85,
          "anim": "fade"
         }
        ],
@@ -1515,22 +1515,22 @@ const GAME = {
        "fx": [
         {
          "obj": "champ",
-         "x": 51.6,
-         "y": 85.9,
+         "x": 52,
+         "y": 85,
          "anim": "grow",
          "count": 3,
          "stay": true
         },
         {
          "obj": "ferme",
-         "x": 53.1,
-         "y": 83.9,
+         "x": 53,
+         "y": 84,
          "anim": "appear"
         },
         {
          "obj": "incendie",
-         "x": 49.4,
-         "y": 84.7,
+         "x": 50,
+         "y": 85,
          "anim": "fade"
         }
        ],
@@ -1665,8 +1665,8 @@ const GAME = {
        "fx": [
         {
          "obj": "cadenas",
-         "x": 71.8,
-         "y": 54.8,
+         "x": 70,
+         "y": 54,
          "anim": "appear",
          "stay": true
         },
@@ -1682,8 +1682,8 @@ const GAME = {
         },
         {
          "obj": "centrale_nucleaire",
-         "x": 69.4,
-         "y": 53.8,
+         "x": 70,
+         "y": 54,
          "anim": "smoke"
         }
        ],
@@ -1715,7 +1715,7 @@ const GAME = {
         {
          "obj": "euro_flux",
          "x": 52,
-         "y": 23.2,
+         "y": 24,
          "anim": "flow",
          "to": {
           "x": 78,
@@ -1798,13 +1798,13 @@ const GAME = {
         {
          "obj": "centrale_nucleaire",
          "x": 70,
-         "y": 53.9,
+         "y": 54,
          "anim": "smoke"
         },
         {
          "obj": "pieces",
-         "x": 70.2,
-         "y": 51.4,
+         "x": 70,
+         "y": 52,
          "anim": "rise"
         }
        ],
@@ -1842,8 +1842,8 @@ const GAME = {
         },
         {
          "obj": "pieces",
-         "x": 70.1,
-         "y": 51.4,
+         "x": 70,
+         "y": 52,
          "anim": "rise"
         }
        ],
@@ -1881,15 +1881,15 @@ const GAME = {
      "fx": [
       {
        "obj": "commerce",
-       "x": 68.1,
-       "y": 38.9,
+       "x": 66,
+       "y": 40,
        "anim": "appear",
        "label": "Pharmacie"
       },
       {
        "obj": "file_attente",
-       "x": 65.5,
-       "y": 43.9,
+       "x": 67,
+       "y": 42,
        "anim": "appear",
        "delay": 0.4
       },
@@ -1934,19 +1934,19 @@ const GAME = {
        "fx": [
         {
          "obj": "usine",
-         "x": 70.2,
-         "y": 41.4,
+         "x": 68,
+         "y": 42,
          "anim": "grow",
          "stay": true
         },
         {
          "obj": "camion",
-         "x": 67.7,
-         "y": 42.2,
+         "x": 68,
+         "y": 42,
          "anim": "move",
          "to": {
-          "x": 64.6,
-          "y": 38.2
+          "x": 66,
+          "y": 40
          }
         },
         {
@@ -1981,15 +1981,15 @@ const GAME = {
         },
         {
          "obj": "colis",
-         "x": 64.8,
+         "x": 65,
          "y": 41,
          "anim": "appear",
          "count": 3
         },
         {
          "obj": "file_attente",
-         "x": 67.2,
-         "y": 42.1,
+         "x": 67,
+         "y": 42,
          "anim": "fade"
         }
        ]
@@ -2010,20 +2010,20 @@ const GAME = {
        "fx": [
         {
          "obj": "colis",
-         "x": 65.2,
-         "y": 40.8,
+         "x": 66,
+         "y": 40,
          "anim": "appear"
         },
         {
          "obj": "pieces",
-         "x": 65.2,
-         "y": 38.2,
+         "x": 66,
+         "y": 38,
          "anim": "rise"
         },
         {
          "obj": "personnage",
-         "x": 67.6,
-         "y": 41.7,
+         "x": 67,
+         "y": 42,
          "anim": "appear",
          "count": 2
         }
@@ -2048,15 +2048,15 @@ const GAME = {
        "fx": [
         {
          "obj": "usine",
-         "x": 66.9,
-         "y": 41.4,
+         "x": 68,
+         "y": 42,
          "anim": "grow",
          "stay": true
         },
         {
          "obj": "camion",
-         "x": 69.2,
-         "y": 42.5,
+         "x": 68,
+         "y": 42,
          "anim": "move",
          "to": {
           "x": 66,
@@ -2090,19 +2090,19 @@ const GAME = {
        "fx": [
         {
          "obj": "colis",
-         "x": 65.4,
-         "y": 40.4,
+         "x": 66,
+         "y": 40,
          "anim": "appear"
         },
         {
          "obj": "pieces",
-         "x": 65.7,
-         "y": 37.9,
+         "x": 66,
+         "y": 38,
          "anim": "rise"
         },
         {
          "obj": "personnage",
-         "x": 67.4,
+         "x": 67,
          "y": 42,
          "anim": "appear",
          "count": 2
@@ -2149,8 +2149,8 @@ const GAME = {
       },
       {
        "obj": "mairie",
-       "x": 55.3,
-       "y": 23.6,
+       "x": 53,
+       "y": 25,
        "anim": "shake",
        "delay": 0.4
       },
@@ -2168,8 +2168,8 @@ const GAME = {
       },
       {
        "obj": "foule",
-       "x": 51.6,
-       "y": 28.3,
+       "x": 52,
+       "y": 26,
        "anim": "appear",
        "delay": 1
       },
@@ -2200,25 +2200,25 @@ const GAME = {
        "fx": [
         {
          "obj": "policiers",
-         "x": 51.4,
-         "y": 24.4,
+         "x": 51,
+         "y": 24,
          "anim": "appear",
          "count": 3
         },
         {
          "obj": "voiture_police",
-         "x": 53.5,
-         "y": 26.5,
+         "x": 53,
+         "y": 26,
          "anim": "move",
          "to": {
-          "x": 50,
-          "y": 23
+          "x": 51,
+          "y": 24
          }
         },
         {
          "obj": "voiture",
-         "x": 49.6,
-         "y": 22.6,
+         "x": 50,
+         "y": 23,
          "anim": "fade"
         }
        ],
@@ -2243,8 +2243,8 @@ const GAME = {
        "fx": [
         {
          "obj": "ecole",
-         "x": 52.4,
-         "y": 25.6,
+         "x": 52,
+         "y": 26,
          "anim": "grow"
         },
         {
@@ -2259,8 +2259,8 @@ const GAME = {
         },
         {
          "obj": "chantier_grue",
-         "x": 49.6,
-         "y": 26.6,
+         "x": 50,
+         "y": 27,
          "anim": "appear"
         }
        ],
@@ -2283,20 +2283,20 @@ const GAME = {
        "fx": [
         {
          "obj": "loupe",
-         "x": 51.6,
-         "y": 21.7,
+         "x": 51,
+         "y": 22,
          "anim": "pulse"
         },
         {
          "obj": "personnage",
-         "x": 50.3,
-         "y": 24.8,
+         "x": 51,
+         "y": 24,
          "anim": "appear",
          "count": 2
         },
         {
          "obj": "policiers",
-         "x": 52.8,
+         "x": 53,
          "y": 24,
          "anim": "appear"
         }
@@ -2328,14 +2328,14 @@ const GAME = {
         },
         {
          "obj": "pieces",
-         "x": 51.8,
-         "y": 24.5,
+         "x": 53,
+         "y": 25,
          "anim": "rise"
         },
         {
          "obj": "mairie",
-         "x": 54.2,
-         "y": 25.5,
+         "x": 53,
+         "y": 25,
          "anim": "appear"
         }
        ],
@@ -2365,14 +2365,14 @@ const GAME = {
         },
         {
          "obj": "pieces",
-         "x": 51.8,
-         "y": 24.5,
+         "x": 53,
+         "y": 25,
          "anim": "rise"
         },
         {
          "obj": "mairie",
-         "x": 54.2,
-         "y": 25.5,
+         "x": 53,
+         "y": 25,
          "anim": "appear"
         }
        ],
@@ -2513,7 +2513,7 @@ const GAME = {
        "fx": [
         {
          "obj": "drapeau_ue",
-         "x": 73.7,
+         "x": 74,
          "y": 15,
          "anim": "fade"
         },
@@ -2555,25 +2555,25 @@ const GAME = {
        "fx": [
         {
          "obj": "usine_fermee",
-         "x": 75.2,
-         "y": 17.8,
+         "x": 74,
+         "y": 18,
          "anim": "close"
         },
         {
          "obj": "usine",
-         "x": 76.6,
-         "y": 20.4,
+         "x": 76,
+         "y": 20,
          "anim": "appear",
          "label": "Filière froide"
         },
         {
          "obj": "personnage",
          "x": 74,
-         "y": 20.3,
+         "y": 20,
          "anim": "move",
          "to": {
-          "x": 78.9,
-          "y": 19.6
+          "x": 76,
+          "y": 20
          },
          "count": 3
         }
@@ -2600,7 +2600,7 @@ const GAME = {
         {
          "obj": "douane",
          "x": 56,
-         "y": 5.7,
+         "y": 6,
          "anim": "appear",
          "stay": true
         },
@@ -2617,7 +2617,7 @@ const GAME = {
         {
          "obj": "pieces",
          "x": 56,
-         "y": 8.3,
+         "y": 8,
          "anim": "rise"
         }
        ],
@@ -2646,15 +2646,15 @@ const GAME = {
         },
         {
          "obj": "ecole",
-         "x": 74.3,
-         "y": 20.6,
+         "x": 72,
+         "y": 20,
          "anim": "appear",
          "label": "Formation"
         },
         {
          "obj": "personnage",
-         "x": 71.8,
-         "y": 19.7,
+         "x": 72,
+         "y": 20,
          "anim": "appear",
          "count": 2
         }
@@ -2678,25 +2678,25 @@ const GAME = {
        "fx": [
         {
          "obj": "usine_fermee",
-         "x": 74.3,
-         "y": 17.8,
+         "x": 74,
+         "y": 18,
          "anim": "close"
         },
         {
          "obj": "usine",
-         "x": 76.3,
+         "x": 76,
          "y": 20,
          "anim": "appear",
          "label": "Aides remboursées"
         },
         {
          "obj": "personnage",
-         "x": 73.7,
-         "y": 20.3,
+         "x": 74,
+         "y": 20,
          "anim": "move",
          "to": {
-          "x": 78.7,
-          "y": 19.7
+          "x": 76,
+          "y": 20
          },
          "count": 3
         }
@@ -2788,15 +2788,15 @@ const GAME = {
        "fx": [
         {
          "obj": "policiers",
-         "x": 6.8,
-         "y": 89.8,
+         "x": 7,
+         "y": 90,
          "anim": "appear",
          "count": 3
         },
         {
          "obj": "barrage_agricole",
-         "x": 8.6,
-         "y": 91.6,
+         "x": 8,
+         "y": 91,
          "anim": "fade"
         },
         {
@@ -2833,21 +2833,21 @@ const GAME = {
         {
          "obj": "personnage",
          "x": 7,
-         "y": 90.6,
+         "y": 90,
          "anim": "appear",
          "count": 3,
          "label": "Dialogue"
         },
         {
          "obj": "mairie",
-         "x": 7.2,
-         "y": 87.8,
+         "x": 6,
+         "y": 88,
          "anim": "appear"
         },
         {
          "obj": "commerce",
-         "x": 5,
-         "y": 89.1,
+         "x": 6,
+         "y": 89,
          "anim": "fade"
         }
        ],
@@ -2888,8 +2888,8 @@ const GAME = {
         },
         {
          "obj": "commerce",
-         "x": 8.2,
-         "y": 87.9,
+         "x": 8,
+         "y": 88,
          "anim": "appear"
         }
        ],
@@ -2917,21 +2917,21 @@ const GAME = {
        "fx": [
         {
          "obj": "pieces",
-         "x": 6.5,
-         "y": 89.2,
+         "x": 7,
+         "y": 88,
          "anim": "rise"
         },
         {
          "obj": "etiquette",
-         "x": 6.6,
-         "y": 86.4,
+         "x": 7,
+         "y": 86,
          "anim": "appear",
          "label": "Prêt de l'État"
         },
         {
          "obj": "commerce",
-         "x": 8.8,
-         "y": 87.8,
+         "x": 8,
+         "y": 88,
          "anim": "appear"
         }
        ],
@@ -2956,22 +2956,22 @@ const GAME = {
        "fx": [
         {
          "obj": "personnage",
-         "x": 7.4,
-         "y": 90.6,
+         "x": 7,
+         "y": 90,
          "anim": "appear",
          "count": 3,
          "label": "Nouveau statut"
         },
         {
          "obj": "mairie",
-         "x": 6.6,
-         "y": 87.1,
+         "x": 6,
+         "y": 88,
          "anim": "appear"
         },
         {
          "obj": "commerce",
-         "x": 5.2,
-         "y": 89.2,
+         "x": 6,
+         "y": 89,
          "anim": "fade"
         }
        ],
@@ -3035,8 +3035,8 @@ const GAME = {
      "fx": [
       {
        "obj": "parlement",
-       "x": 53.3,
-       "y": 25.6,
+       "x": 52,
+       "y": 24,
        "anim": "appear",
        "label": "Louvre"
       },
@@ -3053,7 +3053,7 @@ const GAME = {
       },
       {
        "obj": "cadenas",
-       "x": 52.7,
+       "x": 52,
        "y": 22,
        "anim": "shake",
        "delay": 0.7
@@ -3086,7 +3086,7 @@ const GAME = {
         {
          "obj": "cadenas",
          "x": 52,
-         "y": 21.6,
+         "y": 22,
          "anim": "appear",
          "stay": true
         },
@@ -3098,8 +3098,8 @@ const GAME = {
         },
         {
          "obj": "policiers",
-         "x": 50.6,
-         "y": 26.1,
+         "x": 51,
+         "y": 25,
          "anim": "appear"
         }
        ],
@@ -3121,21 +3121,21 @@ const GAME = {
        "fx": [
         {
          "obj": "file_attente",
-         "x": 51.2,
-         "y": 27.1,
+         "x": 52,
+         "y": 26,
          "anim": "appear"
         },
         {
          "obj": "etiquette",
-         "x": 52.2,
-         "y": 19.4,
+         "x": 52,
+         "y": 21,
          "anim": "appear",
          "label": "Nouveau tarif"
         },
         {
          "obj": "pieces",
-         "x": 50.2,
-         "y": 21.7,
+         "x": 52,
+         "y": 23,
          "anim": "rise"
         }
        ],
@@ -3164,14 +3164,14 @@ const GAME = {
         },
         {
          "obj": "parlement",
-         "x": 51.8,
-         "y": 24.5,
+         "x": 52,
+         "y": 24,
          "anim": "pulse"
         },
         {
          "obj": "cadenas",
          "x": 52,
-         "y": 21.9,
+         "y": 22,
          "anim": "fade"
         }
        ]
@@ -3200,14 +3200,14 @@ const GAME = {
         },
         {
          "obj": "parlement",
-         "x": 51.9,
-         "y": 24.4,
+         "x": 52,
+         "y": 24,
          "anim": "pulse"
         },
         {
          "obj": "cadenas",
          "x": 52,
-         "y": 21.9,
+         "y": 22,
          "anim": "fade"
         }
        ],
@@ -3243,8 +3243,8 @@ const GAME = {
         },
         {
          "obj": "policiers",
-         "x": 50.8,
-         "y": 24.9,
+         "x": 51,
+         "y": 25,
          "anim": "appear"
         }
        ],
@@ -3348,7 +3348,7 @@ const GAME = {
         {
          "obj": "euro_flux",
          "x": 52,
-         "y": 23.6,
+         "y": 24,
          "anim": "flow",
          "to": {
           "x": 30,
@@ -3365,7 +3365,7 @@ const GAME = {
         {
          "obj": "hopital",
          "x": 52,
-         "y": 26.2,
+         "y": 26,
          "anim": "pulse"
         }
        ],
@@ -3390,7 +3390,7 @@ const GAME = {
         {
          "obj": "euro_flux",
          "x": 52,
-         "y": 23.8,
+         "y": 24,
          "anim": "flow",
          "to": {
           "x": 60,
@@ -3399,8 +3399,8 @@ const GAME = {
         },
         {
          "obj": "commerce",
-         "x": 61.2,
-         "y": 55.5,
+         "x": 60,
+         "y": 55,
          "anim": "pulse"
         },
         {
@@ -3434,7 +3434,7 @@ const GAME = {
         {
          "obj": "pieces",
          "x": 52,
-         "y": 23.8,
+         "y": 24,
          "anim": "flow",
          "to": {
           "x": 30,
@@ -3482,8 +3482,8 @@ const GAME = {
         },
         {
          "obj": "file_attente",
-         "x": 53.3,
-         "y": 28.4,
+         "x": 53,
+         "y": 28,
          "anim": "appear"
         },
         {
@@ -3512,7 +3512,7 @@ const GAME = {
         {
          "obj": "euro_flux",
          "x": 52,
-         "y": 23.6,
+         "y": 24,
          "anim": "flow",
          "to": {
           "x": 30,
@@ -3529,7 +3529,7 @@ const GAME = {
         {
          "obj": "hopital",
          "x": 52,
-         "y": 26.2,
+         "y": 26,
          "anim": "pulse"
         }
        ],
@@ -3624,15 +3624,15 @@ const GAME = {
       },
       {
        "obj": "inondation",
-       "x": 22,
-       "y": 46.2,
+       "x": 25,
+       "y": 47,
        "anim": "grow",
        "delay": 0.3
       },
       {
        "obj": "maison",
-       "x": 28.9,
-       "y": 47.2,
+       "x": 26,
+       "y": 47,
        "anim": "shake",
        "count": 4,
        "delay": 0.6
@@ -3677,21 +3677,21 @@ const GAME = {
        "fx": [
         {
          "obj": "maison",
-         "x": 28.4,
-         "y": 47.1,
+         "x": 26,
+         "y": 47,
          "anim": "fade",
          "count": 3
         },
         {
          "obj": "champ",
-         "x": 24.1,
-         "y": 48.2,
+         "x": 26,
+         "y": 47,
          "anim": "grow"
         },
         {
          "obj": "camion",
-         "x": 25.9,
-         "y": 46.4,
+         "x": 26,
+         "y": 47,
          "anim": "move",
          "to": {
           "x": 30,
@@ -3720,21 +3720,21 @@ const GAME = {
        "fx": [
         {
          "obj": "chantier_grue",
-         "x": 24.4,
-         "y": 44.8,
+         "x": 24,
+         "y": 46,
          "anim": "grow"
         },
         {
          "obj": "barrage",
-         "x": 23.5,
-         "y": 48.3,
+         "x": 24,
+         "y": 47,
          "anim": "appear",
          "stay": true
         },
         {
          "obj": "inondation",
-         "x": 25.8,
-         "y": 47.1,
+         "x": 25,
+         "y": 47,
          "anim": "fade"
         }
        ],
@@ -3758,16 +3758,16 @@ const GAME = {
        "fx": [
         {
          "obj": "panneau",
-         "x": 26.2,
-         "y": 43.5,
+         "x": 26,
+         "y": 44,
          "anim": "appear",
          "label": "Zone rouge",
          "stay": true
         },
         {
          "obj": "chantier_grue",
-         "x": 25.4,
-         "y": 45.9,
+         "x": 26,
+         "y": 45,
          "anim": "close"
         },
         {
@@ -3808,15 +3808,15 @@ const GAME = {
         },
         {
          "obj": "maison",
-         "x": 25.6,
-         "y": 47.7,
+         "x": 26,
+         "y": 47,
          "anim": "grow",
          "count": 3
         },
         {
          "obj": "chantier_grue",
          "x": 27,
-         "y": 45.6,
+         "y": 46,
          "anim": "appear"
         }
        ],
@@ -3840,16 +3840,16 @@ const GAME = {
        "fx": [
         {
          "obj": "panneau",
-         "x": 26.1,
-         "y": 43.3,
+         "x": 26,
+         "y": 44,
          "anim": "appear",
          "label": "Assurance",
          "stay": true
         },
         {
          "obj": "chantier_grue",
-         "x": 25.8,
-         "y": 45.8,
+         "x": 26,
+         "y": 45,
          "anim": "close"
         },
         {
@@ -4023,8 +4023,8 @@ const GAME = {
        "fx": [
         {
          "obj": "pieces",
-         "x": 46.2,
-         "y": 48.5,
+         "x": 45,
+         "y": 48,
          "anim": "rise",
          "count": 3
         },
@@ -4064,8 +4064,8 @@ const GAME = {
        "fx": [
         {
          "obj": "euro_flux",
-         "x": 51.8,
-         "y": 40.8,
+         "x": 50,
+         "y": 40,
          "anim": "flow",
          "to": {
           "x": 40,
@@ -4081,8 +4081,8 @@ const GAME = {
         },
         {
          "obj": "station_service",
-         "x": 49.4,
-         "y": 39.8,
+         "x": 50,
+         "y": 40,
          "anim": "appear"
         }
        ]
@@ -4113,8 +4113,8 @@ const GAME = {
         },
         {
          "obj": "pieces",
-         "x": 50.6,
-         "y": 40.3,
+         "x": 50,
+         "y": 40,
          "anim": "rise"
         },
         {
@@ -4143,15 +4143,15 @@ const GAME = {
        "fx": [
         {
          "obj": "mairie",
-         "x": 44.6,
-         "y": 44.6,
+         "x": 45,
+         "y": 45,
          "anim": "appear",
          "count": 3
         },
         {
          "obj": "personnage",
-         "x": 46.4,
-         "y": 46.4,
+         "x": 46,
+         "y": 46,
          "anim": "appear",
          "count": 3
         },
@@ -4201,15 +4201,15 @@ const GAME = {
      "fx": [
       {
        "obj": "centrale_gaz",
-       "x": 95.2,
-       "y": 12.3,
+       "x": 97,
+       "y": 13,
        "anim": "smoke",
        "label": "Gaz importé"
       },
       {
        "obj": "euro_flux",
-       "x": 98.8,
-       "y": 13.7,
+       "x": 97,
+       "y": 13,
        "anim": "flow",
        "to": {
         "x": 75,
@@ -4267,8 +4267,8 @@ const GAME = {
        "fx": [
         {
          "obj": "panneau",
-         "x": 53.2,
-         "y": 41.5,
+         "x": 52,
+         "y": 41,
          "anim": "appear",
          "label": "Hausse plafonnée"
         },
@@ -4369,8 +4369,8 @@ const GAME = {
         },
         {
          "obj": "centrale_gaz",
-         "x": 96.4,
-         "y": 12.8,
+         "x": 97,
+         "y": 13,
          "anim": "fade"
         }
        ],
@@ -4395,14 +4395,14 @@ const GAME = {
        "fx": [
         {
          "obj": "centrale_nucleaire",
-         "x": 68.8,
-         "y": 53.5,
+         "x": 70,
+         "y": 54,
          "anim": "pulse"
         },
         {
          "obj": "euro_flux",
-         "x": 71.2,
-         "y": 54.5,
+         "x": 70,
+         "y": 54,
          "anim": "flow",
          "to": {
           "x": 52,
@@ -4444,8 +4444,8 @@ const GAME = {
         },
         {
          "obj": "euro_flux",
-         "x": 97.6,
-         "y": 13.2,
+         "x": 97,
+         "y": 13,
          "anim": "fade"
         },
         {
@@ -4667,7 +4667,7 @@ const GAME = {
         {
          "obj": "chantier_grue",
          "x": 7,
-         "y": 87.8,
+         "y": 88,
          "anim": "appear"
         }
        ],
@@ -4691,8 +4691,8 @@ const GAME = {
        "fx": [
         {
          "obj": "douane",
-         "x": 3.2,
-         "y": 93.1,
+         "x": 4,
+         "y": 92,
          "anim": "appear",
          "stay": true
         },
@@ -4708,8 +4708,8 @@ const GAME = {
         },
         {
          "obj": "policiers",
-         "x": 3.8,
-         "y": 90.5,
+         "x": 5,
+         "y": 91,
          "anim": "appear"
         }
        ],
@@ -4732,14 +4732,14 @@ const GAME = {
        "fx": [
         {
          "obj": "batiment_ue",
-         "x": 61.8,
-         "y": 2.5,
+         "x": 63,
+         "y": 3,
          "anim": "pulse"
         },
         {
          "obj": "euro_flux",
-         "x": 64.2,
-         "y": 3.5,
+         "x": 63,
+         "y": 3,
          "anim": "flow",
          "to": {
           "x": 7,
@@ -4748,8 +4748,8 @@ const GAME = {
         },
         {
          "obj": "drapeau_ue",
-         "x": 8.4,
-         "y": 87.8,
+         "x": 9,
+         "y": 88,
          "anim": "appear"
         }
        ],
@@ -4829,8 +4829,8 @@ const GAME = {
      "fx": [
       {
        "obj": "boulangerie",
-       "x": 53,
-       "y": 28.8,
+       "x": 51,
+       "y": 31,
        "anim": "close"
       },
       {
@@ -4843,8 +4843,8 @@ const GAME = {
       },
       {
        "obj": "personnage",
-       "x": 53.5,
-       "y": 35.1,
+       "x": 52,
+       "y": 33,
        "anim": "move",
        "to": {
         "x": 51,
@@ -4885,22 +4885,22 @@ const GAME = {
        "fx": [
         {
          "obj": "chantier_grue",
-         "x": 50,
-         "y": 33,
+         "x": 51,
+         "y": 31,
          "anim": "grow"
         },
         {
          "obj": "boulangerie",
-         "x": 51.2,
-         "y": 30,
+         "x": 51,
+         "y": 31,
          "anim": "appear",
          "delay": 1,
          "stay": true
         },
         {
          "obj": "file_attente",
-         "x": 52.4,
-         "y": 32.3,
+         "x": 52,
+         "y": 33,
          "anim": "appear",
          "delay": 1.4
         }
@@ -4924,26 +4924,26 @@ const GAME = {
        "fx": [
         {
          "obj": "commerce",
-         "x": 50.2,
-         "y": 32.2,
+         "x": 51,
+         "y": 31,
          "anim": "appear",
          "label": "Distributeur"
         },
         {
          "obj": "personnage",
-         "x": 52.5,
-         "y": 33.5,
+         "x": 52,
+         "y": 33,
          "anim": "move",
          "to": {
-          "x": 49.9,
-          "y": 29.2
+          "x": 51,
+          "y": 31
          },
          "count": 2
         },
         {
          "obj": "pieces",
-         "x": 50.3,
-         "y": 29.6,
+         "x": 51,
+         "y": 30,
          "anim": "rise"
         }
        ]
@@ -5016,15 +5016,15 @@ const GAME = {
         },
         {
          "obj": "maison",
-         "x": 55.5,
-         "y": 29.3,
+         "x": 55,
+         "y": 30,
          "anim": "pulse",
          "count": 3
         },
         {
          "obj": "personnage",
-         "x": 54.8,
-         "y": 31.8,
+         "x": 55,
+         "y": 31,
          "anim": "appear"
         }
        ],
@@ -5048,22 +5048,22 @@ const GAME = {
        "fx": [
         {
          "obj": "chantier_grue",
-         "x": 49.9,
-         "y": 30.4,
+         "x": 51,
+         "y": 31,
          "anim": "grow"
         },
         {
          "obj": "boulangerie",
-         "x": 52.5,
-         "y": 30.8,
+         "x": 51,
+         "y": 31,
          "anim": "appear",
          "delay": 1,
          "stay": true
         },
         {
          "obj": "file_attente",
-         "x": 51.6,
-         "y": 33.3,
+         "x": 52,
+         "y": 33,
          "anim": "appear",
          "delay": 1.4
         }
@@ -5123,14 +5123,14 @@ const GAME = {
      "fx": [
       {
        "obj": "troupeau",
-       "x": 73.8,
-       "y": 55,
+       "x": 72,
+       "y": 56,
        "anim": "pulse"
       },
       {
        "obj": "ferme",
-       "x": 73.9,
-       "y": 58.2,
+       "x": 73,
+       "y": 57,
        "anim": "appear",
        "delay": 0.3
       },
@@ -5166,14 +5166,14 @@ const GAME = {
        "fx": [
         {
          "obj": "troupeau",
-         "x": 71.6,
-         "y": 55.6,
+         "x": 72,
+         "y": 56,
          "anim": "fade"
         },
         {
          "obj": "ferme",
-         "x": 73.4,
-         "y": 57.5,
+         "x": 73,
+         "y": 57,
          "anim": "close"
         }
        ]
@@ -5196,8 +5196,8 @@ const GAME = {
        "fx": [
         {
          "obj": "cabinet_medical",
-         "x": 70.3,
-         "y": 54.1,
+         "x": 71,
+         "y": 55,
          "anim": "appear"
         },
         {
@@ -5225,14 +5225,14 @@ const GAME = {
        "fx": [
         {
          "obj": "troupeau",
-         "x": 72.2,
-         "y": 56.2,
+         "x": 72,
+         "y": 56,
          "anim": "pulse"
         },
         {
          "obj": "cabinet_medical",
-         "x": 70.4,
-         "y": 54.4,
+         "x": 71,
+         "y": 55,
          "anim": "appear"
         }
        ]
@@ -5254,8 +5254,8 @@ const GAME = {
        "fx": [
         {
          "obj": "pieces",
-         "x": 71.1,
-         "y": 56.2,
+         "x": 72,
+         "y": 56,
          "anim": "rise"
         }
        ]
@@ -5278,8 +5278,8 @@ const GAME = {
        "fx": [
         {
          "obj": "ferme",
-         "x": 72.8,
-         "y": 57.5,
+         "x": 73,
+         "y": 57,
          "anim": "pulse"
         }
        ],
@@ -5353,21 +5353,21 @@ const GAME = {
      "fx": [
       {
        "obj": "usine",
-       "x": 66.4,
-       "y": 56.5,
+       "x": 66,
+       "y": 57,
        "anim": "smoke"
       },
       {
        "obj": "ferme",
-       "x": 61.8,
-       "y": 60.2,
+       "x": 63,
+       "y": 59,
        "anim": "appear",
        "delay": 0.4
       },
       {
        "obj": "loupe",
-       "x": 62.6,
-       "y": 57.8,
+       "x": 64,
+       "y": 58,
        "anim": "pulse",
        "delay": 0.8
       },
@@ -5400,14 +5400,14 @@ const GAME = {
        "fx": [
         {
          "obj": "usine",
-         "x": 66.3,
+         "x": 66,
          "y": 57,
          "anim": "close"
         },
         {
          "obj": "cadenas",
-         "x": 68.8,
-         "y": 55.7,
+         "x": 68,
+         "y": 56,
          "anim": "appear",
          "stay": true
         }
@@ -5431,14 +5431,14 @@ const GAME = {
        "fx": [
         {
          "obj": "pieces",
-         "x": 65,
-         "y": 58.7,
+         "x": 66,
+         "y": 57,
          "anim": "rise"
         },
         {
          "obj": "usine",
-         "x": 66.7,
-         "y": 56.3,
+         "x": 66,
+         "y": 57,
          "anim": "smoke"
         }
        ],
@@ -5462,7 +5462,7 @@ const GAME = {
        "fx": [
         {
          "obj": "chantier_grue",
-         "x": 64.5,
+         "x": 64,
          "y": 60,
          "anim": "grow"
         },
@@ -5502,8 +5502,8 @@ const GAME = {
        "fx": [
         {
          "obj": "bulle",
-         "x": 63.1,
-         "y": 55.2,
+         "x": 63,
+         "y": 56,
          "anim": "appear",
          "label": "Ne mangez pas vos œufs"
         },
@@ -5539,8 +5539,8 @@ const GAME = {
         },
         {
          "obj": "cadenas",
-         "x": 68.8,
-         "y": 55.6,
+         "x": 68,
+         "y": 56,
          "anim": "appear",
          "stay": true
         }
@@ -5578,8 +5578,8 @@ const GAME = {
      "fx": [
       {
        "obj": "supermarche",
-       "x": 40.9,
-       "y": 19.7,
+       "x": 41,
+       "y": 20,
        "anim": "appear"
       },
       {
@@ -5599,8 +5599,8 @@ const GAME = {
       },
       {
        "obj": "file_attente",
-       "x": 42.1,
-       "y": 22.3,
+       "x": 42,
+       "y": 22,
        "anim": "appear",
        "delay": 1
       }
@@ -5624,8 +5624,8 @@ const GAME = {
        "fx": [
         {
          "obj": "camion",
-         "x": 38.4,
-         "y": 23.9,
+         "x": 36,
+         "y": 23,
          "anim": "move",
          "to": {
           "x": 41,
@@ -5634,8 +5634,8 @@ const GAME = {
         },
         {
          "obj": "pieces",
-         "x": 35.9,
-         "y": 23.2,
+         "x": 36,
+         "y": 23,
          "anim": "rise"
         }
        ]
@@ -5657,13 +5657,13 @@ const GAME = {
         {
          "obj": "supermarche",
          "x": 41,
-         "y": 19.8,
+         "y": 20,
          "anim": "pulse"
         },
         {
          "obj": "file_attente",
          "x": 42,
-         "y": 22.2,
+         "y": 22,
          "anim": "fade"
         }
        ]
@@ -5684,8 +5684,8 @@ const GAME = {
        "fx": [
         {
          "obj": "panneau",
-         "x": 42.2,
-         "y": 17.5,
+         "x": 41,
+         "y": 17,
          "anim": "appear",
          "label": "2 par client"
         },
@@ -5716,7 +5716,7 @@ const GAME = {
         {
          "obj": "camion",
          "x": 75,
-         "y": 22.3,
+         "y": 22,
          "anim": "move",
          "to": {
           "x": 41,
@@ -5726,7 +5726,7 @@ const GAME = {
         {
          "obj": "drapeau_ue",
          "x": 75,
-         "y": 19.7,
+         "y": 20,
          "anim": "appear"
         }
        ]
@@ -5748,8 +5748,8 @@ const GAME = {
        "fx": [
         {
          "obj": "camion",
-         "x": 35.2,
-         "y": 22.8,
+         "x": 36,
+         "y": 23,
          "anim": "move",
          "to": {
           "x": 41,
@@ -5758,8 +5758,8 @@ const GAME = {
         },
         {
          "obj": "pieces",
-         "x": 37.6,
-         "y": 23.6,
+         "x": 36,
+         "y": 23,
          "anim": "rise"
         }
        ]
@@ -5942,8 +5942,8 @@ const GAME = {
         },
         {
          "obj": "loupe",
-         "x": 71.2,
-         "y": 60.5,
+         "x": 70,
+         "y": 60,
          "anim": "pulse"
         }
        ],
@@ -5971,8 +5971,8 @@ const GAME = {
         },
         {
          "obj": "pieces",
-         "x": 70.6,
-         "y": 60.3,
+         "x": 70,
+         "y": 60,
          "anim": "rise"
         }
        ],
@@ -6072,14 +6072,14 @@ const GAME = {
      "fx": [
       {
        "obj": "inondation",
-       "x": 48.8,
+       "x": 52,
        "y": 9,
        "anim": "appear"
       },
       {
        "obj": "maison",
-       "x": 55.3,
-       "y": 8.5,
+       "x": 53,
+       "y": 9,
        "anim": "shake",
        "delay": 0.3
       },
@@ -6110,14 +6110,14 @@ const GAME = {
        "fx": [
         {
          "obj": "maison",
-         "x": 54.6,
+         "x": 53,
          "y": 9,
          "anim": "fade"
         },
         {
          "obj": "champ",
-         "x": 52,
-         "y": 8.7,
+         "x": 53,
+         "y": 9,
          "anim": "appear"
         }
        ],
@@ -6139,18 +6139,18 @@ const GAME = {
        "fx": [
         {
          "obj": "camion",
-         "x": 50.6,
-         "y": 10.8,
+         "x": 50,
+         "y": 10,
          "anim": "move",
          "to": {
-          "x": 53.7,
-          "y": 6.9
+          "x": 52,
+          "y": 9
          }
         },
         {
          "obj": "ambulance",
-         "x": 53.6,
-         "y": 10.5,
+         "x": 54,
+         "y": 10,
          "anim": "appear"
         }
        ],
@@ -6173,8 +6173,8 @@ const GAME = {
        "fx": [
         {
          "obj": "chantier_grue",
-         "x": 51.4,
-         "y": 8.2,
+         "x": 51,
+         "y": 8,
          "anim": "appear"
         }
        ],
@@ -6375,7 +6375,7 @@ const GAME = {
         {
          "obj": "voiture",
          "x": 52,
-         "y": 23.7,
+         "y": 24,
          "anim": "move",
          "to": {
           "x": 46,
@@ -6391,7 +6391,7 @@ const GAME = {
         {
          "obj": "manifestants",
          "x": 52,
-         "y": 26.3,
+         "y": 26,
          "anim": "appear"
         }
        ],
@@ -6557,8 +6557,8 @@ const GAME = {
      "fx": [
       {
        "obj": "chantier_grue",
-       "x": 51.1,
-       "y": 23,
+       "x": 53,
+       "y": 24,
        "anim": "fade"
       },
       {
@@ -6578,8 +6578,8 @@ const GAME = {
       },
       {
        "obj": "pieces",
-       "x": 55.4,
-       "y": 26.1,
+       "x": 54,
+       "y": 25,
        "anim": "rise",
        "delay": 1.1
       }
@@ -6612,8 +6612,8 @@ const GAME = {
         },
         {
          "obj": "panneau",
-         "x": 53.3,
-         "y": 21.3,
+         "x": 52,
+         "y": 21,
          "anim": "appear",
          "label": "Entrée libre"
         }
@@ -6636,14 +6636,14 @@ const GAME = {
        "fx": [
         {
          "obj": "file_attente",
-         "x": 53.2,
-         "y": 27.6,
+         "x": 52,
+         "y": 27,
          "anim": "appear"
         },
         {
          "obj": "pieces",
-         "x": 54.3,
-         "y": 25.2,
+         "x": 54,
+         "y": 25,
          "anim": "rise"
         }
        ],
@@ -6666,8 +6666,8 @@ const GAME = {
        "fx": [
         {
          "obj": "euro_flux",
-         "x": 52.5,
-         "y": 25.2,
+         "x": 54,
+         "y": 25,
          "anim": "flow",
          "to": {
           "x": 52,
@@ -6676,8 +6676,8 @@ const GAME = {
         },
         {
          "obj": "loupe",
-         "x": 54.7,
-         "y": 23.7,
+         "x": 53,
+         "y": 24,
          "anim": "pulse"
         }
        ],
@@ -6699,14 +6699,14 @@ const GAME = {
        "fx": [
         {
          "obj": "chantier_grue",
-         "x": 51.5,
-         "y": 28.5,
+         "x": 51,
+         "y": 27,
          "anim": "grow"
         },
         {
          "obj": "foule",
-         "x": 52.3,
-         "y": 26.1,
+         "x": 52,
+         "y": 27,
          "anim": "appear"
         }
        ]
@@ -6739,7 +6739,7 @@ const GAME = {
         },
         {
          "obj": "panneau",
-         "x": 52.7,
+         "x": 52,
          "y": 21,
          "anim": "appear",
          "label": "Patrimoine"
@@ -7099,13 +7099,13 @@ const GAME = {
         {
          "obj": "usine",
          "x": 76,
-         "y": 26.3,
+         "y": 26,
          "anim": "close"
         },
         {
          "obj": "pieces",
          "x": 76,
-         "y": 23.7,
+         "y": 24,
          "anim": "rise"
         }
        ]
@@ -7366,8 +7366,8 @@ const GAME = {
         },
         {
          "obj": "loupe",
-         "x": 50.4,
-         "y": 22.8,
+         "x": 50,
+         "y": 24,
          "anim": "pulse"
         }
        ]
@@ -7418,8 +7418,8 @@ const GAME = {
        "fx": [
         {
          "obj": "colis",
-         "x": 50.6,
-         "y": 26.9,
+         "x": 50,
+         "y": 26,
          "anim": "appear",
          "count": 2
         },
@@ -7449,8 +7449,8 @@ const GAME = {
        "fx": [
         {
          "obj": "colis",
-         "x": 50.3,
-         "y": 26.5,
+         "x": 50,
+         "y": 26,
          "anim": "appear",
          "count": 2
         },
@@ -7548,7 +7548,7 @@ const GAME = {
         {
          "obj": "euro_flux",
          "x": 63,
-         "y": 4.3,
+         "y": 4,
          "anim": "flow",
          "to": {
           "x": 99,
@@ -7558,7 +7558,7 @@ const GAME = {
         {
          "obj": "drapeau_ue",
          "x": 63,
-         "y": 6.9,
+         "y": 6,
          "anim": "appear"
         }
        ]
@@ -7590,7 +7590,7 @@ const GAME = {
         {
          "obj": "drapeau_ue",
          "x": 63,
-         "y": 4.2,
+         "y": 4,
          "anim": "shake"
         }
        ]
@@ -7615,13 +7615,13 @@ const GAME = {
         {
          "obj": "pieces",
          "x": 63,
-         "y": 5.3,
+         "y": 5,
          "anim": "fade"
         },
         {
          "obj": "batiment_ue",
          "x": 63,
-         "y": 2.7,
+         "y": 3,
          "anim": "pulse"
         }
        ]
@@ -7645,13 +7645,13 @@ const GAME = {
        "fx": [
         {
          "obj": "cadenas",
-         "x": 63.9,
-         "y": 6.3,
+         "x": 64,
+         "y": 6,
          "anim": "appear"
         },
         {
          "obj": "euro_flux",
-         "x": 62.9,
+         "x": 63,
          "y": 4,
          "anim": "flow",
          "to": {
@@ -7680,7 +7680,7 @@ const GAME = {
         {
          "obj": "euro_flux",
          "x": 63,
-         "y": 3.8,
+         "y": 4,
          "anim": "flow",
          "to": {
           "x": 99,
@@ -7690,7 +7690,7 @@ const GAME = {
         {
          "obj": "drapeau_ue",
          "x": 63,
-         "y": 6.4,
+         "y": 6,
          "anim": "appear"
         }
        ]
@@ -7727,8 +7727,8 @@ const GAME = {
      "fx": [
       {
        "obj": "etiquette",
-       "x": 67.2,
-       "y": 50.1,
+       "x": 67,
+       "y": 51,
        "anim": "appear",
        "label": "Pic de particules fines"
       },
@@ -7753,8 +7753,8 @@ const GAME = {
       },
       {
        "obj": "bus",
-       "x": 64.7,
-       "y": 52.7,
+       "x": 66,
+       "y": 53,
        "anim": "appear",
        "delay": 0.9
       }
@@ -7778,15 +7778,15 @@ const GAME = {
        "fx": [
         {
          "obj": "panneau",
-         "x": 65.1,
-         "y": 58.3,
+         "x": 65,
+         "y": 58,
          "anim": "appear",
          "label": "Plaques impaires"
         },
         {
          "obj": "voiture",
          "x": 66,
-         "y": 55.9,
+         "y": 56,
          "anim": "fade"
         }
        ]
@@ -7811,17 +7811,17 @@ const GAME = {
         {
          "obj": "bus",
          "x": 68,
-         "y": 56.3,
+         "y": 56,
          "anim": "move",
          "to": {
-          "x": 64,
-          "y": 53.3
+          "x": 65,
+          "y": 54
          }
         },
         {
          "obj": "foule",
-         "x": 67.5,
-         "y": 53.7,
+         "x": 67,
+         "y": 54,
          "anim": "appear"
         }
        ]
@@ -7844,15 +7844,15 @@ const GAME = {
        "fx": [
         {
          "obj": "etiquette",
-         "x": 66.1,
-         "y": 58.2,
+         "x": 66,
+         "y": 58,
          "anim": "appear",
          "label": "Vignette obligatoire"
         },
         {
          "obj": "voiture",
-         "x": 64.9,
-         "y": 55.8,
+         "x": 65,
+         "y": 56,
          "anim": "fade"
         }
        ]
@@ -7875,8 +7875,8 @@ const GAME = {
        "fx": [
         {
          "obj": "bulle",
-         "x": 67.3,
-         "y": 52.7,
+         "x": 67,
+         "y": 52,
          "anim": "appear",
          "label": "Limitez vos trajets"
         },
@@ -7910,15 +7910,15 @@ const GAME = {
        "fx": [
         {
          "obj": "etiquette",
-         "x": 66.1,
-         "y": 58.2,
+         "x": 66,
+         "y": 58,
          "anim": "appear",
          "label": "Péage"
         },
         {
          "obj": "voiture",
-         "x": 64.9,
-         "y": 55.8,
+         "x": 65,
+         "y": 56,
          "anim": "fade"
         }
        ],
@@ -8106,7 +8106,7 @@ const GAME = {
         },
         {
          "obj": "drapeau_ue",
-         "x": 95.7,
+         "x": 96,
          "y": 14,
          "anim": "appear"
         }
@@ -8175,8 +8175,8 @@ const GAME = {
         },
         {
          "obj": "drapeau_ue",
-         "x": 95.9,
-         "y": 14.1,
+         "x": 96,
+         "y": 14,
          "anim": "appear"
         }
        ],
@@ -8273,7 +8273,7 @@ const GAME = {
         {
          "obj": "pieces",
          "x": 46,
-         "y": 7.3,
+         "y": 7,
          "anim": "rise"
         }
        ]
@@ -8328,14 +8328,14 @@ const GAME = {
        "fx": [
         {
          "obj": "douane",
-         "x": 46.9,
-         "y": 7.7,
+         "x": 47,
+         "y": 8,
          "anim": "appear"
         },
         {
          "obj": "camion",
-         "x": 49.2,
-         "y": 8.8,
+         "x": 49,
+         "y": 9,
          "anim": "shake"
         }
        ]
@@ -8476,14 +8476,14 @@ const GAME = {
        "fx": [
         {
          "obj": "pieces",
-         "x": 51.9,
-         "y": 24.9,
+         "x": 52,
+         "y": 25,
          "anim": "rise"
         },
         {
          "obj": "maison",
-         "x": 54.2,
-         "y": 26.2,
+         "x": 54,
+         "y": 26,
          "anim": "appear"
         }
        ]
@@ -8565,15 +8565,15 @@ const GAME = {
        "fx": [
         {
          "obj": "panneau",
-         "x": 51.8,
-         "y": 27.1,
+         "x": 52,
+         "y": 27,
          "anim": "appear",
          "label": "Zone inondable"
         },
         {
          "obj": "maison",
-         "x": 54.2,
-         "y": 25.9,
+         "x": 54,
+         "y": 26,
          "anim": "fade"
         }
        ]
@@ -8693,8 +8693,8 @@ const GAME = {
        "fx": [
         {
          "obj": "policiers",
-         "x": 48.2,
-         "y": 27.5,
+         "x": 47,
+         "y": 27,
          "anim": "appear"
         },
         {
@@ -8722,8 +8722,8 @@ const GAME = {
        "fx": [
         {
          "obj": "file_attente",
-         "x": 51.2,
-         "y": 25.5,
+         "x": 50,
+         "y": 25,
          "anim": "appear"
         },
         {
@@ -8752,14 +8752,14 @@ const GAME = {
        "fx": [
         {
          "obj": "foule",
-         "x": 53.2,
-         "y": 40.5,
+         "x": 52,
+         "y": 40,
          "anim": "appear"
         },
         {
          "obj": "soignants",
-         "x": 66.4,
-         "y": 53.6,
+         "x": 66,
+         "y": 54,
          "anim": "appear"
         }
        ]
@@ -8780,8 +8780,8 @@ const GAME = {
        "fx": [
         {
          "obj": "foule",
-         "x": 50.6,
-         "y": 25.3,
+         "x": 50,
+         "y": 25,
          "anim": "appear"
         },
         {
@@ -8811,8 +8811,8 @@ const GAME = {
        "fx": [
         {
          "obj": "file_attente",
-         "x": 50.3,
-         "y": 25.1,
+         "x": 50,
+         "y": 25,
          "anim": "appear"
         },
         {
@@ -8919,8 +8919,8 @@ const GAME = {
       },
       {
        "obj": "foret",
-       "x": 13.8,
-       "y": 31.2,
+       "x": 12,
+       "y": 31,
        "anim": "shake",
        "delay": 0.3
       },
@@ -8933,8 +8933,8 @@ const GAME = {
       },
       {
        "obj": "maison",
-       "x": 9.3,
-       "y": 33.7,
+       "x": 11,
+       "y": 32,
        "anim": "close",
        "count": 3,
        "delay": 0.8
@@ -9069,8 +9069,8 @@ const GAME = {
        "fx": [
         {
          "obj": "chantier_grue",
-         "x": 11.1,
-         "y": 31.9,
+         "x": 12,
+         "y": 31,
          "anim": "grow",
          "stay": true
         },
@@ -9102,14 +9102,14 @@ const GAME = {
        "fx": [
         {
          "obj": "foret",
-         "x": 12.5,
-         "y": 31.3,
+         "x": 12,
+         "y": 31,
          "anim": "fade"
         },
         {
          "obj": "tracteur",
-         "x": 10.3,
-         "y": 29.9,
+         "x": 11,
+         "y": 30,
          "anim": "appear"
         }
        ]
@@ -9133,14 +9133,14 @@ const GAME = {
        "fx": [
         {
          "obj": "pieces",
-         "x": 11.4,
-         "y": 29.5,
+         "x": 12,
+         "y": 30,
          "anim": "rise"
         },
         {
          "obj": "maison",
-         "x": 9.7,
-         "y": 31.3,
+         "x": 10,
+         "y": 31,
          "anim": "appear"
         }
        ]
@@ -9342,8 +9342,8 @@ const GAME = {
         },
         {
          "obj": "voiture_police",
-         "x": 49.8,
-         "y": 23.9,
+         "x": 50,
+         "y": 24,
          "anim": "appear"
         }
        ]
@@ -9367,8 +9367,8 @@ const GAME = {
        "fx": [
         {
          "obj": "pieces",
-         "x": 51.7,
-         "y": 23.1,
+         "x": 52,
+         "y": 24,
          "anim": "rise"
         },
         {
@@ -9415,21 +9415,21 @@ const GAME = {
      "fx": [
       {
        "obj": "hopital",
-       "x": 40.6,
-       "y": 43.6,
+       "x": 42,
+       "y": 46,
        "anim": "close"
       },
       {
        "obj": "manifestants",
-       "x": 46,
-       "y": 47.6,
+       "x": 44,
+       "y": 47,
        "anim": "appear",
        "delay": 0.4
       },
       {
        "obj": "ambulance",
-       "x": 41.4,
-       "y": 49.3,
+       "x": 42,
+       "y": 47,
        "anim": "move",
        "to": {
         "x": 47,
@@ -9497,14 +9497,14 @@ const GAME = {
        "fx": [
         {
          "obj": "hopital",
-         "x": 41.9,
-         "y": 45.2,
+         "x": 42,
+         "y": 46,
          "anim": "pulse"
         },
         {
          "obj": "ambulance",
-         "x": 42.6,
-         "y": 47.7,
+         "x": 43,
+         "y": 47,
          "anim": "appear"
         }
        ]
@@ -9556,14 +9556,14 @@ const GAME = {
        "fx": [
         {
          "obj": "cabinet_medical",
-         "x": 41.6,
+         "x": 42,
          "y": 46,
          "anim": "appear"
         },
         {
          "obj": "soignants",
-         "x": 43.5,
-         "y": 47.7,
+         "x": 43,
+         "y": 47,
          "anim": "appear"
         }
        ]
@@ -9652,28 +9652,28 @@ const GAME = {
      "fx": [
       {
        "obj": "champ",
-       "x": 3.6,
-       "y": 89.4,
+       "x": 6,
+       "y": 90,
        "anim": "appear"
       },
       {
        "obj": "ferme",
-       "x": 9,
-       "y": 92.1,
+       "x": 8,
+       "y": 91,
        "anim": "appear",
        "delay": 0.3
       },
       {
        "obj": "manifestants",
-       "x": 5.9,
-       "y": 87.4,
+       "x": 7,
+       "y": 88,
        "anim": "appear",
        "delay": 0.6
       },
       {
        "obj": "etiquette",
-       "x": 7.1,
-       "y": 85,
+       "x": 7,
+       "y": 86,
        "anim": "appear",
        "label": "Sols pollués",
        "delay": 1
@@ -9698,13 +9698,13 @@ const GAME = {
         {
          "obj": "pieces",
          "x": 7,
-         "y": 90.5,
+         "y": 90,
          "anim": "rise"
         },
         {
          "obj": "hopital",
-         "x": 8.8,
-         "y": 88.8,
+         "x": 8,
+         "y": 89,
          "anim": "appear"
         }
        ]
@@ -9726,13 +9726,13 @@ const GAME = {
        "fx": [
         {
          "obj": "tracteur",
-         "x": 6.4,
-         "y": 90.4,
+         "x": 6,
+         "y": 90,
          "anim": "appear"
         },
         {
          "obj": "cabinet_medical",
-         "x": 8.5,
+         "x": 8,
          "y": 89,
          "anim": "appear"
         }
@@ -9756,14 +9756,14 @@ const GAME = {
        "fx": [
         {
          "obj": "parlement",
-         "x": 8.5,
+         "x": 8,
          "y": 88,
          "anim": "appear"
         },
         {
          "obj": "pieces",
-         "x": 6.9,
-         "y": 90.1,
+         "x": 7,
+         "y": 90,
          "anim": "rise"
         }
        ]
@@ -9786,14 +9786,14 @@ const GAME = {
        "fx": [
         {
          "obj": "champ",
-         "x": 5.8,
-         "y": 89.9,
+         "x": 6,
+         "y": 90,
          "anim": "close"
         },
         {
          "obj": "ferme",
-         "x": 8.2,
-         "y": 91.1,
+         "x": 8,
+         "y": 91,
          "anim": "close"
         }
        ]
@@ -9816,14 +9816,14 @@ const GAME = {
        "fx": [
         {
          "obj": "douane",
-         "x": 5.1,
-         "y": 91.4,
+         "x": 5,
+         "y": 91,
          "anim": "appear"
         },
         {
          "obj": "pieces",
-         "x": 7.2,
-         "y": 89.9,
+         "x": 7,
+         "y": 90,
          "anim": "rise"
         }
        ]
@@ -9864,14 +9864,14 @@ const GAME = {
      "fx": [
       {
        "obj": "neige",
-       "x": 75.9,
-       "y": 53.2,
+       "x": 77,
+       "y": 54,
        "anim": "fade"
       },
       {
        "obj": "pylone",
-       "x": 80.5,
-       "y": 55.1,
+       "x": 78,
+       "y": 56,
        "anim": "close",
        "delay": 0.3
       },
@@ -9885,8 +9885,8 @@ const GAME = {
       },
       {
        "obj": "etiquette",
-       "x": 77.1,
-       "y": 51,
+       "x": 77,
+       "y": 52,
        "anim": "appear",
        "label": "Remontées à l'arrêt",
        "delay": 1
@@ -9917,8 +9917,8 @@ const GAME = {
         },
         {
          "obj": "pylone",
-         "x": 78.2,
-         "y": 56.2,
+         "x": 78,
+         "y": 56,
          "anim": "grow"
         }
        ]
@@ -9971,8 +9971,8 @@ const GAME = {
        "fx": [
         {
          "obj": "pylone",
-         "x": 78.2,
-         "y": 55.9,
+         "x": 78,
+         "y": 56,
          "anim": "fade"
         },
         {
@@ -10001,14 +10001,14 @@ const GAME = {
        "fx": [
         {
          "obj": "chantier_grue",
-         "x": 76.7,
-         "y": 57.1,
+         "x": 77,
+         "y": 56,
          "anim": "appear"
         },
         {
          "obj": "pieces",
-         "x": 77.9,
-         "y": 54.9,
+         "x": 78,
+         "y": 55,
          "anim": "rise"
         }
        ]
@@ -10170,13 +10170,13 @@ const GAME = {
         {
          "obj": "pieces",
          "x": 28,
-         "y": 35.1,
+         "y": 34,
          "anim": "rise"
         },
         {
          "obj": "usine",
          "x": 28,
-         "y": 32.5,
+         "y": 34,
          "anim": "pulse"
         }
        ]
@@ -10257,14 +10257,14 @@ const GAME = {
        "fx": [
         {
          "obj": "pieces",
-         "x": 29.6,
-         "y": 34.6,
+         "x": 30,
+         "y": 35,
          "anim": "rise"
         },
         {
          "obj": "maison",
-         "x": 31.4,
-         "y": 36.4,
+         "x": 31,
+         "y": 36,
          "anim": "appear"
         }
        ]
@@ -10323,28 +10323,28 @@ const GAME = {
      "fx": [
       {
        "obj": "usine",
-       "x": 41.4,
-       "y": 16.5,
+       "x": 42,
+       "y": 18,
        "anim": "smoke"
       },
       {
        "obj": "incendie",
-       "x": 44.4,
-       "y": 20.3,
+       "x": 43,
+       "y": 19,
        "anim": "appear",
        "delay": 0.3
       },
       {
        "obj": "ecole",
-       "x": 40.3,
-       "y": 21.7,
+       "x": 40,
+       "y": 20,
        "anim": "close",
        "delay": 0.6
       },
       {
        "obj": "troupeau",
-       "x": 36.3,
-       "y": 18.6,
+       "x": 38,
+       "y": 19,
        "anim": "appear",
        "delay": 0.8
       },
@@ -10408,8 +10408,8 @@ const GAME = {
        "fx": [
         {
          "obj": "usine",
-         "x": 41.8,
-         "y": 17.8,
+         "x": 42,
+         "y": 18,
          "anim": "pulse"
         },
         {
@@ -10442,14 +10442,14 @@ const GAME = {
        "fx": [
         {
          "obj": "pieces",
-         "x": 39.3,
-         "y": 18.3,
+         "x": 39,
+         "y": 19,
          "anim": "rise"
         },
         {
          "obj": "ferme",
-         "x": 37.9,
-         "y": 20.6,
+         "x": 38,
+         "y": 20,
          "anim": "appear"
         }
        ]
@@ -10473,8 +10473,8 @@ const GAME = {
        "fx": [
         {
          "obj": "usine",
-         "x": 41.9,
-         "y": 17.9,
+         "x": 42,
+         "y": 18,
          "anim": "fade"
         },
         {
@@ -10503,14 +10503,14 @@ const GAME = {
        "fx": [
         {
          "obj": "pieces",
-         "x": 41.8,
-         "y": 19.2,
+         "x": 42,
+         "y": 18,
          "anim": "rise"
         },
         {
          "obj": "usine",
          "x": 42,
-         "y": 16.6,
+         "y": 18,
          "anim": "pulse"
         }
        ]
@@ -10534,13 +10534,13 @@ const GAME = {
         {
          "obj": "usine",
          "x": 42,
-         "y": 17.1,
+         "y": 18,
          "anim": "appear"
         },
         {
          "obj": "camion",
-         "x": 41.9,
-         "y": 19.6,
+         "x": 42,
+         "y": 19,
          "anim": "move",
          "to": {
           "x": 47,
@@ -10697,8 +10697,8 @@ const GAME = {
        "fx": [
         {
          "obj": "parlement",
-         "x": 52.4,
-         "y": 20.9,
+         "x": 52,
+         "y": 22,
          "anim": "appear"
         },
         {
@@ -10854,14 +10854,14 @@ const GAME = {
        "fx": [
         {
          "obj": "champ",
-         "x": 66.7,
-         "y": 40.7,
+         "x": 67,
+         "y": 41,
          "anim": "grow"
         },
         {
          "obj": "tracteur",
-         "x": 65.3,
-         "y": 42.8,
+         "x": 66,
+         "y": 42,
          "anim": "appear"
         }
        ]
@@ -11033,16 +11033,16 @@ const GAME = {
       },
       {
        "obj": "voiture_police",
-       "x": 37,
-       "y": 49.4,
+       "x": 36,
+       "y": 51,
        "anim": "appear",
        "count": 2,
        "delay": 0.6
       },
       {
        "obj": "champ",
-       "x": 37.1,
-       "y": 54.9,
+       "x": 36,
+       "y": 53,
        "anim": "appear",
        "delay": 0.8
       },
@@ -11081,7 +11081,7 @@ const GAME = {
         },
         {
          "obj": "tracteur",
-         "x": 35.8,
+         "x": 36,
          "y": 52,
          "anim": "appear"
         }
@@ -11105,14 +11105,14 @@ const GAME = {
        "fx": [
         {
          "obj": "chantier_grue",
-         "x": 35,
-         "y": 51.1,
+         "x": 34,
+         "y": 51,
          "anim": "close"
         },
         {
          "obj": "foule",
-         "x": 32.1,
-         "y": 49.2,
+         "x": 32,
+         "y": 50,
          "anim": "appear"
         }
        ]
@@ -11135,13 +11135,13 @@ const GAME = {
        "fx": [
         {
          "obj": "champ",
-         "x": 36.4,
-         "y": 52.8,
+         "x": 36,
+         "y": 53,
          "anim": "grow"
         },
         {
          "obj": "ferme",
-         "x": 34.1,
+         "x": 35,
          "y": 54,
          "anim": "appear"
         }
@@ -11166,14 +11166,14 @@ const GAME = {
        "fx": [
         {
          "obj": "pieces",
-         "x": 34.4,
-         "y": 50.8,
+         "x": 34,
+         "y": 51,
          "anim": "rise"
         },
         {
          "obj": "ferme",
-         "x": 34.8,
-         "y": 53.9,
+         "x": 35,
+         "y": 54,
          "anim": "pulse"
         }
        ]
@@ -11195,7 +11195,7 @@ const GAME = {
        "fx": [
         {
          "obj": "voiture_police",
-         "x": 36.3,
+         "x": 36,
          "y": 51,
          "anim": "appear",
          "count": 2
@@ -11420,15 +11420,15 @@ const GAME = {
        "fx": [
         {
          "obj": "usine",
-         "x": 8.1,
-         "y": 92.9,
+         "x": 8,
+         "y": 92,
          "anim": "grow",
          "stay": true
         },
         {
          "obj": "chantier_grue",
          "x": 6,
-         "y": 91.3,
+         "y": 91,
          "anim": "appear"
         }
        ]
@@ -11452,14 +11452,14 @@ const GAME = {
        "fx": [
         {
          "obj": "chantier_grue",
-         "x": 5.7,
-         "y": 92.2,
+         "x": 6,
+         "y": 91,
          "anim": "appear"
         },
         {
          "obj": "pieces",
          "x": 7,
-         "y": 89.9,
+         "y": 90,
          "anim": "rise"
         }
        ]
@@ -11484,14 +11484,14 @@ const GAME = {
        "fx": [
         {
          "obj": "pieces",
-         "x": 6.9,
-         "y": 89.6,
+         "x": 7,
+         "y": 90,
          "anim": "rise"
         },
         {
          "obj": "maison",
-         "x": 8.1,
-         "y": 91.9,
+         "x": 8,
+         "y": 91,
          "anim": "appear"
         }
        ]
@@ -11616,14 +11616,14 @@ const GAME = {
        "fx": [
         {
          "obj": "pieces",
-         "x": 37.7,
-         "y": 18.7,
+         "x": 37,
+         "y": 18,
          "anim": "rise"
         },
         {
          "obj": "usine",
-         "x": 35.9,
-         "y": 16.9,
+         "x": 37,
+         "y": 18,
          "anim": "appear"
         }
        ]
@@ -11688,8 +11688,8 @@ const GAME = {
         },
         {
          "obj": "pieces",
-         "x": 53.2,
-         "y": 24.5,
+         "x": 52,
+         "y": 24,
          "anim": "rise"
         }
        ]
@@ -11754,15 +11754,15 @@ const GAME = {
       },
       {
        "obj": "port",
-       "x": 25.4,
-       "y": 53.6,
+       "x": 27,
+       "y": 55,
        "anim": "appear",
        "delay": 0.3
       },
       {
        "obj": "foule",
-       "x": 30.1,
-       "y": 55.9,
+       "x": 29,
+       "y": 56,
        "anim": "appear",
        "delay": 0.6
       }
@@ -11819,8 +11819,8 @@ const GAME = {
         },
         {
          "obj": "pieces",
-         "x": 27.6,
-         "y": 56.7,
+         "x": 28,
+         "y": 56,
          "anim": "rise"
         }
        ]
@@ -11852,8 +11852,8 @@ const GAME = {
         },
         {
          "obj": "antenne",
-         "x": 27.6,
-         "y": 55.5,
+         "x": 27,
+         "y": 55,
          "anim": "appear"
         }
        ]
@@ -11935,8 +11935,8 @@ const GAME = {
        "fx": [
         {
          "obj": "pieces",
-         "x": 27.3,
-         "y": 55.3,
+         "x": 27,
+         "y": 55,
          "anim": "rise"
         }
        ]
@@ -12190,15 +12190,15 @@ const GAME = {
      "fx": [
       {
        "obj": "velo",
-       "x": 53.4,
-       "y": 22.6,
+       "x": 52,
+       "y": 24,
        "anim": "close",
        "count": 3
       },
       {
        "obj": "foule",
-       "x": 56.2,
-       "y": 25.5,
+       "x": 54,
+       "y": 25,
        "anim": "appear",
        "delay": 0.4
       },
@@ -12236,8 +12236,8 @@ const GAME = {
        "fx": [
         {
          "obj": "velo",
-         "x": 52.1,
-         "y": 24.1,
+         "x": 52,
+         "y": 24,
          "anim": "grow"
         },
         {
@@ -12265,14 +12265,14 @@ const GAME = {
        "fx": [
         {
          "obj": "pieces",
-         "x": 50.6,
-         "y": 24.2,
+         "x": 52,
+         "y": 24,
          "anim": "rise"
         },
         {
          "obj": "velo",
          "x": 53,
-         "y": 25.3,
+         "y": 25,
          "anim": "appear"
         }
        ]
@@ -12295,15 +12295,15 @@ const GAME = {
        "fx": [
         {
          "obj": "velo",
-         "x": 51.9,
-         "y": 23.9,
+         "x": 52,
+         "y": 24,
          "anim": "appear",
          "count": 3
         },
         {
          "obj": "pieces",
-         "x": 53.7,
-         "y": 25.7,
+         "x": 54,
+         "y": 25,
          "anim": "rise"
         }
        ]
@@ -12324,14 +12324,14 @@ const GAME = {
        "fx": [
         {
          "obj": "pieces",
-         "x": 51.5,
-         "y": 24.5,
+         "x": 52,
+         "y": 24,
          "anim": "rise"
         },
         {
          "obj": "foule",
          "x": 54,
-         "y": 25.1,
+         "y": 25,
          "anim": "appear"
         }
        ]
@@ -12390,22 +12390,22 @@ const GAME = {
      "fx": [
       {
        "obj": "manifestants",
-       "x": 6.7,
-       "y": 92.8,
+       "x": 7,
+       "y": 90,
        "anim": "appear"
       },
       {
        "obj": "voiture",
-       "x": 3.9,
-       "y": 91.4,
+       "x": 5,
+       "y": 91,
        "anim": "close",
        "count": 2,
        "delay": 0.3
       },
       {
        "obj": "ecole",
-       "x": 10.7,
-       "y": 89.2,
+       "x": 9,
+       "y": 89,
        "anim": "close",
        "delay": 0.6
       },
@@ -12437,14 +12437,14 @@ const GAME = {
        "fx": [
         {
          "obj": "hopital",
-         "x": 7.6,
-         "y": 88.1,
+         "x": 8,
+         "y": 89,
          "anim": "grow"
         },
         {
          "obj": "ecole",
-         "x": 9.3,
-         "y": 90.2,
+         "x": 9,
+         "y": 90,
          "anim": "grow"
         }
        ]
@@ -12466,15 +12466,15 @@ const GAME = {
        "fx": [
         {
          "obj": "voiture_police",
-         "x": 5.5,
-         "y": 89.1,
+         "x": 6,
+         "y": 90,
          "anim": "appear",
          "count": 2
         },
         {
          "obj": "commissariat",
-         "x": 9,
-         "y": 91.1,
+         "x": 8,
+         "y": 91,
          "anim": "appear"
         }
        ]
@@ -12503,8 +12503,8 @@ const GAME = {
         },
         {
          "obj": "voiture",
-         "x": 4.5,
-         "y": 90.8,
+         "x": 5,
+         "y": 91,
          "anim": "close"
         }
        ]
@@ -12527,8 +12527,8 @@ const GAME = {
        "fx": [
         {
          "obj": "mairie",
-         "x": 6.9,
-         "y": 89.6,
+         "x": 7,
+         "y": 90,
          "anim": "appear"
         },
         {
@@ -12557,14 +12557,14 @@ const GAME = {
        "fx": [
         {
          "obj": "mairie",
-         "x": 6.5,
-         "y": 89.5,
+         "x": 7,
+         "y": 90,
          "anim": "pulse"
         },
         {
          "obj": "pieces",
-         "x": 8.8,
-         "y": 90.9,
+         "x": 8,
+         "y": 91,
          "anim": "rise"
         }
        ]
@@ -12742,14 +12742,14 @@ const GAME = {
        "fx": [
         {
          "obj": "pieces",
-         "x": 52.5,
-         "y": 30.3,
+         "x": 52,
+         "y": 30,
          "anim": "rise"
         },
         {
          "obj": "ecole",
-         "x": 55,
-         "y": 30.5,
+         "x": 54,
+         "y": 31,
          "anim": "appear"
         }
        ]
@@ -12818,8 +12818,8 @@ const GAME = {
      "fx": [
       {
        "obj": "secheresse",
-       "x": 78.7,
-       "y": 42.4,
+       "x": 78,
+       "y": 44,
        "anim": "appear"
       },
       {
@@ -12835,8 +12835,8 @@ const GAME = {
       },
       {
        "obj": "maison",
-       "x": 81.3,
-       "y": 45.1,
+       "x": 80,
+       "y": 45,
        "anim": "appear",
        "count": 2,
        "delay": 0.6
@@ -12898,8 +12898,8 @@ const GAME = {
        "fx": [
         {
          "obj": "chantier_grue",
-         "x": 76,
-         "y": 44.1,
+         "x": 77,
+         "y": 44,
          "anim": "appear"
         },
         {
@@ -12932,14 +12932,14 @@ const GAME = {
        "fx": [
         {
          "obj": "secheresse",
-         "x": 77.9,
-         "y": 43.6,
+         "x": 78,
+         "y": 44,
          "anim": "pulse"
         },
         {
          "obj": "voiture_police",
-         "x": 78.6,
-         "y": 46,
+         "x": 79,
+         "y": 45,
          "anim": "appear"
         }
        ]
@@ -12962,8 +12962,8 @@ const GAME = {
        "fx": [
         {
          "obj": "troupeau",
-         "x": 78.8,
-         "y": 46.1,
+         "x": 79,
+         "y": 46,
          "anim": "appear"
         },
         {
@@ -12996,13 +12996,13 @@ const GAME = {
        "fx": [
         {
          "obj": "pieces",
-         "x": 77.6,
-         "y": 44.7,
+         "x": 78,
+         "y": 44,
          "anim": "rise"
         },
         {
          "obj": "maison",
-         "x": 80.1,
+         "x": 80,
          "y": 45,
          "anim": "appear"
         }
@@ -13319,8 +13319,8 @@ const GAME = {
      "fx": [
       {
        "obj": "immeuble",
-       "x": 74.4,
-       "y": 80.3,
+       "x": 72,
+       "y": 81,
        "anim": "shake",
        "count": 2
       },
@@ -13333,8 +13333,8 @@ const GAME = {
       },
       {
        "obj": "foule",
-       "x": 67.7,
-       "y": 78.8,
+       "x": 70,
+       "y": 80,
        "anim": "appear",
        "delay": 0.7
       },
@@ -13366,8 +13366,8 @@ const GAME = {
        "fx": [
         {
          "obj": "chantier_grue",
-         "x": 70.6,
-         "y": 81.2,
+         "x": 72,
+         "y": 81,
          "anim": "grow"
         },
         {
@@ -13395,8 +13395,8 @@ const GAME = {
        "fx": [
         {
          "obj": "commissariat",
-         "x": 71.1,
-         "y": 79.5,
+         "x": 71,
+         "y": 80,
          "anim": "appear"
         },
         {
@@ -13425,14 +13425,14 @@ const GAME = {
        "fx": [
         {
          "obj": "immeuble",
-         "x": 72.5,
-         "y": 81.2,
+         "x": 72,
+         "y": 81,
          "anim": "pulse"
         },
         {
          "obj": "maison",
-         "x": 70.1,
-         "y": 80.1,
+         "x": 70,
+         "y": 80,
          "anim": "appear"
         }
        ]
@@ -13455,18 +13455,18 @@ const GAME = {
        "fx": [
         {
          "obj": "immeuble",
-         "x": 70.2,
+         "x": 70,
          "y": 79,
          "anim": "appear"
         },
         {
          "obj": "bus",
-         "x": 71.9,
+         "x": 72,
          "y": 81,
          "anim": "move",
          "to": {
-          "x": 67.8,
-          "y": 78.2
+          "x": 69,
+          "y": 79
          }
         }
        ]
@@ -13488,14 +13488,14 @@ const GAME = {
        "fx": [
         {
          "obj": "pieces",
-         "x": 70.8,
-         "y": 80.5,
+         "x": 72,
+         "y": 81,
          "anim": "rise"
         },
         {
          "obj": "immeuble",
-         "x": 73.2,
-         "y": 81.5,
+         "x": 72,
+         "y": 81,
          "anim": "pulse"
         }
        ]
@@ -13536,25 +13536,25 @@ const GAME = {
      "fx": [
       {
        "obj": "troupeau",
-       "x": 12.9,
-       "y": 30.3,
+       "x": 15,
+       "y": 29,
        "anim": "appear"
       },
       {
        "obj": "ferme",
-       "x": 16.2,
-       "y": 32.2,
+       "x": 16,
+       "y": 30,
        "anim": "appear",
        "delay": 0.3
       },
       {
        "obj": "tracteur",
-       "x": 15.2,
-       "y": 25.9,
+       "x": 15,
+       "y": 28,
        "anim": "move",
        "to": {
-        "x": 10.5,
-        "y": 27.5
+        "x": 12,
+        "y": 27
        },
        "delay": 0.6
       },
@@ -13585,23 +13585,23 @@ const GAME = {
        "fx": [
         {
          "obj": "tracteur",
-         "x": 14.9,
-         "y": 27.1,
+         "x": 15,
+         "y": 28,
          "anim": "move",
          "to": {
-          "x": 9.9,
-          "y": 26.9
+          "x": 12,
+          "y": 27
          },
          "count": 2
         },
         {
          "obj": "camion",
-         "x": 16.7,
+         "x": 16,
          "y": 29,
          "anim": "move",
          "to": {
-          "x": 20.7,
-          "y": 32
+          "x": 18,
+          "y": 30
          }
         }
        ]
@@ -13623,14 +13623,14 @@ const GAME = {
        "fx": [
         {
          "obj": "troupeau",
-         "x": 14.5,
-         "y": 28.8,
+         "x": 15,
+         "y": 29,
          "anim": "fade"
         },
         {
          "obj": "ferme",
-         "x": 16.6,
-         "y": 30.4,
+         "x": 16,
+         "y": 30,
          "anim": "close"
         }
        ]
@@ -13653,14 +13653,14 @@ const GAME = {
        "fx": [
         {
          "obj": "pieces",
-         "x": 15.2,
-         "y": 28.7,
+         "x": 15,
+         "y": 29,
          "anim": "rise"
         },
         {
          "obj": "champ",
-         "x": 17.6,
-         "y": 29.6,
+         "x": 17,
+         "y": 30,
          "anim": "appear"
         }
        ]
@@ -13682,14 +13682,14 @@ const GAME = {
        "fx": [
         {
          "obj": "champ",
-         "x": 17.3,
-         "y": 29.9,
+         "x": 17,
+         "y": 30,
          "anim": "grow"
         },
         {
          "obj": "troupeau",
-         "x": 14.8,
-         "y": 28.9,
+         "x": 15,
+         "y": 29,
          "anim": "appear"
         }
        ]
@@ -13712,14 +13712,14 @@ const GAME = {
        "fx": [
         {
          "obj": "pieces",
-         "x": 16.1,
-         "y": 28.3,
+         "x": 15,
+         "y": 29,
          "anim": "rise"
         },
         {
          "obj": "troupeau",
-         "x": 14.1,
-         "y": 29.9,
+         "x": 15,
+         "y": 29,
          "anim": "appear"
         }
        ]
@@ -13856,14 +13856,14 @@ const GAME = {
        "fx": [
         {
          "obj": "ecole",
-         "x": 63.1,
-         "y": 79.1,
+         "x": 63,
+         "y": 79,
          "anim": "grow"
         },
         {
          "obj": "foret",
-         "x": 60.9,
-         "y": 77.6,
+         "x": 61,
+         "y": 78,
          "anim": "grow"
         }
        ]
@@ -13944,14 +13944,14 @@ const GAME = {
        "fx": [
         {
          "obj": "pieces",
-         "x": 61.3,
-         "y": 77.7,
+         "x": 62,
+         "y": 78,
          "anim": "rise"
         },
         {
          "obj": "ecole",
-         "x": 63.3,
-         "y": 79.4,
+         "x": 63,
+         "y": 79,
          "anim": "appear"
         }
        ]
@@ -13973,14 +13973,14 @@ const GAME = {
        "fx": [
         {
          "obj": "ecole",
-         "x": 63.4,
-         "y": 79.4,
+         "x": 63,
+         "y": 79,
          "anim": "pulse"
         },
         {
          "obj": "pieces",
-         "x": 61.4,
-         "y": 77.6,
+         "x": 62,
+         "y": 78,
          "anim": "rise"
         }
        ]
@@ -14027,19 +14027,19 @@ const GAME = {
       },
       {
        "obj": "foule",
-       "x": 5.9,
-       "y": 92.4,
+       "x": 6,
+       "y": 91,
        "anim": "appear",
        "delay": 0.3
       },
       {
        "obj": "ambulance",
-       "x": 6.8,
-       "y": 87.2,
+       "x": 7,
+       "y": 90,
        "anim": "move",
        "to": {
-        "x": 9.6,
-        "y": 91.4
+        "x": 8,
+        "y": 89
        },
        "delay": 0.6
       }
@@ -14064,8 +14064,8 @@ const GAME = {
        "fx": [
         {
          "obj": "camion",
-         "x": 3.5,
-         "y": 93.2,
+         "x": 5,
+         "y": 92,
          "anim": "move",
          "to": {
           "x": 7,
@@ -14074,8 +14074,8 @@ const GAME = {
         },
         {
          "obj": "foule",
-         "x": 5.9,
-         "y": 91.1,
+         "x": 7,
+         "y": 90,
          "anim": "fade"
         }
        ]
@@ -14096,14 +14096,14 @@ const GAME = {
        "fx": [
         {
          "obj": "foule",
-         "x": 5.8,
-         "y": 91.1,
+         "x": 6,
+         "y": 91,
          "anim": "appear"
         },
         {
          "obj": "maison",
-         "x": 8.4,
-         "y": 91.4,
+         "x": 8,
+         "y": 91,
          "anim": "appear"
         }
        ]
@@ -14131,8 +14131,8 @@ const GAME = {
         },
         {
          "obj": "cabinet_medical",
-         "x": 5.8,
-         "y": 89.8,
+         "x": 6,
+         "y": 90,
          "anim": "appear"
         }
        ]
@@ -14189,8 +14189,8 @@ const GAME = {
         },
         {
          "obj": "ambulance",
-         "x": 5.8,
-         "y": 89.9,
+         "x": 6,
+         "y": 90,
          "anim": "appear"
         }
        ]
@@ -14231,28 +14231,28 @@ const GAME = {
      "fx": [
       {
        "obj": "canicule",
-       "x": 66.6,
-       "y": 52.1,
+       "x": 66,
+       "y": 53,
        "anim": "appear"
       },
       {
        "obj": "foule",
-       "x": 69.3,
-       "y": 57.1,
+       "x": 67,
+       "y": 56,
        "anim": "appear",
        "delay": 0.3
       },
       {
        "obj": "immeuble",
-       "x": 62.8,
-       "y": 55.5,
+       "x": 65,
+       "y": 55,
        "anim": "close",
        "delay": 0.6
       },
       {
        "obj": "etiquette",
        "x": 66,
-       "y": 49.6,
+       "y": 51,
        "anim": "appear",
        "label": "Piscines fermées",
        "delay": 1
@@ -14276,14 +14276,14 @@ const GAME = {
        "fx": [
         {
          "obj": "ecole",
-         "x": 65.9,
+         "x": 66,
          "y": 55,
          "anim": "appear"
         },
         {
          "obj": "foule",
-         "x": 67.6,
-         "y": 56.9,
+         "x": 67,
+         "y": 56,
          "anim": "appear"
         }
        ]
@@ -14305,14 +14305,14 @@ const GAME = {
        "fx": [
         {
          "obj": "pieces",
-         "x": 66.2,
-         "y": 55.4,
+         "x": 66,
+         "y": 55,
          "anim": "rise"
         },
         {
          "obj": "mairie",
-         "x": 64.5,
-         "y": 53.6,
+         "x": 65,
+         "y": 54,
          "anim": "appear"
         }
        ]
@@ -14334,14 +14334,14 @@ const GAME = {
        "fx": [
         {
          "obj": "commerce",
-         "x": 65.4,
-         "y": 54.3,
+         "x": 66,
+         "y": 55,
          "anim": "appear"
         },
         {
          "obj": "pieces",
-         "x": 66.7,
-         "y": 56.5,
+         "x": 67,
+         "y": 56,
          "anim": "rise"
         }
        ]
@@ -14364,14 +14364,14 @@ const GAME = {
        "fx": [
         {
          "obj": "foule",
-         "x": 67.2,
-         "y": 56.1,
+         "x": 67,
+         "y": 56,
          "anim": "appear"
         },
         {
          "obj": "immeuble",
-         "x": 64.8,
-         "y": 54.9,
+         "x": 65,
+         "y": 55,
          "anim": "appear"
         }
        ]
@@ -14428,8 +14428,8 @@ const GAME = {
       },
       {
        "obj": "incendie",
-       "x": 48.2,
-       "y": 33.3,
+       "x": 46,
+       "y": 33,
        "anim": "smoke",
        "delay": 0.3
       },
@@ -14442,12 +14442,12 @@ const GAME = {
       },
       {
        "obj": "voiture_police",
-       "x": 43.4,
-       "y": 34.4,
+       "x": 44,
+       "y": 34,
        "anim": "move",
        "to": {
-        "x": 47.8,
-        "y": 32
+        "x": 46,
+        "y": 33
        },
        "delay": 0.9
       }
@@ -14471,8 +14471,8 @@ const GAME = {
        "fx": [
         {
          "obj": "voiture_police",
-         "x": 44.5,
-         "y": 33.6,
+         "x": 46,
+         "y": 33,
          "anim": "appear"
         },
         {
@@ -14501,8 +14501,8 @@ const GAME = {
        "fx": [
         {
          "obj": "chantier_grue",
-         "x": 45.4,
-         "y": 32.8,
+         "x": 46,
+         "y": 33,
          "anim": "grow"
         },
         {
@@ -14534,14 +14534,14 @@ const GAME = {
        "fx": [
         {
          "obj": "chantier_grue",
-         "x": 45.6,
+         "x": 46,
          "y": 33,
          "anim": "appear"
         },
         {
          "obj": "pieces",
-         "x": 50.1,
-         "y": 30.1,
+         "x": 50,
+         "y": 30,
          "anim": "rise"
         }
        ]
@@ -14564,7 +14564,7 @@ const GAME = {
         {
          "obj": "commissariat",
          "x": 52,
-         "y": 28.3,
+         "y": 28,
          "anim": "appear"
         },
         {
@@ -14611,8 +14611,8 @@ const GAME = {
      "fx": [
       {
        "obj": "supermarche",
-       "x": 9.6,
-       "y": 89.6,
+       "x": 8,
+       "y": 89,
        "anim": "pulse"
       },
       {
@@ -14625,7 +14625,7 @@ const GAME = {
       {
        "obj": "pieces",
        "x": 8,
-       "y": 86.6,
+       "y": 88,
        "anim": "rise",
        "delay": 0.6
       }
@@ -14676,14 +14676,14 @@ const GAME = {
        "fx": [
         {
          "obj": "supermarche",
-         "x": 8.2,
-         "y": 89.7,
+         "x": 8,
+         "y": 89,
          "anim": "appear"
         },
         {
          "obj": "pieces",
-         "x": 6.7,
-         "y": 87.5,
+         "x": 7,
+         "y": 88,
          "anim": "fade"
         }
        ]
@@ -14705,14 +14705,14 @@ const GAME = {
        "fx": [
         {
          "obj": "supermarche",
-         "x": 8.1,
-         "y": 89.2,
+         "x": 8,
+         "y": 89,
          "anim": "close"
         },
         {
          "obj": "mairie",
-         "x": 5.6,
-         "y": 89.3,
+         "x": 6,
+         "y": 90,
          "anim": "appear"
         }
        ]
@@ -14745,8 +14745,8 @@ const GAME = {
         },
         {
          "obj": "commerce",
-         "x": 7,
-         "y": 89.9,
+         "x": 8,
+         "y": 90,
          "anim": "appear"
         }
        ]
@@ -14770,14 +14770,14 @@ const GAME = {
        "fx": [
         {
          "obj": "champ",
-         "x": 5.9,
-         "y": 88.8,
+         "x": 6,
+         "y": 89,
          "anim": "grow"
         },
         {
          "obj": "ferme",
-         "x": 7.4,
-         "y": 90.9,
+         "x": 7,
+         "y": 91,
          "anim": "appear"
         }
        ]
@@ -14799,14 +14799,14 @@ const GAME = {
        "fx": [
         {
          "obj": "voiture_police",
-         "x": 6.6,
-         "y": 89.5,
+         "x": 6,
+         "y": 91,
          "anim": "appear"
         },
         {
          "obj": "manifestants",
-         "x": 5.6,
-         "y": 92,
+         "x": 6,
+         "y": 91,
          "anim": "fade"
         }
        ]
@@ -14959,8 +14959,8 @@ const GAME = {
        "fx": [
         {
          "obj": "pieces",
-         "x": 53.3,
-         "y": 23.6,
+         "x": 52,
+         "y": 24,
          "anim": "rise"
         }
        ]
@@ -15019,14 +15019,14 @@ const GAME = {
      "fx": [
       {
        "obj": "inondation",
-       "x": 23.3,
-       "y": 28.7,
+       "x": 22,
+       "y": 31,
        "anim": "appear"
       },
       {
        "obj": "maison",
-       "x": 23.8,
-       "y": 34.3,
+       "x": 23,
+       "y": 32,
        "anim": "shake",
        "delay": 0.3
       },
@@ -15095,14 +15095,14 @@ const GAME = {
        "fx": [
         {
          "obj": "champ",
-         "x": 16.8,
-         "y": 31.2,
+         "x": 18,
+         "y": 30,
          "anim": "appear"
         },
         {
          "obj": "inondation",
-         "x": 18.3,
-         "y": 29.1,
+         "x": 18,
+         "y": 30,
          "anim": "appear"
         }
        ]
@@ -15125,14 +15125,14 @@ const GAME = {
        "fx": [
         {
          "obj": "barrage",
-         "x": 18.9,
-         "y": 29.7,
+         "x": 20,
+         "y": 30,
          "anim": "grow"
         },
         {
          "obj": "chantier_grue",
-         "x": 20.5,
-         "y": 31.6,
+         "x": 21,
+         "y": 31,
          "anim": "appear"
         }
        ]
@@ -15154,14 +15154,14 @@ const GAME = {
        "fx": [
         {
          "obj": "chantier_grue",
-         "x": 21.8,
+         "x": 23,
          "y": 32,
          "anim": "fade"
         },
         {
          "obj": "mairie",
-         "x": 24.3,
-         "y": 31.8,
+         "x": 24,
+         "y": 31,
          "anim": "appear"
         }
        ]
@@ -15184,14 +15184,14 @@ const GAME = {
        "fx": [
         {
          "obj": "maison",
-         "x": 23.2,
-         "y": 32.1,
+         "x": 23,
+         "y": 32,
          "anim": "appear"
         },
         {
          "obj": "pieces",
-         "x": 21.1,
-         "y": 30.5,
+         "x": 22,
+         "y": 30,
          "anim": "rise"
         }
        ]
@@ -15214,14 +15214,14 @@ const GAME = {
        "fx": [
         {
          "obj": "pieces",
-         "x": 21.6,
-         "y": 31.1,
+         "x": 22,
+         "y": 31,
          "anim": "rise"
         },
         {
          "obj": "mairie",
-         "x": 24.2,
-         "y": 31.2,
+         "x": 24,
+         "y": 31,
          "anim": "appear"
         }
        ]
@@ -15262,14 +15262,14 @@ const GAME = {
      "fx": [
       {
        "obj": "usine",
-       "x": 51.8,
-       "y": 8.8,
+       "x": 53,
+       "y": 8,
        "anim": "smoke"
       },
       {
        "obj": "manifestants",
-       "x": 54.5,
-       "y": 10.5,
+       "x": 55,
+       "y": 9,
        "anim": "appear",
        "delay": 0.4
       },
@@ -15332,14 +15332,14 @@ const GAME = {
        "fx": [
         {
          "obj": "usine",
-         "x": 52.7,
-         "y": 7.9,
+         "x": 53,
+         "y": 8,
          "anim": "grow"
         },
         {
          "obj": "mairie",
-         "x": 57.1,
-         "y": 8.8,
+         "x": 56,
+         "y": 9,
          "anim": "appear"
         }
        ]
@@ -15392,14 +15392,14 @@ const GAME = {
        "fx": [
         {
          "obj": "usine",
-         "x": 52.9,
+         "x": 53,
          "y": 8,
          "anim": "grow"
         },
         {
          "obj": "pylone",
-         "x": 55.4,
-         "y": 7.7,
+         "x": 55,
+         "y": 8,
          "anim": "appear"
         }
        ]
@@ -15428,8 +15428,8 @@ const GAME = {
         },
         {
          "obj": "ecole",
-         "x": 56.3,
-         "y": 8.7,
+         "x": 56,
+         "y": 9,
          "anim": "appear"
         }
        ]
@@ -15451,8 +15451,8 @@ const GAME = {
        "fx": [
         {
          "obj": "pieces",
-         "x": 53.9,
-         "y": 7.4,
+         "x": 53,
+         "y": 8,
          "anim": "rise"
         }
        ]
@@ -15493,14 +15493,14 @@ const GAME = {
      "fx": [
       {
        "obj": "champ",
-       "x": 44.4,
-       "y": 38.4,
+       "x": 46,
+       "y": 40,
        "anim": "appear"
       },
       {
        "obj": "tracteur",
-       "x": 47.2,
-       "y": 43,
+       "x": 47,
+       "y": 41,
        "anim": "move",
        "to": {
         "x": 45,
@@ -15536,14 +15536,14 @@ const GAME = {
        "fx": [
         {
          "obj": "tracteur",
-         "x": 47.2,
-         "y": 41.2,
+         "x": 46,
+         "y": 40,
          "anim": "appear"
         },
         {
          "obj": "champ",
-         "x": 45.3,
-         "y": 39.3,
+         "x": 46,
+         "y": 40,
          "anim": "grow"
         }
        ]
@@ -15566,14 +15566,14 @@ const GAME = {
        "fx": [
         {
          "obj": "champ",
-         "x": 45.9,
-         "y": 39.9,
+         "x": 46,
+         "y": 40,
          "anim": "grow"
         },
         {
          "obj": "ferme",
-         "x": 48.4,
-         "y": 40.2,
+         "x": 48,
+         "y": 41,
          "anim": "appear"
         }
        ]
@@ -15626,13 +15626,13 @@ const GAME = {
         {
          "obj": "pieces",
          "x": 46,
-         "y": 40.3,
+         "y": 40,
          "anim": "rise"
         },
         {
          "obj": "ferme",
-         "x": 48.6,
-         "y": 40.7,
+         "x": 48,
+         "y": 41,
          "anim": "appear"
         }
        ]
@@ -15823,8 +15823,8 @@ const GAME = {
         },
         {
          "obj": "pieces",
-         "x": 31.4,
-         "y": 15.9,
+         "x": 31,
+         "y": 16,
          "anim": "rise"
         }
        ]
@@ -15895,14 +15895,14 @@ const GAME = {
      "fx": [
       {
        "obj": "voiture_police",
-       "x": 83.5,
-       "y": 22.5,
+       "x": 83,
+       "y": 23,
        "anim": "appear"
       },
       {
        "obj": "camion",
-       "x": 78.9,
-       "y": 23,
+       "x": 80,
+       "y": 24,
        "anim": "move",
        "to": {
         "x": 83,
@@ -15912,8 +15912,8 @@ const GAME = {
       },
       {
        "obj": "foule",
-       "x": 83.1,
-       "y": 25.8,
+       "x": 82,
+       "y": 24,
        "anim": "appear",
        "delay": 0.6
       }
@@ -15967,18 +15967,18 @@ const GAME = {
        "fx": [
         {
          "obj": "voiture_police",
-         "x": 82.4,
-         "y": 22.6,
+         "x": 82,
+         "y": 23,
          "anim": "move",
          "to": {
-          "x": 77.5,
-          "y": 23.4
+          "x": 80,
+          "y": 23
          }
         },
         {
          "obj": "voiture_police",
-         "x": 81.6,
-         "y": 23.7,
+         "x": 81,
+         "y": 24,
          "anim": "appear"
         }
        ]
@@ -16022,8 +16022,8 @@ const GAME = {
        "fx": [
         {
          "obj": "bus",
-         "x": 80.9,
-         "y": 24.6,
+         "x": 80,
+         "y": 24,
          "anim": "move",
          "to": {
           "x": 84,
@@ -16092,8 +16092,8 @@ const GAME = {
      "fx": [
       {
        "obj": "voiture",
-       "x": 78.1,
-       "y": 29,
+       "x": 79,
+       "y": 28,
        "anim": "smoke"
       },
       {
@@ -16105,8 +16105,8 @@ const GAME = {
       },
       {
        "obj": "manifestants",
-       "x": 77.2,
-       "y": 26.2,
+       "x": 78,
+       "y": 27,
        "anim": "appear",
        "delay": 0.6
       }
@@ -16130,14 +16130,14 @@ const GAME = {
        "fx": [
         {
          "obj": "pylone",
-         "x": 81,
-         "y": 26.9,
+         "x": 80,
+         "y": 28,
          "anim": "appear"
         },
         {
          "obj": "voiture",
-         "x": 78.9,
-         "y": 28.4,
+         "x": 79,
+         "y": 28,
          "anim": "fade"
         }
        ]
@@ -16160,12 +16160,12 @@ const GAME = {
        "fx": [
         {
          "obj": "voiture",
-         "x": 79.1,
-         "y": 28.1,
+         "x": 79,
+         "y": 28,
          "anim": "move",
          "to": {
-          "x": 83.4,
-          "y": 25.6
+          "x": 81,
+          "y": 27
          }
         }
        ]
@@ -16216,8 +16216,8 @@ const GAME = {
        "fx": [
         {
          "obj": "pieces",
-         "x": 80.3,
-         "y": 27.5,
+         "x": 80,
+         "y": 28,
          "anim": "rise"
         }
        ]
@@ -16276,28 +16276,28 @@ const GAME = {
      "fx": [
       {
        "obj": "chantier_grue",
-       "x": 56.4,
-       "y": 77.7,
+       "x": 55,
+       "y": 76,
        "anim": "close"
       },
       {
        "obj": "camion",
-       "x": 54.1,
-       "y": 79.3,
+       "x": 53,
+       "y": 77,
        "anim": "appear",
        "delay": 0.3
       },
       {
        "obj": "foret",
-       "x": 56.8,
-       "y": 74.3,
+       "x": 56,
+       "y": 75,
        "anim": "appear",
        "delay": 0.5
       },
       {
        "obj": "manifestants",
-       "x": 51.2,
-       "y": 74.6,
+       "x": 52,
+       "y": 76,
        "anim": "appear",
        "delay": 0.8
       }
@@ -16343,13 +16343,13 @@ const GAME = {
        "fx": [
         {
          "obj": "chantier_grue",
-         "x": 54.9,
-         "y": 76.1,
+         "x": 55,
+         "y": 76,
          "anim": "grow"
         },
         {
          "obj": "voiture",
-         "x": 52,
+         "x": 53,
          "y": 77,
          "anim": "move",
          "to": {
@@ -16377,14 +16377,14 @@ const GAME = {
        "fx": [
         {
          "obj": "foret",
-         "x": 54.7,
-         "y": 74.6,
+         "x": 55,
+         "y": 76,
          "anim": "grow"
         },
         {
          "obj": "champ",
-         "x": 53.3,
-         "y": 76.8,
+         "x": 54,
+         "y": 77,
          "anim": "appear"
         }
        ]
@@ -16407,7 +16407,7 @@ const GAME = {
         {
          "obj": "voiture",
          "x": 53,
-         "y": 76.9,
+         "y": 77,
          "anim": "appear"
         }
        ]
@@ -16454,8 +16454,8 @@ const GAME = {
        "fx": [
         {
          "obj": "pieces",
-         "x": 54.6,
-         "y": 75.7,
+         "x": 55,
+         "y": 76,
          "anim": "rise"
         }
        ]
@@ -16567,14 +16567,14 @@ const GAME = {
        "fx": [
         {
          "obj": "pieces",
-         "x": 73.6,
-         "y": 81,
+         "x": 74,
+         "y": 80,
          "anim": "rise"
         },
         {
          "obj": "voiture",
-         "x": 75.6,
-         "y": 79.5,
+         "x": 75,
+         "y": 80,
          "anim": "fade"
         }
        ]
@@ -16628,13 +16628,13 @@ const GAME = {
         {
          "obj": "commerce",
          "x": 74,
-         "y": 81.1,
+         "y": 80,
          "anim": "appear"
         },
         {
          "obj": "pieces",
-         "x": 73.9,
-         "y": 78.5,
+         "x": 74,
+         "y": 79,
          "anim": "rise"
         }
        ]
@@ -16676,13 +16676,13 @@ const GAME = {
       {
        "obj": "usine",
        "x": 47,
-       "y": 33.2,
+       "y": 35,
        "anim": "close"
       },
       {
        "obj": "manifestants",
-       "x": 49.9,
-       "y": 37.5,
+       "x": 48,
+       "y": 36,
        "anim": "appear",
        "delay": 0.3
       },
@@ -16744,8 +16744,8 @@ const GAME = {
        "fx": [
         {
          "obj": "usine",
-         "x": 46.9,
-         "y": 34.8,
+         "x": 47,
+         "y": 35,
          "anim": "grow"
         }
        ]
@@ -16767,8 +16767,8 @@ const GAME = {
        "fx": [
         {
          "obj": "entrepot",
-         "x": 45.7,
-         "y": 36.4,
+         "x": 46,
+         "y": 36,
          "anim": "appear"
         }
        ]
@@ -16790,14 +16790,14 @@ const GAME = {
        "fx": [
         {
          "obj": "ecole",
-         "x": 47.5,
-         "y": 36.5,
+         "x": 48,
+         "y": 36,
          "anim": "appear"
         },
         {
          "obj": "usine",
-         "x": 46.8,
-         "y": 34,
+         "x": 47,
+         "y": 35,
          "anim": "fade"
         }
        ]
@@ -16826,7 +16826,7 @@ const GAME = {
         {
          "obj": "pieces",
          "x": 47,
-         "y": 35.8,
+         "y": 35,
          "anim": "fade"
         }
        ]
@@ -16962,8 +16962,8 @@ const GAME = {
         },
         {
          "obj": "satellite",
-         "x": 51.9,
-         "y": 6.8,
+         "x": 52,
+         "y": 7,
          "anim": "appear"
         }
        ],
@@ -16986,7 +16986,7 @@ const GAME = {
         {
          "obj": "euro_flux",
          "x": 50,
-         "y": 6.7,
+         "y": 7,
          "anim": "flow",
          "to": {
           "x": 54,
@@ -16995,8 +16995,8 @@ const GAME = {
         },
         {
          "obj": "douane",
-         "x": 52.5,
-         "y": 7.9,
+         "x": 53,
+         "y": 9,
          "anim": "appear"
         }
        ],
@@ -17018,14 +17018,14 @@ const GAME = {
        "fx": [
         {
          "obj": "maison",
-         "x": 56.5,
-         "y": 10.1,
+         "x": 55,
+         "y": 10,
          "anim": "appear"
         },
         {
          "obj": "soignants",
          "x": 54,
-         "y": 9.3,
+         "y": 10,
          "anim": "appear"
         }
        ],
@@ -17047,14 +17047,14 @@ const GAME = {
        "fx": [
         {
          "obj": "loupe",
-         "x": 53.8,
-         "y": 8.9,
+         "x": 53,
+         "y": 9,
          "anim": "appear"
         },
         {
          "obj": "cadenas",
-         "x": 51.2,
-         "y": 8.4,
+         "x": 51,
+         "y": 9,
          "anim": "appear"
         }
        ],
@@ -17171,14 +17171,14 @@ const GAME = {
        "fx": [
         {
          "obj": "drapeau_ue",
-         "x": 62.8,
-         "y": 3.8,
+         "x": 63,
+         "y": 4,
          "anim": "grow"
         },
         {
          "obj": "batiment_ue",
-         "x": 64.6,
-         "y": 5.6,
+         "x": 64,
+         "y": 5,
          "anim": "pulse"
         }
        ]
@@ -17251,8 +17251,8 @@ const GAME = {
        "fx": [
         {
          "obj": "panneau",
-         "x": 53.2,
-         "y": 30.5,
+         "x": 52,
+         "y": 30,
          "anim": "appear",
          "label": "Pas de réaction"
         }
@@ -17355,12 +17355,12 @@ const GAME = {
        "fx": [
         {
          "obj": "euro_flux",
-         "x": 49.8,
-         "y": 43.9,
+         "x": 50,
+         "y": 44,
          "anim": "flow",
          "to": {
-          "x": 54.3,
-          "y": 46.1
+          "x": 52,
+          "y": 45
          }
         }
        ],
@@ -17382,8 +17382,8 @@ const GAME = {
        "fx": [
         {
          "obj": "camion",
-         "x": 47.8,
-         "y": 45.9,
+         "x": 48,
+         "y": 46,
          "anim": "fade"
         }
        ],
@@ -17425,8 +17425,8 @@ const GAME = {
      "fx": [
       {
        "obj": "chantier_grue",
-       "x": 49.8,
-       "y": 24.6,
+       "x": 50,
+       "y": 24,
        "anim": "pulse"
       },
       {
@@ -17442,8 +17442,8 @@ const GAME = {
       },
       {
        "obj": "panneau",
-       "x": 51.6,
-       "y": 22.4,
+       "x": 51,
+       "y": 23,
        "anim": "appear",
        "label": "Tunnel fermé",
        "delay": 0.5
@@ -17466,8 +17466,8 @@ const GAME = {
        "fx": [
         {
          "obj": "pieces",
-         "x": 47.8,
-         "y": 22.7,
+         "x": 48,
+         "y": 23,
          "anim": "appear"
         }
        ],
@@ -17517,8 +17517,8 @@ const GAME = {
        "fx": [
         {
          "obj": "chantier_grue",
-         "x": 49.8,
-         "y": 24.2,
+         "x": 50,
+         "y": 24,
          "anim": "grow"
         }
        ],
@@ -17647,14 +17647,14 @@ const GAME = {
        "fx": [
         {
          "obj": "douane",
-         "x": 41.2,
-         "y": 19.1,
+         "x": 40,
+         "y": 18,
          "anim": "appear"
         },
         {
          "obj": "loupe",
-         "x": 41.2,
-         "y": 16.4,
+         "x": 41,
+         "y": 17,
          "anim": "appear"
         }
        ],
@@ -18019,8 +18019,8 @@ const GAME = {
        "fx": [
         {
          "obj": "loupe",
-         "x": 51.7,
-         "y": 43.2,
+         "x": 52,
+         "y": 44,
          "anim": "appear"
         }
        ]
@@ -18041,12 +18041,12 @@ const GAME = {
        "fx": [
         {
          "obj": "pieces",
-         "x": 51.9,
-         "y": 44.1,
+         "x": 52,
+         "y": 45,
          "anim": "flow",
          "to": {
-          "x": 49.2,
-          "y": 48.3
+          "x": 50,
+          "y": 47
          }
         }
        ],
@@ -18332,8 +18332,8 @@ const GAME = {
        "fx": [
         {
          "obj": "batiment_ue",
-         "x": 64.2,
-         "y": 4.5,
+         "x": 63,
+         "y": 4,
          "anim": "pulse"
         }
        ]
@@ -18435,22 +18435,22 @@ const GAME = {
      "fx": [
       {
        "obj": "boulangerie",
-       "x": 51.1,
-       "y": 79.3,
+       "x": 50,
+       "y": 78,
        "anim": "pulse"
       },
       {
        "obj": "panneau",
-       "x": 53.1,
-       "y": 76.3,
+       "x": 52,
+       "y": 77,
        "anim": "appear",
        "label": "Carte dès 5 €",
        "delay": 0.3
       },
       {
        "obj": "personnage",
-       "x": 47.3,
-       "y": 79.5,
+       "x": 48,
+       "y": 79,
        "anim": "appear",
        "delay": 0.5
       }
@@ -18472,8 +18472,8 @@ const GAME = {
        "fx": [
         {
          "obj": "pieces",
-         "x": 48.9,
-         "y": 77.5,
+         "x": 50,
+         "y": 78,
          "anim": "appear"
         }
        ],
@@ -18495,8 +18495,8 @@ const GAME = {
        "fx": [
         {
          "obj": "panneau",
-         "x": 52.2,
-         "y": 76.6,
+         "x": 52,
+         "y": 77,
          "anim": "grow",
          "label": "Carte dès 5 €"
         }
@@ -18518,8 +18518,8 @@ const GAME = {
        "fx": [
         {
          "obj": "antenne",
-         "x": 50.5,
-         "y": 76.8,
+         "x": 51,
+         "y": 77,
          "anim": "appear"
         }
        ],
@@ -18561,21 +18561,21 @@ const GAME = {
      "fx": [
       {
        "obj": "ecole",
-       "x": 29.2,
-       "y": 39.4,
+       "x": 30,
+       "y": 39,
        "anim": "pulse"
       },
       {
        "obj": "eleves",
-       "x": 32.3,
-       "y": 40.1,
+       "x": 32,
+       "y": 40,
        "anim": "appear",
        "delay": 0.3
       },
       {
        "obj": "cadenas",
-       "x": 31.6,
-       "y": 37.5,
+       "x": 31,
+       "y": 38,
        "anim": "appear",
        "delay": 0.5
       }
@@ -18598,8 +18598,8 @@ const GAME = {
        "fx": [
         {
          "obj": "cadenas",
-         "x": 31.2,
-         "y": 37.8,
+         "x": 31,
+         "y": 38,
          "anim": "grow"
         }
        ],
@@ -18623,8 +18623,8 @@ const GAME = {
        "fx": [
         {
          "obj": "ecole",
-         "x": 29.7,
-         "y": 39.2,
+         "x": 30,
+         "y": 39,
          "anim": "blink"
         }
        ]
@@ -18839,28 +18839,28 @@ const GAME = {
      "fx": [
       {
        "obj": "ecole",
-       "x": 51.7,
-       "y": 23.9,
+       "x": 52,
+       "y": 24,
        "anim": "pulse"
       },
       {
        "obj": "eleves",
-       "x": 55.7,
+       "x": 54,
        "y": 25,
        "anim": "appear",
        "delay": 0.3
       },
       {
        "obj": "manifestants",
-       "x": 49,
-       "y": 24.6,
+       "x": 50,
+       "y": 25,
        "anim": "appear",
        "delay": 0.6
       },
       {
        "obj": "etiquette",
-       "x": 53.2,
-       "y": 21.7,
+       "x": 53,
+       "y": 22,
        "anim": "appear",
        "label": "900 € ?",
        "delay": 0.8
@@ -18884,18 +18884,18 @@ const GAME = {
        "fx": [
         {
          "obj": "ecole",
-         "x": 51.5,
-         "y": 23.6,
+         "x": 52,
+         "y": 24,
          "anim": "grow"
         },
         {
          "obj": "euro_flux",
-         "x": 53.3,
-         "y": 25.8,
+         "x": 54,
+         "y": 25,
          "anim": "flow",
          "to": {
-          "x": 50.4,
-          "y": 21.7
+          "x": 52,
+          "y": 24
          }
         }
        ],
@@ -18918,8 +18918,8 @@ const GAME = {
        "fx": [
         {
          "obj": "etiquette",
-         "x": 53.1,
-         "y": 21.7,
+         "x": 53,
+         "y": 22,
          "anim": "appear",
          "label": "+ modéré"
         }
@@ -18943,12 +18943,12 @@ const GAME = {
        "fx": [
         {
          "obj": "euro_flux",
-         "x": 50.5,
-         "y": 26.7,
+         "x": 50,
+         "y": 26,
          "anim": "flow",
          "to": {
-          "x": 52.9,
-          "y": 22.3
+          "x": 52,
+          "y": 24
          }
         }
        ],
@@ -19062,15 +19062,15 @@ const GAME = {
       },
       {
        "obj": "policiers",
-       "x": 8.3,
-       "y": 89.2,
+       "x": 9,
+       "y": 89,
        "anim": "appear",
        "delay": 0.3
       },
       {
        "obj": "maison",
-       "x": 10.2,
-       "y": 92.1,
+       "x": 10,
+       "y": 91,
        "anim": "pulse",
        "delay": 0.6
       }
@@ -19093,8 +19093,8 @@ const GAME = {
        "fx": [
         {
          "obj": "panneau",
-         "x": 9.2,
-         "y": 86.8,
+         "x": 9,
+         "y": 88,
          "anim": "appear",
          "label": "Droit du sol ?"
         }
@@ -19142,8 +19142,8 @@ const GAME = {
        "fx": [
         {
          "obj": "ecole",
-         "x": 10.8,
-         "y": 89.5,
+         "x": 10,
+         "y": 90,
          "anim": "appear"
         },
         {
@@ -19212,21 +19212,21 @@ const GAME = {
      "fx": [
       {
        "obj": "eleves",
-       "x": 53.8,
-       "y": 38.7,
+       "x": 52,
+       "y": 40,
        "anim": "pulse"
       },
       {
        "obj": "file_attente",
-       "x": 55.5,
-       "y": 41.9,
+       "x": 54,
+       "y": 41,
        "anim": "appear",
        "delay": 0.3
       },
       {
        "obj": "panneau",
-       "x": 49.3,
-       "y": 38.5,
+       "x": 50,
+       "y": 39,
        "anim": "appear",
        "label": "En attente",
        "delay": 0.5
@@ -19249,8 +19249,8 @@ const GAME = {
        "fx": [
         {
          "obj": "ecole",
-         "x": 50.9,
-         "y": 40.5,
+         "x": 52,
+         "y": 40,
          "anim": "appear"
         }
        ]
@@ -19272,8 +19272,8 @@ const GAME = {
        "fx": [
         {
          "obj": "cadenas",
-         "x": 51.5,
-         "y": 40.2,
+         "x": 52,
+         "y": 40,
          "anim": "appear"
         }
        ]
@@ -19295,8 +19295,8 @@ const GAME = {
        "fx": [
         {
          "obj": "ecole",
-         "x": 53.1,
-         "y": 41.2,
+         "x": 54,
+         "y": 41,
          "anim": "grow"
         }
        ],
@@ -19334,21 +19334,21 @@ const GAME = {
      "fx": [
       {
        "obj": "usine",
-       "x": 65.7,
-       "y": 58.2,
+       "x": 66,
+       "y": 58,
        "anim": "pulse"
       },
       {
        "obj": "personnage",
-       "x": 68.3,
-       "y": 59.1,
+       "x": 68,
+       "y": 59,
        "anim": "appear",
        "delay": 0.3
       },
       {
        "obj": "bulle",
-       "x": 64.9,
-       "y": 55.7,
+       "x": 65,
+       "y": 56,
        "anim": "appear",
        "label": "CSE",
        "delay": 0.5
@@ -19372,8 +19372,8 @@ const GAME = {
        "fx": [
         {
          "obj": "bulle",
-         "x": 64.9,
-         "y": 55.8,
+         "x": 65,
+         "y": 56,
          "anim": "grow",
          "label": "CSE"
         }
@@ -19396,7 +19396,7 @@ const GAME = {
         {
          "obj": "usine",
          "x": 66,
-         "y": 58.1,
+         "y": 58,
          "anim": "blink"
         }
        ]
@@ -19418,8 +19418,8 @@ const GAME = {
        "fx": [
         {
          "obj": "personnage",
-         "x": 68.2,
-         "y": 59.1,
+         "x": 68,
+         "y": 59,
          "anim": "grow"
         }
        ]
@@ -19478,28 +19478,28 @@ const GAME = {
      "fx": [
       {
        "obj": "maison",
-       "x": 30.1,
+       "x": 30,
        "y": 39,
        "anim": "pulse"
       },
       {
        "obj": "cadenas",
-       "x": 31.9,
-       "y": 36.9,
+       "x": 31,
+       "y": 38,
        "anim": "blink",
        "delay": 0.3
       },
       {
        "obj": "policiers",
-       "x": 27.6,
-       "y": 40.2,
+       "x": 28,
+       "y": 40,
        "anim": "appear",
        "delay": 0.6
       },
       {
        "obj": "personnage",
-       "x": 32.6,
-       "y": 39.4,
+       "x": 32,
+       "y": 40,
        "anim": "appear",
        "delay": 0.8
       }
@@ -19522,8 +19522,8 @@ const GAME = {
        "fx": [
         {
          "obj": "policiers",
-         "x": 28.2,
-         "y": 40.8,
+         "x": 29,
+         "y": 40,
          "anim": "grow"
         }
        ],
@@ -19545,12 +19545,12 @@ const GAME = {
        "fx": [
         {
          "obj": "euro_flux",
-         "x": 28.2,
-         "y": 37.3,
+         "x": 29,
+         "y": 38,
          "anim": "flow",
          "to": {
-          "x": 32,
-          "y": 40.9
+          "x": 30,
+          "y": 39
          }
         }
        ],
@@ -19572,8 +19572,8 @@ const GAME = {
        "fx": [
         {
          "obj": "maison",
-         "x": 33.4,
-         "y": 41.9,
+         "x": 33,
+         "y": 41,
          "anim": "appear"
         }
        ],
@@ -19596,7 +19596,7 @@ const GAME = {
         {
          "obj": "immeuble",
          "x": 31,
-         "y": 41.5,
+         "y": 41,
          "anim": "appear"
         }
        ],
@@ -19740,8 +19740,8 @@ const GAME = {
        "fx": [
         {
          "obj": "panneau",
-         "x": 31.2,
-         "y": 55.5,
+         "x": 30,
+         "y": 55,
          "anim": "appear",
          "label": "Soutien"
         }
@@ -19834,8 +19834,8 @@ const GAME = {
      "fx": [
       {
        "obj": "supermarche",
-       "x": 51.6,
-       "y": 44.6,
+       "x": 52,
+       "y": 45,
        "anim": "pulse"
       },
       {
@@ -19847,12 +19847,12 @@ const GAME = {
       },
       {
        "obj": "pieces",
-       "x": 53.6,
-       "y": 46.6,
+       "x": 53,
+       "y": 46,
        "anim": "flow",
        "to": {
-        "x": 50.1,
-        "y": 43.1
+        "x": 52,
+        "y": 45
        },
        "delay": 0.5
       }
@@ -19874,8 +19874,8 @@ const GAME = {
        "fx": [
         {
          "obj": "supermarche",
-         "x": 51.8,
-         "y": 44.8,
+         "x": 52,
+         "y": 45,
          "anim": "grow"
         }
        ]
@@ -19920,8 +19920,8 @@ const GAME = {
        "fx": [
         {
          "obj": "etiquette",
-         "x": 53.6,
-         "y": 42.6,
+         "x": 54,
+         "y": 43,
          "anim": "appear",
          "label": "2 plafonds"
         }
@@ -20111,7 +20111,7 @@ const GAME = {
       {
        "obj": "ferme",
        "x": 33,
-       "y": 60.3,
+       "y": 60,
        "anim": "pulse"
       },
       {
@@ -20134,8 +20134,8 @@ const GAME = {
       },
       {
        "obj": "etiquette",
-       "x": 33.2,
-       "y": 57.7,
+       "x": 34,
+       "y": 58,
        "anim": "appear",
        "label": "+15 %",
        "delay": 0.7
@@ -20159,8 +20159,8 @@ const GAME = {
        "fx": [
         {
          "obj": "douane",
-         "x": 30.8,
-         "y": 58.6,
+         "x": 30,
+         "y": 58,
          "anim": "appear"
         }
        ],
@@ -20183,12 +20183,12 @@ const GAME = {
        "fx": [
         {
          "obj": "euro_flux",
-         "x": 35.8,
-         "y": 58.2,
+         "x": 35,
+         "y": 58,
          "anim": "flow",
          "to": {
-          "x": 31.6,
-          "y": 60.9
+          "x": 33,
+          "y": 60
          }
         }
        ],
@@ -20239,8 +20239,8 @@ const GAME = {
        "fx": [
         {
          "obj": "bulle",
-         "x": 35.6,
-         "y": 56.8,
+         "x": 35,
+         "y": 57,
          "anim": "appear",
          "label": "Exemption ?"
         }
@@ -20308,8 +20308,8 @@ const GAME = {
      "fx": [
       {
        "obj": "ferme",
-       "x": 16.3,
-       "y": 30.1,
+       "x": 16,
+       "y": 30,
        "anim": "pulse"
       },
       {
@@ -20321,8 +20321,8 @@ const GAME = {
       },
       {
        "obj": "etiquette",
-       "x": 13.7,
-       "y": 28.9,
+       "x": 14,
+       "y": 29,
        "anim": "appear",
        "label": "Œufs +",
        "delay": 0.5
@@ -20347,7 +20347,7 @@ const GAME = {
        "fx": [
         {
          "obj": "ferme",
-         "x": 16.1,
+         "x": 16,
          "y": 30,
          "anim": "grow"
         }
@@ -20397,7 +20397,7 @@ const GAME = {
        "fx": [
         {
          "obj": "etiquette",
-         "x": 13.9,
+         "x": 14,
          "y": 29,
          "anim": "grow",
          "label": "Œufs +"
@@ -20436,22 +20436,22 @@ const GAME = {
      "fx": [
       {
        "obj": "panneau",
-       "x": 78.1,
-       "y": 81.4,
+       "x": 78,
+       "y": 81,
        "anim": "appear",
        "label": "Espace sans tabac"
       },
       {
        "obj": "foule",
-       "x": 75.4,
-       "y": 80.7,
+       "x": 76,
+       "y": 80,
        "anim": "pulse",
        "delay": 0.3
       },
       {
        "obj": "policiers",
-       "x": 79.1,
-       "y": 78.7,
+       "x": 79,
+       "y": 79,
        "anim": "appear",
        "delay": 0.6
       }
@@ -20475,7 +20475,7 @@ const GAME = {
         {
          "obj": "policiers",
          "x": 79,
-         "y": 78.9,
+         "y": 79,
          "anim": "grow"
         }
        ],
@@ -20498,8 +20498,8 @@ const GAME = {
        "fx": [
         {
          "obj": "panneau",
-         "x": 78.1,
-         "y": 81.1,
+         "x": 78,
+         "y": 81,
          "anim": "grow",
          "label": "Espace sans tabac"
         }
@@ -20522,8 +20522,8 @@ const GAME = {
        "fx": [
         {
          "obj": "etiquette",
-         "x": 76.3,
-         "y": 78.2,
+         "x": 76,
+         "y": 79,
          "anim": "appear",
          "label": "Coin fumeurs"
         }
@@ -20566,21 +20566,21 @@ const GAME = {
      "fx": [
       {
        "obj": "ecole",
-       "x": 46.1,
-       "y": 37.9,
+       "x": 46,
+       "y": 38,
        "anim": "pulse"
       },
       {
        "obj": "eleves",
-       "x": 48.4,
-       "y": 39.2,
+       "x": 48,
+       "y": 39,
        "anim": "appear",
        "delay": 0.3
       },
       {
        "obj": "panneau",
-       "x": 43.6,
-       "y": 36.9,
+       "x": 44,
+       "y": 37,
        "anim": "appear",
        "label": "Après-midi : ateliers",
        "delay": 0.5
@@ -20606,8 +20606,8 @@ const GAME = {
        "fx": [
         {
          "obj": "eleves",
-         "x": 48.3,
-         "y": 39.1,
+         "x": 48,
+         "y": 39,
          "anim": "grow"
         }
        ],
@@ -20629,7 +20629,7 @@ const GAME = {
        "fx": [
         {
          "obj": "ecole",
-         "x": 45.9,
+         "x": 46,
          "y": 38,
          "anim": "grow"
         }
@@ -20652,8 +20652,8 @@ const GAME = {
        "fx": [
         {
          "obj": "panneau",
-         "x": 43.7,
-         "y": 36.9,
+         "x": 44,
+         "y": 37,
          "anim": "appear",
          "label": "Inchangé"
         }
@@ -20719,8 +20719,8 @@ const GAME = {
       },
       {
        "obj": "antenne",
-       "x": 70.4,
-       "y": 22.7,
+       "x": 70,
+       "y": 22,
        "anim": "pulse",
        "delay": 0.3
       },
@@ -20733,8 +20733,8 @@ const GAME = {
       },
       {
        "obj": "policiers",
-       "x": 67.7,
-       "y": 23.1,
+       "x": 68,
+       "y": 23,
        "anim": "appear",
        "delay": 0.7
       }
@@ -20756,7 +20756,7 @@ const GAME = {
        "fx": [
         {
          "obj": "antenne",
-         "x": 70.1,
+         "x": 70,
          "y": 22,
          "anim": "grow"
         },
@@ -20834,8 +20834,8 @@ const GAME = {
        "fx": [
         {
          "obj": "loupe",
-         "x": 69.8,
-         "y": 20.2,
+         "x": 70,
+         "y": 21,
          "anim": "appear"
         }
        ],
@@ -21017,8 +21017,8 @@ const GAME = {
        "fx": [
         {
          "obj": "panneau",
-         "x": 61.2,
-         "y": 55.5,
+         "x": 60,
+         "y": 55,
          "anim": "appear",
          "label": "Pause"
         }
@@ -21057,8 +21057,8 @@ const GAME = {
      "fx": [
       {
        "obj": "aeroport",
-       "x": 66.1,
-       "y": 57.7,
+       "x": 66,
+       "y": 58,
        "anim": "pulse"
       },
       {
@@ -21070,8 +21070,8 @@ const GAME = {
       },
       {
        "obj": "panneau",
-       "x": 68.6,
-       "y": 57.1,
+       "x": 68,
+       "y": 57,
        "anim": "appear",
        "label": "Vols suspendus",
        "delay": 0.5
@@ -21094,8 +21094,8 @@ const GAME = {
        "fx": [
         {
          "obj": "etiquette",
-         "x": 66.7,
-         "y": 55.2,
+         "x": 67,
+         "y": 56,
          "anim": "appear",
          "label": "Immatriculé"
         }
@@ -21119,8 +21119,8 @@ const GAME = {
        "fx": [
         {
          "obj": "antenne",
-         "x": 67.7,
-         "y": 59.6,
+         "x": 67,
+         "y": 59,
          "anim": "appear"
         }
        ],
@@ -21142,8 +21142,8 @@ const GAME = {
        "fx": [
         {
          "obj": "personnage",
-         "x": 64.5,
-         "y": 59.7,
+         "x": 65,
+         "y": 59,
          "anim": "appear"
         }
        ]
@@ -21202,8 +21202,8 @@ const GAME = {
      "fx": [
       {
        "obj": "colis",
-       "x": 55.6,
-       "y": 11.7,
+       "x": 56,
+       "y": 10,
        "anim": "pulse"
       },
       {
@@ -21226,8 +21226,8 @@ const GAME = {
       },
       {
        "obj": "etiquette",
-       "x": 53.8,
-       "y": 8.4,
+       "x": 55,
+       "y": 9,
        "anim": "appear",
        "label": "Malus",
        "delay": 0.7
@@ -21252,8 +21252,8 @@ const GAME = {
        "fx": [
         {
          "obj": "etiquette",
-         "x": 54.7,
-         "y": 8.6,
+         "x": 55,
+         "y": 9,
          "anim": "grow",
          "label": "Malus"
         }
@@ -21276,8 +21276,8 @@ const GAME = {
        "fx": [
         {
          "obj": "fleche",
-         "x": 56.5,
-         "y": 8.6,
+         "x": 56,
+         "y": 9,
          "anim": "rise"
         }
        ],
@@ -21324,8 +21324,8 @@ const GAME = {
        "fx": [
         {
          "obj": "loupe",
-         "x": 56.3,
-         "y": 9.3,
+         "x": 56,
+         "y": 10,
          "anim": "appear"
         }
        ]
@@ -21385,8 +21385,8 @@ const GAME = {
      "fx": [
       {
        "obj": "colis",
-       "x": 52.4,
-       "y": 24.6,
+       "x": 52,
+       "y": 24,
        "anim": "pulse"
       },
       {
@@ -21402,8 +21402,8 @@ const GAME = {
       },
       {
        "obj": "etiquette",
-       "x": 53.1,
-       "y": 21.7,
+       "x": 53,
+       "y": 22,
        "anim": "appear",
        "label": "+2 €",
        "delay": 0.5
@@ -21427,8 +21427,8 @@ const GAME = {
        "fx": [
         {
          "obj": "etiquette",
-         "x": 53.1,
-         "y": 21.9,
+         "x": 53,
+         "y": 22,
          "anim": "grow",
          "label": "+2 €"
         }
@@ -21451,8 +21451,8 @@ const GAME = {
        "fx": [
         {
          "obj": "douane",
-         "x": 50.7,
-         "y": 22.6,
+         "x": 51,
+         "y": 23,
          "anim": "appear"
         }
        ],
@@ -21476,7 +21476,7 @@ const GAME = {
         {
          "obj": "colis",
          "x": 52,
-         "y": 24.1,
+         "y": 24,
          "anim": "grow"
         }
        ]
@@ -21604,8 +21604,8 @@ const GAME = {
        "fx": [
         {
          "obj": "panneau",
-         "x": 51.7,
-         "y": 37.7,
+         "x": 52,
+         "y": 38,
          "anim": "appear",
          "label": "Plus tard"
         }
@@ -21738,7 +21738,7 @@ const GAME = {
         {
          "obj": "bulle",
          "x": 52,
-         "y": 6.7,
+         "y": 7,
          "anim": "appear",
          "label": "Plus d'argent"
         }
@@ -22023,21 +22023,21 @@ const GAME = {
      "fx": [
       {
        "obj": "cabinet_medical",
-       "x": 46.4,
-       "y": 37.4,
+       "x": 46,
+       "y": 38,
        "anim": "pulse"
       },
       {
        "obj": "file_attente",
-       "x": 48.6,
-       "y": 38.7,
+       "x": 48,
+       "y": 39,
        "anim": "appear",
        "delay": 0.3
       },
       {
        "obj": "panneau",
-       "x": 43.6,
-       "y": 36.9,
+       "x": 44,
+       "y": 37,
        "anim": "appear",
        "label": "Rupture",
        "delay": 0.5
@@ -22061,8 +22061,8 @@ const GAME = {
        "fx": [
         {
          "obj": "usine",
-         "x": 46.7,
-         "y": 40.6,
+         "x": 47,
+         "y": 40,
          "anim": "appear"
         }
        ],
@@ -22085,8 +22085,8 @@ const GAME = {
        "fx": [
         {
          "obj": "entrepot",
-         "x": 44.7,
-         "y": 39.4,
+         "x": 45,
+         "y": 39,
          "anim": "appear"
         }
        ]
@@ -22167,28 +22167,28 @@ const GAME = {
      "fx": [
       {
        "obj": "mairie",
-       "x": 8.1,
-       "y": 91.9,
+       "x": 8,
+       "y": 92,
        "anim": "pulse"
       },
       {
        "obj": "manifestants",
-       "x": 10.5,
-       "y": 91.1,
+       "x": 10,
+       "y": 91,
        "anim": "appear",
        "delay": 0.3
       },
       {
        "obj": "policiers",
-       "x": 5.7,
-       "y": 93.1,
+       "x": 6,
+       "y": 93,
        "anim": "appear",
        "delay": 0.5
       },
       {
        "obj": "bulle",
-       "x": 8.9,
-       "y": 88.9,
+       "x": 9,
+       "y": 89,
        "anim": "appear",
        "label": "Accord ?",
        "delay": 0.7
@@ -22236,7 +22236,7 @@ const GAME = {
         {
          "obj": "bulle",
          "x": 9,
-         "y": 88.9,
+         "y": 89,
          "anim": "grow",
          "label": "Dialogue"
         }
@@ -22288,8 +22288,8 @@ const GAME = {
        "fx": [
         {
          "obj": "policiers",
-         "x": 5.8,
-         "y": 93.1,
+         "x": 6,
+         "y": 93,
          "anim": "grow"
         }
        ],
@@ -22361,21 +22361,21 @@ const GAME = {
      "fx": [
       {
        "obj": "immeuble",
-       "x": 74.1,
+       "x": 74,
        "y": 22,
        "anim": "pulse"
       },
       {
        "obj": "policiers",
-       "x": 76.6,
-       "y": 23.3,
+       "x": 76,
+       "y": 23,
        "anim": "appear",
        "delay": 0.3
       },
       {
        "obj": "personnage",
-       "x": 71.4,
-       "y": 22.5,
+       "x": 72,
+       "y": 23,
        "anim": "appear",
        "delay": 0.5
       }
@@ -22397,12 +22397,12 @@ const GAME = {
        "fx": [
         {
          "obj": "euro_flux",
-         "x": 72.3,
-         "y": 20.1,
+         "x": 73,
+         "y": 21,
          "anim": "flow",
          "to": {
-          "x": 76,
-          "y": 23.8
+          "x": 74,
+          "y": 22
          }
         }
        ],
@@ -22424,8 +22424,8 @@ const GAME = {
        "fx": [
         {
          "obj": "policiers",
-         "x": 76.4,
-         "y": 23.2,
+         "x": 76,
+         "y": 23,
          "anim": "grow"
         }
        ],
@@ -22448,8 +22448,8 @@ const GAME = {
        "fx": [
         {
          "obj": "maison",
-         "x": 72.2,
-         "y": 24.9,
+         "x": 72,
+         "y": 24,
          "anim": "appear"
         }
        ],
@@ -22487,8 +22487,8 @@ const GAME = {
      "fx": [
       {
        "obj": "supermarche",
-       "x": 53.6,
-       "y": 45.2,
+       "x": 52,
+       "y": 45,
        "anim": "pulse"
       },
       {
@@ -22501,8 +22501,8 @@ const GAME = {
       },
       {
        "obj": "personnage",
-       "x": 48.9,
-       "y": 46.5,
+       "x": 50,
+       "y": 46,
        "anim": "appear",
        "delay": 0.5
       }
@@ -22551,7 +22551,7 @@ const GAME = {
        "fx": [
         {
          "obj": "supermarche",
-         "x": 52.1,
+         "x": 52,
          "y": 45,
          "anim": "blink"
         }
@@ -22573,12 +22573,12 @@ const GAME = {
        "fx": [
         {
          "obj": "pieces",
-         "x": 51.1,
-         "y": 45.2,
+         "x": 52,
+         "y": 45,
          "anim": "flow",
          "to": {
-          "x": 47.1,
-          "y": 48.1
+          "x": 50,
+          "y": 46
          }
         }
        ],
@@ -22626,15 +22626,15 @@ const GAME = {
       },
       {
        "obj": "foret",
-       "x": 74.5,
-       "y": 74.9,
+       "x": 75,
+       "y": 75,
        "anim": "shake",
        "delay": 0.3
       },
       {
        "obj": "policiers",
-       "x": 79.4,
-       "y": 77.1,
+       "x": 79,
+       "y": 77,
        "anim": "appear",
        "delay": 0.6
       }
@@ -22656,8 +22656,8 @@ const GAME = {
        "fx": [
         {
          "obj": "policiers",
-         "x": 79.3,
-         "y": 77.2,
+         "x": 79,
+         "y": 77,
          "anim": "grow"
         }
        ]
@@ -22679,8 +22679,8 @@ const GAME = {
        "fx": [
         {
          "obj": "satellite",
-         "x": 76.1,
-         "y": 72.9,
+         "x": 76,
+         "y": 73,
          "anim": "appear"
         }
        ],
@@ -22703,8 +22703,8 @@ const GAME = {
        "fx": [
         {
          "obj": "foret",
-         "x": 74.7,
-         "y": 74.9,
+         "x": 75,
+         "y": 75,
          "anim": "grow"
         }
        ],

@@ -106,3 +106,4 @@
 - 7 situations ajoutées (A13, CSE, activités l'après-midi, incendies volontaires, vidéosurveillance algorithmique, permis de conduire, travail le dimanche) : semaines 21-26 et 30 à 4 situations.
 - `scripts/audit_fx.js [--fix]` : écarte les objets qui se chevauchent (distance mini 2,6), rallonge les déplacements trop courts (< 4), recentre la caméra sur les objets. Environ 1 300 chevauchements corrigés.
 - smoke.py attend 30 semaines.
+- Préférence d'Ewen : les chevauchements qui servent le décor (feu sur forêt, sapin au pied d'une montagne, foule devant un bâtiment, météo sur un lieu) sont voulus et ne doivent pas être écartés. `audit_fx.js` les ignore (liste DECOR) ; `restaure_decor.js` a rendu 632 positions d'origine.

@@ -1,8 +1,9 @@
 // Audit + correction : collisions d'objets, mouvements trop courts, zoom/caméra. Usage : node scripts/audit_fx.js [--fix]
 const fs=require('fs'),F=__dirname+'/../src/data/game_data.js',S=fs.readFileSync(F,'utf8'),A=S.indexOf('{'),B=S.lastIndexOf('}')+1,G=JSON.parse(S.slice(A,B));
 const FIX=process.argv.includes('--fix');const MIN=2.6;let col=0,mv=0,cam=0;
+const DECOR=new Set(['foret','champ','incendie','inondation','canicule','secheresse','neige','tempete','orage','moustique','foule','manifestants','barrage_agricole','policiers','soignants','eleves','file_attente','personnage','troupeau','bulle','etiquette','panneau','loupe','cadenas','euro_flux','fleche','pieces','drapeau_ue','frontiere','douane']);
 const d2=(a,b)=>Math.hypot(a.x-b.x,a.y-b.y);
-function spread(list){for(let it=0;it<30;it++){let moved=false;for(let i=0;i<list.length;i++)for(let j=i+1;j<list.length;j++){const a=list[i],b=list[j],d=d2(a,b);if(a.obj!==b.obj&&d<MIN){if(it==0)col++;if(!FIX)continue;let dx=b.x-a.x,dy=b.y-a.y;if(d<.01){dx=1;dy=.4;}const k=(MIN-d)/2/(Math.hypot(dx,dy));a.x=+(a.x-dx*k).toFixed(1);a.y=+(a.y-dy*k).toFixed(1);b.x=+(b.x+dx*k).toFixed(1);b.y=+(b.y+dy*k).toFixed(1);moved=true;}}if(!moved)break;}}
+function spread(list){for(let it=0;it<30;it++){let moved=false;for(let i=0;i<list.length;i++)for(let j=i+1;j<list.length;j++){const a=list[i],b=list[j],d=d2(a,b);if(a.obj!==b.obj&&!DECOR.has(a.obj)&&!DECOR.has(b.obj)&&d<MIN){if(it==0)col++;if(!FIX)continue;let dx=b.x-a.x,dy=b.y-a.y;if(d<.01){dx=1;dy=.4;}const k=(MIN-d)/2/(Math.hypot(dx,dy));a.x=+(a.x-dx*k).toFixed(1);a.y=+(a.y-dy*k).toFixed(1);b.x=+(b.x+dx*k).toFixed(1);b.y=+(b.y+dy*k).toFixed(1);moved=true;}}if(!moved)break;}}
 for(const d of G.days)for(const e of d.events){
  const all=[...(e.fx||[])];
  for(const c of e.choices||[]){spread([...all,...(c.fx||[])].filter(o=>!o.to||true));}
