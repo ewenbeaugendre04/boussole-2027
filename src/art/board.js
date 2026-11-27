@@ -31,7 +31,7 @@ function buildBoard(){
   h.push('<g opacity=".8" transform="translate(0,1.2)">' + NEIGH.map(function(n){ return '<path d="' + smooth(n, true) + '" fill="#C9E6DE"/>'; }).join('') + '</g><g opacity=".9">' + NEIGH.map(function(n){ return '<path d="' + smooth(n, true) + '" fill="var(--mist-land)"/>'; }).join('') + '</g>');
   h.push('<rect x="-500" y="-500" width="1100" height="1100" fill="url(#fog)" pointer-events="none"/>');
   // ressac
-  $('foamsvg').innerHTML = '<defs><mask id="noLandFoam" maskUnits="userSpaceOnUse" x="-500" y="-500" width="1100" height="1100"><rect x="-500" y="-500" width="1100" height="1100" fill="#fff"/>' + NEIGH.map(function(n){ return '<path d="' + smooth(n, true) + '" fill="#000" stroke="#000" stroke-width="3"/>'; }).join('') + '</mask></defs><g mask="url(#noLandFoam)">' + [fr, co].map(function(d){ return '<path class="wave w2" d="' + d + '" transform="translate(0,1.6)"/><path class="wave w1" d="' + d + '" transform="translate(0,1.6)"/><path class="foam" d="' + d + '" transform="translate(0,1.6)"/>'; }).join('') + '</g>';
+  $('foamsvg').innerHTML = '<defs><mask id="horsTerre" maskUnits="userSpaceOnUse" x="-500" y="-500" width="1100" height="1100"><rect x="-500" y="-500" width="1100" height="1100" fill="#fff"/>' + [0, .9, 1.8, 2.6].map(function(t){ return '<path d="' + fr + '" transform="translate(0,' + t + ')" fill="#000"/><path d="' + co + '" transform="translate(0,' + t + ')" fill="#000"/>'; }).join('') + '</mask><mask id="noLandFoam" maskUnits="userSpaceOnUse" x="-500" y="-500" width="1100" height="1100"><rect x="-500" y="-500" width="1100" height="1100" fill="#fff"/>' + NEIGH.map(function(n){ return '<path d="' + smooth(n, true) + '" fill="#000" stroke="#000" stroke-width="3"/>'; }).join('') + '</mask></defs><g mask="url(#noLandFoam)">' + [[fr, P(2.4, 46.7)], [co, P(9.1, 42.15)]].map(function(v){ var d = ' d="' + v[0] + '"', o = 'transform-origin:' + F(v[1][0]) + 'px ' + F(v[1][1]) + 'px'; return '<g mask="url(#horsTerre)"><path class="ressac r1" style="' + o + '"' + d + '/><path class="ressac r2" style="' + o + '"' + d + '/><path class="ecume"' + d + '/><path class="ecume" transform="translate(0,2.6)"' + d + '/></g>'; }).join('') + '</g>';
   // falaise (épaisseur du plateau)
   [fr, co].forEach(function(d){
     h.push('<path d="' + d + '" transform="translate(0,2.6)" fill="var(--cliff)"/>');
@@ -43,6 +43,11 @@ function buildBoard(){
   h.push('<g clip-path="url(#zCraie)"><path d="' + fr + '" transform="translate(0,2.6)" fill="var(--craie-2,#D9D2C2)"/><path d="' + fr + '" transform="translate(0,1.3)" fill="var(--craie,#F3EEE2)"/><path d="' + fr + '" transform="translate(0,2.0)" fill="none" stroke="var(--craie-2,#D9D2C2)" stroke-width=".25" stroke-dasharray=".5 .9"/></g>');
   h.push('<g clip-path="url(#zGranit)"><path d="' + fr + '" transform="translate(0,2.6)" fill="var(--granit-2,#B9806B)"/><path d="' + fr + '" transform="translate(0,1.3)" fill="var(--granit,#DCA48C)"/></g>');
   h.push('<g clip-path="url(#zPlage)"><path class="plage" d="' + fr + '" fill="none" stroke-width="3.4" stroke-linejoin="round"/></g>');
+  h.push('<path class="sable-bord" d="' + fr + '"/><path class="sable-bord" d="' + co + '"/>');
+  /* quelques rochers au ras de l'eau (côtes rocheuses réelles) */
+  [[-4.75, 48.45], [-4.6, 48.62], [-3.45, 48.86], [-3.1, 48.88], [-2.1, 48.68], [-4.5, 47.85], [-3.0, 47.45], [5.42, 43.19], [5.55, 43.2], [7.0, 43.5], [-1.8, 49.7], [0.25, 49.73]].forEach(function(q, i){
+    var c = P(q[0], q[1]); h.push('<g class="rocher" transform="translate(' + F(c[0] + (i % 2 ? .9 : -.7)) + ',' + F(c[1] + 1.9) + ')"><ellipse rx=".55" ry=".32" class="r-o"/><ellipse cx="-.1" cy="-.12" rx=".38" ry=".2" class="r-h"/></g>');
+  });
   h.push('<path id="frTop" class="land-top" d="' + fr + '"/><path id="coTop" class="land-top" d="' + co + '"/>');
   // décor intérieur, découpé sur l'île
   h.push('<g clip-path="url(#clipFr)">');

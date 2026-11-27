@@ -384,16 +384,18 @@ function flowParticles(el, fx, dx, dy, k, dl){
 
 /* ---------- Vagues : deux calques qui se relaient en fondu (aucune peinture par image) ---------- */
 function buildWaves(R){
-  var a = [], b = [], n = 0, tries = 0;
-  while(n < 150 && tries < 2000){
+  /* petites vagues : chaque crête se dessine, avance un peu vers la côte puis s'efface, chacune à son rythme */
+  var a = [], n = 0, tries = 0;
+  while(n < 190 && tries < 6000){
     tries++;
-    var x = -120 + R() * 340, y = -150 + R() * 380;
-    if(insideLand(x, y)) continue;
-    var w = 1.6 + R() * 1.6;
-    (n % 2 ? a : b).push('<path d="M' + F(x) + ',' + F(y) + 'q' + F(w / 2) + ',-.8 ' + F(w) + ',0"/>');
+    var x = -25 + R() * 155, y = -15 + R() * 135; /* autour du pays : là où le joueur regarde */
+    if(insideLand(x, y) || insideLand(x + 2.5, y) || insideLand(x, y + 2)) continue;
+    var w = 1.4 + R() * 1.4, dbl = R() < .45;
+    var d = 'M' + F(x) + ',' + F(y) + 'q' + F(w / 4) + ',-.55 ' + F(w / 2) + ',0' + (dbl ? 'q' + F(w / 4) + ',-.55 ' + F(w / 2) + ',0' : '');
+    a.push('<path class="wv" pathLength="10" d="' + d + '" style="animation-delay:-' + F(R() * 7) + 's;animation-duration:' + F(5.5 + R() * 3) + 's"/>');
     n++;
   }
-  $('wavesA').innerHTML = a.join(''); $('wavesB').innerHTML = b.join('');
+  $('wavesA').innerHTML = a.join(''); $('wavesB').innerHTML = '';
 }
 
 function insideLand(x, y){
