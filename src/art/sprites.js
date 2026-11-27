@@ -141,6 +141,7 @@ function sprItems(){
     if(MASK && !SPR_MARINE[it.id] && !/^(chaine|dune)/.test(it.id) && (terrainU(bx[0] - it.w * .3, it.y) === 0 || terrainU(bx[2] + it.w * .3, it.y) === 0 || terrainU(it.x, it.y + it.h * .35) === 0 || terrainU(it.x, it.y - it.h * .3) === 0)) return; /* marge : ni pieds dans l'eau ni collé au rivage */ /* pieds dans l'eau : non */
     var MTN = false;
     var clash = !it.pied && kept.some(function(k){ if(BIG_SPR.test(k.id) && !BIG_SPR.test(it.id)){ var m = (k.b[2] - k.b[0]) * .3; /* rien sous un grand massif : sa vraie image déborde largement de sa boîte */ if(bx[2] > k.b[0] - m && bx[0] < k.b[2] + m && bx[3] > k.b[1] - m && bx[1] < k.b[3] + m) return true; } if(MTN && /massif|pic|montagne|colline/.test(k.id)) return false; var ix = Math.min(bx[2], k.b[2]) - Math.max(bx[0], k.b[0]), iy = Math.min(bx[3], k.b[3]) - Math.max(bx[1], k.b[1]);
+      var CH = /^(ble|colza|vignes|serre|solaire|champ)/, BAT = /pavillon|maison|chalet|mas_|immeuble|haussmann|boulangerie|ferme|usine|gare|hopital|universite|stade|caserne|tour_|beffroi|cathedrale|palais/; if(ix > 0 && iy > 0 && ((CH.test(it.id) && BAT.test(k.id)) || (CH.test(k.id) && BAT.test(it.id))) && ix * iy > .04 * Math.min((bx[2] - bx[0]) * (bx[3] - bx[1]), (k.b[2] - k.b[0]) * (k.b[3] - k.b[1]))) return true; /* pas de champ sous une maison */
       var urb = /immeuble|haussmann|boulangerie|tour_bureaux/; var lim = urb.test(it.id) && urb.test(k.id) && Math.abs(it.y - k.y) > it.h * .12 ? .55 : .35; /* centre-ville : un immeuble peut en masquer un autre derrière lui */
       return ix > 0 && iy > 0 && ((BIG_SPR.test(k.id) !== BIG_SPR.test(it.id)) || ix * iy > lim * Math.min((bx[2] - bx[0]) * (bx[3] - bx[1]), (k.b[2] - k.b[0]) * (k.b[3] - k.b[1]))); });
     if(!clash && !it.pied && /^(pin|arbre|sapins)/.test(it.id)) clash = kept.some(function(k){ if(!/^(mt_|montagnes|massif|chaine|pin|arbre|sapins)/.test(k.id)) return false; var ix = Math.min(bx[2], k.b[2]) - Math.max(bx[0], k.b[0]), iy = Math.min(bx[3], k.b[3]) - Math.max(bx[1], k.b[1]); return ix > 0 && iy > 0 && ix * iy > (/^(pin|arbre|sapins)/.test(k.id) ? .15 : it.id === 'sapins' ? .3 : 0) * (bx[2] - bx[0]) * (bx[3] - bx[1]); });
@@ -184,9 +185,13 @@ function sprSvg(){
   items = items.filter(function(it){ if(BIG_SPR.test(it.id) || it.pied){ big.push(it); return false; } return true; });
   big.sort(function(a, b){ return a.y - b.y; });
   sprBig(big, nuit);
+  /* perspective : un élément marin juste derrière une côte (terre juste au sud) est caché par la terre et sa falaise */
+  var frD = $('frTop') ? $('frTop').getAttribute('d') : '', coD = $('coTop') ? $('coTop').getAttribute('d') : '';
+  if(frD) defs += '<mask id="derriereTerre" maskUnits="userSpaceOnUse" x="-500" y="-500" width="1100" height="1100"><rect x="-500" y="-500" width="1100" height="1100" fill="#fff"/>' + [0, 1.3, 2.6].map(function(t){ return '<path d="' + frD + '" transform="translate(0,' + t + ')"/><path d="' + coD + '" transform="translate(0,' + t + ')"/>'; }).join('') + '</mask>';
   items.forEach(function(it){
     if(!used[it.id]){ used[it.id] = 1; defs += '<image id="sp_' + it.id + '" href="' + (nuit && SPR_NUIT[it.id] || SPR_DATA[it.id]) + '" width="1" height="' + (SPR_AR[it.id] || 1) + '" preserveAspectRatio="none"/>'; }
-    uses += '<use href="#sp_' + it.id + '" transform="' + (it.r ? 'rotate(' + it.r + ' ' + F(it.x) + ' ' + F(it.y) + ') ' : '') + 'translate(' + F(it.f ? it.x + it.w / 2 : it.x - it.w / 2) + ',' + F(it.y - it.h * .86) + ') scale(' + (it.f ? '-' : '') + F(it.w) + ',' + F(it.w * (it.sy || 1)) + ')"/>';
+    var derriere = frD && SPR_MARINE[it.id] && MASK && [1.2, 2.4, 3.6].some(function(d){ return terrainU(it.x, it.y + d) === 1; });
+    uses += '<use' + (derriere ? ' mask="url(#derriereTerre)"' : '') + ' href="#sp_' + it.id + '" transform="' + (it.r ? 'rotate(' + it.r + ' ' + F(it.x) + ' ' + F(it.y) + ') ' : '') + 'translate(' + F(it.f ? it.x + it.w / 2 : it.x - it.w / 2) + ',' + F(it.y - it.h * .86) + ') scale(' + (it.f ? '-' : '') + F(it.w) + ',' + F(it.w * (it.sy || 1)) + ')"/>';
   });
   return '<defs>' + defs + '</defs><g>' + uses + '</g>';
 }

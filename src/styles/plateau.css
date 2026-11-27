@@ -13,7 +13,7 @@
 @keyframes wavA{0%,100%{opacity:0;transform:translate3d(0,0,0)}50%{opacity:.8;transform:translate3d(5px,0,0)}}
 #foamsvg{opacity:1}
 /* rivage : un trait d'écume net, et des ondes fines qui partent de la côte puis s'effacent (trait blanc couvert par la mer à l'intérieur) */
-.ecume{fill:none;stroke:#fff;stroke-width:.55;stroke-linejoin:round;opacity:.95}
+.ecume{fill:none;stroke:#fff;stroke-width:.6;stroke-linejoin:round;opacity:.95}
 /* ondes : copie fine du contour qui s'éloigne doucement du rivage puis s'efface */
 .ressac{fill:none;stroke:#fff;stroke-width:.24;stroke-linejoin:round;transform-box:view-box;opacity:0;animation:ressac 6.5s cubic-bezier(.25,.1,.35,1) infinite}
 .r2{animation-delay:-3.25s}

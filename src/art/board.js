@@ -31,7 +31,7 @@ function buildBoard(){
   h.push('<g opacity=".8" transform="translate(0,1.2)">' + NEIGH.map(function(n){ return '<path d="' + smooth(n, true) + '" fill="#C9E6DE"/>'; }).join('') + '</g><g opacity=".9">' + NEIGH.map(function(n){ return '<path d="' + smooth(n, true) + '" fill="var(--mist-land)"/>'; }).join('') + '</g>');
   h.push('<rect x="-500" y="-500" width="1100" height="1100" fill="url(#fog)" pointer-events="none"/>');
   // ressac
-  $('foamsvg').innerHTML = '<defs><mask id="horsTerre" maskUnits="userSpaceOnUse" x="-500" y="-500" width="1100" height="1100"><rect x="-500" y="-500" width="1100" height="1100" fill="#fff"/>' + [0, .9, 1.8, 2.6].map(function(t){ return '<path d="' + fr + '" transform="translate(0,' + t + ')" fill="#000"/><path d="' + co + '" transform="translate(0,' + t + ')" fill="#000"/>'; }).join('') + '</mask><mask id="noLandFoam" maskUnits="userSpaceOnUse" x="-500" y="-500" width="1100" height="1100"><rect x="-500" y="-500" width="1100" height="1100" fill="#fff"/>' + NEIGH.map(function(n){ return '<path d="' + smooth(n, true) + '" fill="#000" stroke="#000" stroke-width="3"/>'; }).join('') + '</mask></defs><g mask="url(#noLandFoam)">' + [[fr, P(2.4, 46.7)], [co, P(9.1, 42.15)]].map(function(v){ var d = ' d="' + v[0] + '"', o = 'transform-origin:' + F(v[1][0]) + 'px ' + F(v[1][1]) + 'px'; return '<g mask="url(#horsTerre)"><path class="ressac r1" style="' + o + '"' + d + '/><path class="ressac r2" style="' + o + '"' + d + '/><path class="ecume"' + d + '/><path class="ecume" transform="translate(0,2.6)"' + d + '/></g>'; }).join('') + '</g>';
+  $('foamsvg').innerHTML = '<defs><mask id="horsTerre" maskUnits="userSpaceOnUse" x="-500" y="-500" width="1100" height="1100"><rect x="-500" y="-500" width="1100" height="1100" fill="#fff"/>' + [0, .4, .8, 1.3, 1.8, 2.2, 2.6].map(function(t){ return '<path d="' + fr + '" transform="translate(0,' + t + ')" fill="#000"/><path d="' + co + '" transform="translate(0,' + t + ')" fill="#000"/>'; }).join('') + '</mask><mask id="noLandFoam" maskUnits="userSpaceOnUse" x="-500" y="-500" width="1100" height="1100"><rect x="-500" y="-500" width="1100" height="1100" fill="#fff"/>' + NEIGH.map(function(n){ return '<path d="' + smooth(n, true) + '" fill="#000" stroke="#000" stroke-width="3"/>'; }).join('') + '</mask></defs><g mask="url(#noLandFoam)">' + [[fr, P(2.4, 46.7)], [co, P(9.1, 42.15)]].map(function(v){ var d = ' d="' + v[0] + '"', o = 'transform-origin:' + F(v[1][0]) + 'px ' + F(v[1][1]) + 'px'; return '<g mask="url(#horsTerre)"><path class="ressac r1" style="' + o + '"' + d + '/><path class="ressac r2" style="' + o + '"' + d + '/><path class="ecume"' + d + '/><path class="ecume" transform="translate(0,2.6)"' + d + '/></g>'; }).join('') + '</g>';
   // falaise (épaisseur du plateau)
   [fr, co].forEach(function(d){
     h.push('<path d="' + d + '" transform="translate(0,2.6)" fill="var(--cliff)"/>');
@@ -39,16 +39,16 @@ function buildBoard(){
   });
   /* falaises claires (craie normande, calanques) et granit rose breton : on recolore l'épaisseur du plateau localement */
   function zones(id, list){ return '<clipPath id="' + id + '">' + list.map(function(z){ var c = P(z[0], z[1]); return '<ellipse cx="' + F(c[0]) + '" cy="' + F(c[1]) + '" rx="' + F(z[2] * 7) + '" ry="' + F(z[2] * 5) + '"/>'; }).join('') + '</clipPath>'; }
-  h.push('<defs>' + zones('zCraie', [[0.75, 49.85, .75], [1.45, 50.75, .3], [5.5, 43.2, .35]]) + zones('zGranit', [[-3.6, 48.75, .7], [-4.6, 48.35, .4]]) + zones('zPlage', [[-1.25, 44.3, 1.25], [-1.25, 45.4, .5], [-1.9, 46.6, .5], [3.55, 43.35, .75], [4.2, 43.5, .3], [1.6, 50.35, .3], [-0.5, 49.35, .35], [-1.5, 43.5, .2]]) + '</defs>');
+  h.push('<defs>' + zones('zCraie', [[0.75, 49.85, .75], [1.45, 50.75, .3], [5.5, 43.2, .35]]) + zones('zGranit', [[-3.6, 48.75, .7], [-4.6, 48.35, .4]]) + zones('zPlage', [[-1.25, 44.3, 1.25], [-1.25, 45.4, .5], [-1.9, 46.6, .5], [3.55, 43.35, .75], [4.2, 43.5, .3], [-1.5, 43.5, .2], [6.95, 43.55, .3], [7.2, 43.66, .2], [6.6, 43.27, .25], [6.2, 43.12, .25]]) + '</defs>');
   h.push('<g clip-path="url(#zCraie)"><path d="' + fr + '" transform="translate(0,2.6)" fill="var(--craie-2,#D9D2C2)"/><path d="' + fr + '" transform="translate(0,1.3)" fill="var(--craie,#F3EEE2)"/><path d="' + fr + '" transform="translate(0,2.0)" fill="none" stroke="var(--craie-2,#D9D2C2)" stroke-width=".25" stroke-dasharray=".5 .9"/></g>');
   h.push('<g clip-path="url(#zGranit)"><path d="' + fr + '" transform="translate(0,2.6)" fill="var(--granit-2,#B9806B)"/><path d="' + fr + '" transform="translate(0,1.3)" fill="var(--granit,#DCA48C)"/></g>');
-  h.push('<g clip-path="url(#zPlage)"><path class="plage" d="' + fr + '" fill="none" stroke-width="3.4" stroke-linejoin="round"/></g>');
-  h.push('<path class="sable-bord" d="' + fr + '"/><path class="sable-bord" d="' + co + '"/>');
+  h.push('<path class="sable-bord" d="' + fr + '" transform="translate(0,.8)"/><path class="sable-bord" d="' + co + '" transform="translate(0,.8)"/>'); /* sable : visible seulement sur les bords tournés vers le sud (perspective) */
   /* quelques rochers au ras de l'eau (côtes rocheuses réelles) */
   [[-4.75, 48.45], [-4.6, 48.62], [-3.45, 48.86], [-3.1, 48.88], [-2.1, 48.68], [-4.5, 47.85], [-3.0, 47.45], [5.42, 43.19], [5.55, 43.2], [7.0, 43.5], [-1.8, 49.7], [0.25, 49.73]].forEach(function(q, i){
     var c = P(q[0], q[1]); h.push('<g class="rocher" transform="translate(' + F(c[0] + (i % 2 ? .9 : -.7)) + ',' + F(c[1] + 1.9) + ')"><ellipse rx=".55" ry=".32" class="r-o"/><ellipse cx="-.1" cy="-.12" rx=".38" ry=".2" class="r-h"/></g>');
   });
   h.push('<path id="frTop" class="land-top" d="' + fr + '"/><path id="coTop" class="land-top" d="' + co + '"/>');
+  h.push('<g clip-path="url(#zPlage)"><g clip-path="url(#clipFr)"><path class="plage" d="' + fr + '" fill="none" stroke-width="3.4" stroke-linejoin="round"/></g></g>'); /* la plage reste sur la terre : l'eau commence à son bord */
   // décor intérieur, découpé sur l'île
   h.push('<g clip-path="url(#clipFr)">');
   h.push('<rect x="-10" y="-10" width="130" height="120" fill="url(#landlight)"/>');
@@ -107,7 +107,7 @@ function buildBoard(){
    [-1.0,43.0,.8,0],[-0.4,42.95,1,1],[0.2,42.85,1.15,1],[0.8,42.82,1.05,1],[1.4,42.72,.95,1],[2.0,42.62,.85,0],[2.5,42.56,.75,0],
    [9.05,42.25,.8,1],[9.15,42.45,.65,0]].forEach(function(m){ mountain(m[0], m[1], m[2], m[3]); });
   [[2.8,45.5,1.1],[3.0,45.0,1.3],[2.5,44.85,.9],[3.6,44.5,1],[2.95,45.9,.9],[3.9,45.25,.8],[7.0,48.25,.9],[6.9,47.9,1],[5.9,46.6,.8],[6.2,46.9,.75],[5.7,46.3,.7],[4.1,47.2,.7],[4.6,49.8,.6]].forEach(function(m){ hill(m[0], m[1], m[2]); });
-  forest(-0.85,44.3,14,7); forest(-0.6,44.0,6,5); forest(2.0,47.55,6,5); forest(4.75,49.85,5,4); forest(4.0,47.15,6,4); forest(7.05,48.45,6,3); forest(-3.3,48.15,5,5);
+  forest(-0.5,44.3,14,5); forest(-0.35,44.0,6,4); /* Landes : assez loin du rivage */ forest(2.0,47.55,6,5); forest(4.75,49.85,5,4); forest(4.0,47.15,6,4); forest(7.05,48.45,6,3); forest(-3.3,48.15,5,5);
   forest(2.7,48.4,4,3); forest(-0.6,48.8,4,4); forest(5.7,44.2,4,4); forest(1.4,45.1,5,6); forest(9.15,41.85,3,2);
   city(2.35,48.85,8,true); city(4.84,45.76,5); city(5.37,43.3,5); city(3.07,50.63,4); city(1.44,43.6,4); city(-0.58,44.84,4); city(-1.55,47.22,3); city(7.75,48.58,3);
   city(-1.68,48.11,3); city(7.26,43.7,3); city(3.88,43.6,3); city(-4.48,48.39,2); city(3.08,45.78,2); city(5.04,47.32,2); city(1.1,49.44,2); city(8.74,41.92,2); city(9.45,42.7,1); city(1.9,47.9,2); city(1.26,45.83,2); city(6.18,48.69,2); city(0.1,49.5,2); city(-0.37,49.18,2);

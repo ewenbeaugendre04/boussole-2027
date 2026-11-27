@@ -844,7 +844,7 @@ const GAME = {
          "obj": "hopital",
          "x": 54,
          "y": 27,
-         "anim": "appear"
+         "anim": "grow"
         },
         {
          "obj": "pylone",
@@ -1057,7 +1057,7 @@ const GAME = {
          "obj": "personnage",
          "x": 54,
          "y": 25,
-         "anim": "appear",
+         "anim": "pulse",
          "count": 3
         },
         {
@@ -4145,7 +4145,7 @@ const GAME = {
          "obj": "mairie",
          "x": 45,
          "y": 45,
-         "anim": "appear",
+         "anim": "grow",
          "count": 3
         },
         {
@@ -5198,7 +5198,7 @@ const GAME = {
          "obj": "cabinet_medical",
          "x": 71,
          "y": 55,
-         "anim": "appear"
+         "anim": "grow"
         },
         {
          "obj": "troupeau",
@@ -5580,7 +5580,7 @@ const GAME = {
        "obj": "supermarche",
        "x": 41,
        "y": 20,
-       "anim": "appear"
+       "anim": "grow"
       },
       {
        "obj": "etiquette",
@@ -6175,7 +6175,7 @@ const GAME = {
          "obj": "chantier_grue",
          "x": 51,
          "y": 8,
-         "anim": "appear"
+         "anim": "grow"
         }
        ],
        "terme": "court"
@@ -6224,7 +6224,7 @@ const GAME = {
          "obj": "maison",
          "x": 53,
          "y": 9,
-         "anim": "appear"
+         "anim": "grow"
         }
        ],
        "terme": "court"
@@ -8032,7 +8032,7 @@ const GAME = {
          "obj": "immeuble",
          "x": 78,
          "y": 24,
-         "anim": "appear"
+         "anim": "grow"
         },
         {
          "obj": "foule",
@@ -8754,7 +8754,7 @@ const GAME = {
          "obj": "foule",
          "x": 52,
          "y": 40,
-         "anim": "appear"
+         "anim": "pulse"
         },
         {
          "obj": "soignants",
@@ -9558,7 +9558,7 @@ const GAME = {
          "obj": "cabinet_medical",
          "x": 42,
          "y": 46,
-         "anim": "appear"
+         "anim": "grow"
         },
         {
          "obj": "soignants",
@@ -9654,7 +9654,7 @@ const GAME = {
        "obj": "champ",
        "x": 6,
        "y": 90,
-       "anim": "appear"
+       "anim": "pulse"
       },
       {
        "obj": "ferme",
@@ -9728,7 +9728,11 @@ const GAME = {
          "obj": "tracteur",
          "x": 6,
          "y": 90,
-         "anim": "appear"
+         "anim": "move",
+         "to": {
+          "x": 10,
+          "y": 90.6
+         }
         },
         {
          "obj": "cabinet_medical",
@@ -9942,8 +9946,12 @@ const GAME = {
          "obj": "velo",
          "x": 76.7,
          "y": 56.3,
-         "anim": "appear",
-         "count": 2
+         "anim": "move",
+         "count": 2,
+         "to": {
+          "x": 80.7,
+          "y": 56.9
+         }
         },
         {
          "obj": "maison",
@@ -10348,7 +10356,7 @@ const GAME = {
          "obj": "pieces",
          "x": 48,
          "y": 23,
-         "anim": "appear"
+         "anim": "rise"
         }
        ],
        "budget_note": "Compensation du péage : faible coût, le déficit augmente très peu."
@@ -10863,7 +10871,7 @@ const GAME = {
          "obj": "antenne",
          "x": 53.2,
          "y": 25.9,
-         "anim": "appear"
+         "anim": "grow"
         },
         {
          "obj": "satellite",
@@ -10892,7 +10900,7 @@ const GAME = {
          "obj": "satellite",
          "x": 55.4,
          "y": 21.8,
-         "anim": "appear"
+         "anim": "pulse"
         },
         {
          "obj": "voiture_police",
@@ -11052,7 +11060,7 @@ const GAME = {
          "obj": "champ",
          "x": 67,
          "y": 41,
-         "anim": "appear"
+         "anim": "pulse"
         },
         {
          "obj": "etiquette",
@@ -11332,8 +11340,12 @@ const GAME = {
          "obj": "voiture_police",
          "x": 36,
          "y": 51,
-         "anim": "appear",
-         "count": 2
+         "anim": "move",
+         "count": 2,
+         "to": {
+          "x": 40,
+          "y": 51.6
+         }
         },
         {
          "obj": "barrage",
@@ -12236,7 +12248,7 @@ const GAME = {
        "obj": "ecole",
        "x": 51.8,
        "y": 29.9,
-       "anim": "appear"
+       "anim": "grow"
       },
       {
        "obj": "ecole",
@@ -12370,7 +12382,7 @@ const GAME = {
          "obj": "antenne",
          "x": 54.3,
          "y": 31.1,
-         "anim": "appear"
+         "anim": "grow"
         },
         {
          "obj": "ecole",
@@ -12401,7 +12413,7 @@ const GAME = {
          "obj": "usine",
          "x": 56,
          "y": 32,
-         "anim": "appear"
+         "anim": "grow"
         },
         {
          "obj": "ecole",
@@ -12725,8 +12737,12 @@ const GAME = {
          "obj": "voiture_police",
          "x": 6,
          "y": 90,
-         "anim": "appear",
-         "count": 2
+         "anim": "move",
+         "count": 2,
+         "to": {
+          "x": 10,
+          "y": 90.6
+         }
         },
         {
          "obj": "commissariat",
@@ -12786,7 +12802,7 @@ const GAME = {
          "obj": "mairie",
          "x": 7,
          "y": 90,
-         "anim": "appear"
+         "anim": "grow"
         },
         {
          "obj": "parlement",
@@ -12971,7 +12987,7 @@ const GAME = {
          "obj": "usine",
          "x": 56.9,
          "y": 32,
-         "anim": "appear"
+         "anim": "grow"
         },
         {
          "obj": "ecole",
@@ -13629,7 +13645,11 @@ const GAME = {
          "obj": "tgv",
          "x": 76,
          "y": 32,
-         "anim": "appear"
+         "anim": "move",
+         "to": {
+          "x": 80,
+          "y": 32.6
+         }
         },
         {
          "obj": "usine",
@@ -13783,7 +13803,7 @@ const GAME = {
          "obj": "commissariat",
          "x": 71,
          "y": 80,
-         "anim": "appear"
+         "anim": "grow"
         },
         {
          "obj": "voiture_police",
@@ -14302,7 +14322,7 @@ const GAME = {
          "obj": "ecole",
          "x": 62.9,
          "y": 79,
-         "anim": "appear"
+         "anim": "grow"
         },
         {
          "obj": "pylone",
@@ -14484,7 +14504,7 @@ const GAME = {
          "obj": "foule",
          "x": 6,
          "y": 91,
-         "anim": "appear"
+         "anim": "pulse"
         },
         {
          "obj": "maison",
@@ -14513,7 +14533,7 @@ const GAME = {
          "obj": "hopital",
          "x": 9,
          "y": 89.2,
-         "anim": "appear"
+         "anim": "grow"
         },
         {
          "obj": "cabinet_medical",
@@ -14664,7 +14684,7 @@ const GAME = {
          "obj": "ecole",
          "x": 66,
          "y": 55,
-         "anim": "appear"
+         "anim": "grow"
         },
         {
          "obj": "foule",
@@ -14752,7 +14772,7 @@ const GAME = {
          "obj": "foule",
          "x": 67,
          "y": 56,
-         "anim": "appear"
+         "anim": "pulse"
         },
         {
          "obj": "immeuble",
@@ -14800,7 +14820,7 @@ const GAME = {
        "obj": "chien",
        "x": 49,
        "y": 78,
-       "anim": "appear"
+       "anim": "pulse"
       },
       {
        "obj": "chat",
@@ -14861,7 +14881,7 @@ const GAME = {
          "obj": "pieces",
          "x": 50,
          "y": 77,
-         "anim": "appear"
+         "anim": "rise"
         }
        ],
        "budget_note": "Subventions : le déficit augmente un peu."
@@ -14884,7 +14904,7 @@ const GAME = {
          "obj": "policiers",
          "x": 53,
          "y": 77,
-         "anim": "appear"
+         "anim": "pulse"
         }
        ],
        "budget_note": "Amendes : petite recette, le déficit baisse très peu."
@@ -15078,7 +15098,7 @@ const GAME = {
          "obj": "commissariat",
          "x": 52,
          "y": 28,
-         "anim": "appear"
+         "anim": "grow"
         },
         {
          "obj": "prison",
@@ -15428,7 +15448,7 @@ const GAME = {
          "obj": "antenne",
          "x": 49.4,
          "y": 22.5,
-         "anim": "appear"
+         "anim": "grow"
         }
        ]
       },
@@ -15610,7 +15630,7 @@ const GAME = {
          "obj": "champ",
          "x": 18,
          "y": 30,
-         "anim": "appear"
+         "anim": "pulse"
         },
         {
          "obj": "inondation",
@@ -16271,7 +16291,7 @@ const GAME = {
          "obj": "cadenas",
          "x": 51.1,
          "y": 25.1,
-         "anim": "appear"
+         "anim": "pulse"
         }
        ]
       }
@@ -16578,7 +16598,11 @@ const GAME = {
          "obj": "voiture_police",
          "x": 77.8,
          "y": 25.4,
-         "anim": "appear"
+         "anim": "move",
+         "to": {
+          "x": 81.8,
+          "y": 26
+         }
         },
         {
          "obj": "commissariat",
@@ -16690,7 +16714,11 @@ const GAME = {
          "obj": "camion",
          "x": 80,
          "y": 24,
-         "anim": "appear"
+         "anim": "move",
+         "to": {
+          "x": 84,
+          "y": 24.6
+         }
         }
        ]
       }
@@ -16959,7 +16987,7 @@ const GAME = {
          "obj": "loupe",
          "x": 58,
          "y": 38,
-         "anim": "appear"
+         "anim": "pulse"
         }
        ],
        "budget_note": "Reprise de quelques échanges commerciaux : petite recette."
@@ -17173,7 +17201,11 @@ const GAME = {
          "obj": "voiture",
          "x": 53,
          "y": 77,
-         "anim": "appear"
+         "anim": "move",
+         "to": {
+          "x": 57,
+          "y": 77.6
+         }
         }
        ]
       },
@@ -17198,7 +17230,7 @@ const GAME = {
          "obj": "parlement",
          "x": 52,
          "y": 24,
-         "anim": "appear"
+         "anim": "grow"
         }
        ]
       },
@@ -17364,7 +17396,7 @@ const GAME = {
          "obj": "ecole",
          "x": 73.2,
          "y": 80.5,
-         "anim": "appear"
+         "anim": "grow"
         },
         {
          "obj": "cabinet_medical",
@@ -17534,7 +17566,7 @@ const GAME = {
          "obj": "entrepot",
          "x": 46,
          "y": 36,
-         "anim": "appear"
+         "anim": "grow"
         }
        ]
       },
@@ -17785,7 +17817,7 @@ const GAME = {
          "obj": "maison",
          "x": 55,
          "y": 10,
-         "anim": "appear"
+         "anim": "grow"
         },
         {
          "obj": "soignants",
@@ -17814,7 +17846,7 @@ const GAME = {
          "obj": "loupe",
          "x": 53,
          "y": 9,
-         "anim": "appear"
+         "anim": "pulse"
         },
         {
          "obj": "cadenas",
@@ -18235,7 +18267,11 @@ const GAME = {
          "obj": "char",
          "x": 64,
          "y": 64,
-         "anim": "appear"
+         "anim": "move",
+         "to": {
+          "x": 68,
+          "y": 64.6
+         }
         }
        ],
        "budget_note": "Opération militaire : le déficit augmente un peu."
@@ -18258,7 +18294,7 @@ const GAME = {
          "obj": "chantier_grue",
          "x": 66,
          "y": 66,
-         "anim": "appear"
+         "anim": "grow"
         }
        ],
        "budget_note": "Reconstruction : le déficit augmente."
@@ -18305,7 +18341,7 @@ const GAME = {
          "obj": "cadenas",
          "x": 62,
          "y": 62,
-         "anim": "appear"
+         "anim": "pulse"
         }
        ]
       }
@@ -18434,7 +18470,7 @@ const GAME = {
          "obj": "douane",
          "x": 40,
          "y": 18,
-         "anim": "appear"
+         "anim": "pulse"
         },
         {
          "obj": "loupe",
@@ -18679,7 +18715,7 @@ const GAME = {
          "obj": "satellite",
          "x": 75,
          "y": 12,
-         "anim": "appear"
+         "anim": "pulse"
         }
        ],
        "budget_note": "Moyens de surveillance : le déficit augmente un peu."
@@ -18806,7 +18842,7 @@ const GAME = {
          "obj": "loupe",
          "x": 52,
          "y": 44,
-         "anim": "appear"
+         "anim": "pulse"
         }
        ]
       },
@@ -18970,7 +19006,7 @@ const GAME = {
          "obj": "mairie",
          "x": 52,
          "y": 40,
-         "anim": "appear"
+         "anim": "grow"
         }
        ],
        "budget_note": "Adaptation des systèmes publics : faible coût, le déficit augmente très peu."
@@ -19134,7 +19170,7 @@ const GAME = {
          "obj": "pieces",
          "x": 50,
          "y": 78,
-         "anim": "appear"
+         "anim": "rise"
         }
        ],
        "budget_note": "Commerces plus rentables : impôts en plus, le déficit baisse un peu."
@@ -19180,7 +19216,7 @@ const GAME = {
          "obj": "antenne",
          "x": 51,
          "y": 77,
-         "anim": "appear"
+         "anim": "grow"
         }
        ],
        "budget_note": "Aide à l'équipement : faible coût, le déficit augmente très peu."
@@ -19393,7 +19429,7 @@ const GAME = {
          "obj": "personnage",
          "x": 55,
          "y": 11,
-         "anim": "appear"
+         "anim": "pulse"
         }
        ],
        "budget_note": "Salaires d'inspecteurs : le déficit augmente très peu."
@@ -19779,7 +19815,7 @@ const GAME = {
          "obj": "satellite",
          "x": 6,
          "y": 88,
-         "anim": "appear"
+         "anim": "pulse"
         }
        ],
        "budget_note": "Bateaux et radars : le déficit augmente un peu."
@@ -19804,7 +19840,7 @@ const GAME = {
          "obj": "ecole",
          "x": 10,
          "y": 90,
-         "anim": "appear"
+         "anim": "grow"
         },
         {
          "obj": "hopital",
@@ -19911,7 +19947,7 @@ const GAME = {
          "obj": "ecole",
          "x": 52,
          "y": 40,
-         "anim": "appear"
+         "anim": "grow"
         }
        ]
       },
@@ -19934,7 +19970,7 @@ const GAME = {
          "obj": "cadenas",
          "x": 52,
          "y": 40,
-         "anim": "appear"
+         "anim": "pulse"
         }
        ]
       },
@@ -20112,7 +20148,7 @@ const GAME = {
          "obj": "maison",
          "x": 33,
          "y": 41,
-         "anim": "appear"
+         "anim": "grow"
         }
        ],
        "budget_note": "Hébergement d'urgence : le déficit augmente un peu."
@@ -20135,7 +20171,7 @@ const GAME = {
          "obj": "immeuble",
          "x": 31,
          "y": 41,
-         "anim": "appear"
+         "anim": "grow"
         }
        ],
        "budget_note": "Taxe sur les logements vides : recettes, le déficit baisse un peu."
@@ -20541,7 +20577,7 @@ const GAME = {
          "obj": "pieces",
          "x": 18.1,
          "y": 28.7,
-         "anim": "appear"
+         "anim": "rise"
         }
        ],
        "budget_note": "Activité en plus : un peu de recette, le déficit baisse très peu."
@@ -20699,7 +20735,7 @@ const GAME = {
          "obj": "douane",
          "x": 30,
          "y": 58,
-         "anim": "appear"
+         "anim": "pulse"
         }
        ],
        "budget_note": "Droits de douane perçus : recettes en plus, le déficit baisse un peu."
@@ -21197,7 +21233,7 @@ const GAME = {
          "obj": "antenne",
          "x": 72,
          "y": 23,
-         "anim": "appear"
+         "anim": "grow"
         }
        ],
        "budget_note": "Matériel national : le déficit augmente."
@@ -21245,7 +21281,7 @@ const GAME = {
          "obj": "loupe",
          "x": 70,
          "y": 21,
-         "anim": "appear"
+         "anim": "pulse"
         }
        ],
        "budget_note": "Dépenses militaires reportées : le déficit baisse un peu."
@@ -21530,7 +21566,7 @@ const GAME = {
          "obj": "antenne",
          "x": 67,
          "y": 59,
-         "anim": "appear"
+         "anim": "grow"
         }
        ],
        "budget_note": "Équipements : faible coût, le déficit augmente très peu."
@@ -21553,7 +21589,7 @@ const GAME = {
          "obj": "personnage",
          "x": 65,
          "y": 59,
-         "anim": "appear"
+         "anim": "pulse"
         }
        ]
       }
@@ -21677,7 +21713,7 @@ const GAME = {
          "obj": "pieces",
          "x": 60,
          "y": 10,
-         "anim": "appear"
+         "anim": "rise"
         }
        ],
        "budget_note": "Contribution des partenaires : un peu de recette, le déficit baisse."
@@ -21702,7 +21738,7 @@ const GAME = {
          "obj": "cadenas",
          "x": 18,
          "y": 31,
-         "anim": "appear"
+         "anim": "pulse"
         }
        ],
        "budget_note": "Moins de dépenses nucléaires : le déficit baisse."
@@ -21861,7 +21897,7 @@ const GAME = {
          "obj": "usine",
          "x": 58,
          "y": 12.9,
-         "anim": "appear"
+         "anim": "grow"
         }
        ],
        "budget_note": "Aides à l'industrie : le déficit augmente un peu."
@@ -21885,7 +21921,7 @@ const GAME = {
          "obj": "loupe",
          "x": 56,
          "y": 10,
-         "anim": "appear"
+         "anim": "pulse"
         }
        ]
       }
@@ -22012,7 +22048,7 @@ const GAME = {
          "obj": "douane",
          "x": 51,
          "y": 23,
-         "anim": "appear"
+         "anim": "pulse"
         }
        ],
        "budget_note": "Douaniers en plus : faible coût, le déficit augmente très peu."
@@ -22297,7 +22333,7 @@ const GAME = {
          "obj": "drapeau_ue",
          "x": 75,
          "y": 19,
-         "anim": "appear"
+         "anim": "pulse"
         }
        ],
        "budget_note": "Achats groupés : un peu d'économies, le déficit baisse."
@@ -22321,7 +22357,7 @@ const GAME = {
          "obj": "pieces",
          "x": 73,
          "y": 21,
-         "anim": "appear"
+         "anim": "rise"
         }
        ],
        "budget_note": "Crédits étalés : le déficit baisse."
@@ -22669,7 +22705,7 @@ const GAME = {
          "obj": "policiers",
          "x": 42,
          "y": 80,
-         "anim": "appear"
+         "anim": "pulse"
         }
        ],
        "budget_note": "Moyens d'intervention : le déficit augmente un peu."
@@ -22778,7 +22814,7 @@ const GAME = {
          "obj": "usine",
          "x": 47,
          "y": 40,
-         "anim": "appear"
+         "anim": "grow"
         }
        ],
        "budget_note": "Aides industrielles : le déficit augmente un peu."
@@ -22802,7 +22838,7 @@ const GAME = {
          "obj": "entrepot",
          "x": 45,
          "y": 39,
-         "anim": "appear"
+         "anim": "grow"
         }
        ]
       },
@@ -23165,7 +23201,7 @@ const GAME = {
          "obj": "maison",
          "x": 72,
          "y": 24,
-         "anim": "appear"
+         "anim": "grow"
         }
        ],
        "budget_note": "Places de relogement : le déficit augmente un peu."
@@ -23396,7 +23432,7 @@ const GAME = {
          "obj": "satellite",
          "x": 76,
          "y": 73,
-         "anim": "appear"
+         "anim": "pulse"
         }
        ],
        "budget_note": "Surveillance : le déficit augmente un peu."

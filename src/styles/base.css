@@ -25,7 +25,7 @@
 }
 [data-theme="dark"], .is-night{
   --sea:#2D2B46; --sea-deep:#24223A; --sea-hi:#433F63; --foam:#8F8AB0; --wave:#5D5884;
-  --mist:#3A3754; --mist-land:#3B3852;
+  --mist:#2B2944; --mist-land:#3B3852;
   --land:#5D556C; --land-2:#554D64; --field-a:#625970; --field-b:#585369; --field-c:#5E556A;
   --hill:#4F4862; --hill-d:#443E57; --cliff:#2A2537; --cliff-2:#373043;
   --forest:#454D57; --forest-d:#383F49; --mount-l:#6E6782; --mount-r:#534C66; --snow:#CFCFE2;
@@ -60,7 +60,7 @@ button{font:inherit;color:inherit;cursor:pointer}
 .day-token .dm{font-size:11px;color:var(--ink-2);margin-top:2px}
 .plate{flex:1;min-width:0;display:grid;grid-template-columns:1fr 1.15fr 1fr;border:2.5px solid var(--line);border-radius:16px;background:var(--plate);color:var(--plate-ink);
   box-shadow:0 3px 0 var(--tranche), inset 0 1px 0 rgba(255,255,255,.08);padding:5px 4px 4px;text-align:left;position:relative}
-.plate .cnt{padding:0 6px;display:flex;flex-direction:column;min-width:0;position:relative}
+.plate .cnt{padding:0 6px;display:flex;flex-direction:column;align-items:center;text-align:center;min-width:0;position:relative}
 .plate .cnt + .cnt{border-left:1px dashed rgba(255,255,255,.18)}
 .plate .k{font-size:11px;color:var(--plate-k);white-space:nowrap}
 .plate .v{font-family:var(--f-display);font-weight:700;font-size:18px;font-variant-numeric:tabular-nums;letter-spacing:-.01em;white-space:nowrap;line-height:1.15}
@@ -105,13 +105,13 @@ button{font:inherit;color:inherit;cursor:pointer}
 [data-theme="dark"] #board #tint{opacity:.5}
 .grain-sea{display:none} /* mer lisse : les ondes du rivage s'y fondent sans bande visible */.grain-land{opacity:.55;mix-blend-mode:multiply}.is-night .grain-land{opacity:.3}
 .sea-rect{fill:var(--sea);transition:fill 1s}
-.land-top{fill:var(--land);stroke:var(--sand,#F6E3A4);stroke-width:1.1;paint-order:stroke;stroke-linejoin:round;transition:fill 1s}
+.land-top{fill:var(--land);stroke:var(--land);stroke-width:.15;stroke-linejoin:round;transition:fill 1s}
 .wave{fill:none;stroke:var(--wave);stroke-width:.45;stroke-linecap:round;opacity:0;animation:wave 7s ease-in-out infinite}
 @keyframes wave{0%,100%{opacity:0;transform:translateX(0)}45%{opacity:.75}70%{opacity:.2;transform:translateX(2.4px)}}
 .foam{fill:none;stroke:var(--foam);stroke-linejoin:round;animation:foam 5.5s ease-in-out infinite}
 /* bord de sable plus défini, rochers */
-.sable-bord{fill:none;stroke:var(--sand-d,#E2C27A);stroke-width:1.5;stroke-linejoin:round}
-.is-night .sable-bord{stroke:#5A5276}
+.sable-bord{fill:var(--sand,#F6E3A4);stroke:none}
+.is-night .sable-bord{fill:#5A5276}
 .rocher .r-o{fill:#8C8F96}.rocher .r-h{fill:#B9BCC2}.is-night .rocher .r-o{fill:#3E3A52}.is-night .rocher .r-h{fill:#57516E}
 .plage{stroke:var(--sand-wide,#F8E7B0)}
 .is-night .plage{stroke:#6E6587}
