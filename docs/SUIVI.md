@@ -118,3 +118,4 @@
 - Robustesse : un dessin qui ne se charge pas est ignoré (le reste du décor s'affiche) ; `tests/check_assets.js` vérifie fichiers, ratios, largeurs et objets ; toutes les propositions ont des sources (contrôle ajouté).
 - Villes : cœur en îlots d'immeubles rangés en grille décalée (sans chevauchement, un immeuble peut en masquer un autre derrière lui), puis une couronne de maisons, puis des champs pour les grandes villes. Éoliennes d'Île-de-France déplacées en Beauce.
 - Niveau avancé : vocabulaire politique et économique gardé ; sigles et termes très spécialisés expliqués entre parenthèses à la 1re occurrence (`scripts/glossaire.js`, idempotent, à relancer après ajout de contenu).
+- 2 situations internationales : nucléaire iranien et sanctions (S19), Gaza après le cessez-le-feu (S21). Ukraine (S8, S22) et Palestine (S27) déjà couvertes.

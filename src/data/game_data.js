@@ -16861,6 +16861,133 @@ const GAME = {
        ]
       }
      ]
+    },
+    {
+     "id": "v27_iran",
+     "kind": "banal",
+     "region": "national",
+     "sector": "defense",
+     "title": "Le nucléaire iranien : lever ou garder les sanctions ?",
+     "simple": "L'Iran a dépassé les limites promises sur son programme nucléaire. La France a fait revenir les sanctions de l'ONU. Des négociations reprennent et Téhéran demande leur levée. Que faire ?",
+     "expert": "Après la réactivation des sanctions onusiennes (mécanisme de « retour rapide » déclenché par la France, l'Allemagne et le Royaume-Uni), Paris conditionne toute levée à un accord sur le nucléaire, les missiles balistiques et les activités régionales.",
+     "context": "Garder les sanctions maintient la pression ; les lever contre des garanties peut éviter une guerre et relancer le commerce. Membre permanent du Conseil de sécurité, la France a son mot à dire.",
+     "real": {
+      "date": "Sanctions rétablies fin septembre 2025 ; déclarations de juin et juillet 2026",
+      "place": "Conseil de sécurité de l'ONU, Paris",
+      "fact": "Les embargos de l'ONU sur les armes, les banques et le nucléaire ont été réappliqués à l'initiative de la France, de l'Allemagne et du Royaume-Uni ; Paris refuse toute levée sans accord satisfaisant.",
+      "figures": "Limites de l'accord de Vienne dépassées.",
+      "sources": [
+       {
+        "label": "Ministère des Affaires étrangères : réponse sur la situation en Iran",
+        "url": "https://www.diplomatie.gouv.fr/fr/presse-et-ressources/decouvrir-et-informer/actualites/situation-en-iran-reponse-de-jean-noel-barrot-ministre-de-l-europe-et-des-affaires-etrangeres-a-une-1"
+       },
+       {
+        "label": "Connaissance des énergies (AFP) : trois conditions posées à Téhéran",
+        "url": "https://www.connaissancedesenergies.org/afp/iran-pas-de-levee-de-sanctions-tant-que-teheran-ne-renonce-pas-a-son-programme-nucleaire-chef-de-la-diplomatie-francaise-260713"
+       }
+      ]
+     },
+     "camera": {
+      "region": "national",
+      "x": 52,
+      "y": 45,
+      "zoom": 1.2
+     },
+     "fx": [
+      {
+       "obj": "parlement",
+       "x": 52,
+       "y": 24,
+       "anim": "pulse"
+      },
+      {
+       "obj": "cadenas",
+       "x": 60,
+       "y": 40,
+       "anim": "appear",
+       "delay": 0.3
+      },
+      {
+       "obj": "bulle",
+       "x": 56,
+       "y": 34,
+       "anim": "appear",
+       "label": "Sanctions ?",
+       "delay": 0.6
+      }
+     ],
+     "choices": [
+      {
+       "id": "a",
+       "label": "Garder toutes les sanctions",
+       "label_expert": "Maintien intégral des sanctions sans accord global",
+       "plus": "Pression maximale sur Téhéran.",
+       "minus": "Risque d'escalade militaire.",
+       "budget": 0,
+       "axes": {
+        "eu": 0,
+        "soc": 1
+       },
+       "ind": {
+        "souverainete": 1
+       },
+       "fx": [
+        {
+         "obj": "cadenas",
+         "x": 60,
+         "y": 40,
+         "anim": "grow"
+        }
+       ]
+      },
+      {
+       "id": "b",
+       "label": "Les lever pas à pas contre des contrôles",
+       "label_expert": "Levée progressive conditionnée aux inspections",
+       "plus": "Évite la guerre, contrôle renforcé.",
+       "minus": "L'Iran peut tricher.",
+       "budget": 0.1,
+       "axes": {
+        "eu": 1
+       },
+       "ind": {
+        "souverainete": 0,
+        "cohesion": 1
+       },
+       "fx": [
+        {
+         "obj": "loupe",
+         "x": 58,
+         "y": 38,
+         "anim": "appear"
+        }
+       ],
+       "budget_note": "Reprise de quelques échanges commerciaux : petite recette."
+      },
+      {
+       "id": "c",
+       "label": "Laisser les États-Unis négocier seuls",
+       "label_expert": "Retrait de la France des négociations",
+       "plus": "Pas de risque diplomatique.",
+       "minus": "La France perd de l'influence.",
+       "budget": 0,
+       "axes": {
+        "eu": -1
+       },
+       "ind": {
+        "souverainete": -1
+       },
+       "fx": [
+        {
+         "obj": "bulle",
+         "x": 56,
+         "y": 34,
+         "anim": "fade",
+         "label": "…"
+        }
+       ]
+      }
+     ]
     }
    ],
    "offer": [
@@ -18026,6 +18153,161 @@ const GAME = {
         }
        ],
        "budget_note": "Économies sur les tournées : petite recette, le déficit baisse un peu."
+      }
+     ]
+    },
+    {
+     "id": "v29_gaza",
+     "kind": "banal",
+     "region": "national",
+     "sector": "defense",
+     "title": "Gaza : envoyer des soldats, de l'aide ou de l'argent ?",
+     "simple": "Après le cessez-le-feu, Gaza est en ruines et l'aide entre mal. Une force internationale se prépare pour sécuriser le territoire. La France doit dire ce qu'elle apporte. Que faire ?",
+     "expert": "Mise en œuvre du plan de paix : déploiement d'une force internationale de stabilisation, désarmement du Hamas, retrait israélien progressif, aide humanitaire et financement de la reconstruction.",
+     "context": "Envoyer des soldats donne du poids mais expose nos militaires ; financer la reconstruction coûte cher ; rester en retrait limite l'influence de la France au Proche-Orient.",
+     "real": {
+      "date": "Cessez-le-feu du 10 octobre 2025 ; communiqué du 17 juin 2026",
+      "place": "Bande de Gaza",
+      "fact": "Depuis le début de la guerre, la France a versé plus de 300 millions d'euros d'aide humanitaire aux Palestiniens ; elle a annoncé vouloir participer à la force internationale de stabilisation.",
+      "figures": "Près de 400 tonnes d'aliments thérapeutiques envoyées par la mer pour 42 000 enfants.",
+      "sources": [
+       {
+        "label": "Ministère des Affaires étrangères : 20e envoi d'aide humanitaire pour Gaza",
+        "url": "https://www.diplomatie.gouv.fr/fr/presse-et-ressources/decouvrir-et-informer/actualites/la-france-reste-mobilisee-pour-la-palestine-20e-envoi-d-aide-humanitaire-pour-la-population-de-gaza"
+       },
+       {
+        "label": "Ministère des Affaires étrangères : accord sur le désarmement du Hamas",
+        "url": "https://www.diplomatie.gouv.fr/fr/presse-et-ressources/decouvrir-et-informer/actualites/israelpalestine-annonce-d-un-accord-sur-le-desarmement-du-hamas"
+       }
+      ]
+     },
+     "camera": {
+      "region": "national",
+      "x": 60,
+      "y": 60,
+      "zoom": 1.2
+     },
+     "fx": [
+      {
+       "obj": "avion",
+       "x": 55,
+       "y": 50,
+       "anim": "move",
+       "to": {
+        "x": 68,
+        "y": 66
+       }
+      },
+      {
+       "obj": "colis",
+       "x": 66,
+       "y": 66,
+       "anim": "appear",
+       "delay": 0.4
+      },
+      {
+       "obj": "bulle",
+       "x": 60,
+       "y": 58,
+       "anim": "appear",
+       "label": "Aide",
+       "delay": 0.6
+      }
+     ],
+     "choices": [
+      {
+       "id": "a",
+       "label": "Envoyer des soldats dans la force internationale",
+       "label_expert": "Participation militaire à la force de stabilisation",
+       "plus": "Poids diplomatique, aide sécurisée.",
+       "minus": "Soldats exposés.",
+       "budget": -0.3,
+       "axes": {
+        "eu": 1,
+        "soc": 1
+       },
+       "ind": {
+        "souverainete": 1,
+        "cohesion": -1
+       },
+       "fx": [
+        {
+         "obj": "soldats",
+         "x": 64,
+         "y": 64,
+         "anim": "appear"
+        }
+       ],
+       "budget_note": "Opération militaire : le déficit augmente un peu."
+      },
+      {
+       "id": "b",
+       "label": "Former la police et financer la reconstruction",
+       "label_expert": "Formation des policiers palestiniens et contribution à la reconstruction",
+       "plus": "Aide utile sans soldats au sol.",
+       "minus": "Coûteux, résultats lents.",
+       "budget": -0.5,
+       "axes": {
+        "eu": 1
+       },
+       "ind": {
+        "cohesion": 1
+       },
+       "fx": [
+        {
+         "obj": "chantier_grue",
+         "x": 66,
+         "y": 66,
+         "anim": "appear"
+        }
+       ],
+       "budget_note": "Reconstruction : le déficit augmente."
+      },
+      {
+       "id": "c",
+       "label": "Seulement de l'aide humanitaire",
+       "label_expert": "Maintien d'une aide strictement humanitaire",
+       "plus": "Soulage les civils vite.",
+       "minus": "Peu d'influence sur la suite.",
+       "budget": -0.1,
+       "axes": {
+        "soc": 0
+       },
+       "ind": {
+        "cohesion": 1
+       },
+       "fx": [
+        {
+         "obj": "colis",
+         "x": 66,
+         "y": 66,
+         "anim": "grow"
+        }
+       ],
+       "budget_note": "Aide humanitaire : le déficit augmente un peu."
+      },
+      {
+       "id": "d",
+       "label": "Conditionner l'aide au désarmement du Hamas",
+       "label_expert": "Aide subordonnée au désarmement effectif",
+       "plus": "Exigence de sécurité.",
+       "minus": "Les civils attendent.",
+       "budget": 0,
+       "axes": {
+        "soc": 1
+       },
+       "ind": {
+        "souverainete": 0,
+        "cohesion": -1
+       },
+       "fx": [
+        {
+         "obj": "cadenas",
+         "x": 62,
+         "y": 62,
+         "anim": "appear"
+        }
+       ]
       }
      ]
     }
