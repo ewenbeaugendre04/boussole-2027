@@ -103,11 +103,21 @@ button{font:inherit;color:inherit;cursor:pointer}
 #board[data-weather="neige"] #tint{background:linear-gradient(rgba(255,255,255,.16),rgba(240,244,250,.10))}
 #board[data-weather="vent"] #tint{background:linear-gradient(100deg,rgba(255,255,255,.06),transparent)}
 [data-theme="dark"] #board #tint{opacity:.5}
+.grain-sea{opacity:.35}.grain-land{opacity:.55;mix-blend-mode:multiply}.is-night .grain-land{opacity:.3}
 .sea-rect{fill:var(--sea);transition:fill 1s}
 .land-top{fill:var(--land);stroke:var(--sand,#F6E3A4);stroke-width:1.1;paint-order:stroke;stroke-linejoin:round;transition:fill 1s}
 .wave{fill:none;stroke:var(--wave);stroke-width:.45;stroke-linecap:round;opacity:0;animation:wave 7s ease-in-out infinite}
 @keyframes wave{0%,100%{opacity:0;transform:translateX(0)}45%{opacity:.75}70%{opacity:.2;transform:translateX(2.4px)}}
 .foam{fill:none;stroke:var(--foam);stroke-linejoin:round;animation:foam 5.5s ease-in-out infinite}
+/* vagues : des crêtes qui avancent le long du rivage */
+.wave{fill:none;stroke:var(--wave);stroke-linejoin:round;stroke-linecap:round}
+.wave.w1{stroke-width:3.2;stroke-dasharray:1.4 4.2;opacity:.42;animation:vague 9s linear infinite}
+.wave.w2{stroke-width:6.4;stroke-dasharray:.9 6.5;opacity:.16;animation:vague 14s linear infinite reverse}
+@keyframes vague{to{stroke-dashoffset:-56}}
+.plage{stroke:var(--sand-wide,#F8E7B0)}
+.is-night .plage{stroke:#6E6587}
+.is-night{--craie:#5B5570;--craie-2:#46405A;--granit:#5E4C62;--granit-2:#4A3C50}
+@media (prefers-reduced-motion:reduce){.wave{animation:none}}
 @keyframes foam{0%,100%{stroke-width:1.1;opacity:.75}50%{stroke-width:2.6;opacity:.22}}
 .snowx{opacity:0;transition:opacity 1.2s}
 #board[data-weather="neige"] .snowx{opacity:1}

@@ -19,22 +19,35 @@ function buildBoard(){
     '<clipPath id="clipFr"><path d="' + fr + '"/><path d="' + co + '"/></clipPath>' +
     '</defs>');
   h.push('<rect class="sea-rect" x="-500" y="-500" width="1100" height="1100"/>');
+  /* texture : grain très léger, calculé une fois (image), pas de filtre coûteux pendant les déplacements de caméra */
+  var grain = '';
+  try{ var cv = document.createElement('canvas'); cv.width = cv.height = 96; var cx = cv.getContext('2d'), im = cx.createImageData(96, 96), g = rng(7);
+    for(var gi = 0; gi < im.data.length; gi += 4){ var v = g() < .5 ? 0 : 255; im.data[gi] = im.data[gi + 1] = im.data[gi + 2] = v; im.data[gi + 3] = Math.floor(g() * 34); }
+    cx.putImageData(im, 0, 0); grain = cv.toDataURL('image/png'); }catch(e){}
+  if(grain) h.push('<defs><pattern id="grain" patternUnits="userSpaceOnUse" width="6" height="6"><image href="' + grain + '" width="6" height="6"/></pattern></defs><rect class="grain-sea" x="-500" y="-500" width="1100" height="1100" fill="url(#grain)" pointer-events="none"/>');
   // chenal autour de l'île (sous les voisins : pas de bande d'eau le long des frontières terrestres)
   h.push('<path d="' + fr + '" fill="none" stroke="var(--sea)" stroke-width="5.5" stroke-linejoin="round"/>');
   // voisins
   h.push('<g opacity=".8" transform="translate(0,1.2)">' + NEIGH.map(function(n){ return '<path d="' + smooth(n, true) + '" fill="#C9E6DE"/>'; }).join('') + '</g><g opacity=".9">' + NEIGH.map(function(n){ return '<path d="' + smooth(n, true) + '" fill="var(--mist-land)"/>'; }).join('') + '</g>');
   h.push('<rect x="-500" y="-500" width="1100" height="1100" fill="url(#fog)" pointer-events="none"/>');
   // ressac
-  $('foamsvg').innerHTML = '<defs><mask id="noLandFoam" maskUnits="userSpaceOnUse" x="-500" y="-500" width="1100" height="1100"><rect x="-500" y="-500" width="1100" height="1100" fill="#fff"/>' + NEIGH.map(function(n){ return '<path d="' + smooth(n, true) + '" fill="#000" stroke="#000" stroke-width="3"/>'; }).join('') + '</mask></defs><g mask="url(#noLandFoam)">' + [fr, co].map(function(d){ return '<path class="foam" d="' + d + '" transform="translate(0,1.6)"/>'; }).join('') + '</g>';
+  $('foamsvg').innerHTML = '<defs><mask id="noLandFoam" maskUnits="userSpaceOnUse" x="-500" y="-500" width="1100" height="1100"><rect x="-500" y="-500" width="1100" height="1100" fill="#fff"/>' + NEIGH.map(function(n){ return '<path d="' + smooth(n, true) + '" fill="#000" stroke="#000" stroke-width="3"/>'; }).join('') + '</mask></defs><g mask="url(#noLandFoam)">' + [fr, co].map(function(d){ return '<path class="wave w2" d="' + d + '" transform="translate(0,1.6)"/><path class="wave w1" d="' + d + '" transform="translate(0,1.6)"/><path class="foam" d="' + d + '" transform="translate(0,1.6)"/>'; }).join('') + '</g>';
   // falaise (épaisseur du plateau)
   [fr, co].forEach(function(d){
     h.push('<path d="' + d + '" transform="translate(0,2.6)" fill="var(--cliff)"/>');
     h.push('<path d="' + d + '" transform="translate(0,1.3)" fill="var(--cliff-2)"/>');
   });
+  /* falaises claires (craie normande, calanques) et granit rose breton : on recolore l'épaisseur du plateau localement */
+  function zones(id, list){ return '<clipPath id="' + id + '">' + list.map(function(z){ var c = P(z[0], z[1]); return '<ellipse cx="' + F(c[0]) + '" cy="' + F(c[1]) + '" rx="' + F(z[2] * 7) + '" ry="' + F(z[2] * 5) + '"/>'; }).join('') + '</clipPath>'; }
+  h.push('<defs>' + zones('zCraie', [[0.75, 49.85, .75], [1.45, 50.75, .3], [5.5, 43.2, .35]]) + zones('zGranit', [[-3.6, 48.75, .7], [-4.6, 48.35, .4]]) + zones('zPlage', [[-1.25, 44.3, 1.25], [-1.25, 45.4, .5], [-1.9, 46.6, .5], [3.55, 43.35, .75], [4.2, 43.5, .3], [1.6, 50.35, .3], [-0.5, 49.35, .35], [-1.5, 43.5, .2]]) + '</defs>');
+  h.push('<g clip-path="url(#zCraie)"><path d="' + fr + '" transform="translate(0,2.6)" fill="var(--craie-2,#D9D2C2)"/><path d="' + fr + '" transform="translate(0,1.3)" fill="var(--craie,#F3EEE2)"/><path d="' + fr + '" transform="translate(0,2.0)" fill="none" stroke="var(--craie-2,#D9D2C2)" stroke-width=".25" stroke-dasharray=".5 .9"/></g>');
+  h.push('<g clip-path="url(#zGranit)"><path d="' + fr + '" transform="translate(0,2.6)" fill="var(--granit-2,#B9806B)"/><path d="' + fr + '" transform="translate(0,1.3)" fill="var(--granit,#DCA48C)"/></g>');
+  h.push('<g clip-path="url(#zPlage)"><path class="plage" d="' + fr + '" fill="none" stroke-width="3.4" stroke-linejoin="round"/></g>');
   h.push('<path id="frTop" class="land-top" d="' + fr + '"/><path id="coTop" class="land-top" d="' + co + '"/>');
   // décor intérieur, découpé sur l'île
   h.push('<g clip-path="url(#clipFr)">');
   h.push('<rect x="-10" y="-10" width="130" height="120" fill="url(#landlight)"/>');
+  h.push('<rect class="grain-land" x="-10" y="-10" width="130" height="120" fill="url(#grain)" pointer-events="none"/>');
   // champs
   var fields = [[1.5,48.3,9],[2.6,49.7,8],[4.2,48.9,7],[0.4,46.5,6],[-0.5,47.8,5],[1.2,44.0,5],[3.5,47.3,4],[-1.2,46.5,4]];
   fields.forEach(function(f){

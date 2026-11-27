@@ -201,6 +201,20 @@ function sprBig(list, nuit){
     if(it.pied) return '<img src="' + src + '" alt="" decoding="async" style="left:' + F(q[0] - w / 2) + 'px;top:' + F(q[1] - h * .86) + 'px;width:' + F(w) + 'px;height:' + F(h) + 'px;' + (it.f ? 'transform:scaleX(-1)' : '') + '">'; /* sapins du pied : devant le massif */
     var ombre = /^chaine/.test(it.id) ? '' : '<i class="relief-pied" style="left:' + F(q[0] - w * .4) + 'px;top:' + F(q[1] - h * .2) + 'px;width:' + F(w * .8) + 'px;height:' + F(h * .26) + 'px"></i>'; /* embase verte (pas sous les Pyrénées, posées sur la côte) */ /* embase verte */
     return ombre + '<img src="' + src + '" alt="" decoding="async" style="left:' + F(q[0] - w / 2) + 'px;top:' + F(q[1] - h * .86) + 'px;width:' + F(w) + 'px;height:' + F(h) + 'px;transform-origin:50% 86%;transform:' + (it.r ? 'rotate(' + it.r + 'deg) ' : '') + (it.f ? 'scaleX(-1)' : 'none') + '">';
+  }).join('') + decorSmoke();
+}
+/* Fumée vivante des centrales et usines du décor (le décor est cuit en image, la fumée reste animée par-dessus) */
+var SMK_SRC = { centrale_nucleaire:[[-.2, .78], [.12, .8]], usine:[[.18, .92]], usine_moderne:[[.18, .95], [.3, .9]], centrale_gaz:[[.1, .9]], usine_aero:[[.25, .7]] }, SMK_CACHE = null;
+function decorSmoke(){
+  if(typeof U2P !== 'function') return '';
+  if(!SMK_CACHE) SMK_CACHE = sprItems().filter(function(it){ return SMK_SRC[it.id]; });
+  return SMK_CACHE.map(function(it){
+    var w = it.w * VBK, h = it.h * VBK, q = U2P(it.x, it.y), sz = w * .5, steam = it.id === 'centrale_nucleaire';
+    return SMK_SRC[it.id].map(function(p, j){
+      var out = '';
+      for(var i = 0; i < 3; i++) out += '<i class="puff decor' + (steam ? ' steam' : '') + '" style="left:' + F(q[0] + (it.f ? -p[0] : p[0]) * w - sz / 2) + 'px;top:' + F(q[1] - h * .86 + (1 - p[1]) * h - sz / 2) + 'px;width:' + F(sz) + 'px;height:' + F(sz) + 'px;animation-delay:' + F(i * 1.3 + j * .6) + 's"></i>';
+      return out;
+    }).join('');
   }).join('');
 }
 function buildSprites(){
