@@ -7,13 +7,17 @@ function camSet(z, tx, ty, dur){
   var br = board.getBoundingClientRect(), wz = Math.max(1, z);
   if(br.width){ var cb = camBounds(wz); tx = clamp(tx, cb.x0, cb.x1); ty = clamp(ty, cb.y0, cb.y1); }
   CAM = { z:z, tx:tx, ty:ty };
-  world.style.willChange = 'transform';
+  world.style.willChange = 'transform'; world.style.backfaceVisibility = '';
   world.style.transition = dur ? 'transform ' + dur + 'ms cubic-bezier(.6,.04,.24,1)' : 'none';
   world.style.transform = 'translate3d(' + F(tx) + 'px,' + F(ty) + 'px,0) scale(' + F(z) + ')';
   board.classList.toggle('zoomed', z > 1.05);
   clearTimeout(camTimer);
-  return new Promise(function(res){ camTimer = setTimeout(function(){ world.style.willChange = 'auto'; try{ keepLabelsOnScreen(); }catch(e){} res(); }, (dur || 0) + 40); });
+  return new Promise(function(res){ camTimer = setTimeout(function(){ world.style.willChange = 'auto'; camNet(); try{ keepLabelsOnScreen(); }catch(e){} res(); }, (dur || 0) + 40); });
 }
+/* Netteté : caméra arrêtée → transformation 2D simple (sans calque 3D), le navigateur (Safari surtout) redessine la carte à la taille du zoom au lieu d'étirer une image */
+var camNetT = null;
+function camNet(){ world.style.transition = 'none'; world.style.backfaceVisibility = 'visible'; world.style.transform = 'translate(' + F(CAM.tx) + 'px,' + F(CAM.ty) + 'px) scale(' + F(CAM.z) + ')'; }
+function camMoving(){ world.style.backfaceVisibility = ''; clearTimeout(camNetT); camNetT = setTimeout(camNet, 220); }
 function camTo(x, y, z, dur){
   var r = board.getBoundingClientRect(), u = RP(x, y), p = U2P(u[0], u[1]);
   z = clamp(num(z, 2.2), 1, 2.6);
@@ -34,6 +38,7 @@ function freeApply(){
   var z = clamp(CAM.z, 1, 2.6), cb = camBounds(z, true);
   CAM.z = z; CAM.tx = clamp(CAM.tx, cb.x0, cb.x1); CAM.ty = clamp(CAM.ty, cb.y0, cb.y1);
   world.style.transform = 'translate3d(' + F(CAM.tx) + 'px,' + F(CAM.ty) + 'px,0) scale(' + F(z) + ')';
+  camMoving(); /* glisser / pincer : fluide pendant le geste, net 0,2 s après */
 }
 var FREE = { ptr:{}, moved:false, sup:false, vx:0, vy:0, lt:0, inert:0 };
 (function freeCam(){
