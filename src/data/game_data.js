@@ -5096,7 +5096,7 @@ const GAME = {
      "sector": "agriculture",
      "title": "Une maladie de la peau frappe les vaches des Alpes",
      "simple": "Une maladie contagieuse des bovins, venue d'Italie, touche des élevages de Savoie. La règle impose d'abattre tout le troupeau touché. Les éleveurs sont sous le choc. Que faire ?",
-     "expert": "Foyers de dermatose nodulaire contagieuse (DNC), maladie virale transmise par insectes : dépeuplement total des foyers, zones réglementées, vaccination obligatoire autour des foyers et restrictions de mouvements des bovins.",
+     "expert": "Foyers de dermatose nodulaire contagieuse (DNC (maladie contagieuse des bovins)), maladie virale transmise par insectes : dépeuplement total des foyers, zones réglementées, vaccination obligatoire autour des foyers et restrictions de mouvements des bovins.",
      "context": "La maladie n'est pas dangereuse pour l'humain mais ruine les élevages et bloque les exportations. Abattre vite limite la propagation ; vacciner largement coûte et peut fermer certains marchés.",
      "real": {
       "date": "29 juin 2025 (premier foyer) ; automne 2025 (extension)",
@@ -5330,8 +5330,8 @@ const GAME = {
      "sector": "sante",
      "title": "Des « polluants éternels » dans les œufs du sud de Lyon",
      "simple": "Autour d'une grande usine chimique près de Lyon, on trouve des PFAS, des produits qui ne disparaissent presque jamais. Les habitants qui ont des poules ne doivent plus manger leurs œufs. L'usine fait travailler des centaines de personnes.",
-     "expert": "Pollution aux substances per- et polyfluoroalkylées autour de la plateforme chimique de Pierre-Bénite (fabrication de polymères fluorés). Arrêtés préfectoraux de réduction des rejets, surveillance de l'eau potable, recommandations sanitaires sur l'autoconsommation.",
-     "context": "Les PFAS servent dans les poêles antiadhésives, les vêtements imperméables ou les mousses anti-incendie. Certains sont jugés dangereux pour la santé. Les filtrer dans l'eau coûte cher, et les industriels disent avoir besoin de temps pour s'en passer.",
+     "expert": "Pollution aux substances per- et polyfluoroalkylées (« polluants éternels ») autour de la plateforme chimique de Pierre-Bénite (fabrication de polymères fluorés). Arrêtés préfectoraux de réduction des rejets, surveillance de l'eau potable, recommandations sanitaires sur l'autoconsommation (consommation de ses propres légumes et œufs).",
+     "context": "Les PFAS (« polluants éternels ») servent dans les poêles antiadhésives, les vêtements imperméables ou les mousses anti-incendie. Certains sont jugés dangereux pour la santé. Les filtrer dans l'eau coûte cher, et les industriels disent avoir besoin de temps pour s'en passer.",
      "real": {
       "date": "2022 (révélations et premiers arrêtés) ; 2023 (résultats sur les œufs)",
       "place": "Pierre-Bénite et communes du sud de Lyon, Rhône",
@@ -7257,7 +7257,7 @@ const GAME = {
      "sector": "ecole",
      "title": "Des étudiants font la queue pour manger",
      "simple": "Les petits boulots ont disparu et beaucoup d'étudiants n'ont plus de quoi manger correctement. Devant les distributions alimentaires, les files s'allongent. Faut-il un repas à 1 € pour tous ?",
-     "expert": "Précarité étudiante aggravée par la perte des emplois d'appoint. Arbitrage entre une aide universelle (peu de non-recours, coût élevé) et une aide ciblée sur critères sociaux (moins chère, mais avec des effets de seuil).",
+     "expert": "Précarité étudiante aggravée par la perte des emplois d'appoint. Arbitrage entre une aide universelle (peu de non-recours (aides auxquelles on a droit mais non demandées), coût élevé) et une aide ciblée sur critères sociaux (moins chère, mais avec des effets de seuil).",
      "context": "Le prix payé au restaurant universitaire est bien inférieur au coût réel du repas : l'État paie la différence. Environ un étudiant sur trois est boursier.",
      "real": {
       "date": "21 janvier 2021 (annonce) ; fin janvier 2021 (mise en place)",
@@ -9625,7 +9625,7 @@ const GAME = {
      "sector": "sante",
      "title": "Un pesticide interdit a contaminé les Antilles",
      "simple": "Pendant des années, un pesticide toxique a été utilisé dans les bananeraies des Antilles, alors qu'il était interdit ailleurs. La justice ne poursuit finalement personne, et la colère monte.",
-     "expert": "Pollution durable des sols et des eaux par le chlordécone, insecticide organochloré autorisé par dérogation dans les bananeraies ; non-lieu pour prescription ; reconnaissance du cancer de la prostate comme maladie professionnelle.",
+     "expert": "Pollution durable des sols et des eaux par le chlordécone (pesticide toxique interdit), insecticide organochloré autorisé par dérogation dans les bananeraies ; non-lieu pour prescription (affaire classée car trop ancienne) ; reconnaissance du cancer de la prostate comme maladie professionnelle.",
      "context": "Ce produit reste dans les sols pendant des siècles. La quasi-totalité des habitants en a dans le sang. Il est lié à des cancers de la prostate. Certaines zones ne peuvent plus être pêchées ni cultivées.",
      "real": {
       "date": "2 janvier 2023 (non-lieu)",
@@ -10022,7 +10022,7 @@ const GAME = {
      "sector": "sante",
      "title": "Du lait pour bébé contaminé à la salmonelle",
      "simple": "Des bébés tombent malades après avoir bu du lait infantile fabriqué dans une grande usine de Mayenne. Des centaines de lots sont retirés, mais certaines boîtes restent vendues.",
-     "expert": "Contamination à Salmonella Agona dans une tour de séchage d'un site de nutrition infantile : retrait-rappel ordonné par arrêté ministériel, défaillances de l'autocontrôle et des contrôles officiels, failles du retrait en distribution.",
+     "expert": "Contamination à Salmonella Agona dans une tour de séchage d'un site de nutrition infantile : retrait-rappel (produits retirés des rayons et rapportés) ordonné par arrêté ministériel, défaillances de l'autocontrôle et des contrôles officiels, failles du retrait en distribution.",
      "context": "Les usines contrôlent elles-mêmes leur production ; l'État vérifie par sondage. Les inspecteurs de l'alimentation sont peu nombreux. Après l'affaire, les retraits de produits ont été mieux encadrés.",
      "real": {
       "date": "Décembre 2017 à janvier 2018",
@@ -10278,7 +10278,7 @@ const GAME = {
      "sector": "transports",
      "title": "Le tunnel de l'A13 fermé neuf mois",
      "simple": "Un vieux tunnel de l'autoroute vers la Normandie ferme pour travaux pendant neuf mois. Bouchons, péages en plus pour le détour : les automobilistes râlent. Que faire ?",
-     "expert": "Fermeture du tube nord du tunnel de Saint-Cloud (A13), sens Paris-province, pour des travaux de confortement ; reports de trafic vers l'A14 à péage.",
+     "expert": "Fermeture du tube nord du tunnel de Saint-Cloud (A13), sens Paris-province, pour des travaux de confortement (renforcement des structures) ; reports de trafic vers l'A14 à péage.",
      "context": "Le tunnel a près d'un siècle : réparer est indispensable. Compenser les usagers coûte ; ne rien faire reporte les bouchons dans les petites rues.",
      "real": {
       "date": "Du 16 novembre 2026 à fin août 2027",
@@ -10693,7 +10693,7 @@ const GAME = {
      "sector": "numerique",
      "title": "Des pirates paralysent un hôpital et demandent une rançon",
      "simple": "Des pirates informatiques bloquent tous les ordinateurs d'un grand hôpital de l'Essonne. Ils réclament des millions pour rendre les données. Les urgences envoient des malades ailleurs.",
-     "expert": "Attaque par rançongiciel contre un centre hospitalier : chiffrement du système d'information, plan blanc et fonctionnement dégradé, refus de payer la rançon, divulgation de données de santé.",
+     "expert": "Attaque par rançongiciel (logiciel qui bloque les données contre rançon) contre un centre hospitalier : chiffrement du système d'information, plan blanc et fonctionnement dégradé, refus de payer la rançon, divulgation de données de santé.",
      "context": "Les hôpitaux sont des cibles fréquentes : leurs logiciels sont souvent anciens. La France refuse en principe de payer les rançons. Protéger un hôpital coûte cher, mais une attaque coûte aussi des millions.",
      "real": {
       "date": "21 août 2022",
@@ -11352,7 +11352,7 @@ const GAME = {
      "sector": "sante",
      "title": "À Mayotte, l'eau ne coule plus qu'un jour sur trois",
      "simple": "Après une sécheresse historique, les réserves d'eau de Mayotte sont presque vides. Le robinet n'est ouvert qu'un jour sur trois. Les familles font la queue pour des bouteilles.",
-     "expert": "Crise hydrique due à un déficit de pluie et à un sous-investissement chronique (retenues collinaires, forages, dessalement, fuites du réseau) : tours d'eau, distribution de bouteilles par l'État, risques sanitaires.",
+     "expert": "Crise hydrique due à un déficit de pluie et à un sous-investissement chronique (retenues collinaires (petits réservoirs d'eau agricoles), forages, dessalement, fuites du réseau) : tours d'eau, distribution de bouteilles par l'État, risques sanitaires.",
      "context": "Mayotte est le département le plus pauvre de France. Sa population a augmenté plus vite que les réseaux. Une partie de l'eau se perd dans des tuyaux qui fuient.",
      "real": {
       "date": "Été et automne 2023",
@@ -11838,7 +11838,7 @@ const GAME = {
      "sector": "salaires",
      "title": "Plus d'heures pour les élus du personnel ?",
      "simple": "Dans une PME, l'élue du personnel dit manquer de temps pour défendre ses collègues. Une proposition de loi veut augmenter les heures qu'on lui accorde. Le patron craint pour la production. Que faire ?",
-     "expert": "Proposition de loi relevant le crédit d'heures de délégation des élus du comité social et économique (CSE), notamment de 10 à 16 heures par mois dans les entreprises de moins de 50 salariés.",
+     "expert": "Proposition de loi relevant le crédit d'heures de délégation des élus du comité social et économique (CSE (élus du personnel)), notamment de 10 à 16 heures par mois dans les entreprises de moins de 50 salariés.",
      "context": "Des élus mieux armés améliorent le dialogue social ; mais ces heures sont payées par l'entreprise, ce qui pèse sur les petites structures.",
      "real": {
       "date": "Mars 2026 (proposition de loi déposée)",
@@ -15333,7 +15333,7 @@ const GAME = {
      "sector": "numerique",
      "title": "Les données de millions de demandeurs d'emploi volées",
      "simple": "Des pirates ont copié les noms, adresses et numéros de sécurité sociale de millions d'inscrits à l'agence pour l'emploi. Comment réagir ?",
-     "expert": "Exfiltration de données personnelles d'un système d'information public via des comptes de conseillers usurpés : notification à la CNIL, plainte et renforcement de l'authentification.",
+     "expert": "Exfiltration de données personnelles d'un système d'information public via des comptes de conseillers usurpés : notification à la CNIL (gendarme des données personnelles), plainte et renforcement de l'authentification.",
      "context": "Les services publics conservent beaucoup de données. Les protéger coûte de l'argent et du temps ; une fuite expose les personnes aux arnaques.",
      "real": {
       "date": "13 mars 2024",
@@ -16302,7 +16302,7 @@ const GAME = {
      "sector": "energie",
      "title": "Le nouveau réacteur normand est enfin raccordé",
      "simple": "Après dix-sept ans de chantier et un coût multiplié, le nouveau réacteur de la Manche envoie son premier courant sur le réseau. Faut-il en construire d'autres ?",
-     "expert": "Couplage au réseau du réacteur EPR de Flamanville 3 avec douze ans de retard ; la Cour des comptes réévalue son coût et s'interroge sur la rentabilité du programme EPR2.",
+     "expert": "Couplage au réseau du réacteur EPR (réacteur nucléaire de nouvelle génération) de Flamanville 3 avec douze ans de retard ; la Cour des comptes réévalue son coût et s'interroge sur la rentabilité du programme EPR2.",
      "context": "Le nucléaire produit environ deux tiers de l'électricité française, avec peu de CO2. Les nouveaux chantiers coûtent des dizaines de milliards et prennent plus de dix ans ; les renouvelables sont plus rapides mais intermittentes.",
      "real": {
       "date": "21 décembre 2024",
@@ -28174,7 +28174,7 @@ const GAME = {
    "term": "Remplacement de l'AME par une aide médicale d'urgence",
    "sector": "immigration",
    "simple": "Les étrangers sans papiers ne sont plus soignés gratuitement, sauf urgence.",
-   "expert": "Transformation de l'AME en aide médicale d'urgence limitée.",
+   "expert": "Transformation de l'AME (soins gratuits des étrangers sans papiers) en aide médicale d'urgence limitée.",
    "budget": 0.8,
    "budget_note": "Économie ou recette d'environ 0.8 Md€ par an : le déficit baisse.",
    "axes": {
@@ -29121,7 +29121,7 @@ const GAME = {
    "term": "Substitution de l'IFI par un impôt sur la fortune financière",
    "sector": "fiscalite",
    "simple": "On ne taxe plus la maison, mais les gros placements financiers.",
-   "expert": "Suppression de l'IFI et création d'un impôt sur les actifs financiers.",
+   "expert": "Suppression de l'IFI (impôt sur la fortune immobilière) et création d'un impôt sur les actifs financiers.",
    "budget": 0.5,
    "budget_note": "Économie ou recette d'environ 0.5 Md€ par an : le déficit baisse.",
    "axes": {
@@ -29350,7 +29350,7 @@ const GAME = {
    "term": "Revalorisation de l'AAH au-dessus du seuil de pauvreté",
    "sector": "sante",
    "simple": "Les personnes handicapées touchent une allocation qui les sort de la pauvreté.",
-   "expert": "Revalorisation de l'AAH au niveau du seuil de pauvreté.",
+   "expert": "Revalorisation de l'AAH (allocation aux adultes handicapés) au niveau du seuil de pauvreté.",
    "budget": -2,
    "budget_note": "Coût d'environ 2 Md€ par an : le déficit augmente.",
    "axes": {
