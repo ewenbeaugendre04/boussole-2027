@@ -18232,7 +18232,7 @@ const GAME = {
        },
        "fx": [
         {
-         "obj": "soldats",
+         "obj": "char",
          "x": 64,
          "y": 64,
          "anim": "appear"
