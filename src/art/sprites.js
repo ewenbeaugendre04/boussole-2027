@@ -171,6 +171,7 @@ function sprItems(){
   for(var pass = 0; pass < 3; pass++) kept.forEach(function(h){ if(!/pavillon|maison|chalet|mas_|immeuble|boulangerie|haussmann|ferme/.test(h.id)) return;
     kept.forEach(function(t){ if(!/^(pin|arbre|sapins)/.test(t.id)) return; var b = h.b, c = t.b;
       if(b[0] < c[2] && b[2] > c[0] && b[1] < c[3] && b[3] > c[1] && h.y > t.y - t.h * .3){ var d = t.y - t.h * .35 - h.y; h.y += d; h.b = [b[0], b[1] + d, b[2], b[3] + d]; } }); });
+  if(MT_V2){ var pb = kept.filter(function(k){ return k.pied; }); kept = kept.filter(function(t){ if(t.pied || !/^(pin|arbre|sapins)/.test(t.id)) return true; return !pb.some(function(k){ var ix = Math.min(t.b[2], k.b[2]) - Math.max(t.b[0], k.b[0]), iy = Math.min(t.b[3], k.b[3]) - Math.max(t.b[1], k.b[1]); return ix > -.3 && iy > -.3; }); }); } /* V2 : aucun arbre ordinaire mêlé aux arbres du pied (ordre devant/derrière impossible entre deux calques) */
   items = kept;
   items.sort(function(a, b){ return a.y - b.y; });
   return items;
