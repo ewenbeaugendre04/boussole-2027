@@ -136,3 +136,4 @@
 ## Dessins ajoutés (Recraft, 32 crédits)
 - personne_1 à 4 (employée, retraité, ouvrier, agricultrice) : l'objet `personnage` alterne entre 5 dessins (PERS_SPR dans placement.js).
 - aeroport, secheresse (terre craquelée), barrage_agricole (tracteurs + bottes de paille), tempete : remplacent les dessins de substitution.
+- Massifs d'un bloc (fournis par Ewen depuis Recraft) : massif_vosges, massif_jura, massif_alpes, massif_central2, massif_pyrenees remplacent les petites montagnes (Corse inchangée). Version d'avant : commit précédent (git revert pour revenir).
