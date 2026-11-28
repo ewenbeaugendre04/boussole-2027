@@ -13745,7 +13745,7 @@ const GAME = {
      },
      "fx": [
       {
-       "obj": "chantier_grue",
+       "obj": "mine",
        "x": 67,
        "y": 60,
        "anim": "grow"
@@ -13788,7 +13788,7 @@ const GAME = {
        },
        "fx": [
         {
-         "obj": "chantier_grue",
+         "obj": "mine",
          "x": 65,
          "y": 58.5,
          "anim": "grow"
@@ -24597,7 +24597,7 @@ const GAME = {
      },
      "fx": [
       {
-       "obj": "mairie",
+       "obj": "tribunal",
        "x": 52,
        "y": 24,
        "anim": "pulse"
@@ -26549,7 +26549,7 @@ const GAME = {
      },
      "fx": [
       {
-       "obj": "mairie",
+       "obj": "tribunal",
        "x": 50,
        "y": 80.5,
        "anim": "pulse"

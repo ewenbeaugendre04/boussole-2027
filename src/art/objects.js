@@ -282,6 +282,10 @@ var OBJ = {
     sh(4) + R_(-4, -5, 7, 4, '#B08A4E', SK) + R_(2, -8, 3.5, 3.5, '#B08A4E', SK) },
   chat:{ cat:'nature', w:10, h:10, d:
     sh(3.5) + R_(-3.5, -5, 6, 4, '#7F8C8D', SK) + R_(1.5, -8, 3, 3, '#7F8C8D', SK) },
+  tribunal:{ cat:'batiments', w:18, h:16, d:
+    sh(8) + R_(-8, -9, 16, 9, '#E9E2D0', SK) + P_('M-9,-9L0,-14L9,-9Z', '#C98B4E', SK) },
+  mine:{ cat:'batiments', w:18, h:16, d:
+    sh(8) + P_('M-9,0L-3,-9L4,-9L9,0Z', '#A07A4E', SK) + R_(-7, -14, 3, 14, '#4FB3D2', SK) },
   colis:{ cat:'symboles', w:12, h:12, d:
     sh(4.5) + P_('M-4,0V-5.4L0,-7L4,-5.4V0L0,1.4Z', '#D4B07A', SK) + P_('M-4,-5.4L0,-4L4,-5.4M0,-4V1.4', 'none', ' stroke="#A9834C" stroke-width=".4"') + P_('M-2,-6.2L2,-4.7', 'none', ' stroke="var(--paper)" stroke-width=".8"') },
   conteneurs:{ cat:'symboles', w:22, h:14, d:

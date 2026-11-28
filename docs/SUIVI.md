@@ -131,3 +131,4 @@
 - Doublons retirés : accord Mercosur (déjà en semaine 1), « payer ses impôts avec une appli européenne » (proche du paiement sans entreprises américaines).
 - Tests : 40 semaines attendues (check_data, smoke).
 - Recraft : plus de crédits (tribunal et mine non générés ; mairie et chantier utilisés à la place).
+- Recraft (28/11) : tribunal et mine générés et branchés (objets `tribunal`, `mine`) dans les situations prud'hommes, justice des mineurs et lithium.
