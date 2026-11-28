@@ -132,3 +132,7 @@
 - Tests : 40 semaines attendues (check_data, smoke).
 - Recraft : plus de crédits (tribunal et mine non générés ; mairie et chantier utilisés à la place).
 - Recraft (28/11) : tribunal et mine générés et branchés (objets `tribunal`, `mine`) dans les situations prud'hommes, justice des mineurs et lithium.
+
+## Dessins ajoutés (Recraft, 32 crédits)
+- personne_1 à 4 (employée, retraité, ouvrier, agricultrice) : l'objet `personnage` alterne entre 5 dessins (PERS_SPR dans placement.js).
+- aeroport, secheresse (terre craquelée), barrage_agricole (tracteurs + bottes de paille), tempete : remplacent les dessins de substitution.

@@ -148,17 +148,18 @@ function findSpot(x, y, w, h, up, occ, sf, ignore, rel, valid, again){
   }
   return best;
 }
+var PERS_SPR = ['personnage', 'personne_1', 'personne_2', 'personne_3', 'personne_4'], PERS_I = 0;
 function objEl(name, k, label, flip){
   var def = OBJ[name] || OBJ.etiquette;
   if(!OBJ[name]) label = label || String(name).replace(/_/g, ' ');
   var w = def.w || 24, h = def.h || 24, sc = LOCAL * k * (def.s || 1);
   var pw = w * sc, ph = h * sc;
-  var spr0 = OBJ_SPR[name];
+  var spr0 = name === 'personnage' ? PERS_SPR[(PERS_I++) % PERS_SPR.length] : OBJ_SPR[name]; /* personnages variés */
   if(spr0 && SPR_AR[spr0] && typeof VBK === 'number'){ var sw_ = Math.min(SPR_W[spr0] || 2.4, 3); pw = sw_ * VBK * (sw_ >= 2.6 ? 1.25 : 2); /* plafond : aucun objet animé géant */ ph = pw * SPR_AR[spr0]; sc = pw / w; } /* même échelle que le décor (x2 pour la lisibilité) */
   var el = document.createElement('div'); el.className = 'fx o-' + name;
   var b = document.createElement('div'); b.className = 'fxb';
   b.style.cssText = 'width:' + F(pw) + 'px;height:' + F(ph) + 'px;left:' + F(-pw / 2) + 'px;top:' + F(-ph + 2 * sc) + 'px';
-  var sp = OBJ_SPR[name];
+  var sp = spr0;
   if(sp && SPR_AR[sp]){ b.classList.add('fxspr'); b.innerHTML = '<img src="' + SPR_DIR + sp + '.webp" alt="" decoding="async"' + (flip ? ' class="flip"' : '') + '>'; }
   else b.innerHTML = def.d ? '<svg viewBox="' + (-w / 2) + ' ' + (-h + 2) + ' ' + w + ' ' + h + '"' + (flip ? ' class="flip"' : '') + '>' + def.d + '</svg>' : '';
   el.appendChild(b);
