@@ -39,12 +39,12 @@ function buildBoard(){
   });
   /* falaises claires (craie normande, calanques) et granit rose breton : on recolore l'épaisseur du plateau localement */
   function zones(id, list){ return '<clipPath id="' + id + '">' + list.map(function(z){ var c = P(z[0], z[1]); return '<ellipse cx="' + F(c[0]) + '" cy="' + F(c[1]) + '" rx="' + F(z[2] * 7) + '" ry="' + F(z[2] * 5) + '"/>'; }).join('') + '</clipPath>'; }
-  h.push('<defs>' + zones('zCraie', [[0.75, 49.85, .75], [1.45, 50.75, .3], [5.5, 43.2, .35]]) + zones('zGranit', [[-3.6, 48.75, .7], [-4.6, 48.35, .4]]) + zones('zPlage', [[-1.25, 44.3, 1.25], [-1.25, 45.4, .5], [-1.9, 46.6, .5], [3.55, 43.35, .75], [4.2, 43.5, .3], [-1.5, 43.5, .2], [6.95, 43.55, .3], [7.2, 43.66, .2], [6.6, 43.27, .25], [6.2, 43.12, .25]]) + '</defs>');
+  h.push('<defs>' + zones('zCraie', [[0.75, 49.85, .75], [1.45, 50.75, .3]].concat(typeof MT_V2 !== 'undefined' && MT_V2 ? [] : [[5.5, 43.2, .35]])) + zones('zGranit', [[-3.6, 48.75, .7], [-4.6, 48.35, .4]]) + zones('zPlage', [[-1.25, 44.3, 1.25], [-1.25, 45.4, .5], [-1.9, 46.6, .5], [3.55, 43.35, .75], [4.2, 43.5, .3], [-1.5, 43.5, .2], [6.95, 43.55, .3], [7.2, 43.66, .2], [6.6, 43.27, .25], [6.2, 43.12, .25]]) + '</defs>');
   h.push('<g clip-path="url(#zCraie)"><path d="' + fr + '" transform="translate(0,2.6)" fill="var(--craie-2,#D9D2C2)"/><path d="' + fr + '" transform="translate(0,1.3)" fill="var(--craie,#F3EEE2)"/><path d="' + fr + '" transform="translate(0,2.0)" fill="none" stroke="var(--craie-2,#D9D2C2)" stroke-width=".25" stroke-dasharray=".5 .9"/></g>');
   h.push('<g clip-path="url(#zGranit)"><path d="' + fr + '" transform="translate(0,2.6)" fill="var(--granit-2,#B9806B)"/><path d="' + fr + '" transform="translate(0,1.3)" fill="var(--granit,#DCA48C)"/></g>');
   h.push('<path class="sable-bord" d="' + fr + '" transform="translate(0,.8)"/><path class="sable-bord" d="' + co + '" transform="translate(0,.8)"/>'); /* sable : visible seulement sur les bords tournés vers le sud (perspective) */
   /* quelques rochers au ras de l'eau (côtes rocheuses réelles) */
-  [[-4.75, 48.45], [-4.6, 48.62], [-3.45, 48.86], [-3.1, 48.88], [-2.1, 48.68], [-4.5, 47.85], [-3.0, 47.45], [5.42, 43.19], [5.55, 43.2], [7.0, 43.5], [-1.8, 49.7], [0.25, 49.73]].forEach(function(q, i){
+  [[-4.75, 48.45], [-4.6, 48.62], [-3.45, 48.86], [-3.1, 48.88], [-2.1, 48.68], [-4.5, 47.85], [-3.0, 47.45], [5.42, 43.19], [5.55, 43.2], [7.0, 43.5], [-1.8, 49.7], [0.25, 49.73]].concat(typeof MT_V2 !== 'undefined' && MT_V2 ? [[6.62, 43.15], [6.7, 43.2], [6.85, 43.42], [6.92, 43.45], [7.4, 43.7], [7.47, 43.73], [7.33, 43.68]] : []).forEach(function(q, i){
     var c = P(q[0], q[1]); h.push('<g class="rocher" transform="translate(' + F(c[0] + (i % 2 ? .9 : -.7)) + ',' + F(c[1] + 1.9) + ')"><ellipse rx=".55" ry=".32" class="r-o"/><ellipse cx="-.1" cy="-.12" rx=".38" ry=".2" class="r-h"/></g>');
   });
   h.push('<path id="frTop" class="land-top" d="' + fr + '"/><path id="coTop" class="land-top" d="' + co + '"/>');
@@ -72,10 +72,10 @@ function buildBoard(){
     [[6.0,46.2],[4.85,45.75],[4.8,44.9],[4.7,44.0],[4.6,43.55]],
     [[0.7,42.9],[1.4,43.6],[0.6,44.2],[-0.55,44.85],[-0.9,45.4]]
   ];
-  if(typeof MT_V2 !== 'undefined' && MT_V2){ rivers[1][0] = [4.1, 45.6]; rivers[2].push([4.63, 43.42]); rivers[3].push([-1.25, 45.63]); } /* V2 : la Loire part après le Massif central, le Rhône rejoint la mer */
+  if(typeof MT_V2 !== 'undefined' && MT_V2){ rivers[1][0] = [4.1, 45.6]; rivers[2].push([4.63, 43.42]); rivers[3].push([-1.25, 45.63]); rivers[3][0] = [0.8, 43.2]; } /* V2 : la Loire part après le Massif central, le Rhône rejoint la mer */
   window.RIVERS_LL = rivers;
   rivers.forEach(function(r){ h.push('<path d="' + smooth(L(r), false) + '" fill="none" stroke="var(--river)" stroke-width=".7" stroke-linecap="round"/>'); });
-  if(typeof MT_V2 !== 'undefined' && MT_V2) h.push('<path d="' + smooth(L([[-0.62,44.98],[-0.9,45.4],[-1.25,45.63]]), false) + '" fill="none" stroke="var(--river)" stroke-width="1.6" stroke-linecap="round"/>'); /* V2 : estuaire de la Gironde */
+  if(typeof MT_V2 !== 'undefined' && MT_V2) h.push('<path d="' + smooth(L([[-0.62,44.98],[-0.9,45.4],[-1.25,45.63]]), false) + '" fill="none" stroke="var(--river)" stroke-width="1.6" stroke-linecap="round"/>'); /* V2 : estuaire de la Gironde */ if(typeof MT_V2 !== 'undefined' && MT_V2) h.push('<path d="' + smooth(L([[0.75,49.4],[0.4,49.45],[0.05,49.48]]), false) + '" fill="none" stroke="var(--river)" stroke-width="1.3" stroke-linecap="round"/>'); /* V2 : estuaire de la Seine */
   h.push('</g>');
   // rails
   var C = { paris:[2.35,48.85], lille:[3.07,50.63], lyon:[4.84,45.76], marseille:[5.37,43.3], bordeaux:[-0.58,44.84], rennes:[-1.68,48.11], brest:[-4.45,48.39],
