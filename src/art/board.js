@@ -54,7 +54,7 @@ function buildBoard(){
     var c = P(q[0], q[1]); h.push('<g class="rocher" transform="translate(' + F(c[0] + (i % 2 ? .9 : -.7)) + ',' + F(c[1] + 1.9) + ')"><ellipse rx=".55" ry=".32" class="r-o"/><ellipse cx="-.1" cy="-.12" rx=".38" ry=".2" class="r-h"/></g>');
   });
   h.push('<path id="frTop" class="land-top" d="' + fr + '"/><path id="coTop" class="land-top" d="' + co + '"/>');
-  h.push('<g clip-path="url(#zPlage)"><g clip-path="url(#clipFr)"><path class="plage" d="' + fr + '" fill="none" stroke-width="3.4" stroke-linejoin="round"/></g></g>'); /* la plage reste sur la terre : l'eau commence à son bord */
+  h.push('<g clip-path="url(#zPlage)"><g clip-path="url(#clipFr)"><path class="plage" d="' + fr + '" fill="none" stroke-width="3.4" stroke-linejoin="round"/><path class="plage" d="' + co + '" fill="none" stroke-width="2.4" stroke-linejoin="round"/></g></g>'); /* la plage reste sur la terre : l'eau commence à son bord */
   // décor intérieur, découpé sur l'île
   h.push('<g clip-path="url(#clipFr)">');
   h.push('<rect x="-10" y="-10" width="130" height="120" fill="url(#landlight)"/>');
