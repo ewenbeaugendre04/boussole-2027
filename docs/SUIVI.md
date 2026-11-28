@@ -136,3 +136,4 @@
 ## Dessins ajoutés (Recraft, 32 crédits)
 - personne_1 à 4 (employée, retraité, ouvrier, agricultrice) : l'objet `personnage` alterne entre 5 dessins (PERS_SPR dans placement.js).
 - aeroport, secheresse (terre craquelée), barrage_agricole (tracteurs + bottes de paille), tempete : remplacent les dessins de substitution.
+- Écume/ressac masqués au-dessus des côtes nord (masque horsTerre décalé vers le haut) : cachés derrière les falaises.
