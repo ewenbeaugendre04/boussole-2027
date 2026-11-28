@@ -72,9 +72,10 @@ function buildBoard(){
     [[6.0,46.2],[4.85,45.75],[4.8,44.9],[4.7,44.0],[4.6,43.55]],
     [[0.7,42.9],[1.4,43.6],[0.6,44.2],[-0.55,44.85],[-0.9,45.4]]
   ];
-  if(typeof MT_V2 !== 'undefined' && MT_V2){ rivers[1][0] = [4.1, 45.6]; rivers[2].push([4.63, 43.42]); } /* V2 : la Loire part après le Massif central, le Rhône rejoint la mer */
+  if(typeof MT_V2 !== 'undefined' && MT_V2){ rivers[1][0] = [4.1, 45.6]; rivers[2].push([4.63, 43.42]); rivers[3].push([-1.25, 45.63]); } /* V2 : la Loire part après le Massif central, le Rhône rejoint la mer */
   window.RIVERS_LL = rivers;
   rivers.forEach(function(r){ h.push('<path d="' + smooth(L(r), false) + '" fill="none" stroke="var(--river)" stroke-width=".7" stroke-linecap="round"/>'); });
+  if(typeof MT_V2 !== 'undefined' && MT_V2) h.push('<path d="' + smooth(L([[-0.62,44.98],[-0.9,45.4],[-1.25,45.63]]), false) + '" fill="none" stroke="var(--river)" stroke-width="1.6" stroke-linecap="round"/>'); /* V2 : estuaire de la Gironde */
   h.push('</g>');
   // rails
   var C = { paris:[2.35,48.85], lille:[3.07,50.63], lyon:[4.84,45.76], marseille:[5.37,43.3], bordeaux:[-0.58,44.84], rennes:[-1.68,48.11], brest:[-4.45,48.39],

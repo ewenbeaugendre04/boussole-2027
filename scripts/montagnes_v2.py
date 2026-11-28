@@ -13,18 +13,18 @@ for n,lon,lat,w,sy,kind,k in M:
     a=np.asarray(Image.open(f'assets/sprites/mt2_{n}.webp'))[...,3]>80;H,W=a.shape
     h=w*H/W*sy;x0=X(lon)-w/2;y0=Y(lat)-.86*h
     puts.append(f"put('mt2_{n}', {lon}, {lat}, {w}"+(f", 0, {sy}" if sy!=1 else "")+");")
-    for row,off,kk in [(0,-.4,k),(1,.7,k//2+1)]:
+    for row,off,kk in [(0,.5,k),(1,1.6,k//2+1)]:
         for i,c in enumerate(np.linspace(W*.06,W*.94,kk).astype(int)):
             col=a[:,max(c-3,0):c+3].any(1)
             if not col.any(): continue
             b=H-1-col[::-1].argmax()
             t=kind if kind!='arbre' else ['arbre','arbre_automne','arbre_jaune','arbre'][i%4]
-            add(t,x0+c/W*w+row*.5*w/kk,y0+b/H*h+off,(2.4 if kind=='arbre' else 1.9) if row==0 else (2.2 if kind=='arbre' else 1.7),(i+row)%2)
+            add(t,x0+c/W*w+row*.5*w/kk,y0+b/H*h+off,(1.9 if kind=='arbre' else 1.8) if row==0 else (1.7 if kind=='arbre' else 1.6),(i+row)%2)
     if n=='alpes':  # quelques sapins sur les flancs
         for v in (.45,.6,.72):
             for c in (.12,.9):
                 add('sapins',x0+c*w,y0+v*h,1.5,int(c>.5))
-puts+=["put('chalet', 6.6, 45.0, 1.9, 0, 1, 0, 1);","put('chalet', 5.5, 45.1, 1.8, 1, 1, 0, 1);","put('maison_basque', -0.9, 43.2, 1.9, 0, 1, 0, 1);","put('chalet', 1.6, 42.95, 1.8, 1, 1, 0, 1);","put('maison_pierre', 2.35, 45.0, 1.8, 0, 1, 0, 1);","put('chalet', 6.95, 47.9, 1.7, 0, 1, 0, 1);"]
+puts+=["put('chalet', 6.6, 45.0, 1.9, 0, 1, 0, 0);","put('chalet', 5.5, 45.1, 1.8, 1, 1, 0, 0);","put('maison_basque', -0.9, 43.2, 1.9, 0, 1, 0, 0);","put('chalet', 1.6, 42.95, 1.8, 1, 1, 0, 0);","put('maison_pierre', 2.35, 45.0, 1.8, 0, 1, 0, 0);","put('chalet', 6.95, 47.9, 1.7, 0, 1, 0, 0);"]
 line="  if(MT_V2){ "+" ".join(puts)+" } /* V2 : massifs d'un bloc + sapins, arbres et chalets au pied */"
 p='src/art/sprites.js';s=open(p).read()
 s,c=re.subn(r"  if\(MT_V2\)\{ put\('mt2_vosges'.*?chalets au pied \*/",lambda m:line,s);print(c,len(puts))
