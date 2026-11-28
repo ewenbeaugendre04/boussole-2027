@@ -13,10 +13,10 @@ function ptAt(s, t){
 var BOAT_SVG = '<svg viewBox="-2.6 -3.2 5.2 4.6"><path d="M-2.2,1.1q1,-.4 2,0t2,0" fill="none" stroke="var(--foam)" stroke-width=".25" opacity=".8"/><path d="M-1.6,0h3.2l-.6,.8h-2z" fill="var(--boat)" stroke="var(--roof-d)" stroke-width=".18"/><path d="M0,-.1V-2.8L1.3,-.4Z" fill="var(--sail)" stroke="var(--roof-d)" stroke-width=".15"/><path d="M-.15,-.1V-2.2L-1.1,-.4Z" fill="var(--sail)" stroke="var(--roof-d)" stroke-width=".15"/></svg>';
 function buildMovers(){
   var ml = $('movers'); ml.innerHTML = '';
-  var routes = [[[-5.4,49.3],[-3.5,49.6],[-1.5,50.1],[0.6,50.3]], [[-3.8,46.6],[-3.0,45.6],[-2.3,44.6]], [[5.3,42.75],[6.6,42.2],[7.9,42.0],[8.4,41.75]], [[3.6,42.9],[4.3,42.6],[5.0,42.55]], [[-6.2,47.6],[-5.6,48.3]], [[-5.0,46.4],[-4.2,45.5]], [[3.9,42.1],[5.4,41.8]], [[-4.6,44.9],[-3.8,44.4]]];
+  var routes = [[[-5.4,49.3],[-3.5,49.6],[-1.5,50.1],[0.6,50.3]], [[-5.0,46.4],[-4.2,45.5]], [[3.9,42.1],[5.4,41.8]], [[5.3,42.75],[6.6,42.2],[7.9,42.0],[8.4,41.75]]], tailles = [.85, 1, .7, .65], sens = [-1, 1, 1, -1];
   var kinds = routes.map(function(){ return 'voilier'; });
   /* les bateaux du décor deviennent des bateaux qui bougent (petit aller-retour) */
-  if(typeof sprItems === 'function' && SPR_READY) sprItems().filter(function(it){ return /^(voilier|bateau_peche)$/.test(it.id); }).forEach(function(it){ routes.push([[it.x0 - .35, it.y0 + .05], [it.x0 + .35, it.y0 - .05]]); kinds.push(it.id); });
+  if(typeof sprItems === 'function' && SPR_READY) sprItems().filter(function(it){ return /^bateau_peche$/.test(it.id); }).forEach(function(it){ routes.push([[it.x0 - .35, it.y0 + .05], [it.x0 + .35, it.y0 - .05]]); kinds.push(it.id); tailles.push(.55); sens.push(1); });
   /* contrôle : route en mer, loin des côtes et des îlots, et loin des autres routes (pas de collision) */
   var ILOTS = [[-3.5, 47.08], [6.25, 42.6], [-5.45, 47.98], [-5.2, 48.55], [-3.9, 47.35]].map(function(q){ return P(q[0], q[1]); });
   var ok = [], kept = [], keptK = [];
@@ -24,17 +24,17 @@ function buildMovers(){
     var pts = [], seg = L(r); for(var k = 0; k < seg.length - 1; k++) for(var u = 0; u <= 10; u++) pts.push([seg[k][0] + (seg[k + 1][0] - seg[k][0]) * u / 10, seg[k][1] + (seg[k + 1][1] - seg[k][1]) * u / 10]);
     var enMer = pts.every(function(p){ return [[0, 0], [1.5, 0], [-1.5, 0], [0, 1], [0, -1.2], [-1.2, -1], [1.2, -1]].every(function(o){ return typeof terrainU !== 'function' || terrainU(p[0] + o[0], p[1] + o[1]) === 0; }) && ILOTS.every(function(c){ return Math.hypot(p[0] - c[0], p[1] - c[1]) > 4.5; }); });
     var loin = ok.every(function(q){ return pts.every(function(p){ return q.every(function(o){ return Math.hypot(p[0] - o[0], p[1] - o[1]) > 4.5; }); }); });
-    if(enMer && loin){ ok.push(pts); kept.push(r); keptK.push(kinds[i]); }
+    if(enMer && loin){ ok.push(pts); kept.push(r); keptK.push([kinds[i], tailles[i], sens[i]]); }
   });
-  routes = kept; kinds = keptK;
+  routes = kept; tailles = keptK.map(function(k){ return k[1]; }); sens = keptK.map(function(k){ return k[2]; }); kinds = keptK.map(function(k){ return k[0]; });
 
   var tmp = document.createElementNS(NS, 'path'); svg.appendChild(tmp);
   MV.boats = routes.map(function(r, i){
     tmp.setAttribute('d', smooth(L(r), false));
     var el = document.createElement('div'); el.className = 'mv boat'; el.innerHTML = '<img src="' + SPR_DIR + kinds[i] + '.webp" alt="" style="width:100%;height:100%;object-fit:contain;object-position:50% 100%">';
-    var bk = kinds[i] === 'bateau_peche' ? .7 : 1; el.style.width = F(5.2 * bk * VBK) + 'px'; el.style.height = F(4.6 * bk * VBK) + 'px'; el.style.marginLeft = F(-2.6 * bk * VBK) + 'px'; el.style.marginTop = F(-3.2 * bk * VBK) + 'px';
+    var bk = tailles[i] || 1; el.style.width = F(5.2 * bk * VBK) + 'px'; el.style.height = F(4.6 * bk * VBK) + 'px'; el.style.marginLeft = F(-2.6 * bk * VBK) + 'px'; el.style.marginTop = F(-3.2 * bk * VBK) + 'px';
     ml.appendChild(el);
-    return { el:el, s:samplePath(tmp, 60), t:(i * .29) % 1, sp:.012 + i * .002, dir:1 };
+    return { el:el, s:samplePath(tmp, 60), t:(i * .29) % 1, sp:.012 + i * .002, dir:sens[i] || 1 };
   });
   svg.removeChild(tmp);
   MV.trains = [];
