@@ -140,3 +140,4 @@
 - Côtes nord : écume masquée au-dessus du rivage + fondu sur tout le nord (au-dessus de 48° N), éoliennes en mer et Mont-Saint-Michel sans écume par-dessus.
 - EPR de Flamanville ajouté (sprite `epr`). Strasbourg dégagé (pas d'arbres ni de petites montagnes autour).
 - Situation provisoire `v42_fessenheim` (semaine 8) : à retirer si besoin (supprimer l'événement ; script scripts/fessenheim.js).
+- V2 montagnes (aperçu ?v2) : sprites mt2_* calés sur le modèle d'Ewen (recalage silhouette + ajustement local près des frontières, pas de déformation, ×0,85 ; Pyrénées ramenées entre les deux mers). Version normale inchangée. Si validé : rendre MT_V2 vrai par défaut.
