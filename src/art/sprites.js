@@ -89,7 +89,7 @@ function sprList(){
   if(MT_V2){ put('eolien_mer', -3.05, 49.0, 2.4); put('eolien_mer', 1.15, 50.25, 2.4); } /* V2 : deux éoliennes en mer de plus */
   if(MT_V2){ put('bateau_peche', 4.55, 42.5, 1.5); put('bateau_peche', -2.3, 45.75, 1.5, 1); } /* V2 : bateaux de pêche au large */
   put('base_navale', -4.45, 48.22, 3.6); put('base_navale', 5.95, 43.2, 3.4, 1); put('fregate', -5.55, 48.45, 2.6); put('fregate', 6.65, 42.72, 2.4, 1); /* zone militaire : base des sous-marins de l'île Longue */
-  put('capitole', 1.5, 43.6, 2.6); put('haussmann', 1.6, 43.66, 1.9); put('immeuble', 1.62, 43.54, 1.9, 1); put('petit_immeuble', 1.45, 43.7, 1.8); put('pavillon', 1.72, 43.6, 1.7); put('petit_immeuble', 1.05, 43.58, 1.7, 1); put('pavillon', 1.0, 43.66, 1.6); /* Toulouse, la ville rose */
+  put('capitole', 1.52, 43.52, 3.6); put('haussmann', 1.6, 43.66, 1.9); put('immeuble', 1.62, 43.54, 1.9, 1); put('petit_immeuble', 1.45, 43.7, 1.8); put('pavillon', 1.72, 43.6, 1.7); put('petit_immeuble', 1.05, 43.58, 1.7, 1); put('pavillon', 1.0, 43.66, 1.6); /* Toulouse, la ville rose */
   [[-4.78,48.42],[-1.9,49.65],[1.6,50.7],[-1.45,43.5],[-2.2,47.28]].forEach(function(l){ put('phare', l[0], l[1], 1.4); });
   put('parasols', 3.5, 43.45, 2.4); put('parasols', -1.3, 44.6, 2.2); put('parasols', 6.9, 43.55, 2.2); put('voilier', -2.6, 46.5, 1.8); put('voilier', 5.6, 42.9, 1.8); put('voilier', -1.9, 49.95, 1.8);
   put('gare', 2.45, 48.95, 2.2); put('stade', 2.3, 48.7, 2.6); put('universite', 4.95, 45.68, 2.2); put('hopital', 1.5, 43.55, 2.4); put('ferme', 0.2, 46.9, 2.4); put('ferme', 3.9, 48.1, 2.3); put('colza', 0.9, 48.65, 3); put('colza', 4.6, 49.55, 3);
