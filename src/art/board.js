@@ -72,6 +72,8 @@ function buildBoard(){
     [[6.0,46.2],[4.85,45.75],[4.8,44.9],[4.7,44.0],[4.6,43.55]],
     [[0.7,42.9],[1.4,43.6],[0.6,44.2],[-0.55,44.85],[-0.9,45.4]]
   ];
+  if(typeof MT_V2 !== 'undefined' && MT_V2){ rivers[1][0] = [4.1, 45.6]; rivers[2].push([4.63, 43.42]); } /* V2 : la Loire part après le Massif central, le Rhône rejoint la mer */
+  window.RIVERS_LL = rivers;
   rivers.forEach(function(r){ h.push('<path d="' + smooth(L(r), false) + '" fill="none" stroke="var(--river)" stroke-width=".7" stroke-linecap="round"/>'); });
   h.push('</g>');
   // rails

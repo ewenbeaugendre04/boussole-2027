@@ -13,13 +13,13 @@ for n,lon,lat,w,sy,kind,k in M:
     a=np.asarray(Image.open(f'assets/sprites/mt2_{n}.webp'))[...,3]>80;H,W=a.shape
     h=w*H/W*sy;x0=X(lon)-w/2;y0=Y(lat)-.86*h
     puts.append(f"put('mt2_{n}', {lon}, {lat}, {w}"+(f", 0, {sy}" if sy!=1 else "")+");")
-    for row,off,kk in [(0,.4,k),(1,1.6,k//2+1)]:
+    for row,off,kk in [(0,-.4,k),(1,.7,k//2+1)]:
         for i,c in enumerate(np.linspace(W*.06,W*.94,kk).astype(int)):
             col=a[:,max(c-3,0):c+3].any(1)
             if not col.any(): continue
             b=H-1-col[::-1].argmax()
             t=kind if kind!='arbre' else ['arbre','arbre_automne','arbre_jaune','arbre'][i%4]
-            add(t,x0+c/W*w+row*.5*w/kk,y0+b/H*h+off,1.6 if row==0 else 1.5,(i+row)%2)
+            add(t,x0+c/W*w+row*.5*w/kk,y0+b/H*h+off,(2.4 if kind=='arbre' else 1.9) if row==0 else (2.2 if kind=='arbre' else 1.7),(i+row)%2)
     if n=='alpes':  # quelques sapins sur les flancs
         for v in (.45,.6,.72):
             for c in (.12,.9):
