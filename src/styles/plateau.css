@@ -217,3 +217,6 @@
 @media (prefers-reduced-motion:reduce){.a-appear,.a-grow,.a-pulse,.a-fade,.a-shake,.a-rise{animation-duration:.01s!important;animation-iteration-count:1!important}}
 
 [data-theme=dark] #sprl img.mt-pied,.is-night #sprl img.mt-pied{filter:brightness(.42) saturate(.5)}
+.ilot-ecume{opacity:.55;animation:ilotEcume 4s ease-in-out infinite}@keyframes ilotEcume{0%,100%{opacity:.25}50%{opacity:.7}}
+.phare-lum{opacity:0}.is-night .phare-lum,[data-theme=dark] .phare-lum{animation:phareLum 3s ease-in-out infinite}@keyframes phareLum{0%,100%{opacity:.15}50%{opacity:.75}}
+@media (prefers-reduced-motion:reduce){.ilot-ecume,.phare-lum{animation:none}}

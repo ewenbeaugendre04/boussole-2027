@@ -44,8 +44,12 @@ function buildBoard(){
   h.push('<g clip-path="url(#zCraie)"><path d="' + fr + '" transform="translate(0,2.6)" fill="var(--craie-2,#D9D2C2)"/><path d="' + fr + '" transform="translate(0,1.3)" fill="var(--craie,#F3EEE2)"/><path d="' + fr + '" transform="translate(0,2.0)" fill="none" stroke="var(--craie-2,#D9D2C2)" stroke-width=".25" stroke-dasharray=".5 .9"/></g>');
   h.push('<g clip-path="url(#zGranit)"><path d="' + fr + '" transform="translate(0,2.6)" fill="var(--granit-2,#B9806B)"/><path d="' + fr + '" transform="translate(0,1.3)" fill="var(--granit,#DCA48C)"/></g>');
   h.push('<path class="sable-bord" d="' + fr + '" transform="translate(0,.8)"/><path class="sable-bord" d="' + co + '" transform="translate(0,.8)"/>'); /* sable : visible seulement sur les bords tournés vers le sud (perspective) */
+  if(typeof MT_V2 !== 'undefined' && MT_V2){ /* V2 : îlots au large (Ouessant, Sein, Groix, Belle-Île, Bréhat) avec ressac, et le phare d'Ar-Men */
+    [[-5.15, 48.5, 1.3, .7], [-5.25, 47.92, .6, .35], [-3.75, 47.42, .9, .45], [-3.5, 47.08, 1.6, .7], [-3.0, 48.9, .5, .3], [-3.0, 46.75, .9, .45]].forEach(function(q){ var c = P(q[0], q[1]), rx = q[2], ry = q[3];
+      h.push('<g class="ilot"><ellipse class="ilot-ecume" cx="' + F(c[0]) + '" cy="' + F(c[1] + .5) + '" rx="' + F(rx + .9) + '" ry="' + F(ry + .6) + '" fill="none" stroke="#fff" stroke-width=".25"/><ellipse cx="' + F(c[0]) + '" cy="' + F(c[1] + .55) + '" rx="' + F(rx) + '" ry="' + F(ry) + '" fill="#A86F3C"/><ellipse cx="' + F(c[0]) + '" cy="' + F(c[1] + .15) + '" rx="' + F(rx) + '" ry="' + F(ry) + '" fill="#F2D59A"/><ellipse cx="' + F(c[0]) + '" cy="' + F(c[1]) + '" rx="' + F(rx * .9) + '" ry="' + F(ry * .85) + '" fill="var(--land)"/></g>'); });
+    var am = P(-5.45, 47.98); h.push('<g class="phare-mer" transform="translate(' + F(am[0]) + ',' + F(am[1]) + ')"><ellipse class="ilot-ecume" cx="0" cy=".3" rx=".9" ry=".5" fill="none" stroke="#fff" stroke-width=".22"/><ellipse cx="0" cy=".2" rx=".4" ry=".22" fill="#8D8D8D"/><rect x="-.18" y="-1.6" width=".36" height="1.8" fill="#fff"/><rect x="-.18" y="-1.1" width=".36" height=".3" fill="#D9473B"/><rect x="-.18" y="-.4" width=".36" height=".3" fill="#D9473B"/><rect x="-.24" y="-1.85" width=".48" height=".28" fill="#3B4A5A"/><circle class="phare-lum" cx="0" cy="-1.72" r="1.6" fill="#FFE9A0"/></g>'); }
   /* quelques rochers au ras de l'eau (côtes rocheuses réelles) */
-  [[-4.75, 48.45], [-4.6, 48.62], [-3.45, 48.86], [-3.1, 48.88], [-2.1, 48.68], [-4.5, 47.85], [-3.0, 47.45], [5.42, 43.19], [5.55, 43.2], [7.0, 43.5], [-1.8, 49.7], [0.25, 49.73]].forEach(function(q, i){
+  [[-4.75, 48.45], [-4.6, 48.62], [-3.45, 48.86], [-3.1, 48.88], [-2.1, 48.68], [-4.5, 47.85], [-3.0, 47.45], [5.42, 43.19], [5.55, 43.2], [7.0, 43.5], [-1.8, 49.7], [0.25, 49.73]].filter(function(){ return typeof MT_V2 === 'undefined' || !MT_V2; }).forEach(function(q, i){
     var c = P(q[0], q[1]); h.push('<g class="rocher" transform="translate(' + F(c[0] + (i % 2 ? .9 : -.7)) + ',' + F(c[1] + 1.9) + ')"><ellipse rx=".55" ry=".32" class="r-o"/><ellipse cx="-.1" cy="-.12" rx=".38" ry=".2" class="r-h"/></g>');
   });
   h.push('<path id="frTop" class="land-top" d="' + fr + '"/><path id="coTop" class="land-top" d="' + co + '"/>');
@@ -148,6 +152,31 @@ function insetSvg(){
     ['Nouvelle-Calédonie', 1.6, 2.6, [[-2.4,-1.2],[-1.6,-1.2],[.4,0],[2.4,1],[2.2,1.4],[1.2,1.2],[-.6,.2],[-2.3,-.8]]],
     ['Polynésie', 6.1, 2.2, [[-.3,-.3],[.3,-.3],[.3,.3],[-.3,.3]], [[.8,.5],[1.2,.5],[1.2,.9],[.8,.9]], [[-.9,.8],[-.5,.8],[-.5,1.2],[-.9,1.2]]]
   ];
+  if(typeof MT_V2 !== 'undefined' && MT_V2){ /* V2 : cadre plus grand, plages, palmiers, reliefs, lagons */
+    var K = 1.45, palm = function(px, py, k){ k = k || 1; return '<g transform="translate(' + F(px) + ',' + F(py) + ') scale(' + k + ')"><path d="M0,0 Q.15,-.6 .05,-1.2" stroke="#8B5A2B" stroke-width=".14" fill="none"/><path d="M.05,-1.2 q.45,-.15 .7,.15 M.05,-1.2 q-.45,-.15 -.7,.15 M.05,-1.2 q.3,-.4 .55,-.35 M.05,-1.2 q-.3,-.4 -.55,-.35" stroke="#2E9E4F" stroke-width=".16" fill="none" stroke-linecap="round"/></g>'; },
+      relief = function(px, py, k, neige){ return '<path d="M' + F(px - .9 * k) + ',' + F(py) + 'L' + F(px) + ',' + F(py - 1.3 * k) + 'L' + F(px + .9 * k) + ',' + F(py) + 'Z" fill="#7C8B5A"/><path d="M' + F(px) + ',' + F(py - 1.3 * k) + 'L' + F(px + .9 * k) + ',' + F(py) + 'L' + F(px + .2 * k) + ',' + F(py) + 'Z" fill="#5E6D44"/>' + (neige ? '<path d="M' + F(px - .25 * k) + ',' + F(py - .95 * k) + 'L' + F(px) + ',' + F(py - 1.3 * k) + 'L' + F(px + .25 * k) + ',' + F(py - .95 * k) + 'Z" fill="#9AA27A"/>' : ''); };
+    o = '<g class="inset"><g transform="translate(' + F(x) + ',' + F(y) + ') scale(' + K + ') translate(' + F(-x) + ',' + F(-y) + ')">';
+    o += '<rect x="' + F(x - 9.4) + '" y="' + F(y - 7.6) + '" width="18.8" height="13.4" rx="2.2" fill="var(--sea-deep)" opacity=".6" stroke="var(--foam)" stroke-width=".3" stroke-dasharray="1 .8"/>';
+    var LAG = { 'Nouvelle-Calédonie':1, 'Polynésie':1, 'Mayotte':1 };
+    OM.forEach(function(t){
+      var cx = x + t[1], cy = y + t[2];
+      if(LAG[t[0]]) t.slice(3).forEach(function(pts){ o += '<path d="' + smooth(pts.map(function(q){ return [cx + q[0] * 1.25, cy + q[1] * 1.35]; }), true) + '" fill="#8FE3DA" opacity=".55"/>'; }); /* lagon */
+      t.slice(3).forEach(function(pts){
+        var d = smooth(pts.map(function(q){ return [cx + q[0], cy + q[1]]; }), true);
+        o += '<path d="' + d + '" transform="translate(0,.5)" fill="var(--cliff)"/><path d="' + d + '" fill="var(--land)" stroke="#F6E3A4" stroke-width=".55" paint-order="stroke"/>';
+      });
+      if(t[0] === 'Guadeloupe') o += relief(cx - 1.1, cy + .3, .7, 1) + palm(cx + 1.0, cy - .7, .7) + palm(cx - 1.5, cy + 1.0, .6);
+      if(t[0] === 'Martinique') o += relief(cx - .1, cy - .2, .75, 1) + palm(cx + .5, cy + 1.0, .6);
+      if(t[0] === 'Guyane') o += '<circle cx="' + F(cx - .6) + '" cy="' + F(cy + .2) + '" r=".55" fill="#1F7A3E"/><circle cx="' + F(cx + .3) + '" cy="' + F(cy + .7) + '" r=".6" fill="#23864A"/><circle cx="' + F(cx + .4) + '" cy="' + F(cy - .4) + '" r=".5" fill="#1F7A3E"/><circle cx="' + F(cx - .2) + '" cy="' + F(cy + 1.3) + '" r=".45" fill="#2A9455"/><path d="M' + F(cx + 1.2) + ',' + F(cy - .6) + 'l.12,-.9 .12,.9z" fill="#fff" stroke="#9AA" stroke-width=".05"/>'; /* forêt et fusée de Kourou */
+      if(t[0] === 'La Réunion') o += relief(cx - .1, cy + .3, .85, 1) + relief(cx + .6, cy + .5, .5) + palm(cx - .9, cy + .7, .55);
+      if(t[0] === 'Mayotte') o += palm(cx, cy + .3, .5);
+      if(t[0] === 'Nouvelle-Calédonie') o += relief(cx - .6, cy - .1, .5) + relief(cx + .4, cy + .45, .45) + palm(cx + 1.8, cy + 1.2, .5);
+      if(t[0] === 'Polynésie') o += palm(cx, cy, .45) + palm(cx + 1, cy + .7, .4);
+      o += '<text x="' + F(cx) + '" y="' + F(cy + 2.5) + '" text-anchor="middle" font-size=".75" fill="#fff" opacity=".85" style="font-family:var(--f-display)">' + esc(t[0]) + '</text>';
+    });
+    o += '</g><text class="rlabel" x="' + F(x) + '" y="' + F(y + 8.6 * K) + '" text-anchor="middle" style="stroke:var(--sea)">' + esc(r.label || 'Outre-mer') + '</text></g>';
+    return o;
+  }
   OM.forEach(function(t){
     t.slice(3).forEach(function(pts){
       var d = smooth(pts.map(function(q){ return [x + t[1] + q[0], y + t[2] + q[1]]; }), true);
