@@ -1,4 +1,4 @@
-var MT_V2 = typeof location !== 'undefined' && /[?&]v2\b/.test(location.search); /* aperçu des nouvelles montagnes : ?v2 */
+var MT_V2 = true; /* nouvelle carte (l'ancienne a été supprimée) */
 'use strict';
 /* =========================================================
    Sprites (bibliothèque Recraft, assets/sprites/*.webp)
@@ -29,7 +29,7 @@ function sprList(){
   }
   // monuments des grandes villes
   put('tour_eiffel', 2.29, 48.92, 2.6); put('arc_triomphe', 2.52, 48.74, 2.6); put('fourviere', 4.78, 45.8, 3.4); put('basilique_marseille', 5.37, 43.36, 3); put('cathedrale_strasbourg', 7.72, 48.62, 2.5);
-  put('beffroi_lille', 3.07, 50.62, 2); put('bourse_bordeaux', -0.57, 44.86, 3.8); put('mont_saint_michel', MT_V2 ? -2.15 : -1.75, MT_V2 ? 48.76 : 48.82, 3);
+  put('beffroi_lille', 3.07, 50.62, 2); put('bourse_bordeaux', -0.57, 44.86, 3.8); put('mont_saint_michel', -2.15, 48.76, 3);
   // villes et villages : des maisons partout
   /* ville structurée : centre (haussmann, commerces), couronne (immeubles), périphérie (pavillons) ; quartier d'affaires optionnel */
   function city(lon, lat, r, o){
@@ -67,16 +67,16 @@ function sprList(){
   // relief et littoral (sprites Recraft)
   // montagnes : massifs en vue isométrique du dessus, sans socle ; chacun placé une fois
   /* Massif central, Jura, Vosges : quelques montagnes basses sans neige, tailles variées */
-  if(!MT_V2){ put('mt_basse', 3.65, 44.45, 2.7, 1); put('montagnes_douces', 2.2, 45.7, 2.2); }
-  if(!MT_V2){ put('mt_basse', 5.95, 46.45, 2.8); put('mt_basse', 6.35, 46.95, 2.4, 1); /* Jura */ }
-  if(!MT_V2){ put('mt_basse', 7.0, 48.35, 2.8, 1); put('mt_basse', 6.9, 47.95, 2.4); /* Vosges */ }
-  if(!MT_V2){ put('montagnes_douces', 5.7, 46.15, 2.1, 1); put('mt_basse', 6.6, 47.25, 2.2); /* Jura (suite) */ }
-  if(!MT_V2){ put('mt_basse', 6.1, 46.7, 2.2); put('montagnes_douces', 5.85, 46.6, 2, 1); put('mt_basse', 6.45, 47.1, 2.1, 1); /* Jura (plus) */ }
-  if(!MT_V2){ put('mt_neige', 9.05, 42.25, 3.4); put('mt_basse', 9.15, 41.9, 2.8, 1); put('mt_basse', 8.95, 42.55, 2.6); } put('sapins', 9.3, 42.05, 1.6, 0, 1, 0, 1); /* Corse */
-  if(!MT_V2){ put('montagnes_douces', 7.1, 48.65, 2.1); put('mt_basse', 6.75, 48.15, 2.1, 1); /* Vosges (suite) */ }
+  
+  
+  
+  
+  
+  put('sapins', 9.3, 42.05, 1.6, 0, 1, 0, 1); /* Corse */
+  
   put('lac', 6.17, 45.86, 1.9); /* lac d'Annecy */
-  if(!MT_V2){ put('massif_alpes_a', 6.5, 45.0, 15); put('mt_neige', 6.85, 44.42, 3.4); put('mt_basse', 6.45, 44.3, 2.9, 1); put('mt_basse', 7.15, 44.2, 2.7); put('mt_basse', 6.2, 44.62, 2.9); put('montagnes_douces', 6.6, 44.45, 2.6, 1); put('mt_basse', 5.9, 44.8, 2.6, 1); put('mt_basse', 6.55, 44.78, 2.8); /* sous les Alpes */ } put('pavillon', 2.56, 44.42, 2); put('maison_pierre', 2.4, 44.32, 2); put('pavillon', 2.62, 44.27, 2, 1); /* Rodez */ put('montagnes_douces', 6.55, 44.15, 2.6); put('mt_basse', 6.3, 44.55, 2.6, 1); /* Alpes du Sud, le long de la frontière */ if(!MT_V2) put('massif_central', 2.9, 45.15, 11); /* Alpes : chaîne nord-sud le long de la frontière */
-  if(!MT_V2){ put('chaine_pyrenees', -0.35, 42.72, 21, 1, 1.2, 3); put('chaine_pyrenees', 1.85, 42.45, 20, 1, 1.2, 3); /* Pyrénées : une chaîne sur toute la frontière */ }
+  put('pavillon', 2.56, 44.42, 2); put('maison_pierre', 2.4, 44.32, 2); put('pavillon', 2.62, 44.27, 2, 1); /* Rodez */ put('montagnes_douces', 6.55, 44.15, 2.6); put('mt_basse', 6.3, 44.55, 2.6, 1); /* Alpes du Sud, le long de la frontière */ /* Alpes : chaîne nord-sud le long de la frontière */
+  
   if(MT_V2){ put('mt2_vosges', 6.3, 47.83, 8.5); put('sapins', 5.761, 47.701, 1.8, 0, 1, 0, 1); put('sapins', 6.031, 47.673, 1.8, 0, 1, 0, 1); put('sapins', 6.300, 47.727, 1.8, 0, 1, 0, 1); put('sapins', 6.435, 47.806, 1.8, 1, 1, 0, 1); put('sapins', 6.704, 47.952, 1.8, 1, 1, 0, 1); put('sapins', 6.839, 48.103, 1.8, 0, 1, 0, 1); put('sapins', 5.884, 47.587, 1.6, 1, 1, 0, 1); put('sapins', 6.153, 47.559, 1.6, 0, 1, 0, 1); put('sapins', 6.422, 47.613, 1.6, 1, 1, 0, 1); put('sapins', 6.692, 47.747, 1.6, 0, 1, 0, 1); put('sapins', 6.961, 47.989, 1.6, 1, 1, 0, 1); put('mt2_jura', 5.74, 46.42, 10.3); put('sapins', 5.086, 46.286, 1.8, 0, 1, 0, 1); put('sapins', 5.248, 46.220, 1.8, 1, 1, 0, 1); put('sapins', 5.575, 46.237, 1.8, 1, 1, 0, 1); put('sapins', 5.740, 46.289, 1.8, 0, 1, 0, 1); put('sapins', 5.902, 46.364, 1.8, 1, 1, 0, 1); put('sapins', 6.065, 46.751, 1.8, 0, 1, 0, 1); put('sapins', 6.229, 46.921, 1.8, 1, 1, 0, 1); put('sapins', 6.392, 47.013, 1.8, 0, 1, 0, 1); put('sapins', 5.561, 46.122, 1.6, 0, 1, 0, 1); put('sapins', 5.888, 46.175, 1.6, 1, 1, 0, 1); put('sapins', 6.213, 46.638, 1.6, 0, 1, 0, 1); put('sapins', 6.540, 46.900, 1.6, 1, 1, 0, 1); put('mt2_alpes', 6.05, 44.78, 12); put('sapins', 5.288, 45.119, 1.8, 0, 1, 0, 1); put('sapins', 5.441, 44.635, 1.8, 1, 1, 0, 1); put('sapins', 5.743, 44.538, 1.8, 1, 1, 0, 1); put('sapins', 6.048, 44.541, 1.8, 1, 1, 0, 1); put('sapins', 6.201, 44.483, 1.8, 0, 1, 0, 1); put('sapins', 6.503, 44.504, 1.8, 0, 1, 0, 1); put('sapins', 6.809, 44.593, 1.8, 0, 1, 0, 1); put('sapins', 5.432, 45.006, 1.6, 1, 1, 0, 1); put('sapins', 6.039, 44.399, 1.6, 1, 1, 0, 1); put('sapins', 6.345, 44.370, 1.6, 0, 1, 0, 1); put('sapins', 6.647, 44.391, 1.6, 1, 1, 0, 1); put('sapins', 6.953, 44.479, 1.6, 0, 1, 0, 1); put('sapins', 5.393, 44.889, 1.5, 0, 1, 0, 1); put('sapins', 6.741, 44.889, 1.5, 1, 1, 0, 1); put('mt2_central', 2.9, 44.75, 16); put('arbre', 1.886, 45.285, 1.9, 0, 1, 0, 1); put('arbre_jaune', 2.222, 45.178, 1.9, 0, 1, 0, 1); put('arbre', 2.561, 44.973, 1.9, 0, 1, 0, 1); put('arbre_jaune', 2.900, 44.794, 1.9, 0, 1, 0, 1); put('arbre', 3.236, 44.754, 1.9, 0, 1, 0, 1); put('arbre_automne', 3.407, 44.558, 1.9, 1, 1, 0, 1); put('arbre', 3.743, 44.509, 1.9, 1, 1, 0, 1); put('arbre_automne', 2.387, 45.065, 1.7, 0, 1, 0, 1); put('arbre_automne', 3.739, 44.395, 1.7, 0, 1, 0, 1); put('arbre_jaune', 4.078, 44.442, 1.7, 1, 1, 0, 1); put('mt2_pyrenees', 0.75, 42.74, 29, 0, 0.8); put('sapins', -1.087, 43.155, 1.8, 0, 1, 0, 1); put('sapins', -0.843, 43.111, 1.8, 1, 1, 0, 1); put('sapins', -0.598, 43.053, 1.8, 0, 1, 0, 1); put('sapins', -0.354, 42.964, 1.8, 1, 1, 0, 1); put('sapins', -0.109, 42.926, 1.8, 0, 1, 0, 1); put('sapins', 0.136, 42.902, 1.8, 1, 1, 0, 1); put('sapins', 0.380, 42.803, 1.8, 0, 1, 0, 1); put('sapins', 0.625, 42.772, 1.8, 1, 1, 0, 1); put('sapins', 0.869, 42.738, 1.8, 0, 1, 0, 1); put('sapins', 1.114, 42.693, 1.8, 1, 1, 0, 1); put('sapins', 1.359, 42.663, 1.8, 0, 1, 0, 1); put('sapins', 1.603, 42.615, 1.8, 1, 1, 0, 1); put('sapins', 1.848, 42.526, 1.8, 0, 1, 0, 1); put('sapins', 2.092, 42.499, 1.8, 1, 1, 0, 1); put('sapins', 2.337, 42.454, 1.8, 0, 1, 0, 1); put('sapins', 2.587, 42.485, 1.8, 1, 1, 0, 1); put('sapins', 0.063, 42.830, 1.6, 1, 1, 0, 1); put('sapins', 1.441, 42.587, 1.6, 0, 1, 0, 1); put('sapins', 2.819, 42.382, 1.6, 1, 1, 0, 1); put('sapins', -1.087, 42.959, 1.6, 0, 1, 0, 1); put('sapins', -0.843, 42.915, 1.6, 1, 1, 0, 1); put('sapins', -0.598, 42.857, 1.6, 0, 1, 0, 1); put('sapins', -0.354, 42.768, 1.6, 1, 1, 0, 1); put('sapins', -0.109, 42.730, 1.6, 0, 1, 0, 1); put('sapins', 0.136, 42.706, 1.6, 1, 1, 0, 1); put('sapins', 0.380, 42.607, 1.6, 0, 1, 0, 1); put('sapins', 0.625, 42.576, 1.6, 1, 1, 0, 1); put('sapins', 0.869, 42.542, 1.6, 0, 1, 0, 1); put('sapins', 1.114, 42.497, 1.6, 1, 1, 0, 1); put('sapins', 1.359, 42.467, 1.6, 0, 1, 0, 1); put('sapins', 1.603, 42.419, 1.6, 1, 1, 0, 1); put('sapins', 1.848, 42.330, 1.6, 0, 1, 0, 1); put('sapins', 2.092, 42.302, 1.6, 1, 1, 0, 1); put('sapins', 2.337, 42.258, 1.6, 0, 1, 0, 1); put('sapins', 2.587, 42.289, 1.6, 1, 1, 0, 1); put('mt2_corse', 9.05, 41.95, 5.6); put('sapins', 8.695, 41.915, 1.8, 0, 1, 0, 1); put('sapins', 8.872, 41.821, 1.8, 1, 1, 0, 1); put('sapins', 9.227, 41.863, 1.8, 1, 1, 0, 1); put('sapins', 9.404, 42.180, 1.8, 0, 1, 0, 1); put('sapins', 9.184, 41.692, 1.6, 0, 1, 0, 1); put('sapins', 9.538, 42.067, 1.6, 1, 1, 0, 1); put('chalet', 6.6, 45.0, 1.9, 0, 1, 0, 0); put('chalet', 5.5, 45.1, 1.8, 1, 1, 0, 0); put('maison_basque', -0.9, 43.2, 1.9, 0, 1, 0, 0); put('chalet', 1.6, 42.95, 1.8, 1, 1, 0, 0); put('maison_pierre', 2.35, 45.0, 1.8, 0, 1, 0, 0); put('chalet', 6.95, 47.9, 1.7, 0, 1, 0, 0); } /* V2 : massifs d'un bloc + sapins, arbres et chalets au pied */ if(MT_V2){ put('parasols', 3.25, 43.29, 2); put('parasols', 4.25, 43.61, 2); put('parasols', 6.55, 43.22, 2); put('parasols', -1.1, 44.95, 2); put('parasols', -1.62, 46.5, 2); put('voilier', 3.6, 42.95, 1.6); put('voilier', 6.35, 42.85, 1.6, 1); put('voilier', -1.6, 44.7, 1.6, 1); put('parasols', 3.75, 43.53, 1.9); put('parasols', 7.05, 43.58, 1.9); put('parasols', -1.28, 43.75, 1.9); put('tente_camping', 3.05, 43.14, 1.6); put('piscine', 6.9, 43.65, 1.7); put('mas_provence', 6.2, 43.35, 1.9); put('bateau_peche', 3.45, 43.02, 1.5, 1); } /* V2 : plages animées */
   if(MT_V2){ var sap = ['sapins']; [[7.3,48.25],[6.95,47.7],[6.55,48.55],[7.45,47.85],[6.25,46.95],[5.95,46.05],[6.6,48.05],[5.6,47.6],[6.9,48.9]].forEach(function(f){ cluster(f[0], f[1], 4, .18, sap, 1.6); }); } /* V2 : petites forêts de sapins dans l'est */
   if(MT_V2){ put('tour_bureaux', 5.06, 45.5, 2); put('immeuble', 4.6, 45.84, 2); put('haussmann', 4.55, 45.68, 2); put('petit_immeuble', 4.52, 45.57, 2); put('petit_immeuble', 4.45, 45.72, 2); } /* V2 : Lyon plus dense */
@@ -93,14 +93,13 @@ function sprList(){
   put('gare', 2.45, 48.95, 2.2); put('stade', 2.3, 48.7, 2.6); put('universite', 4.95, 45.68, 2.2); put('hopital', 1.5, 43.55, 2.4); put('ferme', 0.2, 46.9, 2.4); put('ferme', 3.9, 48.1, 2.3); put('colza', 0.9, 48.65, 3); put('colza', 4.6, 49.55, 3);
   // quelques aéroports et ports (petits)
   put('aeroport', 2.55, 49.0, 3.8); put('aeroport', 1.37, 43.63, 3.4); put('aeroport', -1.61, 47.15, 3.2); put('aeroport', 5.22, 43.44, 3.2); /* Roissy, Toulouse, Nantes, Marseille */
-  put('port', MT_V2 ? 0.3 : 0.15, MT_V2 ? 49.38 : 49.47, 3.6); put('porte_conteneurs', 0.0, 49.55, 3.6); put('grue_portuaire', 0.3, 49.45, 2.6); put('port', -1.48, 43.5, 3.2); put('port', 3.7, 43.4, 3.2); put('port', 2.35, 51.03, 3.4);
+  put('port', 0.3, 49.38, 3.6); put('porte_conteneurs', 0.0, 49.55, 3.6); put('grue_portuaire', 0.3, 49.45, 2.6); put('port', -1.48, 43.5, 3.2); put('port', 3.7, 43.4, 3.2); put('port', 2.35, 51.03, 3.4);
   put('usine_aero', 1.3, 43.66, 3.4); put('chantier_naval', -2.22, 47.27, 4.4); /* grands sites : aéronautique (Toulouse), chantiers navals (Saint-Nazaire) */
   put('dune', -0.98, 44.4, 2.8); /* petite dune du Pilat */
   for(var pi = 0; pi < 22; pi++) put('pin', -0.8 + R() * .5, 43.85 + R() * .8, 1.5 + R() * .4, R() < .5); /* pins des Landes */
   // forêts (Landes, Sologne, Vosges, Ardennes, Morvan, Bretagne, Massif central, Jura)
   [[2.0,47.55,5,.4],[7.0,48.4,5,.35],[4.75,49.85,4,.3],[4.05,47.15,4,.3],[-3.3,48.15,4,.35],[2.6,45.0,4,.4],[6.0,46.6,3,.3],[1.4,45.1,4,.4],[9.15,42.0,3,.25],[0.6,48.6,3,.3],[3.0,48.4,3,.3]].forEach(function(f){ cluster(f[0], f[1], Math.round(f[2] * 1.8), f[3] * 1.1, f[1] > 47.5 || f[0] > 5.5 ? ['arbre', 'sapins', 'arbre_automne', 'arbre', 'sapins', 'arbre_jaune'] : ['arbre', 'arbre_automne', 'arbre', 'arbre_jaune', 'sapins'], 1.4); });
   put('arbre', 5.0, 44.3, 1.7); put('arbre_jaune', 5.95, 44.5, 1.7); put('arbre_automne', 5.5, 43.75, 1.7, 1); /* Provence : arbres espacés */
-  if(!MT_V2){ [[5.3,45.0],[5.4,45.3],[2.35,45.12],[3.45,45.1],[2.85,44.98],[-0.9,43.3],[0.2,43.22],[1.3,43.08],[2.3,42.95]].forEach(function(f, i){ put('sapins', f[0], f[1], 2, i % 2, 1, 0, 1); }); /* sapins au pied des montagnes */ }
   // sapins à l'est (Alsace, Lorraine, Vosges, Jura, Ardennes)
   [[7.1,48.3],[6.9,48.6],[6.6,48.0],[7.3,47.9],[6.2,46.9],[5.9,46.4],[4.7,49.8],[6.8,49.0]].forEach(function(f){ cluster(f[0], f[1], 6, .22, ['sapins', 'sapins', 'arbre'], 1.4); });
   // plus de champs et de vignes
@@ -160,7 +159,7 @@ function sprItems(){
     var MTN = false;
     var clash = !it.pied && kept.some(function(k){ if(BIG_SPR.test(k.id) && !BIG_SPR.test(it.id)){ var m = (k.b[2] - k.b[0]) * (/^mt2_/.test(k.id) ? .03 : .3); /* rien sous un grand massif : sa vraie image déborde largement de sa boîte */ if(bx[2] > k.b[0] - m && bx[0] < k.b[2] + m && bx[3] > k.b[1] - m && bx[1] < k.b[3] + m) return true; } if(MTN && /massif|pic|montagne|colline/.test(k.id)) return false; var ix = Math.min(bx[2], k.b[2]) - Math.max(bx[0], k.b[0]), iy = Math.min(bx[3], k.b[3]) - Math.max(bx[1], k.b[1]);
       var CH = /^(ble|colza|vignes|serre|solaire|champ)/, BAT = /pavillon|maison|chalet|mas_|immeuble|haussmann|boulangerie|ferme|usine|gare|hopital|universite|stade|caserne|tour_|beffroi|cathedrale|palais/; if(ix > 0 && iy > 0 && ((CH.test(it.id) && BAT.test(k.id)) || (CH.test(k.id) && BAT.test(it.id))) && ix * iy > .04 * Math.min((bx[2] - bx[0]) * (bx[3] - bx[1]), (k.b[2] - k.b[0]) * (k.b[3] - k.b[1]))) return true; /* pas de champ sous une maison */
-      var urb = /immeuble|haussmann|boulangerie|tour_bureaux/; var lim = urb.test(it.id) && urb.test(k.id) && Math.abs(it.y - k.y) > it.h * .12 ? (MT_V2 ? .4 : .55) : (MT_V2 ? .25 : .35); /* centre-ville : un immeuble peut en masquer un autre derrière lui */
+      var urb = /immeuble|haussmann|boulangerie|tour_bureaux/; var lim = urb.test(it.id) && urb.test(k.id) && Math.abs(it.y - k.y) > it.h * .12 ? (.4) : (.25); /* centre-ville : un immeuble peut en masquer un autre derrière lui */
       return ix > 0 && iy > 0 && ((BIG_SPR.test(k.id) !== BIG_SPR.test(it.id)) || ix * iy > lim * Math.min((bx[2] - bx[0]) * (bx[3] - bx[1]), (k.b[2] - k.b[0]) * (k.b[3] - k.b[1]))); });
     if(!clash && it.pied && MT_V2) clash = kept.some(function(k){ if(!/pavillon|maison|chalet|mas_|immeuble|haussmann|boulangerie|ferme|usine|gare|hopital|universite|stade|tour_|beffroi|cathedrale|palais|fourviere|basilique|centrale|epr|piscine/.test(k.id)) return false; var ix = Math.min(bx[2], k.b[2]) - Math.max(bx[0], k.b[0]), iy = Math.min(bx[3], k.b[3]) - Math.max(bx[1], k.b[1]); return ix > 0 && iy > 0 && ix * iy > .25 * Math.min((bx[2] - bx[0]) * (bx[3] - bx[1]), (k.b[2] - k.b[0]) * (k.b[3] - k.b[1])); }); /* V2 : arbres du pied sans collision */
     if(!clash && MT_V2 && /pavillon|maison|chalet|mas_|immeuble|haussmann|boulangerie|ferme|usine|gare|hopital|universite|stade|tour_|eolienne|solaire|piscine|centrale|epr/.test(it.id)) clash = kept.some(function(k){ if(!/^(pin|arbre|sapins)/.test(k.id)) return false; var ix = Math.min(bx[2], k.b[2]) - Math.max(bx[0], k.b[0]), iy = Math.min(bx[3], k.b[3]) - Math.max(bx[1], k.b[1]); return ix > 0 && iy > 0 && ix * iy > .12 * Math.min((bx[2] - bx[0]) * (bx[3] - bx[1]), (k.b[2] - k.b[0]) * (k.b[3] - k.b[1])); }); /* V2 : bâtiments et éoliennes jamais dans les arbres */
@@ -205,7 +204,7 @@ function sprSvg(){
   var big = [];
   items = items.filter(function(it){ return !!SPR_DATA[it.id]; }); /* dessin non chargé : ignoré */
   items = items.filter(function(it){ if(BIG_SPR.test(it.id) || it.pied){ big.push(it); return false; } return true; });
-  big.sort(function(a, b){ return (MT_V2 ? (a.pied ? 1 : 0) - (b.pied ? 1 : 0) : 0) || a.y - b.y; }); /* V2 : arbres du pied devant les massifs */
+  big.sort(function(a, b){ return ((a.pied ? 1 : 0) - (b.pied ? 1 : 0)) || a.y - b.y; }); /* V2 : arbres du pied devant les massifs */
   sprBig(big, nuit);
   /* perspective : un élément marin juste derrière une côte (terre juste au sud) est caché par la terre et sa falaise */
   var frD = $('frTop') ? $('frTop').getAttribute('d') : '', coD = $('coTop') ? $('coTop').getAttribute('d') : '';
@@ -221,7 +220,7 @@ function sprSvg(){
 var MT2_PIED = {"vosges": [0.1, 0.1009], "jura": [0.1009, 0.1], "alpes": [0.1474, 0.1], "central": [0.1, 0.1203], "pyrenees": [0.1, 0.2491], "corse": [0.1228, 0.1]};
 var BIG_SPR = /^(massif_alpes|massif_central|chaine_pyrenees|mt2_)/;
 function sprNuitActive(){ return document.documentElement.getAttribute('data-theme') === 'dark' || ($('app') && $('app').classList.contains('is-night')); }
-function sprBigRefresh(){ if(!SPR_READY) return; sprBig(sprItems().filter(function(it){ return BIG_SPR.test(it.id) || it.pied; }).sort(function(a, b){ return (MT_V2 ? (a.pied ? 1 : 0) - (b.pied ? 1 : 0) : 0) || a.y - b.y; }), sprNuitActive()); }
+function sprBigRefresh(){ if(!SPR_READY) return; sprBig(sprItems().filter(function(it){ return BIG_SPR.test(it.id) || it.pied; }).sort(function(a, b){ return ((a.pied ? 1 : 0) - (b.pied ? 1 : 0)) || a.y - b.y; }), sprNuitActive()); }
 function sprBig(list, nuit){
   var l = $('sprl'); if(!l || typeof U2P !== 'function') return;
   l.innerHTML = list.map(function(it){
