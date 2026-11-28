@@ -142,3 +142,4 @@
 - Situation provisoire `v42_fessenheim` (semaine 8) : à retirer si besoin (supprimer l'événement ; script scripts/fessenheim.js).
 - V2 montagnes (aperçu ?v2) : sprites mt2_* calés sur le modèle d'Ewen (recalage silhouette + ajustement local près des frontières, pas de déformation, ×0,85 ; Pyrénées ramenées entre les deux mers). Version normale inchangée. Si validé : rendre MT_V2 vrai par défaut.
 - V2 : générateur scripts/montagnes_v2.py (massifs + arbres au pied espacés). Pins dans le sud, forêts de sapins dans l'est, Lyon densifié, arbres du pied sans collision avec les bâtiments (tout derrière ?v2).
+- V2 : maisons régionales (bretonnes, basques, mas, alsaciennes, chalets) selon la zone ; bâtiments/éoliennes jamais dans les arbres ; forêts dessinées en code supprimées (sprites à la place). Règle d'Ewen : ce qui est devant est vu en entier, ce qui est derrière est caché.

@@ -137,6 +137,7 @@ function rivDist(x, y){ var d = 1e9; (window.RIVERS_LL || []).forEach(function(r
 function sprItems(){
   var items = [];
   sprList().forEach(function(s){
+    if(MT_V2 && /^(pavillon|maison_pierre)$/.test(s[0]) && !s[7]){ var reg = s[1] < -1.2 && s[2] > 47.2 ? 'maison_bretonne' : s[1] < -0.4 && s[2] < 43.6 ? 'maison_basque' : s[1] > 4.3 && s[2] < 44.3 ? 'mas_provence' : s[1] > 6.8 && s[2] > 47.6 ? 'maison_alsace' : s[1] > 5.8 && s[2] > 44.3 && s[2] < 46.3 ? 'chalet' : ''; if(reg){ s = s.slice(); s[0] = reg; } } /* V2 : maisons régionales */
     if(MT_V2 && /^arbre/.test(s[0]) && !s[7] && (s[2] < 44.6 || (s[1] > 4.5 && s[2] < 44.7))){ s = s.slice(); s[0] = 'pin'; if(s[1] > 4.5 && s[2] > 44.1) s[2] -= .35; } /* V2 : pins dans le sud, arbres sous les Alpes descendus */
     var p = P(s[1], s[2]), t = terrainU(p[0], p[1]), marine = !!SPR_MARINE[s[0]];
     if(MASK && SPR_MARINE[s[0]] !== 2 && !/^(chaine|lac|mt2_)/.test(s[0]) && (marine ? t !== 0 : t !== 1)) return;
