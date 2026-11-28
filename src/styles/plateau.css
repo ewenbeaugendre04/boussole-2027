@@ -215,3 +215,5 @@
 .rfbar:active{transform:scale(.92)}
 
 @media (prefers-reduced-motion:reduce){.a-appear,.a-grow,.a-pulse,.a-fade,.a-shake,.a-rise{animation-duration:.01s!important;animation-iteration-count:1!important}}
+
+#sprl img.mt-fondu{-webkit-mask-image:linear-gradient(to top,transparent 0,rgba(0,0,0,.55) 9%,#000 22%);mask-image:linear-gradient(to top,transparent 0,rgba(0,0,0,.55) 9%,#000 22%)} /* bas des montagnes fondu dans le sol */
