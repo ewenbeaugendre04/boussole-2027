@@ -391,6 +391,7 @@ function buildWaves(R){
     tries++;
     var x = -25 + R() * 155, y = -15 + R() * 135; /* autour du pays : là où le joueur regarde */
     if(insideLand(x, y) || insideLand(x + 2.5, y) || insideLand(x, y + 2)) continue;
+    if(typeof terrainU === "function" && [[0, 0], [2.5, 0], [0, 2], [-2, 0]].some(function(o){ return terrainU(x + o[0], y + o[1]) !== 0; })) continue; /* pas de vagues sur les pays voisins */
     var w = 1.4 + R() * 1.4, dbl = R() < .45;
     var d = 'M' + F(x) + ',' + F(y) + 'q' + F(w / 4) + ',-.55 ' + F(w / 2) + ',0' + (dbl ? 'q' + F(w / 4) + ',-.55 ' + F(w / 2) + ',0' : '');
     a.push('<path class="wv" pathLength="10" d="' + d + '" style="animation-delay:-' + F(R() * 7) + 's;animation-duration:' + F(5.5 + R() * 3) + 's"/>');

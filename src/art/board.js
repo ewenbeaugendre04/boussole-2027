@@ -46,7 +46,7 @@ function buildBoard(){
   h.push('<path class="sable-bord" d="' + fr + '" transform="translate(0,.8)"/><path class="sable-bord" d="' + co + '" transform="translate(0,.8)"/>'); /* sable : visible seulement sur les bords tournés vers le sud (perspective) */
   if(true){ /* V2 : îlots au large (Ouessant, Sein, Groix, Belle-Île, Bréhat) avec ressac, et le phare d'Ar-Men */
     [[-3.5, 47.08, 1.6, .7], [6.25, 42.6, 1.3, .45]].forEach(function(q){ var c = P(q[0], q[1]), rx = q[2], ry = q[3];
-      h.push('<g class="ilot"><ellipse class="ilot-ecume" cx="' + F(c[0]) + '" cy="' + F(c[1] + .5) + '" rx="' + F(rx + .9) + '" ry="' + F(ry + .6) + '" fill="none" stroke="#fff" stroke-width=".25"/><ellipse cx="' + F(c[0]) + '" cy="' + F(c[1] + .55) + '" rx="' + F(rx) + '" ry="' + F(ry) + '" fill="#A86F3C"/><ellipse cx="' + F(c[0]) + '" cy="' + F(c[1] + .15) + '" rx="' + F(rx) + '" ry="' + F(ry) + '" fill="#F2D59A"/><ellipse cx="' + F(c[0]) + '" cy="' + F(c[1]) + '" rx="' + F(rx * .9) + '" ry="' + F(ry * .85) + '" fill="var(--land)"/></g>'); });
+      h.push('<g class="ilot"><ellipse class="ilot-ecume" cx="' + F(c[0]) + '" cy="' + F(c[1] + .5) + '" rx="' + F(rx + .9) + '" ry="' + F(ry + .6) + '" fill="none" stroke="#fff" stroke-width=".25"/><ellipse cx="' + F(c[0]) + '" cy="' + F(c[1] + .55) + '" rx="' + F(rx) + '" ry="' + F(ry) + '" fill="#A86F3C"/><ellipse cx="' + F(c[0]) + '" cy="' + F(c[1] + .15) + '" rx="' + F(rx) + '" ry="' + F(ry) + '" class="plage-om"/><ellipse cx="' + F(c[0]) + '" cy="' + F(c[1]) + '" rx="' + F(rx * .9) + '" ry="' + F(ry * .85) + '" fill="var(--land)"/></g>'); });
     [[-5.2, 48.55], [-3.9, 47.35]].forEach(function(q){ var c = P(q[0], q[1]); h.push('<g transform="translate(' + F(c[0]) + ',' + F(c[1]) + ')"><ellipse class="ilot-ecume" cx="0" cy=".25" rx="1" ry=".55" fill="none" stroke="#fff" stroke-width=".22"/><path d="M-.6,.25 L-.35,-.35 L-.05,-.55 L.3,-.3 L.55,.25 Z" fill="#8C8C8C"/><path d="M-.05,-.55 L.3,-.3 L.55,.25 L.05,.25 Z" fill="#6E6E6E"/><path d="M.4,.25 L.6,-.05 L.85,.25 Z" fill="#7A7A7A"/></g>'); }); /* deux petits rochers au large */
     var am = P(-5.45, 47.98); h.push('<g class="phare-mer" transform="translate(' + F(am[0]) + ',' + F(am[1]) + ')"><ellipse class="ilot-ecume" cx="0" cy=".3" rx=".9" ry=".5" fill="none" stroke="#fff" stroke-width=".22"/><ellipse cx="0" cy=".2" rx=".4" ry=".22" fill="#8D8D8D"/><rect x="-.18" y="-1.6" width=".36" height="1.8" fill="#fff"/><rect x="-.18" y="-1.1" width=".36" height=".3" fill="#D9473B"/><rect x="-.18" y="-.4" width=".36" height=".3" fill="#D9473B"/><rect x="-.24" y="-1.85" width=".48" height=".28" fill="#3B4A5A"/><circle class="phare-lum" cx="0" cy="-1.72" r="1.6" fill="#FFE9A0"/></g>'); }
   /* quelques rochers au ras de l'eau (côtes rocheuses réelles) */
@@ -164,7 +164,7 @@ function insetSvg(){
       if(LAG[t[0]]) t.slice(3).forEach(function(pts){ o += '<path d="' + smooth(pts.map(function(q){ return [cx + q[0] * 1.25, cy + q[1] * 1.35]; }), true) + '" fill="#8FE3DA" opacity=".55"/>'; }); /* lagon */
       var ds = t.slice(3).map(function(pts){ return smooth(pts.map(function(q){ return [cx + q[0], cy + q[1]]; }), true); }); /* une seule île même en plusieurs morceaux : bords sous les terres */
       ds.forEach(function(d){ o += '<path d="' + d + '" transform="translate(0,.5)" fill="var(--cliff)"/>'; });
-      ds.forEach(function(d){ o += '<path d="' + d + '" fill="#F6E3A4" stroke="#F6E3A4" stroke-width=".55"/>'; });
+      ds.forEach(function(d){ o += '<path d="' + d + '" class="plage-om" stroke-width=".55"/>'; });
       ds.forEach(function(d){ o += '<path d="' + d + '" fill="var(--land)"/>'; });
       if(t[0] === 'Guadeloupe') o += relief(cx - 1.1, cy + .3, .7, 1) + palm(cx + 1.0, cy - .7, .7) + palm(cx - 1.5, cy + 1.0, .6);
       if(t[0] === 'Martinique') o += relief(cx - .1, cy - .2, .75, 1) + palm(cx + .5, cy + 1.0, .6);
@@ -181,7 +181,7 @@ function insetSvg(){
   OM.forEach(function(t){
     t.slice(3).forEach(function(pts){
       var d = smooth(pts.map(function(q){ return [x + t[1] + q[0], y + t[2] + q[1]]; }), true);
-      o += '<path d="' + d + '" transform="translate(0,.55)" fill="var(--cliff)"/><path d="' + d + '" fill="var(--land)" stroke="#F6E3A4" stroke-width=".35" paint-order="stroke"/>';
+      o += '<path d="' + d + '" transform="translate(0,.55)" fill="var(--cliff)"/><path d="' + d + '" fill="var(--land)" class="plage-om" style="fill:var(--land)" stroke-width=".35" paint-order="stroke"/>';
     });
   });
   o += '<text class="rlabel" x="' + F(x) + '" y="' + F(y + 8.6) + '" text-anchor="middle" style="stroke:var(--sea)">' + esc(r.label || 'Outre-mer') + '</text></g>';

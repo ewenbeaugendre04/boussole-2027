@@ -103,7 +103,7 @@ button{font:inherit;color:inherit;cursor:pointer}
 #board[data-weather="neige"] #tint{background:linear-gradient(rgba(255,255,255,.16),rgba(240,244,250,.10))}
 #board[data-weather="vent"] #tint{background:linear-gradient(100deg,rgba(255,255,255,.06),transparent)}
 [data-theme="dark"] #board #tint{opacity:.5}
-.grain-sea{display:none} /* mer lisse : les ondes du rivage s'y fondent sans bande visible */.grain-land{opacity:.55;mix-blend-mode:multiply}.is-night .grain-land{opacity:.3}
+.grain-sea{display:none} /* mer lisse : les ondes du rivage s'y fondent sans bande visible */.grain-land{opacity:.15;mix-blend-mode:multiply}.is-night .grain-land{opacity:.08}
 .sea-rect{fill:var(--sea);transition:fill 1s}
 .land-top{fill:var(--land);stroke:var(--land);stroke-width:.15;stroke-linejoin:round;transition:fill 1s}
 .wave{fill:none;stroke:var(--wave);stroke-width:.45;stroke-linecap:round;opacity:0;animation:wave 7s ease-in-out infinite}
@@ -114,7 +114,8 @@ button{font:inherit;color:inherit;cursor:pointer}
 .is-night .sable-bord{fill:#5A5276}
 .rocher .r-o{fill:#8C8F96}.rocher .r-h{fill:#B9BCC2}.is-night .rocher .r-o{fill:#3E3A52}.is-night .rocher .r-h{fill:#57516E}
 .plage{stroke:var(--sand-wide,#F8E7B0)}
-.is-night .plage{stroke:#6E6587}
+.is-night .plage,[data-theme=dark] .plage{stroke:#5A5470}
+.plage-om{fill:var(--sand-wide,#F6E3A4);stroke:var(--sand-wide,#F6E3A4)}.is-night .plage-om,[data-theme=dark] .plage-om{fill:#5A5470;stroke:#5A5470}
 .is-night{--craie:#5B5570;--craie-2:#46405A;--granit:#5E4C62;--granit-2:#4A3C50}
 @keyframes foam{0%,100%{stroke-width:1.1;opacity:.75}50%{stroke-width:2.6;opacity:.22}}
 .snowx{opacity:0;transition:opacity 1.2s}

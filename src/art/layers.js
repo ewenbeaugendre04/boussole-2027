@@ -168,7 +168,7 @@ function bakeDecor(){
   if(BAKE.cache[key]){ img.src = BAKE.cache[key]; if(typeof sprBigRefresh === 'function') sprBigRefresh(); return; } /* les grands reliefs (calque à part) suivent aussi le jour/la nuit */
   try{
     var src = $('map'), r0 = board.getBoundingClientRect(), r = { width:WW || r0.width, height:WH || r0.height }, dpr = window.devicePixelRatio || 1;
-    var sc = Math.min(2 * dpr, 4, 8192 / Math.max(r.width, r.height), Math.sqrt(16e6 / (r.width * r.height))); /* au maximum de ce que l'iPhone accepte */
+    var sc = Math.min(2 * dpr, 4, 8192 / Math.max(r.width, r.height), Math.sqrt(24e6 / (r.width * r.height))); /* au maximum de ce que l'iPhone accepte */
     $('app').classList.add('notrans'); void src.getBoundingClientRect();
     var clone = src.cloneNode(true), a = src.querySelectorAll('*'), b = clone.querySelectorAll('*');
     for(var i = 0; i < a.length; i++){
