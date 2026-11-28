@@ -83,17 +83,18 @@ function sprList(){
   if(MT_V2){ [[3.6,43.75],[4.15,43.85],[3.2,43.55],[5.2,43.62],[6.3,43.5],[2.8,43.3],[6.75,43.75]].forEach(function(f){ cluster(f[0], f[1], 3, .15, ['pin'], 1.6); }); [[-0.3,44.95],[-0.55,45.15],[-0.2,44.72],[-0.75,45.05]].forEach(function(f){ put('vignes', f[0], f[1], 2.2); }); } /* V2 : pins du Midi, vignes du Bordelais */
   if(MT_V2) put('port', 1.09, 49.43, 2.4); /* V2 : petit port de Rouen */
   if(MT_V2){ [[-0.1,44.9],[0.0,44.82],[-0.45,44.6],[-0.95,45.18],[-0.85,45.05],[0.25,44.95],[-0.2,44.7],[0.1,44.7],[-0.3,45.05],[-1.0,45.35],[0.3,44.8],[4.0,49.05],[4.2,48.95],[3.85,48.95],[4.8,47.1],[4.72,46.95],[4.92,47.25],[4.6,47.05],[4.85,46.8],[5.0,47.15]].forEach(function(v, i){ put('vignes', v[0], v[1], 2.1, i % 2); }); cluster(6.95, 44.0, 3, .15, ['sapins'], 1.7); cluster(7.25, 43.95, 3, .15, ['sapins'], 1.7); } /* V2 : vignes (Bordelais, Champagne, Bourgogne), sapins de l'arrière-pays niçois */
-  if(MT_V2){ [[-0.6,44.35],[-0.9,44.0],[-0.4,44.0],[-0.75,43.75],[5.6,43.45],[5.85,43.55],[6.1,43.65],[6.45,43.6],[6.8,43.85],[7.05,43.85],[5.25,43.45],[3.4,43.55]].forEach(function(f){ cluster(f[0], f[1], 3, .14, ['pin'], 1.6); }); put('aeroport', 1.9, 43.75, 3.2); put('usine_aero', 1.5, 43.82, 2.8); } /* V2 : pins des Landes et de Provence, aéroport et usine de Toulouse */
+  if(MT_V2){ [[-0.6,44.35],[-0.9,44.0],[-0.4,44.0],[-0.75,43.75],[5.6,43.45],[5.85,43.55],[6.1,43.65],[6.45,43.6],[6.8,43.85],[7.05,43.85],[5.25,43.45],[3.4,43.55]].forEach(function(f){ cluster(f[0], f[1], 3, .14, ['pin'], 1.6); }); put('aeroport', 1.05, 43.78, 3); put('usine_aero', 1.5, 43.82, 2.8); } /* V2 : pins des Landes et de Provence, aéroport et usine de Toulouse */
   if(MT_V2){ var feu = ['arbre', 'arbre', 'arbre_automne', 'arbre_jaune']; [[1.6,47.55,'f'],[2.65,48.35,'f'],[0.6,48.2,'f'],[3.1,46.6,'f'],[4.65,49.7,'s'],[-1.1,48.3,'f'],[5.25,47.75,'f'],[1.2,46.2,'f'],[3.7,47.6,'f'],[6.2,49.1,'s']].forEach(function(f){ cluster(f[0], f[1], 6, .22, f[2] === 's' ? ['sapins'] : feu, 1.8); }); } /* V2 : quelques forêts */
   if(MT_V2){ put('rocher_cote', 7.38, 43.76, 1.5); } /* V2 : rochers façon calanques (Menton, Marseille) */
   if(MT_V2){ put('eolien_mer', -3.05, 49.0, 2.4); put('eolien_mer', 1.15, 50.25, 2.4); } /* V2 : deux éoliennes en mer de plus */
   if(MT_V2){ put('bateau_peche', 4.55, 42.5, 1.5); put('bateau_peche', -2.3, 45.75, 1.5, 1); } /* V2 : bateaux de pêche au large */
   put('base_navale', -4.45, 48.22, 3.6); put('base_navale', 5.95, 43.2, 3.4, 1); put('fregate', -5.55, 48.45, 2.6); put('fregate', 6.65, 42.72, 2.4, 1); /* zone militaire : base des sous-marins de l'île Longue */
+  put('cathedrale', 1.5, 43.6, 2.2); put('haussmann', 1.6, 43.66, 1.9); put('immeuble', 1.62, 43.54, 1.9, 1); put('petit_immeuble', 1.45, 43.7, 1.8); put('pavillon', 1.72, 43.6, 1.7); put('petit_immeuble', 1.05, 43.58, 1.7, 1); put('pavillon', 1.0, 43.66, 1.6); /* Toulouse, la ville rose */
   [[-4.78,48.42],[-1.9,49.65],[1.6,50.7],[-1.45,43.5],[-2.2,47.28]].forEach(function(l){ put('phare', l[0], l[1], 1.4); });
   put('parasols', 3.5, 43.45, 2.4); put('parasols', -1.3, 44.6, 2.2); put('parasols', 6.9, 43.55, 2.2); put('voilier', -2.6, 46.5, 1.8); put('voilier', 5.6, 42.9, 1.8); put('voilier', -1.9, 49.95, 1.8);
   put('gare', 2.45, 48.95, 2.2); put('stade', 2.3, 48.7, 2.6); put('universite', 4.95, 45.68, 2.2); put('hopital', 1.5, 43.55, 2.4); put('ferme', 0.2, 46.9, 2.4); put('ferme', 3.9, 48.1, 2.3); put('colza', 0.9, 48.65, 3); put('colza', 4.6, 49.55, 3);
   // quelques aéroports et ports (petits)
-  put('aeroport', 2.55, 49.0, 3.8); put('aeroport', 1.37, 43.63, 3.4); put('aeroport', -1.61, 47.15, 3.2); put('aeroport', 5.22, 43.44, 3.2); /* Roissy, Toulouse, Nantes, Marseille */
+  put('aeroport', 2.55, 49.0, 3.8);  put('aeroport', -1.61, 47.15, 3.2); put('aeroport', 5.22, 43.44, 3.2); /* Roissy, Toulouse, Nantes, Marseille */
   put('port', 0.3, 49.38, 3.6); put('porte_conteneurs', 0.0, 49.55, 3.6); put('grue_portuaire', 0.3, 49.45, 2.6); put('port', -1.48, 43.5, 3.2); put('port', 3.7, 43.4, 3.2); put('port', 2.35, 51.03, 3.4);
   put('usine_aero', 1.3, 43.66, 3.4); put('chantier_naval', -2.22, 47.27, 4.4); /* grands sites : aéronautique (Toulouse), chantiers navals (Saint-Nazaire) */
   put('dune', -0.98, 44.4, 2.8); /* petite dune du Pilat */
@@ -146,11 +147,11 @@ function sprItems(){
     items.push({ id:s[0], x0:s[1], y0:s[2], x:p[0], y:p[1], w:s[3], h:s[3] * (SPR_AR[s[0]] || 1) * (s[5] || 1), f:s[4], sy:s[5] || 1, r:s[6] || 0, pied:s[7] || 0 });
   });
   /* pas de superposition : les éléments placés d'abord (monuments, villes, relief) gardent leur place */
-  var PRIO = { lac:0, rocher_cote:0, base_navale:0, mt2_vosges:-1, mt2_jura:-1, mt2_alpes:-1, mt2_central:-1, mt2_pyrenees:-1, mt2_corse:-1, massif_alpes_a:-1, massif_alpes_b:-1, mt_neige:0, massif_central:-1, chaine_alpes:0, chaine_pyrenees:0, mt_haute:0, mt_basse:0, arete:0, pic_sapins:0, massif_iso:0, chaine_iso:0, massif_alpes_nord:0, massif_alpes_sud:0, massif_pyrenees:0, pic_alpin:0, massif_pics:0, massif:0, pic_neige:0, massif_brun:0, pic_brun:0, montagnes_douces:0, colline:0, tour_eiffel:0, arc_triomphe:0, fourviere:0, basilique_marseille:0, cathedrale_strasbourg:0, beffroi_lille:0, bourse_bordeaux:0, mont_saint_michel:0, aeroport:0, port:0, usine_aero:0, chantier_naval:0, dune:0 };
+  var PRIO = { lac:0, cathedrale:0, rocher_cote:0, base_navale:0, mt2_vosges:-1, mt2_jura:-1, mt2_alpes:-1, mt2_central:-1, mt2_pyrenees:-1, mt2_corse:-1, massif_alpes_a:-1, massif_alpes_b:-1, mt_neige:0, massif_central:-1, chaine_alpes:0, chaine_pyrenees:0, mt_haute:0, mt_basse:0, arete:0, pic_sapins:0, massif_iso:0, chaine_iso:0, massif_alpes_nord:0, massif_alpes_sud:0, massif_pyrenees:0, pic_alpin:0, massif_pics:0, massif:0, pic_neige:0, massif_brun:0, pic_brun:0, montagnes_douces:0, colline:0, tour_eiffel:0, arc_triomphe:0, fourviere:0, basilique_marseille:0, cathedrale_strasbourg:0, beffroi_lille:0, bourse_bordeaux:0, mont_saint_michel:0, aeroport:0, port:0, usine_aero:0, chantier_naval:0, dune:0 };
   items = items.map(function(it, k){ it.k = k; return it; }).sort(function(a, b){ return ((PRIO[a.id] !== undefined ? PRIO[a.id] : 1) - (PRIO[b.id] !== undefined ? PRIO[b.id] : 1)) || a.k - b.k; });
   var kept = [];
   items.forEach(function(it){
-    var bx = [it.x - it.w * .42, it.y - it.h * .55, it.x + it.w * .42, it.y + it.h * .08]; if(/^mt2_/.test(it.id)){ bx[1] = it.y - it.h * .9; bx[0] = it.x - it.w * .45; bx[2] = it.x + it.w * .45; } /* massifs V2 : rien derrière les sommets */
+    var bx = [it.x - it.w * .42, it.y - it.h * .55, it.x + it.w * .42, it.y + it.h * .08]; if(/^mt2_/.test(it.id)){ bx[1] = it.y - it.h * (it.id === "mt2_pyrenees" ? .6 : .9); bx[0] = it.x - it.w * .45; bx[2] = it.x + it.w * .45; } /* massifs V2 : rien derrière les sommets */
     if([[2.54, 51.01], [-4.2, 48.27]].some(function(q){ return /pavillon|maison|chalet|mas_/.test(it.id) && Math.abs(it.x0 - q[0]) < .08 && Math.abs(it.y0 - q[1]) < .08; })) return; /* maisons sur le rivage (Dunkerque, Finistère) */
     if(!SPR_MARINE[it.id] && it.id !== 'dune' && ((it.x0 > -1.3 && it.x0 < -0.95 && it.y0 > 44.55 && it.y0 < 44.78) || (it.x0 > -1.05 && it.x0 < -0.55 && it.y0 > 45.05 && it.y0 < 45.65))) return;
     if(MASK && !SPR_MARINE[it.id] && !/^(chaine|dune|epr|mt2_|parasols|tente_camping|camping_car|rocher_cote|base_navale)/.test(it.id) && (terrainU(bx[0] - it.w * .3, it.y) === 0 || terrainU(bx[2] + it.w * .3, it.y) === 0 || terrainU(it.x, it.y + it.h * .35) === 0 || terrainU(it.x, it.y - it.h * .3) === 0)) return; /* marge : ni pieds dans l'eau ni collé au rivage */ /* pieds dans l'eau : non */
@@ -181,7 +182,7 @@ function sprItems(){
 /* Performance : les sprites sont « cuits » dans l'image du décor (une seule image au lieu de ~250 balises).
    Il faut leurs données (data URI) car une image SVG ne charge pas de fichiers externes.
    Si le chargement échoue (ex. page ouverte en file://), on garde la couche HTML #sprl. */
-var SPR_DATA = {}, SPR_NUIT = {}, SPR_READY = false, SPR_LOADING = false, MT_NUIT = /^(mt_|mt2_|chaine|massif|montagnes|arbre|pin|sapins|ble|colza|vignes|serre|ferme|dune|lac|vache|tracteur|solaire|parasols)/;
+var SPR_DATA = {}, SPR_NUIT = {}, SPR_READY = false, SPR_LOADING = false, MT_NUIT = /^(mt_|mt2_|chaine|massif|montagnes|arbre|pin|sapins|ble|colza|vignes|serre|ferme|dune|lac|vache|tracteur|solaire|parasols|port|mont_saint_michel|grue_portuaire|porte_conteneurs|fregate|base_navale|eolien_mer|rocher_cote)/;
 /* nuit : copie assombrie des reliefs, pleine résolution (un filtre SVG rendait l'image floue) */
 function sprNuit(id){
   return new Promise(function(ok){ var im = new Image(); im.onload = function(){ try{

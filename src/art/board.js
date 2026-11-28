@@ -78,7 +78,7 @@ function buildBoard(){
     [[6.0,46.2],[4.85,45.75],[4.8,44.9],[4.7,44.0],[4.6,43.55]],
     [[0.7,42.9],[1.4,43.6],[0.6,44.2],[-0.55,44.85],[-0.9,45.4]]
   ];
-  if(true){ rivers[1][0] = [4.1, 45.6]; rivers[2].push([4.63, 43.42]); rivers[3].push([-1.25, 45.63]); rivers[3][0] = [0.8, 43.2]; } /* V2 : la Loire part après le Massif central, le Rhône rejoint la mer */
+  if(true){ rivers[1][0] = [4.1, 45.6]; rivers[2].push([4.63, 43.42]); rivers[3].push([-1.25, 45.63]); rivers[3][0] = [0.8, 43.2]; rivers[3][1] = [1.25, 43.6]; } /* V2 : la Loire part après le Massif central, le Rhône rejoint la mer */
   window.RIVERS_LL = rivers;
   rivers.forEach(function(r){ h.push('<path d="' + smooth(L(r), false) + '" fill="none" stroke="var(--river)" stroke-width=".7" stroke-linecap="round"/>'); });
   if(true) h.push('<path d="' + smooth(L([[-0.62,44.98],[-0.9,45.4],[-1.25,45.63]]), false) + '" fill="none" stroke="var(--river)" stroke-width="1.6" stroke-linecap="round"/>'); /* V2 : estuaire de la Gironde */ if(true) h.push('<path d="' + smooth(L([[0.75,49.4],[0.4,49.45],[0.05,49.48]]), false) + '" fill="none" stroke="var(--river)" stroke-width="1.3" stroke-linecap="round"/>'); /* V2 : estuaire de la Seine */ if(true){ h.push('<path d="' + smooth(L([[-1.3,47.25],[-1.8,47.26],[-2.15,47.27]]), false) + '" fill="none" stroke="var(--river)" stroke-width="1.4" stroke-linecap="round"/>'); h.push('<path d="' + smooth(L([[4.63,43.68],[4.4,43.5],[4.33,43.42]]), false) + '" fill="none" stroke="var(--river)" stroke-width=".6" stroke-linecap="round"/>'); h.push('<path d="' + smooth(L([[4.65,43.62],[4.64,43.5],[4.63,43.4]]), false) + '" fill="none" stroke="var(--river)" stroke-width="1.3" stroke-linecap="round"/>'); } /* V2 : estuaire de la Loire, delta du Rhône */
