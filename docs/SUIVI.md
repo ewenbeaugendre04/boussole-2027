@@ -145,5 +145,5 @@
 - V2 : maisons régionales (bretonnes, basques, mas, alsaciennes, chalets) selon la zone ; bâtiments/éoliennes jamais dans les arbres ; forêts dessinées en code supprimées (sprites à la place). Règle d'Ewen : ce qui est devant est vu en entier, ce qui est derrière est caché.
 
 ## Nouvelle carte publiée (validée par Ewen le 28/11)
-- La V2 est devenue la carte normale (MT_V2 = true en dur) ; le code de l'ancienne carte a été supprimé. Retour possible : tag git `carte-v1-avant-suppression`.
+- La V2 est devenue la carte normale (MT_V2 = true en dur) ; le code de l'ancienne carte a été supprimé. Retour possible : commit 7cc618e (dernier état avec les deux versions).
 - Générateur des massifs et des arbres du pied : scripts/montagnes_v2.py. Vérification de la carte : skill « verif-carte-boussole ».
