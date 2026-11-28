@@ -206,7 +206,7 @@ function sprSvg(){
   var big = [];
   items = items.filter(function(it){ return !!SPR_DATA[it.id]; }); /* dessin non chargé : ignoré */
   items = items.filter(function(it){ return !/^(voilier|bateau_peche)$/.test(it.id); }); /* bateaux : dessinés en mouvement (calque des bateaux) */
-  items = items.filter(function(it){ if(BIG_SPR.test(it.id) || it.pied || SPR_MARINE[it.id] || /^(fregate|base_navale|phare|port|grue_portuaire|porte_conteneurs)$/.test(it.id)){ big.push(it); return false; } /* éléments en mer : au-dessus des vagues */ return true; });
+  items = items.filter(function(it){ if(BIG_SPR.test(it.id) || it.pied || SPR_MARINE[it.id] || /^(fregate|base_navale|phare|port|grue_portuaire|porte_conteneurs|eolienne)$/.test(it.id)){ big.push(it); return false; } /* éléments en mer : au-dessus des vagues */ return true; });
   big.sort(function(a, b){ return ((a.pied ? 1 : 0) - (b.pied ? 1 : 0)) || a.y - b.y; }); /* V2 : arbres du pied devant les massifs */
   sprBig(big, nuit);
   /* perspective : un élément marin juste derrière une côte (terre juste au sud) est caché par la terre et sa falaise */
@@ -223,12 +223,13 @@ function sprSvg(){
 var MT2_PIED = {"vosges": [0.1, 0.1009], "jura": [0.1009, 0.1], "alpes": [0.1474, 0.1], "central": [0.1, 0.1203], "pyrenees": [0.1, 0.2491], "corse": [0.1228, 0.1]};
 var BIG_SPR = /^(massif_alpes|massif_central|chaine_pyrenees|mt2_)/;
 function sprNuitActive(){ return document.documentElement.getAttribute('data-theme') === 'dark' || ($('app') && $('app').classList.contains('is-night')); }
-function sprBigRefresh(){ if(!SPR_READY) return; sprBig(sprItems().filter(function(it){ return BIG_SPR.test(it.id) || it.pied || SPR_MARINE[it.id] || /^(fregate|base_navale|phare|port|grue_portuaire|porte_conteneurs)$/.test(it.id); }).sort(function(a, b){ return ((a.pied ? 1 : 0) - (b.pied ? 1 : 0)) || a.y - b.y; }), sprNuitActive()); }
+function sprBigRefresh(){ if(!SPR_READY) return; sprBig(sprItems().filter(function(it){ return BIG_SPR.test(it.id) || it.pied || SPR_MARINE[it.id] || /^(fregate|base_navale|phare|port|grue_portuaire|porte_conteneurs|eolienne)$/.test(it.id); }).sort(function(a, b){ return ((a.pied ? 1 : 0) - (b.pied ? 1 : 0)) || a.y - b.y; }), sprNuitActive()); }
 function sprBig(list, nuit){
   var l = $('sprl'); if(!l || typeof U2P !== 'function') return;
   l.innerHTML = list.map(function(it){
     var w = it.w * VBK, h = it.h * VBK, q = U2P(it.x, it.y), src = nuit && SPR_NUIT[it.id] || SPR_DIR + it.id + '.webp';
-    if(it.pied || !BIG_SPR.test(it.id)) return '<img src="' + src + '" alt="" decoding="async" style="left:' + F(q[0] - w / 2) + 'px;top:' + F(q[1] - h * .86) + 'px;width:' + F(w) + 'px;height:' + F(h) + 'px;' + (it.f ? 'transform:scaleX(-1)' : '') + '">'; /* sapins du pied : devant le massif */
+    var feu = /^eolien/.test(it.id) ? '<i class="feu-eol" style="left:' + F(q[0] + w * (it.id === 'eolienne' ? .04 : .02)) + 'px;top:' + F(q[1] - h * .86 + h * .2) + 'px;animation-delay:-' + F((it.x0 * 7 % 1.6)) + 's"></i>' : '';
+    if(it.pied || !BIG_SPR.test(it.id)) return feu + '<img src="' + src + '" alt="" decoding="async" style="left:' + F(q[0] - w / 2) + 'px;top:' + F(q[1] - h * .86) + 'px;width:' + F(w) + 'px;height:' + F(h) + 'px;' + (it.f ? 'transform:scaleX(-1)' : '') + '">'; /* sapins du pied : devant le massif */
     var mp = /^mt2_/.test(it.id) && MT2_PIED[it.id.slice(4)]; if(mp){ var pw = w * (1 + 2 * mp[0]), ph = h * (1 + 2 * mp[1]); var ombre = '<img class="mt-pied" src="' + SPR_DIR + it.id + '_pied.png" alt="" decoding="async" onerror="this.remove()" style="left:' + F(q[0] - pw / 2) + 'px;top:' + F(q[1] - h * .86 - h * mp[1]) + 'px;width:' + F(pw) + 'px;height:' + F(ph) + 'px">'; } else /* liseré vert qui suit la forme du massif */
     var ombre = /^chaine/.test(it.id) ? '' : '<i class="relief-pied" style="left:' + F(q[0] - w * .4) + 'px;top:' + F(q[1] - h * .2) + 'px;width:' + F(w * .8) + 'px;height:' + F(h * .26) + 'px"></i>'; /* embase verte (pas sous les Pyrénées, posées sur la côte) */ /* embase verte */
     return ombre + '<img src="' + src + '" alt="" decoding="async"' + (/^mt2_/.test(it.id) ? '' : '') + ' style="left:' + F(q[0] - w / 2) + 'px;top:' + F(q[1] - h * .86) + 'px;width:' + F(w) + 'px;height:' + F(h) + 'px;transform-origin:50% 86%;transform:' + (it.r ? 'rotate(' + it.r + 'deg) ' : '') + (it.f ? 'scaleX(-1)' : 'none') + '">';
