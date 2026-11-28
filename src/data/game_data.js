@@ -6565,6 +6565,138 @@ const GAME = {
        "text": "Il y a quelques semaines, vous avez suspendu des allocations après les émeutes : la mesure reste discutée dans les quartiers."
       }
      ]
+    },
+    {
+     "id": "v42_fessenheim",
+     "kind": "banal",
+     "region": "grand_est",
+     "sector": "energie",
+     "title": "Démanteler pour de bon la centrale de Fessenheim ?",
+     "simple": "La plus vieille centrale nucléaire du pays est arrêtée depuis plusieurs années. L'État vient d'autoriser son démantèlement complet. Certains voudraient plutôt y construire de nouveaux réacteurs. Que faire ?",
+     "expert": "Décret prescrivant le démantèlement complet de l'installation nucléaire de Fessenheim (fin prévue dans une vingtaine d'années), alors que la relance du nucléaire (EPR2) relance le débat sur la réutilisation du site.",
+     "context": "Démanteler tourne la page et libère le terrain ; garder le site pour de nouveaux réacteurs profiterait du raccordement au réseau existant, mais prendrait des années.",
+     "real": {
+      "date": "Décret du 1er mai 2026, publié le 3 mai 2026",
+      "place": "Fessenheim (Haut-Rhin)",
+      "fact": "Arrêtée depuis plusieurs années, la centrale entre en démantèlement complet, qu'EDF doit achever d'ici une vingtaine d'années.",
+      "figures": "405 000 tonnes de matériaux, dont 95 % non radioactifs ; environ 300 personnes mobilisées par an.",
+      "sources": [
+       {
+        "label": "EDF : la publication du décret ouvre la voie au démantèlement",
+        "url": "https://www.edf.fr/la-centrale-nucleaire-de-fessenheim/les-actualites-de-la-centrale-nucleaire-de-fessenheim/fessenheim-la-publication-du-decret-ouvre-la-voie-au-demantelement-du-site"
+       },
+       {
+        "label": "Connaissance des énergies (AFP) : un décret autorise le démantèlement",
+        "url": "https://www.connaissancedesenergies.org/afp/un-decret-autorise-le-demantelement-de-lancienne-centrale-nucleaire-de-fessenheim-260503"
+       }
+      ]
+     },
+     "camera": {
+      "region": "grand_est",
+      "x": 84.5,
+      "y": 31,
+      "zoom": 2
+     },
+     "fx": [
+      {
+       "obj": "centrale_nucleaire",
+       "x": 84.5,
+       "y": 31,
+       "anim": "appear",
+       "delay": 0
+      },
+      {
+       "obj": "chantier_grue",
+       "x": 86.1,
+       "y": 31.8,
+       "anim": "appear",
+       "delay": 0.3
+      },
+      {
+       "obj": "etiquette",
+       "x": 82.9,
+       "y": 31.8,
+       "anim": "appear",
+       "delay": 0.6,
+       "label": "Démantèlement"
+      }
+     ],
+     "choices": [
+      {
+       "id": "a",
+       "label": "Démanteler et créer une zone d'activités",
+       "label_expert": "Démantèlement complet puis reconversion économique du site",
+       "plus": "Page tournée, emplois locaux.",
+       "minus": "Fin du nucléaire sur le site.",
+       "budget": -0.1,
+       "budget_note": "La reconversion augmente un peu les dépenses.",
+       "axes": {
+        "env": 1
+       },
+       "ind": {
+        "emploi": 1,
+        "co2": 0
+       },
+       "fx": [
+        {
+         "obj": "chantier_grue",
+         "x": 82.5,
+         "y": 29.5,
+         "anim": "appear",
+         "delay": 0
+        }
+       ]
+      },
+      {
+       "id": "b",
+       "label": "Garder le site pour de nouveaux réacteurs",
+       "label_expert": "Réserver le site pour de futurs réacteurs EPR2",
+       "plus": "Électricité bas carbone, raccordement déjà là.",
+       "minus": "Long, coûteux, débat local.",
+       "budget": -0.3,
+       "budget_note": "Les études augmentent les dépenses.",
+       "axes": {
+        "env": -1
+       },
+       "ind": {
+        "souverainete": 1,
+        "co2": -1
+       },
+       "fx": [
+        {
+         "obj": "centrale_nucleaire",
+         "x": 84.5,
+         "y": 29.5,
+         "anim": "appear",
+         "delay": 0
+        }
+       ]
+      },
+      {
+       "id": "c",
+       "label": "Y installer un grand parc solaire",
+       "label_expert": "Reconversion du site en production solaire",
+       "plus": "Rapide, renouvelable.",
+       "minus": "Produit bien moins qu'une centrale.",
+       "budget": -0.05,
+       "budget_note": "Le soutien au solaire augmente un peu les dépenses.",
+       "axes": {
+        "env": 2
+       },
+       "ind": {
+        "co2": -1
+       },
+       "fx": [
+        {
+         "obj": "panneaux_solaires",
+         "x": 86.5,
+         "y": 29.5,
+         "anim": "appear",
+         "delay": 0
+        }
+       ]
+      }
+     ]
     }
    ]
   },

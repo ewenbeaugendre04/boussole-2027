@@ -137,3 +137,6 @@
 - personne_1 à 4 (employée, retraité, ouvrier, agricultrice) : l'objet `personnage` alterne entre 5 dessins (PERS_SPR dans placement.js).
 - aeroport, secheresse (terre craquelée), barrage_agricole (tracteurs + bottes de paille), tempete : remplacent les dessins de substitution.
 - Écume/ressac masqués au-dessus des côtes nord (masque horsTerre décalé vers le haut) : cachés derrière les falaises.
+- Côtes nord : écume masquée au-dessus du rivage + fondu sur tout le nord (au-dessus de 48° N), éoliennes en mer et Mont-Saint-Michel sans écume par-dessus.
+- EPR de Flamanville ajouté (sprite `epr`). Strasbourg dégagé (pas d'arbres ni de petites montagnes autour).
+- Situation provisoire `v42_fessenheim` (semaine 8) : à retirer si besoin (supprimer l'événement ; script scripts/fessenheim.js).
