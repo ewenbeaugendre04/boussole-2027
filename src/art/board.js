@@ -45,7 +45,7 @@ function buildBoard(){
   h.push('<g clip-path="url(#zGranit)"><path d="' + fr + '" transform="translate(0,2.6)" fill="var(--granit-2,#B9806B)"/><path d="' + fr + '" transform="translate(0,1.3)" fill="var(--granit,#DCA48C)"/></g>');
   h.push('<path class="sable-bord" d="' + fr + '" transform="translate(0,.8)"/><path class="sable-bord" d="' + co + '" transform="translate(0,.8)"/>'); /* sable : visible seulement sur les bords tournés vers le sud (perspective) */
   if(typeof MT_V2 !== 'undefined' && MT_V2){ /* V2 : îlots au large (Ouessant, Sein, Groix, Belle-Île, Bréhat) avec ressac, et le phare d'Ar-Men */
-    [[-3.5, 47.08, 1.6, .7]].forEach(function(q){ var c = P(q[0], q[1]), rx = q[2], ry = q[3];
+    [[-3.5, 47.08, 1.6, .7], [6.25, 42.6, 1.3, .45]].forEach(function(q){ var c = P(q[0], q[1]), rx = q[2], ry = q[3];
       h.push('<g class="ilot"><ellipse class="ilot-ecume" cx="' + F(c[0]) + '" cy="' + F(c[1] + .5) + '" rx="' + F(rx + .9) + '" ry="' + F(ry + .6) + '" fill="none" stroke="#fff" stroke-width=".25"/><ellipse cx="' + F(c[0]) + '" cy="' + F(c[1] + .55) + '" rx="' + F(rx) + '" ry="' + F(ry) + '" fill="#A86F3C"/><ellipse cx="' + F(c[0]) + '" cy="' + F(c[1] + .15) + '" rx="' + F(rx) + '" ry="' + F(ry) + '" fill="#F2D59A"/><ellipse cx="' + F(c[0]) + '" cy="' + F(c[1]) + '" rx="' + F(rx * .9) + '" ry="' + F(ry * .85) + '" fill="var(--land)"/></g>'); });
     [[-5.2, 48.55], [-3.9, 47.35]].forEach(function(q){ var c = P(q[0], q[1]); h.push('<g transform="translate(' + F(c[0]) + ',' + F(c[1]) + ')"><ellipse class="ilot-ecume" cx="0" cy=".25" rx="1" ry=".55" fill="none" stroke="#fff" stroke-width=".22"/><path d="M-.6,.25 L-.35,-.35 L-.05,-.55 L.3,-.3 L.55,.25 Z" fill="#8C8C8C"/><path d="M-.05,-.55 L.3,-.3 L.55,.25 L.05,.25 Z" fill="#6E6E6E"/><path d="M.4,.25 L.6,-.05 L.85,.25 Z" fill="#7A7A7A"/></g>'); }); /* deux petits rochers au large */
     var am = P(-5.45, 47.98); h.push('<g class="phare-mer" transform="translate(' + F(am[0]) + ',' + F(am[1]) + ')"><ellipse class="ilot-ecume" cx="0" cy=".3" rx=".9" ry=".5" fill="none" stroke="#fff" stroke-width=".22"/><ellipse cx="0" cy=".2" rx=".4" ry=".22" fill="#8D8D8D"/><rect x="-.18" y="-1.6" width=".36" height="1.8" fill="#fff"/><rect x="-.18" y="-1.1" width=".36" height=".3" fill="#D9473B"/><rect x="-.18" y="-.4" width=".36" height=".3" fill="#D9473B"/><rect x="-.24" y="-1.85" width=".48" height=".28" fill="#3B4A5A"/><circle class="phare-lum" cx="0" cy="-1.72" r="1.6" fill="#FFE9A0"/></g>'); }
@@ -156,7 +156,7 @@ function insetSvg(){
   if(typeof MT_V2 !== 'undefined' && MT_V2){ /* V2 : cadre plus grand, plages, palmiers, reliefs, lagons */
     var K = 1.45, palm = function(px, py, k){ k = k || 1; return '<g transform="translate(' + F(px) + ',' + F(py) + ') scale(' + k + ')"><path d="M0,0 Q.15,-.6 .05,-1.2" stroke="#8B5A2B" stroke-width=".14" fill="none"/><path d="M.05,-1.2 q.45,-.15 .7,.15 M.05,-1.2 q-.45,-.15 -.7,.15 M.05,-1.2 q.3,-.4 .55,-.35 M.05,-1.2 q-.3,-.4 -.55,-.35" stroke="#2E9E4F" stroke-width=".16" fill="none" stroke-linecap="round"/></g>'; },
       relief = function(px, py, k, neige){ return '<path d="M' + F(px - .9 * k) + ',' + F(py) + 'L' + F(px) + ',' + F(py - 1.3 * k) + 'L' + F(px + .9 * k) + ',' + F(py) + 'Z" fill="#7C8B5A"/><path d="M' + F(px) + ',' + F(py - 1.3 * k) + 'L' + F(px + .9 * k) + ',' + F(py) + 'L' + F(px + .2 * k) + ',' + F(py) + 'Z" fill="#5E6D44"/>' + (neige ? '<path d="M' + F(px - .25 * k) + ',' + F(py - .95 * k) + 'L' + F(px) + ',' + F(py - 1.3 * k) + 'L' + F(px + .25 * k) + ',' + F(py - .95 * k) + 'Z" fill="#9AA27A"/>' : ''); };
-    o = '<g class="inset"><g transform="translate(' + F(x) + ',' + F(y) + ') scale(' + K + ') translate(' + F(-x) + ',' + F(-y) + ')">';
+    o = '<g class="inset"><g transform="translate(' + F(x - 2) + ',' + F(y + 1) + ') scale(' + K + ') translate(' + F(-x) + ',' + F(-y) + ')">';
     o += '<rect x="' + F(x - 9.4) + '" y="' + F(y - 7.6) + '" width="18.8" height="13.4" rx="2.2" fill="var(--sea-deep)" opacity=".6" stroke="var(--foam)" stroke-width=".3" stroke-dasharray="1 .8"/>';
     var LAG = { 'Nouvelle-Calédonie':1, 'Polynésie':1, 'Mayotte':1 };
     OM.forEach(function(t){
@@ -175,7 +175,7 @@ function insetSvg(){
       if(t[0] === 'Polynésie') o += palm(cx, cy, .45) + palm(cx + 1, cy + .7, .4);
       o += '<text x="' + F(cx) + '" y="' + F(cy + 2.5) + '" text-anchor="middle" font-size=".75" fill="#fff" opacity=".85" style="font-family:var(--f-display)">' + esc(t[0]) + '</text>';
     });
-    o += '</g><text class="rlabel" x="' + F(x) + '" y="' + F(y + 8.6 * K) + '" text-anchor="middle" style="stroke:var(--sea)">' + esc(r.label || 'Outre-mer') + '</text></g>';
+    o += '</g><text class="rlabel" x="' + F(x - 2) + '" y="' + F(y + 1 + 8.6 * K) + '" text-anchor="middle" style="stroke:var(--sea)">' + esc(r.label || 'Outre-mer') + '</text></g>';
     return o;
   }
   OM.forEach(function(t){
