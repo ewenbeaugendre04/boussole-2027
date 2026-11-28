@@ -388,7 +388,7 @@ GAME.days.forEach(d => d.events.forEach(e => e.choices.forEach(c => AXES.forEach
 
 if (V2 && !V26 && ![4, 6].includes(GAME.days.length)) err('v2 : 4 ou 6 semaines attendues');
 if (V26) {
-  if (GAME.days.length !== 30) err('v3.0 : 30 semaines attendues');
+  if (GAME.days.length !== 40) err('v3.1 : 40 semaines attendues');
   GAME.days.forEach(d => { if (d.events.filter(e => e.kind === 'majeur').length < 2 && d.day >= 7) err('semaine ' + d.day + ' : 2 grandes décisions attendues'); });
   const last = GAME.days[GAME.days.length - 1];
   if (last && !(last.offer || []).some(id => (GAME.programs.find(p => p.id === id) || {}).intensity === 'forte')) warn('dernière semaine : aucune proposition « forte » offerte');

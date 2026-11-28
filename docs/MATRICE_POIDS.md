@@ -138,7 +138,7 @@ Comparaison des réformes entre elles avec le barème ci-dessus. Les ordres de g
 
 **Services publics** : recrutements_publics +6, revalorisation_enseignants +4, regulation_installation_medecins +3, rsa_jeunes +1, recrutement_justice +1, requisition_logements_vacants +1, secu_100 +1, allocation_sociale_unique +1, peines_planchers -1, vols_courts_train -1, privatiser_france_travail -1, fusion_agences -2, plan_economies_200 -2, non_remplacement_fonctionnaires -6.
 
-## Choix des événements (454)
+## Choix des événements (555)
 
 | Semaine | Choix | Budget | Ponctuel | Pouvoir d'achat | Emploi | Émissions de CO₂ | Cohésion sociale | Souveraineté | Services publics |
 |---|---|---|---|---|---|---|---|---|---|
@@ -157,442 +157,543 @@ Comparaison des réformes entre elles avec le barème ci-dessus. Les ordres de g
 | 1 | On se baigne de nouveau dans la Seine → Fermer dès le moindre doute sur l'eau | 0 | 0 |  |  |  | -1 |  |  |
 | 1 | On se baigne de nouveau dans la Seine → Arrêter de financer la baignade, garder l'argent | 0.05 | 0 |  |  | 1 |  |  | -1 |
 | 1 | On se baigne de nouveau dans la Seine → Rendre baignables les rivières de toutes les grandes villes | -0.2 | 0 |  |  | -1 | 1 |  | 1 |
-| 2 | Le plus grand incendie depuis plus de 70 ans → Acheter des avions bombardiers d'eau | -0.05 | -0.5 |  |  |  |  | 1 | 1 |
-| 2 | Le plus grand incendie depuis plus de 70 ans → Partager les avions avec les pays européens | -0.03 | 0 |  |  |  |  | -1 | 1 |
-| 2 | Le plus grand incendie depuis plus de 70 ans → Débroussaillement obligatoire, avec amendes | 0.02 | 0 |  |  | -1 | -1 |  |  |
-| 2 | Le plus grand incendie depuis plus de 70 ans → Replanter des vignes et des cultures coupe-feu | -0.05 | 0 |  | 1 | -1 |  |  |  |
-| 2 | Le plus grand incendie depuis plus de 70 ans → Recruter des forestiers publics pour entretenir les bois | -0.1 | 0 |  | 1 | -1 |  |  | 1 |
-| 2 | Une catastrophe nucléaire au Japon relance le débat → Renforcer la sûreté de tous les réacteurs | 0 | -0.5 |  |  |  | 1 | 1 |  |
-| 2 | Une catastrophe nucléaire au Japon relance le débat → Fermer tout de suite les plus vieux réacteurs | -0.1 | -0.4 |  | -1 |  |  | -2 |  |
-| 2 | Une catastrophe nucléaire au Japon relance le débat → Réduire à la moitié la part du nucléaire | -1 | 0 |  | 1 | 1 |  | -2 |  |
-| 2 | Une catastrophe nucléaire au Japon relance le débat → Prolonger les réacteurs actuels après travaux | 0.3 | 0 |  |  |  | -1 | 2 |  |
-| 2 | Une catastrophe nucléaire au Japon relance le débat → Construire de nouveaux réacteurs nucléaires | -1 | 0 |  | 1 | -1 | -1 | 3 |  |
-| 2 | Pas d'antibiotique pour les enfants → Aider à relocaliser la production en France | 0 | -0.1 |  | 1 |  |  | 1 |  |
-| 2 | Pas d'antibiotique pour les enfants → Imposer des stocks de quatre mois aux laboratoires | 0 | 0 |  |  |  |  |  | 1 |
-| 2 | Pas d'antibiotique pour les enfants → Vendre les antibiotiques à l'unité | 0.01 | 0 |  |  |  |  |  | 1 |
-| 2 | Pas d'antibiotique pour les enfants → Créer un fabricant public de médicaments | -0.1 | -0.3 |  | 1 |  |  | 2 |  |
-| 2 | Pas d'antibiotique pour les enfants → Doubler la somme payée par le patient sur chaque boîte | 0.75 | 0 | -1 |  |  | -1 |  |  |
-| 2 | Nuits d'émeutes après la mort d'un adolescent → Renforts massifs de police et couvre-feux locaux | -0.1 | 0 |  |  |  | -1 |  | 1 |
-| 2 | Nuits d'émeutes après la mort d'un adolescent → Plan pour les quartiers : écoles, emploi, transports | -0.5 | 0 |  | 1 |  | 2 |  |  |
-| 2 | Nuits d'émeutes après la mort d'un adolescent → Enquête indépendante et dialogue police-population | -0.01 | 0 |  |  |  | 1 |  |  |
-| 2 | Nuits d'émeutes après la mort d'un adolescent → Faire payer les dégâts aux auteurs condamnés | 0.02 | 0 |  |  |  | -1 |  |  |
-| 2 | Nuits d'émeutes après la mort d'un adolescent → Suspendre les allocations des parents de mineurs condamnés | 0.01 | 0 |  |  |  | -1 |  |  |
-| 3 | Les hauts-fourneaux de Florange s'éteignent → Nationaliser l'usine le temps de trouver un repreneur | -0.1 | -1 |  | 1 |  |  | 2 |  |
-| 3 | Les hauts-fourneaux de Florange s'éteignent → Accord : pas de licenciement, reclassement sur place | 0 | 0 |  | -1 |  | -1 |  |  |
-| 3 | Les hauts-fourneaux de Florange s'éteignent → Taxer l'acier importé selon son carbone | 0.1 | 0 | -1 |  | -1 |  | 1 |  |
-| 3 | Les hauts-fourneaux de Florange s'éteignent → Laisser fermer et aider la reconversion | -0.03 | 0 |  | -2 |  | -1 |  |  |
-| 3 | Les hauts-fourneaux de Florange s'éteignent → Faire rembourser les aides publiques si l'usine ferme | 0.05 | 0 |  | -1 |  | 1 |  |  |
-| 3 | La Nouvelle-Calédonie s'embrase → État d'urgence et renforts de gendarmes | 0 | -0.2 |  |  |  | -1 |  | 1 |
-| 3 | La Nouvelle-Calédonie s'embrase → Suspendre la réforme et rouvrir le dialogue | 0 | 0 |  |  |  | 2 | -1 |  |
-| 3 | La Nouvelle-Calédonie s'embrase → Grand plan de reconstruction de l'économie | 0 | -1 |  | 2 |  | 1 |  |  |
-| 3 | La Nouvelle-Calédonie s'embrase → Prêter plutôt que donner, contre des réformes locales | 0.05 | -0.3 |  | 1 |  | -1 |  |  |
-| 3 | La Nouvelle-Calédonie s'embrase → Négocier un nouveau statut avec une large autonomie | 0 | 0 |  |  |  | 1 | -1 |  |
-| 3 | Les bijoux de la Couronne volés au Louvre → Plan d'urgence pour la sécurité des musées | 0 | -0.1 |  |  |  |  |  | 1 |
-| 3 | Les bijoux de la Couronne volés au Louvre → Billet plus cher pour les visiteurs hors d'Europe | 0.03 | 0 |  |  |  | -1 |  |  |
-| 3 | Les bijoux de la Couronne volés au Louvre → Laisser chaque musée gérer sa sécurité | 0 | 0 |  |  |  |  |  | -1 |
-| 3 | Les bijoux de la Couronne volés au Louvre → Confier la surveillance à des sociétés privées | 0.01 | 0 |  | 1 |  |  |  | -1 |
-| 3 | Les bijoux de la Couronne volés au Louvre → Recruter des gardiens dans tous les musées publics | -0.05 | 0 |  | 1 |  |  |  | 1 |
-| 3 | Le virus revient : faut-il confiner ? → Confiner et payer les salaires : « quoi qu'il en coûte » | 0 | -70 | 2 | 4 |  | 1 |  | 2 |
-| 3 | Le virus revient : faut-il confiner ? → Aider seulement les secteurs fermés | 0 | -30 |  | 2 |  |  |  | 1 |
-| 3 | Le virus revient : faut-il confiner ? → Prêts garantis plutôt que subventions | 0 | -0.5 |  | 2 |  |  |  |  |
-| 3 | Le virus revient : faut-il confiner ? → Pas de confinement strict, protéger les plus fragiles | 0 | 0 |  | 1 |  | -2 |  | -4 |
-| 3 | Le virus revient : faut-il confiner ? → Rétablir l'impôt sur la fortune pour payer la crise | 1.8 | 0 |  | -1 |  | 1 |  |  |
-| 4 | Une tempête submerge la côte vendéenne → Racheter et détruire les maisons les plus exposées | 0 | -0.3 |  |  |  | -1 |  |  |
-| 4 | Une tempête submerge la côte vendéenne → Rehausser les digues de tout le littoral | -0.05 | -0.5 |  | 1 |  | 1 |  |  |
-| 4 | Une tempête submerge la côte vendéenne → Interdire de construire en zone de submersion | 0.02 | 0 | -1 |  |  |  |  |  |
-| 4 | Une tempête submerge la côte vendéenne → Indemniser vite et reconstruire sur place | 0 | -0.4 |  |  |  | 1 |  |  |
-| 4 | Une tempête submerge la côte vendéenne → Augmenter la surprime « catastrophes naturelles » des assurances | 0.2 | 0 | -1 |  |  |  |  | 1 |
-| 4 | Les gilets jaunes occupent les ronds-points → Annuler la hausse des taxes sur les carburants | -4 | 0 | 2 |  | 2 | 2 |  |  |
-| 4 | Les gilets jaunes occupent les ronds-points → Annoncer des mesures de pouvoir d'achat | -10 | 0 | 3 |  |  | 1 |  |  |
-| 4 | Les gilets jaunes occupent les ronds-points → Garder la taxe et la reverser en chèque aux ménages modestes | 0 | 0 | 1 |  | -2 | -1 |  |  |
-| 4 | Les gilets jaunes occupent les ronds-points → Maintenir la hausse sans compensation | 4 | 0 | -2 |  | -2 | -4 |  |  |
-| 4 | Les gilets jaunes occupent les ronds-points → Organiser un grand débat national | -0.01 | 0 |  |  |  | 1 |  |  |
-| 4 | L'électricité et le gaz flambent → Plafonner les prix pour tout le monde | 0 | -20 | 7 |  | 2 | 2 |  |  |
-| 4 | L'électricité et le gaz flambent → Aider seulement les ménages modestes | 0 | -1.8 | 2 |  |  | 1 |  |  |
-| 4 | L'électricité et le gaz flambent → Plan de sobriété : baisser le chauffage | 0.2 | 0 | -2 |  | -3 |  |  |  |
-| 4 | L'électricité et le gaz flambent → Taxer les profits exceptionnels des producteurs | 1 | 0 |  | -1 |  | 1 |  |  |
-| 4 | L'électricité et le gaz flambent → Sortir les prix français du marché européen | 0 | 0 | 3 |  |  |  | 4 |  |
-| 4 | Un cyclone ravage Mayotte → Voter une loi d'urgence qui accélère les chantiers | 0 | -1 |  |  |  | 1 |  | 2 |
-| 4 | Un cyclone ravage Mayotte → Reconstruire en dur et résorber les bidonvilles | -0.05 | -0.5 |  |  |  | -1 |  | 2 |
-| 4 | Un cyclone ravage Mayotte → Durcir les règles d'entrée et d'accès à la nationalité sur l'île | -0.05 | 0 |  |  |  | -2 | 2 |  |
-| 4 | Un cyclone ravage Mayotte → Demander le fonds de solidarité de l'Union européenne | 0 | 0.1 |  |  |  |  |  | 1 |
-| 4 | Un cyclone ravage Mayotte → Réduire les impôts de ceux qui investissent dans la reconstruction | -0.1 | 0 |  | 2 |  | -1 |  |  |
-| 4 | Plus de boulangerie, un distributeur de baguettes → La commune fait construire une boulangerie | 0 | -0.001 |  |  |  | 1 |  |  |
-| 4 | Plus de boulangerie, un distributeur de baguettes → Garder le distributeur automatique | 0 | 0 |  |  |  | -1 |  |  |
-| 4 | Plus de boulangerie, un distributeur de baguettes → Baisser les impôts des commerces de village | -0.05 | 0 |  | 1 |  |  |  |  |
-| 4 | Plus de boulangerie, un distributeur de baguettes → Un camion-boulangerie pour dix villages | -0.01 | 0 |  |  |  | 1 |  |  |
-| 4 | Plus de boulangerie, un distributeur de baguettes → Reprendre la boulangerie en coopérative avec les habitants | 0 | 0 |  | 1 |  | 2 |  |  |
+| 2 | Le train de nuit pour Nice peut-il revenir ? → Subventionner le train de nuit pour le relancer | -0.03 | 0 |  |  |  |  |  | 1 |
+| 2 | Le train de nuit pour Nice peut-il revenir ? → Laisser la ligne fermée, elle n'est pas rentable | 0.02 | 0 |  |  |  |  |  | -1 |
+| 2 | Le train de nuit pour Nice peut-il revenir ? → Confier la ligne à une compagnie choisie sur appel d'offres | 0.01 | 0 |  |  |  |  |  | 1 |
+| 2 | Le train de nuit pour Nice peut-il revenir ? → Financer le train par une petite taxe sur les vols | 0.01 | 0 |  |  |  |  |  | 1 |
+| 2 | Le train de nuit pour Nice peut-il revenir ? → Racheter des voitures-lits et rouvrir dix lignes | -0.05 | -0.5 |  |  | -1 |  |  | 2 |
+| 2 | Record absolu de chaleur, le brevet est reporté → Rénover et végétaliser toutes les écoles | -0.5 | 0 |  |  |  |  |  | 1 |
+| 2 | Record absolu de chaleur, le brevet est reporté → Adapter le calendrier scolaire aux fortes chaleurs | 0 | 0 |  |  |  | -1 |  |  |
+| 2 | Record absolu de chaleur, le brevet est reporté → Installer la climatisation dans les écoles | -0.2 | 0 |  |  |  |  |  | 1 |
+| 2 | Record absolu de chaleur, le brevet est reporté → Financer l'adaptation par une taxe sur les climatiseurs | 0.05 | 0 | -1 |  |  |  |  |  |
+| 2 | Record absolu de chaleur, le brevet est reporté → Reporter les travaux dans les écoles pour tenir le budget | 0.2 | 0 |  |  |  |  |  | -1 |
+| 2 | Plus de boulangerie, un distributeur de baguettes → La commune fait construire une boulangerie | 0 | -0.001 |  |  |  | 1 |  |  |
+| 2 | Plus de boulangerie, un distributeur de baguettes → Garder le distributeur automatique | 0 | 0 |  |  |  | -1 |  |  |
+| 2 | Plus de boulangerie, un distributeur de baguettes → Baisser les impôts des commerces de village | -0.05 | 0 |  | 1 |  |  |  |  |
+| 2 | Plus de boulangerie, un distributeur de baguettes → Un camion-boulangerie pour dix villages | -0.01 | 0 |  |  |  | 1 |  |  |
+| 2 | Plus de boulangerie, un distributeur de baguettes → Reprendre la boulangerie en coopérative avec les habitants | 0 | 0 |  | 1 |  | 2 |  |  |
+| 3 | Les piscines ferment, faute de maîtres-nageurs → Payer la formation des maîtres-nageurs | -0.02 | 0 |  | 1 |  |  |  |  |
+| 3 | Les piscines ferment, faute de maîtres-nageurs → Mieux payer les maîtres-nageurs municipaux | -0.02 | 0 | 1 |  |  |  |  |  |
+| 3 | Les piscines ferment, faute de maîtres-nageurs → Confier les piscines à des entreprises privées | 0.02 | 0 | -1 |  |  |  |  |  |
+| 3 | Les piscines ferment, faute de maîtres-nageurs → Autoriser des surveillants moins diplômés l'été | 0.01 | 0 |  |  |  |  |  | 1 |
+| 3 | Le plus grand incendie depuis plus de 70 ans → Acheter des avions bombardiers d'eau | -0.05 | -0.5 |  |  |  |  | 1 | 1 |
+| 3 | Le plus grand incendie depuis plus de 70 ans → Partager les avions avec les pays européens | -0.03 | 0 |  |  |  |  | -1 | 1 |
+| 3 | Le plus grand incendie depuis plus de 70 ans → Débroussaillement obligatoire, avec amendes | 0.02 | 0 |  |  | -1 | -1 |  |  |
+| 3 | Le plus grand incendie depuis plus de 70 ans → Replanter des vignes et des cultures coupe-feu | -0.05 | 0 |  | 1 | -1 |  |  |  |
+| 3 | Le plus grand incendie depuis plus de 70 ans → Recruter des forestiers publics pour entretenir les bois | -0.1 | 0 |  | 1 | -1 |  |  | 1 |
+| 3 | L'arme atomique française pour protéger l'Europe ? → Associer davantage les Européens | -0.5 | 0 |  |  |  |  | 1 |  |
+| 3 | L'arme atomique française pour protéger l'Europe ? → Garder une dissuasion strictement nationale | 0 | 0 |  |  |  |  | 1 |  |
+| 3 | L'arme atomique française pour protéger l'Europe ? → Faire payer les partenaires | 0.5 | 0 |  |  |  |  |  |  |
+| 3 | L'arme atomique française pour protéger l'Europe ? → Réduire l'arsenal et relancer le désarmement | 1 | 0 |  |  |  | 1 | -2 |  |
+| 3 | Les stations-service à sec → Réquisitionner les grévistes | 0 | 0 |  |  |  | -1 |  |  |
+| 3 | Les stations-service à sec → Taxer les superprofits pour financer les hausses de salaires | 0.5 | 0 | 1 | -1 |  |  |  |  |
+| 3 | Les stations-service à sec → Puiser dans les stocks stratégiques | 0 | 0 |  |  |  |  | -1 |  |
+| 3 | Les stations-service à sec → Baisser les taxes sur le carburant pendant la crise | -0.8 | 0 | 2 |  |  |  |  |  |
+| 4 | Les données de millions de demandeurs d'emploi volées → Créer une agence de cybersécurité pour les services publics | -0.2 | 0 |  |  |  |  | 1 | 1 |
+| 4 | Les données de millions de demandeurs d'emploi volées → Obliger la double authentification et limiter les accès | 0 | 0 |  |  |  |  |  | -1 |
+| 4 | Les données de millions de demandeurs d'emploi volées → Garder moins de données et effacer les anciennes | 0.01 | 0 |  |  |  |  |  | -1 |
+| 4 | Les données de millions de demandeurs d'emploi volées → Sanctionner les prestataires informatiques fautifs | 0.03 | 0 |  | -1 |  |  |  |  |
+| 4 | Faut-il faire payer plus cher l'université ? → Hausse forte avec exonération des boursiers | 1.5 | 0 |  |  |  | -2 |  | 2 |
+| 4 | Faut-il faire payer plus cher l'université ? → Hausse modérée et progressive | 0.5 | 0 |  |  |  | -1 |  | 1 |
+| 4 | Faut-il faire payer plus cher l'université ? → Garder des frais bas, l'État paie | -1.5 | 0 |  |  |  | 1 |  | 2 |
+| 4 | Faut-il faire payer plus cher l'université ? → Faire payer surtout les étudiants étrangers | 0.4 | 0 |  |  |  | -1 |  | 1 |
+| 4 | Transformer les bureaux vides en logements → Taxer les bureaux vides | 0.2 | 0 |  |  |  | 1 |  |  |
+| 4 | Transformer les bureaux vides en logements → Subventionner les transformations | -0.4 | 0 | 1 | 1 |  |  |  |  |
+| 4 | Transformer les bureaux vides en logements → Laisser faire la loi actuelle | 0 | 0 |  |  |  |  |  |  |
+| 5 | Pas d'antibiotique pour les enfants → Aider à relocaliser la production en France | 0 | -0.1 |  | 1 |  |  | 1 |  |
+| 5 | Pas d'antibiotique pour les enfants → Imposer des stocks de quatre mois aux laboratoires | 0 | 0 |  |  |  |  |  | 1 |
+| 5 | Pas d'antibiotique pour les enfants → Vendre les antibiotiques à l'unité | 0.01 | 0 |  |  |  |  |  | 1 |
+| 5 | Pas d'antibiotique pour les enfants → Créer un fabricant public de médicaments | -0.1 | -0.3 |  | 1 |  |  | 2 |  |
+| 5 | Pas d'antibiotique pour les enfants → Doubler la somme payée par le patient sur chaque boîte | 0.75 | 0 | -1 |  |  | -1 |  |  |
 | 5 | Une maladie de la peau frappe les vaches des Alpes → Abattre tout le troupeau touché, comme la règle le prévoit | -0.1 | 0 |  | -1 |  | -1 | 1 |  |
 | 5 | Une maladie de la peau frappe les vaches des Alpes → Vacciner tous les bovins du pays | -0.3 | 0 |  | -1 |  |  |  | 1 |
 | 5 | Une maladie de la peau frappe les vaches des Alpes → N'abattre que les bêtes malades et vacciner autour | 0 | 0 |  |  |  | 1 |  |  |
 | 5 | Une maladie de la peau frappe les vaches des Alpes → Faire payer les contrôles par une cotisation des filières | 0.1 | 0 | -1 |  |  |  |  |  |
 | 5 | Une maladie de la peau frappe les vaches des Alpes → Déclencher la clause de sauvegarde sur la viande importée | 0 | 0 | -1 | 1 |  |  | 1 |  |
-| 5 | Des « polluants éternels » dans les œufs du sud de Lyon → Interdire tout de suite les rejets de l'usine | 0 | 0 |  | -1 |  | 1 |  | 2 |
-| 5 | Des « polluants éternels » dans les œufs du sud de Lyon → Faire payer l'industriel pour chaque gramme rejeté | 0.02 | 0 |  |  |  |  |  | 1 |
-| 5 | Des « polluants éternels » dans les œufs du sud de Lyon → Financer des filtres dans les usines d'eau potable | 0 | -0.2 |  |  |  | 1 |  | 2 |
-| 5 | Des « polluants éternels » dans les œufs du sud de Lyon → Informer et suivre la santé des habitants, sans contrainte | 0 | 0 |  |  |  | -1 |  | -1 |
-| 5 | Des « polluants éternels » dans les œufs du sud de Lyon → Interdire ces produits dans les objets du quotidien | 0 | 0 |  | -1 |  |  |  | 1 |
-| 5 | Plus de beurre au supermarché → Rouvrir les négociations entre fabricants et supermarchés | 0 | 0 | -1 | 1 |  |  |  |  |
-| 5 | Plus de beurre au supermarché → Laisser les prix s'ajuster tout seuls | 0 | 0 |  |  |  | -1 |  |  |
-| 5 | Plus de beurre au supermarché → Limiter le nombre de plaquettes par client | 0 | 0 |  |  |  | 1 |  |  |
-| 5 | Plus de beurre au supermarché → Importer du beurre d'autres pays d'Europe | 0 | 0 | 1 |  |  |  | -1 |  |
-| 5 | Plus de beurre au supermarché → Plafonner les marges des supermarchés sur le beurre | 0 | 0 | 1 | -1 |  |  |  |  |
-| 5 | Le train de nuit pour Nice peut-il revenir ? → Subventionner le train de nuit pour le relancer | -0.03 | 0 |  |  |  |  |  | 1 |
-| 5 | Le train de nuit pour Nice peut-il revenir ? → Laisser la ligne fermée, elle n'est pas rentable | 0.02 | 0 |  |  |  |  |  | -1 |
-| 5 | Le train de nuit pour Nice peut-il revenir ? → Confier la ligne à une compagnie choisie sur appel d'offres | 0.01 | 0 |  |  |  |  |  | 1 |
-| 5 | Le train de nuit pour Nice peut-il revenir ? → Financer le train par une petite taxe sur les vols | 0.01 | 0 |  |  |  |  |  | 1 |
-| 5 | Le train de nuit pour Nice peut-il revenir ? → Racheter des voitures-lits et rouvrir dix lignes | -0.05 | -0.5 |  |  | -1 |  |  | 2 |
-| 6 | Le Nord sous l'eau pendant des semaines → Racheter les maisons les plus exposées | -0.4 | 0 |  |  |  | 1 |  | 1 |
-| 6 | Le Nord sous l'eau pendant des semaines → Envoyer l'armée et des pompes en urgence | 0 | 0 |  |  |  | 1 |  |  |
-| 6 | Le Nord sous l'eau pendant des semaines → Aider les communes à curer les canaux | -0.1 | 0 |  |  |  |  |  | 1 |
-| 6 | Le Nord sous l'eau pendant des semaines → Relever la surprime d'assurance catastrophes naturelles | 0.4 | 0 | -1 |  |  |  |  |  |
-| 6 | Le Nord sous l'eau pendant des semaines → Indemniser chaque foyer inondé sans attendre l'assurance | -0.1 | 0 | 1 |  |  | 1 |  |  |
-| 6 | 151 territoires en manque de médecins → Obliger les médecins à venir deux jours par mois | -0.05 | 0 |  |  |  | -1 |  | 3 |
-| 6 | 151 territoires en manque de médecins → Mieux payer les médecins volontaires | -0.3 | 0 |  |  |  |  |  | 2 |
-| 6 | 151 territoires en manque de médecins → Confier plus de soins aux pharmaciens et infirmiers | 0.1 | 0 |  |  |  |  |  | 2 |
-| 6 | 151 territoires en manque de médecins → Former beaucoup plus de médecins dans les facultés | -0.4 | 0 |  | 1 |  |  |  | 1 |
-| 6 | 151 territoires en manque de médecins → Ouvrir des centres de santé avec des médecins salariés | -0.15 | 0 |  | 1 |  |  |  | 2 |
-| 6 | Notre-Dame rouvre : faut-il payer pour entrer ? → Garder l'entrée gratuite pour tous | 0 | 0 |  |  |  | 1 |  |  |
-| 6 | Notre-Dame rouvre : faut-il payer pour entrer ? → Faire payer 5 € aux touristes pour le patrimoine | 0.05 | 0 |  |  |  | -1 |  | 1 |
-| 6 | Notre-Dame rouvre : faut-il payer pour entrer ? → Réduire l'avantage fiscal des très gros dons | 0.05 | 0 |  |  |  | -1 |  |  |
-| 6 | Notre-Dame rouvre : faut-il payer pour entrer ? → Utiliser les dons restants pour les abords et l'accueil | 0 | 0 |  |  |  | 1 |  |  |
-| 6 | Notre-Dame rouvre : faut-il payer pour entrer ? → Lancer un grand plan pour les églises de village | -0.1 | 0 |  | 1 |  | 1 |  |  |
-| 6 | L'Espagne et le Portugal plongés dans le noir → Envoyer à chaque foyer un guide pour tenir trois jours | -0.02 | 0 |  |  |  | 1 |  |  |
-| 6 | L'Espagne et le Portugal plongés dans le noir → Renforcer les lignes électriques avec l'Espagne | 0 | -0.1 |  |  |  |  | -1 | 1 |
-| 6 | L'Espagne et le Portugal plongés dans le noir → Équiper hôpitaux et mairies de groupes électrogènes | -0.05 | 0 |  |  |  |  |  | 1 |
-| 6 | L'Espagne et le Portugal plongés dans le noir → Ne rien changer, notre réseau est plus solide | 0 | 0 |  |  |  |  |  | -1 |
-| 6 | L'Espagne et le Portugal plongés dans le noir → Obliger les opérateurs à garder leurs antennes allumées | 0 | 0 | -1 |  |  |  |  | 1 |
-| 7 | Le grand froid fait exploser la consommation d'électricité → Demander à chacun de baisser le chauffage le soir | 0 | 0 |  |  | -1 | 1 |  |  |
-| 7 | Le grand froid fait exploser la consommation d'électricité → Payer les usines qui s'arrêtent aux heures de pointe | -0.05 | 0 |  |  | -1 |  |  | 1 |
-| 7 | Le grand froid fait exploser la consommation d'électricité → Garder des centrales au gaz en réserve pour les grands froids | 0 | 0 | -1 |  | 2 |  | 1 |  |
-| 7 | Le grand froid fait exploser la consommation d'électricité → Éteindre vitrines, bureaux vides et éclairage public la nuit | 0.03 | 0 |  |  | -1 | -1 |  |  |
-| 7 | Le grand froid fait exploser la consommation d'électricité → Importer du courant d'Espagne par les nouvelles lignes | 0 | 0 |  |  | -1 |  | -1 | 1 |
-| 7 | Des étudiants font la queue pour manger → Repas à 1 € pour tous les étudiants | -0.05 | 0 |  |  |  | 1 |  | 1 |
-| 7 | Des étudiants font la queue pour manger → Repas à 1 € seulement pour les boursiers et précaires | -0.015 | 0 |  |  |  | 1 |  |  |
-| 7 | Des étudiants font la queue pour manger → Augmenter les bourses plutôt que subventionner les repas | -0.08 | 0 |  |  |  | 1 |  |  |
-| 7 | Des étudiants font la queue pour manger → Laisser les associations distribuer l'aide alimentaire | -0.005 | 0 |  |  |  | -1 |  |  |
-| 7 | Des étudiants font la queue pour manger → Faire payer plus cher les étudiants venus hors d'Europe | 0.05 | 0 |  |  |  | -1 |  | 1 |
-| 7 | La Grèce au bord de la sortie de l'euro → Prêter vite à la Grèce, avec des conditions allégées | 0 | 0 |  |  |  | 1 | -1 |  |
-| 7 | La Grèce au bord de la sortie de l'euro → Laisser la Grèce sortir de l'euro | 0 | -2 | -1 |  |  |  | 1 |  |
-| 7 | La Grèce au bord de la sortie de l'euro → Effacer une partie de la dette grecque | -0.2 | 0 |  |  |  | 1 | -1 |  |
-| 7 | La Grèce au bord de la sortie de l'euro → Prêter seulement contre des réformes strictes | 0.1 | 0 |  |  |  | -1 | 1 |  |
-| 7 | La Grèce au bord de la sortie de l'euro → Emprunter ensemble en Europe pour aider la Grèce | 0 | 0 |  |  |  | 1 | -1 |  |
-| 7 | Une brume de pollution sur Lyon → Circulation alternée : un jour sur deux selon la plaque | 0 | 0 |  |  | -1 | -1 |  |  |
-| 7 | Une brume de pollution sur Lyon → Transports en commun gratuits pendant le pic | -0.005 | 0 |  |  | -1 | 1 |  |  |
-| 7 | Une brume de pollution sur Lyon → N'autoriser que les voitures les moins polluantes | 0 | 0 |  |  | -2 | -1 |  |  |
-| 7 | Une brume de pollution sur Lyon → Simple conseil de limiter ses trajets | 0 | 0 |  |  | 1 | 1 |  |  |
-| 7 | Une brume de pollution sur Lyon → Faire payer l'entrée des voitures en ville | 0.01 | 0 |  |  | -1 | -1 |  |  |
-| 8 | Des familles fuient la guerre en Ukraine → Accueillir largement, avec logement et allocation | -0.6 | 0 |  |  |  | 1 |  | -1 |
-| 8 | Des familles fuient la guerre en Ukraine → Loger les familles chez des habitants volontaires | -0.2 | 0 |  |  |  | 2 |  |  |
-| 8 | Des familles fuient la guerre en Ukraine → Aider surtout les pays voisins de l'Ukraine | -0.1 | 0 |  |  |  | -1 | 1 |  |
-| 8 | Des familles fuient la guerre en Ukraine → Accueillir en misant sur le travail plutôt que les allocations | 0.05 | 0 |  | 1 |  | -1 |  |  |
-| 8 | Des familles fuient la guerre en Ukraine → Payer l'aide avec les revenus des avoirs russes gelés | 0.1 | 0 |  |  |  | 1 | 1 |  |
-| 8 | Les pêcheurs de Boulogne privés d'eaux britanniques → Indemniser les bateaux bloqués au port | 0 | -0.03 |  |  |  | 1 |  |  |
-| 8 | Les pêcheurs de Boulogne privés d'eaux britanniques → Payer la casse des bateaux de ceux qui arrêtent | 0 | -0.02 |  |  |  | -1 | -1 |  |
-| 8 | Les pêcheurs de Boulogne privés d'eaux britanniques → Bloquer les arrivages britanniques dans nos ports | -0.005 | 0 |  |  |  |  | 1 | -1 |
-| 8 | Les pêcheurs de Boulogne privés d'eaux britanniques → Laisser l'Union européenne négocier les licences | 0 | 0 |  |  |  |  | -1 |  |
-| 8 | Les pêcheurs de Boulogne privés d'eaux britanniques → Saisir le tribunal prévu par l'accord avec Londres | 0 | 0 |  |  |  |  | 1 |  |
-| 8 | La Seine sort de son lit → Indemniser vite les sinistrés | 0 | -0.1 |  |  |  | 1 |  |  |
-| 8 | La Seine sort de son lit → Adapter les maisons pour qu'elles résistent à l'eau | 0 | -0.2 |  |  |  |  |  | 1 |
-| 8 | La Seine sort de son lit → Construire de nouveaux bassins de stockage en amont | -0.02 | -0.5 |  |  |  |  |  | 2 |
-| 8 | La Seine sort de son lit → Rembourser moins ceux qui rebâtissent en zone inondable | 0.05 | 0 |  |  |  | -1 |  |  |
-| 8 | La Seine sort de son lit → Augmenter la taxe locale pour financer les digues | 0.05 | 0 | -1 |  |  |  |  | 1 |
+| 5 | Faute de neige, la station de ski ferme pour de bon → Payer des canons à neige pour sauver la saison | -0.01 | 0 |  | 1 |  |  |  |  |
+| 5 | Faute de neige, la station de ski ferme pour de bon → Aider le village à vivre du tourisme toute l'année | 0 | 0 |  | -1 |  | 1 |  |  |
+| 5 | Faute de neige, la station de ski ferme pour de bon → Laisser fermer, sans argent public | 0.01 | 0 |  | -1 |  | -1 |  |  |
+| 5 | Faute de neige, la station de ski ferme pour de bon → Confier la station à un groupe privé du tourisme | 0.01 | 0 | -1 | 1 |  |  |  |  |
+| 5 | Une brume de pollution sur Lyon → Circulation alternée : un jour sur deux selon la plaque | 0 | 0 |  |  | -1 | -1 |  |  |
+| 5 | Une brume de pollution sur Lyon → Transports en commun gratuits pendant le pic | -0.005 | 0 |  |  | -1 | 1 |  |  |
+| 5 | Une brume de pollution sur Lyon → N'autoriser que les voitures les moins polluantes | 0 | 0 |  |  | -2 | -1 |  |  |
+| 5 | Une brume de pollution sur Lyon → Simple conseil de limiter ses trajets | 0 | 0 |  |  | 1 | 1 |  |  |
+| 5 | Une brume de pollution sur Lyon → Faire payer l'entrée des voitures en ville | 0.01 | 0 |  |  | -1 | -1 |  |  |
+| 6 | L'impôt sur l'épargne augmente → Monter la flat tax à 35 % | 1.5 | 0 |  | -1 |  | 1 |  |  |
+| 6 | L'impôt sur l'épargne augmente → Revenir à 30 % | -0.8 | 0 | 1 |  |  | -1 |  |  |
+| 6 | L'impôt sur l'épargne augmente → Garder 31,4 % | 0 | 0 |  |  |  |  |  |  |
+| 6 | Le virus revient : faut-il confiner ? → Confiner et payer les salaires : « quoi qu'il en coûte » | 0 | -70 | 2 | 4 |  | 1 |  | 2 |
+| 6 | Le virus revient : faut-il confiner ? → Aider seulement les secteurs fermés | 0 | -30 |  | 2 |  |  |  | 1 |
+| 6 | Le virus revient : faut-il confiner ? → Prêts garantis plutôt que subventions | 0 | -0.5 |  | 2 |  |  |  |  |
+| 6 | Le virus revient : faut-il confiner ? → Pas de confinement strict, protéger les plus fragiles | 0 | 0 |  | 1 |  | -2 |  | -4 |
+| 6 | Le virus revient : faut-il confiner ? → Rétablir l'impôt sur la fortune pour payer la crise | 1.8 | 0 |  | -1 |  | 1 |  |  |
+| 6 | Les pêcheurs de Boulogne privés d'eaux britanniques → Indemniser les bateaux bloqués au port | 0 | -0.03 |  |  |  | 1 |  |  |
+| 6 | Les pêcheurs de Boulogne privés d'eaux britanniques → Payer la casse des bateaux de ceux qui arrêtent | 0 | -0.02 |  |  |  | -1 | -1 |  |
+| 6 | Les pêcheurs de Boulogne privés d'eaux britanniques → Bloquer les arrivages britanniques dans nos ports | -0.005 | 0 |  |  |  |  | 1 | -1 |
+| 6 | Les pêcheurs de Boulogne privés d'eaux britanniques → Laisser l'Union européenne négocier les licences | 0 | 0 |  |  |  |  | -1 |  |
+| 6 | Les pêcheurs de Boulogne privés d'eaux britanniques → Saisir le tribunal prévu par l'accord avec Londres | 0 | 0 |  |  |  |  | 1 |  |
+| 7 | Nuits d'émeutes après la mort d'un adolescent → Renforts massifs de police et couvre-feux locaux | -0.1 | 0 |  |  |  | -1 |  | 1 |
+| 7 | Nuits d'émeutes après la mort d'un adolescent → Plan pour les quartiers : écoles, emploi, transports | -0.5 | 0 |  | 1 |  | 2 |  |  |
+| 7 | Nuits d'émeutes après la mort d'un adolescent → Enquête indépendante et dialogue police-population | -0.01 | 0 |  |  |  | 1 |  |  |
+| 7 | Nuits d'émeutes après la mort d'un adolescent → Faire payer les dégâts aux auteurs condamnés | 0.02 | 0 |  |  |  | -1 |  |  |
+| 7 | Nuits d'émeutes après la mort d'un adolescent → Suspendre les allocations des parents de mineurs condamnés | 0.01 | 0 |  |  |  | -1 |  |  |
+| 7 | Les deux dernières centrales à charbon → Convertir les deux au gaz et biogaz | -0.2 | 0 |  | 1 | 1 |  | 1 |  |
+| 7 | Les deux dernières centrales à charbon → Fermer et reconvertir les sites | 0.1 | 0 |  | -1 | -1 |  |  |  |
+| 7 | Les deux dernières centrales à charbon → Les garder en secours l'hiver | -0.1 | 0 |  |  | 1 |  | 1 |  |
+| 7 | Fin de l'avion de combat commun avec l'Allemagne → Construire seuls le successeur | -0.6 | 0 |  | 1 |  |  | 2 |  |
+| 7 | Fin de l'avion de combat commun avec l'Allemagne → Chercher d'autres partenaires | -0.2 | 0 |  |  |  |  | 1 |  |
+| 7 | Fin de l'avion de combat commun avec l'Allemagne → Moderniser le Rafale | 0 | 0 |  | 1 |  |  |  |  |
+| 7 | Notre-Dame rouvre : faut-il payer pour entrer ? → Garder l'entrée gratuite pour tous | 0 | 0 |  |  |  | 1 |  |  |
+| 7 | Notre-Dame rouvre : faut-il payer pour entrer ? → Faire payer 5 € aux touristes pour le patrimoine | 0.05 | 0 |  |  |  | -1 |  | 1 |
+| 7 | Notre-Dame rouvre : faut-il payer pour entrer ? → Réduire l'avantage fiscal des très gros dons | 0.05 | 0 |  |  |  | -1 |  |  |
+| 7 | Notre-Dame rouvre : faut-il payer pour entrer ? → Utiliser les dons restants pour les abords et l'accueil | 0 | 0 |  |  |  | 1 |  |  |
+| 7 | Notre-Dame rouvre : faut-il payer pour entrer ? → Lancer un grand plan pour les églises de village | -0.1 | 0 |  | 1 |  | 1 |  |  |
+| 8 | Deux immeubles s'effondrent au cœur de la ville → Lancer un grand plan de rénovation des quartiers anciens | -0.2 | 0 |  |  |  | 1 |  | 1 |
+| 8 | Deux immeubles s'effondrent au cœur de la ville → Sanctionner durement les marchands de sommeil | 0.02 | 0 |  |  |  | 1 |  |  |
+| 8 | Deux immeubles s'effondrent au cœur de la ville → Obliger un diagnostic de solidité avant chaque location | 0 | 0 | -1 |  |  |  |  | 1 |
+| 8 | Deux immeubles s'effondrent au cœur de la ville → Reloger les familles évacuées à l'hôtel aux frais de l'État | 0 | -0.05 |  |  |  | 1 |  |  |
+| 8 | Deux immeubles s'effondrent au cœur de la ville → Taxer davantage les logements vides et dégradés | 0.03 | 0 |  |  |  |  |  | 1 |
+| 8 | La Grèce au bord de la sortie de l'euro → Prêter vite à la Grèce, avec des conditions allégées | 0 | 0 |  |  |  | 1 | -1 |  |
+| 8 | La Grèce au bord de la sortie de l'euro → Laisser la Grèce sortir de l'euro | 0 | -2 | -1 |  |  |  | 1 |  |
+| 8 | La Grèce au bord de la sortie de l'euro → Effacer une partie de la dette grecque | -0.2 | 0 |  |  |  | 1 | -1 |  |
+| 8 | La Grèce au bord de la sortie de l'euro → Prêter seulement contre des réformes strictes | 0.1 | 0 |  |  |  | -1 | 1 |  |
+| 8 | La Grèce au bord de la sortie de l'euro → Emprunter ensemble en Europe pour aider la Grèce | 0 | 0 |  |  |  | 1 | -1 |  |
 | 8 | Le pays passe en alerte maximale → Plus de patrouilles dans les gares et autour des écoles | -0.05 | 0 |  |  |  |  |  | 1 |
 | 8 | Le pays passe en alerte maximale → Contrôler les sacs à l'entrée des lieux publics | -0.01 | 0 |  |  |  | -1 |  |  |
 | 8 | Le pays passe en alerte maximale → Former les habitants aux gestes qui sauvent | -0.01 | 0 |  |  |  | 1 |  | 1 |
 | 8 | Le pays passe en alerte maximale → Garder le niveau d'alerte habituel | 0 | 0 |  |  |  | 1 |  |  |
 | 8 | Le pays passe en alerte maximale → Expulser les étrangers fichés pour radicalisation | 0 | 0 |  |  |  | -1 | 1 |  |
-| 9 | Une tempête géante prive la Bretagne d'électricité → Envoyer des électriciens de toute la France | 0 | -0.1 |  |  |  | 1 |  | 1 |
-| 9 | Une tempête géante prive la Bretagne d'électricité → Laisser le gestionnaire du réseau payer seul | 0 | 0 |  |  |  | -1 |  |  |
-| 9 | Une tempête géante prive la Bretagne d'électricité → Enterrer les lignes électriques des campagnes | -0.3 | 0 | -1 |  |  |  |  | 1 |
-| 9 | Une tempête géante prive la Bretagne d'électricité → Obliger les propriétaires à élaguer près des lignes | 0.02 | 0 |  |  |  | -1 |  | 1 |
-| 9 | Une tempête géante prive la Bretagne d'électricité → Créer un fonds tempêtes payé par les assurances | 0.2 | 0 | -1 |  |  | 1 |  |  |
-| 9 | Grève record dans les trains et le métro → Retirer la réforme pour apaiser | -0.4 | 0 |  |  |  | 2 |  |  |
-| 9 | Grève record dans les trains et le métro → Tenir bon et aller au vote | 0.5 | -0.3 |  | -1 |  | -2 |  |  |
-| 9 | Grève record dans les trains et le métro → Garder la réforme pour les seuls nouveaux salariés | 0.1 | 0 |  |  |  | -1 |  |  |
-| 9 | Grève record dans les trains et le métro → Instaurer un service minimum garanti | 0 | 0 |  | 1 |  | -1 |  |  |
-| 9 | Grève record dans les trains et le métro → Financer les retraites par plus de cotisations | 0.6 | 0 | -1 | -1 |  | 1 |  |  |
-| 9 | La maternité de la petite ville ferme → Rouvrir la maternité avec des médecins intérimaires | -0.02 | 0 |  |  |  |  |  | 1 |
-| 9 | La maternité de la petite ville ferme → Garder la fermeture, avec un hébergement près du grand hôpital | 0.01 | 0 |  |  |  | -1 |  | -1 |
-| 9 | La maternité de la petite ville ferme → Créer un centre de suivi tenu par des sages-femmes | 0 | 0 |  |  |  |  |  | 1 |
-| 9 | La maternité de la petite ville ferme → Payer une équipe d'urgence de garde la nuit | -0.01 | 0 |  |  |  |  |  | 1 |
-| 10 | Un pesticide interdit a contaminé les Antilles → Indemniser toutes les personnes malades | -0.15 | 0 |  |  |  | 2 |  |  |
-| 10 | Un pesticide interdit a contaminé les Antilles → Tester gratuitement les habitants et chercher à dépolluer | -0.05 | 0 |  |  |  |  |  | 1 |
-| 10 | Un pesticide interdit a contaminé les Antilles → Faire payer les fabricants et vendeurs du pesticide | 0.03 | 0 |  |  |  | 1 |  |  |
-| 10 | Un pesticide interdit a contaminé les Antilles → Interdire pêche et cultures dans les zones polluées | 0 | 0 |  | -1 |  |  |  | 1 |
-| 10 | Un pesticide interdit a contaminé les Antilles → Taxer les bananes importées hors d'Europe pour financer le plan | 0.08 | 0 | -1 |  |  |  | 1 |  |
-| 10 | Faute de neige, la station de ski ferme pour de bon → Payer des canons à neige pour sauver la saison | -0.01 | 0 |  | 1 |  |  |  |  |
-| 10 | Faute de neige, la station de ski ferme pour de bon → Aider le village à vivre du tourisme toute l'année | 0 | 0 |  | -1 |  | 1 |  |  |
-| 10 | Faute de neige, la station de ski ferme pour de bon → Laisser fermer, sans argent public | 0.01 | 0 |  | -1 |  | -1 |  |  |
-| 10 | Faute de neige, la station de ski ferme pour de bon → Confier la station à un groupe privé du tourisme | 0.01 | 0 | -1 | 1 |  |  |  |  |
-| 10 | Du lait pour bébé contaminé à la salmonelle → Recruter des inspecteurs de l'alimentation | -0.06 | 0 |  |  |  |  |  | 1 |
-| 10 | Du lait pour bébé contaminé à la salmonelle → Faire payer les contrôles aux industriels | 0.05 | 0 | -1 |  |  |  |  | 1 |
-| 10 | Du lait pour bébé contaminé à la salmonelle → Sanctionner lourdement l'entreprise | 0.02 | 0 |  | -1 |  | 1 |  |  |
-| 10 | Du lait pour bébé contaminé à la salmonelle → Obliger les magasins à bloquer en caisse les produits rappelés | 0 | 0 |  |  |  |  |  | 1 |
-| 10 | Du lait pour bébé contaminé à la salmonelle → Indemniser les familles, sans changer les règles | -0.01 | 0 |  |  |  | 1 |  |  |
-| 11 | Une usine chimique brûle en pleine ville → Doubler le nombre d'inspecteurs des usines dangereuses | -0.05 | 0 |  |  |  |  |  | 1 |
-| 11 | Une usine chimique brûle en pleine ville → Indemniser vite les agriculteurs et les commerçants | 0 | -0.05 |  |  |  | 1 |  |  |
-| 11 | Une usine chimique brûle en pleine ville → Éloigner les usines dangereuses des villes | -0.2 | 0 |  | -1 |  | 1 |  |  |
-| 11 | Une usine chimique brûle en pleine ville → Augmenter les amendes et la taxe des sites à risque | 0.04 | 0 |  | -1 |  |  |  | 1 |
-| 11 | Une usine chimique brûle en pleine ville → Laisser l'industriel payer seul les dégâts | 0.02 | 0 |  | 1 |  | -1 |  |  |
-| 11 | Des pirates paralysent un hôpital et demandent une rançon → Payer un plan national de cybersécurité des hôpitaux | -0.25 | 0 |  |  |  |  | 1 | 1 |
-| 11 | Des pirates paralysent un hôpital et demandent une rançon → Refuser de payer et faire tourner l'hôpital sur papier | 0 | 0 |  |  |  |  | 1 | -1 |
-| 11 | Des pirates paralysent un hôpital et demandent une rançon → Interdire par la loi le paiement des rançons | 0 | 0 |  |  |  |  | 1 | -1 |
-| 11 | Des pirates paralysent un hôpital et demandent une rançon → Regrouper l'informatique des hôpitaux d'une région | 0.03 | 0 |  |  |  |  |  | 1 |
-| 11 | Des pirates paralysent un hôpital et demandent une rançon → Riposter avec les services de l'État contre les pirates | -0.05 | 0 |  |  |  |  | 1 |  |
-| 11 | Plus de moutarde dans les rayons → Aider les agriculteurs à cultiver la moutarde en France | -0.01 | 0 |  |  |  |  | 1 |  |
-| 11 | Plus de moutarde dans les rayons → Laisser le marché s'ajuster | 0 | 0 | -1 |  |  |  |  |  |
-| 11 | Plus de moutarde dans les rayons → Réserver la mention « Dijon » aux graines françaises | 0 | 0 | -1 |  |  |  | 1 |  |
-| 11 | Plus de moutarde dans les rayons → Faire financer un stock de sécurité par les industriels | 0.01 | 0 | -1 |  |  |  | 1 |  |
-| 12 | Affrontements autour d'une réserve d'eau agricole → Continuer les réserves, avec des règles de partage | -0.03 | 0 |  | 1 |  | -1 |  |  |
-| 12 | Affrontements autour d'une réserve d'eau agricole → Suspendre les chantiers et lancer un débat public | 0.02 | 0 |  | -1 |  | 1 |  |  |
-| 12 | Affrontements autour d'une réserve d'eau agricole → Aider les fermes à passer à des cultures moins gourmandes en eau | -0.05 | 0 |  | -1 |  | 1 |  |  |
-| 12 | Affrontements autour d'une réserve d'eau agricole → Faire payer l'eau d'irrigation à son vrai prix | 0.04 | 0 | -1 | -1 |  |  |  |  |
-| 12 | Affrontements autour d'une réserve d'eau agricole → Interdire la manifestation et dissoudre les groupes violents | -0.01 | 0 |  |  |  | -1 |  |  |
-| 12 | À Mayotte, l'eau ne coule plus qu'un jour sur trois → Distribuer gratuitement de l'eau en bouteille à tous | 0 | -0.1 |  |  |  | 1 |  | 1 |
-| 12 | À Mayotte, l'eau ne coule plus qu'un jour sur trois → Couper l'eau à tour de rôle, sans aide de plus | 0 | 0 |  |  |  | -1 |  | -1 |
-| 12 | À Mayotte, l'eau ne coule plus qu'un jour sur trois → Construire une grande usine de dessalement | -0.05 | 0 |  |  |  |  |  | 1 |
-| 12 | À Mayotte, l'eau ne coule plus qu'un jour sur trois → Réparer les fuites, payé par le prix de l'eau | 0.02 | 0 | -1 |  |  |  |  | 1 |
-| 12 | À Mayotte, l'eau ne coule plus qu'un jour sur trois → Faire payer plus cher les gros consommateurs d'eau | 0.01 | 0 | -1 |  |  | 1 |  |  |
-| 12 | Les stations-service à sec → Réquisitionner les grévistes | 0 | 0 |  |  |  | -1 |  |  |
-| 12 | Les stations-service à sec → Taxer les superprofits pour financer les hausses de salaires | 0.5 | 0 | 1 | -1 |  |  |  |  |
-| 12 | Les stations-service à sec → Puiser dans les stocks stratégiques | 0 | 0 |  |  |  |  | -1 |  |
-| 12 | Les stations-service à sec → Baisser les taxes sur le carburant pendant la crise | -0.8 | 0 | 2 |  |  |  |  |  |
-| 13 | La pêche fermée un mois pour sauver les dauphins → Fermer la pêche et indemniser les pêcheurs | -0.08 | 0 |  |  | -1 | 1 |  |  |
-| 13 | La pêche fermée un mois pour sauver les dauphins → Équiper les bateaux de répulsifs et de caméras | 0 | 0 |  | 1 |  |  |  |  |
-| 13 | La pêche fermée un mois pour sauver les dauphins → Fermer sans indemniser | 0.05 | 0 |  | -2 |  | -1 |  |  |
-| 13 | La pêche fermée un mois pour sauver les dauphins → Demander à l'Europe d'assouplir la règle | 0.02 | 0 |  | 1 | 1 |  |  |  |
-| 13 | La pêche fermée un mois pour sauver les dauphins → Taxer le poisson vendu pour financer la protection | 0.04 | 0 | -1 |  |  |  |  |  |
+| 9 | Du lait pour bébé contaminé à la salmonelle → Recruter des inspecteurs de l'alimentation | -0.06 | 0 |  |  |  |  |  | 1 |
+| 9 | Du lait pour bébé contaminé à la salmonelle → Faire payer les contrôles aux industriels | 0.05 | 0 | -1 |  |  |  |  | 1 |
+| 9 | Du lait pour bébé contaminé à la salmonelle → Sanctionner lourdement l'entreprise | 0.02 | 0 |  | -1 |  | 1 |  |  |
+| 9 | Du lait pour bébé contaminé à la salmonelle → Obliger les magasins à bloquer en caisse les produits rappelés | 0 | 0 |  |  |  |  |  | 1 |
+| 9 | Du lait pour bébé contaminé à la salmonelle → Indemniser les familles, sans changer les règles | -0.01 | 0 |  |  |  | 1 |  |  |
+| 9 | La pêche fermée un mois pour sauver les dauphins → Fermer la pêche et indemniser les pêcheurs | -0.08 | 0 |  |  | -1 | 1 |  |  |
+| 9 | La pêche fermée un mois pour sauver les dauphins → Équiper les bateaux de répulsifs et de caméras | 0 | 0 |  | 1 |  |  |  |  |
+| 9 | La pêche fermée un mois pour sauver les dauphins → Fermer sans indemniser | 0.05 | 0 |  | -2 |  | -1 |  |  |
+| 9 | La pêche fermée un mois pour sauver les dauphins → Demander à l'Europe d'assouplir la règle | 0.02 | 0 |  | 1 | 1 |  |  |  |
+| 9 | La pêche fermée un mois pour sauver les dauphins → Taxer le poisson vendu pour financer la protection | 0.04 | 0 | -1 |  |  |  |  |  |
+| 9 | Cours le matin, sport et ateliers l'après-midi ? → Généraliser avec des activités gratuites | -0.6 | 0 |  | 1 |  | 2 |  | 1 |
+| 9 | Cours le matin, sport et ateliers l'après-midi ? → Tester dans quelques villes volontaires | -0.05 | 0 |  |  |  |  |  | 1 |
+| 9 | Cours le matin, sport et ateliers l'après-midi ? → Garder les horaires actuels | 0 | 0 |  |  |  | -1 |  |  |
+| 9 | Une IA française pour rester indépendants ? → Réserver les marchés publics à l'IA européenne | -0.1 | 0 |  |  |  |  | 2 |  |
+| 9 | Une IA française pour rester indépendants ? → Financer de grands centres de calcul | -1 | 0 |  | 1 | 1 |  | 1 |  |
+| 9 | Une IA française pour rester indépendants ? → Laisser jouer la concurrence | 0 | 0 |  |  |  |  | -1 |  |
+| 10 | Des familles fuient la guerre en Ukraine → Accueillir largement, avec logement et allocation | -0.6 | 0 |  |  |  | 1 |  | -1 |
+| 10 | Des familles fuient la guerre en Ukraine → Loger les familles chez des habitants volontaires | -0.2 | 0 |  |  |  | 2 |  |  |
+| 10 | Des familles fuient la guerre en Ukraine → Aider surtout les pays voisins de l'Ukraine | -0.1 | 0 |  |  |  | -1 | 1 |  |
+| 10 | Des familles fuient la guerre en Ukraine → Accueillir en misant sur le travail plutôt que les allocations | 0.05 | 0 |  | 1 |  | -1 |  |  |
+| 10 | Des familles fuient la guerre en Ukraine → Payer l'aide avec les revenus des avoirs russes gelés | 0.1 | 0 |  |  |  | 1 | 1 |  |
+| 10 | Les hauts-fourneaux de Florange s'éteignent → Nationaliser l'usine le temps de trouver un repreneur | -0.1 | -1 |  | 1 |  |  | 2 |  |
+| 10 | Les hauts-fourneaux de Florange s'éteignent → Accord : pas de licenciement, reclassement sur place | 0 | 0 |  | -1 |  | -1 |  |  |
+| 10 | Les hauts-fourneaux de Florange s'éteignent → Taxer l'acier importé selon son carbone | 0.1 | 0 | -1 |  | -1 |  | 1 |  |
+| 10 | Les hauts-fourneaux de Florange s'éteignent → Laisser fermer et aider la reconversion | -0.03 | 0 |  | -2 |  | -1 |  |  |
+| 10 | Les hauts-fourneaux de Florange s'éteignent → Faire rembourser les aides publiques si l'usine ferme | 0.05 | 0 |  | -1 |  | 1 |  |  |
+| 10 | Plus de moutarde dans les rayons → Aider les agriculteurs à cultiver la moutarde en France | -0.01 | 0 |  |  |  |  | 1 |  |
+| 10 | Plus de moutarde dans les rayons → Laisser le marché s'ajuster | 0 | 0 | -1 |  |  |  |  |  |
+| 10 | Plus de moutarde dans les rayons → Réserver la mention « Dijon » aux graines françaises | 0 | 0 | -1 |  |  |  | 1 |  |
+| 10 | Plus de moutarde dans les rayons → Faire financer un stock de sécurité par les industriels | 0.01 | 0 | -1 |  |  |  | 1 |  |
+| 11 | Une tempête géante prive la Bretagne d'électricité → Envoyer des électriciens de toute la France | 0 | -0.1 |  |  |  | 1 |  | 1 |
+| 11 | Une tempête géante prive la Bretagne d'électricité → Laisser le gestionnaire du réseau payer seul | 0 | 0 |  |  |  | -1 |  |  |
+| 11 | Une tempête géante prive la Bretagne d'électricité → Enterrer les lignes électriques des campagnes | -0.3 | 0 | -1 |  |  |  |  | 1 |
+| 11 | Une tempête géante prive la Bretagne d'électricité → Obliger les propriétaires à élaguer près des lignes | 0.02 | 0 |  |  |  | -1 |  | 1 |
+| 11 | Une tempête géante prive la Bretagne d'électricité → Créer un fonds tempêtes payé par les assurances | 0.2 | 0 | -1 |  |  | 1 |  |  |
+| 11 | L'armée française a quitté l'Afrique de l'Ouest → Partenariats d'égal à égal, sans bases | 0.3 | 0 |  |  |  | 1 | -1 |  |
+| 11 | L'armée française a quitté l'Afrique de l'Ouest → Recentrer l'armée sur l'Europe | 0.2 | 0 |  |  |  |  | 1 |  |
+| 11 | L'armée française a quitté l'Afrique de l'Ouest → Garder une capacité d'intervention rapide | -0.2 | 0 |  |  |  |  | 1 |  |
+| 11 | L'armée française a quitté l'Afrique de l'Ouest → Augmenter l'aide au développement | -0.3 | 0 |  |  |  | 1 |  |  |
+| 11 | Des bitcoins dans les réserves de l'État ? → Créer une petite réserve de bitcoins | -0.5 | 0 |  |  | 1 |  | 1 |  |
+| 11 | Des bitcoins dans les réserves de l'État ? → Garder seulement de l'or | 0 | 0 |  |  |  |  |  |  |
+| 11 | Des bitcoins dans les réserves de l'État ? → Encadrer plutôt les cryptomonnaies | 0 | 0 |  |  |  | 1 |  |  |
+| 11 | Plus de beurre au supermarché → Rouvrir les négociations entre fabricants et supermarchés | 0 | 0 | -1 | 1 |  |  |  |  |
+| 11 | Plus de beurre au supermarché → Laisser les prix s'ajuster tout seuls | 0 | 0 |  |  |  | -1 |  |  |
+| 11 | Plus de beurre au supermarché → Limiter le nombre de plaquettes par client | 0 | 0 |  |  |  | 1 |  |  |
+| 11 | Plus de beurre au supermarché → Importer du beurre d'autres pays d'Europe | 0 | 0 | 1 |  |  |  | -1 |  |
+| 11 | Plus de beurre au supermarché → Plafonner les marges des supermarchés sur le beurre | 0 | 0 | 1 | -1 |  |  |  |  |
+| 12 | Bruxelles interdit la fusion de deux géants du train → Accepter la décision et laisser chaque entreprise seule | 0 | 0 |  |  |  |  | -1 |  |
+| 12 | Bruxelles interdit la fusion de deux géants du train → Demander de changer les règles européennes de concurrence | 0 | 0 |  |  |  |  | 1 |  |
+| 12 | Bruxelles interdit la fusion de deux géants du train → Faire entrer l'État au capital du groupe français | 0 | -0.5 |  |  |  |  | 2 |  |
+| 12 | Bruxelles interdit la fusion de deux géants du train → Réserver les commandes publiques aux trains faits en Europe | -0.05 | 0 |  | 1 |  |  | 1 |  |
+| 12 | Bruxelles interdit la fusion de deux géants du train → Vendre des parts de l'État pour financer l'innovation | 0 | 0.3 |  |  |  |  | -1 |  |
+| 12 | Une tempête submerge la côte vendéenne → Racheter et détruire les maisons les plus exposées | 0 | -0.3 |  |  |  | -1 |  |  |
+| 12 | Une tempête submerge la côte vendéenne → Rehausser les digues de tout le littoral | -0.05 | -0.5 |  | 1 |  | 1 |  |  |
+| 12 | Une tempête submerge la côte vendéenne → Interdire de construire en zone de submersion | 0.02 | 0 | -1 |  |  |  |  |  |
+| 12 | Une tempête submerge la côte vendéenne → Indemniser vite et reconstruire sur place | 0 | -0.4 |  |  |  | 1 |  |  |
+| 12 | Une tempête submerge la côte vendéenne → Augmenter la surprime « catastrophes naturelles » des assurances | 0.2 | 0 | -1 |  |  |  |  | 1 |
+| 12 | Des feux de forêt allumés volontairement → Peines beaucoup plus lourdes pour les incendiaires | 0 | 0 |  |  |  | 1 |  |  |
+| 12 | Des feux de forêt allumés volontairement → Drones et guetteurs dans les massifs | -0.1 | 0 |  |  | -1 |  |  | 1 |
+| 12 | Des feux de forêt allumés volontairement → Débroussaillage et prévention auprès des jeunes | -0.05 | 0 |  |  | -1 | 1 |  |  |
 | 13 | Des groupes de niveau au collège → Généraliser les groupes de niveau | -0.3 | 0 |  |  |  | -1 |  | 1 |
 | 13 | Des groupes de niveau au collège → Laisser chaque collège décider | 0 | 0 |  |  |  | -1 |  |  |
 | 13 | Des groupes de niveau au collège → Réduire la taille de toutes les classes | -0.6 | 0 |  |  |  |  |  | 2 |
 | 13 | Des groupes de niveau au collège → Remplacer les groupes par du soutien en ligne | 0.1 | 0 |  |  |  |  |  | -1 |
 | 13 | Des groupes de niveau au collège → Orienter plus tôt vers des filières professionnelles | 0.05 | 0 |  | 1 |  | -1 |  |  |
-| 13 | Les vélos en libre-service ne marchent plus → Reprendre le service en régie publique | -0.01 | 0 |  |  |  |  |  | 1 |
-| 13 | Les vélos en libre-service ne marchent plus → Infliger des pénalités et laisser l'opérateur réparer | 0.01 | 0 |  |  |  |  |  | -1 |
-| 13 | Les vélos en libre-service ne marchent plus → Ouvrir la ville aux vélos privés sans station | 0.01 | 0 |  |  |  | -1 |  | 1 |
-| 13 | Les vélos en libre-service ne marchent plus → Rembourser les abonnés aux frais de l'opérateur | 0 | 0 |  |  |  | 1 |  |  |
-| 14 | La Guyane bloquée par un grand mouvement social → Signer un grand plan d'urgence | -0.3 | 0 |  |  |  | 2 |  | 1 |
-| 14 | La Guyane bloquée par un grand mouvement social → Envoyer des renforts de police et de gendarmerie | -0.05 | 0 |  |  |  | -1 |  |  |
-| 14 | La Guyane bloquée par un grand mouvement social → Refuser de céder sous la pression des barrages | 0 | 0 |  | -1 |  | -2 |  |  |
-| 14 | La Guyane bloquée par un grand mouvement social → Donner plus d'autonomie à la collectivité de Guyane | 0.05 | 0 |  |  |  | 1 |  |  |
-| 14 | La Guyane bloquée par un grand mouvement social → Conditionner l'aide à une meilleure gestion locale | 0.05 | 0 |  |  |  | -1 |  |  |
-| 14 | Une nouvelle plateforme trie les futurs étudiants → Ouvrir beaucoup plus de places à l'université | -0.4 | 0 |  |  |  | 1 |  | 1 |
-| 14 | Une nouvelle plateforme trie les futurs étudiants → Assumer la sélection à l'entrée de la fac | 0.1 | 0 |  |  |  | -1 |  |  |
-| 14 | Une nouvelle plateforme trie les futurs étudiants → Développer l'apprentissage après le bac | -0.3 | 0 |  | 1 |  |  |  |  |
-| 14 | Une nouvelle plateforme trie les futurs étudiants → Augmenter les frais d'inscription, avec plus de bourses | 0.3 | 0 | -1 |  |  |  |  | 1 |
-| 14 | Une nouvelle plateforme trie les futurs étudiants → Revenir au tirage au sort pour les filières pleines | 0 | 0 |  |  |  | -1 |  |  |
-| 14 | Des villages ravitaillés en eau par camion → Relier les villages aux réseaux des villes | -0.05 | 0 |  |  |  |  |  | 1 |
-| 14 | Des villages ravitaillés en eau par camion → Interdire tous les usages non essentiels | 0.01 | 0 |  | -1 |  |  |  |  |
-| 14 | Des villages ravitaillés en eau par camion → Aider les éleveurs à acheter du fourrage | 0 | -0.03 |  | 1 |  |  |  |  |
-| 14 | Des villages ravitaillés en eau par camion → Faire payer l'eau plus cher au-delà d'un seuil | 0.02 | 0 | -1 |  |  |  |  |  |
-| 15 | Bruxelles interdit la fusion de deux géants du train → Accepter la décision et laisser chaque entreprise seule | 0 | 0 |  |  |  |  | -1 |  |
-| 15 | Bruxelles interdit la fusion de deux géants du train → Demander de changer les règles européennes de concurrence | 0 | 0 |  |  |  |  | 1 |  |
-| 15 | Bruxelles interdit la fusion de deux géants du train → Faire entrer l'État au capital du groupe français | 0 | -0.5 |  |  |  |  | 2 |  |
-| 15 | Bruxelles interdit la fusion de deux géants du train → Réserver les commandes publiques aux trains faits en Europe | -0.05 | 0 |  | 1 |  |  | 1 |  |
-| 15 | Bruxelles interdit la fusion de deux géants du train → Vendre des parts de l'État pour financer l'innovation | 0 | 0.3 |  |  |  |  | -1 |  |
-| 15 | Deux immeubles s'effondrent au cœur de la ville → Lancer un grand plan de rénovation des quartiers anciens | -0.2 | 0 |  |  |  | 1 |  | 1 |
-| 15 | Deux immeubles s'effondrent au cœur de la ville → Sanctionner durement les marchands de sommeil | 0.02 | 0 |  |  |  | 1 |  |  |
-| 15 | Deux immeubles s'effondrent au cœur de la ville → Obliger un diagnostic de solidité avant chaque location | 0 | 0 | -1 |  |  |  |  | 1 |
-| 15 | Deux immeubles s'effondrent au cœur de la ville → Reloger les familles évacuées à l'hôtel aux frais de l'État | 0 | -0.05 |  |  |  | 1 |  |  |
-| 15 | Deux immeubles s'effondrent au cœur de la ville → Taxer davantage les logements vides et dégradés | 0.03 | 0 |  |  |  |  |  | 1 |
+| 13 | 151 territoires en manque de médecins → Obliger les médecins à venir deux jours par mois | -0.05 | 0 |  |  |  | -1 |  | 3 |
+| 13 | 151 territoires en manque de médecins → Mieux payer les médecins volontaires | -0.3 | 0 |  |  |  |  |  | 2 |
+| 13 | 151 territoires en manque de médecins → Confier plus de soins aux pharmaciens et infirmiers | 0.1 | 0 |  |  |  |  |  | 2 |
+| 13 | 151 territoires en manque de médecins → Former beaucoup plus de médecins dans les facultés | -0.4 | 0 |  | 1 |  |  |  | 1 |
+| 13 | 151 territoires en manque de médecins → Ouvrir des centres de santé avec des médecins salariés | -0.15 | 0 |  | 1 |  |  |  | 2 |
+| 13 | Un drone de loisir bloque un aéroport régional → Amendes lourdes et immatriculation des drones | 0.02 | 0 |  |  |  |  |  | 1 |
+| 13 | Un drone de loisir bloque un aéroport régional → Brouilleurs autour des aéroports | -0.05 | 0 |  |  |  |  | 1 | 1 |
+| 13 | Un drone de loisir bloque un aéroport régional → Former les pilotes plutôt que punir | 0 | 0 |  |  |  | 1 |  |  |
+| 13 | Encore une enseigne piratée → Amendes beaucoup plus lourdes | 0.05 | 0 |  |  |  | 1 |  |  |
+| 13 | Encore une enseigne piratée → Aider les PME à se protéger | -0.2 | 0 |  | 1 |  |  | 1 |  |
+| 13 | Encore une enseigne piratée → Indemniser automatiquement les clients | 0 | 0 | 1 |  |  |  |  |  |
+| 14 | L'IA va-t-elle prendre nos emplois ? → Grand plan de formation aux métiers de l'IA | -1 | 0 |  | 1 |  |  |  | 1 |
+| 14 | L'IA va-t-elle prendre nos emplois ? → Taxer les entreprises qui remplacent des salariés par l'IA | 1 | 0 |  |  |  | 1 | -1 |  |
+| 14 | L'IA va-t-elle prendre nos emplois ? → Laisser le marché s'adapter | 0 | 0 |  | -1 |  |  | 1 |  |
+| 14 | Mayotte : faut-il aller plus loin sur le droit du sol ? → Supprimer le droit du sol à Mayotte | 0.05 | 0 |  |  |  | -2 | 1 |  |
+| 14 | Mayotte : faut-il aller plus loin sur le droit du sol ? → Plus de moyens en mer contre les traversées | -0.2 | 0 |  |  |  |  | 1 |  |
+| 14 | Mayotte : faut-il aller plus loin sur le droit du sol ? → Investir dans les écoles, l'eau et les hôpitaux | -0.6 | 0 |  |  |  | 1 |  | 2 |
+| 14 | Mayotte : faut-il aller plus loin sur le droit du sol ? → Coopérer avec les Comores contre les départs | -0.1 | 0 |  |  |  | 1 |  |  |
+| 14 | La maternité de la petite ville ferme → Rouvrir la maternité avec des médecins intérimaires | -0.02 | 0 |  |  |  |  |  | 1 |
+| 14 | La maternité de la petite ville ferme → Garder la fermeture, avec un hébergement près du grand hôpital | 0.01 | 0 |  |  |  | -1 |  | -1 |
+| 14 | La maternité de la petite ville ferme → Créer un centre de suivi tenu par des sages-femmes | 0 | 0 |  |  |  |  |  | 1 |
+| 14 | La maternité de la petite ville ferme → Payer une équipe d'urgence de garde la nuit | -0.01 | 0 |  |  |  |  |  | 1 |
+| 15 | Le Nord sous l'eau pendant des semaines → Racheter les maisons les plus exposées | -0.4 | 0 |  |  |  | 1 |  | 1 |
+| 15 | Le Nord sous l'eau pendant des semaines → Envoyer l'armée et des pompes en urgence | 0 | 0 |  |  |  | 1 |  |  |
+| 15 | Le Nord sous l'eau pendant des semaines → Aider les communes à curer les canaux | -0.1 | 0 |  |  |  |  |  | 1 |
+| 15 | Le Nord sous l'eau pendant des semaines → Relever la surprime d'assurance catastrophes naturelles | 0.4 | 0 | -1 |  |  |  |  |  |
+| 15 | Le Nord sous l'eau pendant des semaines → Indemniser chaque foyer inondé sans attendre l'assurance | -0.1 | 0 | 1 |  |  | 1 |  |  |
+| 15 | Grève record dans les trains et le métro → Retirer la réforme pour apaiser | -0.4 | 0 |  |  |  | 2 |  |  |
+| 15 | Grève record dans les trains et le métro → Tenir bon et aller au vote | 0.5 | -0.3 |  | -1 |  | -2 |  |  |
+| 15 | Grève record dans les trains et le métro → Garder la réforme pour les seuls nouveaux salariés | 0.1 | 0 |  |  |  | -1 |  |  |
+| 15 | Grève record dans les trains et le métro → Instaurer un service minimum garanti | 0 | 0 |  | 1 |  | -1 |  |  |
+| 15 | Grève record dans les trains et le métro → Financer les retraites par plus de cotisations | 0.6 | 0 | -1 | -1 |  | 1 |  |  |
 | 15 | Des algues vertes toxiques envahissent une plage → Ramasser les algues chaque jour | -0.01 | 0 |  |  |  | 1 |  |  |
 | 15 | Des algues vertes toxiques envahissent une plage → Réduire les élevages dans les zones touchées | -0.03 | 0 |  | -1 |  |  |  |  |
 | 15 | Des algues vertes toxiques envahissent une plage → Taxer les engrais azotés | 0.05 | 0 |  | -1 |  |  |  |  |
 | 15 | Des algues vertes toxiques envahissent une plage → Payer les agriculteurs qui changent de pratiques | -0.02 | 0 |  |  |  | 1 |  |  |
 | 15 | Des algues vertes toxiques envahissent une plage → Faire financer le ramassage par les élevages intensifs | 0.01 | 0 |  | -1 |  |  |  |  |
-| 16 | Record absolu de chaleur, le brevet est reporté → Rénover et végétaliser toutes les écoles | -0.5 | 0 |  |  |  |  |  | 1 |
-| 16 | Record absolu de chaleur, le brevet est reporté → Adapter le calendrier scolaire aux fortes chaleurs | 0 | 0 |  |  |  | -1 |  |  |
-| 16 | Record absolu de chaleur, le brevet est reporté → Installer la climatisation dans les écoles | -0.2 | 0 |  |  |  |  |  | 1 |
-| 16 | Record absolu de chaleur, le brevet est reporté → Financer l'adaptation par une taxe sur les climatiseurs | 0.05 | 0 | -1 |  |  |  |  |  |
-| 16 | Record absolu de chaleur, le brevet est reporté → Reporter les travaux dans les écoles pour tenir le budget | 0.2 | 0 |  |  |  |  |  | -1 |
-| 16 | Le chikungunya revient en force sur l'île de La Réunion → Démoustiquer massivement avec l'armée | 0 | -0.05 |  |  |  |  |  | 1 |
-| 16 | Le chikungunya revient en force sur l'île de La Réunion → Mobiliser les habitants pour vider les eaux stagnantes | 0 | 0 |  |  |  | 1 |  |  |
-| 16 | Le chikungunya revient en force sur l'île de La Réunion → Vacciner en priorité les personnes fragiles | -0.05 | 0 |  |  |  |  |  | 1 |
-| 16 | Le chikungunya revient en force sur l'île de La Réunion → Taxer les séjours touristiques pour financer la lutte | 0.01 | 0 |  | -1 |  |  |  |  |
-| 16 | Le chikungunya revient en force sur l'île de La Réunion → Reporter les soins non urgents pour soulager l'hôpital | 0.02 | 0 |  |  |  |  |  | -1 |
-| 16 | Les piscines ferment, faute de maîtres-nageurs → Payer la formation des maîtres-nageurs | -0.02 | 0 |  | 1 |  |  |  |  |
-| 16 | Les piscines ferment, faute de maîtres-nageurs → Mieux payer les maîtres-nageurs municipaux | -0.02 | 0 | 1 |  |  |  |  |  |
-| 16 | Les piscines ferment, faute de maîtres-nageurs → Confier les piscines à des entreprises privées | 0.02 | 0 | -1 |  |  |  |  |  |
-| 16 | Les piscines ferment, faute de maîtres-nageurs → Autoriser des surveillants moins diplômés l'été | 0.01 | 0 |  |  |  |  |  | 1 |
-| 17 | Incendies volontaires sur les lignes à grande vitesse → Surveiller les lignes avec des drones et des agents | -0.3 | 0 |  |  |  | 1 |  | 1 |
-| 17 | Incendies volontaires sur les lignes à grande vitesse → Doubler les câbles pour que le réseau tienne seul | -0.5 | 0 |  | 1 |  |  |  | 2 |
-| 17 | Incendies volontaires sur les lignes à grande vitesse → Faire payer les réparations par la SNCF, sans aide | 0.1 | 0 |  |  |  |  |  | -1 |
-| 17 | Incendies volontaires sur les lignes à grande vitesse → Alourdir les peines pour atteinte aux réseaux | 0.02 | 0 |  |  |  | -1 |  |  |
-| 17 | Des barrages contre le prix des courses → Supprimer la TVA sur les produits de base | -0.15 | 0 | 2 |  |  | 1 |  |  |
-| 17 | Des barrages contre le prix des courses → Encadrer les marges de la grande distribution | 0 | 0 | 1 | -1 |  |  |  |  |
-| 17 | Des barrages contre le prix des courses → Ouvrir le marché à de nouveaux distributeurs | 0.05 | 0 | 1 | -1 |  |  |  |  |
-| 17 | Des barrages contre le prix des courses → Aider la production agricole locale | -0.08 | 0 |  | 1 |  |  | 1 |  |
-| 17 | Des barrages contre le prix des courses → Rétablir l'ordre et lever les barrages | 0.02 | 0 |  |  |  | -2 |  |  |
-| 17 | Les données de millions de demandeurs d'emploi volées → Créer une agence de cybersécurité pour les services publics | -0.2 | 0 |  |  |  |  | 1 | 1 |
-| 17 | Les données de millions de demandeurs d'emploi volées → Obliger la double authentification et limiter les accès | 0 | 0 |  |  |  |  |  | -1 |
-| 17 | Les données de millions de demandeurs d'emploi volées → Garder moins de données et effacer les anciennes | 0.01 | 0 |  |  |  |  |  | -1 |
-| 17 | Les données de millions de demandeurs d'emploi volées → Sanctionner les prestataires informatiques fautifs | 0.03 | 0 |  | -1 |  |  |  |  |
-| 18 | Une ville de l'Ouest les pieds dans l'eau → Laisser des champs en amont servir de zones d'inondation | -0.1 | 0 |  | -1 |  | 1 |  |  |
-| 18 | Une ville de l'Ouest les pieds dans l'eau → Construire des digues et des bassins de retenue | -0.3 | 0 |  | 1 |  |  |  | 1 |
-| 18 | Une ville de l'Ouest les pieds dans l'eau → Interdire de construire en zone inondable | 0.02 | 0 | -1 |  |  |  |  |  |
-| 18 | Une ville de l'Ouest les pieds dans l'eau → Laisser les assureurs indemniser seuls | 0.05 | 0 | -1 |  |  | -1 |  |  |
-| 18 | Une ville de l'Ouest les pieds dans l'eau → Relever la taxe locale contre les inondations | 0.05 | 0 | -1 |  |  |  |  | 1 |
+| 15 | Gaza : envoyer des soldats, de l'aide ou de l'argent ? → Envoyer des soldats dans la force internationale | -0.3 | 0 |  |  |  | -1 | 1 |  |
+| 15 | Gaza : envoyer des soldats, de l'aide ou de l'argent ? → Former la police et financer la reconstruction | -0.5 | 0 |  |  |  | 1 |  |  |
+| 15 | Gaza : envoyer des soldats, de l'aide ou de l'argent ? → Seulement de l'aide humanitaire | -0.1 | 0 |  |  |  | 1 |  |  |
+| 15 | Gaza : envoyer des soldats, de l'aide ou de l'argent ? → Conditionner l'aide au désarmement du Hamas | 0 | 0 |  |  |  | -1 |  |  |
+| 16 | La Nouvelle-Calédonie s'embrase → État d'urgence et renforts de gendarmes | 0 | -0.2 |  |  |  | -1 |  | 1 |
+| 16 | La Nouvelle-Calédonie s'embrase → Suspendre la réforme et rouvrir le dialogue | 0 | 0 |  |  |  | 2 | -1 |  |
+| 16 | La Nouvelle-Calédonie s'embrase → Grand plan de reconstruction de l'économie | 0 | -1 |  | 2 |  | 1 |  |  |
+| 16 | La Nouvelle-Calédonie s'embrase → Prêter plutôt que donner, contre des réformes locales | 0.05 | -0.3 |  | 1 |  | -1 |  |  |
+| 16 | La Nouvelle-Calédonie s'embrase → Négocier un nouveau statut avec une large autonomie | 0 | 0 |  |  |  | 1 | -1 |  |
+| 16 | Un cyclone ravage Mayotte → Voter une loi d'urgence qui accélère les chantiers | 0 | -1 |  |  |  | 1 |  | 2 |
+| 16 | Un cyclone ravage Mayotte → Reconstruire en dur et résorber les bidonvilles | -0.05 | -0.5 |  |  |  | -1 |  | 2 |
+| 16 | Un cyclone ravage Mayotte → Durcir les règles d'entrée et d'accès à la nationalité sur l'île | -0.05 | 0 |  |  |  | -2 | 2 |  |
+| 16 | Un cyclone ravage Mayotte → Demander le fonds de solidarité de l'Union européenne | 0 | 0.1 |  |  |  |  |  | 1 |
+| 16 | Un cyclone ravage Mayotte → Réduire les impôts de ceux qui investissent dans la reconstruction | -0.1 | 0 |  | 2 |  | -1 |  |  |
+| 16 | 150 citoyens tirés au sort pour réduire le déficit → S'engager à soumettre leurs idées au vote | 0 | 0 |  |  |  | 2 |  |  |
+| 16 | 150 citoyens tirés au sort pour réduire le déficit → Les écouter, sans engagement | 0 | 0 |  |  |  |  |  |  |
+| 16 | 150 citoyens tirés au sort pour réduire le déficit → Préférer les experts | 0 | 0 |  |  |  | -1 |  |  |
+| 17 | Une nouvelle plateforme trie les futurs étudiants → Ouvrir beaucoup plus de places à l'université | -0.4 | 0 |  |  |  | 1 |  | 1 |
+| 17 | Une nouvelle plateforme trie les futurs étudiants → Assumer la sélection à l'entrée de la fac | 0.1 | 0 |  |  |  | -1 |  |  |
+| 17 | Une nouvelle plateforme trie les futurs étudiants → Développer l'apprentissage après le bac | -0.3 | 0 |  | 1 |  |  |  |  |
+| 17 | Une nouvelle plateforme trie les futurs étudiants → Augmenter les frais d'inscription, avec plus de bourses | 0.3 | 0 | -1 |  |  |  |  | 1 |
+| 17 | Une nouvelle plateforme trie les futurs étudiants → Revenir au tirage au sort pour les filières pleines | 0 | 0 |  |  |  | -1 |  |  |
+| 17 | Des airbags dangereux : 1,7 million de voitures à l'arrêt → Voiture de prêt gratuite pour tous | 0 | 0 | 1 |  |  |  |  | 1 |
+| 17 | Des airbags dangereux : 1,7 million de voitures à l'arrêt → Amendes contre les constructeurs en retard | 0.1 | 0 |  |  |  |  |  | 1 |
+| 17 | Des airbags dangereux : 1,7 million de voitures à l'arrêt → Vérifier au contrôle technique | 0 | 0 | -1 |  |  |  |  | 1 |
+| 17 | Un seul chargeur pour tous les ordinateurs → Étendre aux autres appareils | 0 | 0 | 1 |  | -1 |  |  |  |
+| 17 | Un seul chargeur pour tous les ordinateurs → Imposer aussi des batteries remplaçables | 0 | 0 |  |  | -1 |  |  |  |
+| 17 | Un seul chargeur pour tous les ordinateurs → S'en tenir à la règle actuelle | 0 | 0 |  |  |  |  |  |  |
+| 17 | Le nucléaire iranien : lever ou garder les sanctions ? → Garder toutes les sanctions | 0 | 0 |  |  |  |  | 1 |  |
+| 17 | Le nucléaire iranien : lever ou garder les sanctions ? → Les lever pas à pas contre des contrôles | 0.1 | 0 |  |  |  | 1 |  |  |
+| 17 | Le nucléaire iranien : lever ou garder les sanctions ? → Laisser les États-Unis négocier seuls | 0 | 0 |  |  |  |  | -1 |  |
+| 18 | À Mayotte, l'eau ne coule plus qu'un jour sur trois → Distribuer gratuitement de l'eau en bouteille à tous | 0 | -0.1 |  |  |  | 1 |  | 1 |
+| 18 | À Mayotte, l'eau ne coule plus qu'un jour sur trois → Couper l'eau à tour de rôle, sans aide de plus | 0 | 0 |  |  |  | -1 |  | -1 |
+| 18 | À Mayotte, l'eau ne coule plus qu'un jour sur trois → Construire une grande usine de dessalement | -0.05 | 0 |  |  |  |  |  | 1 |
+| 18 | À Mayotte, l'eau ne coule plus qu'un jour sur trois → Réparer les fuites, payé par le prix de l'eau | 0.02 | 0 | -1 |  |  |  |  | 1 |
+| 18 | À Mayotte, l'eau ne coule plus qu'un jour sur trois → Faire payer plus cher les gros consommateurs d'eau | 0.01 | 0 | -1 |  |  | 1 |  |  |
 | 18 | L'aciérie du Nord annonce des centaines de suppressions de postes → Nationaliser temporairement les usines | -1 | 0 |  | 2 |  |  | 2 |  |
 | 18 | L'aciérie du Nord annonce des centaines de suppressions de postes → Demander à l'Europe des quotas sur l'acier importé | 0.05 | 0 | -1 | 1 |  |  |  |  |
 | 18 | L'aciérie du Nord annonce des centaines de suppressions de postes → Aider à investir dans un acier moins polluant | -0.4 | 0 |  | 1 | -2 |  |  |  |
 | 18 | L'aciérie du Nord annonce des centaines de suppressions de postes → Laisser l'entreprise décider et financer la reconversion | 0.2 | 0 |  | -2 |  | -1 |  |  |
 | 18 | L'aciérie du Nord annonce des centaines de suppressions de postes → Exiger le remboursement des aides publiques reçues | 0.05 | 0 |  | -1 |  |  |  |  |
-| 18 | Une loi agricole rouvre la porte à un pesticide interdit → Autoriser le pesticide sous conditions strictes | 0.03 | 0 |  | 1 | 1 |  |  |  |
-| 18 | Une loi agricole rouvre la porte à un pesticide interdit → Maintenir l'interdiction et aider à trouver d'autres solutions | -0.1 | 0 |  | -1 | -1 |  |  |  |
-| 18 | Une loi agricole rouvre la porte à un pesticide interdit → Interdire les produits importés traités avec ce pesticide | 0.01 | 0 | -1 |  |  |  | 1 |  |
-| 18 | Une loi agricole rouvre la porte à un pesticide interdit → Indemniser les producteurs sans changer la loi | -0.15 | 0 | 1 |  |  |  |  |  |
-| 19 | Le nouveau réacteur normand est enfin raccordé → Lancer six nouveaux réacteurs | -1.5 | 0 |  | 2 | -2 |  | 2 |  |
-| 19 | Le nouveau réacteur normand est enfin raccordé → Miser sur l'éolien en mer et le solaire | -0.6 | 0 |  | 1 | -2 |  |  |  |
-| 19 | Le nouveau réacteur normand est enfin raccordé → Vendre l'électricité plus cher aux gros consommateurs | 0.4 | 0 |  | -1 |  |  |  |  |
-| 19 | Le nouveau réacteur normand est enfin raccordé → Faire une pause et auditer le chantier avant tout | 0.3 | 0 |  | -1 |  |  | -1 |  |
-| 19 | Le voisin allemand contrôle toutes ses frontières → Rétablir aussi nos contrôles aux frontières | -0.15 | 0 |  | -1 |  |  | 1 |  |
-| 19 | Le voisin allemand contrôle toutes ses frontières → Négocier des patrouilles communes franco-allemandes | 0 | 0 |  |  |  | 1 |  |  |
-| 19 | Le voisin allemand contrôle toutes ses frontières → Pousser l'Europe à renforcer ses frontières extérieures | 0 | 0 |  |  |  |  | -1 |  |
-| 19 | Le voisin allemand contrôle toutes ses frontières → Accepter les contrôles et aider les frontaliers | -0.02 | 0 | 1 |  |  |  |  |  |
-| 19 | Le voisin allemand contrôle toutes ses frontières → Ne rien changer et laisser faire Berlin | 0.02 | 0 |  | -1 |  | -1 |  |  |
-| 19 | Les vieilles voitures bientôt interdites en ville → Maintenir l'interdiction avec une prime à l'achat | -0.2 | 0 |  |  | -1 |  |  | 1 |
-| 19 | Les vieilles voitures bientôt interdites en ville → Supprimer l'interdiction | 0.02 | 0 | 1 |  | 1 |  |  |  |
-| 19 | Les vieilles voitures bientôt interdites en ville → Reporter de deux ans et développer les transports en commun | -0.1 | 0 |  |  |  |  |  | 1 |
-| 19 | Les vieilles voitures bientôt interdites en ville → Remplacer l'interdiction par un péage urbain | 0.05 | 0 | -1 |  | -1 |  |  |  |
-| 20 | La justice arrête une autoroute à moitié construite → Finir l'autoroute après l'appel | -0.05 | 0 |  | 1 | 1 |  |  |  |
-| 20 | La justice arrête une autoroute à moitié construite → Abandonner et renaturer le tracé | -0.4 | 0 |  | -1 | -1 |  |  |  |
-| 20 | La justice arrête une autoroute à moitié construite → Transformer le tracé en route nationale sans péage | -0.1 | 0 | 1 |  |  |  |  |  |
-| 20 | La justice arrête une autoroute à moitié construite → Simplifier les recours contre les grands chantiers | 0.1 | 0 |  | 1 |  | -1 |  |  |
-| 20 | La justice arrête une autoroute à moitié construite → Faire payer le péage plus cher pour rembourser le retard | 0.05 | 0 | -1 |  |  |  |  |  |
-| 20 | Des fusillades liées au trafic de drogue dans une ville du Sud → Recruter des enquêteurs et des magistrats spécialisés | -0.3 | 0 |  |  |  | 1 |  | 1 |
-| 20 | Des fusillades liées au trafic de drogue dans une ville du Sud → Saisir et revendre les biens des trafiquants | 0.15 | 0 |  |  |  | 1 |  |  |
-| 20 | Des fusillades liées au trafic de drogue dans une ville du Sud → Miser sur la prévention et les soins aux consommateurs | -0.1 | 0 |  |  |  | 1 |  | 1 |
-| 20 | Des fusillades liées au trafic de drogue dans une ville du Sud → Légaliser et taxer le cannabis | 0.5 | 0 |  |  |  |  |  | -1 |
-| 20 | La dernière usine d'électroménager du pays ferme → Financer la reprise par les salariés en coopérative | -0.05 | 0 |  | 1 |  |  | 1 |  |
-| 20 | La dernière usine d'électroménager du pays ferme → Réserver une part des achats publics au « fabriqué en France » | -0.03 | 0 |  | 1 |  |  |  |  |
-| 20 | La dernière usine d'électroménager du pays ferme → Accompagner les salariés vers d'autres emplois | 0.02 | 0 |  | -1 |  |  |  |  |
-| 20 | La dernière usine d'électroménager du pays ferme → Baisser les impôts de production des usines | -0.2 | 0 |  | 1 |  |  |  |  |
-| 20 | La dernière usine d'électroménager du pays ferme → Laisser faire le marché | 0.05 | 0 |  | -2 |  | -1 |  |  |
-| 21 | Des canots surchargés quittent les plages du Nord → Plus de policiers et de drones sur les plages | -0.25 | 0 |  |  |  | 1 |  |  |
-| 21 | Des canots surchargés quittent les plages du Nord → Faire payer davantage Londres | 0.1 | 0 |  |  |  |  | 1 |  |
-| 21 | Des canots surchargés quittent les plages du Nord → Ouvrir des voies légales et des centres d'accueil | -0.15 | 0 |  |  |  | 1 |  |  |
-| 21 | Des canots surchargés quittent les plages du Nord → Frapper les réseaux de passeurs et leur argent | -0.05 | 0 |  |  |  |  |  | 1 |
-| 21 | Un allié menace d'annexer le Groenland → Front européen uni et ripostes prêtes | 0 | 0 |  | -1 |  |  | 2 |  |
-| 21 | Un allié menace d'annexer le Groenland → Envoyer des moyens militaires symboliques | -0.2 | 0 |  |  |  |  | 2 |  |
-| 21 | Un allié menace d'annexer le Groenland → Négocier discrètement pour éviter les taxes | 0.1 | 0 |  | 1 |  |  | -1 |  |
-| 21 | Un allié menace d'annexer le Groenland → Rester en retrait, ce n'est pas notre affaire | 0 | 0 |  |  |  | -1 |  |  |
-| 21 | Le timbre vert dépasse 1,50 € → Laisser La Poste fixer ses prix | 0 | 0 | -1 |  |  |  |  |  |
-| 21 | Le timbre vert dépasse 1,50 € → Compenser une partie par l'État | -0.1 | 0 | 1 |  |  |  |  | 1 |
-| 21 | Le timbre vert dépasse 1,50 € → Moins de tournées, prix gelé | 0.05 | 0 |  |  |  |  |  | -1 |
-| 21 | Le tunnel de l'A13 fermé neuf mois → Péage gratuit sur le détour pendant les travaux | -0.05 | 0 | 1 |  |  |  |  |  |
-| 21 | Le tunnel de l'A13 fermé neuf mois → Plus de trains et de bus pendant le chantier | -0.05 | 0 |  |  | -1 |  |  | 1 |
-| 21 | Le tunnel de l'A13 fermé neuf mois → Travailler jour et nuit pour finir plus tôt | -0.03 | 0 |  | 1 |  |  |  |  |
-| 22 | L'Europe signe l'accord avec l'Amérique du Sud → Saisir la justice européenne contre l'accord | 0 | 0 |  |  |  |  | 1 |  |
-| 22 | L'Europe signe l'accord avec l'Amérique du Sud → Clauses miroirs et contrôles aux frontières | -0.1 | 0 |  |  |  | 1 | 1 |  |
-| 22 | L'Europe signe l'accord avec l'Amérique du Sud → Aides directes aux éleveurs touchés | -0.5 | 0 |  | 1 |  | 1 |  |  |
-| 22 | L'Europe signe l'accord avec l'Amérique du Sud → Accepter l'accord et viser l'export | 0.1 | 0 |  | 1 |  | -2 |  |  |
-| 22 | Des soldats français pour garantir la paix en Ukraine ? → Engager des soldats français dans la force | -1 | 0 |  |  |  | -1 | 2 |  |
-| 22 | Des soldats français pour garantir la paix en Ukraine ? → Aider seulement en armes et en formation | -0.6 | 0 |  |  |  |  | 1 |  |
-| 22 | Des soldats français pour garantir la paix en Ukraine ? → Surveillance du cessez-le-feu uniquement | -0.2 | 0 |  |  |  |  | 1 |  |
-| 22 | Des soldats français pour garantir la paix en Ukraine ? → Ne pas s'engager, priorité au budget | 0.05 | 0 |  |  |  |  | -2 |  |
-| 22 | Le paquet de café a pris un quart en plus → Ne rien faire, c'est le marché mondial | 0 | 0 | -1 |  |  |  |  |  |
-| 22 | Le paquet de café a pris un quart en plus → Publier les marges des distributeurs | 0 | 0 |  |  |  | 1 |  |  |
-| 22 | Le paquet de café a pris un quart en plus → Baisser la TVA sur le café et le cacao | -0.3 | 0 | 1 |  |  |  |  |  |
-| 22 | Des caméras qui repèrent seules les situations à risque → Rendre le dispositif définitif | -0.05 | 0 |  |  |  |  |  | 1 |
-| 22 | Des caméras qui repèrent seules les situations à risque → Prolonger l'essai avec une évaluation indépendante | -0.03 | 0 |  |  |  | 1 |  |  |
-| 22 | Des caméras qui repèrent seules les situations à risque → Arrêter l'expérimentation | 0 | 0 |  |  |  |  |  |  |
-| 23 | Payer sans passer par des entreprises américaines → Rendre Wero obligatoire chez les commerçants | 0.1 | 0 |  | -1 |  |  | 3 |  |
-| 23 | Payer sans passer par des entreprises américaines → Payer impôts et aides via la solution européenne | -0.05 | 0 |  |  |  |  | 2 |  |
-| 23 | Payer sans passer par des entreprises américaines → Soutenir l'euro numérique de la BCE | 0 | 0 |  |  |  | -1 | 2 |  |
-| 23 | Payer sans passer par des entreprises américaines → Laisser le marché choisir | 0 | 0 |  |  |  |  | -1 |  |
-| 23 | Une boulangère refuse la carte sous 5 € → Plafonner les frais bancaires des petits paiements | 0.05 | 0 | 1 |  |  |  |  |  |
-| 23 | Une boulangère refuse la carte sous 5 € → Laisser chaque commerçant fixer son minimum | 0 | 0 |  |  |  | -1 |  |  |
-| 23 | Une boulangère refuse la carte sous 5 € → Aider les commerces à passer au paiement européen | -0.05 | 0 |  |  |  |  | 1 |  |
-| 23 | Les téléphones rangés dans des casiers au collège → Généraliser avec des casiers payés par l'État | -0.05 | 0 |  |  |  | 1 |  | 1 |
-| 23 | Les téléphones rangés dans des casiers au collège → Laisser chaque collège décider | 0 | 0 |  |  |  | -1 |  |  |
-| 23 | Les téléphones rangés dans des casiers au collège → Interdire aussi le portable au lycée | -0.05 | 0 |  |  |  | -1 |  | 1 |
-| 23 | Des mois d'attente pour passer le permis → Recruter beaucoup plus d'inspecteurs | -0.06 | 0 |  | 1 |  |  |  | 1 |
-| 23 | Des mois d'attente pour passer le permis → Laisser des examinateurs privés agréés | 0 | 0 |  |  |  | -1 |  | 1 |
-| 23 | Des mois d'attente pour passer le permis → Rappeler des inspecteurs retraités | -0.02 | 0 |  |  |  |  |  | 1 |
-| 24 | Faut-il faire payer plus cher l'université ? → Hausse forte avec exonération des boursiers | 1.5 | 0 |  |  |  | -2 |  | 2 |
-| 24 | Faut-il faire payer plus cher l'université ? → Hausse modérée et progressive | 0.5 | 0 |  |  |  | -1 |  | 1 |
-| 24 | Faut-il faire payer plus cher l'université ? → Garder des frais bas, l'État paie | -1.5 | 0 |  |  |  | 1 |  | 2 |
-| 24 | Faut-il faire payer plus cher l'université ? → Faire payer surtout les étudiants étrangers | 0.4 | 0 |  |  |  | -1 |  | 1 |
-| 24 | Mayotte : faut-il aller plus loin sur le droit du sol ? → Supprimer le droit du sol à Mayotte | 0.05 | 0 |  |  |  | -2 | 1 |  |
-| 24 | Mayotte : faut-il aller plus loin sur le droit du sol ? → Plus de moyens en mer contre les traversées | -0.2 | 0 |  |  |  |  | 1 |  |
-| 24 | Mayotte : faut-il aller plus loin sur le droit du sol ? → Investir dans les écoles, l'eau et les hôpitaux | -0.6 | 0 |  |  |  | 1 |  | 2 |
-| 24 | Mayotte : faut-il aller plus loin sur le droit du sol ? → Coopérer avec les Comores contre les départs | -0.1 | 0 |  |  |  | 1 |  |  |
-| 24 | Sans affectation, une lycéenne attend une place → Garder le pouvoir du recteur | 0 | 0 |  |  |  | 1 |  |  |
-| 24 | Sans affectation, une lycéenne attend une place → Laisser les universités choisir | 0 | 0 |  |  |  | -1 |  | 1 |
-| 24 | Sans affectation, une lycéenne attend une place → Créer des places en plus dans les filières demandées | -0.15 | 0 |  |  |  | 1 |  | 1 |
-| 24 | Plus d'heures pour les élus du personnel ? → Augmenter les heures de délégation | 0 | 0 |  | -1 |  | 1 |  |  |
-| 24 | Plus d'heures pour les élus du personnel ? → Ne rien changer | 0 | 0 |  |  |  | -1 |  |  |
-| 24 | Plus d'heures pour les élus du personnel ? → Laisser chaque entreprise négocier | 0 | 0 |  | 1 |  |  |  |  |
-| 25 | De retour de vacances, sa maison est occupée → Expulsion sous 48 heures dans tous les cas | -0.05 | 0 |  |  |  | -1 |  |  |
-| 25 | De retour de vacances, sa maison est occupée → Indemniser vite les propriétaires lésés | -0.05 | 0 |  |  |  | 1 |  |  |
-| 25 | De retour de vacances, sa maison est occupée → Expulser et proposer un hébergement | -0.15 | 0 |  |  |  | 2 |  |  |
-| 25 | De retour de vacances, sa maison est occupée → Taxer les logements vides pour qu'ils soient loués | 0.15 | 0 | 1 |  |  |  |  |  |
-| 25 | Les États-Unis capturent le président du Venezuela → Condamner l'intervention au nom du droit | 0 | 0 |  | -1 |  |  | 1 |  |
-| 25 | Les États-Unis capturent le président du Venezuela → Saluer la fin d'un régime autoritaire | 0 | 0 |  |  |  |  | -1 |  |
-| 25 | Les États-Unis capturent le président du Venezuela → Appeler à des élections sous contrôle de l'ONU | 0.02 | 0 |  |  |  | 1 |  |  |
-| 25 | Les États-Unis capturent le président du Venezuela → Rapatrier les Français et aider les réfugiés | -0.1 | 0 |  |  |  | 1 |  |  |
-| 25 | Payer ses pâtes avec un titre-restaurant → Garder les courses au supermarché pour de bon | 0 | 0 | 1 |  |  |  |  |  |
-| 25 | Payer ses pâtes avec un titre-restaurant → Revenir aux seuls repas au restaurant | 0 | 0 | -1 | 1 |  |  |  |  |
-| 25 | Payer ses pâtes avec un titre-restaurant → Deux plafonds : un pour les courses, un pour le resto | 0 | 0 |  |  |  | 1 |  |  |
-| 25 | Ouvrir les boulangeries les jours fériés et le dimanche ? → Autoriser, volontariat et paiement double | 0.03 | 0 | 1 |  |  | -1 |  |  |
-| 25 | Ouvrir les boulangeries les jours fériés et le dimanche ? → Laisser chaque branche négocier | 0 | 0 |  |  |  | 1 |  |  |
-| 25 | Ouvrir les boulangeries les jours fériés et le dimanche ? → Garder le repos commun | 0 | 0 | -1 |  |  | 1 |  |  |
-| 26 | Les vins de Bordeaux taxés à 15 % aux États-Unis → Riposte européenne sur des produits américains | 0.3 | 0 | -1 |  |  |  | 1 |  |
-| 26 | Les vins de Bordeaux taxés à 15 % aux États-Unis → Aides et prêts aux viticulteurs touchés | -0.4 | 0 |  | 1 |  | 1 |  |  |
-| 26 | Les vins de Bordeaux taxés à 15 % aux États-Unis → Conquérir l'Asie et l'Amérique du Sud | -0.05 | 0 |  | 1 |  |  | 1 |  |
-| 26 | Les vins de Bordeaux taxés à 15 % aux États-Unis → Négocier une exemption pour le vin | 0 | 0 |  | 1 |  |  | -1 |  |
-| 26 | La canicule a tué des centaines de milliers de poules → Aider à climatiser et ventiler les poulaillers | -0.05 | 0 |  | 1 | 1 |  |  |  |
-| 26 | La canicule a tué des centaines de milliers de poules → Importer des œufs pour faire baisser les prix | 0 | 0 | 1 |  |  |  | -1 |  |
-| 26 | La canicule a tué des centaines de milliers de poules → Laisser le marché s'ajuster | 0 | 0 | -1 |  |  |  |  |  |
-| 26 | Plus de cigarette sur la plage → Contrôler et verbaliser vraiment | 0.05 | 0 |  |  |  | 1 |  |  |
-| 26 | Plus de cigarette sur la plage → Miser sur la prévention sans amende | -0.05 | 0 |  |  |  |  |  | 1 |
-| 26 | Plus de cigarette sur la plage → Créer des coins fumeurs sur les plages | -0.05 | 0 |  |  |  | 1 |  |  |
-| 26 | Cours le matin, sport et ateliers l'après-midi ? → Généraliser avec des activités gratuites | -0.6 | 0 |  | 1 |  | 2 |  | 1 |
-| 26 | Cours le matin, sport et ateliers l'après-midi ? → Tester dans quelques villes volontaires | -0.05 | 0 |  |  |  |  |  | 1 |
-| 26 | Cours le matin, sport et ateliers l'après-midi ? → Garder les horaires actuels | 0 | 0 |  |  |  | -1 |  |  |
+| 18 | Ouvrir une mine de lithium en France ? → Accélérer la mine | -0.05 | 0 |  | 1 | -1 |  | 2 |  |
+| 18 | Ouvrir une mine de lithium en France ? → Conditionner à des garanties sur l'eau | -0.05 | 0 |  |  |  | 1 | 1 |  |
+| 18 | Ouvrir une mine de lithium en France ? → Renoncer et importer | 0 | 0 |  |  |  |  | -2 |  |
+| 19 | Les États-Unis capturent le président du Venezuela → Condamner l'intervention au nom du droit | 0 | 0 |  | -1 |  |  | 1 |  |
+| 19 | Les États-Unis capturent le président du Venezuela → Saluer la fin d'un régime autoritaire | 0 | 0 |  |  |  |  | -1 |  |
+| 19 | Les États-Unis capturent le président du Venezuela → Appeler à des élections sous contrôle de l'ONU | 0.02 | 0 |  |  |  | 1 |  |  |
+| 19 | Les États-Unis capturent le président du Venezuela → Rapatrier les Français et aider les réfugiés | -0.1 | 0 |  |  |  | 1 |  |  |
+| 19 | Londres paie, Paris surveille : à quel prix ? → Accepter l'accord et ses objectifs | 0.2 | 0 |  |  |  | 1 | -1 |  |
+| 19 | Londres paie, Paris surveille : à quel prix ? → Exiger plus d'argent sans condition | 0.3 | 0 |  |  |  |  | 1 |  |
+| 19 | Londres paie, Paris surveille : à quel prix ? → Ne plus faire la police pour Londres | -0.1 | 0 |  |  |  | -1 | 1 |  |
+| 19 | Londres paie, Paris surveille : à quel prix ? → Une réponse européenne commune | 0 | 0 |  |  |  | 1 |  |  |
+| 19 | Record d'animaux abandonnés pendant l'été → Stériliser les chats obligatoirement | -0.05 | 0 |  |  |  | 1 |  |  |
+| 19 | Record d'animaux abandonnés pendant l'été → Aider les refuges | -0.1 | 0 |  |  |  | 1 |  | 1 |
+| 19 | Record d'animaux abandonnés pendant l'été → Punir plus fort l'abandon | 0.02 | 0 |  |  |  |  |  |  |
+| 19 | La dernière usine d'électroménager du pays ferme → Financer la reprise par les salariés en coopérative | -0.05 | 0 |  | 1 |  |  | 1 |  |
+| 19 | La dernière usine d'électroménager du pays ferme → Réserver une part des achats publics au « fabriqué en France » | -0.03 | 0 |  | 1 |  |  |  |  |
+| 19 | La dernière usine d'électroménager du pays ferme → Accompagner les salariés vers d'autres emplois | 0.02 | 0 |  | -1 |  |  |  |  |
+| 19 | La dernière usine d'électroménager du pays ferme → Baisser les impôts de production des usines | -0.2 | 0 |  | 1 |  |  |  |  |
+| 19 | La dernière usine d'électroménager du pays ferme → Laisser faire le marché | 0.05 | 0 |  | -2 |  | -1 |  |  |
+| 20 | Une ville de l'Ouest les pieds dans l'eau → Laisser des champs en amont servir de zones d'inondation | -0.1 | 0 |  | -1 |  | 1 |  |  |
+| 20 | Une ville de l'Ouest les pieds dans l'eau → Construire des digues et des bassins de retenue | -0.3 | 0 |  | 1 |  |  |  | 1 |
+| 20 | Une ville de l'Ouest les pieds dans l'eau → Interdire de construire en zone inondable | 0.02 | 0 | -1 |  |  |  |  |  |
+| 20 | Une ville de l'Ouest les pieds dans l'eau → Laisser les assureurs indemniser seuls | 0.05 | 0 | -1 |  |  | -1 |  |  |
+| 20 | Une ville de l'Ouest les pieds dans l'eau → Relever la taxe locale contre les inondations | 0.05 | 0 | -1 |  |  |  |  | 1 |
+| 20 | La Guyane bloquée par un grand mouvement social → Signer un grand plan d'urgence | -0.3 | 0 |  |  |  | 2 |  | 1 |
+| 20 | La Guyane bloquée par un grand mouvement social → Envoyer des renforts de police et de gendarmerie | -0.05 | 0 |  |  |  | -1 |  |  |
+| 20 | La Guyane bloquée par un grand mouvement social → Refuser de céder sous la pression des barrages | 0 | 0 |  | -1 |  | -2 |  |  |
+| 20 | La Guyane bloquée par un grand mouvement social → Donner plus d'autonomie à la collectivité de Guyane | 0.05 | 0 |  |  |  | 1 |  |  |
+| 20 | La Guyane bloquée par un grand mouvement social → Conditionner l'aide à une meilleure gestion locale | 0.05 | 0 |  |  |  | -1 |  |  |
+| 20 | Les vélos en libre-service ne marchent plus → Reprendre le service en régie publique | -0.01 | 0 |  |  |  |  |  | 1 |
+| 20 | Les vélos en libre-service ne marchent plus → Infliger des pénalités et laisser l'opérateur réparer | 0.01 | 0 |  |  |  |  |  | -1 |
+| 20 | Les vélos en libre-service ne marchent plus → Ouvrir la ville aux vélos privés sans station | 0.01 | 0 |  |  |  | -1 |  | 1 |
+| 20 | Les vélos en libre-service ne marchent plus → Rembourser les abonnés aux frais de l'opérateur | 0 | 0 |  |  |  | 1 |  |  |
+| 21 | Des soldats français pour garantir la paix en Ukraine ? → Engager des soldats français dans la force | -1 | 0 |  |  |  | -1 | 2 |  |
+| 21 | Des soldats français pour garantir la paix en Ukraine ? → Aider seulement en armes et en formation | -0.6 | 0 |  |  |  |  | 1 |  |
+| 21 | Des soldats français pour garantir la paix en Ukraine ? → Surveillance du cessez-le-feu uniquement | -0.2 | 0 |  |  |  |  | 1 |  |
+| 21 | Des soldats français pour garantir la paix en Ukraine ? → Ne pas s'engager, priorité au budget | 0.05 | 0 |  |  |  |  | -2 |  |
+| 21 | Lycéens et étudiants dans la rue contre la vie chère → Plan d'urgence pour l'école | -1.2 | 0 |  |  |  | 2 |  | 2 |
+| 21 | Lycéens et étudiants dans la rue contre la vie chère → Négocier mesure par mesure | -0.2 | 0 |  |  |  | 1 |  |  |
+| 21 | Lycéens et étudiants dans la rue contre la vie chère → Faire respecter l'ordre dans les lycées | 0.01 | 0 |  |  |  | -2 |  |  |
+| 21 | Le gaz hilarant au volant → Créer un délit de conduite sous gaz | 0.01 | 0 |  |  |  |  |  | 1 |
+| 21 | Le gaz hilarant au volant → Interdire toute vente aux particuliers | 0 | 0 |  |  |  | 1 |  |  |
+| 21 | Le gaz hilarant au volant → Prévention dans les lycées | -0.05 | 0 |  |  |  |  |  | 1 |
+| 22 | Une catastrophe nucléaire au Japon relance le débat → Renforcer la sûreté de tous les réacteurs | 0 | -0.5 |  |  |  | 1 | 1 |  |
+| 22 | Une catastrophe nucléaire au Japon relance le débat → Fermer tout de suite les plus vieux réacteurs | -0.1 | -0.4 |  | -1 |  |  | -2 |  |
+| 22 | Une catastrophe nucléaire au Japon relance le débat → Réduire à la moitié la part du nucléaire | -1 | 0 |  | 1 | 1 |  | -2 |  |
+| 22 | Une catastrophe nucléaire au Japon relance le débat → Prolonger les réacteurs actuels après travaux | 0.3 | 0 |  |  |  | -1 | 2 |  |
+| 22 | Une catastrophe nucléaire au Japon relance le débat → Construire de nouveaux réacteurs nucléaires | -1 | 0 |  | 1 | -1 | -1 | 3 |  |
+| 22 | Les gilets jaunes occupent les ronds-points → Annuler la hausse des taxes sur les carburants | -4 | 0 | 2 |  | 2 | 2 |  |  |
+| 22 | Les gilets jaunes occupent les ronds-points → Annoncer des mesures de pouvoir d'achat | -10 | 0 | 3 |  |  | 1 |  |  |
+| 22 | Les gilets jaunes occupent les ronds-points → Garder la taxe et la reverser en chèque aux ménages modestes | 0 | 0 | 1 |  | -2 | -1 |  |  |
+| 22 | Les gilets jaunes occupent les ronds-points → Maintenir la hausse sans compensation | 4 | 0 | -2 |  | -2 | -4 |  |  |
+| 22 | Les gilets jaunes occupent les ronds-points → Organiser un grand débat national | -0.01 | 0 |  |  |  | 1 |  |  |
+| 22 | Les bijoux de la Couronne volés au Louvre → Plan d'urgence pour la sécurité des musées | 0 | -0.1 |  |  |  |  |  | 1 |
+| 22 | Les bijoux de la Couronne volés au Louvre → Billet plus cher pour les visiteurs hors d'Europe | 0.03 | 0 |  |  |  | -1 |  |  |
+| 22 | Les bijoux de la Couronne volés au Louvre → Laisser chaque musée gérer sa sécurité | 0 | 0 |  |  |  |  |  | -1 |
+| 22 | Les bijoux de la Couronne volés au Louvre → Confier la surveillance à des sociétés privées | 0.01 | 0 |  | 1 |  |  |  | -1 |
+| 22 | Les bijoux de la Couronne volés au Louvre → Recruter des gardiens dans tous les musées publics | -0.05 | 0 |  | 1 |  |  |  | 1 |
+| 23 | Affrontements autour d'une réserve d'eau agricole → Continuer les réserves, avec des règles de partage | -0.03 | 0 |  | 1 |  | -1 |  |  |
+| 23 | Affrontements autour d'une réserve d'eau agricole → Suspendre les chantiers et lancer un débat public | 0.02 | 0 |  | -1 |  | 1 |  |  |
+| 23 | Affrontements autour d'une réserve d'eau agricole → Aider les fermes à passer à des cultures moins gourmandes en eau | -0.05 | 0 |  | -1 |  | 1 |  |  |
+| 23 | Affrontements autour d'une réserve d'eau agricole → Faire payer l'eau d'irrigation à son vrai prix | 0.04 | 0 | -1 | -1 |  |  |  |  |
+| 23 | Affrontements autour d'une réserve d'eau agricole → Interdire la manifestation et dissoudre les groupes violents | -0.01 | 0 |  |  |  | -1 |  |  |
+| 23 | Le voisin allemand contrôle toutes ses frontières → Rétablir aussi nos contrôles aux frontières | -0.15 | 0 |  | -1 |  |  | 1 |  |
+| 23 | Le voisin allemand contrôle toutes ses frontières → Négocier des patrouilles communes franco-allemandes | 0 | 0 |  |  |  | 1 |  |  |
+| 23 | Le voisin allemand contrôle toutes ses frontières → Pousser l'Europe à renforcer ses frontières extérieures | 0 | 0 |  |  |  |  | -1 |  |
+| 23 | Le voisin allemand contrôle toutes ses frontières → Accepter les contrôles et aider les frontaliers | -0.02 | 0 | 1 |  |  |  |  |  |
+| 23 | Le voisin allemand contrôle toutes ses frontières → Ne rien changer et laisser faire Berlin | 0.02 | 0 |  | -1 |  | -1 |  |  |
+| 23 | Plus d'heures pour les élus du personnel ? → Augmenter les heures de délégation | 0 | 0 |  | -1 |  | 1 |  |  |
+| 23 | Plus d'heures pour les élus du personnel ? → Ne rien changer | 0 | 0 |  |  |  | -1 |  |  |
+| 23 | Plus d'heures pour les élus du personnel ? → Laisser chaque entreprise négocier | 0 | 0 |  | 1 |  |  |  |  |
+| 23 | Combien dépenser pour réarmer le pays ? → Aller jusqu'à 50 milliards | -2.8 | 0 |  | 1 |  |  | 2 | -1 |
+| 23 | Combien dépenser pour réarmer le pays ? → S'en tenir aux 36 milliards votés | 0 | 0 |  |  |  |  | 1 |  |
+| 23 | Combien dépenser pour réarmer le pays ? → Acheter européen en commun | 0.5 | 0 |  | 1 |  |  |  |  |
+| 23 | Combien dépenser pour réarmer le pays ? → Ralentir la hausse | 2 | 0 |  |  |  |  | -1 | 1 |
+| 24 | De retour de vacances, sa maison est occupée → Expulsion sous 48 heures dans tous les cas | -0.05 | 0 |  |  |  | -1 |  |  |
+| 24 | De retour de vacances, sa maison est occupée → Indemniser vite les propriétaires lésés | -0.05 | 0 |  |  |  | 1 |  |  |
+| 24 | De retour de vacances, sa maison est occupée → Expulser et proposer un hébergement | -0.15 | 0 |  |  |  | 2 |  |  |
+| 24 | De retour de vacances, sa maison est occupée → Taxer les logements vides pour qu'ils soient loués | 0.15 | 0 | 1 |  |  |  |  |  |
+| 24 | La France a reconnu l'État de Palestine : et maintenant ? → Ouvrir une ambassade après libération des otages | 0 | 0 |  |  |  | 1 |  |  |
+| 24 | La France a reconnu l'État de Palestine : et maintenant ? → Financer la reconstruction de Gaza | -0.2 | 0 |  |  |  | 1 |  |  |
+| 24 | La France a reconnu l'État de Palestine : et maintenant ? → Sanctions européennes contre la colonisation | 0 | 0 |  |  |  | -1 |  |  |
+| 24 | La France a reconnu l'État de Palestine : et maintenant ? → Geler la démarche et apaiser Israël | 0.02 | 0 |  |  |  | -1 |  |  |
+| 24 | Le tunnel de l'A13 fermé neuf mois → Péage gratuit sur le détour pendant les travaux | -0.05 | 0 | 1 |  |  |  |  |  |
+| 24 | Le tunnel de l'A13 fermé neuf mois → Plus de trains et de bus pendant le chantier | -0.05 | 0 |  |  | -1 |  |  | 1 |
+| 24 | Le tunnel de l'A13 fermé neuf mois → Travailler jour et nuit pour finir plus tôt | -0.03 | 0 |  | 1 |  |  |  |  |
+| 25 | Des « polluants éternels » dans les œufs du sud de Lyon → Interdire tout de suite les rejets de l'usine | 0 | 0 |  | -1 |  | 1 |  | 2 |
+| 25 | Des « polluants éternels » dans les œufs du sud de Lyon → Faire payer l'industriel pour chaque gramme rejeté | 0.02 | 0 |  |  |  |  |  | 1 |
+| 25 | Des « polluants éternels » dans les œufs du sud de Lyon → Financer des filtres dans les usines d'eau potable | 0 | -0.2 |  |  |  | 1 |  | 2 |
+| 25 | Des « polluants éternels » dans les œufs du sud de Lyon → Informer et suivre la santé des habitants, sans contrainte | 0 | 0 |  |  |  | -1 |  | -1 |
+| 25 | Des « polluants éternels » dans les œufs du sud de Lyon → Interdire ces produits dans les objets du quotidien | 0 | 0 |  | -1 |  |  |  | 1 |
+| 25 | Une boulangère refuse la carte sous 5 € → Plafonner les frais bancaires des petits paiements | 0.05 | 0 | 1 |  |  |  |  |  |
+| 25 | Une boulangère refuse la carte sous 5 € → Laisser chaque commerçant fixer son minimum | 0 | 0 |  |  |  | -1 |  |  |
+| 25 | Une boulangère refuse la carte sous 5 € → Aider les commerces à passer au paiement européen | -0.05 | 0 |  |  |  |  | 1 |  |
+| 25 | Nos chercheurs et ingénieurs partent à l'étranger → Augmenter les salaires des chercheurs | -0.8 | 0 |  | 1 |  |  | 1 |  |
+| 25 | Nos chercheurs et ingénieurs partent à l'étranger → Attirer les chercheurs étrangers | -0.3 | 0 |  |  |  |  | 1 |  |
+| 25 | Nos chercheurs et ingénieurs partent à l'étranger → Avantage fiscal pour ceux qui reviennent | -0.1 | 0 |  |  |  | -1 | 1 |  |
+| 25 | Des villages ravitaillés en eau par camion → Relier les villages aux réseaux des villes | -0.05 | 0 |  |  |  |  |  | 1 |
+| 25 | Des villages ravitaillés en eau par camion → Interdire tous les usages non essentiels | 0.01 | 0 |  | -1 |  |  |  |  |
+| 25 | Des villages ravitaillés en eau par camion → Aider les éleveurs à acheter du fourrage | 0 | -0.03 |  | 1 |  |  |  |  |
+| 25 | Des villages ravitaillés en eau par camion → Faire payer l'eau plus cher au-delà d'un seuil | 0.02 | 0 | -1 |  |  |  |  |  |
+| 26 | Une usine chimique brûle en pleine ville → Doubler le nombre d'inspecteurs des usines dangereuses | -0.05 | 0 |  |  |  |  |  | 1 |
+| 26 | Une usine chimique brûle en pleine ville → Indemniser vite les agriculteurs et les commerçants | 0 | -0.05 |  |  |  | 1 |  |  |
+| 26 | Une usine chimique brûle en pleine ville → Éloigner les usines dangereuses des villes | -0.2 | 0 |  | -1 |  | 1 |  |  |
+| 26 | Une usine chimique brûle en pleine ville → Augmenter les amendes et la taxe des sites à risque | 0.04 | 0 |  | -1 |  |  |  | 1 |
+| 26 | Une usine chimique brûle en pleine ville → Laisser l'industriel payer seul les dégâts | 0.02 | 0 |  | 1 |  | -1 |  |  |
+| 26 | Le nouveau réacteur normand est enfin raccordé → Lancer six nouveaux réacteurs | -1.5 | 0 |  | 2 | -2 |  | 2 |  |
+| 26 | Le nouveau réacteur normand est enfin raccordé → Miser sur l'éolien en mer et le solaire | -0.6 | 0 |  | 1 | -2 |  |  |  |
+| 26 | Le nouveau réacteur normand est enfin raccordé → Vendre l'électricité plus cher aux gros consommateurs | 0.4 | 0 |  | -1 |  |  |  |  |
+| 26 | Le nouveau réacteur normand est enfin raccordé → Faire une pause et auditer le chantier avant tout | 0.3 | 0 |  | -1 |  |  | -1 |  |
+| 26 | Les téléphones rangés dans des casiers au collège → Généraliser avec des casiers payés par l'État | -0.05 | 0 |  |  |  | 1 |  | 1 |
+| 26 | Les téléphones rangés dans des casiers au collège → Laisser chaque collège décider | 0 | 0 |  |  |  | -1 |  |  |
+| 26 | Les téléphones rangés dans des casiers au collège → Interdire aussi le portable au lycée | -0.05 | 0 |  |  |  | -1 |  | 1 |
+| 27 | Des canots surchargés quittent les plages du Nord → Plus de policiers et de drones sur les plages | -0.25 | 0 |  |  |  | 1 |  |  |
+| 27 | Des canots surchargés quittent les plages du Nord → Faire payer davantage Londres | 0.1 | 0 |  |  |  |  | 1 |  |
+| 27 | Des canots surchargés quittent les plages du Nord → Ouvrir des voies légales et des centres d'accueil | -0.15 | 0 |  |  |  | 1 |  |  |
+| 27 | Des canots surchargés quittent les plages du Nord → Frapper les réseaux de passeurs et leur argent | -0.05 | 0 |  |  |  |  |  | 1 |
 | 27 | Des drones inconnus survolent une base militaire → Financer un mur anti-drones européen | -0.6 | 0 |  |  |  |  | 2 |  |
 | 27 | Des drones inconnus survolent une base militaire → Équiper d'abord nos propres sites sensibles | -0.4 | 0 |  | 1 |  |  | 2 |  |
 | 27 | Des drones inconnus survolent une base militaire → Autoriser à abattre tout drone suspect | -0.1 | 0 |  |  |  | -1 | 1 |  |
 | 27 | Des drones inconnus survolent une base militaire → Enquêter avant d'accuser et de dépenser | 0.05 | 0 |  |  |  |  | -1 |  |
-| 27 | La France a reconnu l'État de Palestine : et maintenant ? → Ouvrir une ambassade après libération des otages | 0 | 0 |  |  |  | 1 |  |  |
-| 27 | La France a reconnu l'État de Palestine : et maintenant ? → Financer la reconstruction de Gaza | -0.2 | 0 |  |  |  | 1 |  |  |
-| 27 | La France a reconnu l'État de Palestine : et maintenant ? → Sanctions européennes contre la colonisation | 0 | 0 |  |  |  | -1 |  |  |
-| 27 | La France a reconnu l'État de Palestine : et maintenant ? → Geler la démarche et apaiser Israël | 0.02 | 0 |  |  |  | -1 |  |  |
-| 27 | Un drone de loisir bloque un aéroport régional → Amendes lourdes et immatriculation des drones | 0.02 | 0 |  |  |  |  |  | 1 |
-| 27 | Un drone de loisir bloque un aéroport régional → Brouilleurs autour des aéroports | -0.05 | 0 |  |  |  |  | 1 | 1 |
-| 27 | Un drone de loisir bloque un aéroport régional → Former les pilotes plutôt que punir | 0 | 0 |  |  |  | 1 |  |  |
-| 28 | Une loi contre la mode à tout petit prix → Malus maximal sur la mode jetable | 0.5 | 0 | -1 | 1 | -1 |  |  |  |
-| 28 | Une loi contre la mode à tout petit prix → Malus progressif jusqu'à la fin de la décennie | 0.2 | 0 |  |  | -1 |  |  |  |
-| 28 | Une loi contre la mode à tout petit prix → Aider le textile français à produire moins cher | -0.2 | 0 |  | 1 |  |  | 1 |  |
-| 28 | Une loi contre la mode à tout petit prix → Ne pas pénaliser, informer les acheteurs | 0 | 0 | 1 |  |  |  |  |  |
-| 28 | Une taxe de quelques euros sur les petits colis → Taxer chaque petit colis venu de loin | 0.4 | 0 | -1 | 1 |  |  |  |  |
-| 28 | Une taxe de quelques euros sur les petits colis → Plus de contrôles douaniers à la place | -0.05 | 0 |  |  |  |  |  | 1 |
-| 28 | Une taxe de quelques euros sur les petits colis → Ne rien changer | 0 | 0 | 1 | -1 |  |  |  |  |
-| 28 | Payer ses impôts avec une appli européenne → Proposer l'option, sans obligation | -0.02 | 0 |  |  |  |  | 1 |  |
-| 28 | Payer ses impôts avec une appli européenne → En faire le moyen de paiement par défaut | -0.02 | 0 |  |  |  | -1 | 2 |  |
-| 28 | Payer ses impôts avec une appli européenne → Attendre que le système ait fait ses preuves | 0 | 0 |  |  |  |  | -1 |  |
-| 29 | Londres paie, Paris surveille : à quel prix ? → Accepter l'accord et ses objectifs | 0.2 | 0 |  |  |  | 1 | -1 |  |
-| 29 | Londres paie, Paris surveille : à quel prix ? → Exiger plus d'argent sans condition | 0.3 | 0 |  |  |  |  | 1 |  |
-| 29 | Londres paie, Paris surveille : à quel prix ? → Ne plus faire la police pour Londres | -0.1 | 0 |  |  |  | -1 | 1 |  |
-| 29 | Londres paie, Paris surveille : à quel prix ? → Une réponse européenne commune | 0 | 0 |  |  |  | 1 |  |  |
-| 29 | L'armée française a quitté l'Afrique de l'Ouest → Partenariats d'égal à égal, sans bases | 0.3 | 0 |  |  |  | 1 | -1 |  |
-| 29 | L'armée française a quitté l'Afrique de l'Ouest → Recentrer l'armée sur l'Europe | 0.2 | 0 |  |  |  |  | 1 |  |
-| 29 | L'armée française a quitté l'Afrique de l'Ouest → Garder une capacité d'intervention rapide | -0.2 | 0 |  |  |  |  | 1 |  |
-| 29 | L'armée française a quitté l'Afrique de l'Ouest → Augmenter l'aide au développement | -0.3 | 0 |  |  |  | 1 |  |  |
-| 29 | Rupture de stock à la pharmacie du village → Relocaliser la production en France | -0.15 | 0 |  | 1 |  |  | 2 |  |
-| 29 | Rupture de stock à la pharmacie du village → Obliger les labos à garder des stocks | 0 | 0 | -1 |  |  |  |  | 1 |
-| 29 | Rupture de stock à la pharmacie du village → Laisser les pharmaciens préparer des substituts | 0 | 0 |  |  |  |  |  | 1 |
-| 30 | Un « État de Nouvelle-Calédonie » dans la République ? → Organiser vite le vote sur l'accord | -0.05 | 0 |  |  |  | -1 | 1 |  |
-| 30 | Un « État de Nouvelle-Calédonie » dans la République ? → Rouvrir la négociation avec tous | 0.02 | 0 |  |  |  | 1 |  |  |
-| 30 | Un « État de Nouvelle-Calédonie » dans la République ? → Plan de relance économique massif | -0.4 | 0 |  | 1 |  | 1 |  |  |
-| 30 | Un « État de Nouvelle-Calédonie » dans la République ? → Renforcer l'ordre public d'abord | -0.15 | 0 |  |  |  | -1 |  | 1 |
-| 30 | Une famille expulsée pour loyers impayés → Fonds pour payer les impayés avant l'expulsion | -0.1 | 0 |  |  |  | 2 |  |  |
-| 30 | Une famille expulsée pour loyers impayés → Garder les règles actuelles | 0.02 | 0 |  |  |  | -1 |  |  |
-| 30 | Une famille expulsée pour loyers impayés → Relogement obligatoire avant toute expulsion | -0.15 | 0 |  |  |  | 1 |  | 1 |
-| 30 | Les sodas plus chers à cause de la taxe sucre → Augmenter encore la taxe | 0.2 | 0 | -1 |  |  |  |  | 1 |
-| 30 | Les sodas plus chers à cause de la taxe sucre → Garder la taxe telle quelle | 0 | 0 |  |  |  |  |  |  |
-| 30 | Les sodas plus chers à cause de la taxe sucre → Supprimer la taxe, miser sur l'éducation | -0.3 | 0 | 1 |  |  |  |  |  |
-| 30 | Des feux de forêt allumés volontairement → Peines beaucoup plus lourdes pour les incendiaires | 0 | 0 |  |  |  | 1 |  |  |
-| 30 | Des feux de forêt allumés volontairement → Drones et guetteurs dans les massifs | -0.1 | 0 |  |  | -1 |  |  | 1 |
-| 30 | Des feux de forêt allumés volontairement → Débroussaillage et prévention auprès des jeunes | -0.05 | 0 |  |  | -1 | 1 |  |  |
+| 27 | Payer ses pâtes avec un titre-restaurant → Garder les courses au supermarché pour de bon | 0 | 0 | 1 |  |  |  |  |  |
+| 27 | Payer ses pâtes avec un titre-restaurant → Revenir aux seuls repas au restaurant | 0 | 0 | -1 | 1 |  |  |  |  |
+| 27 | Payer ses pâtes avec un titre-restaurant → Deux plafonds : un pour les courses, un pour le resto | 0 | 0 |  |  |  | 1 |  |  |
+| 27 | Sans affectation, une lycéenne attend une place → Garder le pouvoir du recteur | 0 | 0 |  |  |  | 1 |  |  |
+| 27 | Sans affectation, une lycéenne attend une place → Laisser les universités choisir | 0 | 0 |  |  |  | -1 |  | 1 |
+| 27 | Sans affectation, une lycéenne attend une place → Créer des places en plus dans les filières demandées | -0.15 | 0 |  |  |  | 1 |  | 1 |
+| 28 | La Seine sort de son lit → Indemniser vite les sinistrés | 0 | -0.1 |  |  |  | 1 |  |  |
+| 28 | La Seine sort de son lit → Adapter les maisons pour qu'elles résistent à l'eau | 0 | -0.2 |  |  |  |  |  | 1 |
+| 28 | La Seine sort de son lit → Construire de nouveaux bassins de stockage en amont | -0.02 | -0.5 |  |  |  |  |  | 2 |
+| 28 | La Seine sort de son lit → Rembourser moins ceux qui rebâtissent en zone inondable | 0.05 | 0 |  |  |  | -1 |  |  |
+| 28 | La Seine sort de son lit → Augmenter la taxe locale pour financer les digues | 0.05 | 0 | -1 |  |  |  |  | 1 |
+| 28 | Incendies volontaires sur les lignes à grande vitesse → Surveiller les lignes avec des drones et des agents | -0.3 | 0 |  |  |  | 1 |  | 1 |
+| 28 | Incendies volontaires sur les lignes à grande vitesse → Doubler les câbles pour que le réseau tienne seul | -0.5 | 0 |  | 1 |  |  |  | 2 |
+| 28 | Incendies volontaires sur les lignes à grande vitesse → Faire payer les réparations par la SNCF, sans aide | 0.1 | 0 |  |  |  |  |  | -1 |
+| 28 | Incendies volontaires sur les lignes à grande vitesse → Alourdir les peines pour atteinte aux réseaux | 0.02 | 0 |  |  |  | -1 |  |  |
+| 28 | IVG : un droit inscrit dans la Constitution mais difficile d'accès → Un centre dans chaque département | -0.1 | 0 |  |  |  | 1 |  | 2 |
+| 28 | IVG : un droit inscrit dans la Constitution mais difficile d'accès → Élargir le rôle des sages-femmes | 0 | 0 |  |  |  |  |  | 1 |
+| 28 | IVG : un droit inscrit dans la Constitution mais difficile d'accès → Garder l'organisation actuelle | 0 | 0 |  |  |  |  |  | -1 |
+| 29 | Une loi contre la mode à tout petit prix → Malus maximal sur la mode jetable | 0.5 | 0 | -1 | 1 | -1 |  |  |  |
+| 29 | Une loi contre la mode à tout petit prix → Malus progressif jusqu'à la fin de la décennie | 0.2 | 0 |  |  | -1 |  |  |  |
+| 29 | Une loi contre la mode à tout petit prix → Aider le textile français à produire moins cher | -0.2 | 0 |  | 1 |  |  | 1 |  |
+| 29 | Une loi contre la mode à tout petit prix → Ne pas pénaliser, informer les acheteurs | 0 | 0 | 1 |  |  |  |  |  |
+| 29 | L'Espagne et le Portugal plongés dans le noir → Envoyer à chaque foyer un guide pour tenir trois jours | -0.02 | 0 |  |  |  | 1 |  |  |
+| 29 | L'Espagne et le Portugal plongés dans le noir → Renforcer les lignes électriques avec l'Espagne | 0 | -0.1 |  |  |  |  | -1 | 1 |
+| 29 | L'Espagne et le Portugal plongés dans le noir → Équiper hôpitaux et mairies de groupes électrogènes | -0.05 | 0 |  |  |  |  |  | 1 |
+| 29 | L'Espagne et le Portugal plongés dans le noir → Ne rien changer, notre réseau est plus solide | 0 | 0 |  |  |  |  |  | -1 |
+| 29 | L'Espagne et le Portugal plongés dans le noir → Obliger les opérateurs à garder leurs antennes allumées | 0 | 0 | -1 |  |  |  |  | 1 |
+| 29 | Librairies et cinémas indépendants ferment → Encadrer les loyers commerciaux | 0 | 0 |  | 1 |  | 1 |  |  |
+| 29 | Librairies et cinémas indépendants ferment → Aide d'urgence aux lieux culturels | -0.1 | 0 |  |  |  | 1 |  | 1 |
+| 29 | Librairies et cinémas indépendants ferment → Laisser le marché décider | 0 | 0 |  |  |  | -1 |  |  |
+| 29 | Librairies et cinémas indépendants ferment → Taxer les géants de la vente de livres en ligne | 0.05 | 0 | -1 |  |  | 1 |  |  |
+| 30 | Présumer légal l'usage de l'arme par les policiers ? → Adopter la présomption | 0 | 0 |  |  |  | -1 |  | 1 |
+| 30 | Présumer légal l'usage de l'arme par les policiers ? → Mieux former et équiper plutôt | -0.2 | 0 |  |  |  | 1 |  | 1 |
+| 30 | Présumer légal l'usage de l'arme par les policiers ? → Garder le droit actuel | 0 | 0 |  |  |  |  |  |  |
+| 30 | Présumer légal l'usage de l'arme par les policiers ? → Limiter le vote à un an d'essai | 0.01 | 0 |  |  |  |  |  |  |
+| 30 | Taxer les yachts et bijoux rangés dans des holdings → Élargir la taxe aux placements financiers | 1.2 | 0 |  |  |  | 1 | -1 |  |
+| 30 | Taxer les yachts et bijoux rangés dans des holdings → Garder la taxe telle qu'elle est | 0.1 | 0 |  |  |  |  |  |  |
+| 30 | Taxer les yachts et bijoux rangés dans des holdings → Supprimer la taxe | -0.1 | 0 |  |  |  | -1 |  |  |
+| 30 | Des étudiants font la queue pour manger → Repas à 1 € pour tous les étudiants | -0.05 | 0 |  |  |  | 1 |  | 1 |
+| 30 | Des étudiants font la queue pour manger → Repas à 1 € seulement pour les boursiers et précaires | -0.015 | 0 |  |  |  | 1 |  |  |
+| 30 | Des étudiants font la queue pour manger → Augmenter les bourses plutôt que subventionner les repas | -0.08 | 0 |  |  |  | 1 |  |  |
+| 30 | Des étudiants font la queue pour manger → Laisser les associations distribuer l'aide alimentaire | -0.005 | 0 |  |  |  | -1 |  |  |
+| 30 | Des étudiants font la queue pour manger → Faire payer plus cher les étudiants venus hors d'Europe | 0.05 | 0 |  |  |  | -1 |  | 1 |
+| 31 | Pas assez d'avions de chasse pour nos armées ? → Commander 30 Rafale de plus | -0.8 | 0 |  | 1 |  |  | 2 |  |
+| 31 | Pas assez d'avions de chasse pour nos armées ? → Donner la priorité à l'export | 0.3 | 0 |  | 1 |  |  | -1 |  |
+| 31 | Pas assez d'avions de chasse pour nos armées ? → Lancer seul l'avion du futur | -1 | 0 |  |  |  |  | 2 |  |
+| 31 | Une taxe de quelques euros sur les petits colis → Taxer chaque petit colis venu de loin | 0.4 | 0 | -1 | 1 |  |  |  |  |
+| 31 | Une taxe de quelques euros sur les petits colis → Plus de contrôles douaniers à la place | -0.05 | 0 |  |  |  |  |  | 1 |
+| 31 | Une taxe de quelques euros sur les petits colis → Ne rien changer | 0 | 0 | 1 | -1 |  |  |  |  |
+| 31 | Rupture de stock à la pharmacie du village → Relocaliser la production en France | -0.15 | 0 |  | 1 |  |  | 2 |  |
+| 31 | Rupture de stock à la pharmacie du village → Obliger les labos à garder des stocks | 0 | 0 | -1 |  |  |  |  | 1 |
+| 31 | Rupture de stock à la pharmacie du village → Laisser les pharmaciens préparer des substituts | 0 | 0 |  |  |  |  |  | 1 |
+| 31 | Refus d'obtempérer et rodéos filmés pour les réseaux → Confisquer et détruire les véhicules | 0.02 | 0 |  |  |  |  |  |  |
+| 31 | Refus d'obtempérer et rodéos filmés pour les réseaux → Surveiller et retirer les vidéos | -0.05 | 0 |  |  |  | 1 |  |  |
+| 31 | Refus d'obtempérer et rodéos filmés pour les réseaux → Prévention et terrains de moto encadrés | -0.05 | 0 |  |  |  | 1 |  |  |
+| 32 | Un allié menace d'annexer le Groenland → Front européen uni et ripostes prêtes | 0 | 0 |  | -1 |  |  | 2 |  |
+| 32 | Un allié menace d'annexer le Groenland → Envoyer des moyens militaires symboliques | -0.2 | 0 |  |  |  |  | 2 |  |
+| 32 | Un allié menace d'annexer le Groenland → Négocier discrètement pour éviter les taxes | 0.1 | 0 |  | 1 |  |  | -1 |  |
+| 32 | Un allié menace d'annexer le Groenland → Rester en retrait, ce n'est pas notre affaire | 0 | 0 |  |  |  | -1 |  |  |
+| 32 | L'électricité et le gaz flambent → Plafonner les prix pour tout le monde | 0 | -20 | 7 |  | 2 | 2 |  |  |
+| 32 | L'électricité et le gaz flambent → Aider seulement les ménages modestes | 0 | -1.8 | 2 |  |  | 1 |  |  |
+| 32 | L'électricité et le gaz flambent → Plan de sobriété : baisser le chauffage | 0.2 | 0 | -2 |  | -3 |  |  |  |
+| 32 | L'électricité et le gaz flambent → Taxer les profits exceptionnels des producteurs | 1 | 0 |  | -1 |  | 1 |  |  |
+| 32 | L'électricité et le gaz flambent → Sortir les prix français du marché européen | 0 | 0 | 3 |  |  |  | 4 |  |
+| 32 | Les vieilles voitures bientôt interdites en ville → Maintenir l'interdiction avec une prime à l'achat | -0.2 | 0 |  |  | -1 |  |  | 1 |
+| 32 | Les vieilles voitures bientôt interdites en ville → Supprimer l'interdiction | 0.02 | 0 | 1 |  | 1 |  |  |  |
+| 32 | Les vieilles voitures bientôt interdites en ville → Reporter de deux ans et développer les transports en commun | -0.1 | 0 |  |  |  |  |  | 1 |
+| 32 | Les vieilles voitures bientôt interdites en ville → Remplacer l'interdiction par un péage urbain | 0.05 | 0 | -1 |  | -1 |  |  |  |
+| 33 | Les vins de Bordeaux taxés à 15 % aux États-Unis → Riposte européenne sur des produits américains | 0.3 | 0 | -1 |  |  |  | 1 |  |
+| 33 | Les vins de Bordeaux taxés à 15 % aux États-Unis → Aides et prêts aux viticulteurs touchés | -0.4 | 0 |  | 1 |  | 1 |  |  |
+| 33 | Les vins de Bordeaux taxés à 15 % aux États-Unis → Conquérir l'Asie et l'Amérique du Sud | -0.05 | 0 |  | 1 |  |  | 1 |  |
+| 33 | Les vins de Bordeaux taxés à 15 % aux États-Unis → Négocier une exemption pour le vin | 0 | 0 |  | 1 |  |  | -1 |  |
+| 33 | Des pirates paralysent un hôpital et demandent une rançon → Payer un plan national de cybersécurité des hôpitaux | -0.25 | 0 |  |  |  |  | 1 | 1 |
+| 33 | Des pirates paralysent un hôpital et demandent une rançon → Refuser de payer et faire tourner l'hôpital sur papier | 0 | 0 |  |  |  |  | 1 | -1 |
+| 33 | Des pirates paralysent un hôpital et demandent une rançon → Interdire par la loi le paiement des rançons | 0 | 0 |  |  |  |  | 1 | -1 |
+| 33 | Des pirates paralysent un hôpital et demandent une rançon → Regrouper l'informatique des hôpitaux d'une région | 0.03 | 0 |  |  |  |  |  | 1 |
+| 33 | Des pirates paralysent un hôpital et demandent une rançon → Riposter avec les services de l'État contre les pirates | -0.05 | 0 |  |  |  |  | 1 |  |
+| 33 | Des mois d'attente pour passer le permis → Recruter beaucoup plus d'inspecteurs | -0.06 | 0 |  | 1 |  |  |  | 1 |
+| 33 | Des mois d'attente pour passer le permis → Laisser des examinateurs privés agréés | 0 | 0 |  |  |  | -1 |  | 1 |
+| 33 | Des mois d'attente pour passer le permis → Rappeler des inspecteurs retraités | -0.02 | 0 |  |  |  |  |  | 1 |
+| 33 | Des caméras qui repèrent seules les situations à risque → Rendre le dispositif définitif | -0.05 | 0 |  |  |  |  |  | 1 |
+| 33 | Des caméras qui repèrent seules les situations à risque → Prolonger l'essai avec une évaluation indépendante | -0.03 | 0 |  |  |  | 1 |  |  |
+| 33 | Des caméras qui repèrent seules les situations à risque → Arrêter l'expérimentation | 0 | 0 |  |  |  |  |  |  |
+| 34 | Une famille expulsée pour loyers impayés → Fonds pour payer les impayés avant l'expulsion | -0.1 | 0 |  |  |  | 2 |  |  |
+| 34 | Une famille expulsée pour loyers impayés → Garder les règles actuelles | 0.02 | 0 |  |  |  | -1 |  |  |
+| 34 | Une famille expulsée pour loyers impayés → Relogement obligatoire avant toute expulsion | -0.15 | 0 |  |  |  | 1 |  | 1 |
+| 34 | Fraudes aux aides à la rénovation et à la formation → Contrôles renforcés avant paiement | 0.3 | 0 |  |  |  | 1 |  | -1 |
+| 34 | Fraudes aux aides à la rénovation et à la formation → Interdire le démarchage pour ces aides | 0.1 | 0 |  |  |  | 1 |  |  |
+| 34 | Fraudes aux aides à la rénovation et à la formation → Supprimer les aides les plus fraudées | 1 | 0 |  | -1 | 1 |  |  |  |
+| 34 | Ouvrir les boulangeries les jours fériés et le dimanche ? → Autoriser, volontariat et paiement double | 0.03 | 0 | 1 |  |  | -1 |  |  |
+| 34 | Ouvrir les boulangeries les jours fériés et le dimanche ? → Laisser chaque branche négocier | 0 | 0 |  |  |  | 1 |  |  |
+| 34 | Ouvrir les boulangeries les jours fériés et le dimanche ? → Garder le repos commun | 0 | 0 | -1 |  |  | 1 |  |  |
+| 35 | Un pesticide interdit a contaminé les Antilles → Indemniser toutes les personnes malades | -0.15 | 0 |  |  |  | 2 |  |  |
+| 35 | Un pesticide interdit a contaminé les Antilles → Tester gratuitement les habitants et chercher à dépolluer | -0.05 | 0 |  |  |  |  |  | 1 |
+| 35 | Un pesticide interdit a contaminé les Antilles → Faire payer les fabricants et vendeurs du pesticide | 0.03 | 0 |  |  |  | 1 |  |  |
+| 35 | Un pesticide interdit a contaminé les Antilles → Interdire pêche et cultures dans les zones polluées | 0 | 0 |  | -1 |  |  |  | 1 |
+| 35 | Un pesticide interdit a contaminé les Antilles → Taxer les bananes importées hors d'Europe pour financer le plan | 0.08 | 0 | -1 |  |  |  | 1 |  |
+| 35 | Des barrages contre le prix des courses → Supprimer la TVA sur les produits de base | -0.15 | 0 | 2 |  |  | 1 |  |  |
+| 35 | Des barrages contre le prix des courses → Encadrer les marges de la grande distribution | 0 | 0 | 1 | -1 |  |  |  |  |
+| 35 | Des barrages contre le prix des courses → Ouvrir le marché à de nouveaux distributeurs | 0.05 | 0 | 1 | -1 |  |  |  |  |
+| 35 | Des barrages contre le prix des courses → Aider la production agricole locale | -0.08 | 0 |  | 1 |  |  | 1 |  |
+| 35 | Des barrages contre le prix des courses → Rétablir l'ordre et lever les barrages | 0.02 | 0 |  |  |  | -2 |  |  |
+| 35 | Relancer les barrages hydroélectriques → Grand plan de stations de pompage | -0.5 | 0 |  | 1 | -1 |  | 2 |  |
+| 35 | Relancer les barrages hydroélectriques → Moderniser sans nouveaux ouvrages | -0.1 | 0 |  |  | -1 |  |  |  |
+| 35 | Relancer les barrages hydroélectriques → Laisser investir les exploitants | 0 | 0 |  |  |  |  |  |  |
+| 35 | Deux ans d'attente pour être jugé aux prud'hommes → Recruter greffiers et juges | -0.3 | 0 |  |  |  |  |  | 2 |
+| 35 | Deux ans d'attente pour être jugé aux prud'hommes → Médiation obligatoire avant le procès | 0 | 0 |  |  |  | -1 |  | 1 |
+| 35 | Deux ans d'attente pour être jugé aux prud'hommes → Audiences et dossiers numériques | -0.1 | 0 |  |  |  |  |  | 1 |
+| 36 | Le grand froid fait exploser la consommation d'électricité → Demander à chacun de baisser le chauffage le soir | 0 | 0 |  |  | -1 | 1 |  |  |
+| 36 | Le grand froid fait exploser la consommation d'électricité → Payer les usines qui s'arrêtent aux heures de pointe | -0.05 | 0 |  |  | -1 |  |  | 1 |
+| 36 | Le grand froid fait exploser la consommation d'électricité → Garder des centrales au gaz en réserve pour les grands froids | 0 | 0 | -1 |  | 2 |  | 1 |  |
+| 36 | Le grand froid fait exploser la consommation d'électricité → Éteindre vitrines, bureaux vides et éclairage public la nuit | 0.03 | 0 |  |  | -1 | -1 |  |  |
+| 36 | Le grand froid fait exploser la consommation d'électricité → Importer du courant d'Espagne par les nouvelles lignes | 0 | 0 |  |  | -1 |  | -1 | 1 |
+| 36 | Payer sans passer par des entreprises américaines → Rendre Wero obligatoire chez les commerçants | 0.1 | 0 |  | -1 |  |  | 3 |  |
+| 36 | Payer sans passer par des entreprises américaines → Payer impôts et aides via la solution européenne | -0.05 | 0 |  |  |  |  | 2 |  |
+| 36 | Payer sans passer par des entreprises américaines → Soutenir l'euro numérique de la BCE | 0 | 0 |  |  |  | -1 | 2 |  |
+| 36 | Payer sans passer par des entreprises américaines → Laisser le marché choisir | 0 | 0 |  |  |  |  | -1 |  |
+| 36 | La canicule a tué des centaines de milliers de poules → Aider à climatiser et ventiler les poulaillers | -0.05 | 0 |  | 1 | 1 |  |  |  |
+| 36 | La canicule a tué des centaines de milliers de poules → Importer des œufs pour faire baisser les prix | 0 | 0 | 1 |  |  |  | -1 |  |
+| 36 | La canicule a tué des centaines de milliers de poules → Laisser le marché s'ajuster | 0 | 0 | -1 |  |  |  |  |  |
+| 37 | La justice arrête une autoroute à moitié construite → Finir l'autoroute après l'appel | -0.05 | 0 |  | 1 | 1 |  |  |  |
+| 37 | La justice arrête une autoroute à moitié construite → Abandonner et renaturer le tracé | -0.4 | 0 |  | -1 | -1 |  |  |  |
+| 37 | La justice arrête une autoroute à moitié construite → Transformer le tracé en route nationale sans péage | -0.1 | 0 | 1 |  |  |  |  |  |
+| 37 | La justice arrête une autoroute à moitié construite → Simplifier les recours contre les grands chantiers | 0.1 | 0 |  | 1 |  | -1 |  |  |
+| 37 | La justice arrête une autoroute à moitié construite → Faire payer le péage plus cher pour rembourser le retard | 0.05 | 0 | -1 |  |  |  |  |  |
+| 37 | Le chikungunya revient en force sur l'île de La Réunion → Démoustiquer massivement avec l'armée | 0 | -0.05 |  |  |  |  |  | 1 |
+| 37 | Le chikungunya revient en force sur l'île de La Réunion → Mobiliser les habitants pour vider les eaux stagnantes | 0 | 0 |  |  |  | 1 |  |  |
+| 37 | Le chikungunya revient en force sur l'île de La Réunion → Vacciner en priorité les personnes fragiles | -0.05 | 0 |  |  |  |  |  | 1 |
+| 37 | Le chikungunya revient en force sur l'île de La Réunion → Taxer les séjours touristiques pour financer la lutte | 0.01 | 0 |  | -1 |  |  |  |  |
+| 37 | Le chikungunya revient en force sur l'île de La Réunion → Reporter les soins non urgents pour soulager l'hôpital | 0.02 | 0 |  |  |  |  |  | -1 |
+| 37 | Le salaire des apprentis baisse → Rétablir l'exonération totale | -0.4 | 0 | 1 | 1 |  |  |  |  |
+| 37 | Le salaire des apprentis baisse → Garder les règles actuelles | 0 | 0 | -1 |  |  |  |  |  |
+| 37 | Le salaire des apprentis baisse → Aller plus loin et supprimer l'exonération | 0.3 | 0 | -1 | -1 |  |  |  |  |
+| 37 | Une loi agricole rouvre la porte à un pesticide interdit → Autoriser le pesticide sous conditions strictes | 0.03 | 0 |  | 1 | 1 |  |  |  |
+| 37 | Une loi agricole rouvre la porte à un pesticide interdit → Maintenir l'interdiction et aider à trouver d'autres solutions | -0.1 | 0 |  | -1 | -1 |  |  |  |
+| 37 | Une loi agricole rouvre la porte à un pesticide interdit → Interdire les produits importés traités avec ce pesticide | 0.01 | 0 | -1 |  |  |  | 1 |  |
+| 37 | Une loi agricole rouvre la porte à un pesticide interdit → Indemniser les producteurs sans changer la loi | -0.15 | 0 | 1 |  |  |  |  |  |
+| 38 | Faire payer ceux qui partent pour moins d'impôts → Durcir la taxe de départ (15 ans) | 0.4 | 0 |  |  |  | 1 |  |  |
+| 38 | Faire payer ceux qui partent pour moins d'impôts → Négocier un impôt minimum européen | 0.05 | 0 |  |  |  | 1 |  |  |
+| 38 | Faire payer ceux qui partent pour moins d'impôts → Ne rien changer | 0 | 0 |  |  |  | -1 |  |  |
+| 38 | Plus de cigarette sur la plage → Contrôler et verbaliser vraiment | 0.05 | 0 |  |  |  | 1 |  |  |
+| 38 | Plus de cigarette sur la plage → Miser sur la prévention sans amende | -0.05 | 0 |  |  |  |  |  | 1 |
+| 38 | Plus de cigarette sur la plage → Créer des coins fumeurs sur les plages | -0.05 | 0 |  |  |  | 1 |  |  |
+| 38 | Le timbre vert dépasse 1,50 € → Laisser La Poste fixer ses prix | 0 | 0 | -1 |  |  |  |  |  |
+| 38 | Le timbre vert dépasse 1,50 € → Compenser une partie par l'État | -0.1 | 0 | 1 |  |  |  |  | 1 |
+| 38 | Le timbre vert dépasse 1,50 € → Moins de tournées, prix gelé | 0.05 | 0 |  |  |  |  |  | -1 |
+| 39 | Juger plus vite et plus durement les mineurs ? → Réviser la Constitution pour durcir | 0 | 0 |  |  |  | -1 |  |  |
+| 39 | Juger plus vite et plus durement les mineurs ? → Plus de centres éducatifs fermés | -0.3 | 0 |  |  |  | 1 |  |  |
+| 39 | Juger plus vite et plus durement les mineurs ? → Miser sur la prévention et les familles | -0.2 | 0 |  |  |  | 1 |  | 1 |
+| 39 | Juger plus vite et plus durement les mineurs ? → Juger plus vite sans changer les règles | 0.01 | 0 |  |  |  |  |  | 1 |
+| 39 | Des mineurs recrutés sur les messageries par les trafiquants → Obliger les messageries à coopérer | 0 | 0 |  |  |  | 1 | 1 |  |
+| 39 | Des mineurs recrutés sur les messageries par les trafiquants → Plus d'éducateurs pour sortir les jeunes | -0.2 | 0 |  |  |  | 1 |  | 1 |
+| 39 | Des mineurs recrutés sur les messageries par les trafiquants → Saisir les biens des trafiquants | 0.3 | 0 |  |  |  | 1 |  |  |
+| 39 | Le paquet de café a pris un quart en plus → Ne rien faire, c'est le marché mondial | 0 | 0 | -1 |  |  |  |  |  |
+| 39 | Le paquet de café a pris un quart en plus → Publier les marges des distributeurs | 0 | 0 |  |  |  | 1 |  |  |
+| 39 | Le paquet de café a pris un quart en plus → Baisser la TVA sur le café et le cacao | -0.3 | 0 | 1 |  |  |  |  |  |
+| 39 | Les sodas plus chers à cause de la taxe sucre → Augmenter encore la taxe | 0.2 | 0 | -1 |  |  |  |  | 1 |
+| 39 | Les sodas plus chers à cause de la taxe sucre → Garder la taxe telle quelle | 0 | 0 |  |  |  |  |  |  |
+| 39 | Les sodas plus chers à cause de la taxe sucre → Supprimer la taxe, miser sur l'éducation | -0.3 | 0 | 1 |  |  |  |  |  |
+| 40 | Des fusillades liées au trafic de drogue dans une ville du Sud → Recruter des enquêteurs et des magistrats spécialisés | -0.3 | 0 |  |  |  | 1 |  | 1 |
+| 40 | Des fusillades liées au trafic de drogue dans une ville du Sud → Saisir et revendre les biens des trafiquants | 0.15 | 0 |  |  |  | 1 |  |  |
+| 40 | Des fusillades liées au trafic de drogue dans une ville du Sud → Miser sur la prévention et les soins aux consommateurs | -0.1 | 0 |  |  |  | 1 |  | 1 |
+| 40 | Des fusillades liées au trafic de drogue dans une ville du Sud → Légaliser et taxer le cannabis | 0.5 | 0 |  |  |  |  |  | -1 |
+| 40 | L'aide à mourir devient légale → Appliquer vite et largement | 0 | 0 |  |  |  | -1 |  |  |
+| 40 | L'aide à mourir devient légale → D'abord des soins palliatifs partout | -0.4 | 0 |  |  |  | 1 |  | 2 |
+| 40 | L'aide à mourir devient légale → Encadrer très strictement | -0.05 | 0 |  |  |  | 1 |  |  |
+| 40 | Un « État de Nouvelle-Calédonie » dans la République ? → Organiser vite le vote sur l'accord | -0.05 | 0 |  |  |  | -1 | 1 |  |
+| 40 | Un « État de Nouvelle-Calédonie » dans la République ? → Rouvrir la négociation avec tous | 0.02 | 0 |  |  |  | 1 |  |  |
+| 40 | Un « État de Nouvelle-Calédonie » dans la République ? → Plan de relance économique massif | -0.4 | 0 |  | 1 |  | 1 |  |  |
+| 40 | Un « État de Nouvelle-Calédonie » dans la République ? → Renforcer l'ordre public d'abord | -0.15 | 0 |  |  |  | -1 |  | 1 |
